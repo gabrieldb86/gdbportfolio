@@ -19,6 +19,8 @@ const generated = {
   poster: "/manus-storage/gdb-abstract-poster_93816c75.png",
 };
 
+const profilePhoto = "/manus-storage/gabriel-profile_69235fc9.jpg";
+
 const projects = [
   {
     number: "01",
@@ -159,7 +161,8 @@ export default function Home() {
         <nav className={`site-nav ${menuOpen ? "site-nav-open" : ""}`} aria-label="Navegação principal">
           <a href="#work" onClick={(event) => { event.preventDefault(); scrollToId("work", () => setMenuOpen(false)); }}>Trabalho <span>01</span></a>
           <a href="#about" onClick={(event) => { event.preventDefault(); scrollToId("about", () => setMenuOpen(false)); }}>Sobre <span>02</span></a>
-          <a href="#contact" onClick={(event) => { event.preventDefault(); scrollToId("contact", () => setMenuOpen(false)); }}>Contato <span>03</span></a>
+          <a href="/cv">CV <span>03</span></a>
+          <a href="#contact" onClick={(event) => { event.preventDefault(); scrollToId("contact", () => setMenuOpen(false)); }}>Contato <span>04</span></a>
         </nav>
 
         <div className="header-availability"><span className="status-dot" />Disponível para projetos</div>
@@ -187,8 +190,8 @@ export default function Home() {
           </div>
           <div className="hero-art">
             <div className="hero-art-surface"><img src={generated.hero} alt="" /></div>
-            <div className="hero-work-plate"><img src={projects[1].image} alt="Projeto Ragtech Dicas" /></div>
-            <div className="hero-art-note"><span>GDB / 01</span><span>Selected work</span></div>
+            <div className="hero-work-plate"><img src={profilePhoto} alt="Gabriel Danino Basilio" /></div>
+            <div className="hero-art-note"><span>GDB / portrait</span><span>São Paulo / 2026</span></div>
           </div>
           <div className="hero-index">01 <span>—</span> 05</div>
         </section>
