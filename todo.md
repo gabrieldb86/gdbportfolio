@@ -100,6 +100,11 @@
 - [x] Alinhar verticalmente e à esquerda as colunas da seção de contato.
 - [x] Validar build, TypeScript e visualização em desktop e mobile.
 
+## Próxima rodada — correção da headline do hero
+- [x] Restaurar a escala, o peso tipográfico e as quebras da versão anterior na headline do hero.
+- [x] Manter o texto novo solicitado pelo usuário.
+- [x] Validar build, hero em desktop, tablet e mobile.
+
 ## Próxima rodada — CV clean para recrutamento
 - [x] Comparar a página CV com o PDF completo anexado.
 - [x] Expandir a trajetória profissional para refletir o documento de referência.

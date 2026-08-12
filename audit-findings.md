@@ -76,3 +76,9 @@ A versão final usa o bloco de experiência em marfim, com grafite para o texto,
 8. Acordeão de serviços corrigido (o conteúdo não desaparece mais ao abrir) e foto de serviços reduzida em cerca de 30%.
 9. Foto dos bonés restaurada na seção de destaque (statement).
 10. Seção de contato com colunas distribuídas verticalmente e alinhamento à esquerda.
+
+## Correção da headline — validação
+
+O texto solicitado permanece intacto: "CONTEÚDO, treinamento & TRADE MARKETING.". A escala voltou aos parâmetros tipográficos da versão anterior, com headline sans de grande impacto, peso forte, entrelinha compacta e quebras manuais em quatro linhas. O preview confirmou a presença do texto novo, da apresentação completa e dos CTAs; o build também foi aprovado.
+
+Na verificação mobile, a escala desktop restaurada inicialmente fazia a palavra "TREINAMENTO" ultrapassar a largura de 375px. Foi adicionada uma regra específica para telas até 720px, preservando o peso visual e reduzindo somente o tamanho da fonte, com `overflow-wrap` no eyebrow. O TypeScript e o build foram aprovados novamente.

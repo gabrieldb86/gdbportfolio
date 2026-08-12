@@ -954,9 +954,9 @@ h1 em, h2 em { color: var(--primary); font-style: italic; }
 
 /* Ajustes para atender aos 10 pontos solicitados */
 .brand-name { white-space: nowrap; line-height: 1.1; font-size: 21px !important; letter-spacing: -.02em; }
-.hero-redesign { align-items: flex-start; padding-top: 170px; }
-.hero-redesign-copy { align-self: flex-start; }
-.hero-redesign-copy h1 { font-size: clamp(3.8rem, 6.8vw, 7.8rem); line-height: .86; }
+.hero-redesign { align-items: center; padding-top: 155px; }
+.hero-redesign-copy { align-self: center; }
+.hero-redesign-copy h1 { font-size: clamp(4.4rem, 8vw, 8.8rem); line-height: .8; }
 .sean-obrien-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)) !important; gap: 40px 20px !important; }
 .sean-obrien-grid .project-card { grid-column: span 1 !important; margin-top: 0 !important; }
 .sean-obrien-grid .project-image-wrap { aspect-ratio: 1.15; }
@@ -972,6 +972,11 @@ h1 em, h2 em { color: var(--primary); font-style: italic; }
 }
 @media (max-width: 480px) {
   .sean-obrien-grid { grid-template-columns: 1fr !important; }
+}
+
+@media (max-width: 720px) {
+  .hero-redesign-copy h1 { font-size: clamp(2.6rem, 12.5vw, 5.6rem); line-height: .84; letter-spacing: -.085em; }
+  .hero-redesign-copy .eyebrow { max-width: 100%; overflow-wrap: anywhere; line-height: 1.5; }
 }
 
 /* Behance no rodapé — marcador tipográfico discreto e alinhado aos demais canais. */
