@@ -10,3 +10,7 @@
 - [x] Centralizar conteúdo, projetos e opções de layout em uma configuração editável.
 - [x] Ajustar a navegação para refletir áreas editoriais mais claras.
 - [x] Validar alterações de foto, proporção, tamanho, ordem e visibilidade dos projetos.
+- [x] Redesenhar a home com uma primeira dobra mais visual, escura e direta.
+- [x] Antecipar a galeria de trabalhos e reduzir a aparência de landing page tradicional.
+- [x] Reforçar navegação horizontal, CTA e ritmo de catálogo visual sem copiar a referência.
+- [x] Validar a diferença visual em desktop e mobile antes de salvar novo checkpoint.

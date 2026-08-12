@@ -96,6 +96,9 @@ h1 { margin: 0; max-width: 720px; font-size: clamp(4.4rem, 7.8vw, 8.4rem); line-
 h1 em, h2 em { color: var(--primary); font-style: italic; }
 .hero-bottomline { display: flex; align-items: flex-end; gap: 34px; margin-top: 58px; max-width: 550px; }
 .hero-intro { margin: 0; max-width: 330px; color: #726961; font-size: 14px; line-height: 1.7; }
+.hero-actions-revised { display: flex; align-items: center; gap: 18px; }
+.hero-cta { display: inline-flex; align-items: center; gap: 12px; padding-bottom: 10px; border-bottom: 1px solid var(--primary); color: var(--foreground); font-size: 10px; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; transition: color 180ms ease-out, gap 180ms ease-out; }
+.hero-cta:hover { gap: 17px; color: var(--primary); }
 .round-scroll { display: grid; width: 58px; height: 58px; flex: 0 0 58px; place-items: center; border: 1px solid var(--primary); border-radius: 50%; color: var(--primary); background: transparent; transition: color 180ms ease-out, background 180ms ease-out, transform 180ms ease-out; }
 .round-scroll:hover { color: var(--primary-foreground); background: var(--primary); transform: rotate(-12deg); }
 .hero-art { position: relative; width: 100%; max-width: 570px; aspect-ratio: 1.08; margin-top: 26px; overflow: hidden; background: #d9d1c7; }
@@ -203,6 +206,51 @@ h1 em, h2 em { color: var(--primary); font-style: italic; }
 .footer-editor-link { color: #a99d91; font-size: 10px; letter-spacing: .1em; text-transform: uppercase; transition: color 180ms ease-out; }
 .footer-editor-link:hover { color: var(--primary); }
 .footer-credit { justify-self: end; color: #756b63; font-size: 10px; letter-spacing: .1em; text-transform: uppercase; }
+
+/* Revisão de referência — a prova de trabalho entra cedo, com hero grafite, headline condensada e galeria em modo catálogo. */
+.home-revision .site-header { color: #f4eee6; }
+.home-revision .site-header-scrolled { background: rgba(25, 24, 23, .94); border-color: #413b37; }
+.home-revision .site-header .brand-name, .home-revision .site-header .site-nav a, .home-revision .site-header .header-availability { color: #f4eee6; }
+.home-revision .site-header .site-nav span { color: #cf7b73; }
+.home-revision .site-header .menu-trigger { color: #f4eee6; }
+.home-revision .hero-section { min-height: 830px; padding-top: 175px; padding-bottom: 88px; background: #1b1a19; color: #f4eee6; }
+.home-revision .hero-copy { max-width: 700px; }
+.home-revision .eyebrow { color: #cf7b73; }
+.home-revision h1 { max-width: 760px; font-size: clamp(4.7rem, 8.8vw, 9.4rem); line-height: .79; text-transform: uppercase; }
+.home-revision h1 em { color: #cf7b73; }
+.home-revision .hero-intro { color: #a99d91; }
+.home-revision .hero-cta { color: #f4eee6; }
+.home-revision .hero-art { max-width: 510px; aspect-ratio: .88; margin-top: 32px; background: #403835; }
+.home-revision .hero-art-surface img { opacity: .23; mix-blend-mode: screen; }
+.home-revision .hero-work-plate { top: 10%; right: 9%; width: 76%; height: 80%; border-color: #f4eee6; box-shadow: 14px 18px 0 #d73332; transform: rotate(-3deg); }
+.home-revision .hero-art-note { color: #f4eee6; }
+.home-revision .hero-index { color: #cf7b73; }
+.home-revision .side-rail { background: #1b1a19; border-color: #413b37; }
+.home-revision .rail-label { color: #a99d91; }
+.home-revision .rail-vertical, .home-revision .rail-ticks { color: #cf7b73; }
+.home-revision .rail-line, .home-revision .rail-ticks i { background: #cf7b73; }
+.home-revision .manifesto-section { display: none; }
+.home-revision .work-section { padding-top: 108px; background: #1b1a19; color: #f4eee6; }
+.home-revision .work-section .section-index { color: #cf7b73; }
+.home-revision .work-section .section-kicker { color: #cf7b73; }
+.home-revision .work-section h2 { font-size: clamp(4.3rem, 7.7vw, 8.2rem); }
+.home-revision .work-section .behance-link { color: #f4eee6; }
+.home-revision .work-section .project-image-wrap { background: #403835; }
+.home-revision .work-section .project-image { filter: saturate(.95); }
+.home-revision .work-section .project-caption h3 { color: #f4eee6; }
+.home-revision .work-section .project-caption p, .home-revision .work-section .project-year { color: #a99d91; }
+.home-revision .work-section .project-credit { color: #cf7b73; }
+.home-revision .services-section { padding-top: 125px; background: #f4eee6; }
+.home-revision .about-section { background: #ddd0c4; }
+.home-revision .statement-section { min-height: 480px; }
+@media (max-width: 720px) {
+  .home-revision .site-header, .home-revision .site-header-scrolled { background: #1b1a19; border-color: #413b37; }
+  .home-revision .site-nav { background: #1b1a19; border-color: #413b37; }
+  .home-revision .hero-section { min-height: auto; padding-top: 132px; }
+  .home-revision h1 { font-size: clamp(3.8rem, 16vw, 6.7rem); line-height: .83; }
+  .home-revision .hero-art { aspect-ratio: .9; }
+  .home-revision .work-section { padding-top: 80px; }
+}
 
 /* CV — página de experiência com leitura escaneável, métricas e linha do tempo editorial. */
 .cv-page { background: var(--background); }

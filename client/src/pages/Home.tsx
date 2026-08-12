@@ -78,7 +78,7 @@ export default function Home() {
   };
 
   return (
-    <div className="site-shell" style={{ "--primary": siteConfig.brand.accent, "--background": siteConfig.brand.background, "--foreground": siteConfig.brand.foreground } as CSSProperties}>
+    <div className="site-shell home-revision" style={{ "--primary": siteConfig.brand.accent, "--background": siteConfig.brand.background, "--foreground": siteConfig.brand.foreground } as CSSProperties}>
       <header className={`site-header ${scrolled ? "site-header-scrolled" : ""}`}>
         <a className="brand-lockup" href="#top" onClick={(event) => { event.preventDefault(); scrollToId("top"); }}>
           <span className="brand-symbol" aria-hidden="true">
@@ -117,9 +117,10 @@ export default function Home() {
             <h1>{renderHeadline(siteConfig.hero.headline)}</h1>
             <div className="hero-bottomline">
               <p className="hero-intro">{siteConfig.hero.intro}</p>
-              <button className="round-scroll" type="button" onClick={() => scrollToId("work")} aria-label="Ver trabalhos">
-                <MoveDownRight size={22} strokeWidth={1.2} />
-              </button>
+              <div className="hero-actions-revised">
+                <a className="hero-cta" href="#work" onClick={(event) => { event.preventDefault(); scrollToId("work"); }}>Ver trabalhos <ArrowUpRight size={16} /></a>
+                <button className="round-scroll" type="button" onClick={() => scrollToId("work")} aria-label="Ver trabalhos"><MoveDownRight size={22} strokeWidth={1.2} /></button>
+              </div>
             </div>
           </div>
           <div className="hero-art">
@@ -146,7 +147,7 @@ export default function Home() {
           <div className="section-heading">
             <div className="section-index"><span>02</span><span className="index-line" /></div>
             <div>
-              <p className="section-kicker">Projetos selecionados</p>
+              <p className="section-kicker">Selected work / projetos selecionados</p>
               <h2 id="work-title">Trabalho que<br /><em>fala por si.</em></h2>
             </div>
             <a className="behance-link" href="https://www.behance.net/gabrieldb86" target="_blank" rel="noreferrer">Ver Behance completo <ArrowUpRight size={15} /></a>
