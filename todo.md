@@ -78,3 +78,11 @@
 - [x] Aplicar revelações suaves aos blocos da Home, projetos, serviços e contato.
 - [x] Respeitar `prefers-reduced-motion` e evitar animações que alterem o layout.
 - [x] Validar a experiência em desktop, tablet e mobile antes do checkpoint.
+
+## Próxima rodada — auditoria completa e Google
+- [ ] Auditar todas as rotas, links, imagens externas, console e estados interativos.
+- [ ] Corrigir cards de projetos externos sem imagem ou criar fallback persistente.
+- [ ] Auditar acessibilidade, contraste, headings, alt text, foco e reduced motion.
+- [ ] Auditar SEO técnico: canonical, sitemap, robots, metadados, Open Graph e dados estruturados.
+- [ ] Verificar rota interna `/editor` para não indexação e exposição pública.
+- [ ] Validar publicação real, registrar riscos do Search Console e salvar diagnóstico final.

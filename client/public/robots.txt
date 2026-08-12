@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+
+Sitemap: https://gabrielpor-7t6ygmlv.manus.space/sitemap.xml

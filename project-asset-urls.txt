@@ -1,0 +1,28 @@
+Uploading file (webdev private): podcast-varejo-na-real.jpg (size: 66415 bytes)
+File uploaded successfully!
+Storage Path: /manus-storage/podcast-varejo-na-real_af69c605.jpg
+Uploading file (webdev private): ragtech-dicas.png (size: 90461 bytes)
+File uploaded successfully!
+Storage Path: /manus-storage/ragtech-dicas_83287b6b.png
+Uploading file (webdev private): future-print-2024.png (size: 200929 bytes)
+File uploaded successfully!
+Storage Path: /manus-storage/future-print-2024_11b8395d.png
+Uploading file (webdev private): eletrolar-show-2024.png (size: 225136 bytes)
+File uploaded successfully!
+Storage Path: /manus-storage/eletrolar-show-2024_5c1c2e78.png
+Uploading file (webdev private): blocs-presentation.png (size: 129410 bytes)
+File uploaded successfully!
+Storage Path: /manus-storage/blocs-presentation_5118135f.png
+Uploading file (webdev private): valens-bdn.jpg (size: 59279 bytes)
+File uploaded successfully!
+Storage Path: /manus-storage/valens-bdn_1f4814b0.jpg
+
+========== Upload Summary ==========
+[SUCCESS] podcast-varejo-na-real.jpg -> /manus-storage/podcast-varejo-na-real_af69c605.jpg
+[SUCCESS] ragtech-dicas.png -> /manus-storage/ragtech-dicas_83287b6b.png
+[SUCCESS] future-print-2024.png -> /manus-storage/future-print-2024_11b8395d.png
+[SUCCESS] eletrolar-show-2024.png -> /manus-storage/eletrolar-show-2024_5c1c2e78.png
+[SUCCESS] blocs-presentation.png -> /manus-storage/blocs-presentation_5118135f.png
+[SUCCESS] valens-bdn.jpg -> /manus-storage/valens-bdn_1f4814b0.jpg
+=====================================
+Total: 6, Success: 6, Failed: 0

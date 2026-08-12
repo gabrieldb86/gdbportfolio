@@ -1,5 +1,6 @@
 // Direção visual: Arquivo Editorial — preservar assimetria, índices em vermelho, imagens protagonistas e microcopy objetiva.
 import { type CSSProperties, type FormEvent, useEffect, useLayoutEffect, useState } from "react";
+import { setPageMetadata } from "@/lib/seo";
 import {
   ArrowUpRight,
   Instagram,
@@ -24,6 +25,7 @@ function renderHeadline(headline: string) {
 
 function ProjectCard({ project, revealDelay }: { project: ProjectConfig; revealDelay: number }) {
   const isInternal = project.image.startsWith("internal:");
+  const [imageFailed, setImageFailed] = useState(false);
   const internalType = project.image.replace("internal:", "");
   return (
     <a
@@ -33,7 +35,7 @@ function ProjectCard({ project, revealDelay }: { project: ProjectConfig; revealD
       aria-label={isInternal ? `Conversar sobre o case ${project.title}` : `Abrir projeto ${project.title} no Behance`}
     >
       <div className="project-image-wrap" style={{ aspectRatio: project.aspectRatio }}>
-        {isInternal ? <div className={`internal-project-cover internal-project-${internalType}`}><span>{project.number}</span><strong>{project.title}</strong><small>Case interno · briefing / método / resultado</small></div> : <img src={project.image} alt={project.title} className="project-image" style={{ objectPosition: project.objectPosition }} loading="lazy" />}
+        {isInternal ? <div className={`internal-project-cover internal-project-${internalType}`}><span>{project.number}</span><strong>{project.title}</strong><small>Case interno · briefing / método / resultado</small></div> : imageFailed ? <div className="project-image-fallback" role="img" aria-label={`Capa indisponível: ${project.title}`}><span>{project.number} · projeto</span><strong>{project.title}</strong><small>Ver case completo no Behance</small></div> : <img src={project.image} alt={project.title} className="project-image" style={{ objectPosition: project.objectPosition }} loading={project.number === "01" ? "eager" : "lazy"} decoding="async" onError={() => setImageFailed(true)} />}
         <span className="project-arrow" aria-hidden="true">
           <ArrowUpRight size={19} strokeWidth={1.5} />
         </span>
@@ -57,6 +59,14 @@ export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [sent, setSent] = useState(false);
   const [openService, setOpenService] = useState<string | null>(null);
+
+  useEffect(() => {
+    setPageMetadata({
+      title: "Gabriel Danino Basilio — Coordenação de Conteúdo, Treinamento e Trade Marketing",
+      description: "Portfólio profissional de Gabriel Danino Basilio, coordenador de conteúdo, treinamento e trade marketing com 17 anos de experiência e mais de 300 mil pessoas capacitadas.",
+      path: "/",
+    });
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 28);

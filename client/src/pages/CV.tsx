@@ -1,5 +1,6 @@
 // Direção visual: Arquivo Editorial — o CV usa índice, marfim, vermelho-carmim e tipografia em camadas para transformar experiência em narrativa.
-import { type CSSProperties } from "react";
+import { type CSSProperties, useEffect } from "react";
+import { setPageMetadata } from "@/lib/seo";
 import { ArrowLeft, ArrowUpRight, Linkedin, Mail, MapPin, MessageCircle, Phone, Printer } from "lucide-react";
 import { getSiteConfig } from "@/data/siteConfig";
 
@@ -101,6 +102,14 @@ function scrollTop() {
 export default function CV() {
   const siteConfig = getSiteConfig();
   const profilePhoto = siteConfig.profilePhoto;
+
+  useEffect(() => {
+    setPageMetadata({
+      title: "CV — Gabriel Danino Basilio | Conteúdo, Treinamento e Trade Marketing",
+      description: "Experiência profissional, formação, metodologias e competências de Gabriel Danino Basilio para coordenação de conteúdo, treinamento, trade marketing e desenvolvimento de pessoas.",
+      path: "/cv",
+    });
+  }, []);
   return (
     <div className="site-shell cv-page" style={{ "--primary": siteConfig.brand.accent, "--background": siteConfig.brand.background, "--foreground": siteConfig.brand.foreground } as CSSProperties}>
       <header className="site-header site-header-scrolled">

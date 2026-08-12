@@ -1,5 +1,6 @@
 // Direção visual: Arquivo Editorial — o editor expõe controles diretos sem competir com a experiência pública do portfólio.
-import { type ChangeEvent, type CSSProperties, useState } from "react";
+import { type ChangeEvent, type CSSProperties, useEffect, useState } from "react";
+import { setPageMetadata } from "@/lib/seo";
 import { ArrowLeft, Check, ImagePlus, MoveDown, MoveUp, RotateCcw, Save, SlidersHorizontal, Upload } from "lucide-react";
 import { defaultSiteConfig, getSiteConfig, resetSiteConfig, saveSiteConfig, type ProjectConfig, type SiteConfig } from "@/data/siteConfig";
 
@@ -16,6 +17,15 @@ function readFileAsDataUrl(file: File, callback: (url: string) => void) {
 export default function Editor() {
   const [config, setConfig] = useState<SiteConfig>(() => cloneConfig(getSiteConfig()));
   const [saved, setSaved] = useState(false);
+
+  useEffect(() => {
+    setPageMetadata({
+      title: "Editor interno — Gabriel Danino Basilio",
+      description: "Ferramenta interna de personalização local do portfólio de Gabriel Danino Basilio.",
+      path: "/editor",
+      robots: "noindex, nofollow, noarchive",
+    });
+  }, []);
 
   const updateProject = (index: number, patch: Partial<ProjectConfig>) => {
     setConfig((current) => ({ ...current, projects: current.projects.map((project, projectIndex) => projectIndex === index ? { ...project, ...patch } : project) }));
@@ -86,7 +96,7 @@ export default function Editor() {
           <div className="editor-projects">
             {config.projects.map((project, index) => (
               <article className={`editor-project ${project.visible ? "" : "editor-project-hidden"}`} key={`${project.number}-${project.title}`}>
-                <div className="editor-project-thumb"><img src={project.image} alt="" /><span>{project.number}</span></div>
+                <div className="editor-project-thumb">{project.image.startsWith("internal:") ? <div className="editor-project-thumb-fallback" aria-label={`Capa interna: ${project.title}`}><strong>{project.title}</strong></div> : <img src={project.image} alt={`Prévia de ${project.title}`} loading="lazy" />}<span>{project.number}</span></div>
                 <div className="editor-project-content">
                   <div className="editor-project-top"><strong>{project.title}</strong><label className="switch-field"><input type="checkbox" checked={project.visible} onChange={(event) => updateProject(index, { visible: event.target.checked })} /><span>Mostrar</span></label></div>
                   <div className="editor-project-grid">

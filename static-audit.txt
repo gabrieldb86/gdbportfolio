@@ -1,0 +1,125 @@
+--- IMAGENS E ALT ---
+client/src/components/ManusDialog.tsx:58:              <img src={logo} alt="Dialog graphic" className="w-10 h-10 rounded-md" />
+client/src/index.css:826:.home-revision { background-image: linear-gradient(rgba(27, 26, 25, .88), rgba(27, 26, 25, .94)), var(--site-bg-image); background-attachment: fixed; background-position: center; background-size: cover; }
+client/src/index.css:882:.home-revision .hero-section { background-image: linear-gradient(rgba(27, 26, 25, .9), rgba(27, 26, 25, .86)), var(--site-bg-image); }
+client/src/index.css:883:.home-revision .work-section { background-image: linear-gradient(rgba(27, 26, 25, .9), rgba(27, 26, 25, .94)), var(--site-bg-image); }
+client/src/index.css:884:.home-revision .services-section { background-image: linear-gradient(rgba(244, 238, 230, .93), rgba(244, 238, 230, .96)), var(--site-bg-image); }
+client/src/index.css:885:.home-revision .about-section { background-image: linear-gradient(rgba(221, 208, 196, .92), rgba(221, 208, 196, .96)), var(--site-bg-image); }
+client/src/index.css:886:.home-revision .contact-section { background-image: linear-gradient(rgba(28, 27, 26, .91), rgba(28, 27, 26, .95)), var(--site-bg-image); }
+client/src/index.css:887:.home-revision .site-footer { background-image: linear-gradient(rgba(19, 19, 19, .94), rgba(19, 19, 19, .97)), var(--site-bg-image); }
+client/src/pages/Home.tsx:31:      href={project.href}
+client/src/pages/Home.tsx:36:        {isInternal ? <div className={`internal-project-cover internal-project-${internalType}`}><span>{project.number}</span><strong>{project.title}</strong><small>Case interno · briefing / método / resultado</small></div> : <img src={project.image} alt={project.title} className="project-image" style={{ objectPosition: project.objectPosition }} loading="lazy" />}
+client/src/pages/Home.tsx:114:        <a className="brand-lockup" href="#top" onClick={(event) => { event.preventDefault(); scrollToId("top"); }}>
+client/src/pages/Home.tsx:123:          <a href="#work" onClick={(event) => { event.preventDefault(); scrollToId("work", () => setMenuOpen(false)); }}>Trabalho <span>01</span></a>
+client/src/pages/Home.tsx:124:          <a href="#about" onClick={(event) => { event.preventDefault(); scrollToId("about", () => setMenuOpen(false)); }}>Sobre <span>02</span></a>
+client/src/pages/Home.tsx:125:          <a href="/cv">CV <span>03</span></a>
+client/src/pages/Home.tsx:126:          <a href="#contact" onClick={(event) => { event.preventDefault(); scrollToId("contact", () => setMenuOpen(false)); }}>Contato <span>04</span></a>
+client/src/pages/Home.tsx:133:        <div className="rail-image-block"><img src={siteConfig.railImage} alt="Ilustração em preto e branco de Gabriel" /></div>
+client/src/pages/Home.tsx:146:            <a className="hero-cta hero-cta-redesign" href="#work" onClick={(event) => { event.preventDefault(); scrollToId("work"); }}>Explorar trabalho <ArrowUpRight size={16} /></a>
+client/src/pages/Home.tsx:149:            <img src={siteConfig.profilePhoto} alt="Gabriel Danino Basilio" />
+client/src/pages/Home.tsx:151:          <div className="hero-redesign-bottom" data-reveal="hero-bottom"><span>17 anos de experiência</span><span>Conteudista · Facilitador · Coordenador de Treinamento</span><a className="hero-cv-link" href="/cv">Ver CV <ArrowUpRight size={14} /></a><button type="button" onClick={() => scrollToId("work")} aria-label="Descer para os projetos"><MoveDownRight size={20} /></button></div>
+client/src/pages/Home.tsx:172:          <a href="/cv" className="proof-link">Abrir trajetória <ArrowUpRight size={15} /></a>
+client/src/pages/Home.tsx:182:              <a className="text-link" href="#about" onClick={(event) => { event.preventDefault(); scrollToId("about"); }}>Conheça meu jeito de trabalhar <ArrowUpRight size={15} /></a>
+client/src/pages/Home.tsx:192:            <a className="behance-link" href="https://www.behance.net/gabrieldb86" target="_blank" rel="noreferrer">Abrir Behance <ArrowUpRight size={15} /></a>
+client/src/pages/Home.tsx:206:              <img className="services-art" src={siteConfig.projects[4]?.image} alt="Projeto de apresentação Blocs" loading="lazy" />
+client/src/pages/Home.tsx:216:                  {openService === number && <div className="service-detail" id={`service-detail-${number}`}><p>{siteConfig.serviceDetails[number]}</p><a href="#contact" onClick={(event) => { event.preventDefault(); scrollToId("contact"); }}>Conversar sobre este tema <ArrowUpRight size={15} /></a></div>}
+client/src/pages/Home.tsx:227:              <img src={siteConfig.trainingImage} alt="Gabriel conduzindo um treinamento diante de uma equipe" loading="eager" />
+client/src/pages/Home.tsx:241:          <img src={siteConfig.heroImage} alt="Projeto visual de bonés em preto e vermelho" loading="lazy" />
+client/src/pages/Home.tsx:252:              <a className="contact-direct" href="https://wa.me/5511945747353" target="_blank" rel="noreferrer"><MessageCircle size={17} /> Falar diretamente no WhatsApp <ArrowUpRight size={15} /></a>
+client/src/pages/Home.tsx:268:      <a className="floating-contact" href="#contact" onClick={(event) => { event.preventDefault(); scrollToId("contact"); }}><span>Fale comigo</span><ArrowUpRight size={16} /></a>
+client/src/pages/Home.tsx:271:        <a className="footer-brand" href="#top" onClick={(event) => { event.preventDefault(); scrollToId("top"); }}><span className="footer-avatar"><img src={siteConfig.railImage} alt="" /></span><span style={{fontSize: '24px'}}>Gabriel Danino Basilio</span></a>
+client/src/pages/Home.tsx:272:        <div className="footer-socials"><a href="https://www.linkedin.com/in/gabrieldb86" target="_blank" rel="noreferrer" aria-label="LinkedIn"><Linkedin size={17} /></a><a href="https://instagram.com/gabrieldb1986" target="_blank" rel="noreferrer" aria-label="Instagram"><Instagram size={17} /></a><a href="https://wa.me/5511945747353" target="_blank" rel="noreferrer" aria-label="WhatsApp"><MessageCircle size={17} /></a></div>
+client/src/pages/Home.tsx:273:        <span className="footer-credit">© 2026 · Feito com intenção. · Foto de <a href="https://unsplash.com/pt-br/@scalzodesign?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noreferrer">Samuel Scalzo</a> na <a href="https://unsplash.com/pt-br/fotografias/uma-foto-em-preto-e-branco-de-um-edificio-xyuYk9oLA8I?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noreferrer">Unsplash</a></span>
+client/src/pages/CV.tsx:107:        <a className="brand-lockup" href="/" aria-label="Voltar para o portfólio">
+client/src/pages/CV.tsx:108:          <img src={siteConfig.railImage} alt="" className="header-avatar" />
+client/src/pages/CV.tsx:112:          <a href="/">Trabalho <span>01</span></a>
+client/src/pages/CV.tsx:113:          <a href="/#about">Sobre <span>02</span></a>
+client/src/pages/CV.tsx:114:          <a className="nav-active" href="/cv">CV <span>03</span></a>
+client/src/pages/CV.tsx:115:          <a href="/#contact">Contato <span>04</span></a>
+client/src/pages/CV.tsx:137:                <a className="submit-button cv-contact-button" href="/#contact">Conversar sobre uma oportunidade <ArrowUpRight size={16} /></a>
+client/src/pages/CV.tsx:142:              <div className="cv-portrait"><img src={profilePhoto} alt="Gabriel Danino Basilio" /></div>
+client/src/pages/CV.tsx:162:                <a href="tel:+5511945747353"><Phone size={14} /> +55 11 94574-7353</a>
+client/src/pages/CV.tsx:163:                <a href="mailto:gabrieldb@me.com"><Mail size={14} /> gabrieldb@me.com</a>
+client/src/pages/CV.tsx:210:          <div className="cv-closing-copy"><span>Uma próxima página</span><h2>Vamos construir<br /><em>o próximo resultado.</em></h2><a className="contact-direct" href="https://wa.me/5511945747353" target="_blank" rel="noreferrer"><MessageCircle size={16} /> Falar com Gabriel <ArrowUpRight size={15} /></a></div>
+client/src/pages/CV.tsx:211:          <img src={profilePhoto} alt="" loading="lazy" />
+client/src/pages/CV.tsx:215:      <a className="floating-contact floating-contact-cv" href="/#contact"><span>Fale comigo</span><ArrowUpRight size={16} /></a>
+client/src/pages/CV.tsx:218:        <a className="footer-brand" href="/" onClick={scrollTop}><span className="footer-avatar"><img src={siteConfig.railImage} alt="" /></span><span>Gabriel Danino Basilio</span></a>
+client/src/pages/CV.tsx:219:        <div className="footer-socials"><a href="https://www.linkedin.com/in/gabrieldb86" target="_blank" rel="noreferrer" aria-label="LinkedIn"><Linkedin size={17} /></a><a href="https://www.behance.net/gabrieldb86" target="_blank" rel="noreferrer" aria-label="Behance"><ArrowUpRight size={17} /></a><a href="https://wa.me/5511945747353" target="_blank" rel="noreferrer" aria-label="WhatsApp"><MessageCircle size={17} /></a></div>
+client/src/pages/Editor.tsx:44:        <a href="/" className="editor-back"><ArrowLeft size={16} /> Voltar ao portfólio</a>
+client/src/pages/Editor.tsx:64:              <label className="editor-field editor-photo-field"><span>Foto de perfil</span><div className="editor-photo-preview"><img src={config.profilePhoto} alt="Prévia do perfil" /></div><label className="upload-button"><Upload size={14} /> Trocar foto<input type="file" accept="image/*" onChange={(event) => uploadImage(event, (url) => { setConfig((current) => ({ ...current, profilePhoto: url })); setSaved(false); })} /></label><small>Usada no CV e na apresentação pessoal.</small></label>
+client/src/pages/Editor.tsx:65:              <label className="editor-field editor-photo-field"><span>Imagem de destaque</span><div className="editor-photo-preview editor-hero-preview"><img src={config.heroImage} alt="Prévia do projeto de destaque" /></div><label className="upload-button"><ImagePlus size={14} /> Trocar imagem<input type="file" accept="image/*" onChange={(event) => uploadImage(event, (url) => { setConfig((current) => ({ ...current, heroImage: url })); setSaved(false); })} /></label><small>Usada na primeira dobra da home.</small></label>
+client/src/pages/Editor.tsx:89:                <div className="editor-project-thumb"><img src={project.image} alt="" /><span>{project.number}</span></div>
+client/src/pages/Editor.tsx:108:        <section className="editor-bottom-callout"><Check size={19} /><div><strong>Quando terminar, salve e confira o resultado.</strong><p>O editor é uma camada de personalização rápida. Para uma mudança permanente na versão publicada, o próximo passo é salvar um checkpoint do projeto.</p></div><a href="/">Ver portfólio <ArrowLeft size={15} /></a></section>
+client/index.html:10:    <link rel="icon" type="image/jpeg" href="/manus-storage/gabriel-sidebar-portrait_dae7ef67.jpg" />
+client/index.html:11:    <link rel="preconnect" href="https://fonts.googleapis.com" />
+client/index.html:12:    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+client/index.html:13:    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0,1&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+client/index.html:17:    <script type="module" src="/src/main.tsx"></script>
+client/index.html:18:    <script defer src="%VITE_ANALYTICS_ENDPOINT%/umami" data-website-id="%VITE_ANALYTICS_WEBSITE_ID%"></script>
+--- HEADINGS ---
+client/src/pages/Home.tsx:44:          <h3>{project.title}</h3>
+client/src/pages/Home.tsx:144:            <h1 className="hero-headline">Conteúdo,<br /><em>treinamento</em><br />&amp; trade<br />marketing.</h1>
+client/src/pages/Home.tsx:179:            <h2 id="manifesto-title">Transformo estratégia em <span>experiências</span> que movem pessoas.</h2>
+client/src/pages/Home.tsx:190:            <div><p className="section-kicker">Selected work</p><h2 id="work-title">Projetos que<br /><em>ganharam forma.</em></h2></div>
+client/src/pages/Home.tsx:205:              <h2 id="services-title">Coordenação que<br />vira <strong>resultado.</strong></h2>
+client/src/pages/Home.tsx:213:                    <div><h3>{title}</h3><p>{description}</p></div>
+client/src/pages/Home.tsx:232:              <h2 id="about-title">Olá, eu sou<br /><em>Gabriel.</em></h2>
+client/src/pages/Home.tsx:242:          <div className="statement-copy" data-reveal="statement-copy"><span>Uma pergunta para o próximo projeto:</span><h2>O que precisa<br /><em>ganhar forma?</em></h2></div>
+client/src/pages/Home.tsx:250:              <h2 id="contact-title">Tem uma oportunidade<br />em <em>mente?</em></h2>
+client/src/pages/NotFound.tsx:24:          <h1 className="text-4xl font-bold text-slate-900 mb-2">404</h1>
+client/src/pages/NotFound.tsx:26:          <h2 className="text-xl font-semibold text-slate-700 mb-4">
+client/src/pages/NotFound.tsx:28:          </h2>
+client/src/pages/CV.tsx:134:              <h1>Conteúdo que<br /><em>move pessoas.</em></h1>
+client/src/pages/CV.tsx:179:            <div className="cv-section-heading"><p className="section-kicker">Base de atuação</p><h2 id="qualification-title">Método, repertório<br /><strong>e ferramentas.</strong></h2></div>
+client/src/pages/CV.tsx:181:              <article className="cv-qualification-block cv-education-block"><p className="section-kicker">Formação</p><h3>{education.degree}</h3><p>{education.institution}</p><span>{education.period}</span></article>
+client/src/pages/CV.tsx:197:            <div className="cv-section-heading"><p className="section-kicker">Trajetória</p><h2 id="experience-title">Experiência que<br /><strong>vira repertório.</strong></h2></div>
+client/src/pages/CV.tsx:202:                  <div className="experience-body"><h3>{item.role}</h3><p className="experience-company">{item.company}</p><p className="experience-area">{item.area}</p><ul>{item.points.map((point) => <li key={point}>{point}</li>)}</ul></div>
+client/src/pages/CV.tsx:210:          <div className="cv-closing-copy"><span>Uma próxima página</span><h2>Vamos construir<br /><em>o próximo resultado.</em></h2><a className="contact-direct" href="https://wa.me/5511945747353" target="_blank" rel="noreferrer"><MessageCircle size={16} /> Falar com Gabriel <ArrowUpRight size={15} /></a></div>
+client/src/pages/Editor.tsx:55:          <h1>Faça o portfólio<br /><em>ter sua medida.</em></h1>
+client/src/pages/Editor.tsx:61:          <div className="editor-panel-heading"><span>01</span><div><p className="section-kicker">Identidade</p><h2 id="identity-title">A primeira impressão.</h2></div></div>
+client/src/pages/Editor.tsx:76:          <div className="editor-panel-heading"><span>02</span><div><p className="section-kicker">Hero</p><h2 id="hero-title">A mensagem de entrada.</h2></div></div>
+client/src/pages/Editor.tsx:85:          <div className="editor-panel-heading"><span>03</span><div><p className="section-kicker">Projetos</p><h2 id="projects-title">A seleção que aparece.</h2></div></div>
+--- OLD LINKS / INTERNAL EDITOR ---
+client/src/App.tsx:17:      <Route path="/editor" component={Editor} />
+client/src/pages/CV.tsx:125:        <span className="rail-label rail-vertical">São Paulo, Brasil</span>
+client/src/pages/CV.tsx:164:                <span><MapPin size={14} /> São Paulo, SP</span>
+--- TODO/CONSOLE ---
+client/src/components/Map.tsx:106:      console.error("Failed to load Google Maps script");
+client/src/components/Map.tsx:131:      console.error("Map container not found");
+--- FORM / BUTTONS ---
+client/src/pages/Home.tsx:33:      aria-label={isInternal ? `Conversar sobre o case ${project.title}` : `Abrir projeto ${project.title} no Behance`}
+client/src/pages/Home.tsx:37:        <span className="project-arrow" aria-hidden="true">
+client/src/pages/Home.tsx:118:        <button className="menu-trigger" type="button" aria-label={menuOpen ? "Fechar menu" : "Abrir menu"} onClick={() => setMenuOpen((open) => !open)}>
+client/src/pages/Home.tsx:122:        <nav className={`site-nav ${menuOpen ? "site-nav-open" : ""}`} aria-label="Navegação principal">
+client/src/pages/Home.tsx:132:      <aside className="side-rail" aria-label="Informações rápidas">
+client/src/pages/Home.tsx:134:        <span className="rail-label">Portfólio · 2026</span>
+client/src/pages/Home.tsx:136:        <div className="rail-ticks" aria-hidden="true"><span>01</span><i /><span>02</span><i /><span>03</span><i /><span>04</span><i /><span>05</span></div>
+client/src/pages/Home.tsx:151:          <div className="hero-redesign-bottom" data-reveal="hero-bottom"><span>17 anos de experiência</span><span>Conteudista · Facilitador · Coordenador de Treinamento</span><a className="hero-cv-link" href="/cv">Ver CV <ArrowUpRight size={14} /></a><button type="button" onClick={() => scrollToId("work")} aria-label="Descer para os projetos"><MoveDownRight size={20} /></button></div>
+client/src/pages/Home.tsx:154:        <section className="coordination-focus-band" aria-labelledby="coordination-focus-title">
+client/src/pages/Home.tsx:155:          <div className="coordination-focus-label" data-reveal="focus-label">
+client/src/pages/Home.tsx:166:        <section className="recruiter-proof-strip" aria-label="Destaques profissionais" data-reveal="proof-strip">
+client/src/pages/Home.tsx:175:        <section className="manifesto-section section-pad" aria-labelledby="manifesto-title">
+client/src/pages/Home.tsx:187:        <section id="work" className="work-section work-redesign section-pad" aria-labelledby="work-title">
+client/src/pages/Home.tsx:200:        <section className="services-section services-redesign section-pad" aria-labelledby="services-title">
+client/src/pages/Home.tsx:211:                  <button className="service-row" type="button" aria-expanded={openService === number} aria-controls={`service-detail-${number}`} onClick={() => setOpenService((current) => current === number ? null : number)}>
+client/src/pages/Home.tsx:223:        <section id="about" className="about-section section-pad" aria-labelledby="about-title">
+client/src/pages/Home.tsx:228:              <span className="about-art-label">Processo / repertório / intenção</span>
+client/src/pages/Home.tsx:235:              <div className="about-skill-list" aria-label="Áreas de atuação"><span>Instructional Design</span><span>Trade Marketing</span><span>Gestão de Campo</span><span>ADDIE / Kirkpatrick</span><span>IA Generativa</span><span>Dashboards &amp; KPIs</span></div>
+client/src/pages/Home.tsx:245:        <section id="contact" className="contact-section section-pad" aria-labelledby="contact-title">
+client/src/pages/Home.tsx:254:            <form className="contact-form" data-reveal="contact-form" onSubmit={handleSubmit}>
+client/src/pages/Home.tsx:255:              <label htmlFor="name">Seu nome</label>
+client/src/pages/Home.tsx:257:              <label htmlFor="email">Seu e-mail</label>
+client/src/pages/Home.tsx:259:              <label htmlFor="message">O que você precisa?</label>
+client/src/pages/Home.tsx:261:              <button className="submit-button" type="submit">Enviar mensagem <ArrowUpRight size={17} /></button>
+client/src/pages/Home.tsx:272:        <div className="footer-socials"><a href="https://www.linkedin.com/in/gabrieldb86" target="_blank" rel="noreferrer" aria-label="LinkedIn"><Linkedin size={17} /></a><a href="https://instagram.com/gabrieldb1986" target="_blank" rel="noreferrer" aria-label="Instagram"><Instagram size={17} /></a><a href="https://wa.me/5511945747353" target="_blank" rel="noreferrer" aria-label="WhatsApp"><MessageCircle size={17} /></a></div>
+client/src/pages/CV.tsx:107:        <a className="brand-lockup" href="/" aria-label="Voltar para o portfólio">
+client/src/pages/CV.tsx:111:        <nav className="site-nav cv-nav" aria-label="Navegação principal">
+client/src/pages/CV.tsx:120:      <aside className="side-rail" aria-label="Informações rápidas">
+client/src/pages/CV.tsx:121:        <span className="rail-label">Currículo · 2026</span>
+client/src/pages/CV.tsx:123:        <div className="rail-ticks" aria-hidden="true"><span>CV</span><i /><span>17</span><i /><span>300K</span></div>
+client/src/pages/CV.tsx:125:        <span className="rail-label rail-vertical">São Paulo, Brasil</span>
+client/src/pages/CV.tsx:138:                <button className="print-button" type="button" onClick={() => window.print()}><Printer size={15} /> Imprimir CV</button>
+client/src/pages/CV.tsx:176:        <section className="cv-detail-section section-pad" aria-labelledby="qualification-title">
+client/src/pages/CV.tsx:190:          <div className="cv-toolstrip-label"><span>04</span><p className="section-kicker">Como trabalho</p></div>
+client/src/pages/CV.tsx:194:        <section className="cv-experience-section section-pad" aria-labelledby="experience-title">
+client/src/pages/CV.tsx:219:        <div className="footer-socials"><a href="https://www.linkedin.com/in/gabrieldb86" target="_blank" rel="noreferrer" aria-label="LinkedIn"><Linkedin size={17} /></a><a href="https://www.behance.net/gabrieldb86" target="_blank" rel="noreferrer" aria-label="Behance"><ArrowUpRight size={17} /></a><a href="https://wa.me/5511945747353" target="_blank" rel="noreferrer" aria-label="WhatsApp"><MessageCircle size={17} /></a></div>

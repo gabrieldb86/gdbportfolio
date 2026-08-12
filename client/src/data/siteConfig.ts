@@ -71,7 +71,7 @@ export const defaultSiteConfig: SiteConfig = {
       title: "Podcast Varejo na Real",
       type: "Conteúdo · Identidade editorial",
       year: "2024",
-      image: "https://mir-s3-cdn-cf.behance.net/projects/404/ff75d9229319463.Y3JvcCwxMzgwLDEwODAsMjcwLDA.jpg",
+      image: "/manus-storage/podcast-varejo-na-real_af69c605.jpg",
       href: "https://www.behance.net/gallery/229319463/Podcast-Varejo-na-Real-EP04",
       size: "project-wide",
       aspectRatio: "1.74",
@@ -83,7 +83,7 @@ export const defaultSiteConfig: SiteConfig = {
       title: "Ragtech Dicas",
       type: "Conteúdo · Social · Direção visual",
       year: "2024",
-      image: "https://mir-s3-cdn-cf.behance.net/projects/404/821789229318749.Y3JvcCwxMzc0LDEwNzQsMCwyOTk.png",
+      image: "/manus-storage/ragtech-dicas_83287b6b.png",
       href: "https://www.behance.net/gallery/229318749/Ragtech-Dicas-01-O-que-um-nobreak",
       size: "project-tall",
       aspectRatio: ".87",
@@ -95,7 +95,7 @@ export const defaultSiteConfig: SiteConfig = {
       title: "Future Print 2024",
       type: "Eventos · Materiais de marca",
       year: "2024",
-      image: "https://mir-s3-cdn-cf.behance.net/projects/404/993e5a229318387.Y3JvcCw4MDgsNjMyLDAsMA.png",
+      image: "/manus-storage/future-print-2024_11b8395d.png",
       href: "https://www.behance.net/gallery/229318387/Future-Print-2024-Feira-Ragtech-com-Roland-e-Epson",
       size: "project-card",
       aspectRatio: "1.26",
@@ -107,7 +107,7 @@ export const defaultSiteConfig: SiteConfig = {
       title: "Eletrolar Show 2024",
       type: "Eventos · Experiência de marca",
       year: "2024",
-      image: "https://mir-s3-cdn-cf.behance.net/projects/404/e836a2229253681.Y3JvcCw4MDgsNjMyLDAsMA.png",
+      image: "/manus-storage/eletrolar-show-2024_5c1c2e78.png",
       href: "https://www.behance.net/gallery/229253681/Eletrolar-Show-2024-Feira-com-Redragon-e-Ragtech",
       size: "project-card",
       aspectRatio: "1.26",
@@ -119,7 +119,7 @@ export const defaultSiteConfig: SiteConfig = {
       title: "Blocs Presentation",
       type: "Apresentação · Sistema visual",
       year: "2023",
-      image: "https://mir-s3-cdn-cf.behance.net/projects/404/98dc70229252859.Y3JvcCw4MDgsNjMyLDAsMA.png",
+      image: "/manus-storage/blocs-presentation_5118135f.png",
       href: "https://www.behance.net/gallery/229252859/Blocs-Presentation",
       size: "project-card",
       aspectRatio: "1.26",
@@ -131,7 +131,7 @@ export const defaultSiteConfig: SiteConfig = {
       title: "Valens BDN",
       type: "Identidade · Uniformes alternativos",
       year: "2022",
-      image: "https://mir-s3-cdn-cf.behance.net/projects/404/7a7b9f200631919.Y3JvcCwxMzk5LDEwOTUsMCww.jpg",
+      image: "/manus-storage/valens-bdn_1f4814b0.jpg",
       href: "https://www.behance.net/gallery/200631919/Uniformes-Alternativos-Valens-BDN",
       size: "project-tall",
       aspectRatio: ".87",
@@ -189,6 +189,15 @@ export const defaultSiteConfig: SiteConfig = {
 
 const STORAGE_KEY = "gabriel-portfolio-config";
 
+function migrateProjects(savedProjects: ProjectConfig[] | undefined) {
+  if (!savedProjects) return defaultSiteConfig.projects;
+  return savedProjects.map((project) => {
+    const defaultProject = defaultSiteConfig.projects.find((candidate) => candidate.number === project.number);
+    const isLegacyBehanceAsset = project.image.startsWith("https://mir-s3-cdn-cf.behance.net/");
+    return defaultProject && isLegacyBehanceAsset ? { ...project, image: defaultProject.image } : project;
+  });
+}
+
 export function getSiteConfig(): SiteConfig {
   if (typeof window === "undefined") return defaultSiteConfig;
   try {
@@ -200,7 +209,7 @@ export function getSiteConfig(): SiteConfig {
       ...parsed,
       brand: { ...defaultSiteConfig.brand, ...parsed.brand },
       hero: { ...defaultSiteConfig.hero, ...parsed.hero },
-      projects: parsed.projects ?? defaultSiteConfig.projects,
+      projects: migrateProjects(parsed.projects),
       services: parsed.services ?? defaultSiteConfig.services,
       serviceDetails: parsed.serviceDetails ?? defaultSiteConfig.serviceDetails,
     };
