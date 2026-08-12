@@ -148,7 +148,7 @@ export default function Home() {
           <div className="hero-redesign-meta"><span>Portfólio · 2026</span></div>
           <div className="hero-redesign-copy" data-reveal="hero-copy">
             <p className="eyebrow"><span className="eyebrow-mark">●</span> {siteConfig.hero.eyebrow}</p>
-            <h1 className="hero-headline">CONTEÚDO,<br />treinamento<br />&amp; TRADE<br />MARKETING.</h1>
+            <h1 className="hero-headline"><span className="hero-headline-white">CONTEÚDO,</span><br /><span className="hero-headline-training">treinamento</span><br /><span className="hero-headline-white">&amp; TRADE</span><br /><span className="hero-headline-white">MARKETING.</span></h1>
             <p className="hero-redesign-intro">{siteConfig.hero.intro}</p>
             <a className="hero-cta hero-cta-redesign" href="#work" onClick={(event) => { event.preventDefault(); scrollToId("work"); }}>Explorar trabalho <ArrowUpRight size={16} /></a>
           </div>

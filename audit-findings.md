@@ -82,3 +82,7 @@ A versão final usa o bloco de experiência em marfim, com grafite para o texto,
 O texto solicitado permanece intacto: "CONTEÚDO, treinamento & TRADE MARKETING.". A escala voltou aos parâmetros tipográficos da versão anterior, com headline sans de grande impacto, peso forte, entrelinha compacta e quebras manuais em quatro linhas. O preview confirmou a presença do texto novo, da apresentação completa e dos CTAs; o build também foi aprovado.
 
 Na verificação mobile, a escala desktop restaurada inicialmente fazia a palavra "TREINAMENTO" ultrapassar a largura de 375px. Foi adicionada uma regra específica para telas até 720px, preservando o peso visual e reduzindo somente o tamanho da fonte, com `overflow-wrap` no eyebrow. O TypeScript e o build foram aprovados novamente.
+
+## Headline reproduzida conforme primeira foto
+
+A headline foi dividida em quatro linhas independentes: `CONTEÚDO,` em Manrope extra-bold marfim; `treinamento` em DM Serif Display itálico carmim; `& TRADE` em Manrope extra-bold marfim; e `MARKETING.` em Manrope extra-bold marfim. Desktop e mobile foram capturados com a nova composição, que mantém o texto exato e a hierarquia visual solicitada.

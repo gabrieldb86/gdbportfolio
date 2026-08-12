@@ -957,6 +957,8 @@ h1 em, h2 em { color: var(--primary); font-style: italic; }
 .hero-redesign { align-items: center; padding-top: 155px; }
 .hero-redesign-copy { align-self: center; }
 .hero-redesign-copy h1 { font-size: clamp(4.4rem, 8vw, 8.8rem); line-height: .8; }
+.hero-redesign-copy h1 .hero-headline-white { color: #f4eee6; font-family: "Manrope", sans-serif; font-style: normal; font-weight: 800; letter-spacing: -.09em; text-transform: uppercase; }
+.hero-redesign-copy h1 .hero-headline-training { color: #cf7b73; font-family: "DM Serif Display", serif; font-style: italic; font-weight: 400; letter-spacing: -.07em; text-transform: lowercase; }
 .sean-obrien-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)) !important; gap: 40px 20px !important; }
 .sean-obrien-grid .project-card { grid-column: span 1 !important; margin-top: 0 !important; }
 .sean-obrien-grid .project-image-wrap { aspect-ratio: 1.15; }

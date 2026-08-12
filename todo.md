@@ -105,6 +105,12 @@
 - [x] Manter o texto novo solicitado pelo usuário.
 - [x] Validar build, hero em desktop, tablet e mobile.
 
+## Próxima rodada — reprodução exata da primeira foto
+- [x] Separar a headline em quatro linhas com estilos tipográficos distintos.
+- [x] Aplicar "treinamento" em serifálica carmim e manter as demais linhas em caixa alta clara.
+- [x] Igualar escala, contraste, entrelinha e composição visual à referência anexada.
+- [x] Validar desktop e mobile antes de publicar.
+
 ## Próxima rodada — CV clean para recrutamento
 - [x] Comparar a página CV com o PDF completo anexado.
 - [x] Expandir a trajetória profissional para refletir o documento de referência.
