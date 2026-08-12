@@ -61,7 +61,7 @@ export const defaultSiteConfig: SiteConfig = {
     foreground: "#191817",
   },
   hero: {
-    eyebrow: "Coordenação · Conteúdo · Treinamento · Trade Marketing",
+    eyebrow: "Coordenação ● Conteúdo ● Treinamento ● Trade Marketing",
     headline: "CONTEÚDO, treinamento & TRADE MARKETING.",
     intro: "Sou Gabriel, há mais de 17 anos trabalho no ponto onde a estratégia vira execução: criando conteúdo, treinamentos e campanhas que saem do papel e chegam ao PDV. Passei por programas premiados na Apple e também por performance de mais de 130 promotores em campo. Busco uma coordenação em conteúdo e treinamento, trade marketing e performance de campo, ou treinamento e desenvolvimento de pessoas.",
   },
@@ -216,11 +216,13 @@ export function getSiteConfig(): SiteConfig {
     const saved = window.localStorage.getItem(STORAGE_KEY);
     if (!saved) return defaultSiteConfig;
     const parsed = JSON.parse(saved) as Partial<SiteConfig>;
+    const hero = { ...defaultSiteConfig.hero, ...parsed.hero };
+    const normalizedEyebrow = hero.eyebrow.replace(/\s*[·•]\s*/g, " ● ").replace(/^\s*●\s*/, "");
     return {
       ...defaultSiteConfig,
       ...parsed,
       brand: { ...defaultSiteConfig.brand, ...parsed.brand },
-      hero: { ...defaultSiteConfig.hero, ...parsed.hero },
+      hero: { ...hero, eyebrow: normalizedEyebrow },
       projects: migrateProjects(parsed.projects),
       services: parsed.services ?? defaultSiteConfig.services,
       serviceDetails: parsed.serviceDetails ?? defaultSiteConfig.serviceDetails,

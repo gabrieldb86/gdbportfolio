@@ -123,6 +123,12 @@
 - [x] Preservar fontes, cores, marcadores e fotografia independente à direita.
 - [x] Validar desktop e mobile antes de publicar.
 
+## Próxima rodada — revisão do editor visual
+- [x] Preservar os pontos entre as categorias do eyebrow sem duplicar marcador.
+- [x] Manter o ajuste de espaçamento do texto introdutório e do CTA sem deslocar o ícone.
+- [x] Aplicar o deslocamento da métrica apenas ao bloco necessário, sem margens repetidas nos filhos.
+- [x] Validar build, preview e publicar checkpoint.
+
 ## Próxima rodada — CV clean para recrutamento
 - [x] Comparar a página CV com o PDF completo anexado.
 - [x] Expandir a trajetória profissional para refletir o documento de referência.

@@ -150,9 +150,9 @@ export default function Home() {
             <div className="hero-redesign-copy">
               <p className="eyebrow"><span className="eyebrow-mark">●</span> {siteConfig.hero.eyebrow}</p>
               <h1 className="hero-headline"><span className="hero-headline-white">CONTEÚDO,</span><br /><span className="hero-headline-training">treinamento</span><br /><span className="hero-headline-white">&amp; TRADE</span><br /><span className="hero-headline-white">MARKETING.</span></h1>
-              <p className="hero-redesign-intro">{siteConfig.hero.intro}</p>
+              <p className="hero-redesign-intro" style={{marginTop: '16px'}}>{siteConfig.hero.intro}</p>
             </div>
-            <a className="hero-cta hero-cta-redesign" href="#work" onClick={(event) => { event.preventDefault(); scrollToId("work"); }}>Explorar trabalho <ArrowUpRight size={16} /></a>
+            <a className="hero-cta hero-cta-redesign" href="#work" onClick={(event) => { event.preventDefault(); scrollToId("work"); }} style={{ paddingTop: "15px" }}>Explorar trabalho <ArrowUpRight size={16} /></a>
           </div>
           <div className="hero-redesign-portrait" data-reveal="hero-portrait">
             <img src={siteConfig.profilePhoto} alt="Gabriel Danino Basilio" />
@@ -174,7 +174,7 @@ export default function Home() {
 
         <section className="recruiter-proof-strip" aria-label="Destaques profissionais" data-reveal="proof-strip">
           <div className="proof-intro"><p className="section-kicker">Para quem recruta</p><p>Uma leitura rápida da experiência que sustenta o trabalho.</p></div>
-          <div className="proof-metric"><strong>17</strong><span>anos de experiência</span></div>
+          <div className="proof-metric" style={{ marginLeft: "-7px", marginRight: "19px" }}><strong>17</strong><span>anos de experiência</span></div>
           <div className="proof-metric"><strong>300K<span>+</span></strong><span>pessoas capacitadas</span></div>
           <div className="proof-metric"><strong>130<span>+</span></strong><span>promotores monitorados</span></div>
           <div className="proof-metric"><strong>8,3</strong><span>média de avaliação</span></div>

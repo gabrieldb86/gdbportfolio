@@ -94,3 +94,7 @@ O hero foi recomposto em um painel esquerdo com borda carmim arredondada, paddin
 ## Diagramação sem caixa — validação final
 
 A moldura foi removida completamente, mantendo apenas o eixo textual do print. As capturas desktop e mobile confirmam o título em quatro linhas, o texto corrido alinhado à esquerda, o CTA no mesmo eixo e a fotografia como bloco independente. Nenhuma borda, fundo ou caixa visual permanece ao redor do texto.
+
+## Revisão dos edits do editor visual
+
+Os bullets do eyebrow agora aparecem entre as quatro categorias sem duplicação; o texto introdutório mantém a redução de margem superior; o CTA mantém apenas o padding no link, sem deslocar o ícone; e a métrica `17` recebe a margem apenas no bloco, sem estilos repetidos em seus filhos. Build e capturas em desktop/mobile foram validados.
