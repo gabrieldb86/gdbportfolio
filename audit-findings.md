@@ -63,3 +63,16 @@ O CV foi enriquecido com a trajetória completa do PDF, incluindo SPOT/EMS, atua
 ## CV clean — validação final
 
 A versão final usa o bloco de experiência em marfim, com grafite para o texto, carmim apenas em labels e empresas, divisórias suaves e um encerramento mais compacto. O resultado reduz a aparência de peça promocional sem abandonar a identidade editorial do portfólio. Desktop e mobile foram capturados após a última alteração; a trajetória completa permanece legível e empilhada, sem colisões aparentes ou overflow horizontal.
+
+## Atualização com os 10 ajustes solicitados
+
+1. Título do hero atualizado para **CONTEÚDO, treinamento & TRADE MARKETING.**
+2. Texto do hero atualizado com o parágrafo exato fornecido pelo usuário, alinhado à esquerda e equilibrado na primeira dobra.
+3. Nome no header em linha única (**Gabriel Danino Basilio**) com fonte ajustada para evitar quebras indesejadas, alinhado com a navegação.
+4. Informação redundante removida da página principal (mantendo apenas o trilho lateral limpo).
+5. Métrica de experiência atualizada para **"Mais de 17 anos de experiência"**.
+6. "Selected work" alterado para **"Trabalhos selecionados"**.
+7. Seção de projetos (WORK) reconstruída com grade de 5 colunas inspirada em **seanobrien.com.au**, removendo os dashboards e incluindo 10 projetos curados.
+8. Acordeão de serviços corrigido (o conteúdo não desaparece mais ao abrir) e foto de serviços reduzida em cerca de 30%.
+9. Foto dos bonés restaurada na seção de destaque (statement).
+10. Seção de contato com colunas distribuídas verticalmente e alinhamento à esquerda.

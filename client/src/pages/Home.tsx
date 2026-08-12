@@ -142,8 +142,6 @@ export default function Home() {
       <aside className="side-rail" aria-label="Informações rápidas">
         <div className="rail-image-block"><img src={siteConfig.railImage} alt="Ilustração em preto e branco de Gabriel" /></div>
         <span className="rail-label">Portfólio · 2026</span>
-        <span className="rail-line" />
-        <div className="rail-ticks" aria-hidden="true"><span>01</span><i /><span>02</span><i /><span>03</span><i /><span>04</span><i /><span>05</span></div>
       </aside>
 
       <main id="top">
@@ -151,14 +149,14 @@ export default function Home() {
           <div className="hero-redesign-meta"><span>Portfólio · 2026</span></div>
           <div className="hero-redesign-copy" data-reveal="hero-copy">
             <p className="eyebrow"><span className="eyebrow-mark">●</span> {siteConfig.hero.eyebrow}</p>
-            <h1 className="hero-headline">Conteúdo,<br /><em>treinamento</em><br />&amp; trade<br />marketing.</h1>
+            <h1 className="hero-headline">CONTEÚDO,<br />treinamento<br />&amp; TRADE<br />MARKETING.</h1>
             <p className="hero-redesign-intro">{siteConfig.hero.intro}</p>
             <a className="hero-cta hero-cta-redesign" href="#work" onClick={(event) => { event.preventDefault(); scrollToId("work"); }}>Explorar trabalho <ArrowUpRight size={16} /></a>
           </div>
           <div className="hero-redesign-portrait" data-reveal="hero-portrait">
             <img src={siteConfig.profilePhoto} alt="Gabriel Danino Basilio" />
           </div>
-          <div className="hero-redesign-bottom" data-reveal="hero-bottom"><span>17 anos de experiência</span><span>Conteudista · Facilitador · Coordenador de Treinamento</span><a className="hero-cv-link" href="/cv">Ver CV <ArrowUpRight size={14} /></a><button type="button" onClick={() => scrollToId("work")} aria-label="Descer para os projetos"><MoveDownRight size={20} /></button></div>
+          <div className="hero-redesign-bottom" data-reveal="hero-bottom"><span>Mais de 17 anos de experiência</span><span>Conteudista · Facilitador · Coordenador de Treinamento</span><a className="hero-cv-link" href="/cv">Ver CV <ArrowUpRight size={14} /></a><button type="button" onClick={() => scrollToId("work")} aria-label="Descer para os projetos"><MoveDownRight size={20} /></button></div>
         </section>
 
         <section className="coordination-focus-band" aria-labelledby="coordination-focus-title">
@@ -197,13 +195,13 @@ export default function Home() {
         <section id="work" className="work-section work-redesign section-pad" aria-labelledby="work-title">
           <div className="work-redesign-heading" data-reveal="work-heading">
             <div className="work-redesign-index"><span>02</span><span>/ WORK</span></div>
-            <div><p className="section-kicker">Selected work</p><h2 id="work-title">Projetos que<br /><em>ganharam forma.</em></h2></div>
-            <p>Uma seleção de campanhas, trilhas, dashboards, eventos e materiais criada para comunicar melhor, capacitar equipes e melhorar a execução.</p>
+            <div><p className="section-kicker">Trabalhos selecionados</p><h2 id="work-title">Projetos que<br /><em>ganharam forma.</em></h2></div>
+            <p>Uma seleção de campanhas, trilhas, eventos e materiais criada para comunicar melhor, capacitar equipes e melhorar a execução.</p>
             <a className="behance-link" href="https://www.behance.net/gabrieldb86" target="_blank" rel="noreferrer">Abrir Behance <ArrowUpRight size={15} /></a>
           </div>
 
-          <div className="projects-grid">
-            {siteConfig.projects.filter((project) => project.visible).map((project, index) => <ProjectCard key={project.number} project={project} revealDelay={index * 70} />)}
+          <div className="projects-grid sean-obrien-grid">
+            {siteConfig.projects.filter((project) => project.visible).map((project, index) => <ProjectCard key={project.number} project={project} revealDelay={index * 50} />)}
           </div>
         </section>
 
@@ -213,7 +211,7 @@ export default function Home() {
             <div>
               <p className="section-kicker">Áreas de atuação</p>
               <h2 id="services-title">Coordenação que<br />vira <strong>resultado.</strong></h2>
-              <img className="services-art" src={siteConfig.projects[4]?.image} alt="Projeto de apresentação Blocs" loading="lazy" />
+              <img className="services-art" src={siteConfig.projects[4]?.image} alt="Projeto de apresentação Blocs" loading="lazy" style={{ width: '70%', maxWidth: '175px' }} />
             </div>
             <div className="services-list">
               {siteConfig.services.map(([number, title, description], index) => (
@@ -223,7 +221,10 @@ export default function Home() {
                     <div><h3>{title}</h3><p>{description}</p></div>
                     <Plus className="service-toggle" size={21} strokeWidth={1.4} />
                   </button>
-                  {openService === number && <div className="service-detail" id={`service-detail-${number}`}><p>{siteConfig.serviceDetails[number]}</p><a href="#contact" onClick={(event) => { event.preventDefault(); scrollToId("contact"); }}>Conversar sobre este tema <ArrowUpRight size={15} /></a></div>}
+                  <div className={`service-detail ${openService === number ? "service-detail-open" : ""}`} id={`service-detail-${number}`} style={{ display: openService === number ? "flex" : "none" }}>
+                    <p>{siteConfig.serviceDetails[number]}</p>
+                    <a href="#contact" onClick={(event) => { event.preventDefault(); scrollToId("contact"); }}>Conversar sobre este tema <ArrowUpRight size={15} /></a>
+                  </div>
                 </article>
               ))}
             </div>

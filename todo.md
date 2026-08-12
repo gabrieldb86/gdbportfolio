@@ -87,6 +87,19 @@
 - [ ] Verificar rota interna `/editor` para não indexação e exposição pública.
 - [ ] Validar publicação real, registrar riscos do Search Console e salvar diagnóstico final.
 
+## Próxima rodada — 10 ajustes solicitados
+- [x] Atualizar o título do hero para "CONTEÚDO, treinamento & TRADE MARKETING."
+- [x] Atualizar o texto de introdução do hero com o parágrafo exato solicitado.
+- [x] Colocar o nome do header em linha única ("Gabriel Danino Basilio") e reposicionar a navegação.
+- [x] Remover a informação redundante da barra lateral principal.
+- [x] Atualizar a métrica de experiência para "Mais de 17 anos de experiência".
+- [x] Trocar "Selected work" por "Trabalhos selecionados".
+- [x] Reconstruir a seção WORK em grade de 5 colunas inspirada em seanobrien.com.au com 10 projetos curados (sem dashboards).
+- [x] Corrigir o acordeão de serviços (conteúdo persistente) e reduzir o tamanho da foto em 30%.
+- [x] Restaurar a foto dos bonés na seção de destaque.
+- [x] Alinhar verticalmente e à esquerda as colunas da seção de contato.
+- [x] Validar build, TypeScript e visualização em desktop e mobile.
+
 ## Próxima rodada — CV clean para recrutamento
 - [x] Comparar a página CV com o PDF completo anexado.
 - [x] Expandir a trajetória profissional para refletir o documento de referência.

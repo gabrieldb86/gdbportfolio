@@ -951,3 +951,25 @@ h1 em, h2 em { color: var(--primary); font-style: italic; }
   .cv-page .cv-experience-section { background: #fff; }
   .cv-page .cv-closing-section { display: none !important; }
 }
+
+/* Ajustes para atender aos 10 pontos solicitados */
+.brand-name { white-space: nowrap; line-height: 1.1; font-size: 21px !important; letter-spacing: -.02em; }
+.hero-redesign { align-items: flex-start; padding-top: 170px; }
+.hero-redesign-copy { align-self: flex-start; }
+.hero-redesign-copy h1 { font-size: clamp(3.8rem, 6.8vw, 7.8rem); line-height: .86; }
+.sean-obrien-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)) !important; gap: 40px 20px !important; }
+.sean-obrien-grid .project-card { grid-column: span 1 !important; margin-top: 0 !important; }
+.sean-obrien-grid .project-image-wrap { aspect-ratio: 1.15; }
+.service-detail-open { display: flex !important; animation: fade-in 200ms ease-out both; }
+.contact-grid { align-items: start; }
+.contact-intro { display: flex; flex-direction: column; justify-content: space-between; height: 100%; min-height: 400px; }
+.contact-form { align-self: stretch; }
+@media (max-width: 1200px) {
+  .sean-obrien-grid { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; }
+}
+@media (max-width: 768px) {
+  .sean-obrien-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+}
+@media (max-width: 480px) {
+  .sean-obrien-grid { grid-template-columns: 1fr !important; }
+}
