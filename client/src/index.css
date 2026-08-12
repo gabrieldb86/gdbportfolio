@@ -1288,3 +1288,17 @@ h1 em, h2 em { color: var(--primary); font-style: italic; }
     mix-blend-mode: normal;
   }
 }
+
+/* Divisor editorial entre focos de coordenação e prova para recrutadores. */
+.section-color-divider {
+  width: 100%;
+  height: 18px;
+  flex: 0 0 18px;
+  background: #b9bbb9;
+}
+@media (max-width: 720px) {
+  .section-color-divider {
+    height: 24px;
+    flex-basis: 24px;
+  }
+}

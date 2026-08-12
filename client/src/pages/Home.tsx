@@ -187,6 +187,8 @@ export default function Home() {
           </div>
         </section>
 
+        <div className="section-color-divider" aria-hidden="true" />
+
         <section className="recruiter-proof-strip" aria-label="Destaques profissionais" data-reveal="proof-strip">
           <div className="proof-intro" style={{ fontSize: "15px", marginLeft: "43px", marginRight: "187px" }}><p className="section-kicker" style={{ fontSize: "15px" }}>Para RH, headhunters e lideranças</p><p style={{ fontSize: "15px" }}>Uma leitura rápida da experiência que sustenta minha candidatura.</p></div>
           <div className="proof-metric" style={{ marginLeft: "3px", marginRight: "27px", paddingBottom: "20px", paddingLeft: "29px", paddingRight: "31px", paddingTop: "21px" }}><strong>17+</strong><span>anos de experiência</span></div>

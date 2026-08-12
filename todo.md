@@ -280,4 +280,12 @@
 - [x] Preservar a composição horizontal e desktop já aprovadas.
 - [x] Validar mobile vertical, mobile horizontal e desktop.
 - [x] Executar typecheck e build após o ajuste.
-- [ ] Salvar checkpoint da correção após validação visual e técnica.
+- [x] Salvar checkpoint da correção após validação visual e técnica (`71baf6ee`).
+
+## Divisão visual entre seções no mobile
+- [x] Identificar a transição entre Focos de coordenação e Destaques profissionais.
+- [x] Adicionar a faixa cinza como divisor editorial visível.
+- [x] Definir mudança de cor/continuidade entre os dois blocos sem criar vazios.
+- [x] Validar a divisão no mobile vertical, mobile horizontal e desktop.
+- [x] Executar typecheck e build após o ajuste.
+- [x] Salvar checkpoint da correção após validação visual e técnica (`290d2970`).
