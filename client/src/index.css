@@ -973,3 +973,7 @@ h1 em, h2 em { color: var(--primary); font-style: italic; }
 @media (max-width: 480px) {
   .sean-obrien-grid { grid-template-columns: 1fr !important; }
 }
+
+/* Behance no rodapé — marcador tipográfico discreto e alinhado aos demais canais. */
+.behance-glyph { display: inline-flex; width: 17px; height: 17px; align-items: center; justify-content: center; font-family: Arial, sans-serif; font-size: 10px; font-weight: 700; letter-spacing: -.08em; line-height: 1; }
+.footer-socials a:hover .behance-glyph { color: var(--primary); }
