@@ -40,3 +40,8 @@ A headline, o cargo, a descrição, as métricas e os CTAs passaram a compartilh
 ## Auditoria das pendências de publicação
 
 No domínio publicado disponível, o título da Home, a canonical e as tags Open Graph apontam para `https://gabrielpor-7t6ygmlv.manus.space/`. A Home expõe formulário anti-spam e links de WhatsApp; o fluxo público abre o WhatsApp com a mensagem preparada, sem submissão automática de dados a um back-end próprio. O CV mantém o botão de impressão do navegador, que é a estratégia de PDF aprovada para preservar o layout de impressão. A validação foi somente de disponibilidade e estrutura; nenhum formulário foi submetido durante o teste.
+
+
+## Verificação da remoção solicitada pelo editor visual
+
+O alvo informado na linha 168 de Home.tsx correspondia ao `<div className="hero-actions">`, contendo os dois CTAs do hero. O bloco foi removido manualmente porque o editor visual não encontrou o alvo. As capturas desktop, mobile vertical e mobile horizontal confirmaram que o hero permanece estruturalmente íntegro, sem espaço vazio residual, sobreposição ou quebra da imagem e do texto.

@@ -398,3 +398,9 @@
 - [x] Manter o formulário anti-spam como gerador de mensagem pré-preenchida para o WhatsApp e validar sua presença e link na produção.
 - [x] Registrar que o domínio próprio definitivo depende de dados de DNS fornecidos pelo proprietário; HTTPS, canonical e Open Graph foram validados no domínio publicado disponível.
 - [x] Manter a validação do domínio próprio como etapa externa bloqueada até o apontamento ser fornecido.
+
+## Remoção do elemento marcado pelo editor visual
+- [x] Identificar o bloco correspondente ao alvo informado na linha 168 de Home.tsx.
+- [x] Remover manualmente o elemento somente após confirmar que é o alvo visual solicitado.
+- [x] Validar desktop, mobile vertical e mobile horizontal, além de testes, typecheck e build.
+- [x] Criar checkpoint após confirmar a remoção.

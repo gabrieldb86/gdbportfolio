@@ -165,10 +165,6 @@ export default function Home() {
               <p className="hero-redesign-intro" style={{ marginTop: "16px" }}>{siteConfig.hero.intro}</p>
               <p className="hero-proof-line">17+ anos · 100K+ pessoas capacitadas · 130+ promotores monitorados</p>
             </div>
-            <div className="hero-actions">
-              <a className="hero-cta hero-cta-redesign" href="#work" data-umami-event="hero-work-click" onClick={(event) => { event.preventDefault(); scrollToId("work"); }}>Ver cases principais <ArrowUpRight size={16} /></a>
-              <a className="hero-secondary-cta" href="/cv#cv-actions" data-umami-event="cv-open">Ver CV / imprimir <ArrowUpRight size={15} /></a>
-            </div>
           </div>
           <div className="hero-redesign-portrait" data-reveal="hero-portrait">
             <img src={siteConfig.profilePhoto} alt="Gabriel Danino Basilio" onError={markBrokenImage} />
