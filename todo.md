@@ -177,3 +177,9 @@
 - [x] Associar o avatar ilustrado persistente ao favicon da página.
 - [x] Adicionar shortcut icon, Apple Touch Icon e metadados de compartilhamento visual.
 - [x] Validar o head, o título da página e o build antes do checkpoint.
+
+## Rodada atual — limpeza dos edits visuais
+- [x] Auditar todos os comentários “deletar” adicionados pelo editor em `Home.tsx`.
+- [x] Remover os elementos indicados sem afetar conteúdo estrutural ou acessibilidade.
+- [x] Consolidar estilos inline duplicados do hero e validar a altura final.
+- [x] Executar build, validar breakpoints e publicar checkpoint.

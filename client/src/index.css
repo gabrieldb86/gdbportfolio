@@ -1146,7 +1146,7 @@ h1 em, h2 em { color: var(--primary); font-style: italic; }
   .home-revision .contact-section { position: relative; display: block; padding-right: 8vw; }
   .home-revision .work-redesign-heading { position: relative; grid-template-columns: minmax(290px, 1fr) minmax(180px, .55fr) auto; }
   .home-revision .work-redesign-index { position: absolute; top: 0; left: 0; margin: 0 !important; transform: translateY(-2px); }
-  .home-revision .work-redesign-heading > div:nth-child(2) { grid-column: 1; }
+  .home-revision .work-redesign-heading > div:first-child { grid-column: 1; }
   .home-revision .work-redesign-heading > p { grid-column: 2; }
   .home-revision .work-redesign-heading > .behance-link { grid-column: 3; }
   .home-revision .home-revision .section-index,

@@ -142,10 +142,10 @@ export default function Home() {
         </button>
 
         <nav className={`site-nav ${menuOpen ? "site-nav-open" : ""}`} aria-label="Navegação principal">
-          <a href="#work" onClick={(event) => { event.preventDefault(); scrollToId("work", () => setMenuOpen(false)); }}>Trabalho <span>01</span></a>
-          <a href="#about" onClick={(event) => { event.preventDefault(); scrollToId("about", () => setMenuOpen(false)); }}>Sobre <span>02</span></a>
-          <a href="/cv">CV <span>03</span></a>
-          <a href="#contact" onClick={(event) => { event.preventDefault(); scrollToId("contact", () => setMenuOpen(false)); }}>Contato <span>04</span></a>
+          <a href="#work" onClick={(event) => { event.preventDefault(); scrollToId("work", () => setMenuOpen(false)); }}>Trabalho</a>
+          <a href="#about" onClick={(event) => { event.preventDefault(); scrollToId("about", () => setMenuOpen(false)); }}>Sobre</a>
+          <a href="/cv">CV</a>
+          <a href="#contact" onClick={(event) => { event.preventDefault(); scrollToId("contact", () => setMenuOpen(false)); }}>Contato</a>
         </nav>
 
         <div className="header-availability"><span className="status-dot" />Aberto a oportunidades</div>
@@ -157,8 +157,7 @@ export default function Home() {
       </aside>
 
       <main id="top">
-        <section className="hero-section hero-redesign">
-          <div className="hero-redesign-meta"><span>Portfólio · 2026</span></div>
+        <section className="hero-section hero-redesign" style={{ height: "877px" }}>
           <div className="hero-redesign-panel" data-reveal="hero-copy">
             <div className="hero-redesign-copy">
               <p className="eyebrow"><span className="eyebrow-mark">●</span> {siteConfig.hero.eyebrow}</p>
@@ -175,7 +174,6 @@ export default function Home() {
           <div className="hero-redesign-portrait" data-reveal="hero-portrait">
             <img src={siteConfig.profilePhoto} alt="Gabriel Danino Basilio" onError={markBrokenImage} />
           </div>
-          <div className="hero-redesign-bottom" data-reveal="hero-bottom"><span>Mais de 17 anos de experiência</span><span>Conteudista · Facilitador · Coordenador de Treinamento</span><a className="hero-cv-link" href="/cv">Ver CV <ArrowUpRight size={14} /></a><button type="button" onClick={() => scrollToId("work")} aria-label="Descer para os projetos"><MoveDownRight size={20} /></button></div>
         </section>
 
         <section className="coordination-focus-band" aria-labelledby="coordination-focus-title">
@@ -199,13 +197,7 @@ export default function Home() {
           <a href="/cv" className="proof-link" data-umami-event="cv-open">Abrir trajetória <ArrowUpRight size={15} /></a>
         </section>
 
-        <section className="credential-strip" aria-label="Contextos de atuação" data-reveal="credential-strip">
-          <p className="section-kicker">Contextos de atuação</p>
-          <div className="credential-list"><span>Apple</span><span>Grupo EMS</span><span>SPOT</span><span>Ragtech</span><span>ITM Channel Marketing</span></div>
-        </section>
-
         <section className="manifesto-section section-pad" aria-labelledby="manifesto-title">
-          <div className="section-index"><span>01</span><span className="index-line" /></div>
           <div className="manifesto-grid" data-reveal="manifesto">
             <p className="section-kicker">Como eu atuo</p>
             <h2 id="manifesto-title">Transformo estratégia em <span>experiências</span> que movem pessoas.</h2>
@@ -218,7 +210,6 @@ export default function Home() {
 
         <section id="work" className="work-section work-redesign section-pad" aria-labelledby="work-title">
           <div className="work-redesign-heading" data-reveal="work-heading">
-            <div className="work-redesign-index" style={{ marginLeft: "-58px", marginRight: "58px" }}><span>02</span><span>/ WORK</span></div>
             <div><p className="section-kicker">Trabalhos selecionados</p><h2 id="work-title">Projetos que<br /><em>ganharam forma.</em></h2></div>
             <p>Uma seleção de campanhas, trilhas, eventos e materiais criada para comunicar melhor, capacitar equipes e melhorar a execução.</p>
             <a className="behance-link" href="https://www.behance.net/gabrieldb86" data-umami-event="behance-open" target="_blank" rel="noreferrer">Abrir Behance <ArrowUpRight size={15} /></a>
@@ -230,12 +221,11 @@ export default function Home() {
         </section>
 
         <section className="services-section services-redesign section-pad" aria-labelledby="services-title">
-          <div className="section-index"><span>03</span><span className="index-line" /></div>
           <div className="services-layout" data-reveal="services-layout">
             <div>
               <p className="section-kicker">Áreas de atuação</p>
               <h2 id="services-title">Coordenação que<br />vira <em className="services-result">resultado.</em></h2>
-              <div className="services-editorial-note"><span>03 / MÉTODO</span><strong>Do briefing ao resultado.</strong><p>Coordenação que organiza contexto, método, conteúdo e execução para o trabalho chegar ao campo.</p></div>
+              <div className="services-editorial-note"><strong>Do briefing ao resultado.</strong><p>Coordenação que organiza contexto, método, conteúdo e execução para o trabalho chegar ao campo.</p></div>
             </div>
             <div className="services-list">
               {siteConfig.services.map(([number, title, description], index) => (
@@ -256,7 +246,6 @@ export default function Home() {
         </section>
 
         <section id="about" className="about-section section-pad" aria-labelledby="about-title">
-          <div className="section-index"><span>04</span><span className="index-line" /></div>
           <div className="about-grid">
             <div className="about-art-wrap" data-reveal="about-art">
               <img src={siteConfig.trainingImage} alt="Gabriel conduzindo um treinamento diante de uma equipe" loading="eager" onError={markBrokenImage} />
@@ -283,7 +272,6 @@ export default function Home() {
         </section>
 
         <section id="contact" className="contact-section section-pad" aria-labelledby="contact-title">
-          <div className="section-index"><span>05</span><span className="index-line" /></div>
           <div className="contact-grid">
             <div className="contact-intro" data-reveal="contact-intro">
               <p className="section-kicker">Vamos conversar</p>
