@@ -167,8 +167,8 @@ export default function Home() {
               <p className="hero-proof-line">17+ anos · 100K+ pessoas capacitadas · 130+ promotores monitorados</p>
             </div>
             <div className="hero-actions">
-              <a className="hero-cta hero-cta-redesign" href="#work" data-umami-event="hero-work-click" onClick={(event) => { event.preventDefault(); scrollToId("work"); }} style={{ paddingTop: "15px" }}>Ver cases principais <ArrowUpRight size={16} /></a>
-              <a className="hero-secondary-cta" href="/cv#cv-actions" data-umami-event="cv-open">Ver CV / imprimir <ArrowUpRight size={15} /></a>
+              <a className="hero-cta hero-cta-redesign" href="#work" data-umami-event="hero-work-click" onClick={(event) => { event.preventDefault(); scrollToId("work"); }} style={{ paddingTop: "6px", marginLeft: "54px", paddingBottom: "0px" }}>Ver cases principais <ArrowUpRight size={16} /></a>
+              <a className="hero-secondary-cta" href="/cv#cv-actions" data-umami-event="cv-open" style={{ marginLeft: "118px", marginTop: "8px", paddingBottom: "0px", paddingTop: "0px" }}>Ver CV / imprimir <ArrowUpRight size={15} /></a>
             </div>
           </div>
           <div className="hero-redesign-portrait" data-reveal="hero-portrait">
@@ -177,19 +177,19 @@ export default function Home() {
         </section>
 
         <section className="coordination-focus-band" aria-labelledby="coordination-focus-title">
-          <div className="coordination-focus-label" data-reveal="focus-label">
-            <p className="section-kicker">Focos de coordenação</p>
+          <div className="coordination-focus-label" data-reveal="focus-label" style={{ marginLeft: "46px", marginRight: "81px" }}>
+            <p className="section-kicker" style={{ fontSize: "15px" }}>Focos de coordenação</p>
             <p id="coordination-focus-title" style={{ fontSize: "15px" }}>Três frentes para transformar método em execução.</p>
           </div>
           <div className="coordination-focus-grid">
-            <article className="coordination-focus-item" data-reveal="focus-item" data-reveal-delay="80" style={{ fontSize: "15px" }}><span style={{ fontSize: "15px" }}>01</span><strong style={{ fontSize: "15px" }}>Conteúdo &amp; Treinamento</strong><p style={{ fontSize: "15px" }}>Trilhas, conteúdo e facilitação.</p></article>
+            <article className="coordination-focus-item" data-reveal="focus-item" data-reveal-delay="80" style={{ fontSize: "15px", paddingBottom: "21px" }}><span style={{ fontSize: "15px" }}>01</span><strong style={{ fontSize: "15px" }}>Conteúdo &amp; Treinamento</strong><p style={{ fontSize: "15px" }}>Trilhas, conteúdo e facilitação.</p></article>
             <article className="coordination-focus-item" data-reveal="focus-item" data-reveal-delay="140" style={{ fontSize: "15px" }}><span style={{ fontSize: "15px" }}>02</span><strong style={{ fontSize: "15px" }}>Trade Marketing &amp; Campo</strong><p style={{ fontSize: "15px" }}>KPIs, campanhas e execução.</p></article>
             <article className="coordination-focus-item" data-reveal="focus-item" data-reveal-delay="200" style={{ fontSize: "15px" }}><span style={{ fontSize: "15px" }}>03</span><strong style={{ fontSize: "15px" }}>T&amp;D de Pessoas</strong><p style={{ fontSize: "15px" }}>Onboarding, avaliação e desenvolvimento.</p></article>
           </div>
         </section>
 
         <section className="recruiter-proof-strip" aria-label="Destaques profissionais" data-reveal="proof-strip">
-          <div className="proof-intro" style={{ fontSize: "15px" }}><p className="section-kicker" style={{ fontSize: "15px" }}>Para RH, headhunters e lideranças</p><p style={{ fontSize: "15px" }}>Uma leitura rápida da experiência que sustenta minha candidatura.</p></div>
+          <div className="proof-intro" style={{ fontSize: "15px", marginLeft: "43px", marginRight: "187px" }}><p className="section-kicker" style={{ fontSize: "15px" }}>Para RH, headhunters e lideranças</p><p style={{ fontSize: "15px" }}>Uma leitura rápida da experiência que sustenta minha candidatura.</p></div>
           <div className="proof-metric" style={{ marginLeft: "3px", marginRight: "27px", paddingBottom: "20px", paddingLeft: "29px", paddingRight: "31px", paddingTop: "21px" }}><strong>17+</strong><span>anos de experiência</span></div>
           <div className="proof-metric"><strong>100K<span>+</span></strong><span>Pessoas capacitadas<br />ao longo da carreira</span></div>
           <div className="proof-metric"><strong>130 <span>+</span></strong><span>promotores monitorados<br />(SPOT no Grupo EMS)</span></div>

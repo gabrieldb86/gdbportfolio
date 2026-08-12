@@ -244,4 +244,12 @@
 - [x] Revisar responsividade da página de CV em tablet e mobile.
 - [x] Executar typecheck, build e testes após a correção.
 - [x] Validar Home, CV, cases e privacidade após a correção.
-- [ ] Salvar checkpoint da correção somente após validação visual e técnica.
+- [x] Salvar checkpoint da correção somente após validação visual e técnica (`ec2f312e`).
+
+## Revisão dos edits visuais recentes da Home
+- [x] Inspecionar os atributos JSX duplicados introduzidos pelos edits determinísticos.
+- [x] Preservar apenas os deslocamentos visuais que mantêm a composição editorial da Home.
+- [x] Corrigir os atributos duplicados sem alterar o conteúdo aprovado.
+- [x] Validar typecheck e build após os edits.
+- [x] Validar Home em desktop e mobile após os edits.
+- [ ] Salvar checkpoint da revisão visual após validação.
