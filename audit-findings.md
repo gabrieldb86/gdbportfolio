@@ -102,3 +102,11 @@ Os bullets do eyebrow agora aparecem entre as quatro categorias sem duplicação
 ## Segunda revisão do editor visual — correção de JSX
 
 Os textos foram preservados conforme os edits: `Aberto a oportunidades`, nome sem quebra, `+ 17`, `100K+`, `130 +`, os complementos de carreira e SPOT no Grupo EMS, tamanhos de 15px nos focos e a serifálica da seção 03. Os atributos `style` duplicados foram removidos, eliminando os 15 erros de TypeScript detectados pelo editor. O build passou novamente; as duas novas capturas apresentaram falha de upload no ambiente de preview.
+
+## Auditoria da grade 5 x 2 — referência e preview
+
+A referência externa apresenta uma sequência de cards com imagem, título e descrição em ritmo horizontal uniforme. O preview do portfólio continua renderizando 10 projetos na área 02, mas a distribuição precisa ser medida diretamente no DOM para confirmar se o grid computado possui cinco colunas reais no desktop, sem regras posteriores reduzindo a largura ou alterando o span dos cards.
+
+Após o override final, a inspeção computada do DOM confirmou `display: grid`, 10 cards, duas linhas e distribuição `[5, 5]`. A regra anterior que produzia `display: block` foi identificada como a causa exata do problema e foi sobreposta ao final do CSS.
+
+As capturas confirmaram a solução visual: em 1280px a área 02 apresenta cinco cards na primeira linha e cinco na segunda, com largura e gap uniformes; em 375px a grade se adapta para uma coluna sem overflow, preservando a ordem e as legendas dos 10 projetos.

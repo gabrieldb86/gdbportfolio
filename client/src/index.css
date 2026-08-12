@@ -992,3 +992,17 @@ h1 em, h2 em { color: var(--primary); font-style: italic; }
 /* Behance no rodapé — marcador tipográfico discreto e alinhado aos demais canais. */
 .behance-glyph { display: inline-flex; width: 17px; height: 17px; align-items: center; justify-content: center; font-family: Arial, sans-serif; font-size: 10px; font-weight: 700; letter-spacing: -.08em; line-height: 1; }
 .footer-socials a:hover .behance-glyph { color: var(--primary); }
+
+/* Grade definitiva da área 02: cinco cards por linha no desktop. Este override vem após as regras legadas de .work-redesign .projects-grid, que anteriormente forçavam display:block. */
+.home-revision .work-redesign .projects-grid.sean-obrien-grid { display: grid !important; grid-template-columns: repeat(5, minmax(0, 1fr)) !important; grid-auto-flow: row; gap: 40px 20px !important; max-width: none; margin-left: calc(100px + 4vw); margin-right: 0; }
+.home-revision .work-redesign .projects-grid.sean-obrien-grid .project-card { grid-column: auto !important; margin-top: 0 !important; }
+.home-revision .work-redesign .projects-grid.sean-obrien-grid .project-card:nth-child(n) { transform: none; }
+@media (max-width: 1200px) {
+  .home-revision .work-redesign .projects-grid.sean-obrien-grid { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; margin-left: calc(75px + 5vw); }
+}
+@media (max-width: 768px) {
+  .home-revision .work-redesign .projects-grid.sean-obrien-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; margin-left: 0; }
+}
+@media (max-width: 480px) {
+  .home-revision .work-redesign .projects-grid.sean-obrien-grid { grid-template-columns: 1fr !important; }
+}

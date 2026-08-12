@@ -135,6 +135,13 @@
 - [x] Validar a faixa de métricas, focos e seção 03 em desktop/mobile.
 - [x] Executar build e publicar checkpoint.
 
+## Próxima rodada — grade 5 x 2 de projetos
+- [x] Reestruturar a área 02 para conter exatamente 10 cards visíveis.
+- [x] Garantir cinco cards na primeira linha e cinco na segunda em desktop.
+- [x] Aplicar proporção, gap, legendas e ritmo visual inspirados na referência enviada.
+- [x] Preservar a escolha final dos projetos para a próxima orientação do usuário.
+- [x] Validar desktop, tablet, mobile e navegação dos cards antes do checkpoint.
+
 ## Próxima rodada — CV clean para recrutamento
 - [x] Comparar a página CV com o PDF completo anexado.
 - [x] Expandir a trajetória profissional para refletir o documento de referência.
