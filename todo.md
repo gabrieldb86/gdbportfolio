@@ -111,6 +111,18 @@
 - [x] Igualar escala, contraste, entrelinha e composição visual à referência anexada.
 - [x] Validar desktop e mobile antes de publicar.
 
+## Próxima rodada — hero em painel e fotografia separada
+- [ ] Criar painel textual com borda arredondada e respiro interno no hero.
+- [ ] Distribuir headline, texto e CTA verticalmente dentro do painel esquerdo.
+- [ ] Separar e dimensionar a fotografia no lado direito como bloco independente.
+- [ ] Validar borda, hierarquia, bullets editoriais e responsividade.
+
+## Próxima rodada — diagramação sem caixa
+- [x] Remover completamente a borda e qualquer caixa visual do bloco textual.
+- [x] Manter o mesmo eixo, largura, escala e espaçamento interno do print circulado.
+- [x] Preservar fontes, cores, marcadores e fotografia independente à direita.
+- [x] Validar desktop e mobile antes de publicar.
+
 ## Próxima rodada — CV clean para recrutamento
 - [x] Comparar a página CV com o PDF completo anexado.
 - [x] Expandir a trajetória profissional para refletir o documento de referência.

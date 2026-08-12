@@ -86,3 +86,11 @@ Na verificação mobile, a escala desktop restaurada inicialmente fazia a palavr
 ## Headline reproduzida conforme primeira foto
 
 A headline foi dividida em quatro linhas independentes: `CONTEÚDO,` em Manrope extra-bold marfim; `treinamento` em DM Serif Display itálico carmim; `& TRADE` em Manrope extra-bold marfim; e `MARKETING.` em Manrope extra-bold marfim. Desktop e mobile foram capturados com a nova composição, que mantém o texto exato e a hierarquia visual solicitada.
+
+## Hero em painel com fotografia separada
+
+O hero foi recomposto em um painel esquerdo com borda carmim arredondada, padding interno, headline em quatro linhas, texto corrido e CTA no rodapé do painel. A fotografia permanece como bloco independente à direita, com o mesmo tratamento editorial. A captura desktop confirmou a estrutura pedida; a captura mobile foi tentada, mas o upload da imagem falhou no ambiente de preview.
+
+## Diagramação sem caixa — validação final
+
+A moldura foi removida completamente, mantendo apenas o eixo textual do print. As capturas desktop e mobile confirmam o título em quatro linhas, o texto corrido alinhado à esquerda, o CTA no mesmo eixo e a fotografia como bloco independente. Nenhuma borda, fundo ou caixa visual permanece ao redor do texto.

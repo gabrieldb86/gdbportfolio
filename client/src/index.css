@@ -959,6 +959,11 @@ h1 em, h2 em { color: var(--primary); font-style: italic; }
 .hero-redesign-copy h1 { font-size: clamp(4.4rem, 8vw, 8.8rem); line-height: .8; }
 .hero-redesign-copy h1 .hero-headline-white { color: #f4eee6; font-family: "Manrope", sans-serif; font-style: normal; font-weight: 800; letter-spacing: -.09em; text-transform: uppercase; }
 .hero-redesign-copy h1 .hero-headline-training { color: #cf7b73; font-family: "DM Serif Display", serif; font-style: italic; font-weight: 400; letter-spacing: -.07em; text-transform: lowercase; }
+.hero-redesign-panel { align-self: center; display: flex; min-height: 650px; flex-direction: column; justify-content: space-between; padding: 42px 44px 34px; border: 2px solid #cf7b73; border-radius: 32px; }
+.hero-redesign-panel { border: 0; border-radius: 0; background: transparent; box-shadow: none; }
+.hero-redesign-panel .hero-redesign-copy { max-width: none; }
+.hero-redesign-panel .hero-redesign-intro { max-width: 100%; margin-bottom: 0; }
+.hero-redesign-panel .hero-cta { align-self: flex-start; }
 .sean-obrien-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)) !important; gap: 40px 20px !important; }
 .sean-obrien-grid .project-card { grid-column: span 1 !important; margin-top: 0 !important; }
 .sean-obrien-grid .project-image-wrap { aspect-ratio: 1.15; }
@@ -979,6 +984,9 @@ h1 em, h2 em { color: var(--primary); font-style: italic; }
 @media (max-width: 720px) {
   .hero-redesign-copy h1 { font-size: clamp(2.6rem, 12.5vw, 5.6rem); line-height: .84; letter-spacing: -.085em; }
   .hero-redesign-copy .eyebrow { max-width: 100%; overflow-wrap: anywhere; line-height: 1.5; }
+  .hero-redesign-panel { order: 1; min-height: auto; padding: 28px 24px 25px; border-radius: 0; gap: 34px; }
+  .hero-redesign-panel .hero-cta { align-self: flex-start; }
+  .hero-redesign-panel .hero-redesign-copy { order: unset; }
 }
 
 /* Behance no rodapé — marcador tipográfico discreto e alinhado aos demais canais. */

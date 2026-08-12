@@ -146,10 +146,12 @@ export default function Home() {
       <main id="top">
         <section className="hero-section hero-redesign">
           <div className="hero-redesign-meta"><span>Portfólio · 2026</span></div>
-          <div className="hero-redesign-copy" data-reveal="hero-copy">
-            <p className="eyebrow"><span className="eyebrow-mark">●</span> {siteConfig.hero.eyebrow}</p>
-            <h1 className="hero-headline"><span className="hero-headline-white">CONTEÚDO,</span><br /><span className="hero-headline-training">treinamento</span><br /><span className="hero-headline-white">&amp; TRADE</span><br /><span className="hero-headline-white">MARKETING.</span></h1>
-            <p className="hero-redesign-intro">{siteConfig.hero.intro}</p>
+          <div className="hero-redesign-panel" data-reveal="hero-copy">
+            <div className="hero-redesign-copy">
+              <p className="eyebrow"><span className="eyebrow-mark">●</span> {siteConfig.hero.eyebrow}</p>
+              <h1 className="hero-headline"><span className="hero-headline-white">CONTEÚDO,</span><br /><span className="hero-headline-training">treinamento</span><br /><span className="hero-headline-white">&amp; TRADE</span><br /><span className="hero-headline-white">MARKETING.</span></h1>
+              <p className="hero-redesign-intro">{siteConfig.hero.intro}</p>
+            </div>
             <a className="hero-cta hero-cta-redesign" href="#work" onClick={(event) => { event.preventDefault(); scrollToId("work"); }}>Explorar trabalho <ArrowUpRight size={16} /></a>
           </div>
           <div className="hero-redesign-portrait" data-reveal="hero-portrait">
