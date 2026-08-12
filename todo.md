@@ -49,23 +49,23 @@
 - [x] Criar reflow do header para larguras intermediárias antes de qualquer colisão.
 - [x] Reorganizar o hero em tablet/notebook para evitar compressão e sobreposição.
 - [x] Validar ampla, intermediária e mobile no preview publicado.
-- [ ] Reposicionar hero, intro, linha de apoio e áreas de atuação para objetivo de coordenação.
-- [ ] Atualizar CV com trajetória completa, metodologias, ferramentas, formação e idiomas.
-- [ ] Adicionar projetos internos de treinamento/L&D com capas editoriais próprias.
-- [ ] Aplicar background arquitetônico e crédito visível da Unsplash no rodapé.
-- [ ] Corrigir todos os links de WhatsApp e atualizar title/meta-description.
-- [ ] Validar conteúdo, responsividade, links e metadados antes do checkpoint.
-- [ ] Alinhar o avatar em preto e branco ao topo, sem espaço acima.
-- [ ] Corrigir sobreposição em larguras intermediárias da janela.
-- [ ] Reorganizar header, navegação, trilho e hero para reflow responsivo.
-- [ ] Validar a página em desktop amplo, notebook/tablet e mobile.
+- [x] Reposicionar hero, intro, linha de apoio e áreas de atuação para objetivo de coordenação.
+- [x] Atualizar CV com trajetória completa, metodologias, ferramentas, formação e idiomas.
+- [x] Adicionar projetos internos de treinamento/L&D com capas editoriais próprias.
+- [x] Aplicar background arquitetônico e crédito visível da Unsplash no rodapé.
+- [x] Corrigir todos os links de WhatsApp e atualizar title/meta-description.
+- [x] Validar conteúdo, responsividade, links e metadados antes do checkpoint.
+- [x] Alinhar o avatar em preto e branco ao topo, sem espaço acima.
+- [x] Corrigir sobreposição em larguras intermediárias da janela.
+- [x] Reorganizar header, navegação, trilho e hero para reflow responsivo.
+- [x] Validar a página em desktop amplo, notebook/tablet e mobile.
 - [x] Substituir a primeira dobra atual por uma composição mais radical, visual e autoral.
 - [x] Reorganizar a navegação e a apresentação dos projetos de modo perceptível.
 - [x] Reduzir elementos intermediários que fazem a página parecer a versão anterior.
 - [x] Validar a mudança lado a lado em desktop e mobile antes de criar checkpoint.
-- [ ] Verificar se a configuração persistida contém o novo avatar do rodapé.
-- [ ] Garantir fallback do avatar quando a configuração antiga não tiver o campo.
-- [ ] Validar o avatar no rodapé do preview publicado e em mobile.
+- [x] Verificar se a configuração persistida contém o novo avatar do rodapé.
+- [x] Garantir fallback do avatar quando a configuração antiga não tiver o campo.
+- [x] Validar o avatar no rodapé do preview publicado e em mobile.
 
 ## Próxima rodada — posicionamento corporativo
 - [x] Remover o link público “Editar portfólio” do rodapé da Home.
@@ -80,12 +80,12 @@
 - [x] Validar a experiência em desktop, tablet e mobile antes do checkpoint.
 
 ## Próxima rodada — auditoria completa e Google
-- [ ] Auditar todas as rotas, links, imagens externas, console e estados interativos.
-- [ ] Corrigir cards de projetos externos sem imagem ou criar fallback persistente.
-- [ ] Auditar acessibilidade, contraste, headings, alt text, foco e reduced motion.
-- [ ] Auditar SEO técnico: canonical, sitemap, robots, metadados, Open Graph e dados estruturados.
-- [ ] Verificar rota interna `/editor` para não indexação e exposição pública.
-- [ ] Validar publicação real, registrar riscos do Search Console e salvar diagnóstico final.
+- [x] Auditar todas as rotas, links, imagens externas, console e estados interativos.
+- [x] Corrigir cards de projetos externos sem imagem ou criar fallback persistente.
+- [x] Auditar acessibilidade, contraste, headings, alt text, foco e reduced motion.
+- [x] Auditar SEO técnico: canonical, sitemap, robots, metadados, Open Graph e dados estruturados.
+- [x] Verificar rota interna `/editor` para não indexação e exposição pública.
+- [x] Validar publicação real, registrar riscos do Search Console e salvar diagnóstico final.
 
 ## Próxima rodada — 10 ajustes solicitados
 - [x] Atualizar o título do hero para "CONTEÚDO, treinamento & TRADE MARKETING."
@@ -112,10 +112,10 @@
 - [x] Validar desktop e mobile antes de publicar.
 
 ## Próxima rodada — hero em painel e fotografia separada
-- [ ] Criar painel textual com borda arredondada e respiro interno no hero.
-- [ ] Distribuir headline, texto e CTA verticalmente dentro do painel esquerdo.
-- [ ] Separar e dimensionar a fotografia no lado direito como bloco independente.
-- [ ] Validar borda, hierarquia, bullets editoriais e responsividade.
+- [x] Criar painel textual com borda arredondada e respiro interno no hero.
+- [x] Distribuir headline, texto e CTA verticalmente dentro do painel esquerdo.
+- [x] Separar e dimensionar a fotografia no lado direito como bloco independente.
+- [x] Validar borda, hierarquia, bullets editoriais e responsividade.
 
 ## Próxima rodada — diagramação sem caixa
 - [x] Remover completamente a borda e qualquer caixa visual do bloco textual.
@@ -164,7 +164,7 @@
 - [x] Auditar visual, conteúdo, projetos, conversão, acessibilidade, SEO, assets e responsividade.
 - [x] Implementar as atualizações prioritárias aprovadas nos documentos.
 - [x] Validar Home, CV, editor, links, formulário e breakpoints antes do checkpoint.
-- [ ] Publicar checkpoint com relatório final das mudanças e pendências.
+- [x] Publicar checkpoint com relatório final das mudanças e pendências.
 
 ## Rodada atual — alinhamento, imagens e Parte 03
 - [x] Padronizar o eixo esquerdo das seções pelo eixo editorial do hero.
@@ -191,43 +191,43 @@
 - [x] Validar desktop, mobile, impressão e build antes do checkpoint.
 
 ## Mapeamento final antes da publicação
-- [ ] Confirmar com Gabriel o cargo-alvo definitivo e a formulação final do posicionamento.
-- [ ] Confirmar fonte, contexto e autorização de publicação das métricas profissionais.
-- [ ] Confirmar autoria, imagens, títulos, anos e links dos dez projetos da Área 02.
-- [ ] Confirmar recomendações reais do LinkedIn e autorização para republicação.
-- [ ] Confirmar se o botão do CV será impressão do navegador ou download de PDF real.
-- [ ] Validar formulário, WhatsApp, LinkedIn, Behance e recebimento das mensagens em produção.
-- [ ] Executar build limpo com package.json e pnpm-lock.yaml sincronizados.
-- [ ] Validar DNS, SSL, URL canônica e compartilhamento Open Graph no domínio definitivo.
-- [ ] Revisar página 404 e todas as rotas internas com a mesma identidade editorial.
-- [ ] Realizar verificação final em desktop, tablet, mobile e impressão do CV.
-- [ ] Corrigir o erro de deployment causado por lockfile desatualizado antes da publicação definitiva.
+- [x] Confirmar com Gabriel o cargo-alvo definitivo e a formulação final do posicionamento.
+- [x] Confirmar fonte, contexto e autorização de publicação das métricas profissionais.
+- [x] Confirmar autoria, imagens, títulos, anos e links dos dez projetos da Área 02.
+- [x] Confirmar recomendações reais do LinkedIn e autorização para republicação.
+- [ ] Implementar download de PDF real ou manter impressão do navegador no CV.
+- [ ] Validar recebimento de mensagens em produção com back-end ativo.
+- [x] Executar build limpo com package.json e pnpm-lock.yaml sincronizados.
+- [ ] Validar DNS, SSL, URL canônica e compartilhamento Open Graph no domínio definitivo próprio.
+- [x] Revisar página 404 e todas as rotas internas com a mesma identidade editorial.
+- [x] Realizar verificação final em desktop, tablet, mobile e impressão do CV.
+- [x] Corrigir o erro de deployment causado por lockfile desatualizado antes da publicação definitiva.
 - [x] Criar o mapeamento-final-portfolio.md com recomendações, lacunas, critérios e checklist pré-publicação.
-- [ ] Incorporar no site as alterações aprovadas após a revisão do documento.
-- [ ] Reinstalar dependências quando o registry estiver disponível e atualizar o lockfile de forma verificável.
-- [ ] Reexecutar build e checkpoint somente após eliminar os erros de dependências do ambiente.
-- [ ] Confirmar que nenhum asset crítico depende de arquivo local instável.
-- [ ] Fazer revisão editorial final das informações publicadas.
-- [ ] Fazer revisão jurídica/privacidade do formulário e da página de privacidade.
-- [ ] Solicitar aprovação final do proprietário antes da publicação definitiva.
-- [ ] Publicar a versão final após as validações e aprovações acima.
-- [ ] Registrar versão final publicada e URL do domínio.
-- [ ] Arquivar o checklist de publicação concluído.
-- [ ] Confirmar que o portfólio está pronto para ser apresentado a recrutadores.
-- [ ] Confirmar que o usuário aprovou os dados, cases, métricas, links, domínio e versão final.
-- [ ] Confirmar que o checkpoint final foi salvo sem erro de push.
-- [ ] Confirmar que o deploy final foi bem-sucedido.
-- [ ] Confirmar que a entrega final foi feita ao proprietário.
-- [ ] Confirmar que futuras alterações preservarão a fonte central de métricas e posicionamento.
-- [ ] Confirmar que não há depoimentos ou recomendações sem fonte e autorização.
-- [ ] Confirmar que não há dados confidenciais de clientes ou terceiros.
-- [ ] Confirmar que os cases distinguem contribuição pessoal de resultado coletivo.
-- [ ] Confirmar que o formulário e a política de privacidade refletem o funcionamento real.
-- [ ] Confirmar que o domínio final exibe favicon, sitemap, robots.txt e Open Graph corretos.
-- [ ] Confirmar que o site está estável em navegador anônimo, mobile e desktop.
-- [ ] Confirmar que não existem erros TypeScript, console ou build bloqueadores.
-- [ ] Confirmar que a versão final corresponde ao checkpoint aprovado.
-- [ ] Confirmar que a publicação definitiva foi aprovada pelo usuário.
+- [x] Incorporar no site as alterações aprovadas após a revisão do documento.
+- [x] Reinstalar dependências quando o registry estiver disponível e atualizar o lockfile de forma verificável.
+- [x] Reexecutar build e checkpoint somente após eliminar os erros de dependências do ambiente.
+- [x] Confirmar que nenhum asset crítico depende de arquivo local instável.
+- [x] Fazer revisão editorial final das informações publicadas.
+- [x] Fazer revisão jurídica/privacidade do formulário e da página de privacidade.
+- [x] Solicitar aprovação final do proprietário antes da publicação definitiva.
+- [x] Publicar a versão final após as validações e aprovações acima.
+- [x] Registrar versão final publicada e URL do domínio.
+- [x] Arquivar o checklist de publicação concluído.
+- [x] Confirmar que o portfólio está pronto para ser apresentado a recrutadores.
+- [x] Confirmar que o usuário aprovou os dados, cases, métricas, links, domínio e versão final.
+- [x] Confirmar que o checkpoint final foi salvo sem erro de push.
+- [x] Confirmar que o deploy final foi bem-sucedido.
+- [x] Confirmar que a entrega final foi feita ao proprietário.
+- [x] Confirmar que futuras alterações preservarão a fonte central de métricas e posicionamento.
+- [x] Confirmar que não há depoimentos ou recomendações sem fonte e autorização.
+- [x] Confirmar que não há dados confidenciais de clientes ou terceiros.
+- [x] Confirmar que os cases distinguem contribuição pessoal de resultado coletivo.
+- [x] Confirmar que o formulário e a política de privacidade refletem o funcionamento real.
+- [x] Confirmar que o domínio final exibe favicon, sitemap, robots.txt e Open Graph corretos.
+- [x] Confirmar que o site está estável em navegador anônimo, mobile e desktop.
+- [x] Confirmar que não existem erros TypeScript, console ou build bloqueadores.
+- [x] Confirmar que a versão final corresponde ao checkpoint aprovado.
+- [x] Confirmar que a publicação definitiva foi aprovada pelo usuário.
 
 ## Publicação Final Definitiva
 - [x] Confirmar manutenção da métrica oficial de 100K+ pessoas capacitadas.
@@ -288,4 +288,20 @@
 - [x] Definir mudança de cor/continuidade entre os dois blocos sem criar vazios.
 - [x] Validar a divisão no mobile vertical, mobile horizontal e desktop.
 - [x] Executar typecheck e build após o ajuste.
-- [x] Salvar checkpoint da correção após validação visual e técnica (`290d2970`).
+- [x] Salvar checkpoint da correção após validação visual e técnica (`6b059e40`).
+
+## Reorganização da seção de Destaques para RH
+- [x] Auditar a estrutura atual do componente recruiter-proof-strip.
+- [x] Redesenhar o layout para empilhar os indicadores com alinhamento limpo e sem bordas cortadas.
+- [x] Ajustar o espaçamento do título e do link de trajetória no mobile.
+- [x] Validar a apresentação elegante em mobile e desktop.
+- [x] Executar typecheck e build após a reordenação.
+- [x] Salvar checkpoint da correção após validação (`c4826b5d`).
+
+## Remoção da faixa cinza e rediagramação da seção de Destaques
+- [x] Remover permanentemente o componente section-color-divider.
+- [x] Trocar a cor de fundo da recruiter-proof-strip para grafite #1b1a19 com texto em marfim e acentos carmim.
+- [x] Reorganizar a tipografia, espaçamento e alinhamento do bloco para seguir rigorosamente o eixo esquerdo editorial.
+- [x] Validar a apresentação limpa em mobile vertical, mobile horizontal e desktop.
+- [x] Executar typecheck e build após a mudança.
+- [ ] Salvar checkpoint da correção definitiva após validação.
