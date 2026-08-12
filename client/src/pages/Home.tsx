@@ -121,7 +121,7 @@ export default function Home() {
     <div className="site-shell home-revision" style={{ "--primary": siteConfig.brand.accent, "--background": siteConfig.brand.background, "--foreground": siteConfig.brand.foreground, "--site-bg-image": `url(${siteConfig.backgroundImage})` } as CSSProperties}>
       <header className={`site-header site-header-redesign ${scrolled ? "site-header-scrolled" : ""}`}>
         <a className="brand-lockup" href="#top" onClick={(event) => { event.preventDefault(); scrollToId("top"); }}>
-          <span className="brand-name" style={{fontSize: '24px', textAlign: 'left'}}>Gabriel Danino<br style={{fontSize: '24px', textAlign: 'left'}} />Basilio</span>
+          <span className="brand-name" style={{ fontSize: "24px", textAlign: "left" }}>Gabriel Danino Basilio</span>
         </a>
 
         <button className="menu-trigger" type="button" aria-label={menuOpen ? "Fechar menu" : "Abrir menu"} onClick={() => setMenuOpen((open) => !open)}>
@@ -135,7 +135,7 @@ export default function Home() {
           <a href="#contact" onClick={(event) => { event.preventDefault(); scrollToId("contact", () => setMenuOpen(false)); }}>Contato <span>04</span></a>
         </nav>
 
-        <div className="header-availability"><span className="status-dot" />Aberto a oportunidades de coordenação</div>
+        <div className="header-availability"><span className="status-dot" />Aberto a oportunidades</div>
       </header>
 
       <aside className="side-rail" aria-label="Informações rápidas">
@@ -163,20 +163,20 @@ export default function Home() {
         <section className="coordination-focus-band" aria-labelledby="coordination-focus-title">
           <div className="coordination-focus-label" data-reveal="focus-label">
             <p className="section-kicker">Focos de coordenação</p>
-            <p id="coordination-focus-title">Três frentes para transformar método em execução.</p>
+            <p id="coordination-focus-title" style={{ fontSize: "15px" }}>Três frentes para transformar método em execução.</p>
           </div>
           <div className="coordination-focus-grid">
-            <article className="coordination-focus-item" data-reveal="focus-item" data-reveal-delay="80"><span>01</span><strong>Conteúdo &amp; Treinamento</strong><p>Trilhas, conteúdo e facilitação.</p></article>
-            <article className="coordination-focus-item" data-reveal="focus-item" data-reveal-delay="140"><span>02</span><strong>Trade Marketing &amp; Campo</strong><p>KPIs, campanhas e execução.</p></article>
-            <article className="coordination-focus-item" data-reveal="focus-item" data-reveal-delay="200"><span>03</span><strong>T&amp;D de Pessoas</strong><p>Onboarding, avaliação e desenvolvimento.</p></article>
+            <article className="coordination-focus-item" data-reveal="focus-item" data-reveal-delay="80" style={{ fontSize: "15px" }}><span style={{ fontSize: "15px" }}>01</span><strong style={{ fontSize: "15px" }}>Conteúdo &amp; Treinamento</strong><p style={{ fontSize: "15px" }}>Trilhas, conteúdo e facilitação.</p></article>
+            <article className="coordination-focus-item" data-reveal="focus-item" data-reveal-delay="140" style={{ fontSize: "15px" }}><span style={{ fontSize: "15px" }}>02</span><strong style={{ fontSize: "15px" }}>Trade Marketing &amp; Campo</strong><p style={{ fontSize: "15px" }}>KPIs, campanhas e execução.</p></article>
+            <article className="coordination-focus-item" data-reveal="focus-item" data-reveal-delay="200" style={{ fontSize: "15px" }}><span style={{ fontSize: "15px" }}>03</span><strong style={{ fontSize: "15px" }}>T&amp;D de Pessoas</strong><p style={{ fontSize: "15px" }}>Onboarding, avaliação e desenvolvimento.</p></article>
           </div>
         </section>
 
         <section className="recruiter-proof-strip" aria-label="Destaques profissionais" data-reveal="proof-strip">
-          <div className="proof-intro"><p className="section-kicker">Para quem recruta</p><p>Uma leitura rápida da experiência que sustenta o trabalho.</p></div>
-          <div className="proof-metric" style={{ marginLeft: "-7px", marginRight: "19px" }}><strong>17</strong><span>anos de experiência</span></div>
-          <div className="proof-metric"><strong>300K<span>+</span></strong><span>pessoas capacitadas</span></div>
-          <div className="proof-metric"><strong>130<span>+</span></strong><span>promotores monitorados</span></div>
+          <div className="proof-intro" style={{ fontSize: "15px" }}><p className="section-kicker" style={{ fontSize: "15px" }}>Para quem recruta</p><p style={{ fontSize: "15px" }}>Uma leitura rápida da experiência que sustenta o trabalho.</p></div>
+          <div className="proof-metric" style={{ marginLeft: "3px", marginRight: "27px", paddingBottom: "20px", paddingLeft: "29px", paddingRight: "31px", paddingTop: "21px" }}><strong>+ 17</strong><span>anos de experiência</span></div>
+          <div className="proof-metric"><strong>100K<span>+</span></strong><span>pessoas capacitadas<br />em toda a carreira</span></div>
+          <div className="proof-metric"><strong>130 <span>+</span></strong><span>promotores monitorados<br />(SPOT no Grupo EMS)</span></div>
           <div className="proof-metric"><strong>8,3</strong><span>média de avaliação</span></div>
           <a href="/cv" className="proof-link">Abrir trajetória <ArrowUpRight size={15} /></a>
         </section>
@@ -211,7 +211,7 @@ export default function Home() {
           <div className="services-layout" data-reveal="services-layout">
             <div>
               <p className="section-kicker">Áreas de atuação</p>
-              <h2 id="services-title">Coordenação que<br />vira <strong>resultado.</strong></h2>
+              <h2 id="services-title" style={{ fontFamily: '"DM Serif Display", serif' }}>Coordenação que<br />vira <strong style={{ fontFamily: '"DM Serif Display", serif' }}>resultado.</strong></h2>
               <img className="services-art" src={siteConfig.projects[4]?.image} alt="Projeto de apresentação Blocs" loading="lazy" style={{ width: '70%', maxWidth: '175px' }} />
             </div>
             <div className="services-list">

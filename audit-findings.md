@@ -98,3 +98,7 @@ A moldura foi removida completamente, mantendo apenas o eixo textual do print. A
 ## Revisão dos edits do editor visual
 
 Os bullets do eyebrow agora aparecem entre as quatro categorias sem duplicação; o texto introdutório mantém a redução de margem superior; o CTA mantém apenas o padding no link, sem deslocar o ícone; e a métrica `17` recebe a margem apenas no bloco, sem estilos repetidos em seus filhos. Build e capturas em desktop/mobile foram validados.
+
+## Segunda revisão do editor visual — correção de JSX
+
+Os textos foram preservados conforme os edits: `Aberto a oportunidades`, nome sem quebra, `+ 17`, `100K+`, `130 +`, os complementos de carreira e SPOT no Grupo EMS, tamanhos de 15px nos focos e a serifálica da seção 03. Os atributos `style` duplicados foram removidos, eliminando os 15 erros de TypeScript detectados pelo editor. O build passou novamente; as duas novas capturas apresentaram falha de upload no ambiente de preview.

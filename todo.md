@@ -129,6 +129,12 @@
 - [x] Aplicar o deslocamento da métrica apenas ao bloco necessário, sem margens repetidas nos filhos.
 - [x] Validar build, preview e publicar checkpoint.
 
+## Próxima rodada — segunda revisão do editor visual
+- [x] Preservar textos aprovados: oportunidades, nome, métricas complementares e serifálica da seção 03.
+- [x] Remover estilos inline duplicados e margens/paddings aplicados aos filhos indevidamente.
+- [x] Validar a faixa de métricas, focos e seção 03 em desktop/mobile.
+- [x] Executar build e publicar checkpoint.
+
 ## Próxima rodada — CV clean para recrutamento
 - [x] Comparar a página CV com o PDF completo anexado.
 - [x] Expandir a trajetória profissional para refletir o documento de referência.
