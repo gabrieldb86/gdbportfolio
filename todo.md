@@ -315,7 +315,12 @@
 - [x] Executar typecheck e build, salvar checkpoint e entregar.
 
 ## Correção mobile forçada (setas, ícones e alinhamentos)
-- [ ] Forçar setas ao lado do texto em todos os breakpoints (.proof-link, .behance-link, .text-link).
-- [ ] Padronizar definitivamente os ícones do rodapé em mobile e desktop com caixas de contorno idênticas.
-- [ ] Forçar alinhamento à esquerda em .coordination-focus-band e .coordination-focus-label em mobile.
+- [x] Forçar setas ao lado do texto em todos os breakpoints (.proof-link, .behance-link, .text-link).
+- [x] Padronizar definitivamente os ícones do rodapé em mobile e desktop com caixas de contorno idênticas.
+- [x] Forçar alinhamento à esquerda em .coordination-focus-band e .coordination-focus-label em mobile.
+- [x] Compilar, testar build e salvar novo checkpoint publicável (`313a18bb`).
+
+## Rodada de padronização tipográfica e alinhamento de CTAs mobile
+- [ ] Auditoria e correção de tamanhos de fonte em mobile (aumentar fontes pequenas, garantir legibilidade).
+- [ ] Alinhamento vertical rigoroso dos dois CTAs do hero ("Ver cases principais" e "Ver CV / imprimir").
 - [ ] Compilar, testar build e salvar novo checkpoint publicável.

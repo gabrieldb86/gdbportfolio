@@ -166,8 +166,8 @@ export default function Home() {
               <p className="hero-proof-line">17+ anos · 100K+ pessoas capacitadas · 130+ promotores monitorados</p>
             </div>
             <div className="hero-actions">
-              <a className="hero-cta hero-cta-redesign" href="#work" data-umami-event="hero-work-click" onClick={(event) => { event.preventDefault(); scrollToId("work"); }} style={{ paddingTop: "6px", marginLeft: "54px", paddingBottom: "0px" }}>Ver cases principais <ArrowUpRight size={16} /></a>
-              <a className="hero-secondary-cta" href="/cv#cv-actions" data-umami-event="cv-open" style={{ marginLeft: "118px", marginTop: "8px", paddingBottom: "0px", paddingTop: "0px" }}>Ver CV / imprimir <ArrowUpRight size={15} /></a>
+              <a className="hero-cta hero-cta-redesign" href="#work" data-umami-event="hero-work-click" onClick={(event) => { event.preventDefault(); scrollToId("work"); }}>Ver cases principais <ArrowUpRight size={16} /></a>
+              <a className="hero-secondary-cta" href="/cv#cv-actions" data-umami-event="cv-open">Ver CV / imprimir <ArrowUpRight size={15} /></a>
             </div>
           </div>
           <div className="hero-redesign-portrait" data-reveal="hero-portrait">

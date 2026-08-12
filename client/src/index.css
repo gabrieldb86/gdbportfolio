@@ -1545,3 +1545,34 @@ a.proof-link, a.behance-link, a.text-link, .service-detail a {
   margin-left: 0 !important;
   margin-right: 0 !important;
 }
+
+/* Correção definitiva de fontes e alinhamento dos CTAs no hero em mobile */
+@media (max-width: 720px) {
+  .hero-actions {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 16px !important;
+    margin-top: 24px !important;
+  }
+  .hero-cta-redesign, .hero-secondary-cta {
+    font-size: 11px !important;
+    letter-spacing: .1em !important;
+    margin-left: 0 !important;
+    margin-top: 0 !important;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+  }
+  body, p, li {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  .hero-redesign-intro {
+    font-size: 15px !important;
+    line-height: 1.6 !important;
+  }
+  .hero-proof-line {
+    font-size: 11px !important;
+    letter-spacing: .08em !important;
+  }
+}
