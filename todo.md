@@ -232,6 +232,16 @@
 ## Publicação Final Definitiva
 - [x] Confirmar manutenção da métrica oficial de 100K+ pessoas capacitadas.
 - [x] Confirmar autorização para prosseguir com a publicação.
-- [ ] Executar build de produção sem erros bloqueadores.
-- [ ] Salvar checkpoint final correspondente à versão publicável.
-- [ ] Entregar a URL do domínio publicado e instruções de gerenciamento ao usuário.
+- [x] Executar build de produção sem erros bloqueadores.
+- [x] Salvar checkpoint final correspondente à versão publicável (`ad047af9`).
+- [x] Entregar a URL do domínio publicado e instruções de gerenciamento ao usuário.
+
+## Regressão reportada após publicação
+- [x] Reproduzir a falha de carregamento/funcionamento do site em produção.
+- [x] Corrigir o erro técnico que impede a execução completa da Home.
+- [x] Restaurar o alinhamento editorial da página de CV no mesmo eixo da Home.
+- [x] Revisar espaçamento, grid, tipografia e hierarquia da página de CV em desktop.
+- [x] Revisar responsividade da página de CV em tablet e mobile.
+- [x] Executar typecheck, build e testes após a correção.
+- [x] Validar Home, CV, cases e privacidade após a correção.
+- [ ] Salvar checkpoint da correção somente após validação visual e técnica.

@@ -1210,3 +1210,15 @@ h1 em, h2 em { color: var(--primary); font-style: italic; }
   .home-revision .services-editorial-note { max-width: 320px; margin: 36px 0 46px; padding-top: 18px; border-top: 1px solid rgba(117, 107, 99, .35); }
   .home-revision .services-result { color: #b72529; font-family: "DM Serif Display", serif; font-style: italic; font-weight: 400; }
 }
+
+/* Correção de regressão do CV: as seções têm um eixo editorial reservado e o conteúdo precisa ocupar a segunda coluna. */
+@media (min-width: 901px) {
+  .cv-page .cv-hero > .cv-hero-grid,
+  .cv-page .cv-content-section > .cv-content-grid,
+  .cv-page .cv-detail-section > .cv-detail-content,
+  .cv-page .cv-experience-section > .cv-experience-content {
+    grid-column: 2;
+    min-width: 0;
+    width: 100%;
+  }
+}
