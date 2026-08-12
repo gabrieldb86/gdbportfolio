@@ -39,6 +39,9 @@
 - [x] Adicionar bloco de competências e ferramentas sem inventar experiência específica.
 - [x] Tornar CV e contato mais acessíveis na navegação.
 - [x] Deixar em aberto o posicionamento final, resultados específicos e estudos de caso completos.
+- [x] Estender o conteúdo do banner horizontal para eliminar espaços vazios.
+- [x] Ajustar a animação para um loop contínuo e responsivo.
+- [x] Validar a faixa em desktop e mobile antes de salvar novo checkpoint.
 - [x] Substituir a primeira dobra atual por uma composição mais radical, visual e autoral.
 - [x] Reorganizar a navegação e a apresentação dos projetos de modo perceptível.
 - [x] Reduzir elementos intermediários que fazem a página parecer a versão anterior.

@@ -128,7 +128,10 @@ export default function Home() {
         </section>
 
         <div className="portfolio-marquee" aria-hidden="true">
-          <div className="portfolio-marquee-track"><span>PORTFÓLIO</span><b>•</b><span>CONTEÚDO</span><b>•</b><span>DESIGN</span><b>•</b><span>PORTFÓLIO</span><b>•</b><span>CONTEÚDO</span><b>•</b><span>DESIGN</span><b>•</b><span>PORTFÓLIO</span><b>•</b></div>
+          <div className="portfolio-marquee-track">
+            <div className="portfolio-marquee-group"><span>PORTFÓLIO</span><b>•</b><span>CONTEÚDO</span><b>•</b><span>DESIGN</span><b>•</b><span>MATERIAIS</span><b>•</b><span>EXPERIÊNCIA</span><b>•</b><span>ESTRATÉGIA</span><b>•</b><span>PORTFÓLIO</span><b>•</b><span>CONTEÚDO</span><b>•</b><span>DESIGN</span><b>•</b></div>
+            <div className="portfolio-marquee-group" aria-hidden="true"><span>PORTFÓLIO</span><b>•</b><span>CONTEÚDO</span><b>•</b><span>DESIGN</span><b>•</b><span>MATERIAIS</span><b>•</b><span>EXPERIÊNCIA</span><b>•</b><span>ESTRATÉGIA</span><b>•</b><span>PORTFÓLIO</span><b>•</b><span>CONTEÚDO</span><b>•</b><span>DESIGN</span><b>•</b></div>
+          </div>
         </div>
 
         <section className="recruiter-proof-strip" aria-label="Destaques profissionais">
