@@ -195,13 +195,13 @@ export default function Home() {
 
         <section id="work" className="work-section work-redesign section-pad" aria-labelledby="work-title">
           <div className="work-redesign-heading" data-reveal="work-heading">
-            <div className="work-redesign-index"><span>02</span><span>/ WORK</span></div>
-            <div><p className="section-kicker">Trabalhos selecionados</p><h2 id="work-title">Projetos que<br /><em>ganharam forma.</em></h2></div>
+            <div className="work-redesign-index" style={{ marginLeft: "-58px", marginRight: "58px" }}><span>02</span><span>/ WORK</span></div>
+            <div><p className="section-kicker" style={{ marginLeft: "-135px" }}>Trabalhos selecionados</p><h2 id="work-title" style={{ marginLeft: "-48px" }}>Projetos que<br /><em>ganharam forma.</em></h2></div>
             <p>Uma seleção de campanhas, trilhas, eventos e materiais criada para comunicar melhor, capacitar equipes e melhorar a execução.</p>
             <a className="behance-link" href="https://www.behance.net/gabrieldb86" target="_blank" rel="noreferrer">Abrir Behance <ArrowUpRight size={15} /></a>
           </div>
 
-          <div className="projects-grid sean-obrien-grid">
+          <div className="projects-grid sean-obrien-grid" style={{ marginBottom: "-60px", marginLeft: "53px" }}>
             {siteConfig.projects.filter((project) => project.visible).map((project, index) => <ProjectCard key={project.number} project={project} revealDelay={index * 50} />)}
           </div>
         </section>

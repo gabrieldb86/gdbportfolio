@@ -147,3 +147,9 @@
 - [x] Expandir a trajetória profissional para refletir o documento de referência.
 - [x] Reduzir o contraste promocional e tornar a experiência mais clean e sóbria.
 - [x] Validar build, impressão, desktop, largura intermediária e mobile.
+
+## Rodada atual — revisão dos edits visuais da Área 02
+- [x] Auditar os estilos inline adicionados pelo editor em `Home.tsx`.
+- [x] Remover atributos JSX duplicados e preservar apenas os valores finais intencionais.
+- [x] Validar o alinhamento da heading, índice, descrição e grade de projetos em desktop e mobile.
+- [x] Executar TypeScript/build e publicar um novo checkpoint após a validação.

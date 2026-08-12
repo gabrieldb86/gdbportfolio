@@ -110,3 +110,9 @@ A referência externa apresenta uma sequência de cards com imagem, título e de
 Após o override final, a inspeção computada do DOM confirmou `display: grid`, 10 cards, duas linhas e distribuição `[5, 5]`. A regra anterior que produzia `display: block` foi identificada como a causa exata do problema e foi sobreposta ao final do CSS.
 
 As capturas confirmaram a solução visual: em 1280px a área 02 apresenta cinco cards na primeira linha e cinco na segunda, com largura e gap uniformes; em 375px a grade se adapta para uma coluna sem overflow, preservando a ordem e as legendas dos 10 projetos.
+
+## Revisão dos edits visuais da Área 02 — 2026-08-12
+
+O editor visual havia inserido seis atributos duplicados em `Home.tsx`, impedindo o TypeScript de compilar. Os estilos foram consolidados com os valores finais: índice deslocado `-58px/+58px`, heading e kicker preservando os deslocamentos negativos intencionais, e grade com `marginBottom: -60px` e `marginLeft: 53px`. A captura mobile não apresentou overflow no hero; a captura desktop exige uma conferência adicional da visibilidade integral de “Projetos que” após a margem negativa aplicada ao h2.
+
+A inspeção em tiles legíveis confirmou o risco: a primeira linha escura **“Projetos que”** não aparecia na captura desktop, enquanto **“ganharam forma.”** permanecia visível. Após ajustar o deslocamento do h2 de `-136px` para `-48px`, a captura full-page de 1280px voltou a exibir **“Projetos que ganharam forma.”** integralmente, sem perder o alinhamento editorial do kicker. A captura full-page de 375px também preservou a heading e empilhou os 10 cards sem overflow horizontal.
