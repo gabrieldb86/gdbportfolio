@@ -55,6 +55,7 @@ export default function Home() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [sent, setSent] = useState(false);
+  const [openService, setOpenService] = useState<string | null>(null);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 28);
@@ -120,7 +121,7 @@ export default function Home() {
             <a className="hero-cta hero-cta-redesign" href="#work" onClick={(event) => { event.preventDefault(); scrollToId("work"); }}>Explorar trabalho <ArrowUpRight size={16} /></a>
           </div>
           <div className="hero-redesign-portrait">
-            <img src={siteConfig.profilePhoto} alt="Gabriel Danino Basilio" />
+            <img src={siteConfig.heroImage} alt="Projeto visual de bonés em preto e vermelho" />
             <span className="portrait-stamp">01 / 05<br /><b>Selected folio</b></span>
           </div>
           <div className="hero-redesign-bottom"><span>17 anos de experiência</span><span>Conteudista · Designer · Criador</span><button type="button" onClick={() => scrollToId("work")} aria-label="Descer para os projetos"><MoveDownRight size={20} /></button></div>
@@ -165,10 +166,13 @@ export default function Home() {
             </div>
             <div className="services-list">
               {siteConfig.services.map(([number, title, description]) => (
-                <article className="service-row" key={number}>
-                  <span className="service-number">{number}</span>
-                  <div><h3>{title}</h3><p>{description}</p></div>
-                  <Plus size={19} strokeWidth={1.4} />
+                <article className={`service-item ${openService === number ? "service-item-open" : ""}`} key={number}>
+                  <button className="service-row" type="button" aria-expanded={openService === number} aria-controls={`service-detail-${number}`} onClick={() => setOpenService((current) => current === number ? null : number)}>
+                    <span className="service-number">{number}</span>
+                    <div><h3>{title}</h3><p>{description}</p></div>
+                    <Plus className="service-toggle" size={21} strokeWidth={1.4} />
+                  </button>
+                  {openService === number && <div className="service-detail" id={`service-detail-${number}`}><p>{siteConfig.serviceDetails[number]}</p><a href="#contact" onClick={(event) => { event.preventDefault(); scrollToId("contact"); }}>Conversar sobre este tema <ArrowUpRight size={15} /></a></div>}
                 </article>
               ))}
             </div>

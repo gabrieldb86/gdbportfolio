@@ -17,6 +17,10 @@
 - [x] Incorporar a segunda referência enricodeiana.design na composição e no ritmo da home.
 - [x] Reorganizar a narrativa para aproximar portfolio, pessoa, habilidades e CV.
 - [x] Validar a síntese das referências sem copiar identidade, texto ou ativos.
+- [x] Substituir a imagem de destaque por um projeto não fotográfico enviado pelo usuário.
+- [x] Separar a imagem hero do retrato pessoal no editor.
+- [x] Tornar os serviços expansíveis por botão, com descrição detalhada e CTA contextual.
+- [x] Validar a interação do primeiro item e a responsividade em desktop/mobile.
 - [x] Substituir a primeira dobra atual por uma composição mais radical, visual e autoral.
 - [x] Reorganizar a navegação e a apresentação dos projetos de modo perceptível.
 - [x] Reduzir elementos intermediários que fazem a página parecer a versão anterior.

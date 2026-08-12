@@ -16,6 +16,7 @@ export type ServiceConfig = [string, string, string];
 
 export type SiteConfig = {
   profilePhoto: string;
+  heroImage: string;
   generatedAssets: {
     hero: string;
     collage: string;
@@ -35,10 +36,12 @@ export type SiteConfig = {
   };
   projects: ProjectConfig[];
   services: ServiceConfig[];
+  serviceDetails: Record<string, string>;
 };
 
 export const defaultSiteConfig: SiteConfig = {
   profilePhoto: "/manus-storage/gabriel-profile_69235fc9.jpg",
+  heroImage: "/manus-storage/gabriel-bonecaps-project_cac714ba.png",
   generatedAssets: {
     hero: "/manus-storage/gdb-editorial-reference_55640f8a.png",
     collage: "/manus-storage/gdb-editorial-collage_983088a0.png",
@@ -135,6 +138,11 @@ export const defaultSiteConfig: SiteConfig = {
     ["02", "Design para comunicação", "Peças que organizam uma mensagem e fazem a marca ser lembrada."],
     ["03", "Apresentações & materiais", "Decks, eventos e materiais comerciais com clareza e presença."],
   ],
+  serviceDetails: {
+    "01": "Leio o problema, organizo a mensagem e construo uma linha de conteúdo com pauta, intenção, formato e critério de sucesso. O objetivo é transformar informação solta em comunicação que orienta uma ação.",
+    "02": "Crio sistemas visuais e peças que tornam a mensagem mais clara, consistente e reconhecível — do post à campanha, do material interno ao ponto de contato com o consumidor.",
+    "03": "Estruturo apresentações, materiais de treinamento, eventos e decks comerciais para que cada página tenha uma função, um ritmo e uma história fácil de acompanhar.",
+  },
 };
 
 const STORAGE_KEY = "gabriel-portfolio-config";
@@ -152,6 +160,7 @@ export function getSiteConfig(): SiteConfig {
       hero: { ...defaultSiteConfig.hero, ...parsed.hero },
       projects: parsed.projects ?? defaultSiteConfig.projects,
       services: parsed.services ?? defaultSiteConfig.services,
+      serviceDetails: parsed.serviceDetails ?? defaultSiteConfig.serviceDetails,
     };
   } catch {
     return defaultSiteConfig;
