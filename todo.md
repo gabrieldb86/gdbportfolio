@@ -382,3 +382,7 @@
 - [x] Unificar variáveis e regras para que as aberturas usem o mesmo eixo do primeiro hero.
 - [x] Validar heros, títulos, colunas e responsividade em todas as rotas.
 - [x] Executar testes, typecheck e build antes do checkpoint.
+
+## Critério permanente de responsividade
+- [x] Validar toda nova alteração em mobile vertical e horizontal, além de desktop.
+- [x] Confirmar eixo editorial, espaçamento, legibilidade e ausência de encavalamento antes de cada checkpoint.
