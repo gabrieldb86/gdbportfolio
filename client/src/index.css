@@ -1232,3 +1232,15 @@ h1 em, h2 em { color: var(--primary); font-style: italic; }
   .service-detail-open p { max-width: none; }
   .service-detail-open a { display: inline-flex; }
 }
+
+/* Acordeão nativo dos serviços: interação robusta em touch e teclado. */
+.service-item > .service-row { cursor: pointer; list-style: none; }
+.service-item > .service-row::-webkit-details-marker { display: none; }
+.service-item > .service-row::marker { display: none; content: ""; }
+.service-item[open] > .service-row { border-bottom-color: transparent; }
+.service-item[open] > .service-row .service-toggle { transform: rotate(45deg); }
+.service-item > .service-detail { display: flex; }
+@media (max-width: 720px) {
+  .service-item[open] > .service-detail { display: block; }
+  .service-item[open] > .service-detail p { max-width: none; }
+}

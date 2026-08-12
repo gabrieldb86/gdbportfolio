@@ -67,7 +67,6 @@ export default function Home() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [sent, setSent] = useState(false);
-  const [openService, setOpenService] = useState<string | null>(null);
 
   useEffect(() => {
     setPageMetadata({
@@ -229,17 +228,17 @@ export default function Home() {
             </div>
             <div className="services-list">
               {siteConfig.services.map(([number, title, description], index) => (
-                <article className={`service-item ${openService === number ? "service-item-open" : ""}`} key={number} data-reveal="service-item" data-reveal-delay={index * 70}>
-                  <button className="service-row" type="button" aria-expanded={openService === number} aria-controls={`service-detail-${number}`} onClick={() => setOpenService((current) => current === number ? null : number)}>
+                <details className="service-item" key={number} data-reveal="service-item" data-reveal-delay={index * 70}>
+                  <summary className="service-row">
                     <span className="service-number">{number}</span>
                     <div><h3>{title}</h3><p>{description}</p></div>
-                    <Plus className="service-toggle" size={21} strokeWidth={1.4} />
-                  </button>
-                  <div className={`service-detail ${openService === number ? "service-detail-open" : ""}`} id={`service-detail-${number}`} hidden={openService !== number}>
+                    <Plus className="service-toggle" size={21} strokeWidth={1.4} aria-hidden="true" />
+                  </summary>
+                  <div className="service-detail" id={`service-detail-${number}`}>
                     <p>{siteConfig.serviceDetails[number]}</p>
                     <a href="#contact" onClick={(event) => { event.preventDefault(); scrollToId("contact"); }}>Conversar sobre este tema <ArrowUpRight size={15} /></a>
                   </div>
-                </article>
+                </details>
               ))}
             </div>
           </div>

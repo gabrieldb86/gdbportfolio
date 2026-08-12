@@ -262,4 +262,13 @@
 - [x] Validar o comportamento de fechar e reabrir o painel.
 - [x] Validar a interação em mobile e desktop.
 - [x] Executar typecheck, testes e build após a correção.
-- [ ] Salvar checkpoint da correção após validação visual e técnica.
+- [x] Salvar checkpoint da correção após validação visual e técnica (`251a4baa`).
+
+## Regressão persistente no acordeão mobile
+- [x] Reproduzir o desaparecimento do conteúdo no viewport móvel real.
+- [x] Rastrear o estado openService e o DOM após tocar no “+”.
+- [x] Verificar hidden, display, animações, overflow e altura do painel aberto.
+- [x] Substituir a implementação por uma expansão mobile robusta se a causa persistir.
+- [x] Validar abertura, fechamento e leitura do conteúdo em mobile.
+- [x] Executar typecheck, testes e build após a nova correção.
+- [ ] Salvar checkpoint corrigido após validação final.
