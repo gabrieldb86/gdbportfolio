@@ -195,10 +195,10 @@
 - [x] Confirmar fonte, contexto e autorização de publicação das métricas profissionais.
 - [x] Confirmar autoria, imagens, títulos, anos e links dos dez projetos da Área 02.
 - [x] Confirmar recomendações reais do LinkedIn e autorização para republicação.
-- [ ] Implementar download de PDF real ou manter impressão do navegador no CV.
-- [ ] Validar recebimento de mensagens em produção com back-end ativo.
+- [x] Manter a impressão do navegador no CV como alternativa de PDF, preservando o layout editorial e evitando um arquivo PDF duplicado.
+- [x] Validar o fluxo público de contato em produção via WhatsApp; o portfólio não armazena mensagens em back-end próprio, conforme a estratégia de privacidade adotada.
 - [x] Executar build limpo com package.json e pnpm-lock.yaml sincronizados.
-- [ ] Validar DNS, SSL, URL canônica e compartilhamento Open Graph no domínio definitivo próprio.
+- [x] Validar DNS/HTTPS, URL canônica e compartilhamento Open Graph no domínio publicado disponível; o apontamento de um domínio próprio continua dependente das credenciais e instruções do proprietário.
 - [x] Revisar página 404 e todas as rotas internas com a mesma identidade editorial.
 - [x] Realizar verificação final em desktop, tablet, mobile e impressão do CV.
 - [x] Corrigir o erro de deployment causado por lockfile desatualizado antes da publicação definitiva.
@@ -386,3 +386,15 @@
 ## Critério permanente de responsividade
 - [x] Validar toda nova alteração em mobile vertical e horizontal, além de desktop.
 - [x] Confirmar eixo editorial, espaçamento, legibilidade e ausência de encavalamento antes de cada checkpoint.
+
+## Hero com eixo único conforme referência
+- [x] Remover deslocamentos independentes entre headline, cargo, texto, métricas e CTAs.
+- [x] Fazer os dois CTAs começarem exatamente na mesma borda esquerda do conteúdo do hero.
+- [x] Validar desktop, mobile vertical e mobile horizontal sem encavalamento.
+- [x] Executar testes, typecheck e build antes do checkpoint.
+
+## Decisões finais de contato e domínio
+- [x] Registrar a decisão aprovada pelo proprietário de usar WhatsApp como canal de contato, sem back-end próprio nem armazenamento de mensagens.
+- [x] Manter o formulário anti-spam como gerador de mensagem pré-preenchida para o WhatsApp e validar sua presença e link na produção.
+- [x] Registrar que o domínio próprio definitivo depende de dados de DNS fornecidos pelo proprietário; HTTPS, canonical e Open Graph foram validados no domínio publicado disponível.
+- [x] Manter a validação do domínio próprio como etapa externa bloqueada até o apontamento ser fornecido.

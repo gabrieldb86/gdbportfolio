@@ -31,3 +31,12 @@ A página pública do CV foi inspecionada no navegador: a área de contatos most
 ## Verificação do eixo esquerdo global
 
 O eixo físico do primeiro hero da Home foi usado como referência para as aberturas da Home, do CV, de cases e da página de privacidade. Em desktop, o CV, o fechamento do CV, o cabeçalho e hero de Case, o conteúdo do Case, o fechamento do Case e a página de privacidade passaram a respeitar o mesmo início lateral. Em mobile, o eixo foi normalizado para 24px, sem padding duplicado, mantendo títulos, imagens, textos e CTAs alinhados e legíveis.
+
+## Verificação do hero por eixo único conforme referência
+
+A headline, o cargo, a descrição, as métricas e os CTAs passaram a compartilhar a mesma borda esquerda do conteúdo do hero, reproduzindo o princípio observado na referência de contato. Em desktop, o eixo do copy foi preservado e os CTAs não possuem margem ou padding lateral independente. Em mobile vertical, os dois CTAs começam no mesmo ponto e permanecem legíveis lado a lado. Em mobile horizontal, os CTAs também mantêm o mesmo início lateral, sem recuo adicional ou sobreposição.
+
+
+## Auditoria das pendências de publicação
+
+No domínio publicado disponível, o título da Home, a canonical e as tags Open Graph apontam para `https://gabrielpor-7t6ygmlv.manus.space/`. A Home expõe formulário anti-spam e links de WhatsApp; o fluxo público abre o WhatsApp com a mensagem preparada, sem submissão automática de dados a um back-end próprio. O CV mantém o botão de impressão do navegador, que é a estratégia de PDF aprovada para preservar o layout de impressão. A validação foi somente de disponibilidade e estrutura; nenhum formulário foi submetido durante o teste.

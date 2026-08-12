@@ -2013,3 +2013,32 @@ a.proof-link, a.behance-link, a.text-link, .service-detail a {
     padding-right: var(--editorial-axis);
   }
 }
+
+/* Hero por eixo único: a referência de contato inicia copy e ações na mesma borda. */
+.home-revision .hero-redesign-panel {
+  padding-left: 0;
+  padding-right: 0;
+}
+.home-revision .hero-redesign-panel .hero-redesign-copy,
+.home-revision .hero-redesign-panel .hero-actions {
+  width: 100%;
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+}
+.home-revision .hero-redesign-panel .hero-actions {
+  align-self: flex-start;
+  justify-content: flex-start;
+  text-align: left;
+}
+.home-revision .hero-redesign-panel .hero-actions > a {
+  margin-left: 0 !important;
+  text-align: left;
+}
+@media (max-width: 720px) {
+  .home-revision .hero-redesign-panel {
+    padding-top: 28px;
+    padding-right: 0;
+    padding-bottom: 25px;
+    padding-left: 0;
+  }
+}
