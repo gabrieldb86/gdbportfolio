@@ -100,6 +100,7 @@ export default function Home() {
       </header>
 
       <aside className="side-rail" aria-label="Informações rápidas">
+        <div className="rail-image-block"><img src={siteConfig.railImage} alt="Ilustração em preto e branco de Gabriel" /></div>
         <span className="rail-label">Portfólio · 2024—25</span>
         <span className="rail-line" />
         <div className="rail-ticks" aria-hidden="true"><span>01</span><i /><span>02</span><i /><span>03</span><i /><span>04</span><i /><span>05</span></div>

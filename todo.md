@@ -42,6 +42,9 @@
 - [x] Estender o conteúdo do banner horizontal para eliminar espaços vazios.
 - [x] Ajustar a animação para um loop contínuo e responsivo.
 - [x] Validar a faixa em desktop e mobile antes de salvar novo checkpoint.
+- [x] Deslocar o header para a direita e respeitar a largura do trilho lateral.
+- [x] Inserir a ilustração anexada no bloco claro da lateral.
+- [x] Fixar o trilho lateral durante a rolagem e validar desktop/mobile.
 - [x] Substituir a primeira dobra atual por uma composição mais radical, visual e autoral.
 - [x] Reorganizar a navegação e a apresentação dos projetos de modo perceptível.
 - [x] Reduzir elementos intermediários que fazem a página parecer a versão anterior.
