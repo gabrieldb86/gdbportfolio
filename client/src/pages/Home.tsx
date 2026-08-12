@@ -121,7 +121,7 @@ export default function Home() {
             <a className="hero-cta hero-cta-redesign" href="#work" onClick={(event) => { event.preventDefault(); scrollToId("work"); }}>Explorar trabalho <ArrowUpRight size={16} /></a>
           </div>
           <div className="hero-redesign-portrait">
-            <img src={siteConfig.heroImage} alt="Projeto visual de bonés em preto e vermelho" />
+            <img src={siteConfig.profilePhoto} alt="Gabriel Danino Basilio" />
             <span className="portrait-stamp">01 / 05<br /><b>Selected folio</b></span>
           </div>
           <div className="hero-redesign-bottom"><span>17 anos de experiência</span><span>Conteudista · Designer · Criador</span><button type="button" onClick={() => scrollToId("work")} aria-label="Descer para os projetos"><MoveDownRight size={20} /></button></div>
@@ -198,7 +198,7 @@ export default function Home() {
         </section>
 
         <section className="statement-section">
-          <img src={siteConfig.projects[0]?.image} alt="Projeto Podcast Varejo na Real" loading="lazy" />
+          <img src={siteConfig.heroImage} alt="Projeto visual de bonés em preto e vermelho" loading="lazy" />
           <div className="statement-copy"><span>Uma pergunta para o próximo projeto:</span><h2>O que precisa<br /><em>ganhar forma?</em></h2></div>
         </section>
 

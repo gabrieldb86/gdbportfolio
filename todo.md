@@ -21,6 +21,7 @@
 - [x] Separar a imagem hero do retrato pessoal no editor.
 - [x] Tornar os serviços expansíveis por botão, com descrição detalhada e CTA contextual.
 - [x] Validar a interação do primeiro item e a responsividade em desktop/mobile.
+- [x] Corrigir a posição das imagens conforme a numeração indicada pelo usuário.
 - [x] Substituir a primeira dobra atual por uma composição mais radical, visual e autoral.
 - [x] Reorganizar a navegação e a apresentação dos projetos de modo perceptível.
 - [x] Reduzir elementos intermediários que fazem a página parecer a versão anterior.
