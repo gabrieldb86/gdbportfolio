@@ -198,7 +198,6 @@ export default function Home() {
               <h2 id="about-title">Olá, eu sou<br /><em>Gabriel.</em></h2>
               <p className="about-lead">Tenho 17 anos de experiência desenvolvendo pessoas, produtos e processos — e uma vontade constante de transformar ideias em comunicação que faça sentido.</p>
               <p>Minha trajetória cruza gestão, treinamento, conteúdo e design. Gosto de entrar cedo no problema, entender o contexto e construir materiais que sejam bonitos, mas também úteis, claros e possíveis de colocar em prática.</p>
-              <div className="about-signature"><span>GDB</span><span>São Paulo · Brasil</span></div>
               <div className="about-skill-list" aria-label="Áreas de atuação"><span>Conteúdo</span><span>Treinamento</span><span>Trade marketing</span><span>IA generativa</span><span>Audiovisual</span><span>Dashboards</span></div>
             </div>
           </div>
@@ -235,7 +234,7 @@ export default function Home() {
       <a className="floating-contact" href="#contact" onClick={(event) => { event.preventDefault(); scrollToId("contact"); }}><span>Fale comigo</span><ArrowUpRight size={16} /></a>
 
       <footer className="site-footer">
-        <a className="footer-brand" href="#top" onClick={(event) => { event.preventDefault(); scrollToId("top"); }}><span style={{fontSize: '24px'}}>Gabriel Danino Basilio</span></a>
+        <a className="footer-brand" href="#top" onClick={(event) => { event.preventDefault(); scrollToId("top"); }}><span className="footer-avatar"><img src={siteConfig.railImage} alt="" /></span><span style={{fontSize: '24px'}}>Gabriel Danino Basilio</span></a>
         <a className="footer-editor-link" href="/editor">Editar portfólio</a>
         <div className="footer-socials"><a href="https://www.linkedin.com/in/gabrieldb86" target="_blank" rel="noreferrer" aria-label="LinkedIn"><Linkedin size={17} /></a><a href="https://instagram.com/gabrieldb1986" target="_blank" rel="noreferrer" aria-label="Instagram"><Instagram size={17} /></a><a href="https://wa.me/5511995873069" target="_blank" rel="noreferrer" aria-label="WhatsApp"><MessageCircle size={17} /></a></div>
         <span className="footer-credit">© 2026 · Feito com intenção.</span>

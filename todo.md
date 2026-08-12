@@ -45,6 +45,10 @@
 - [x] Deslocar o header para a direita e respeitar a largura do trilho lateral.
 - [x] Inserir a ilustração anexada no bloco claro da lateral.
 - [x] Fixar o trilho lateral durante a rolagem e validar desktop/mobile.
+- [ ] Alinhar o avatar em preto e branco ao topo, sem espaço acima.
+- [ ] Corrigir sobreposição em larguras intermediárias da janela.
+- [ ] Reorganizar header, navegação, trilho e hero para reflow responsivo.
+- [ ] Validar a página em desktop amplo, notebook/tablet e mobile.
 - [x] Substituir a primeira dobra atual por uma composição mais radical, visual e autoral.
 - [x] Reorganizar a navegação e a apresentação dos projetos de modo perceptível.
 - [x] Reduzir elementos intermediários que fazem a página parecer a versão anterior.
