@@ -1,8 +1,7 @@
 // Direção visual: Arquivo Editorial — o CV usa índice, marfim, vermelho-carmim e tipografia em camadas para transformar experiência em narrativa.
+import { type CSSProperties } from "react";
 import { ArrowLeft, ArrowUpRight, Linkedin, Mail, MapPin, MessageCircle, Phone, Printer } from "lucide-react";
-
-const profilePhoto = "/manus-storage/gabriel-profile_69235fc9.jpg";
-const mark = "/manus-storage/gdb-editorial-mark_6fef482b.png";
+import { getSiteConfig } from "@/data/siteConfig";
 
 const experience = [
   {
@@ -43,8 +42,11 @@ function scrollTop() {
 }
 
 export default function CV() {
+  const siteConfig = getSiteConfig();
+  const profilePhoto = siteConfig.profilePhoto;
+  const mark = siteConfig.generatedAssets.mark;
   return (
-    <div className="site-shell cv-page">
+    <div className="site-shell cv-page" style={{ "--primary": siteConfig.brand.accent, "--background": siteConfig.brand.background, "--foreground": siteConfig.brand.foreground } as CSSProperties}>
       <header className="site-header site-header-scrolled">
         <a className="brand-lockup" href="/" aria-label="Voltar para o portfólio">
           <span className="brand-symbol" aria-hidden="true">

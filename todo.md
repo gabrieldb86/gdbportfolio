@@ -6,3 +6,7 @@
 - [x] Estruturar experiência, competências e formação para leitura rápida.
 - [x] Substituir a imagem principal pela foto profissional sem perder a direção editorial.
 - [x] Validar navegação, responsividade, acessibilidade e build.
+- [x] Analisar a referência cjcawley.com e registrar padrões úteis sem copiar sua identidade.
+- [x] Centralizar conteúdo, projetos e opções de layout em uma configuração editável.
+- [x] Ajustar a navegação para refletir áreas editoriais mais claras.
+- [x] Validar alterações de foto, proporção, tamanho, ordem e visibilidade dos projetos.

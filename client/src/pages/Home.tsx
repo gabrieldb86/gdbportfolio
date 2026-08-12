@@ -1,5 +1,5 @@
 // Direção visual: Arquivo Editorial — preservar assimetria, índices em vermelho, imagens protagonistas e microcopy objetiva.
-import { FormEvent, useEffect, useState } from "react";
+import { type CSSProperties, type FormEvent, useEffect, useState } from "react";
 import {
   ArrowUpRight,
   Instagram,
@@ -10,92 +10,19 @@ import {
   Plus,
   X,
 } from "lucide-react";
-
-const generated = {
-  hero: "/manus-storage/gdb-editorial-reference_55640f8a.png",
-  collage: "/manus-storage/gdb-editorial-collage_983088a0.png",
-  paper: "/manus-storage/gdb-red-paper-detail_86c93d83.png",
-  mark: "/manus-storage/gdb-editorial-mark_6fef482b.png",
-  poster: "/manus-storage/gdb-abstract-poster_93816c75.png",
-};
-
-const profilePhoto = "/manus-storage/gabriel-profile_69235fc9.jpg";
-
-const projects = [
-  {
-    number: "01",
-    title: "Podcast Varejo na Real",
-    type: "Conteúdo · Identidade editorial",
-    year: "2024",
-    image:
-      "https://mir-s3-cdn-cf.behance.net/projects/404/ff75d9229319463.Y3JvcCwxMzgwLDEwODAsMjcwLDA.jpg",
-    href: "https://www.behance.net/gallery/229319463/Podcast-Varejo-na-Real-EP04",
-    size: "project-wide",
-  },
-  {
-    number: "02",
-    title: "Ragtech Dicas",
-    type: "Conteúdo · Social · Direção visual",
-    year: "2024",
-    image:
-      "https://mir-s3-cdn-cf.behance.net/projects/404/821789229318749.Y3JvcCwxMzc0LDEwNzQsMCwyOTk.png",
-    href: "https://www.behance.net/gallery/229318749/Ragtech-Dicas-01-O-que-um-nobreak",
-    size: "project-tall",
-  },
-  {
-    number: "03",
-    title: "Future Print 2024",
-    type: "Eventos · Materiais de marca",
-    year: "2024",
-    image:
-      "https://mir-s3-cdn-cf.behance.net/projects/404/993e5a229318387.Y3JvcCw4MDgsNjMyLDAsMA.png",
-    href: "https://www.behance.net/gallery/229318387/Future-Print-2024-Feira-Ragtech-com-Roland-e-Epson",
-    size: "project-card",
-  },
-  {
-    number: "04",
-    title: "Eletrolar Show 2024",
-    type: "Eventos · Experiência de marca",
-    year: "2024",
-    image:
-      "https://mir-s3-cdn-cf.behance.net/projects/404/e836a2229253681.Y3JvcCw4MDgsNjMyLDAsMA.png",
-    href: "https://www.behance.net/gallery/229253681/Eletrolar-Show-2024-Feira-com-Redragon-e-Ragtech",
-    size: "project-card",
-  },
-  {
-    number: "05",
-    title: "Blocs Presentation",
-    type: "Apresentação · Sistema visual",
-    year: "2023",
-    image:
-      "https://mir-s3-cdn-cf.behance.net/projects/404/98dc70229252859.Y3JvcCw4MDgsNjMyLDAsMA.png",
-    href: "https://www.behance.net/gallery/229252859/Blocs-Presentation",
-    size: "project-card",
-  },
-  {
-    number: "06",
-    title: "Valens BDN",
-    type: "Identidade · Uniformes alternativos",
-    year: "2022",
-    image:
-      "https://mir-s3-cdn-cf.behance.net/projects/404/7a7b9f200631919.Y3JvcCwxMzk5LDEwOTUsMCww.jpg",
-    href: "https://www.behance.net/gallery/200631919/Uniformes-Alternativos-Valens-BDN",
-    size: "project-tall",
-  },
-];
-
-const services = [
-  ["01", "Estratégia de conteúdo", "Do briefing ao plano de conteúdo com pauta, intenção e formato."],
-  ["02", "Design para comunicação", "Peças que organizam uma mensagem e fazem a marca ser lembrada."],
-  ["03", "Apresentações & materiais", "Decks, eventos e materiais comerciais com clareza e presença."],
-];
+import { type ProjectConfig, getSiteConfig } from "@/data/siteConfig";
 
 function scrollToId(id: string, closeMenu?: () => void) {
   closeMenu?.();
   document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
 }
 
-function ProjectCard({ project }: { project: (typeof projects)[number] }) {
+function renderHeadline(headline: string) {
+  const [before, after] = headline.split(" e ");
+  return after ? <>{before} <em>e {after}</em></> : headline;
+}
+
+function ProjectCard({ project }: { project: ProjectConfig }) {
   return (
     <a
       className={`project-card ${project.size}`}
@@ -104,8 +31,8 @@ function ProjectCard({ project }: { project: (typeof projects)[number] }) {
       rel="noreferrer"
       aria-label={`Abrir projeto ${project.title} no Behance`}
     >
-      <div className="project-image-wrap">
-        <img src={project.image} alt={project.title} className="project-image" loading="lazy" />
+      <div className="project-image-wrap" style={{ aspectRatio: project.aspectRatio }}>
+        <img src={project.image} alt={project.title} className="project-image" style={{ objectPosition: project.objectPosition }} loading="lazy" />
         <span className="project-arrow" aria-hidden="true">
           <ArrowUpRight size={19} strokeWidth={1.5} />
         </span>
@@ -124,6 +51,7 @@ function ProjectCard({ project }: { project: (typeof projects)[number] }) {
 }
 
 export default function Home() {
+  const [siteConfig, setSiteConfig] = useState(() => getSiteConfig());
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [sent, setSent] = useState(false);
@@ -132,6 +60,12 @@ export default function Home() {
     const handleScroll = () => setScrolled(window.scrollY > 28);
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const syncConfig = () => setSiteConfig(getSiteConfig());
+    window.addEventListener("storage", syncConfig);
+    return () => window.removeEventListener("storage", syncConfig);
   }, []);
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
@@ -144,11 +78,11 @@ export default function Home() {
   };
 
   return (
-    <div className="site-shell">
+    <div className="site-shell" style={{ "--primary": siteConfig.brand.accent, "--background": siteConfig.brand.background, "--foreground": siteConfig.brand.foreground } as CSSProperties}>
       <header className={`site-header ${scrolled ? "site-header-scrolled" : ""}`}>
         <a className="brand-lockup" href="#top" onClick={(event) => { event.preventDefault(); scrollToId("top"); }}>
           <span className="brand-symbol" aria-hidden="true">
-            <img src={generated.mark} alt="" className="brand-mark-source" />
+            <img src={siteConfig.generatedAssets.mark} alt="" className="brand-mark-source" />
             <span className="symbol-bar symbol-bar-a" /><span className="symbol-bar symbol-bar-b" /><span className="symbol-bar symbol-bar-c" />
           </span>
           <span className="brand-name">Gabriel Danino<br />Basilio</span>
@@ -179,18 +113,18 @@ export default function Home() {
       <main id="top">
         <section className="hero-section">
           <div className="hero-copy">
-            <p className="eyebrow"><span className="eyebrow-mark">●</span> Conteúdo · Design · Materiais</p>
-            <h1>Ideias que saem do briefing <em>e encontram forma.</em></h1>
+            <p className="eyebrow"><span className="eyebrow-mark">●</span> {siteConfig.hero.eyebrow}</p>
+            <h1>{renderHeadline(siteConfig.hero.headline)}</h1>
             <div className="hero-bottomline">
-              <p className="hero-intro">Sou Gabriel, um criador multidisciplinar que transforma estratégia, conteúdo e design em materiais com clareza e presença.</p>
+              <p className="hero-intro">{siteConfig.hero.intro}</p>
               <button className="round-scroll" type="button" onClick={() => scrollToId("work")} aria-label="Ver trabalhos">
                 <MoveDownRight size={22} strokeWidth={1.2} />
               </button>
             </div>
           </div>
           <div className="hero-art">
-            <div className="hero-art-surface"><img src={generated.hero} alt="" /></div>
-            <div className="hero-work-plate"><img src={profilePhoto} alt="Gabriel Danino Basilio" /></div>
+            <div className="hero-art-surface"><img src={siteConfig.generatedAssets.hero} alt="" /></div>
+            <div className="hero-work-plate"><img src={siteConfig.profilePhoto} alt="Gabriel Danino Basilio" /></div>
             <div className="hero-art-note"><span>GDB / portrait</span><span>São Paulo / 2026</span></div>
           </div>
           <div className="hero-index">01 <span>—</span> 05</div>
@@ -219,7 +153,7 @@ export default function Home() {
           </div>
 
           <div className="projects-grid">
-            {projects.map((project) => <ProjectCard key={project.number} project={project} />)}
+            {siteConfig.projects.filter((project) => project.visible).map((project) => <ProjectCard key={project.number} project={project} />)}
           </div>
         </section>
 
@@ -229,10 +163,10 @@ export default function Home() {
             <div>
               <p className="section-kicker">Onde posso entrar</p>
               <h2 id="services-title">Da ideia solta<br />ao <strong>material certo.</strong></h2>
-              <img className="services-art" src={projects[4].image} alt="Projeto de apresentação Blocs" loading="lazy" />
+              <img className="services-art" src={siteConfig.projects[4]?.image} alt="Projeto de apresentação Blocs" loading="lazy" />
             </div>
             <div className="services-list">
-              {services.map(([number, title, description]) => (
+              {siteConfig.services.map(([number, title, description]) => (
                 <article className="service-row" key={number}>
                   <span className="service-number">{number}</span>
                   <div><h3>{title}</h3><p>{description}</p></div>
@@ -247,7 +181,7 @@ export default function Home() {
           <div className="section-index"><span>04</span><span className="index-line" /></div>
           <div className="about-grid">
             <div className="about-art-wrap">
-              <img src={projects[3].image} alt="Projeto Eletrolar Show 2024" loading="lazy" />
+              <img src={siteConfig.projects[3]?.image} alt="Projeto Eletrolar Show 2024" loading="lazy" />
               <span className="about-art-label">Processo / repertório / intenção</span>
             </div>
             <div className="about-copy">
@@ -261,7 +195,7 @@ export default function Home() {
         </section>
 
         <section className="statement-section">
-          <img src={projects[0].image} alt="Projeto Podcast Varejo na Real" loading="lazy" />
+          <img src={siteConfig.projects[0]?.image} alt="Projeto Podcast Varejo na Real" loading="lazy" />
           <div className="statement-copy"><span>Uma pergunta para o próximo projeto:</span><h2>O que precisa<br /><em>ganhar forma?</em></h2></div>
         </section>
 
@@ -289,7 +223,8 @@ export default function Home() {
       </main>
 
       <footer className="site-footer">
-        <a className="footer-brand" href="#top" onClick={(event) => { event.preventDefault(); scrollToId("top"); }}><span className="brand-symbol footer-symbol" aria-hidden="true"><img src={generated.mark} alt="" className="brand-mark-source" /><span className="symbol-bar symbol-bar-a" /><span className="symbol-bar symbol-bar-b" /><span className="symbol-bar symbol-bar-c" /></span> <span>Gabriel Danino Basilio</span></a>
+        <a className="footer-brand" href="#top" onClick={(event) => { event.preventDefault(); scrollToId("top"); }}><span className="brand-symbol footer-symbol" aria-hidden="true"><img src={siteConfig.generatedAssets.mark} alt="" className="brand-mark-source" /><span className="symbol-bar symbol-bar-a" /><span className="symbol-bar symbol-bar-b" /><span className="symbol-bar symbol-bar-c" /></span> <span>Gabriel Danino Basilio</span></a>
+        <a className="footer-editor-link" href="/editor">Editar portfólio</a>
         <div className="footer-socials"><a href="https://www.linkedin.com/in/gabrieldb86" target="_blank" rel="noreferrer" aria-label="LinkedIn"><Linkedin size={17} /></a><a href="https://instagram.com/gabrieldb1986" target="_blank" rel="noreferrer" aria-label="Instagram"><Instagram size={17} /></a><a href="https://wa.me/5511995873069" target="_blank" rel="noreferrer" aria-label="WhatsApp"><MessageCircle size={17} /></a></div>
         <span className="footer-credit">© 2026 · Feito com intenção.</span>
       </footer>
