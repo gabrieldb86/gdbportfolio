@@ -1,7 +1,7 @@
 // Direção visual: Arquivo Editorial — o CV usa índice, marfim, vermelho-carmim e tipografia em camadas para transformar experiência em narrativa.
 import { type CSSProperties, type SyntheticEvent, useEffect } from "react";
 import { setPageMetadata } from "@/lib/seo";
-import { ArrowLeft, ArrowUpRight, Linkedin, Mail, MapPin, MessageCircle, Phone, Printer } from "lucide-react";
+import { ArrowLeft, ArrowUpRight, Linkedin, Mail, MapPin, MessageCircle, Printer } from "lucide-react";
 import { getSiteConfig } from "@/data/siteConfig";
 
 const experience = [
@@ -201,7 +201,7 @@ export default function CV() {
               <p className="section-kicker">Perfil</p>
               <p className="cv-sidebar-copy">Conteúdo, treinamento e trade marketing com olhar de quem entende que comunicação só funciona quando encontra contexto, ritmo e intenção.</p>
               <div className="cv-contact-list">
-                <a href="tel:+5511945747353"><Phone size={14} /> +55 11 94574-7353</a>
+                <a href="https://wa.me/5511945747353" target="_blank" rel="noreferrer" data-umami-event="whatsapp-click"><MessageCircle size={14} /> Falar pelo WhatsApp</a>
                 <a href="mailto:gabrieldb@me.com"><Mail size={14} /> gabrieldb@me.com</a>
                 <span><MapPin size={14} /> São Paulo, SP</span>
               </div>

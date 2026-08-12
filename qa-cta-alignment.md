@@ -23,3 +23,7 @@ A seção foi reorganizada em duas colunas editoriais: a headline permanece no e
 ## Verificação de legibilidade do fechamento visual
 
 O degradê forte foi removido da seção de fechamento. Em desktop, o texto agora ocupa um bloco carmim próprio à esquerda e a imagem ocupa uma coluna independente à direita, sem overlay. Em mobile, o texto aparece primeiro em bloco sólido e a imagem vem abaixo com proporção controlada. As duas capturas confirmaram que a imagem dos bonés e a mensagem “O que precisa ganhar forma?” permanecem visíveis e legíveis.
+
+## Verificação de privacidade do telefone
+
+A página pública do CV foi inspecionada no navegador: a área de contatos mostra apenas “Falar pelo WhatsApp”, e-mail e localização, sem número formatado ou link telefônico. A Home também foi inspecionada: os contatos aparecem como ações “Falar diretamente com Gabriel”, LinkedIn e e-mail, além do ícone de WhatsApp no rodapé. Os links de WhatsApp continuam funcionando sem exibir o número na interface.

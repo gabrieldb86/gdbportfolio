@@ -370,3 +370,9 @@
 - [x] Separar visualmente a imagem do bloco textual e reforçar o contraste.
 - [x] Validar desktop e mobile, sem perda de leitura ou sobreposição.
 - [x] Executar testes, typecheck e build antes do checkpoint.
+
+## Privacidade do contato telefônico
+- [x] Mapear e remover o número visível da Home, CV, dados de contato, editor e metadados públicos.
+- [x] Manter apenas links/botões que abrem o WhatsApp sem exibir o número na interface.
+- [x] Auditar todas as rotas e executar testes, typecheck e build.
+- [x] Salvar checkpoint da alteração de privacidade.
