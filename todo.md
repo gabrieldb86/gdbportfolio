@@ -45,6 +45,10 @@
 - [x] Deslocar o header para a direita e respeitar a largura do trilho lateral.
 - [x] Inserir a ilustração anexada no bloco claro da lateral.
 - [x] Fixar o trilho lateral durante a rolagem e validar desktop/mobile.
+- [x] Remover o espaço acima do avatar e colá-lo ao topo do viewport.
+- [x] Criar reflow do header para larguras intermediárias antes de qualquer colisão.
+- [x] Reorganizar o hero em tablet/notebook para evitar compressão e sobreposição.
+- [x] Validar ampla, intermediária e mobile no preview publicado.
 - [ ] Alinhar o avatar em preto e branco ao topo, sem espaço acima.
 - [ ] Corrigir sobreposição em larguras intermediárias da janela.
 - [ ] Reorganizar header, navegação, trilho e hero para reflow responsivo.
@@ -53,3 +57,6 @@
 - [x] Reorganizar a navegação e a apresentação dos projetos de modo perceptível.
 - [x] Reduzir elementos intermediários que fazem a página parecer a versão anterior.
 - [x] Validar a mudança lado a lado em desktop e mobile antes de criar checkpoint.
+- [ ] Verificar se a configuração persistida contém o novo avatar do rodapé.
+- [ ] Garantir fallback do avatar quando a configuração antiga não tiver o campo.
+- [ ] Validar o avatar no rodapé do preview publicado e em mobile.
