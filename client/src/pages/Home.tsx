@@ -235,7 +235,7 @@ export default function Home() {
                     <div><h3>{title}</h3><p>{description}</p></div>
                     <Plus className="service-toggle" size={21} strokeWidth={1.4} />
                   </button>
-                  <div className={`service-detail ${openService === number ? "service-detail-open" : ""}`} id={`service-detail-${number}`} style={{ display: openService === number ? "flex" : "none" }}>
+                  <div className={`service-detail ${openService === number ? "service-detail-open" : ""}`} id={`service-detail-${number}`} hidden={openService !== number}>
                     <p>{siteConfig.serviceDetails[number]}</p>
                     <a href="#contact" onClick={(event) => { event.preventDefault(); scrollToId("contact"); }}>Conversar sobre este tema <ArrowUpRight size={15} /></a>
                   </div>

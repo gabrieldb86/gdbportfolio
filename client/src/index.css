@@ -1222,3 +1222,13 @@ h1 em, h2 em { color: var(--primary); font-style: italic; }
     width: 100%;
   }
 }
+
+/* Detalhes dos serviços: estado fechado sem layout residual e estado aberto sempre visível. */
+.service-detail[hidden] { display: none !important; }
+.service-detail-open { display: flex !important; visibility: visible; opacity: 1; animation: none; }
+.service-detail-open p { visibility: visible; opacity: 1; }
+@media (max-width: 720px) {
+  .service-detail-open { display: block !important; }
+  .service-detail-open p { max-width: none; }
+  .service-detail-open a { display: inline-flex; }
+}

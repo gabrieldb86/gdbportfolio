@@ -252,4 +252,14 @@
 - [x] Corrigir os atributos duplicados sem alterar o conteúdo aprovado.
 - [x] Validar typecheck e build após os edits.
 - [x] Validar Home em desktop e mobile após os edits.
-- [ ] Salvar checkpoint da revisão visual após validação.
+- [x] Salvar checkpoint da revisão visual após validação (`0221c7bf`).
+
+## Bug reportado: detalhes dos projetos desaparecem ao tocar no “+”
+- [x] Reproduzir a abertura dos detalhes de um projeto no mobile.
+- [x] Identificar a lógica de expansão e as regras de overflow/altura que ocultam o conteúdo.
+- [x] Corrigir a abertura dos detalhes sem esconder título, imagem ou texto.
+- [x] Garantir que o painel expandido reserve altura suficiente e permaneça legível.
+- [x] Validar o comportamento de fechar e reabrir o painel.
+- [x] Validar a interação em mobile e desktop.
+- [x] Executar typecheck, testes e build após a correção.
+- [ ] Salvar checkpoint da correção após validação visual e técnica.
