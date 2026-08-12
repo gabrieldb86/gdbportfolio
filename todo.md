@@ -304,4 +304,18 @@
 - [x] Reorganizar a tipografia, espaçamento e alinhamento do bloco para seguir rigorosamente o eixo esquerdo editorial.
 - [x] Validar a apresentação limpa em mobile vertical, mobile horizontal e desktop.
 - [x] Executar typecheck e build após a mudança.
-- [ ] Salvar checkpoint da correção definitiva após validação.
+- [x] Salvar checkpoint da correção definitiva após validação (`4fc297f2`).
+
+## Rodada final de padronização visual
+- [x] Padronizar os ícones de redes sociais no rodapé (LinkedIn, Behance, WhatsApp) para contorno e mesmo tamanho.
+- [x] Esclarecer sobre o selo “Made with Manus” (elemento nativo da plataforma de hospedagem, mas com apresentação discreta).
+- [x] Posicionar a seta ao lado do texto em “Abrir trajetória” e demais links.
+- [x] Alinhar à esquerda o título e a descrição de “Focos de coordenação”.
+- [x] Uniformizar os bullets textuais do hero e seções.
+- [x] Executar typecheck e build, salvar checkpoint e entregar.
+
+## Correção mobile forçada (setas, ícones e alinhamentos)
+- [ ] Forçar setas ao lado do texto em todos os breakpoints (.proof-link, .behance-link, .text-link).
+- [ ] Padronizar definitivamente os ícones do rodapé em mobile e desktop com caixas de contorno idênticas.
+- [ ] Forçar alinhamento à esquerda em .coordination-focus-band e .coordination-focus-label em mobile.
+- [ ] Compilar, testar build e salvar novo checkpoint publicável.

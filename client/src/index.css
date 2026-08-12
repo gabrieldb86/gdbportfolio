@@ -1521,3 +1521,27 @@ h1 em, h2 em { color: var(--primary); font-style: italic; }
     padding-top: 22px;
   }
 }
+
+/* Padronização final de rodapé, ícones sociais em contorno e links com setas ao lado */
+.footer-socials { display: flex; gap: 14px; align-items: center; }
+.footer-socials a { display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 34px; border: 1px solid rgba(169, 157, 145, .35); border-radius: 4px; color: #a99d91; transition: all 180ms ease-out; }
+.footer-socials a:hover { color: #f4eee6; border-color: var(--primary); background: rgba(215, 51, 50, .15); }
+.proof-link, .behance-link, .text-link { display: inline-flex !important; align-items: center !important; gap: 8px !important; white-space: nowrap !important; width: fit-content !important; }
+
+/* Correções definitivas de layout mobile para setas e alinhamentos */
+a.proof-link, a.behance-link, a.text-link, .service-detail a {
+  display: inline-flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 8px !important;
+  width: auto !important;
+  white-space: nowrap !important;
+}
+.coordination-focus-band {
+  text-align: left !important;
+}
+.coordination-focus-label {
+  text-align: left !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}

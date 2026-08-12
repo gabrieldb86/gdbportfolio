@@ -159,7 +159,7 @@ export default function Home() {
         <section className="hero-section hero-redesign">
           <div className="hero-redesign-panel" data-reveal="hero-copy">
             <div className="hero-redesign-copy">
-              <p className="eyebrow"><span className="eyebrow-mark">●</span> {siteConfig.hero.eyebrow}</p>
+              <p className="eyebrow">{siteConfig.hero.eyebrow}</p>
               <h1 className="hero-headline"><span className="hero-headline-white">CONTEÚDO,</span><br /><span className="hero-headline-training">treinamento</span><br /><span className="hero-headline-white">&amp; TRADE</span><br /><span className="hero-headline-white">MARKETING.</span></h1>
               <p className="hero-positioning">{siteConfig.hero.positioning}</p>
               <p className="hero-redesign-intro" style={{ marginTop: "16px" }}>{siteConfig.hero.intro}</p>
@@ -176,7 +176,7 @@ export default function Home() {
         </section>
 
         <section className="coordination-focus-band" aria-labelledby="coordination-focus-title">
-          <div className="coordination-focus-label" data-reveal="focus-label" style={{ marginLeft: "46px", marginRight: "81px" }}>
+          <div className="coordination-focus-label" data-reveal="focus-label">
             <p className="section-kicker" style={{ fontSize: "15px" }}>Focos de coordenação</p>
             <p id="coordination-focus-title" style={{ fontSize: "15px" }}>Três frentes para transformar método em execução.</p>
           </div>
@@ -307,7 +307,7 @@ export default function Home() {
 
       <footer className="site-footer">
         <a className="footer-brand" href="#top" onClick={(event) => { event.preventDefault(); scrollToId("top"); }}><span className="footer-avatar"><img src={siteConfig.railImage} alt="" onError={markBrokenImage} /></span><span style={{fontSize: '24px'}}>Gabriel Danino Basilio</span></a>
-        <div className="footer-socials"><a href="https://www.linkedin.com/in/gabrieldb86" target="_blank" rel="noreferrer" aria-label="LinkedIn"><Linkedin size={17} /></a><a href="https://www.behance.net/gabrieldb86" target="_blank" rel="noreferrer" aria-label="Behance"><span className="behance-glyph" aria-hidden="true">Bē</span></a><a href="https://wa.me/5511945747353" target="_blank" rel="noreferrer" aria-label="WhatsApp"><MessageCircle size={17} /></a></div>
+        <div className="footer-socials"><a href="https://www.linkedin.com/in/gabrieldb86" target="_blank" rel="noreferrer" aria-label="LinkedIn"><Linkedin size={18} strokeWidth={1.75} /></a><a href="https://www.behance.net/gabrieldb86" target="_blank" rel="noreferrer" aria-label="Behance"><div style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '18px', height: '18px', border: '1.75px solid currentColor', borderRadius: '3px', fontSize: '10px', fontWeight: 800, lineHeight: 1 }}>Be</div></a><a href="https://wa.me/5511945747353" target="_blank" rel="noreferrer" aria-label="WhatsApp"><MessageCircle size={18} strokeWidth={1.75} /></a></div>
         <span className="footer-credit">© 2026 · Feito com intenção. · Foto de <a href="https://unsplash.com/pt-br/@scalzodesign?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noreferrer">Samuel Scalzo</a> na <a href="https://unsplash.com/pt-br/fotografias/uma-foto-em-preto-e-branco-de-um-edificio-xyuYk9oLA8I?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noreferrer">Unsplash</a></span>
       </footer>
     </div>
