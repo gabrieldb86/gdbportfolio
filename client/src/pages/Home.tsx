@@ -82,10 +82,6 @@ export default function Home() {
     <div className="site-shell home-revision" style={{ "--primary": siteConfig.brand.accent, "--background": siteConfig.brand.background, "--foreground": siteConfig.brand.foreground } as CSSProperties}>
       <header className={`site-header site-header-redesign ${scrolled ? "site-header-scrolled" : ""}`}>
         <a className="brand-lockup" href="#top" onClick={(event) => { event.preventDefault(); scrollToId("top"); }}>
-          <span className="brand-symbol" aria-hidden="true">
-            <img src={siteConfig.generatedAssets.mark} alt="" className="brand-mark-source" />
-            <span className="symbol-bar symbol-bar-a" /><span className="symbol-bar symbol-bar-b" /><span className="symbol-bar symbol-bar-c" />
-          </span>
           <span className="brand-name" style={{fontSize: '24px', textAlign: 'left'}}>Gabriel Danino<br style={{fontSize: '24px', textAlign: 'left'}} />Basilio</span>
         </a>
 
@@ -122,7 +118,6 @@ export default function Home() {
           </div>
           <div className="hero-redesign-portrait">
             <img src={siteConfig.profilePhoto} alt="Gabriel Danino Basilio" />
-            <span className="portrait-stamp">01 / 05<br /><b>Selected folio</b></span>
           </div>
           <div className="hero-redesign-bottom"><span>17 anos de experiência</span><span>Conteudista · Designer · Criador</span><a className="hero-cv-link" href="/cv">Ver CV <ArrowUpRight size={14} /></a><button type="button" onClick={() => scrollToId("work")} aria-label="Descer para os projetos"><MoveDownRight size={20} /></button></div>
         </section>
@@ -239,7 +234,7 @@ export default function Home() {
       <a className="floating-contact" href="#contact" onClick={(event) => { event.preventDefault(); scrollToId("contact"); }}><span>Fale comigo</span><ArrowUpRight size={16} /></a>
 
       <footer className="site-footer">
-        <a className="footer-brand" href="#top" onClick={(event) => { event.preventDefault(); scrollToId("top"); }} style={{fontSize: '24px'}}><span className="brand-symbol footer-symbol" aria-hidden="true" style={{fontSize: '24px'}}><img src={siteConfig.generatedAssets.mark} alt="" className="brand-mark-source" style={{fontSize: '24px'}} /><span className="symbol-bar symbol-bar-a" style={{fontSize: '24px'}} /><span className="symbol-bar symbol-bar-b" style={{fontSize: '24px'}} /><span className="symbol-bar symbol-bar-c" style={{fontSize: '24px'}} /></span> <span style={{fontSize: '24px'}}>Gabriel Danino Basilio</span></a>
+        <a className="footer-brand" href="#top" onClick={(event) => { event.preventDefault(); scrollToId("top"); }}><span style={{fontSize: '24px'}}>Gabriel Danino Basilio</span></a>
         <a className="footer-editor-link" href="/editor">Editar portfólio</a>
         <div className="footer-socials"><a href="https://www.linkedin.com/in/gabrieldb86" target="_blank" rel="noreferrer" aria-label="LinkedIn"><Linkedin size={17} /></a><a href="https://instagram.com/gabrieldb1986" target="_blank" rel="noreferrer" aria-label="Instagram"><Instagram size={17} /></a><a href="https://wa.me/5511995873069" target="_blank" rel="noreferrer" aria-label="WhatsApp"><MessageCircle size={17} /></a></div>
         <span className="footer-credit">© 2026 · Feito com intenção.</span>
