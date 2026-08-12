@@ -156,7 +156,7 @@ export default function Home() {
       </aside>
 
       <main id="top">
-        <section className="hero-section hero-redesign">
+        <section className="hero-section hero-redesign" style={{height: '880px', marginBottom: '2px', marginTop: '-59px', width: '1365px'}}>
           <div className="hero-redesign-panel" data-reveal="hero-copy">
             <div className="hero-redesign-copy">
               <p className="eyebrow">{siteConfig.hero.eyebrow}</p>
@@ -165,9 +165,9 @@ export default function Home() {
               <p className="hero-redesign-intro" style={{ marginTop: "16px" }}>{siteConfig.hero.intro}</p>
               <p className="hero-proof-line">17+ anos · 100K+ pessoas capacitadas · 130+ promotores monitorados</p>
             </div>
-            <div className="hero-actions">
+            <div className="hero-actions" style={{marginLeft: '-23px'}}>
               <a className="hero-cta hero-cta-redesign" href="#work" data-umami-event="hero-work-click" onClick={(event) => { event.preventDefault(); scrollToId("work"); }}>Ver cases principais <ArrowUpRight size={16} /></a>
-              <a className="hero-secondary-cta" href="/cv#cv-actions" data-umami-event="cv-open">Ver CV / imprimir <ArrowUpRight size={15} /></a>
+              <a className="hero-secondary-cta" href="/cv#cv-actions" data-umami-event="cv-open" style={{marginBottom: '20px', marginTop: '-13px'}}>Ver CV / imprimir <ArrowUpRight size={15} style={{marginBottom: '20px', marginTop: '-13px'}} /></a>
             </div>
           </div>
           <div className="hero-redesign-portrait" data-reveal="hero-portrait">
@@ -177,13 +177,13 @@ export default function Home() {
 
         <section className="coordination-focus-band" aria-labelledby="coordination-focus-title">
           <div className="coordination-focus-label" data-reveal="focus-label">
-            <p className="section-kicker" style={{ fontSize: "15px" }}>Focos de coordenação</p>
-            <p id="coordination-focus-title" style={{ fontSize: "15px" }}>Três frentes para transformar método em execução.</p>
+            <p className="section-kicker" style={{ fontSize: "15px", marginLeft: '-26px', marginRight: '10px' }}>Focos de coordenação</p>
+            <p id="coordination-focus-title" style={{ fontSize: "15px", marginLeft: '-26px' }}>Três frentes para transformar método em execução.</p>
           </div>
           <div className="coordination-focus-grid">
-            <article className="coordination-focus-item" data-reveal="focus-item" data-reveal-delay="80" style={{ fontSize: "15px", paddingBottom: "21px" }}><span style={{ fontSize: "15px" }}>01</span><strong style={{ fontSize: "15px" }}>Conteúdo &amp; Treinamento</strong><p style={{ fontSize: "15px" }}>Trilhas, conteúdo e facilitação.</p></article>
-            <article className="coordination-focus-item" data-reveal="focus-item" data-reveal-delay="140" style={{ fontSize: "15px" }}><span style={{ fontSize: "15px" }}>02</span><strong style={{ fontSize: "15px" }}>Trade Marketing &amp; Campo</strong><p style={{ fontSize: "15px" }}>KPIs, campanhas e execução.</p></article>
-            <article className="coordination-focus-item" data-reveal="focus-item" data-reveal-delay="200" style={{ fontSize: "15px" }}><span style={{ fontSize: "15px" }}>03</span><strong style={{ fontSize: "15px" }}>T&amp;D de Pessoas</strong><p style={{ fontSize: "15px" }}>Onboarding, avaliação e desenvolvimento.</p></article>
+            <article className="coordination-focus-item" data-reveal="focus-item" data-reveal-delay="80"><span style={{ fontSize: "15px" }}>01</span><strong style={{ fontSize: "15px" }}>Conteúdo &amp; Treinamento</strong><p style={{ fontSize: "15px" }}>Trilhas, conteúdo e facilitação.</p></article>
+            <article className="coordination-focus-item" data-reveal="focus-item" data-reveal-delay="140"><span style={{ fontSize: "15px" }}>02</span><strong style={{ fontSize: "15px" }}>Trade Marketing &amp; Campo</strong><p style={{ fontSize: "15px" }}>KPIs, campanhas e execução.</p></article>
+            <article className="coordination-focus-item" data-reveal="focus-item" data-reveal-delay="200"><span style={{ fontSize: "15px" }}>03</span><strong style={{ fontSize: "15px" }}>T&amp;D de Pessoas</strong><p style={{ fontSize: "15px" }}>Onboarding, avaliação e desenvolvimento.</p></article>
           </div>
         </section>
 

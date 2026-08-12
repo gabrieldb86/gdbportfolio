@@ -321,6 +321,23 @@
 - [x] Compilar, testar build e salvar novo checkpoint publicável (`313a18bb`).
 
 ## Rodada de padronização tipográfica e alinhamento de CTAs mobile
-- [ ] Auditoria e correção de tamanhos de fonte em mobile (aumentar fontes pequenas, garantir legibilidade).
-- [ ] Alinhamento vertical rigoroso dos dois CTAs do hero ("Ver cases principais" e "Ver CV / imprimir").
-- [ ] Compilar, testar build e salvar novo checkpoint publicável.
+- [x] Auditoria e correção de tamanhos de fonte em mobile (aumentar fontes pequenas, garantir legibilidade).
+- [x] Alinhamento vertical rigoroso dos dois CTAs do hero ("Ver cases principais" e "Ver CV / imprimir").
+- [x] Compilar, testar build e salvar novo checkpoint publicável (`92835c3e`).
+
+## Correção final de alinhamento do proof-link e CTA flutuante
+- [x] Ajustar .proof-link no mobile para colar no eixo esquerdo exato dos números.
+- [x] Ajustar .floating-contact para não cobrir títulos de projetos no mobile.
+- [x] Compilar, testar build e salvar novo checkpoint publicável.
+
+## Plano de Otimização de Desempenho e Memória
+- [x] Medir o bundle de build e identificar assets pesados ou duplicados.
+- [x] Implementar carregamento otimizado de imagens (lazy loading, dimensões fixas, formatos eficientes).
+- [x] Simplificar estilos CSS e componentes excessivos em Home.tsx.
+- [x] Executar typecheck e build de produção com chunking otimizado.
+- [x] Salvar checkpoint otimizado e entregar o relatório de melhorias.
+
+## Revisão de edits visuais recentes na Home
+- [x] Inspecionar atributos duplicados e margens negativas aplicados na Home.
+- [x] Normalizar o hero e a grade de focos de coordenação.
+- [x] Executar typecheck e build.

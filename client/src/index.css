@@ -1576,3 +1576,17 @@ a.proof-link, a.behance-link, a.text-link, .service-detail a {
     letter-spacing: .08em !important;
   }
 }
+
+/* Ajuste final para alinhar Abrir trajetória à esquerda no mobile e afastar o botão flutuante */
+@media (max-width: 720px) {
+  .proof-link {
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+    text-align: left !important;
+  }
+  .floating-contact {
+    bottom: 24px !important;
+    right: 16px !important;
+    z-index: 50 !important;
+  }
+}
