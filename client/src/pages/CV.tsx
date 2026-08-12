@@ -101,15 +101,11 @@ function scrollTop() {
 export default function CV() {
   const siteConfig = getSiteConfig();
   const profilePhoto = siteConfig.profilePhoto;
-  const mark = siteConfig.generatedAssets.mark;
   return (
     <div className="site-shell cv-page" style={{ "--primary": siteConfig.brand.accent, "--background": siteConfig.brand.background, "--foreground": siteConfig.brand.foreground } as CSSProperties}>
       <header className="site-header site-header-scrolled">
         <a className="brand-lockup" href="/" aria-label="Voltar para o portfólio">
-          <span className="brand-symbol" aria-hidden="true">
-            <img src={mark} alt="" className="brand-mark-source" />
-            <span className="symbol-bar symbol-bar-a" /><span className="symbol-bar symbol-bar-b" /><span className="symbol-bar symbol-bar-c" />
-          </span>
+          <img src={siteConfig.railImage} alt="" className="header-avatar" />
           <span className="brand-name">Gabriel Danino<br />Basilio</span>
         </a>
         <nav className="site-nav cv-nav" aria-label="Navegação principal">
@@ -219,7 +215,7 @@ export default function CV() {
       <a className="floating-contact floating-contact-cv" href="/#contact"><span>Fale comigo</span><ArrowUpRight size={16} /></a>
 
       <footer className="site-footer">
-        <a className="footer-brand" href="/" onClick={scrollTop}><img src={siteConfig.railImage} alt="" className="footer-avatar" /><span className="brand-symbol footer-symbol" aria-hidden="true"><img src={mark} alt="" className="brand-mark-source" /><span className="symbol-bar symbol-bar-a" /><span className="symbol-bar symbol-bar-b" /><span className="symbol-bar symbol-bar-c" /></span> <span>Gabriel Danino Basilio</span></a>
+        <a className="footer-brand" href="/" onClick={scrollTop}><span className="footer-avatar"><img src={siteConfig.railImage} alt="" /></span><span>Gabriel Danino Basilio</span></a>
         <div className="footer-socials"><a href="https://www.linkedin.com/in/gabrieldb86" target="_blank" rel="noreferrer" aria-label="LinkedIn"><Linkedin size={17} /></a><a href="https://www.behance.net/gabrieldb86" target="_blank" rel="noreferrer" aria-label="Behance"><ArrowUpRight size={17} /></a><a href="https://wa.me/5511945747353" target="_blank" rel="noreferrer" aria-label="WhatsApp"><MessageCircle size={17} /></a></div>
         <span className="footer-credit">CV · Gabriel Danino Basilio</span>
       </footer>

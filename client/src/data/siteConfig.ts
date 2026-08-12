@@ -18,6 +18,7 @@ export type SiteConfig = {
   profilePhoto: string;
   heroImage: string;
   railImage: string;
+  trainingImage: string;
   backgroundImage: string;
   generatedAssets: {
     hero: string;
@@ -45,6 +46,7 @@ export const defaultSiteConfig: SiteConfig = {
   profilePhoto: "/manus-storage/gabriel-profile_69235fc9.jpg",
   heroImage: "/manus-storage/gabriel-bonecaps-project_cac714ba.png",
   railImage: "/manus-storage/gabriel-sidebar-portrait_dae7ef67.jpg",
+  trainingImage: "/manus-storage/gabriel-treinamento-apresentacao_2c7fabd9.jpg",
   backgroundImage: "/manus-storage/samuel-scalzo-xyuYk9oLA8I-unsplash_74eab13d.jpg",
   generatedAssets: {
     hero: "/manus-storage/gdb-editorial-reference_55640f8a.png",

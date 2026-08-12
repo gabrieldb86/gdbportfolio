@@ -192,7 +192,7 @@ export default function Home() {
           <div className="section-index"><span>04</span><span className="index-line" /></div>
           <div className="about-grid">
             <div className="about-art-wrap">
-              <img src={siteConfig.projects[3]?.image} alt="Projeto Eletrolar Show 2024" loading="lazy" />
+              <img src={siteConfig.trainingImage} alt="Gabriel conduzindo um treinamento diante de uma equipe" loading="eager" />
               <span className="about-art-label">Processo / repertório / intenção</span>
             </div>
             <div className="about-copy">
