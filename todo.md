@@ -341,3 +341,9 @@
 - [x] Inspecionar atributos duplicados e margens negativas aplicados na Home.
 - [x] Normalizar o hero e a grade de focos de coordenação.
 - [x] Executar typecheck e build.
+
+## Correção de alinhamento dos CTAs do hero
+- [x] Auditar CSS e JSX de hero-actions em Home.tsx e index.css.
+- [x] Remover deslocamentos e margens independentes dos botões.
+- [x] Alinhar ambos ao eixo esquerdo padrão da página.
+- [x] Executar typecheck e build.

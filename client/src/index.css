@@ -1590,3 +1590,34 @@ a.proof-link, a.behance-link, a.text-link, .service-detail a {
     z-index: 50 !important;
   }
 }
+
+/* Alinhamento final dos CTAs do hero: ambos seguem o mesmo eixo editorial, sem deslocamentos inline. */
+.hero-actions {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 22px;
+  width: 100%;
+  margin: 0;
+}
+.hero-actions > .hero-cta,
+.hero-actions > .hero-secondary-cta {
+  align-self: flex-start;
+  margin: 0 !important;
+  transform: none;
+}
+@media (max-width: 720px) {
+  .hero-actions {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+  }
+  .hero-actions > .hero-cta,
+  .hero-actions > .hero-secondary-cta {
+    width: fit-content;
+    margin: 0 !important;
+    padding-left: 0;
+    text-align: left;
+  }
+}
