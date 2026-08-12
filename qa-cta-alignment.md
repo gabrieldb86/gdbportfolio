@@ -19,3 +19,7 @@ A seção recebeu uma abertura editorial com headline em DM Serif Display, palav
 ## Verificação do alinhamento de Como eu atuo
 
 A seção foi reorganizada em duas colunas editoriais: a headline permanece no eixo esquerdo compartilhado pelo hero e o texto de apoio com CTA forma uma coluna direita controlada, alinhada pela base. Em mobile, o bloco passa a uma única coluna com o mesmo padding editorial das outras áreas, mantendo a headline legível, o texto abaixo e o CTA no mesmo eixo. As capturas desktop e mobile não apresentaram sobreposição ou quebra estrutural.
+
+## Verificação de legibilidade do fechamento visual
+
+O degradê forte foi removido da seção de fechamento. Em desktop, o texto agora ocupa um bloco carmim próprio à esquerda e a imagem ocupa uma coluna independente à direita, sem overlay. Em mobile, o texto aparece primeiro em bloco sólido e a imagem vem abaixo com proporção controlada. As duas capturas confirmaram que a imagem dos bonés e a mensagem “O que precisa ganhar forma?” permanecem visíveis e legíveis.

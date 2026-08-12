@@ -364,3 +364,9 @@
 - [x] Corrigir as proporções das colunas e o espaçamento sem perder o destaque tipográfico.
 - [x] Validar a seção em desktop, tablet e mobile, incluindo o CTA e a leitura do texto.
 - [x] Executar testes, typecheck e build antes do checkpoint.
+
+## Correção de legibilidade da seção visual de fechamento
+- [x] Remover o degradê excessivo que está ocultando a imagem e o texto.
+- [x] Separar visualmente a imagem do bloco textual e reforçar o contraste.
+- [x] Validar desktop e mobile, sem perda de leitura ou sobreposição.
+- [x] Executar testes, typecheck e build antes do checkpoint.
