@@ -172,3 +172,8 @@
 - [x] Aplicar DM Serif Display ao tratamento de “Coordenação que vira resultado.” conforme a referência.
 - [x] Remover a imagem sem sentido da Parte 03 e reequilibrar o espaço da seção.
 - [x] Validar desktop, tablet, mobile, editor e build antes do checkpoint.
+
+## Rodada atual — ícone da aba e favicon
+- [x] Associar o avatar ilustrado persistente ao favicon da página.
+- [x] Adicionar shortcut icon, Apple Touch Icon e metadados de compartilhamento visual.
+- [x] Validar o head, o título da página e o build antes do checkpoint.
