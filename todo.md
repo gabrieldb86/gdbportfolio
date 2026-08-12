@@ -352,3 +352,9 @@
 - [x] Distribuir horizontalmente os três focos com colunas equilibradas, mantendo divisórias e eixo editorial.
 - [x] Validar equilíbrio visual em desktop e responsividade em mobile.
 - [x] Executar testes, typecheck e build antes do checkpoint.
+
+## Redesign hero dos focos de coordenação
+- [x] Criar uma abertura hero editorial para a seção, com título de impacto e leitura clara.
+- [x] Reforçar alinhamento, contraste, respiro e hierarquia visual sem perder a paleta aprovada.
+- [x] Preservar a distribuição equilibrada dos três focos e ajustar o comportamento mobile.
+- [x] Validar visual, testes, typecheck e build antes do checkpoint.

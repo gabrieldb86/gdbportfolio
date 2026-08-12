@@ -178,12 +178,25 @@ export default function Home() {
         <section className="coordination-focus-band" aria-labelledby="coordination-focus-title">
           <div className="coordination-focus-label" data-reveal="focus-label">
             <p className="section-kicker">Focos de coordenação</p>
-            <p id="coordination-focus-title">Três frentes para transformar método em execução.</p>
+            <h2 id="coordination-focus-title">Três frentes para transformar <em>método em execução.</em></h2>
+            <p className="coordination-focus-note">Da narrativa do conteúdo à operação de campo, cada frente conecta clareza, capacitação e resultado.</p>
           </div>
           <div className="coordination-focus-grid">
-            <article className="coordination-focus-item" data-reveal="focus-item" data-reveal-delay="80"><span style={{ fontSize: "15px" }}>01</span><strong style={{ fontSize: "15px" }}>Conteúdo &amp; Treinamento</strong><p style={{ fontSize: "15px" }}>Trilhas, conteúdo e facilitação.</p></article>
-            <article className="coordination-focus-item" data-reveal="focus-item" data-reveal-delay="140"><span style={{ fontSize: "15px" }}>02</span><strong style={{ fontSize: "15px" }}>Trade Marketing &amp; Campo</strong><p style={{ fontSize: "15px" }}>KPIs, campanhas e execução.</p></article>
-            <article className="coordination-focus-item" data-reveal="focus-item" data-reveal-delay="200"><span style={{ fontSize: "15px" }}>03</span><strong style={{ fontSize: "15px" }}>T&amp;D de Pessoas</strong><p style={{ fontSize: "15px" }}>Onboarding, avaliação e desenvolvimento.</p></article>
+            <article className="coordination-focus-item" data-reveal="focus-item" data-reveal-delay="80">
+              <div className="coordination-focus-item-top"><span>01</span><ArrowUpRight size={18} aria-hidden="true" /></div>
+              <strong>Conteúdo &amp; Treinamento</strong>
+              <p>Trilhas, conteúdo e facilitação.</p>
+            </article>
+            <article className="coordination-focus-item" data-reveal="focus-item" data-reveal-delay="140">
+              <div className="coordination-focus-item-top"><span>02</span><ArrowUpRight size={18} aria-hidden="true" /></div>
+              <strong>Trade Marketing &amp; Campo</strong>
+              <p>KPIs, campanhas e execução.</p>
+            </article>
+            <article className="coordination-focus-item" data-reveal="focus-item" data-reveal-delay="200">
+              <div className="coordination-focus-item-top"><span>03</span><ArrowUpRight size={18} aria-hidden="true" /></div>
+              <strong>T&amp;D de Pessoas</strong>
+              <p>Onboarding, avaliação e desenvolvimento.</p>
+            </article>
           </div>
         </section>
 

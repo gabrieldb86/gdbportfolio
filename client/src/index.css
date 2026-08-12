@@ -1634,4 +1634,160 @@ a.proof-link, a.behance-link, a.text-link, .service-detail a {
   .coordination-focus-item {
     min-width: 0;
   }
+
+  /* Hero editorial da coordenação: mais presença, ritmo e leitura de abertura. */
+  .home-revision .coordination-focus-band {
+    position: relative;
+    grid-template-columns: minmax(280px, 1.3fr) repeat(3, minmax(0, 1fr));
+    gap: 0;
+    min-height: 310px;
+    padding-top: clamp(72px, 7vw, 112px);
+    padding-bottom: clamp(64px, 6.5vw, 96px);
+    border-top: 1px solid rgba(255, 249, 242, .22);
+    border-bottom: 1px solid rgba(255, 249, 242, .3);
+    overflow: hidden;
+    isolation: isolate;
+  }
+  .home-revision .coordination-focus-band::before {
+    position: absolute;
+    z-index: -1;
+    right: 7vw;
+    bottom: -72px;
+    width: 340px;
+    height: 190px;
+    border: 1px solid rgba(28, 27, 26, .19);
+    content: "";
+    transform: rotate(-11deg);
+  }
+  .home-revision .coordination-focus-label {
+    justify-content: flex-start;
+    align-self: stretch;
+    padding: 0 48px 0 0;
+    border-right: 1px solid rgba(255, 249, 242, .38);
+  }
+  .home-revision .coordination-focus-label .section-kicker {
+    margin: 0 0 22px;
+    color: #1c1b1a;
+    font-size: 10px;
+    letter-spacing: .2em;
+  }
+  .home-revision .coordination-focus-label h2 {
+    scroll-margin-top: 100px;
+    max-width: 390px;
+    margin: 0;
+    color: #fff9f2;
+    font-family: "DM Serif Display", serif;
+    font-size: clamp(2.9rem, 4.2vw, 5.2rem);
+    font-weight: 400;
+    letter-spacing: -.055em;
+    line-height: .88;
+  }
+  .home-revision .coordination-focus-label h2 em {
+    color: #1c1b1a;
+    font-style: italic;
+  }
+  .home-revision .coordination-focus-note {
+    max-width: 310px;
+    margin: 25px 0 0;
+    color: rgba(255, 249, 242, .82);
+    font-size: 12px;
+    line-height: 1.6;
+  }
+  .home-revision .coordination-focus-item {
+    position: relative;
+    min-height: 190px;
+    justify-content: flex-start;
+    gap: 15px;
+    padding: 3px 30px 0;
+    border-right: 1px solid rgba(255, 249, 242, .38);
+  }
+  .home-revision .coordination-focus-item:last-child {
+    border-right: 0;
+  }
+  .home-revision .coordination-focus-item-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    color: #1c1b1a;
+  }
+  .home-revision .coordination-focus-item-top span {
+    color: #1c1b1a;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .16em;
+  }
+  .home-revision .coordination-focus-item-top svg {
+    opacity: .72;
+    stroke-width: 1.5;
+  }
+  .home-revision .coordination-focus-item strong {
+    max-width: 230px;
+    color: #fff9f2;
+    font-size: 17px;
+    line-height: 1.1;
+    letter-spacing: -.035em;
+  }
+  .home-revision .coordination-focus-item p {
+    max-width: 220px;
+    color: rgba(255, 249, 242, .78);
+    font-size: 12px;
+    line-height: 1.55;
+  }
+}
+
+@media (max-width: 900px) {
+  .home-revision .coordination-focus-band {
+    display: block;
+    min-height: 0;
+    padding: 76px var(--editorial-axis) 58px;
+  }
+  .home-revision .coordination-focus-band::before {
+    right: -80px;
+    bottom: -42px;
+    width: 240px;
+    height: 145px;
+  }
+  .home-revision .coordination-focus-label {
+    display: block;
+    padding: 0 0 36px;
+    border-right: 0;
+    border-bottom: 1px solid rgba(255, 249, 242, .38);
+  }
+  .home-revision .coordination-focus-label .section-kicker {
+    margin-bottom: 18px;
+  }
+  .home-revision .coordination-focus-label h2 {
+    max-width: 520px;
+    font-size: clamp(3.2rem, 13vw, 5.4rem);
+    line-height: .88;
+  }
+  .home-revision .coordination-focus-note {
+    max-width: 390px;
+    margin-top: 20px;
+    font-size: 13px;
+  }
+  .home-revision .coordination-focus-grid {
+    display: block;
+  }
+  .home-revision .coordination-focus-item,
+  .home-revision .coordination-focus-item:last-child {
+    min-height: auto;
+    gap: 12px;
+    padding: 27px 0;
+    border-right: 0;
+    border-bottom: 1px solid rgba(255, 249, 242, .38);
+  }
+  .home-revision .coordination-focus-item:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+  }
+  .home-revision .coordination-focus-item strong {
+    max-width: 280px;
+    font-size: 17px;
+  }
+  .home-revision .coordination-focus-item p {
+    max-width: 290px;
+    font-size: 12px;
+  }
 }
