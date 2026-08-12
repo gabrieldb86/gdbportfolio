@@ -15,3 +15,7 @@ Vitest: 1 arquivo e 1 teste aprovados. Typecheck e build de produção aprovados
 ## Verificação do hero de coordenação
 
 A seção recebeu uma abertura editorial com headline em DM Serif Display, palavra final em itálico grafite, nota de contexto e marcações numéricas com setas nos três focos. Em desktop, o bloco ganhou mais respiro vertical, bordas de transição e alinhamento em quatro colunas; em mobile, a headline permanece empilhada e os itens seguem em uma leitura vertical legível. A inspeção textual no navegador confirmou o novo título, a nota de contexto e os três itens sem perda de conteúdo. A inspeção em viewport mostrou que o header fixo cobre parte da seção quando o título é usado como âncora; a composição precisa ser conferida com o topo do band, não com o topo do h2, para evitar interpretar o recorte da âncora como perda visual. Com o viewport posicionado no topo real do band, a captura confirmou uma headline ampla à esquerda, três colunas de focos visualmente equilibradas, respiro vertical e contraste consistente com o restante do portfólio.
+
+## Verificação do alinhamento de Como eu atuo
+
+A seção foi reorganizada em duas colunas editoriais: a headline permanece no eixo esquerdo compartilhado pelo hero e o texto de apoio com CTA forma uma coluna direita controlada, alinhada pela base. Em mobile, o bloco passa a uma única coluna com o mesmo padding editorial das outras áreas, mantendo a headline legível, o texto abaixo e o CTA no mesmo eixo. As capturas desktop e mobile não apresentaram sobreposição ou quebra estrutural.

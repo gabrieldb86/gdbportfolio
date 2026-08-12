@@ -211,8 +211,10 @@ export default function Home() {
 
         <section className="manifesto-section section-pad" aria-labelledby="manifesto-title">
           <div className="manifesto-grid" data-reveal="manifesto">
-            <p className="section-kicker">Como eu atuo</p>
-            <h2 id="manifesto-title">Transformo estratégia em <span>experiências</span> que movem pessoas.</h2>
+            <div className="manifesto-heading">
+              <p className="section-kicker">Como eu atuo</p>
+              <h2 id="manifesto-title">Transformo estratégia em <span>experiências</span> que movem pessoas.</h2>
+            </div>
             <div className="manifesto-aside">
               <p>Porque conteúdo e treinamento só funcionam quando encontram contexto, método e um próximo passo claro — para a equipe, para o campo e para o negócio.</p>
               <a className="text-link" href="#about" onClick={(event) => { event.preventDefault(); scrollToId("about"); }}>Conheça meu jeito de trabalhar <ArrowUpRight size={15} /></a>

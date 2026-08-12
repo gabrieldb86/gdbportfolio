@@ -1791,3 +1791,79 @@ a.proof-link, a.behance-link, a.text-link, .service-detail a {
     font-size: 12px;
   }
 }
+
+/* Eixo editorial final da seção Como eu atuo. */
+.home-revision .manifesto-section {
+  border-top: 1px solid #413b37;
+}
+@media (min-width: 901px) {
+  .home-revision .manifesto-section {
+    display: block;
+    padding-top: clamp(108px, 9vw, 150px);
+    padding-bottom: clamp(118px, 10vw, 166px);
+    padding-left: var(--editorial-axis);
+    padding-right: 8vw;
+  }
+  .home-revision .manifesto-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(280px, .58fr);
+    align-items: end;
+    gap: clamp(64px, 8vw, 140px);
+    margin: 0;
+  }
+  .home-revision .manifesto-heading {
+    min-width: 0;
+  }
+  .home-revision .manifesto-heading .section-kicker {
+    margin-bottom: 28px;
+  }
+  .home-revision .manifesto-section h2 {
+    max-width: 780px;
+    margin: 0;
+    font-size: clamp(4.2rem, 7.2vw, 8rem);
+    line-height: .88;
+    letter-spacing: -.055em;
+  }
+  .home-revision .manifesto-aside {
+    align-self: end;
+    max-width: 330px;
+    padding: 0 0 7px;
+  }
+  .home-revision .manifesto-aside p {
+    max-width: 330px;
+    margin: 0 0 30px;
+    font-size: 13px;
+    line-height: 1.75;
+  }
+  .home-revision .manifesto-aside .text-link {
+    align-self: flex-start;
+  }
+}
+@media (max-width: 900px) {
+  .home-revision .manifesto-section {
+    display: block;
+    padding: 88px var(--editorial-axis) 94px;
+  }
+  .home-revision .manifesto-grid {
+    display: block;
+    margin: 0;
+  }
+  .home-revision .manifesto-heading .section-kicker {
+    margin-bottom: 24px;
+  }
+  .home-revision .manifesto-section h2 {
+    max-width: 560px;
+    font-size: clamp(3.7rem, 15vw, 6.4rem);
+    line-height: .88;
+  }
+  .home-revision .manifesto-aside {
+    max-width: 360px;
+    padding-top: 48px;
+  }
+  .home-revision .manifesto-aside p {
+    max-width: 360px;
+    margin-bottom: 28px;
+    font-size: 13px;
+    line-height: 1.7;
+  }
+}

@@ -358,3 +358,9 @@
 - [x] Reforçar alinhamento, contraste, respiro e hierarquia visual sem perder a paleta aprovada.
 - [x] Preservar a distribuição equilibrada dos três focos e ajustar o comportamento mobile.
 - [x] Validar visual, testes, typecheck e build antes do checkpoint.
+
+## Alinhamento editorial da seção Como eu atuo
+- [x] Alinhar rótulo, headline, texto de apoio e CTA ao eixo editorial compartilhado pelo site.
+- [x] Corrigir as proporções das colunas e o espaçamento sem perder o destaque tipográfico.
+- [x] Validar a seção em desktop, tablet e mobile, incluindo o CTA e a leitura do texto.
+- [x] Executar testes, typecheck e build antes do checkpoint.
