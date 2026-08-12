@@ -404,3 +404,9 @@
 - [x] Remover manualmente o elemento somente após confirmar que é o alvo visual solicitado.
 - [x] Validar desktop, mobile vertical e mobile horizontal, além de testes, typecheck e build.
 - [x] Criar checkpoint após confirmar a remoção.
+
+## Consolidação dos espaçamentos aplicados pelo editor visual
+- [x] Auditar os estilos inline adicionados às seções Hero, Focos de coordenação e Destaques profissionais.
+- [x] Consolidar propriedades `style` duplicadas sem perder os valores intencionais.
+- [x] Validar eixo editorial, responsividade e legibilidade em todos os viewports.
+- [x] Executar testes, typecheck e build antes do checkpoint.

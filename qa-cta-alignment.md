@@ -45,3 +45,8 @@ No domínio publicado disponível, o título da Home, a canonical e as tags Open
 ## Verificação da remoção solicitada pelo editor visual
 
 O alvo informado na linha 168 de Home.tsx correspondia ao `<div className="hero-actions">`, contendo os dois CTAs do hero. O bloco foi removido manualmente porque o editor visual não encontrou o alvo. As capturas desktop, mobile vertical e mobile horizontal confirmaram que o hero permanece estruturalmente íntegro, sem espaço vazio residual, sobreposição ou quebra da imagem e do texto.
+
+
+## Consolidação dos espaçamentos do editor visual
+
+As propriedades `style` duplicadas da seção Focos de coordenação foram removidas do JSX e consolidadas numa única camada CSS desktop, preservando os valores intencionais: Hero com 120px de topo, 81px de base e 120px à esquerda; Focos com 104px de topo, 95px de base, 128px à esquerda e 122px à direita; Destaques com 129px à direita. A validação visual confirmou que desktop, mobile vertical e mobile horizontal mantêm o eixo editorial, a legibilidade e os overrides responsivos sem encavalamento.

@@ -2042,3 +2042,11 @@ a.proof-link, a.behance-link, a.text-link, .service-detail a {
     padding-left: 0;
   }
 }
+
+
+/* Ajustes de espaçamento aplicados pelo editor visual: uma única camada desktop para evitar props JSX duplicadas. */
+@media (min-width: 901px) {
+  .home-revision .hero-redesign { padding-top: 120px; padding-bottom: 81px; padding-left: 120px; }
+  .home-revision .coordination-focus-band { padding-top: 104px; padding-bottom: 95px; padding-left: 128px; padding-right: 122px; }
+  .home-revision .recruiter-proof-strip { padding-right: 129px; }
+}
