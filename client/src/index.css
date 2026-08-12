@@ -571,6 +571,14 @@ h1 em, h2 em { color: var(--primary); font-style: italic; }
 .statement-section::after { background: linear-gradient(90deg, #d73332 0%, #d73332 27%, rgba(215, 51, 50, .98) 43%, rgba(215, 51, 50, .72) 58%, rgba(215, 51, 50, 0) 82%); }
 .statement-copy { max-width: 700px; padding-left: 11vw; }
 
+/* Seção 03 alinhada ao sistema da seção 04 — mesma base, respiro e relação imagem/conteúdo. */
+.home-revision .services-section { background: #e5d9cd; }
+.home-revision .services-layout { grid-template-columns: minmax(280px, .82fr) minmax(320px, .78fr); align-items: center; gap: 9vw; }
+.home-revision .services-layout > div:first-child { align-self: center; }
+.home-revision .services-art { width: 100%; max-width: none; aspect-ratio: 1.03; object-fit: cover; }
+.home-revision .services-list { padding-top: 0; border-top: 0; }
+.home-revision .service-row { min-height: 116px; }
+
 @media (max-width: 1024px) {
   .work-redesign .projects-grid { gap: 48px 24px; }
   .home-revision .services-layout { grid-template-columns: minmax(220px, .72fr) minmax(360px, 1.28fr); gap: 5vw; }
@@ -582,7 +590,7 @@ h1 em, h2 em { color: var(--primary); font-style: italic; }
   .work-redesign .project-caption { min-height: 0; }
   .home-revision .services-section { padding-top: 84px; padding-bottom: 95px; }
   .home-revision .services-layout { display: block; }
-  .home-revision .services-art { width: 76%; max-width: none; aspect-ratio: 1.28; margin-bottom: 56px; }
+  .home-revision .services-art { width: 100%; max-width: none; aspect-ratio: 1.03; margin-bottom: 56px; }
   .home-revision .service-row { min-height: 100px; }
   .statement-section { min-height: 500px; }
   .statement-section img { width: 100%; opacity: .82; }

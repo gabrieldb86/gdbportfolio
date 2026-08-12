@@ -29,6 +29,9 @@
 - [x] Reconstruir a seção WORK com duas colunas e cards alinhados por linhas.
 - [x] Remover deslocamentos assimétricos e proporções conflitantes dos cards.
 - [x] Conferir a mudança diretamente no preview em desktop e mobile.
+- [x] Reestruturar a seção 03 com a mesma largura e ritmo da seção 04.
+- [x] Manter o acordeão de serviços dentro da nova composição.
+- [x] Validar a seção 03 em desktop e mobile antes do checkpoint.
 - [x] Substituir a primeira dobra atual por uma composição mais radical, visual e autoral.
 - [x] Reorganizar a navegação e a apresentação dos projetos de modo perceptível.
 - [x] Reduzir elementos intermediários que fazem a página parecer a versão anterior.
