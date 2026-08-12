@@ -26,6 +26,9 @@
 - [x] Reestruturar a seção 03 para respeitar a proporção da divisória.
 - [x] Refazer o degradê da seção “Uma pergunta para o próximo projeto”.
 - [x] Validar desktop, mobile, alinhamento e proporções antes do checkpoint.
+- [x] Reconstruir a seção WORK com duas colunas e cards alinhados por linhas.
+- [x] Remover deslocamentos assimétricos e proporções conflitantes dos cards.
+- [x] Conferir a mudança diretamente no preview em desktop e mobile.
 - [x] Substituir a primeira dobra atual por uma composição mais radical, visual e autoral.
 - [x] Reorganizar a navegação e a apresentação dos projetos de modo perceptível.
 - [x] Reduzir elementos intermediários que fazem a página parecer a versão anterior.
