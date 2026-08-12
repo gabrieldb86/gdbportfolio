@@ -66,3 +66,15 @@
 - [ ] Verificar se a configuração persistida contém o novo avatar do rodapé.
 - [ ] Garantir fallback do avatar quando a configuração antiga não tiver o campo.
 - [ ] Validar o avatar no rodapé do preview publicado e em mobile.
+
+## Próxima rodada — posicionamento corporativo
+- [x] Remover o link público “Editar portfólio” do rodapé da Home.
+- [x] Substituir o marquee rolante por uma faixa institucional fixa com os três focos de coordenação.
+- [x] Manter a headline do hero com quebras manuais e validar escala em 1280, 1100, 800 e 375 pixels.
+- [x] Executar check/build, revisar a apresentação pública e salvar novo checkpoint.
+
+## Próxima rodada — transições editoriais
+- [x] Inspecionar as transições e entradas de conteúdo da referência enricodeiana.design.
+- [x] Aplicar revelações suaves aos blocos da Home, projetos, serviços e contato.
+- [x] Respeitar `prefers-reduced-motion` e evitar animações que alterem o layout.
+- [x] Validar a experiência em desktop, tablet e mobile antes do checkpoint.

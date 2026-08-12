@@ -248,11 +248,18 @@ h1 em, h2 em { color: var(--primary); font-style: italic; }
 .home-revision .portfolio-marquee { background: #d73332; color: #1b1a19; }
 .home-revision .portfolio-marquee b { color: #f4eee6; }
 
-.portfolio-marquee { position: relative; overflow: hidden; white-space: nowrap; padding: 18px 0 15px; background: var(--foreground); color: var(--background); }
-.portfolio-marquee-track { display: flex; width: max-content; min-width: 100%; animation: marquee-scroll 28s linear infinite; font-family: "Manrope", sans-serif; font-size: 13px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; will-change: transform; }
-.portfolio-marquee-group { display: inline-flex; flex: 0 0 auto; align-items: center; gap: 21px; padding-right: 21px; }
-.portfolio-marquee b { color: var(--primary); font-size: 20px; font-weight: 400; line-height: 0; }
-@keyframes marquee-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+/* Faixa institucional — substitui o código visual de agência por três focos claros de coordenação. */
+.coordination-focus-band { display: grid; grid-template-columns: minmax(210px, .72fr) 1.7fr; gap: 4vw; align-items: stretch; padding: 0 8vw; background: #d73332; color: #fff9f2; }
+.coordination-focus-label { display: flex; flex-direction: column; justify-content: center; padding: 25px 30px 25px 0; border-right: 1px solid rgba(255, 249, 242, .35); }
+.coordination-focus-label .section-kicker { margin: 0 0 10px; color: #1c1b1a; }
+.coordination-focus-label > p:last-child { max-width: 220px; margin: 0; color: rgba(255, 249, 242, .86); font-size: 11px; line-height: 1.5; }
+.coordination-focus-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.coordination-focus-item { display: flex; min-height: 126px; flex-direction: column; justify-content: center; gap: 9px; padding: 21px 25px; border-right: 1px solid rgba(255, 249, 242, .35); }
+.coordination-focus-item:last-child { border-right: 0; }
+.coordination-focus-item > span { color: #1c1b1a; font-size: 9px; font-weight: 700; letter-spacing: .12em; }
+.coordination-focus-item strong { max-width: 190px; font-size: 13px; line-height: 1.2; }
+.coordination-focus-item p { margin: 0; color: rgba(255, 249, 242, .78); font-size: 10px; line-height: 1.45; }
+.hero-headline { max-width: 680px; }
 .about-skill-list { display: flex; flex-wrap: wrap; gap: 7px; max-width: 470px; margin-top: 28px; }
 .about-skill-list span { padding: 7px 9px 6px; border: 1px solid rgba(125, 111, 99, .35); color: #716860; font-size: 9px; letter-spacing: .1em; text-transform: uppercase; }
 .floating-contact { position: fixed; z-index: 24; right: 28px; bottom: 27px; display: inline-flex; align-items: center; gap: 12px; padding: 14px 15px 13px 17px; border: 1px solid var(--primary); background: var(--primary); color: #fff9f2; font-size: 10px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; box-shadow: 4px 4px 0 rgba(25, 24, 23, .25); transition: background 180ms ease-out, color 180ms ease-out, transform 180ms ease-out; }
@@ -468,7 +475,11 @@ h1 em, h2 em { color: var(--primary); font-style: italic; }
   .site-footer { min-height: 165px; display: flex; flex-wrap: wrap; align-content: center; justify-content: space-between; padding: 30px 20px; }
   .footer-credit { width: 100%; order: 3; }
   .floating-contact { right: 17px; bottom: 17px; }
-  .portfolio-marquee-track { animation-duration: 22s; }
+  .coordination-focus-band { display: block; padding: 0 20px; }
+  .coordination-focus-label { padding: 27px 0 20px; border-right: 0; border-bottom: 1px solid rgba(255, 249, 242, .35); }
+  .coordination-focus-grid { display: block; }
+  .coordination-focus-item { min-height: auto; padding: 20px 0; border-right: 0; border-bottom: 1px solid rgba(255, 249, 242, .35); }
+  .coordination-focus-item:last-child { border-bottom: 0; }
 }
 
 /* Editor — painel de personalização local para conteúdo, fotos, dimensões, ordem e identidade. */
@@ -765,6 +776,7 @@ h1 em, h2 em { color: var(--primary); font-style: italic; }
 }
 
 @media (min-width: 1025px) and (max-width: 1280px) {
+  .hero-headline { font-size: clamp(3.8rem, 7.2vw, 6.4rem); }
   .site-header-redesign { left: 54px; padding: 0 24px; }
   .site-header-redesign.site-header-scrolled { left: 54px; }
   .site-header-redesign .header-availability { display: none; }
@@ -880,4 +892,17 @@ h1 em, h2 em { color: var(--primary); font-style: italic; }
   .home-revision .about-section,
   .home-revision .contact-section,
   .home-revision .site-footer { background-attachment: scroll; }
+}
+
+/* Transições editoriais — revelação progressiva, curta e sem alterar o fluxo da página. */
+.reveal-ready [data-reveal] { opacity: 0; transform: translate3d(0, 24px, 0); transition: opacity 560ms cubic-bezier(.23, 1, .32, 1), transform 560ms cubic-bezier(.23, 1, .32, 1); transition-delay: var(--reveal-delay, 0ms); will-change: opacity, transform; }
+.reveal-ready [data-reveal].is-visible { opacity: 1; transform: translate3d(0, 0, 0); }
+.reveal-ready [data-reveal="hero-portrait"] { transform: translate3d(0, 24px, 0) rotate(2deg); }
+.reveal-ready [data-reveal="hero-portrait"].is-visible { transform: translate3d(0, 0, 0) rotate(2deg); }
+.reveal-ready [data-reveal="hero-bottom"] { transform: translate3d(0, 12px, 0); }
+.reveal-ready [data-reveal="project-card"] { transform: translate3d(0, 30px, 0); }
+.reveal-ready [data-reveal="project-card"].is-visible { transform: translate3d(0, 0, 0); }
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-ready [data-reveal], .reveal-ready [data-reveal="hero-portrait"], .reveal-ready [data-reveal="hero-bottom"], .reveal-ready [data-reveal="project-card"] { opacity: 1; transform: none; transition: none; }
 }

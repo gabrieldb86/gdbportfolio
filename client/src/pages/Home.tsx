@@ -1,5 +1,5 @@
 // Direção visual: Arquivo Editorial — preservar assimetria, índices em vermelho, imagens protagonistas e microcopy objetiva.
-import { type CSSProperties, type FormEvent, useEffect, useState } from "react";
+import { type CSSProperties, type FormEvent, useEffect, useLayoutEffect, useState } from "react";
 import {
   ArrowUpRight,
   Instagram,
@@ -22,12 +22,12 @@ function renderHeadline(headline: string) {
   return after ? <>{before} <em>e {after}</em></> : headline;
 }
 
-function ProjectCard({ project }: { project: ProjectConfig }) {
+function ProjectCard({ project, revealDelay }: { project: ProjectConfig; revealDelay: number }) {
   const isInternal = project.image.startsWith("internal:");
   const internalType = project.image.replace("internal:", "");
   return (
     <a
-      className={`project-card ${project.size}`}
+      className={`project-card ${project.size}`} data-reveal="project-card" data-reveal-delay={revealDelay}
       href={project.href}
       {...(!isInternal ? { target: "_blank", rel: "noreferrer" } : {})}
       aria-label={isInternal ? `Conversar sobre o case ${project.title}` : `Abrir projeto ${project.title} no Behance`}
@@ -70,6 +70,35 @@ export default function Home() {
     return () => window.removeEventListener("storage", syncConfig);
   }, []);
 
+  useLayoutEffect(() => {
+    const root = document.documentElement;
+    root.classList.add("reveal-ready");
+    const elements = Array.from(document.querySelectorAll<HTMLElement>("[data-reveal]"));
+    elements.forEach((element) => {
+      const delay = element.dataset.revealDelay;
+      if (delay) element.style.setProperty("--reveal-delay", `${delay}ms`);
+    });
+
+    if (!("IntersectionObserver" in window)) {
+      elements.forEach((element) => element.classList.add("is-visible"));
+      return () => root.classList.remove("reveal-ready");
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("is-visible");
+        observer.unobserve(entry.target);
+      });
+    }, { threshold: 0.12, rootMargin: "0px 0px -8% 0px" });
+
+    elements.forEach((element) => observer.observe(element));
+    return () => {
+      observer.disconnect();
+      root.classList.remove("reveal-ready");
+    };
+  }, []);
+
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
@@ -110,26 +139,31 @@ export default function Home() {
       <main id="top">
         <section className="hero-section hero-redesign">
           <div className="hero-redesign-meta"><span>Portfólio · 2026</span></div>
-          <div className="hero-redesign-copy">
+          <div className="hero-redesign-copy" data-reveal="hero-copy">
             <p className="eyebrow"><span className="eyebrow-mark">●</span> {siteConfig.hero.eyebrow}</p>
-            <h1>Conteúdo,<br /><em>treinamento</em><br />&amp; trade<br />marketing.</h1>
+            <h1 className="hero-headline">Conteúdo,<br /><em>treinamento</em><br />&amp; trade<br />marketing.</h1>
             <p className="hero-redesign-intro">{siteConfig.hero.intro}</p>
             <a className="hero-cta hero-cta-redesign" href="#work" onClick={(event) => { event.preventDefault(); scrollToId("work"); }}>Explorar trabalho <ArrowUpRight size={16} /></a>
           </div>
-          <div className="hero-redesign-portrait">
+          <div className="hero-redesign-portrait" data-reveal="hero-portrait">
             <img src={siteConfig.profilePhoto} alt="Gabriel Danino Basilio" />
           </div>
-          <div className="hero-redesign-bottom"><span>17 anos de experiência</span><span>Conteudista · Facilitador · Coordenador de Treinamento</span><a className="hero-cv-link" href="/cv">Ver CV <ArrowUpRight size={14} /></a><button type="button" onClick={() => scrollToId("work")} aria-label="Descer para os projetos"><MoveDownRight size={20} /></button></div>
+          <div className="hero-redesign-bottom" data-reveal="hero-bottom"><span>17 anos de experiência</span><span>Conteudista · Facilitador · Coordenador de Treinamento</span><a className="hero-cv-link" href="/cv">Ver CV <ArrowUpRight size={14} /></a><button type="button" onClick={() => scrollToId("work")} aria-label="Descer para os projetos"><MoveDownRight size={20} /></button></div>
         </section>
 
-        <div className="portfolio-marquee" aria-hidden="true">
-          <div className="portfolio-marquee-track">
-            <div className="portfolio-marquee-group"><span>CONTEÚDO</span><b>•</b><span>TREINAMENTO</span><b>•</b><span>TRADE MARKETING</span><b>•</b><span>CAMPO</span><b>•</b><span>L&amp;D</span><b>•</b><span>ESTRATÉGIA</span><b>•</b><span>CONTEÚDO</span><b>•</b><span>TREINAMENTO</span><b>•</b><span>TRADE MARKETING</span><b>•</b></div>
-            <div className="portfolio-marquee-group" aria-hidden="true"><span>CONTEÚDO</span><b>•</b><span>TREINAMENTO</span><b>•</b><span>TRADE MARKETING</span><b>•</b><span>CAMPO</span><b>•</b><span>L&amp;D</span><b>•</b><span>ESTRATÉGIA</span><b>•</b><span>CONTEÚDO</span><b>•</b><span>TREINAMENTO</span><b>•</b><span>TRADE MARKETING</span><b>•</b></div>
+        <section className="coordination-focus-band" aria-labelledby="coordination-focus-title">
+          <div className="coordination-focus-label" data-reveal="focus-label">
+            <p className="section-kicker">Focos de coordenação</p>
+            <p id="coordination-focus-title">Três frentes para transformar método em execução.</p>
           </div>
-        </div>
+          <div className="coordination-focus-grid">
+            <article className="coordination-focus-item" data-reveal="focus-item" data-reveal-delay="80"><span>01</span><strong>Conteúdo &amp; Treinamento</strong><p>Trilhas, conteúdo e facilitação.</p></article>
+            <article className="coordination-focus-item" data-reveal="focus-item" data-reveal-delay="140"><span>02</span><strong>Trade Marketing &amp; Campo</strong><p>KPIs, campanhas e execução.</p></article>
+            <article className="coordination-focus-item" data-reveal="focus-item" data-reveal-delay="200"><span>03</span><strong>T&amp;D de Pessoas</strong><p>Onboarding, avaliação e desenvolvimento.</p></article>
+          </div>
+        </section>
 
-        <section className="recruiter-proof-strip" aria-label="Destaques profissionais">
+        <section className="recruiter-proof-strip" aria-label="Destaques profissionais" data-reveal="proof-strip">
           <div className="proof-intro"><p className="section-kicker">Para quem recruta</p><p>Uma leitura rápida da experiência que sustenta o trabalho.</p></div>
           <div className="proof-metric"><strong>17</strong><span>anos de experiência</span></div>
           <div className="proof-metric"><strong>300K<span>+</span></strong><span>pessoas capacitadas</span></div>
@@ -140,7 +174,7 @@ export default function Home() {
 
         <section className="manifesto-section section-pad" aria-labelledby="manifesto-title">
           <div className="section-index"><span>01</span><span className="index-line" /></div>
-          <div className="manifesto-grid">
+          <div className="manifesto-grid" data-reveal="manifesto">
             <p className="section-kicker">Como eu atuo</p>
             <h2 id="manifesto-title">Transformo estratégia em <span>experiências</span> que movem pessoas.</h2>
             <div className="manifesto-aside">
@@ -151,7 +185,7 @@ export default function Home() {
         </section>
 
         <section id="work" className="work-section work-redesign section-pad" aria-labelledby="work-title">
-          <div className="work-redesign-heading">
+          <div className="work-redesign-heading" data-reveal="work-heading">
             <div className="work-redesign-index"><span>02</span><span>/ WORK</span></div>
             <div><p className="section-kicker">Selected work</p><h2 id="work-title">Projetos que<br /><em>ganharam forma.</em></h2></div>
             <p>Uma seleção de campanhas, trilhas, dashboards, eventos e materiais criada para comunicar melhor, capacitar equipes e melhorar a execução.</p>
@@ -159,21 +193,21 @@ export default function Home() {
           </div>
 
           <div className="projects-grid">
-            {siteConfig.projects.filter((project) => project.visible).map((project) => <ProjectCard key={project.number} project={project} />)}
+            {siteConfig.projects.filter((project) => project.visible).map((project, index) => <ProjectCard key={project.number} project={project} revealDelay={index * 70} />)}
           </div>
         </section>
 
         <section className="services-section services-redesign section-pad" aria-labelledby="services-title">
           <div className="section-index"><span>03</span><span className="index-line" /></div>
-          <div className="services-layout">
+          <div className="services-layout" data-reveal="services-layout">
             <div>
               <p className="section-kicker">Áreas de atuação</p>
               <h2 id="services-title">Coordenação que<br />vira <strong>resultado.</strong></h2>
               <img className="services-art" src={siteConfig.projects[4]?.image} alt="Projeto de apresentação Blocs" loading="lazy" />
             </div>
             <div className="services-list">
-              {siteConfig.services.map(([number, title, description]) => (
-                <article className={`service-item ${openService === number ? "service-item-open" : ""}`} key={number}>
+              {siteConfig.services.map(([number, title, description], index) => (
+                <article className={`service-item ${openService === number ? "service-item-open" : ""}`} key={number} data-reveal="service-item" data-reveal-delay={index * 70}>
                   <button className="service-row" type="button" aria-expanded={openService === number} aria-controls={`service-detail-${number}`} onClick={() => setOpenService((current) => current === number ? null : number)}>
                     <span className="service-number">{number}</span>
                     <div><h3>{title}</h3><p>{description}</p></div>
@@ -189,11 +223,11 @@ export default function Home() {
         <section id="about" className="about-section section-pad" aria-labelledby="about-title">
           <div className="section-index"><span>04</span><span className="index-line" /></div>
           <div className="about-grid">
-            <div className="about-art-wrap">
+            <div className="about-art-wrap" data-reveal="about-art">
               <img src={siteConfig.trainingImage} alt="Gabriel conduzindo um treinamento diante de uma equipe" loading="eager" />
               <span className="about-art-label">Processo / repertório / intenção</span>
             </div>
-            <div className="about-copy">
+            <div className="about-copy" data-reveal="about-copy">
               <p className="section-kicker">Sobre mim</p>
               <h2 id="about-title">Olá, eu sou<br /><em>Gabriel.</em></h2>
               <p className="about-lead">Tenho 17 anos de experiência em conteúdo, treinamento e trade marketing — e mais de 300 mil pessoas capacitadas ao longo da carreira, incluindo 8 anos como pioneiro do Today at Apple no Brasil.</p>
@@ -205,19 +239,19 @@ export default function Home() {
 
         <section className="statement-section">
           <img src={siteConfig.heroImage} alt="Projeto visual de bonés em preto e vermelho" loading="lazy" />
-          <div className="statement-copy"><span>Uma pergunta para o próximo projeto:</span><h2>O que precisa<br /><em>ganhar forma?</em></h2></div>
+          <div className="statement-copy" data-reveal="statement-copy"><span>Uma pergunta para o próximo projeto:</span><h2>O que precisa<br /><em>ganhar forma?</em></h2></div>
         </section>
 
         <section id="contact" className="contact-section section-pad" aria-labelledby="contact-title">
           <div className="section-index"><span>05</span><span className="index-line" /></div>
           <div className="contact-grid">
-            <div className="contact-intro">
+            <div className="contact-intro" data-reveal="contact-intro">
               <p className="section-kicker">Vamos conversar</p>
               <h2 id="contact-title">Tem uma oportunidade<br />em <em>mente?</em></h2>
               <p>Se você busca alguém para coordenar conteúdo, treinamento ou performance de campo, me conte o contexto. Eu respondo pelo WhatsApp e a gente entende juntos o melhor próximo passo.</p>
               <a className="contact-direct" href="https://wa.me/5511945747353" target="_blank" rel="noreferrer"><MessageCircle size={17} /> Falar diretamente no WhatsApp <ArrowUpRight size={15} /></a>
             </div>
-            <form className="contact-form" onSubmit={handleSubmit}>
+            <form className="contact-form" data-reveal="contact-form" onSubmit={handleSubmit}>
               <label htmlFor="name">Seu nome</label>
               <input id="name" name="name" type="text" placeholder="Como posso te chamar?" required />
               <label htmlFor="email">Seu e-mail</label>
@@ -235,7 +269,6 @@ export default function Home() {
 
       <footer className="site-footer">
         <a className="footer-brand" href="#top" onClick={(event) => { event.preventDefault(); scrollToId("top"); }}><span className="footer-avatar"><img src={siteConfig.railImage} alt="" /></span><span style={{fontSize: '24px'}}>Gabriel Danino Basilio</span></a>
-        <a className="footer-editor-link" href="/editor">Editar portfólio</a>
         <div className="footer-socials"><a href="https://www.linkedin.com/in/gabrieldb86" target="_blank" rel="noreferrer" aria-label="LinkedIn"><Linkedin size={17} /></a><a href="https://instagram.com/gabrieldb1986" target="_blank" rel="noreferrer" aria-label="Instagram"><Instagram size={17} /></a><a href="https://wa.me/5511945747353" target="_blank" rel="noreferrer" aria-label="WhatsApp"><MessageCircle size={17} /></a></div>
         <span className="footer-credit">© 2026 · Feito com intenção. · Foto de <a href="https://unsplash.com/pt-br/@scalzodesign?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noreferrer">Samuel Scalzo</a> na <a href="https://unsplash.com/pt-br/fotografias/uma-foto-em-preto-e-branco-de-um-edificio-xyuYk9oLA8I?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noreferrer">Unsplash</a></span>
       </footer>
