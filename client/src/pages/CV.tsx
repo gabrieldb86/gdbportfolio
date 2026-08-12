@@ -154,25 +154,23 @@ export default function CV() {
           <span className="brand-name">Gabriel Danino<br />Basilio</span>
         </a>
         <nav className="site-nav cv-nav" aria-label="Navegação principal">
-          <a href="/">Trabalho <span>01</span></a>
-          <a href="/#about">Sobre <span>02</span></a>
-          <a className="nav-active" href="/cv">CV <span>03</span></a>
-          <a href="/#contact">Contato <span>04</span></a>
+          <a href="/">Trabalho</a>
+          <a href="/#about">Sobre</a>
+          <a className="nav-active" href="/cv">CV</a>
+          <a href="/#contact">Contato</a>
         </nav>
-        <div className="header-availability"><span className="status-dot" />Aberto a oportunidades de coordenação</div>
+        <div className="header-availability"><span className="status-dot" />Aberto a oportunidades</div>
       </header>
 
       <aside className="side-rail" aria-label="Informações rápidas">
         <span className="rail-label">Currículo · 2026</span>
         <span className="rail-line" />
-        <div className="rail-ticks" aria-hidden="true"><span>CV</span><i /><span>17+</span><i /><span>100K+</span></div>
         <span className="rail-line" />
         <span className="rail-label rail-vertical">São Paulo, Brasil</span>
       </aside>
 
       <main className="cv-main" id="top">
         <section className="cv-hero section-pad">
-          <div className="section-index"><span>CV</span><span className="index-line" /></div>
           <div className="cv-hero-grid">
             <div className="cv-hero-copy">
               <p className="section-kicker">Experiência profissional</p>
@@ -185,7 +183,7 @@ export default function CV() {
             </div>
             <div className="cv-portrait-wrap">
               <div className="cv-portrait"><img src={profilePhoto} alt="Gabriel Danino Basilio" onError={markBrokenImage} /></div>
-              <div className="cv-portrait-caption"><span>Gabriel Danino Basilio</span><span>Conteudista · Facilitador · Coordenador de Treinamento</span></div>
+              <div className="cv-portrait-caption" style={{ marginBottom: "-24px" }}><span>Gabriel Danino Basilio</span><span>Conteudista · Facilitador · Coordenador de Treinamento</span></div>
             </div>
           </div>
         </section>
@@ -198,7 +196,6 @@ export default function CV() {
         </section>
 
         <section className="cv-content-section section-pad">
-          <div className="section-index"><span>01</span><span className="index-line" /></div>
           <div className="cv-content-grid">
             <div className="cv-sidebar">
               <p className="section-kicker">Perfil</p>
@@ -219,7 +216,6 @@ export default function CV() {
         </section>
 
         <section className="cv-detail-section section-pad" aria-labelledby="qualification-title">
-          <div className="section-index"><span>03</span><span className="index-line" /></div>
           <div className="cv-detail-content">
             <div className="cv-section-heading"><p className="section-kicker">Base de atuação</p><h2 id="qualification-title">Método, repertório<br /><strong>e ferramentas.</strong></h2></div>
             <div className="cv-qualification-grid">
@@ -232,12 +228,11 @@ export default function CV() {
         </section>
 
         <section className="cv-toolstrip-section">
-          <div className="cv-toolstrip-label"><span>04</span><p className="section-kicker">Como trabalho</p></div>
+          <div className="cv-toolstrip-label" style={{ marginBottom: "1px", marginLeft: "-2px", marginRight: "17px", marginTop: "-14px", paddingTop: "1px" }}><p className="section-kicker">Como trabalho</p></div>
           <div className="cv-toolstrip"><span>Curiosidade</span><span>Clareza</span><span>Ritmo</span><span>Colaboração</span><span>Repertório</span><span>Entrega</span></div>
         </section>
 
         <section className="cv-experience-section section-pad" aria-labelledby="experience-title">
-          <div className="section-index"><span>02</span><span className="index-line" /></div>
           <div className="cv-experience-content">
             <div className="cv-section-heading"><p className="section-kicker">Trajetória</p><h2 id="experience-title">Experiência que<br /><strong>vira repertório.</strong></h2></div>
             <div className="experience-list">

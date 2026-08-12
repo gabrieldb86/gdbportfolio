@@ -183,3 +183,9 @@
 - [x] Remover os elementos indicados sem afetar conteúdo estrutural ou acessibilidade.
 - [x] Consolidar estilos inline duplicados do hero e validar a altura final.
 - [x] Executar build, validar breakpoints e publicar checkpoint.
+
+## Rodada atual — limpeza dos edits visuais do CV
+- [x] Auditar todos os comentários “deletar completamente” adicionados pelo editor em `CV.tsx`.
+- [x] Remover elementos redundantes sem comprometer a leitura da experiência profissional.
+- [x] Consolidar os estilos inline duplicados da legenda do retrato e do toolstrip.
+- [x] Validar desktop, mobile, impressão e build antes do checkpoint.

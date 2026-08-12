@@ -144,3 +144,7 @@ Na validação final, a Área 02 passou a usar cards verticais com imagem acima 
 ## Limpeza dos edits visuais — inspeção de 2026-08-12
 
 Os comentários de exclusão foram interpretados como remoção de elementos redundantes, não de conteúdo principal: saíram os números da navegação, o meta duplicado do hero, o bloco inferior do hero, a faixa de contextos de atuação, os índices laterais das seções e o marcador “03 / MÉTODO”. A altura final do hero foi consolidada em 877px, sem atributos JSX duplicados. As capturas desktop e mobile confirmaram a continuidade da narrativa, a permanência dos dez projetos e a ausência de overflow; as capas continuam sujeitas à disponibilidade intermitente do storage.
+
+## Limpeza dos edits visuais do CV — inspeção de 2026-08-12
+
+No CV, foram removidos os números da navegação, os ticks laterais e os índices numéricos das seções, mantendo os títulos e a estrutura de leitura. O texto de disponibilidade foi consolidado para “Aberto a oportunidades”. A legenda vertical do retrato conserva o deslocamento final de -24px apenas no contêiner, sem repetir a margem nos filhos. O toolstrip “Como trabalho” mantém o ajuste no bloco pai, sem estilos duplicados em `span` e `p`. TypeScript e build foram aprovados; a navegação, o retrato, as métricas e a trajetória permanecem presentes no preview.
