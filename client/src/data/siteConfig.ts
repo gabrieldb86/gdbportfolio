@@ -157,7 +157,7 @@ export const defaultSiteConfig: SiteConfig = {
       title: "Roadshow DPSP",
       type: "Facilitação",
       year: "2026",
-      image: "/manus-storage/gabriel-treinamento-apresentacao_2c7fabd9.jpg",
+      image: "/manus-storage/valens-bdn_e5a00706.jpg",
       href: "/cases/roadshow-dpsp",
       size: "project-card",
       aspectRatio: "1.26",
@@ -181,7 +181,7 @@ export const defaultSiteConfig: SiteConfig = {
       title: "Trilhas de Aprendizagem",
       type: "Instructional Design",
       year: "2026",
-      image: "/manus-storage/gdb-editorial-collage_983088a0.png",
+      image: "/manus-storage/valens-bdn_e5a00706.jpg",
       href: "/cases/trilhas-aprendizagem",
       size: "project-card",
       aspectRatio: "1.26",
@@ -209,7 +209,8 @@ function migrateProjects(savedProjects: ProjectConfig[] | undefined) {
     const defaultProject = defaultSiteConfig.projects.find((candidate) => candidate.number === project.number);
     const isLegacyBehanceAsset = project.image.startsWith("https://mir-s3-cdn-cf.behance.net/");
     const isLegacyProjectLink = project.href === "https://www.behance.net/gabrieldb86" || project.href.includes("229252353/Blocs-Presentation");
-    return defaultProject ? { ...project, image: isLegacyBehanceAsset ? defaultProject.image : project.image, href: isLegacyProjectLink ? defaultProject.href : project.href } : project;
+    const isKnownBrokenAsset = /podcast-varejo-na-real_af69c605|ragtech-dicas_83287b6b|future-print-2024_11b8395d|eletrolar-show-2024_5c1c2e78|blocs-presentation_4e27f6cf|gabriel-treinamento-apresentacao_2c7fabd9|gdb-editorial-collage_983088a0/.test(project.image);
+    return defaultProject ? { ...project, image: isLegacyBehanceAsset || isKnownBrokenAsset ? defaultProject.image : project.image, href: isLegacyProjectLink ? defaultProject.href : project.href } : project;
   });
 }
 

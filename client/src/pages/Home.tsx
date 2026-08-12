@@ -11,7 +11,7 @@ import {
   Plus,
   X,
 } from "lucide-react";
-import { type ProjectConfig, getSiteConfig } from "@/data/siteConfig";
+import { defaultSiteConfig, type ProjectConfig, getSiteConfig } from "@/data/siteConfig";
 
 function scrollToId(id: string, closeMenu?: () => void) {
   closeMenu?.();
@@ -30,20 +30,21 @@ function markBrokenImage(event: SyntheticEvent<HTMLImageElement>) {
 }
 
 function ProjectCard({ project, revealDelay }: { project: ProjectConfig; revealDelay: number }) {
-  const isInternal = project.image.startsWith("internal:");
   const isLocalCase = project.href.startsWith("/");
   const [imageFailed, setImageFailed] = useState(false);
-  const internalType = project.image.replace("internal:", "");
+  const [genericImageFailed, setGenericImageFailed] = useState(false);
+  const genericImage = defaultSiteConfig.projects.find((candidate) => candidate.number === "06")?.image || defaultSiteConfig.profilePhoto;
+  const imageSource = imageFailed ? genericImage : project.image;
   return (
     <a
       className={`project-card ${project.size}`} data-reveal="project-card" data-reveal-delay={revealDelay}
       href={project.href}
       data-umami-event={isLocalCase ? "case-open" : "behance-open"}
-      {...(!isInternal && !isLocalCase ? { target: "_blank", rel: "noreferrer" } : {})}
-      aria-label={isLocalCase ? `Abrir estudo de caso ${project.title}` : isInternal ? `Conversar sobre o case ${project.title}` : `Abrir projeto ${project.title} no Behance`}
+      {...(!isLocalCase ? { target: "_blank", rel: "noreferrer" } : {})}
+      aria-label={isLocalCase ? `Abrir estudo de caso ${project.title}` : `Abrir projeto ${project.title} no Behance`}
     >
       <div className="project-image-wrap" style={{ aspectRatio: project.aspectRatio }}>
-        {isInternal ? <div className={`internal-project-cover internal-project-${internalType}`}><span>{project.number}</span><strong>{project.title}</strong><small>Case interno · briefing / método / resultado</small></div> : imageFailed ? <div className="project-image-fallback" role="img" aria-label={`Capa indisponível: ${project.title}`}><span>{project.number} · projeto</span><strong>{project.title}</strong><small>Ver case completo no Behance</small></div> : <img src={project.image} alt={project.title} className="project-image" style={{ objectPosition: project.objectPosition }} loading={project.number === "01" ? "eager" : "lazy"} decoding="async" onError={() => setImageFailed(true)} />}
+        {genericImageFailed ? <div className="project-image-fallback" role="img" aria-label={`Capa genérica: ${project.title}`} style={{ backgroundImage: `linear-gradient(135deg, rgba(38, 35, 33, .62), rgba(183, 37, 41, .52)), url("${genericImage}")`, backgroundPosition: "center", backgroundSize: "cover" }}><span>{project.number} · projeto</span><strong>{project.title}</strong><small>Imagem genérica editável no editor</small></div> : <img src={imageSource} alt={project.title} className="project-image" style={{ objectPosition: project.objectPosition }} loading={project.number === "01" ? "eager" : "lazy"} decoding="async" onError={() => { if (imageFailed) setGenericImageFailed(true); else setImageFailed(true); }} />}
         <span className="project-arrow" aria-hidden="true">
           <ArrowUpRight size={19} strokeWidth={1.5} />
         </span>
@@ -53,7 +54,7 @@ function ProjectCard({ project, revealDelay }: { project: ProjectConfig; revealD
         <div>
           <h3>{project.title}</h3>
           <p>{project.type}</p>
-          <span className="project-credit">{isLocalCase ? "Estudo de caso / Gabriel DB" : isInternal ? "Case interno / Gabriel DB" : "Behance / Gabriel DB"}</span>
+          <span className="project-credit">{isLocalCase ? "Estudo de caso / Gabriel DB" : "Behance / Gabriel DB"}</span>
         </div>
         <span className="project-year">{project.year}</span>
       </div>
@@ -218,12 +219,12 @@ export default function Home() {
         <section id="work" className="work-section work-redesign section-pad" aria-labelledby="work-title">
           <div className="work-redesign-heading" data-reveal="work-heading">
             <div className="work-redesign-index" style={{ marginLeft: "-58px", marginRight: "58px" }}><span>02</span><span>/ WORK</span></div>
-            <div><p className="section-kicker" style={{ marginLeft: "-135px" }}>Trabalhos selecionados</p><h2 id="work-title" style={{ marginLeft: "-48px" }}>Projetos que<br /><em>ganharam forma.</em></h2></div>
+            <div><p className="section-kicker">Trabalhos selecionados</p><h2 id="work-title">Projetos que<br /><em>ganharam forma.</em></h2></div>
             <p>Uma seleção de campanhas, trilhas, eventos e materiais criada para comunicar melhor, capacitar equipes e melhorar a execução.</p>
             <a className="behance-link" href="https://www.behance.net/gabrieldb86" data-umami-event="behance-open" target="_blank" rel="noreferrer">Abrir Behance <ArrowUpRight size={15} /></a>
           </div>
 
-          <div className="projects-grid sean-obrien-grid" style={{ marginBottom: "-60px", marginLeft: "53px" }}>
+          <div className="projects-grid sean-obrien-grid">
             {siteConfig.projects.filter((project) => project.visible).map((project, index) => <ProjectCard key={project.number} project={project} revealDelay={index * 50} />)}
           </div>
         </section>
@@ -233,8 +234,8 @@ export default function Home() {
           <div className="services-layout" data-reveal="services-layout">
             <div>
               <p className="section-kicker">Áreas de atuação</p>
-              <h2 id="services-title" style={{ fontFamily: '"DM Serif Display", serif' }}>Coordenação que<br />vira <strong style={{ fontFamily: '"DM Serif Display", serif' }}>resultado.</strong></h2>
-              <img className="services-art" src={siteConfig.projects[4]?.image} alt="Projeto de apresentação Blocs" loading="lazy" style={{ width: '70%', maxWidth: '175px' }} onError={markBrokenImage} />
+              <h2 id="services-title">Coordenação que<br />vira <em className="services-result">resultado.</em></h2>
+              <div className="services-editorial-note"><span>03 / MÉTODO</span><strong>Do briefing ao resultado.</strong><p>Coordenação que organiza contexto, método, conteúdo e execução para o trabalho chegar ao campo.</p></div>
             </div>
             <div className="services-list">
               {siteConfig.services.map(([number, title, description], index) => (

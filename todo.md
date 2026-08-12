@@ -165,3 +165,10 @@
 - [x] Implementar as atualizações prioritárias aprovadas nos documentos.
 - [x] Validar Home, CV, editor, links, formulário e breakpoints antes do checkpoint.
 - [ ] Publicar checkpoint com relatório final das mudanças e pendências.
+
+## Rodada atual — alinhamento, imagens e Parte 03
+- [x] Padronizar o eixo esquerdo das seções pelo eixo editorial do hero.
+- [x] Corrigir a Área 02 para mostrar imagem em todos os cards, com edição pelo editor e fallback genérico persistente.
+- [x] Aplicar DM Serif Display ao tratamento de “Coordenação que vira resultado.” conforme a referência.
+- [x] Remover a imagem sem sentido da Parte 03 e reequilibrar o espaço da seção.
+- [x] Validar desktop, tablet, mobile, editor e build antes do checkpoint.
