@@ -27,3 +27,7 @@ O degradê forte foi removido da seção de fechamento. Em desktop, o texto agor
 ## Verificação de privacidade do telefone
 
 A página pública do CV foi inspecionada no navegador: a área de contatos mostra apenas “Falar pelo WhatsApp”, e-mail e localização, sem número formatado ou link telefônico. A Home também foi inspecionada: os contatos aparecem como ações “Falar diretamente com Gabriel”, LinkedIn e e-mail, além do ícone de WhatsApp no rodapé. Os links de WhatsApp continuam funcionando sem exibir o número na interface.
+
+## Verificação do eixo esquerdo global
+
+O eixo físico do primeiro hero da Home foi usado como referência para as aberturas da Home, do CV, de cases e da página de privacidade. Em desktop, o CV, o fechamento do CV, o cabeçalho e hero de Case, o conteúdo do Case, o fechamento do Case e a página de privacidade passaram a respeitar o mesmo início lateral. Em mobile, o eixo foi normalizado para 24px, sem padding duplicado, mantendo títulos, imagens, textos e CTAs alinhados e legíveis.

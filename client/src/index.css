@@ -1940,3 +1940,76 @@ a.proof-link, a.behance-link, a.text-link, .service-detail a {
     mix-blend-mode: normal;
   }
 }
+
+/* Eixo-mestre: o mesmo início físico do primeiro hero em todas as páginas públicas. */
+@media (min-width: 901px) {
+  .home-revision .hero-redesign,
+  .home-revision .coordination-focus-band,
+  .home-revision .recruiter-proof-strip,
+  .home-revision .work-section,
+  .home-revision .services-section,
+  .home-revision .about-section,
+  .home-revision .statement-section,
+  .home-revision .contact-section,
+  .cv-page .cv-closing-copy,
+  .case-page .case-hero,
+  .case-page .case-content,
+  .case-page .case-closing,
+  .privacy-page .privacy-main {
+    --master-axis: var(--editorial-axis);
+  }
+  .cv-page .cv-closing-copy {
+    padding-left: var(--master-axis);
+    padding-right: 8vw;
+  }
+  .case-page .case-header,
+  .privacy-page .case-header {
+    padding-left: calc(54px + var(--master-axis));
+    padding-right: 8vw;
+  }
+  .case-page .case-hero {
+    position: relative;
+    grid-template-columns: minmax(0, .95fr) minmax(320px, .75fr);
+    column-gap: 5vw;
+    padding-left: var(--master-axis);
+  }
+  .case-page .case-hero > .section-index {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+  .case-page .case-hero-copy {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .case-page .case-hero-art {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .case-page .case-content,
+  .case-page .case-closing {
+    padding-left: var(--master-axis);
+  }
+  .privacy-page .privacy-main {
+    padding-left: 0;
+  }
+  .privacy-page .privacy-copy {
+    margin-left: 0;
+  }
+}
+@media (max-width: 900px) {
+  .home-revision .hero-redesign {
+    padding-left: var(--editorial-axis);
+    padding-right: var(--editorial-axis);
+  }
+  .cv-page .cv-closing-copy {
+    padding-left: var(--editorial-axis);
+    padding-right: var(--editorial-axis);
+  }
+  .case-page .case-header,
+  .privacy-page .case-header {
+    padding-left: var(--editorial-axis);
+    padding-right: var(--editorial-axis);
+  }
+}

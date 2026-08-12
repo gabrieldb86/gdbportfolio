@@ -376,3 +376,9 @@
 - [x] Manter apenas links/botões que abrem o WhatsApp sem exibir o número na interface.
 - [x] Auditar todas as rotas e executar testes, typecheck e build.
 - [x] Salvar checkpoint da alteração de privacidade.
+
+## Padronização do eixo esquerdo dos heros
+- [x] Mapear os eixos atuais da Home, CV e seções internas.
+- [x] Unificar variáveis e regras para que as aberturas usem o mesmo eixo do primeiro hero.
+- [x] Validar heros, títulos, colunas e responsividade em todas as rotas.
+- [x] Executar testes, typecheck e build antes do checkpoint.
