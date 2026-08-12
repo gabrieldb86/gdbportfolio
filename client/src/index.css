@@ -553,6 +553,46 @@ h1 em, h2 em { color: var(--primary); font-style: italic; }
   .editor-bottom-callout a { width: 100%; margin-left: 35px; }
 }
 
+/* Correção de layout — grade WORK ordenada, seção de serviços proporcional e degradê mais contínuo na chamada final. */
+.work-redesign .projects-grid { grid-template-columns: repeat(12, minmax(0, 1fr)); grid-auto-flow: row; align-items: start; gap: 64px 26px; }
+.work-redesign .project-card, .work-redesign .project-card:nth-child(n) { margin-top: 0; align-self: start; }
+.work-redesign .project-wide { grid-column: span 8; }
+.work-redesign .project-tall, .work-redesign .project-card { grid-column: span 4; }
+.work-redesign .project-wide .project-image-wrap { aspect-ratio: 1.78; }
+.work-redesign .project-tall .project-image-wrap, .work-redesign .project-card .project-image-wrap { aspect-ratio: 1.18; }
+.work-redesign .project-caption { min-height: 70px; }
+
+.home-revision .services-section { display: block; padding-top: 128px; padding-bottom: 145px; }
+.home-revision .services-section > .section-index { margin-bottom: 45px; }
+.home-revision .services-layout { display: grid; grid-template-columns: minmax(260px, .72fr) minmax(430px, 1.28fr); align-items: start; gap: 9vw; }
+.home-revision .services-art { width: 100%; max-width: 340px; aspect-ratio: 1.28; object-fit: cover; }
+.home-revision .services-list { padding-top: 0; }
+.home-revision .service-row { min-height: 116px; align-items: center; }
+.home-revision .service-detail { padding-bottom: 28px; }
+
+.statement-section { min-height: 510px; }
+.statement-section::after { background: linear-gradient(90deg, #d73332 0%, #d73332 27%, rgba(215, 51, 50, .98) 43%, rgba(215, 51, 50, .72) 58%, rgba(215, 51, 50, 0) 82%); }
+.statement-copy { max-width: 700px; padding-left: 11vw; }
+
+@media (max-width: 1024px) {
+  .work-redesign .projects-grid { gap: 54px 20px; }
+  .home-revision .services-layout { grid-template-columns: minmax(220px, .72fr) minmax(360px, 1.28fr); gap: 5vw; }
+}
+
+@media (max-width: 720px) {
+  .work-redesign .projects-grid { display: block; }
+  .work-redesign .project-card, .work-redesign .project-card:nth-child(n) { margin-bottom: 49px; }
+  .work-redesign .project-caption { min-height: 0; }
+  .home-revision .services-section { padding-top: 84px; padding-bottom: 95px; }
+  .home-revision .services-layout { display: block; }
+  .home-revision .services-art { width: 76%; max-width: none; aspect-ratio: 1.28; margin-bottom: 56px; }
+  .home-revision .service-row { min-height: 100px; }
+  .statement-section { min-height: 500px; }
+  .statement-section img { width: 100%; opacity: .82; }
+  .statement-section::after { background: linear-gradient(180deg, #d73332 0%, rgba(215, 51, 50, .98) 30%, rgba(215, 51, 50, .56) 64%, rgba(215, 51, 50, 0) 100%); }
+  .statement-copy { max-width: none; padding: 70px 20px; align-self: flex-start; }
+}
+
 /* Redesign visual — nova composição de portfólio de autor, com primeira dobra assimétrica e fotografia dominante. */
 .site-header-redesign { position: absolute; color: #f4eee6; }
 .site-header-redesign.site-header-scrolled { position: fixed; background: rgba(18, 18, 17, .92); border-color: #3d3935; }
