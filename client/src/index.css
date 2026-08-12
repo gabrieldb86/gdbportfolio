@@ -1621,3 +1621,17 @@ a.proof-link, a.behance-link, a.text-link, .service-detail a {
     text-align: left;
   }
 }
+
+/* Distribuição horizontal equilibrada: o rótulo ocupa sua coluna e cada foco recebe exatamente uma fração igual. */
+@media (min-width: 901px) {
+  .coordination-focus-band {
+    grid-template-columns: minmax(220px, 1.3fr) repeat(3, minmax(0, 1fr));
+    gap: 0;
+  }
+  .coordination-focus-grid {
+    display: contents;
+  }
+  .coordination-focus-item {
+    min-width: 0;
+  }
+}

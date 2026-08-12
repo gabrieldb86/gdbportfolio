@@ -347,3 +347,8 @@
 - [x] Remover deslocamentos e margens independentes dos botões.
 - [x] Alinhar ambos ao eixo esquerdo padrão da página.
 - [x] Executar typecheck e build.
+
+## Correção de distribuição dos focos de coordenação
+- [x] Distribuir horizontalmente os três focos com colunas equilibradas, mantendo divisórias e eixo editorial.
+- [x] Validar equilíbrio visual em desktop e responsividade em mobile.
+- [x] Executar testes, typecheck e build antes do checkpoint.
