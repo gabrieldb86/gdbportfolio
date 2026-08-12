@@ -18,6 +18,7 @@ export type SiteConfig = {
   profilePhoto: string;
   heroImage: string;
   railImage: string;
+  backgroundImage: string;
   generatedAssets: {
     hero: string;
     collage: string;
@@ -44,6 +45,7 @@ export const defaultSiteConfig: SiteConfig = {
   profilePhoto: "/manus-storage/gabriel-profile_69235fc9.jpg",
   heroImage: "/manus-storage/gabriel-bonecaps-project_cac714ba.png",
   railImage: "/manus-storage/gabriel-sidebar-portrait_dae7ef67.jpg",
+  backgroundImage: "/manus-storage/samuel-scalzo-xyuYk9oLA8I-unsplash_74eab13d.jpg",
   generatedAssets: {
     hero: "/manus-storage/gdb-editorial-reference_55640f8a.png",
     collage: "/manus-storage/gdb-editorial-collage_983088a0.png",
@@ -57,9 +59,9 @@ export const defaultSiteConfig: SiteConfig = {
     foreground: "#191817",
   },
   hero: {
-    eyebrow: "Conteúdo · Design · Materiais",
-    headline: "Ideias que saem do briefing e encontram forma.",
-    intro: "Sou Gabriel, um criador multidisciplinar que transforma estratégia, conteúdo e design em materiais com clareza e presença.",
+    eyebrow: "Coordenação · Conteúdo · Treinamento · Trade Marketing",
+    headline: "17 anos transformando estratégia em resultado de campo.",
+    intro: "Sou Gabriel, profissional com 17 anos de experiência em conteúdo, treinamento e trade marketing, com mais de 300 mil pessoas capacitadas. Busco uma posição de coordenação em Conteúdo & Treinamento, Trade Marketing & Performance de Campo, ou Treinamento & Desenvolvimento de Pessoas.",
   },
   projects: [
     {
@@ -134,16 +136,52 @@ export const defaultSiteConfig: SiteConfig = {
       objectPosition: "center",
       visible: true,
     },
+    {
+      number: "07",
+      title: "Dashboard de Performance de Campo",
+      type: "Trade Marketing · Dashboards · KPIs",
+      year: "2026",
+      image: "internal:dashboard",
+      href: "#contact",
+      size: "project-card",
+      aspectRatio: "1.26",
+      objectPosition: "center",
+      visible: true,
+    },
+    {
+      number: "08",
+      title: "Mega Avaliação — 5 Temas de Campo",
+      type: "Treinamento · Instructional Design",
+      year: "2026",
+      image: "internal:assessment",
+      href: "#contact",
+      size: "project-card",
+      aspectRatio: "1.26",
+      objectPosition: "center",
+      visible: true,
+    },
+    {
+      number: "09",
+      title: "Ferramenta de Avaliação com IA Generativa",
+      type: "Treinamento · IA Aplicada",
+      year: "2026",
+      image: "internal:ai",
+      href: "#contact",
+      size: "project-card",
+      aspectRatio: "1.26",
+      objectPosition: "center",
+      visible: true,
+    },
   ],
   services: [
-    ["01", "Estratégia de conteúdo", "Do briefing ao plano de conteúdo com pauta, intenção e formato."],
-    ["02", "Design para comunicação", "Peças que organizam uma mensagem e fazem a marca ser lembrada."],
-    ["03", "Apresentações & materiais", "Decks, eventos e materiais comerciais com clareza e presença."],
+    ["01", "Conteúdo & Treinamento", "Instructional design, trilhas de aprendizagem, e-learning e facilitação, do briefing ao resultado."],
+    ["02", "Trade Marketing & Performance de Campo", "Campanhas de incentivo, dashboards de KPI, execução em PDV e gestão de indicadores multiloja."],
+    ["03", "Treinamento & Desenvolvimento de Pessoas", "Onboarding, avaliação de desempenho, coordenação de equipes de campo e programas de capacitação."],
   ],
   serviceDetails: {
-    "01": "Leio o problema, organizo a mensagem e construo uma linha de conteúdo com pauta, intenção, formato e critério de sucesso. O objetivo é transformar informação solta em comunicação que orienta uma ação.",
-    "02": "Crio sistemas visuais e peças que tornam a mensagem mais clara, consistente e reconhecível — do post à campanha, do material interno ao ponto de contato com o consumidor.",
-    "03": "Estruturo apresentações, materiais de treinamento, eventos e decks comerciais para que cada página tenha uma função, um ritmo e uma história fácil de acompanhar.",
+    "01": "Desenho experiências de aprendizagem com ADDIE, Kirkpatrick e Learning Experience Design (LXD) — da estratégia à trilha, do e-learning à facilitação presencial. Já apliquei essa abordagem para mais de 300 mil pessoas ao longo da carreira, incluindo 8 anos como pioneiro do Today at Apple no Brasil.",
+    "02": "Construo campanhas de incentivo de ponta a ponta — briefing, modelagem financeira e análise de risco — e dashboards interativos para monitorar KPIs de força de campo. Na SPOT/EMS, isso significou acompanhar mais de 130 promotores em tempo real.",
+    "03": "Coordeno equipes de campo com onboarding estruturado, ciclos de PDCA, avaliação de desempenho e metodologia 9Box. Já treinei e integrei equipes em redes como Apple Premium Resellers, Ragtech e ITM Channel Marketing, com taxas de retenção de até 90%.",
   },
 };
 

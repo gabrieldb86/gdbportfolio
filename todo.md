@@ -49,6 +49,12 @@
 - [x] Criar reflow do header para larguras intermediárias antes de qualquer colisão.
 - [x] Reorganizar o hero em tablet/notebook para evitar compressão e sobreposição.
 - [x] Validar ampla, intermediária e mobile no preview publicado.
+- [ ] Reposicionar hero, intro, linha de apoio e áreas de atuação para objetivo de coordenação.
+- [ ] Atualizar CV com trajetória completa, metodologias, ferramentas, formação e idiomas.
+- [ ] Adicionar projetos internos de treinamento/L&D com capas editoriais próprias.
+- [ ] Aplicar background arquitetônico e crédito visível da Unsplash no rodapé.
+- [ ] Corrigir todos os links de WhatsApp e atualizar title/meta-description.
+- [ ] Validar conteúdo, responsividade, links e metadados antes do checkpoint.
 - [ ] Alinhar o avatar em preto e branco ao topo, sem espaço acima.
 - [ ] Corrigir sobreposição em larguras intermediárias da janela.
 - [ ] Reorganizar header, navegação, trilho e hero para reflow responsivo.
