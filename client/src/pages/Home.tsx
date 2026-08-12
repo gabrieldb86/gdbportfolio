@@ -85,7 +85,7 @@ export default function Home() {
             <img src={siteConfig.generatedAssets.mark} alt="" className="brand-mark-source" />
             <span className="symbol-bar symbol-bar-a" /><span className="symbol-bar symbol-bar-b" /><span className="symbol-bar symbol-bar-c" />
           </span>
-          <span className="brand-name">Gabriel Danino<br />Basilio</span>
+          <span className="brand-name" style={{fontSize: '24px', textAlign: 'left'}}>Gabriel Danino<br style={{fontSize: '24px', textAlign: 'left'}} />Basilio</span>
         </a>
 
         <button className="menu-trigger" type="button" aria-label={menuOpen ? "Fechar menu" : "Abrir menu"} onClick={() => setMenuOpen((open) => !open)}>
