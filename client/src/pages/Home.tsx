@@ -156,7 +156,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="services-section section-pad" aria-labelledby="services-title">
+        <section className="services-section services-redesign section-pad" aria-labelledby="services-title">
           <div className="section-index"><span>03</span><span className="index-line" /></div>
           <div className="services-layout">
             <div>

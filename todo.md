@@ -32,6 +32,9 @@
 - [x] Reestruturar a seção 03 com a mesma largura e ritmo da seção 04.
 - [x] Manter o acordeão de serviços dentro da nova composição.
 - [x] Validar a seção 03 em desktop e mobile antes do checkpoint.
+- [x] Diferenciar a seção 03 como lista editorial alinhada, sem repetir a composição da seção 04.
+- [x] Corrigir definitivamente a seção 02 ou substituir a grade por uma visualização em linhas.
+- [x] Validar a organização real no preview antes de salvar outro checkpoint.
 - [x] Substituir a primeira dobra atual por uma composição mais radical, visual e autoral.
 - [x] Reorganizar a navegação e a apresentação dos projetos de modo perceptível.
 - [x] Reduzir elementos intermediários que fazem a página parecer a versão anterior.
