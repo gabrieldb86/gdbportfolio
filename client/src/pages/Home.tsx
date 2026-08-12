@@ -124,12 +124,20 @@ export default function Home() {
             <img src={siteConfig.profilePhoto} alt="Gabriel Danino Basilio" />
             <span className="portrait-stamp">01 / 05<br /><b>Selected folio</b></span>
           </div>
-          <div className="hero-redesign-bottom"><span>17 anos de experiência</span><span>Conteudista · Designer · Criador</span><button type="button" onClick={() => scrollToId("work")} aria-label="Descer para os projetos"><MoveDownRight size={20} /></button></div>
+          <div className="hero-redesign-bottom"><span>17 anos de experiência</span><span>Conteudista · Designer · Criador</span><a className="hero-cv-link" href="/cv">Ver CV <ArrowUpRight size={14} /></a><button type="button" onClick={() => scrollToId("work")} aria-label="Descer para os projetos"><MoveDownRight size={20} /></button></div>
         </section>
 
         <div className="portfolio-marquee" aria-hidden="true">
           <div className="portfolio-marquee-track"><span>PORTFÓLIO</span><b>•</b><span>CONTEÚDO</span><b>•</b><span>DESIGN</span><b>•</b><span>PORTFÓLIO</span><b>•</b><span>CONTEÚDO</span><b>•</b><span>DESIGN</span><b>•</b><span>PORTFÓLIO</span><b>•</b></div>
         </div>
+
+        <section className="recruiter-proof-strip" aria-label="Destaques profissionais">
+          <div className="proof-intro"><p className="section-kicker">Para quem recruta</p><p>Uma leitura rápida da experiência que sustenta o trabalho.</p></div>
+          <div className="proof-metric"><strong>17</strong><span>anos de experiência</span></div>
+          <div className="proof-metric"><strong>300K<span>+</span></strong><span>pessoas capacitadas</span></div>
+          <div className="proof-metric"><strong>130<span>+</span></strong><span>promotores monitorados</span></div>
+          <a href="/cv" className="proof-link">Abrir trajetória <ArrowUpRight size={15} /></a>
+        </section>
 
         <section className="manifesto-section section-pad" aria-labelledby="manifesto-title">
           <div className="section-index"><span>01</span><span className="index-line" /></div>

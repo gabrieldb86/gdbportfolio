@@ -35,6 +35,10 @@
 - [x] Diferenciar a seção 03 como lista editorial alinhada, sem repetir a composição da seção 04.
 - [x] Corrigir definitivamente a seção 02 ou substituir a grade por uma visualização em linhas.
 - [x] Validar a organização real no preview antes de salvar outro checkpoint.
+- [x] Adicionar faixa de credenciais e leitura rápida para recrutadores.
+- [x] Adicionar bloco de competências e ferramentas sem inventar experiência específica.
+- [x] Tornar CV e contato mais acessíveis na navegação.
+- [x] Deixar em aberto o posicionamento final, resultados específicos e estudos de caso completos.
 - [x] Substituir a primeira dobra atual por uma composição mais radical, visual e autoral.
 - [x] Reorganizar a navegação e a apresentação dos projetos de modo perceptível.
 - [x] Reduzir elementos intermediários que fazem a página parecer a versão anterior.

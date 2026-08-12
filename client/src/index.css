@@ -701,3 +701,28 @@ h1 em, h2 em { color: var(--primary); font-style: italic; }
   .service-detail { display: block; padding: 0 21px 24px 47px; }
   .service-detail a { margin-top: 19px; }
 }
+
+/* Recruiter layer — prova rápida, CV acessível e leitura orientada à contratação. */
+.hero-redesign-bottom { grid-template-columns: 1fr 1fr auto 44px; }
+.hero-cv-link { display: inline-flex; align-items: center; gap: 7px; color: #cf7b73; white-space: nowrap; }
+.recruiter-proof-strip { display: grid; grid-template-columns: minmax(200px, 1.3fr) repeat(3, minmax(120px, .7fr)) auto; align-items: stretch; gap: 0; padding: 0 8vw; background: #d73332; color: #fff9f2; }
+.proof-intro, .proof-metric, .proof-link { display: flex; min-height: 118px; flex-direction: column; justify-content: center; padding: 20px 26px 18px 0; border-right: 1px solid rgba(255, 249, 242, .32); }
+.proof-intro { padding-right: 35px; }
+.proof-intro .section-kicker { margin: 0 0 10px; color: #1c1b1a; }
+.proof-intro > p:last-child { max-width: 230px; margin: 0; color: rgba(255, 249, 242, .85); font-size: 11px; line-height: 1.45; }
+.proof-metric { padding-left: 25px; }
+.proof-metric strong { font-family: "DM Serif Display", serif; font-size: 42px; font-weight: 400; letter-spacing: -.06em; line-height: .9; }
+.proof-metric strong span { color: #1c1b1a; font-family: "Manrope", sans-serif; font-size: 20px; }
+.proof-metric > span { margin-top: 9px; color: rgba(255, 249, 242, .8); font-size: 9px; letter-spacing: .12em; text-transform: uppercase; }
+.proof-link { align-items: flex-end; gap: 8px; padding: 20px 0 18px 25px; border-right: 0; color: #1c1b1a; font-size: 10px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; white-space: nowrap; }
+
+@media (max-width: 720px) {
+  .hero-redesign-bottom { grid-template-columns: 1fr 40px; }
+  .hero-redesign-bottom .hero-cv-link { display: none; }
+  .recruiter-proof-strip { grid-template-columns: repeat(2, 1fr); padding: 0 20px; }
+  .proof-intro { grid-column: 1 / -1; min-height: auto; padding: 26px 0 20px; border-right: 0; border-bottom: 1px solid rgba(255, 249, 242, .32); }
+  .proof-metric { min-height: 100px; padding: 20px 12px 18px 0; }
+  .proof-metric:nth-of-type(3) { border-right: 0; padding-left: 16px; }
+  .proof-metric:nth-of-type(4) { padding-left: 0; }
+  .proof-link { min-height: 100px; align-items: flex-start; padding-left: 16px; }
+}
