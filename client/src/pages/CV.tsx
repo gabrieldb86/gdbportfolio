@@ -6,61 +6,91 @@ import { getSiteConfig } from "@/data/siteConfig";
 
 const experience = [
   {
-    period: "2025—2026",
+    period: "Out 2025 — Ago 2026",
     role: "Analista de Conteúdo",
     company: "Agência SPOT · Cliente Grupo EMS",
     area: "Conteúdo, Treinamento e Trade Marketing",
     points: [
-      "Criei e liderei campanhas de incentivo de ponta a ponta (Cystex, Enavo Gotas, Culturelle) — do briefing à modelagem financeira e análise de risco orçamentário.",
-      "Desenvolvi dashboards interativos (HTML5/Chart.js) para monitoramento de KPIs de mais de 130 promotores.",
-      "Criei e apliquei 10 Pílulas de Conhecimento, 10 avaliações mensais e 1 mega avaliação, elevando a nota média para 8,3.",
-      "Desenvolvi ferramenta proprietária com IA generativa para geração automatizada de avaliações e trilhas de conteúdo.",
-      "Conduzi onboarding institucional e treinamentos técnicos de portfólio para promotores e supervisores.",
-      "Representei a equipe no Roadshow DPSP, apresentando novidades de produto a mais de 200 farmacêuticos.",
+      "Criei e liderei campanhas de incentivo de ponta a ponta para a força de campo (Cystex, Enavo Gotas, Culturelle) — do briefing à modelagem financeira e análise de risco orçamentário — garantindo aderência às metas de execução do cliente.",
+      "Desenvolvi dashboards interativos (HTML5/Chart.js) para monitoramento de KPIs de mais de 130 promotores, com exportação automatizada de relatórios em PPT/CSV para a liderança.",
+      "Processei e analisei grandes volumes de dados de campo, convertendo-os em relatórios estratégicos de status de campanhas e cobertura para tomada de decisão.",
+      "Criei e apliquei 10 Pílulas de Conhecimento e 10 avaliações mensais de desempenho, além de 1 mega avaliação, impactando mais de 130 promotores e elevando a nota média para 8,3.",
+      "Desenvolvi ferramenta proprietária (HTML + IA generativa) para geração automatizada de avaliações e trilhas de conteúdo, reduzindo o tempo de produção e padronizando a qualidade do material.",
+      "Roteirizei, gravei e editei vídeos de treinamento e comunicados de apoio à força de campo, além de atualizar materiais de soft e hard skills.",
+      "Elaborei relatórios mensais de performance do time e apliquei ciclos de PDCA para recuperação de colaboradores abaixo da meta.",
+      "Conduzi onboarding institucional e treinamentos técnicos do portfólio de produtos do Grupo EMS para promotores e supervisores.",
+      "Produzi documentação de políticas (regulamentos de campanha, remuneração variável) e comunicados operacionais padronizando a atuação em campo.",
+      "Participei com menos de um ano do Roadshow DPSP, apresentando novidades e lançamentos a mais de 200 farmacêuticos.",
     ],
   },
   {
-    period: "2024—2025",
+    period: "Set 2024 — Set 2025",
     role: "Produção Audiovisual",
-    company: "Autônomo (PJ)",
+    company: "Autônomo (PJ) · Freelancer",
     area: "Vídeo · Conteúdo para redes · Pós-produção",
     points: [
-      "Produzi 4 episódios de podcast do segmento de varejo e mais de 20 cortes para redes sociais.",
-      "Criei e editei videoclipe musical e conduzi pós-produção para clientes de comunicação corporativa e conteúdo educacional.",
+      "Produzi 4 episódios em vídeo para podcast do segmento de varejo e mais de 20 cortes para redes sociais, do roteiro à edição final.",
+      "Criei e editei videoclipe musical para artista da cena trap nacional, além de conduzir pós-produção para clientes de comunicação corporativa e conteúdo educacional.",
     ],
   },
   {
-    period: "2023—2024",
+    period: "Ago 2023 — Ago 2024",
     role: "Supervisor de Treinamento e Produtos",
     company: "Ragtech Eletrônica Ltda",
     area: "Treinamento, Marketing e Produtos",
     points: [
-      "Implementei o sistema de treinamento da empresa, capacitando cerca de 160 colaboradores de redes varejistas parceiras.",
-      "Liderei campanhas de sell-in e sell-out para vendedores internos, parceiros e distribuidores.",
-      "Desenvolvi estratégias de trade marketing para ampliar visibilidade de marca e vendas no PDV.",
-      "Acompanhei indicadores de desenvolvimento e estruturei agenda de treinamentos via PDI.",
+      "Implementei o sistema de treinamento da empresa, capacitando cerca de 160 colaboradores de redes varejistas parceiras com calendário estruturado.",
+      "Liderei campanhas estratégicas de sell-in e sell-out para vendedores internos, parceiros e distribuidores da marca.",
+      "Desenvolvi estratégias de trade marketing para ampliar visibilidade da marca e impulsionar vendas no PDV.",
+      "Roteirizei, produzi storyboards e coordenei gravação e edição de vídeos para redes sociais, site institucional e treinamento.",
+      "Gerenciei SEO e editoria de conteúdo das redes sociais, gerando engajamento e relevância para a comunidade.",
+      "Acompanhei indicadores de desenvolvimento (sessões, participantes, duração) e estruturei agenda de novos treinamentos via PDI.",
+      "Colaborei com agências parceiras em ajustes de embalagens de produtos e materiais de ponto de venda (PDV).",
     ],
   },
   {
-    period: "2015—2023",
+    period: "Mar 2015 — Jun 2023",
     role: "Criativo PRO",
     company: "Apple Inc.",
     area: "Varejo, Treinamento e Merchandising",
     points: [
-      "Facilitei e treinei sessões do Today at Apple por mais de 8 anos, como pioneiro do programa no Brasil — liderando indicadores de NPS e público por sessão.",
-      "Treinei equipes de Apple Premium Resellers, padronizando merchandising e materiais de PDV.",
-      "Criei sessões de treinamento inclusivas para públicos com necessidades especiais (tetraplegia, síndrome de Down, autismo, deficiência visual e auditiva).",
-      "Mapeei treinamentos internos com o sistema FYI (Korn Ferry Leadership Architect).",
+      "Facilitei e treinei sessões do Today at Apple por mais de 8 anos como pioneiro do programa no Brasil, liderando os maiores indicadores de NPS e público por sessão.",
+      "Atuei junto a Apple Premium Resellers: treinei equipes de loja, padronizei merchandising e materiais de PDV, e geri indicadores de performance por unidade.",
+      "Gerenciei o fluxo de aulas e treinamentos internos da Apple em São Paulo, utilizando indicadores de popularidade e relatórios semanais.",
+      "Criei sessões de treinamento inclusivas para públicos com necessidades especiais (tetraplegia, síndrome de Down, autismo, refugiados, deficiência visual e auditiva).",
+      "Mapeei treinamentos internos com o sistema FYI (Korn Ferry Leadership Architect), elevando a experiência e o conhecimento de colaboradores e lideranças.",
+      "Construí experiência internacional em técnicas de facilitação, análise de dados e estratégias de aprendizagem.",
     ],
   },
   {
-    period: "2011—2014",
+    period: "Mar 2011 — Set 2014",
     role: "Macintosh Solution Consultant Sênior",
     company: "ITM Channel Marketing (Apple)",
     area: "Varejo, Treinamento e Merchandising",
     points: [
-      "Treinei e integrei cerca de 20 novos consultores da marca, com taxa de retenção estimada em ~90%.",
-      "Geri indicadores de estoque, vendas e experiência do cliente em 20 lojas parceiras (FNAC, Fast Shop, Walmart, Ponto Frio).",
+      "Treinei e integrei cerca de 20 novos consultores da marca, alcançando taxa de retenção estimada em ~90%.",
+      "Apresentei sessões do DSM (Dia de Soluções Mac), conduzindo grupos de diferentes portes em grandes redes varejistas.",
+      "Geri indicadores de estoque, vendas e experiência do cliente em 20 lojas parceiras (FNAC, CTIS, Saraiva, Fast Shop, Walmart, Ponto Frio).",
+    ],
+  },
+  {
+    period: "Ago 2009 — Out 2009",
+    role: "Assistente de Trade Marketing",
+    company: "Nasha Cosméticos",
+    area: "Trade Marketing · PDV · Campanhas",
+    points: [
+      "Analisei dados e relatórios de vendas (Microsiga), monitorando estoque de materiais promocionais e definindo estratégias de PDV e eventos.",
+      "Desenvolvi ações para o calendário dos canais, alinhando iniciativas às estratégias das marcas do portfólio (Giovanna Baby, Phytoervas, Elke).",
+    ],
+  },
+  {
+    period: "Set 2008 — Jan 2011",
+    role: "Promotor de Vendas (Sony, AOC, Lenovo, Dell)",
+    company: "SB Serviços / PCPress / M2 Consultoria",
+    area: "Trade Marketing · Execução em PDV",
+    points: [
+      "Expus produtos estrategicamente em vitrines e negociei com gerências de loja para alavancar vendas e share de gôndola.",
+      "Treinei vendedores de redes parceiras (Fast Shop, FNAC, Walmart, Ponto Frio) e capacitei novos funcionários em roteiros e atendimento.",
     ],
   },
 ];
@@ -141,7 +171,7 @@ export default function CV() {
             <div className="cv-hero-copy">
               <p className="section-kicker">Experiência profissional</p>
               <h1>Conteúdo que<br /><em>move pessoas.</em></h1>
-              <p className="cv-lead">Profissional com 17 anos de experiência em conteúdo, treinamento e trade marketing, com mais de 300 mil pessoas capacitadas ao longo da carreira. Busco posição de coordenador em Conteúdo &amp; Treinamento, Trade Marketing &amp; Performance de Campo, ou Treinamento &amp; Desenvolvimento de Pessoas.</p>
+              <p className="cv-lead">Profissional com 17 anos de experiência em conteúdo, treinamento e trade marketing, com mais de 300 mil pessoas capacitadas ao longo da carreira. Busco uma posição de coordenação em Conteúdo &amp; Treinamento, Trade Marketing &amp; Performance de Campo, ou Treinamento &amp; Desenvolvimento de Pessoas.</p>
               <div className="cv-actions">
                 <a className="submit-button cv-contact-button" href="/#contact">Conversar sobre uma oportunidade <ArrowUpRight size={16} /></a>
                 <button className="print-button" type="button" onClick={() => window.print()}><Printer size={15} /> Imprimir CV</button>

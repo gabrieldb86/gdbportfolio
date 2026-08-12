@@ -918,3 +918,36 @@ h1 em, h2 em { color: var(--primary); font-style: italic; }
 
 /* Acessibilidade — foco visível e consistente para navegação por teclado. */
 :where(a, button, input, textarea, select):focus-visible { outline: 2px solid var(--primary); outline-offset: 4px; }
+
+/* Redesenho do CV para recrutamento — apresentação sóbria, limpa e estruturada para leitura executiva. */
+.cv-page .experience-item { margin-bottom: 2.8rem; padding-bottom: 2.5rem; border-bottom: 1px solid rgba(25, 24, 23, .08); }
+.cv-page .experience-item:last-child { border-bottom: 0; }
+.cv-page .experience-body h3 { font-size: 1.35rem; font-family: "DM Serif Display", serif; font-weight: 400; color: #191817; margin: 0 0 .2rem; }
+.cv-page .experience-company { font-weight: 600; color: #d73332; font-size: .85rem; letter-spacing: .06em; text-transform: uppercase; margin: 0 0 .25rem; }
+.cv-page .experience-area { color: #6d645d; font-size: .8rem; margin: 0 0 1rem; }
+.cv-page .experience-body ul { margin: 0; padding-left: 1.1rem; }
+.cv-page .experience-body li { margin-bottom: .6rem; color: #38332f; font-size: .92rem; line-height: 1.65; }
+.cv-qualification-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2.5rem; }
+@media (max-width: 900px) {
+  .cv-qualification-grid { grid-template-columns: 1fr; }
+}
+
+/* CV clean — contraste sóbrio e legibilidade prioritária para processos seletivos. */
+.cv-page .cv-experience-section { background: #f7f2ec; color: #191817; }
+.cv-page .cv-experience-section .section-kicker { color: #b24845; }
+.cv-page .cv-experience-section .cv-section-heading h2 strong { color: #b24845; }
+.cv-page .cv-experience-section .experience-list { border-color: #d9cec4; }
+.cv-page .cv-experience-section .experience-item { border-color: #d9cec4; }
+.cv-page .cv-experience-section .experience-meta { color: #b24845; }
+.cv-page .cv-experience-section .experience-company { color: #b24845; }
+.cv-page .cv-experience-section .experience-area { color: #6f655d; }
+.cv-page .cv-experience-section .experience-body li { color: #4d4640; }
+.cv-page .cv-experience-section .experience-body li::before { background: #b24845; }
+.cv-page .cv-closing-section { min-height: 310px; background: #272422; }
+.cv-page .cv-closing-copy { padding-top: 68px; padding-bottom: 68px; }
+.cv-page .cv-closing-copy h2 { font-size: clamp(3.8rem, 6vw, 6.5rem); }
+.cv-page .cv-closing-copy h2 em { color: #d98b83; }
+@media print {
+  .cv-page .cv-experience-section { background: #fff; }
+  .cv-page .cv-closing-section { display: none !important; }
+}

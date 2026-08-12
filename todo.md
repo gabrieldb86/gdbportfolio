@@ -86,3 +86,9 @@
 - [ ] Auditar SEO técnico: canonical, sitemap, robots, metadados, Open Graph e dados estruturados.
 - [ ] Verificar rota interna `/editor` para não indexação e exposição pública.
 - [ ] Validar publicação real, registrar riscos do Search Console e salvar diagnóstico final.
+
+## Próxima rodada — CV clean para recrutamento
+- [x] Comparar a página CV com o PDF completo anexado.
+- [x] Expandir a trajetória profissional para refletir o documento de referência.
+- [x] Reduzir o contraste promocional e tornar a experiência mais clean e sóbria.
+- [x] Validar build, impressão, desktop, largura intermediária e mobile.

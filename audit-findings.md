@@ -55,3 +55,11 @@ O DOM do CV reportou `h1=1`, `h2=3`, `h3=6`, nenhum link sem `href` e nenhum bot
 ## Inspeção DOM do editor interno
 
 O editor reportou title próprio, `robots=noindex, nofollow, noarchive`, canonical `/editor`, oito imagens sem falhas, 89 inputs e 20 botões. As prévias dos três cases internos não usam mais `internal:*` como `src` inválido; o editor continua funcional e permanece fora do sitemap público.
+
+## Validação visual do CV após referência em PDF
+
+O CV foi enriquecido com a trajetória completa do PDF, incluindo SPOT/EMS, atuação audiovisual, Ragtech, Apple, ITM, Nasha e experiências iniciais de trade marketing. A composição desktop mantém uma leitura sóbria com blocos de experiência separados por regras leves, datas visíveis e hierarquia de cargo/empresa/área. Em mobile, os blocos empilham sem overflow, preservando a ordem de leitura e o acesso aos CTAs. A página longa fica naturalmente extensa pela quantidade de informações, mas segue apropriada para consulta e impressão.
+
+## CV clean — validação final
+
+A versão final usa o bloco de experiência em marfim, com grafite para o texto, carmim apenas em labels e empresas, divisórias suaves e um encerramento mais compacto. O resultado reduz a aparência de peça promocional sem abandonar a identidade editorial do portfólio. Desktop e mobile foram capturados após a última alteração; a trajetória completa permanece legível e empilhada, sem colisões aparentes ou overflow horizontal.
