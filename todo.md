@@ -271,4 +271,13 @@
 - [x] Substituir a implementação por uma expansão mobile robusta se a causa persistir.
 - [x] Validar abertura, fechamento e leitura do conteúdo em mobile.
 - [x] Executar typecheck, testes e build após a nova correção.
-- [ ] Salvar checkpoint corrigido após validação final.
+- [x] Salvar checkpoint corrigido após validação final (`a1470ef6`).
+
+## Ajuste da seção de imagem e texto no mobile vertical
+- [x] Identificar a seção exibida nas capturas e reproduzir o problema em viewport vertical.
+- [x] Redimensionar e reposicionar a imagem para não dominar a seção no mobile.
+- [x] Garantir que o texto da seção fique dentro da área visível, com contraste e hierarquia legíveis.
+- [x] Preservar a composição horizontal e desktop já aprovadas.
+- [x] Validar mobile vertical, mobile horizontal e desktop.
+- [x] Executar typecheck e build após o ajuste.
+- [ ] Salvar checkpoint da correção após validação visual e técnica.

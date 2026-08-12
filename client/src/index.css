@@ -1244,3 +1244,47 @@ h1 em, h2 em { color: var(--primary); font-style: italic; }
   .service-item[open] > .service-detail { display: block; }
   .service-item[open] > .service-detail p { max-width: none; }
 }
+
+/* Chamada final no mobile vertical: copy e imagem empilhados para evitar texto sobre imagem ilegível. */
+@media (max-width: 720px) and (orientation: portrait) {
+  .statement-section {
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    overflow: visible;
+    background: #d73332;
+  }
+  .statement-section::after { display: none; }
+  .statement-copy {
+    order: 1;
+    max-width: none;
+    padding: 48px var(--editorial-axis, 20px) 42px;
+    background: #d73332;
+  }
+  .statement-copy span {
+    margin-bottom: 20px;
+    color: #fff9f2;
+    line-height: 1.5;
+  }
+  .statement-copy h2 {
+    color: #fff9f2;
+    font-size: clamp(3.55rem, 15vw, 5.5rem);
+    line-height: .86;
+  }
+  .statement-copy h2 em { color: #1c1b1a; }
+  .statement-section img {
+    position: relative;
+    inset: auto;
+    order: 2;
+    display: block;
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    aspect-ratio: 1.18;
+    object-fit: cover;
+    object-position: center;
+    opacity: 1;
+    mix-blend-mode: normal;
+  }
+}
