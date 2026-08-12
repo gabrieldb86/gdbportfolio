@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
 Disallow: /api/
+Disallow: /editor
 
 Sitemap: https://gabrielpor-7t6ygmlv.manus.space/sitemap.xml

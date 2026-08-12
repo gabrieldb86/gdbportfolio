@@ -86,6 +86,7 @@ export default function Editor() {
           <div className="editor-panel-heading"><span>02</span><div><p className="section-kicker">Hero</p><h2 id="hero-title">A mensagem de entrada.</h2></div></div>
           <div className="editor-fields editor-fields-hero">
             <label className="editor-field"><span>Etiqueta</span><input value={config.hero.eyebrow} onChange={(event) => { setConfig((current) => ({ ...current, hero: { ...current.hero, eyebrow: event.target.value } })); setSaved(false); }} /></label>
+            <label className="editor-field"><span>Posicionamento principal</span><input value={config.hero.positioning} onChange={(event) => { setConfig((current) => ({ ...current, hero: { ...current.hero, positioning: event.target.value } })); setSaved(false); }} /></label>
             <label className="editor-field"><span>Headline</span><textarea rows={3} value={config.hero.headline} onChange={(event) => { setConfig((current) => ({ ...current, hero: { ...current.hero, headline: event.target.value } })); setSaved(false); }} /></label>
             <label className="editor-field"><span>Resumo</span><textarea rows={4} value={config.hero.intro} onChange={(event) => { setConfig((current) => ({ ...current, hero: { ...current.hero, intro: event.target.value } })); setSaved(false); }} /></label>
           </div>

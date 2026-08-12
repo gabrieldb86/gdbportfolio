@@ -116,3 +116,21 @@ As capturas confirmaram a solução visual: em 1280px a área 02 apresenta cinco
 O editor visual havia inserido seis atributos duplicados em `Home.tsx`, impedindo o TypeScript de compilar. Os estilos foram consolidados com os valores finais: índice deslocado `-58px/+58px`, heading e kicker preservando os deslocamentos negativos intencionais, e grade com `marginBottom: -60px` e `marginLeft: 53px`. A captura mobile não apresentou overflow no hero; a captura desktop exige uma conferência adicional da visibilidade integral de “Projetos que” após a margem negativa aplicada ao h2.
 
 A inspeção em tiles legíveis confirmou o risco: a primeira linha escura **“Projetos que”** não aparecia na captura desktop, enquanto **“ganharam forma.”** permanecia visível. Após ajustar o deslocamento do h2 de `-136px` para `-48px`, a captura full-page de 1280px voltou a exibir **“Projetos que ganharam forma.”** integralmente, sem perder o alinhamento editorial do kicker. A captura full-page de 375px também preservou a heading e empilhou os 10 cards sem overflow horizontal.
+
+## Auditoria documental — documentos recebidos em 2026-08-12
+
+Os dois documentos Markdown baixados pelo navegador convergem em três prioridades imediatas: corrigir o destino do card “Blocs Presentation”, padronizar **100K+ pessoas capacitadas** em todo o portfólio e substituir a lógica de galeria por três cases próprios de coordenação (Grupo EMS/Cystex, Today at Apple e Ragtech). Também recomendam alinhar o contato ao recrutamento, adicionar CV em PDF, revisar formulário/privacidade, confirmar Open Graph/analytics e reduzir sinais de portfólio de freelancer.
+
+O DOCX `portfolio_audit_report_100k_corrigido.docx` confirma a métrica oficial **“100K+ pessoas capacitadas ao longo da carreira”**, proibindo “300K+” e “300 mil” em Home, CV, SEO e cases. O DOCX de campos de atualização não pôde ser baixado porque o link temporário retornou bloqueio/captcha; suas prioridades centrais já estão cobertas pelos demais documentos e pelo relatório corrigido.
+
+### Auditoria visual da rodada de atualização
+
+As capturas desktop e mobile confirmaram que a nova hierarquia editorial, os cases próprios, a privacidade e o formulário orientado a recrutadores mantêm leitura e reflow adequados. Entretanto, os caminhos antigos de `/manus-storage/` para `gabriel-profile`, `gabriel-treinamento-apresentacao` e `gabriel-bonecaps-project` retornaram HTTP 502 no preview, produzindo blocos vazios/alt text no hero e nos cases. A restauração dos assets é bloqueadora para considerar a auditoria visual concluída.
+
+Após reiniciar o serviço, três novas tentativas de upload (`gabriel-profile.jpg`, `gabriel-treinamento-apresentacao.jpg` e `gabriel-bonecaps-project.png`) falharam novamente por timeout de DNS no storage. O fundo arquitetural e o asset editorial foram reenviados com sucesso; os três assets críticos permanecem pendentes e receberão fallback visual não quebrado até a restauração do storage.
+
+## Implementação estratégica — rodada atual
+
+Foram implementados: posicionamento principal de coordenação no hero; descrição curta orientada a recrutadores; prova de escala com **17+ · 100K+ · 130+**; faixa de contextos de atuação; três princípios de coordenação na seção Sobre; formulário com empresa, cargo/oportunidade e mensagem orientada a vaga; aviso de privacidade; eventos de analytics para cases, CV, WhatsApp, LinkedIn, e-mail e Behance; migração de localStorage para impedir que textos antigos voltem a exibir 300K; cinco novos caminhos persistentes de capas de projetos; cases próprios para Grupo EMS/Cystex, Ragtech, Roadshow DPSP, Today at Apple, Trilhas e transição segura do Blocs; sitemap ampliado; e robots.txt com `/editor` bloqueado.
+
+TypeScript e build foram aprovados. As capturas desktop, 800px e mobile confirmaram leitura, reflow e ausência de overlap após o breakpoint intermediário dos cases. O upload do PDF oficial do CV falhou em três tentativas por indisponibilidade de DNS do storage; por isso, o CTA permanece como “Ver CV / imprimir” até que o arquivo persistente possa ser publicado.

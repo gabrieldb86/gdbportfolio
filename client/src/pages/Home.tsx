@@ -1,9 +1,10 @@
 // Direção visual: Arquivo Editorial — preservar assimetria, índices em vermelho, imagens protagonistas e microcopy objetiva.
-import { type CSSProperties, type FormEvent, useEffect, useLayoutEffect, useState } from "react";
+import { type CSSProperties, type FormEvent, type SyntheticEvent, useEffect, useLayoutEffect, useState } from "react";
 import { setPageMetadata } from "@/lib/seo";
 import {
   ArrowUpRight,
   Linkedin,
+  Mail,
   Menu,
   MessageCircle,
   MoveDownRight,
@@ -22,16 +23,24 @@ function renderHeadline(headline: string) {
   return after ? <>{before} <em>e {after}</em></> : headline;
 }
 
+function markBrokenImage(event: SyntheticEvent<HTMLImageElement>) {
+  const image = event.currentTarget;
+  image.style.display = "none";
+  image.parentElement?.classList.add("image-fallback");
+}
+
 function ProjectCard({ project, revealDelay }: { project: ProjectConfig; revealDelay: number }) {
   const isInternal = project.image.startsWith("internal:");
+  const isLocalCase = project.href.startsWith("/");
   const [imageFailed, setImageFailed] = useState(false);
   const internalType = project.image.replace("internal:", "");
   return (
     <a
       className={`project-card ${project.size}`} data-reveal="project-card" data-reveal-delay={revealDelay}
       href={project.href}
-      {...(!isInternal ? { target: "_blank", rel: "noreferrer" } : {})}
-      aria-label={isInternal ? `Conversar sobre o case ${project.title}` : `Abrir projeto ${project.title} no Behance`}
+      data-umami-event={isLocalCase ? "case-open" : "behance-open"}
+      {...(!isInternal && !isLocalCase ? { target: "_blank", rel: "noreferrer" } : {})}
+      aria-label={isLocalCase ? `Abrir estudo de caso ${project.title}` : isInternal ? `Conversar sobre o case ${project.title}` : `Abrir projeto ${project.title} no Behance`}
     >
       <div className="project-image-wrap" style={{ aspectRatio: project.aspectRatio }}>
         {isInternal ? <div className={`internal-project-cover internal-project-${internalType}`}><span>{project.number}</span><strong>{project.title}</strong><small>Case interno · briefing / método / resultado</small></div> : imageFailed ? <div className="project-image-fallback" role="img" aria-label={`Capa indisponível: ${project.title}`}><span>{project.number} · projeto</span><strong>{project.title}</strong><small>Ver case completo no Behance</small></div> : <img src={project.image} alt={project.title} className="project-image" style={{ objectPosition: project.objectPosition }} loading={project.number === "01" ? "eager" : "lazy"} decoding="async" onError={() => setImageFailed(true)} />}
@@ -44,7 +53,7 @@ function ProjectCard({ project, revealDelay }: { project: ProjectConfig; revealD
         <div>
           <h3>{project.title}</h3>
           <p>{project.type}</p>
-          <span className="project-credit">{isInternal ? "Case interno / Gabriel DB" : "Behance / Gabriel DB"}</span>
+          <span className="project-credit">{isLocalCase ? "Estudo de caso / Gabriel DB" : isInternal ? "Case interno / Gabriel DB" : "Behance / Gabriel DB"}</span>
         </div>
         <span className="project-year">{project.year}</span>
       </div>
@@ -62,7 +71,7 @@ export default function Home() {
   useEffect(() => {
     setPageMetadata({
       title: "Gabriel Danino Basilio — Coordenação de Conteúdo, Treinamento e Trade Marketing",
-      description: "Portfólio profissional de Gabriel Danino Basilio, coordenador de conteúdo, treinamento e trade marketing com 17 anos de experiência e mais de 300 mil pessoas capacitadas.",
+      description: "Gabriel Danino Basilio: profissional com 17 anos de experiência, 100K+ pessoas capacitadas e atuação em conteúdo, treinamento, trade marketing e performance de campo.",
       path: "/",
     });
   }, []);
@@ -111,7 +120,10 @@ export default function Home() {
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
-    const message = `Olá, Gabriel! Meu nome é ${data.get("name")} e gostaria de conversar sobre ${data.get("message")}. Meu e-mail é ${data.get("email")}.`;
+    if (data.get("website")) return;
+    const company = data.get("company") || "não informada";
+    const role = data.get("role") || "não informado";
+    const message = `Olá, Gabriel! Meu nome é ${data.get("name")}. Empresa ou consultoria: ${company}. Cargo ou oportunidade: ${role}. Gostaria de conversar sobre ${data.get("message")}. Meu e-mail é ${data.get("email")}.`;
     setSent(true);
     window.open(`https://wa.me/5511945747353?text=${encodeURIComponent(message)}`, "_blank", "noopener,noreferrer");
     event.currentTarget.reset();
@@ -139,7 +151,7 @@ export default function Home() {
       </header>
 
       <aside className="side-rail" aria-label="Informações rápidas">
-        <div className="rail-image-block"><img src={siteConfig.railImage} alt="Ilustração em preto e branco de Gabriel" /></div>
+        <div className="rail-image-block"><img src={siteConfig.railImage} alt="Ilustração em preto e branco de Gabriel" onError={markBrokenImage} /></div>
         <span className="rail-label">Portfólio · 2026</span>
       </aside>
 
@@ -150,12 +162,17 @@ export default function Home() {
             <div className="hero-redesign-copy">
               <p className="eyebrow"><span className="eyebrow-mark">●</span> {siteConfig.hero.eyebrow}</p>
               <h1 className="hero-headline"><span className="hero-headline-white">CONTEÚDO,</span><br /><span className="hero-headline-training">treinamento</span><br /><span className="hero-headline-white">&amp; TRADE</span><br /><span className="hero-headline-white">MARKETING.</span></h1>
-              <p className="hero-redesign-intro" style={{marginTop: '16px'}}>{siteConfig.hero.intro}</p>
+              <p className="hero-positioning">{siteConfig.hero.positioning}</p>
+              <p className="hero-redesign-intro" style={{ marginTop: "16px" }}>{siteConfig.hero.intro}</p>
+              <p className="hero-proof-line">17+ anos · 100K+ pessoas capacitadas · 130+ promotores monitorados</p>
             </div>
-            <a className="hero-cta hero-cta-redesign" href="#work" onClick={(event) => { event.preventDefault(); scrollToId("work"); }} style={{ paddingTop: "15px" }}>Explorar trabalho <ArrowUpRight size={16} /></a>
+            <div className="hero-actions">
+              <a className="hero-cta hero-cta-redesign" href="#work" data-umami-event="hero-work-click" onClick={(event) => { event.preventDefault(); scrollToId("work"); }} style={{ paddingTop: "15px" }}>Ver cases principais <ArrowUpRight size={16} /></a>
+              <a className="hero-secondary-cta" href="/cv#cv-actions" data-umami-event="cv-open">Ver CV / imprimir <ArrowUpRight size={15} /></a>
+            </div>
           </div>
           <div className="hero-redesign-portrait" data-reveal="hero-portrait">
-            <img src={siteConfig.profilePhoto} alt="Gabriel Danino Basilio" />
+            <img src={siteConfig.profilePhoto} alt="Gabriel Danino Basilio" onError={markBrokenImage} />
           </div>
           <div className="hero-redesign-bottom" data-reveal="hero-bottom"><span>Mais de 17 anos de experiência</span><span>Conteudista · Facilitador · Coordenador de Treinamento</span><a className="hero-cv-link" href="/cv">Ver CV <ArrowUpRight size={14} /></a><button type="button" onClick={() => scrollToId("work")} aria-label="Descer para os projetos"><MoveDownRight size={20} /></button></div>
         </section>
@@ -173,12 +190,17 @@ export default function Home() {
         </section>
 
         <section className="recruiter-proof-strip" aria-label="Destaques profissionais" data-reveal="proof-strip">
-          <div className="proof-intro" style={{ fontSize: "15px" }}><p className="section-kicker" style={{ fontSize: "15px" }}>Para quem recruta</p><p style={{ fontSize: "15px" }}>Uma leitura rápida da experiência que sustenta o trabalho.</p></div>
-          <div className="proof-metric" style={{ marginLeft: "3px", marginRight: "27px", paddingBottom: "20px", paddingLeft: "29px", paddingRight: "31px", paddingTop: "21px" }}><strong>+ 17</strong><span>anos de experiência</span></div>
-          <div className="proof-metric"><strong>100K<span>+</span></strong><span>pessoas capacitadas<br />em toda a carreira</span></div>
+          <div className="proof-intro" style={{ fontSize: "15px" }}><p className="section-kicker" style={{ fontSize: "15px" }}>Para RH, headhunters e lideranças</p><p style={{ fontSize: "15px" }}>Uma leitura rápida da experiência que sustenta minha candidatura.</p></div>
+          <div className="proof-metric" style={{ marginLeft: "3px", marginRight: "27px", paddingBottom: "20px", paddingLeft: "29px", paddingRight: "31px", paddingTop: "21px" }}><strong>17+</strong><span>anos de experiência</span></div>
+          <div className="proof-metric"><strong>100K<span>+</span></strong><span>Pessoas capacitadas<br />ao longo da carreira</span></div>
           <div className="proof-metric"><strong>130 <span>+</span></strong><span>promotores monitorados<br />(SPOT no Grupo EMS)</span></div>
           <div className="proof-metric"><strong>8,3</strong><span>média de avaliação</span></div>
-          <a href="/cv" className="proof-link">Abrir trajetória <ArrowUpRight size={15} /></a>
+          <a href="/cv" className="proof-link" data-umami-event="cv-open">Abrir trajetória <ArrowUpRight size={15} /></a>
+        </section>
+
+        <section className="credential-strip" aria-label="Contextos de atuação" data-reveal="credential-strip">
+          <p className="section-kicker">Contextos de atuação</p>
+          <div className="credential-list"><span>Apple</span><span>Grupo EMS</span><span>SPOT</span><span>Ragtech</span><span>ITM Channel Marketing</span></div>
         </section>
 
         <section className="manifesto-section section-pad" aria-labelledby="manifesto-title">
@@ -198,7 +220,7 @@ export default function Home() {
             <div className="work-redesign-index" style={{ marginLeft: "-58px", marginRight: "58px" }}><span>02</span><span>/ WORK</span></div>
             <div><p className="section-kicker" style={{ marginLeft: "-135px" }}>Trabalhos selecionados</p><h2 id="work-title" style={{ marginLeft: "-48px" }}>Projetos que<br /><em>ganharam forma.</em></h2></div>
             <p>Uma seleção de campanhas, trilhas, eventos e materiais criada para comunicar melhor, capacitar equipes e melhorar a execução.</p>
-            <a className="behance-link" href="https://www.behance.net/gabrieldb86" target="_blank" rel="noreferrer">Abrir Behance <ArrowUpRight size={15} /></a>
+            <a className="behance-link" href="https://www.behance.net/gabrieldb86" data-umami-event="behance-open" target="_blank" rel="noreferrer">Abrir Behance <ArrowUpRight size={15} /></a>
           </div>
 
           <div className="projects-grid sean-obrien-grid" style={{ marginBottom: "-60px", marginLeft: "53px" }}>
@@ -212,7 +234,7 @@ export default function Home() {
             <div>
               <p className="section-kicker">Áreas de atuação</p>
               <h2 id="services-title" style={{ fontFamily: '"DM Serif Display", serif' }}>Coordenação que<br />vira <strong style={{ fontFamily: '"DM Serif Display", serif' }}>resultado.</strong></h2>
-              <img className="services-art" src={siteConfig.projects[4]?.image} alt="Projeto de apresentação Blocs" loading="lazy" style={{ width: '70%', maxWidth: '175px' }} />
+              <img className="services-art" src={siteConfig.projects[4]?.image} alt="Projeto de apresentação Blocs" loading="lazy" style={{ width: '70%', maxWidth: '175px' }} onError={markBrokenImage} />
             </div>
             <div className="services-list">
               {siteConfig.services.map(([number, title, description], index) => (
@@ -236,21 +258,26 @@ export default function Home() {
           <div className="section-index"><span>04</span><span className="index-line" /></div>
           <div className="about-grid">
             <div className="about-art-wrap" data-reveal="about-art">
-              <img src={siteConfig.trainingImage} alt="Gabriel conduzindo um treinamento diante de uma equipe" loading="eager" />
+              <img src={siteConfig.trainingImage} alt="Gabriel conduzindo um treinamento diante de uma equipe" loading="eager" onError={markBrokenImage} />
               <span className="about-art-label">Processo / repertório / intenção</span>
             </div>
             <div className="about-copy" data-reveal="about-copy">
               <p className="section-kicker">Sobre mim</p>
               <h2 id="about-title">Olá, eu sou<br /><em>Gabriel.</em></h2>
-              <p className="about-lead">Tenho 17 anos de experiência em conteúdo, treinamento e trade marketing — e mais de 300 mil pessoas capacitadas ao longo da carreira, incluindo 8 anos como pioneiro do Today at Apple no Brasil.</p>
+              <p className="about-lead">Tenho 17 anos de experiência em conteúdo, treinamento e trade marketing — e mais de 100K pessoas capacitadas ao longo da carreira, incluindo 8 anos como pioneiro do Today at Apple no Brasil.</p>
               <p>Minha trajetória cruza coordenação de treinamento, gestão de indicadores de campo e produção de conteúdo — da Apple à SPOT/Grupo EMS. Busco uma próxima posição de coordenação em Conteúdo &amp; Treinamento, Trade Marketing &amp; Performance de Campo, ou Treinamento &amp; Desenvolvimento de Pessoas, aplicando metodologias como ADDIE, Kirkpatrick e Design Thinking.</p>
               <div className="about-skill-list" aria-label="Áreas de atuação"><span>Instructional Design</span><span>Trade Marketing</span><span>Gestão de Campo</span><span>ADDIE / Kirkpatrick</span><span>IA Generativa</span><span>Dashboards &amp; KPIs</span></div>
+              <div className="about-principles" aria-label="Princípios de coordenação">
+                <div><span>01</span><strong>Contexto antes da solução</strong><p>Entender público, operação e indicador antes de desenhar a resposta.</p></div>
+                <div><span>02</span><strong>Método que chega ao campo</strong><p>Transformar estratégia em conteúdo, treinamento, rotina e material aplicável.</p></div>
+                <div><span>03</span><strong>Acompanhamento até o resultado</strong><p>Usar avaliação, indicadores, PDCA e feedback para ajustar a execução.</p></div>
+              </div>
             </div>
           </div>
         </section>
 
         <section className="statement-section">
-          <img src={siteConfig.heroImage} alt="Projeto visual de bonés em preto e vermelho" loading="lazy" />
+          <img src={siteConfig.heroImage} alt="Projeto visual de bonés em preto e vermelho" loading="lazy" onError={markBrokenImage} />
           <div className="statement-copy" data-reveal="statement-copy"><span>Uma pergunta para o próximo projeto:</span><h2>O que precisa<br /><em>ganhar forma?</em></h2></div>
         </section>
 
@@ -259,19 +286,30 @@ export default function Home() {
           <div className="contact-grid">
             <div className="contact-intro" data-reveal="contact-intro">
               <p className="section-kicker">Vamos conversar</p>
-              <h2 id="contact-title">Tem uma oportunidade<br />em <em>mente?</em></h2>
-              <p>Se você busca alguém para coordenar conteúdo, treinamento ou performance de campo, me conte o contexto. Eu respondo pelo WhatsApp e a gente entende juntos o melhor próximo passo.</p>
-              <a className="contact-direct" href="https://wa.me/5511945747353" target="_blank" rel="noreferrer"><MessageCircle size={17} /> Falar diretamente no WhatsApp <ArrowUpRight size={15} /></a>
+              <h2 id="contact-title">Você está formando<br />uma equipe de <em>coordenação?</em></h2>
+              <p>Estou aberto a oportunidades em conteúdo, treinamento, trade marketing e performance de campo. Envie o contexto da posição ou fale comigo diretamente pelo LinkedIn, e-mail ou WhatsApp.</p>
+              <div className="contact-links">
+                <a className="contact-direct" href="https://wa.me/5511945747353" data-umami-event="whatsapp-click" target="_blank" rel="noreferrer"><MessageCircle size={17} /> Falar diretamente com Gabriel <ArrowUpRight size={15} /></a>
+                <a className="contact-direct" href="https://www.linkedin.com/in/gabrieldb86" data-umami-event="linkedin-click" target="_blank" rel="noreferrer"><Linkedin size={17} /> Conectar pelo LinkedIn <ArrowUpRight size={15} /></a>
+                <a className="contact-direct" href="mailto:gabrieldb@me.com" data-umami-event="email-click"><Mail size={17} /> gabrieldb@me.com <ArrowUpRight size={15} /></a>
+              </div>
             </div>
             <form className="contact-form" data-reveal="contact-form" onSubmit={handleSubmit}>
               <label htmlFor="name">Seu nome</label>
               <input id="name" name="name" type="text" placeholder="Como posso te chamar?" required />
+              <label className="form-honeypot" htmlFor="website">Website</label>
+              <input className="form-honeypot" id="website" name="website" type="text" tabIndex={-1} autoComplete="off" />
+              <label htmlFor="company">Empresa ou consultoria</label>
+              <input id="company" name="company" type="text" placeholder="Onde você atua?" />
+              <label htmlFor="role">Cargo ou oportunidade</label>
+              <input id="role" name="role" type="text" placeholder="Qual posição ou desafio?" />
               <label htmlFor="email">Seu e-mail</label>
               <input id="email" name="email" type="email" placeholder="voce@empresa.com" required />
-              <label htmlFor="message">O que você precisa?</label>
-              <textarea id="message" name="message" rows={3} placeholder="Conte um pouco sobre o projeto..." required />
+              <label htmlFor="message">Conte sobre a oportunidade, a empresa ou o desafio da posição</label>
+              <textarea id="message" name="message" rows={3} placeholder="Qual é o contexto da vaga ou do desafio?" required />
               <button className="submit-button" type="submit">Enviar mensagem <ArrowUpRight size={17} /></button>
               {sent && <p className="form-success" role="status">Mensagem preparada. O WhatsApp foi aberto em uma nova aba.</p>}
+              <p className="contact-privacy-note">Ao enviar, os dados são usados apenas para responder ao seu contato. <a href="/privacidade">Leia o aviso de privacidade.</a></p>
             </form>
           </div>
         </section>
@@ -280,7 +318,7 @@ export default function Home() {
       <a className="floating-contact" href="#contact" onClick={(event) => { event.preventDefault(); scrollToId("contact"); }}><span>Fale comigo</span><ArrowUpRight size={16} /></a>
 
       <footer className="site-footer">
-        <a className="footer-brand" href="#top" onClick={(event) => { event.preventDefault(); scrollToId("top"); }}><span className="footer-avatar"><img src={siteConfig.railImage} alt="" /></span><span style={{fontSize: '24px'}}>Gabriel Danino Basilio</span></a>
+        <a className="footer-brand" href="#top" onClick={(event) => { event.preventDefault(); scrollToId("top"); }}><span className="footer-avatar"><img src={siteConfig.railImage} alt="" onError={markBrokenImage} /></span><span style={{fontSize: '24px'}}>Gabriel Danino Basilio</span></a>
         <div className="footer-socials"><a href="https://www.linkedin.com/in/gabrieldb86" target="_blank" rel="noreferrer" aria-label="LinkedIn"><Linkedin size={17} /></a><a href="https://www.behance.net/gabrieldb86" target="_blank" rel="noreferrer" aria-label="Behance"><span className="behance-glyph" aria-hidden="true">Bē</span></a><a href="https://wa.me/5511945747353" target="_blank" rel="noreferrer" aria-label="WhatsApp"><MessageCircle size={17} /></a></div>
         <span className="footer-credit">© 2026 · Feito com intenção. · Foto de <a href="https://unsplash.com/pt-br/@scalzodesign?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noreferrer">Samuel Scalzo</a> na <a href="https://unsplash.com/pt-br/fotografias/uma-foto-em-preto-e-branco-de-um-edificio-xyuYk9oLA8I?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noreferrer">Unsplash</a></span>
       </footer>

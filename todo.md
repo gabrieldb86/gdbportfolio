@@ -153,3 +153,15 @@
 - [x] Remover atributos JSX duplicados e preservar apenas os valores finais intencionais.
 - [x] Validar o alinhamento da heading, índice, descrição e grade de projetos em desktop e mobile.
 - [x] Executar TypeScript/build e publicar um novo checkpoint após a validação.
+
+## Rodada atual — comparação com artigo estratégico
+- [x] Obter o conteúdo integral do artigo anexado.
+- [x] Comparar posicionamento, prova profissional, conteúdo, projetos, CTA e SEO com o portfólio atual.
+- [x] Entregar lacunas, mudanças recomendadas e prioridades de implementação.
+
+## Rodada atual — auditoria completa e atualização estratégica
+- [x] Consolidar os quatro documentos enviados pelo usuário.
+- [x] Auditar visual, conteúdo, projetos, conversão, acessibilidade, SEO, assets e responsividade.
+- [x] Implementar as atualizações prioritárias aprovadas nos documentos.
+- [x] Validar Home, CV, editor, links, formulário e breakpoints antes do checkpoint.
+- [ ] Publicar checkpoint com relatório final das mudanças e pendências.

@@ -1,5 +1,5 @@
 // Direção visual: Arquivo Editorial — o CV usa índice, marfim, vermelho-carmim e tipografia em camadas para transformar experiência em narrativa.
-import { type CSSProperties, useEffect } from "react";
+import { type CSSProperties, type SyntheticEvent, useEffect } from "react";
 import { setPageMetadata } from "@/lib/seo";
 import { ArrowLeft, ArrowUpRight, Linkedin, Mail, MapPin, MessageCircle, Phone, Printer } from "lucide-react";
 import { getSiteConfig } from "@/data/siteConfig";
@@ -125,6 +125,12 @@ const languages = [
   { name: "Espanhol", level: "Básico" },
 ];
 
+function markBrokenImage(event: SyntheticEvent<HTMLImageElement>) {
+  const image = event.currentTarget;
+  image.style.display = "none";
+  image.parentElement?.classList.add("image-fallback");
+}
+
 function scrollTop() {
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
@@ -144,7 +150,7 @@ export default function CV() {
     <div className="site-shell cv-page" style={{ "--primary": siteConfig.brand.accent, "--background": siteConfig.brand.background, "--foreground": siteConfig.brand.foreground } as CSSProperties}>
       <header className="site-header site-header-scrolled">
         <a className="brand-lockup" href="/" aria-label="Voltar para o portfólio">
-          <img src={siteConfig.railImage} alt="" className="header-avatar" />
+          <img src={siteConfig.railImage} alt="" className="header-avatar" onError={markBrokenImage} />
           <span className="brand-name">Gabriel Danino<br />Basilio</span>
         </a>
         <nav className="site-nav cv-nav" aria-label="Navegação principal">
@@ -159,7 +165,7 @@ export default function CV() {
       <aside className="side-rail" aria-label="Informações rápidas">
         <span className="rail-label">Currículo · 2026</span>
         <span className="rail-line" />
-        <div className="rail-ticks" aria-hidden="true"><span>CV</span><i /><span>17</span><i /><span>300K</span></div>
+        <div className="rail-ticks" aria-hidden="true"><span>CV</span><i /><span>17+</span><i /><span>100K+</span></div>
         <span className="rail-line" />
         <span className="rail-label rail-vertical">São Paulo, Brasil</span>
       </aside>
@@ -171,22 +177,22 @@ export default function CV() {
             <div className="cv-hero-copy">
               <p className="section-kicker">Experiência profissional</p>
               <h1>Conteúdo que<br /><em>move pessoas.</em></h1>
-              <p className="cv-lead">Profissional com 17 anos de experiência em conteúdo, treinamento e trade marketing, com mais de 300 mil pessoas capacitadas ao longo da carreira. Busco uma posição de coordenação em Conteúdo &amp; Treinamento, Trade Marketing &amp; Performance de Campo, ou Treinamento &amp; Desenvolvimento de Pessoas.</p>
-              <div className="cv-actions">
+              <p className="cv-lead">Profissional com 17 anos de experiência em conteúdo, treinamento e trade marketing, com mais de 100K pessoas capacitadas ao longo da carreira. Busco uma posição de coordenação em Conteúdo &amp; Treinamento, Trade Marketing &amp; Performance de Campo, ou Treinamento &amp; Desenvolvimento de Pessoas.</p>
+              <div className="cv-actions" id="cv-actions">
                 <a className="submit-button cv-contact-button" href="/#contact">Conversar sobre uma oportunidade <ArrowUpRight size={16} /></a>
                 <button className="print-button" type="button" onClick={() => window.print()}><Printer size={15} /> Imprimir CV</button>
               </div>
             </div>
             <div className="cv-portrait-wrap">
-              <div className="cv-portrait"><img src={profilePhoto} alt="Gabriel Danino Basilio" /></div>
+              <div className="cv-portrait"><img src={profilePhoto} alt="Gabriel Danino Basilio" onError={markBrokenImage} /></div>
               <div className="cv-portrait-caption"><span>Gabriel Danino Basilio</span><span>Conteudista · Facilitador · Coordenador de Treinamento</span></div>
             </div>
           </div>
         </section>
 
         <section className="cv-stats-section">
-          <div className="cv-stat"><strong>17</strong><span>anos de experiência</span></div>
-          <div className="cv-stat"><strong>300K<span>+</span></strong><span>pessoas capacitadas</span></div>
+          <div className="cv-stat"><strong>17<span>+</span></strong><span>anos de experiência</span></div>
+          <div className="cv-stat"><strong>100K<span>+</span></strong><span>Pessoas capacitadas</span></div>
           <div className="cv-stat"><strong>130<span>+</span></strong><span>promotores monitorados</span></div>
           <div className="cv-stat"><strong>8,3</strong><span>média de avaliação</span></div>
         </section>
@@ -247,14 +253,14 @@ export default function CV() {
 
         <section className="cv-closing-section">
           <div className="cv-closing-copy"><span>Uma próxima página</span><h2>Vamos construir<br /><em>o próximo resultado.</em></h2><a className="contact-direct" href="https://wa.me/5511945747353" target="_blank" rel="noreferrer"><MessageCircle size={16} /> Falar com Gabriel <ArrowUpRight size={15} /></a></div>
-          <img src={profilePhoto} alt="" loading="lazy" />
+          <img src={profilePhoto} alt="" loading="lazy" onError={markBrokenImage} />
         </section>
       </main>
 
       <a className="floating-contact floating-contact-cv" href="/#contact"><span>Fale comigo</span><ArrowUpRight size={16} /></a>
 
       <footer className="site-footer">
-        <a className="footer-brand" href="/" onClick={scrollTop}><span className="footer-avatar"><img src={siteConfig.railImage} alt="" /></span><span>Gabriel Danino Basilio</span></a>
+        <a className="footer-brand" href="/" onClick={scrollTop}><span className="footer-avatar"><img src={siteConfig.railImage} alt="" onError={markBrokenImage} /></span><span>Gabriel Danino Basilio</span></a>
         <div className="footer-socials"><a href="https://www.linkedin.com/in/gabrieldb86" target="_blank" rel="noreferrer" aria-label="LinkedIn"><Linkedin size={17} /></a><a href="https://www.behance.net/gabrieldb86" target="_blank" rel="noreferrer" aria-label="Behance"><ArrowUpRight size={17} /></a><a href="https://wa.me/5511945747353" target="_blank" rel="noreferrer" aria-label="WhatsApp"><MessageCircle size={17} /></a></div>
         <span className="footer-credit">CV · Gabriel Danino Basilio</span>
       </footer>

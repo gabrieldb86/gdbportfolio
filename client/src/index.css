@@ -1006,3 +1006,110 @@ h1 em, h2 em { color: var(--primary); font-style: italic; }
 @media (max-width: 480px) {
   .home-revision .work-redesign .projects-grid.sean-obrien-grid { grid-template-columns: 1fr !important; }
 }
+
+/* Atualização estratégica: a Home deve parecer uma candidatura de coordenação, com promessa objetiva, prova de escala e contato profissional. */
+.hero-positioning { max-width: 520px; margin: 26px 0 0; color: #f4eee6; font-size: clamp(1rem, 1.4vw, 1.28rem); font-weight: 700; letter-spacing: -.025em; line-height: 1.2; }
+.hero-proof-line { margin: 21px 0 0; color: #cf7b73; font-size: 10px; font-weight: 700; letter-spacing: .12em; line-height: 1.5; text-transform: uppercase; }
+.hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 22px; }
+.hero-secondary-cta { display: inline-flex; align-items: center; gap: 8px; padding: 13px 0; border-bottom: 1px solid rgba(244, 238, 230, .45); color: #f4eee6; font-size: 10px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+.hero-secondary-cta:hover { border-bottom-color: #cf7b73; color: #cf7b73; }
+.contact-links { display: flex; flex-direction: column; align-items: flex-start; gap: 13px; margin-top: 10px; }
+.contact-links .contact-direct { margin-top: 0; }
+.contact-privacy-note { max-width: 420px; margin-top: 18px; color: #756b63; font-size: 10px; line-height: 1.6; }
+.contact-privacy-note a { color: #b72529; text-decoration: underline; text-underline-offset: 3px; }
+.credential-strip { display: grid; grid-template-columns: minmax(180px, .35fr) 1fr; gap: 6vw; align-items: center; padding: 36px 8vw 38px; background: #1b1a19; color: #f4eee6; }
+.credential-strip .section-kicker { margin: 0; color: #cf7b73; }
+.credential-list { display: flex; flex-wrap: wrap; gap: 10px 34px; align-items: center; }
+.credential-list span { color: rgba(244, 238, 230, .8); font-family: "DM Serif Display", serif; font-size: clamp(1.2rem, 2.2vw, 2rem); letter-spacing: -.03em; }
+.about-principles { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 42px; padding-top: 26px; border-top: 1px solid rgba(117, 107, 99, .35); }
+.about-principles div { display: flex; flex-direction: column; gap: 9px; }
+.about-principles span { color: #b72529; font-size: 10px; font-weight: 700; letter-spacing: .12em; }
+.about-principles strong { font-size: 12px; line-height: 1.25; }
+.about-principles p { margin: 0; color: #756b63; font-size: 11px; line-height: 1.55; }
+.form-honeypot { position: absolute !important; width: 1px !important; height: 1px !important; margin: -1px !important; overflow: hidden !important; clip: rect(0 0 0 0) !important; white-space: nowrap !important; border: 0 !important; padding: 0 !important; }
+
+/* Cases próprios: transformar a galeria em evidência de coordenação sem perder o ritmo editorial. */
+.case-page, .privacy-page { min-height: 100vh; background: #f4eee6; color: #1b1a19; }
+.case-header { position: relative; left: 0; padding: 22px 7vw; border-bottom: 1px solid rgba(117, 107, 99, .24); background: #f4eee6; color: #1b1a19; }
+.case-header .brand-name { color: #1b1a19; }
+.case-back { display: inline-flex; align-items: center; gap: 8px; color: #1b1a19; font-size: 10px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+.case-back:hover { color: #b72529; }
+.case-main { padding-top: 0; }
+.case-hero { display: grid; grid-template-columns: 72px minmax(0, .95fr) minmax(320px, .75fr); align-items: center; gap: 5vw; min-height: 620px; background: #e9dfd5; }
+.case-hero-copy { max-width: 620px; }
+.case-hero-copy h1 { margin: 18px 0 0; font-family: "DM Serif Display", serif; font-size: clamp(4rem, 8vw, 8.7rem); font-weight: 400; letter-spacing: -.055em; line-height: .85; }
+.case-lead { max-width: 520px; margin: 34px 0 0; color: #756b63; font-size: 15px; line-height: 1.7; }
+.case-status { display: inline-block; margin-top: 20px; padding: 8px 10px; background: #d73332; color: #fff9f2; font-size: 10px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+.case-hero-art { min-height: 410px; background: #cfc0b4; transform: rotate(2deg); }
+.case-hero-art img { display: block; width: 100%; height: 100%; min-height: 410px; object-fit: cover; }
+.case-content { background: #f4eee6; }
+.case-facts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; padding: 28px 0 62px; border-bottom: 1px solid rgba(117, 107, 99, .35); }
+.case-facts div { display: flex; flex-direction: column; gap: 10px; max-width: 530px; }
+.case-facts span, .case-grid .section-kicker { color: #b72529; font-size: 10px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+.case-facts strong { color: #1b1a19; font-size: 18px; font-weight: 500; line-height: 1.4; }
+.case-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 7vw; }
+.case-grid article { padding: 42px 0; border-bottom: 1px solid rgba(117, 107, 99, .25); }
+.case-grid article > p:last-child { max-width: 510px; margin: 14px 0 0; color: #4e4742; font-size: 15px; line-height: 1.75; }
+.case-grid .case-learning { grid-column: 1 / -1; }
+.case-closing { background: #1b1a19; color: #f4eee6; }
+.case-closing h2 { margin: 18px 0 35px; font-family: "DM Serif Display", serif; font-size: clamp(3.8rem, 7vw, 7.2rem); font-weight: 400; letter-spacing: -.05em; line-height: .86; }
+.case-closing h2 em { color: #cf7b73; }
+.privacy-main { max-width: 1180px; margin: 0 auto; }
+.privacy-main h1 { margin: 22px 0 60px; font-family: "DM Serif Display", serif; font-size: clamp(4rem, 8vw, 8rem); font-weight: 400; letter-spacing: -.055em; line-height: .86; }
+.privacy-main h1 em { color: #b72529; }
+.privacy-copy { max-width: 720px; margin-left: 16%; }
+.privacy-copy h2 { margin: 42px 0 12px; font-family: "DM Serif Display", serif; font-size: 32px; font-weight: 400; }
+.privacy-copy p { color: #4e4742; font-size: 15px; line-height: 1.75; }
+.privacy-copy a { color: #b72529; text-decoration: underline; text-underline-offset: 3px; }
+.image-fallback { position: relative; overflow: hidden; background: linear-gradient(135deg, #3a3632 0%, #1b1a19 58%, #b72529 58%, #cf7b73 100%); }
+.image-fallback::after { position: absolute; inset: auto 18px 18px; color: #f4eee6; content: "Gabriel DB · conteúdo · treinamento · trade"; font-size: 10px; font-weight: 700; letter-spacing: .11em; line-height: 1.5; text-transform: uppercase; }
+.hero-redesign-portrait.image-fallback::after { inset: 50% 20px auto; color: #f4eee6; content: "Gabriel Danino Basilio"; font-family: "DM Serif Display", serif; font-size: clamp(1.6rem, 3vw, 3rem); font-weight: 400; letter-spacing: -.03em; text-transform: none; transform: translateY(-50%); }
+.rail-image-block.image-fallback { display: grid; min-height: 86px; place-items: center; }
+.rail-image-block.image-fallback::after { inset: auto; color: #f4eee6; content: "GB"; font-family: "DM Serif Display", serif; font-size: 28px; letter-spacing: -.04em; }
+.footer-avatar.image-fallback { display: inline-grid; min-width: 42px; min-height: 42px; place-items: center; background: #1b1a19; }
+.footer-avatar.image-fallback::after { inset: auto; color: #f4eee6; content: "GB"; font-size: 11px; font-weight: 800; letter-spacing: .05em; }
+.services-layout > div:first-child.image-fallback { min-height: 240px; padding: 24px; }
+.services-layout > div:first-child.image-fallback::after { inset: auto 24px 24px; content: "Material de apoio · case em atualização"; }
+.about-art-wrap.image-fallback { min-height: 440px; }
+.about-art-wrap.image-fallback::after { inset: auto 28px 28px; content: "Processo · repertório · intenção"; }
+.statement-section.image-fallback { background: linear-gradient(90deg, #d73332 0%, #d73332 34%, #381a1b 100%); }
+.statement-section.image-fallback::before { position: absolute; inset: auto 11vw 10%; color: rgba(244, 238, 230, .86); content: "Conteúdo · treinamento · trade marketing"; font-size: 10px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+.case-hero-art.image-fallback { display: grid; place-items: center; background: linear-gradient(135deg, #3a3632 0%, #1b1a19 58%, #b72529 58%, #cf7b73 100%); }
+.case-hero-art.image-fallback::after { inset: 50% 28px auto; content: "Imagem do case em atualização"; font-family: "DM Serif Display", serif; font-size: 26px; letter-spacing: -.03em; text-transform: none; transform: translateY(-50%); }
+
+@media (max-width: 720px) {
+  .hero-positioning { max-width: 300px; margin-top: 22px; font-size: 16px; }
+  .hero-proof-line { max-width: 280px; margin-top: 18px; font-size: 9px; }
+  .hero-actions { align-items: flex-start; flex-direction: column; gap: 10px; }
+  .contact-links { gap: 16px; }
+  .credential-strip { display: block; padding: 28px 24px 32px; }
+  .credential-list { gap: 10px 20px; margin-top: 20px; }
+  .credential-list span { font-size: 21px; }
+  .about-principles { grid-template-columns: 1fr; gap: 24px; margin-top: 30px; }
+  .case-header { padding: 18px 20px; }
+  .case-header .brand-name { font-size: 17px; }
+  .case-hero { display: block; min-height: auto; padding-top: 88px; }
+  .case-hero .section-index { margin-bottom: 48px; }
+  .case-hero-copy h1 { font-size: clamp(3.6rem, 17vw, 6rem); }
+  .case-lead { margin-top: 26px; font-size: 14px; }
+  .case-hero-art { min-height: 270px; margin-top: 54px; }
+  .case-hero-art img { min-height: 270px; }
+  .case-facts, .case-grid { grid-template-columns: 1fr; }
+  .case-grid .case-learning { grid-column: auto; }
+  .case-facts { padding-bottom: 35px; }
+  .case-grid article { padding: 30px 0; }
+  .privacy-main { padding-top: 90px; }
+  .privacy-main h1 { margin-bottom: 42px; font-size: clamp(3.6rem, 16vw, 6rem); }
+  .privacy-copy { margin-left: 0; }
+  .case-header { height: auto; min-height: 68px; flex-wrap: wrap; gap: 10px 16px; padding: 15px 20px; }
+  .case-header .brand-lockup { min-width: 0; flex: 1 1 220px; }
+  .case-header .case-back { flex: 0 1 auto; max-width: 120px; justify-content: flex-end; text-align: right; font-size: 9px; line-height: 1.25; }
+}
+
+@media (max-width: 900px) and (min-width: 721px) {
+  .case-hero { grid-template-columns: 54px minmax(0, 1fr); align-items: start; gap: 4vw; min-height: auto; }
+  .case-hero-copy { padding-top: 24px; }
+  .case-hero-art { grid-column: 2; width: min(100%, 520px); min-height: 320px; margin: 20px 0 46px; }
+  .case-hero-art img { min-height: 320px; }
+  .case-grid { gap: 0 5vw; }
+}

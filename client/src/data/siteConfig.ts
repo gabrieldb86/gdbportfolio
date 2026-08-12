@@ -35,6 +35,7 @@ export type SiteConfig = {
   hero: {
     eyebrow: string;
     headline: string;
+    positioning: string;
     intro: string;
   };
   projects: ProjectConfig[];
@@ -47,9 +48,9 @@ export const defaultSiteConfig: SiteConfig = {
   heroImage: "/manus-storage/gabriel-bonecaps-project_cac714ba.png",
   railImage: "/manus-storage/gabriel-sidebar-portrait_dae7ef67.jpg",
   trainingImage: "/manus-storage/gabriel-treinamento-apresentacao_2c7fabd9.jpg",
-  backgroundImage: "/manus-storage/samuel-scalzo-xyuYk9oLA8I-unsplash_74eab13d.jpg",
+  backgroundImage: "/manus-storage/samuel-scalzo-xyuYk9oLA8I-unsplash_f54f1e14.jpg",
   generatedAssets: {
-    hero: "/manus-storage/gdb-editorial-reference_55640f8a.png",
+    hero: "/manus-storage/gdb-editorial-reference_251d002f.png",
     collage: "/manus-storage/gdb-editorial-collage_983088a0.png",
     paper: "/manus-storage/gdb-red-paper-detail_86c93d83.png",
     mark: "/manus-storage/gdb-editorial-mark_6fef482b.png",
@@ -63,7 +64,8 @@ export const defaultSiteConfig: SiteConfig = {
   hero: {
     eyebrow: "Coordenação ● Conteúdo ● Treinamento ● Trade Marketing",
     headline: "CONTEÚDO, treinamento & TRADE MARKETING.",
-    intro: "Sou Gabriel, há mais de 17 anos trabalho no ponto onde a estratégia vira execução: criando conteúdo, treinamentos e campanhas que saem do papel e chegam ao PDV. Passei por programas premiados na Apple e também por performance de mais de 130 promotores em campo. Busco uma coordenação em conteúdo e treinamento, trade marketing e performance de campo, ou treinamento e desenvolvimento de pessoas.",
+    positioning: "Coordenador de Conteúdo, Treinamento e Trade Marketing",
+    intro: "Transformo estratégia em conteúdos, experiências de aprendizagem e operações de campo que movem pessoas e melhoram a execução.",
   },
   projects: [
     {
@@ -83,8 +85,8 @@ export const defaultSiteConfig: SiteConfig = {
       title: "Ragtech Dicas",
       type: "Conteúdo · Social",
       year: "2024",
-      image: "/manus-storage/ragtech-dicas_83287b6b.png",
-      href: "https://www.behance.net/gallery/229318749/Ragtech-Dicas-01-O-que-um-nobreak",
+      image: "/manus-storage/ragtech-dicas_c4a3d253.png",
+      href: "/cases/ragtech-sistema-treinamento",
       size: "project-card",
       aspectRatio: "1.26",
       objectPosition: "center",
@@ -95,7 +97,7 @@ export const defaultSiteConfig: SiteConfig = {
       title: "Future Print 2024",
       type: "Eventos · PDV",
       year: "2024",
-      image: "/manus-storage/future-print-2024_11b8395d.png",
+      image: "/manus-storage/future-print-2024_9d7e3d75.png",
       href: "https://www.behance.net/gallery/229318387/Future-Print-2024-Feira-Ragtech-com-Roland-e-Epson",
       size: "project-card",
       aspectRatio: "1.26",
@@ -107,7 +109,7 @@ export const defaultSiteConfig: SiteConfig = {
       title: "Eletrolar Show 2024",
       type: "Eventos · Experiência",
       year: "2024",
-      image: "/manus-storage/eletrolar-show-2024_5c1c2e78.png",
+      image: "/manus-storage/eletrolar-show-2024_51e67363.png",
       href: "https://www.behance.net/gallery/229253681/Eletrolar-Show-2024-Feira-com-Redragon-e-Ragtech",
       size: "project-card",
       aspectRatio: "1.26",
@@ -119,8 +121,8 @@ export const defaultSiteConfig: SiteConfig = {
       title: "Blocs Presentation",
       type: "Apresentação",
       year: "2024",
-      image: "/manus-storage/blocs-presentation_4e27f6cf.png",
-      href: "https://www.behance.net/gallery/229252353/Blocs-Presentation",
+      image: "/manus-storage/blocs-presentation_ad07fc26.png",
+      href: "/cases/blocs-presentation",
       size: "project-card",
       aspectRatio: "1.26",
       objectPosition: "center",
@@ -131,7 +133,7 @@ export const defaultSiteConfig: SiteConfig = {
       title: "Valens BDN",
       type: "Branding",
       year: "2023",
-      image: "/manus-storage/valens-bdn_4b2c1598.png",
+      image: "/manus-storage/valens-bdn_e5a00706.jpg",
       href: "https://www.behance.net/gallery/229252033/Valens-BDN",
       size: "project-card",
       aspectRatio: "1.26",
@@ -144,7 +146,7 @@ export const defaultSiteConfig: SiteConfig = {
       type: "Trade & Incentivo",
       year: "2026",
       image: "/manus-storage/gabriel-bonecaps-project_cac714ba.png",
-      href: "https://www.behance.net/gabrieldb86",
+      href: "/cases/grupo-ems-cystex",
       size: "project-card",
       aspectRatio: "1.26",
       objectPosition: "center",
@@ -156,7 +158,7 @@ export const defaultSiteConfig: SiteConfig = {
       type: "Facilitação",
       year: "2026",
       image: "/manus-storage/gabriel-treinamento-apresentacao_2c7fabd9.jpg",
-      href: "https://www.behance.net/gabrieldb86",
+      href: "/cases/roadshow-dpsp",
       size: "project-card",
       aspectRatio: "1.26",
       objectPosition: "center",
@@ -168,7 +170,7 @@ export const defaultSiteConfig: SiteConfig = {
       type: "Liderança T&D",
       year: "2023",
       image: "/manus-storage/gabriel-profile_69235fc9.jpg",
-      href: "https://www.behance.net/gabrieldb86",
+      href: "/cases/today-at-apple",
       size: "project-card",
       aspectRatio: "1.26",
       objectPosition: "center",
@@ -180,7 +182,7 @@ export const defaultSiteConfig: SiteConfig = {
       type: "Instructional Design",
       year: "2026",
       image: "/manus-storage/gdb-editorial-collage_983088a0.png",
-      href: "https://www.behance.net/gabrieldb86",
+      href: "/cases/trilhas-aprendizagem",
       size: "project-card",
       aspectRatio: "1.26",
       objectPosition: "center",
@@ -193,7 +195,7 @@ export const defaultSiteConfig: SiteConfig = {
     ["03", "Treinamento & Desenvolvimento de Pessoas", "Onboarding, avaliação de desempenho, coordenação de equipes de campo e programas de capacitação."],
   ],
   serviceDetails: {
-    "01": "Desenho experiências de aprendizagem com ADDIE, Kirkpatrick e Learning Experience Design (LXD) — da estratégia à trilha, do e-learning à facilitação presencial. Já apliquei essa abordagem para mais de 300 mil pessoas ao longo da carreira, incluindo 8 anos como pioneiro do Today at Apple no Brasil.",
+    "01": "Desenho experiências de aprendizagem com ADDIE, Kirkpatrick e Learning Experience Design (LXD) — da estratégia à trilha, do e-learning à facilitação presencial. Já apliquei essa abordagem para mais de 100K pessoas ao longo da carreira, incluindo 8 anos como pioneiro do Today at Apple no Brasil.",
     "02": "Construo campanhas de incentivo de ponta a ponta — briefing, modelagem financeira e análise de risco — e dashboards interativos para monitorar KPIs de força de campo. Na SPOT/EMS, isso significou acompanhar mais de 130 promotores em tempo real.",
     "03": "Coordeno equipes de campo com onboarding estruturado, ciclos de PDCA, avaliação de desempenho e metodologia 9Box. Já treinei e integrei equipes em redes como Apple Premium Resellers, Ragtech e ITM Channel Marketing, com taxas de retenção de até 90%.",
   },
@@ -206,8 +208,25 @@ function migrateProjects(savedProjects: ProjectConfig[] | undefined) {
   return savedProjects.map((project) => {
     const defaultProject = defaultSiteConfig.projects.find((candidate) => candidate.number === project.number);
     const isLegacyBehanceAsset = project.image.startsWith("https://mir-s3-cdn-cf.behance.net/");
-    return defaultProject && isLegacyBehanceAsset ? { ...project, image: defaultProject.image } : project;
+    const isLegacyProjectLink = project.href === "https://www.behance.net/gabrieldb86" || project.href.includes("229252353/Blocs-Presentation");
+    return defaultProject ? { ...project, image: isLegacyBehanceAsset ? defaultProject.image : project.image, href: isLegacyProjectLink ? defaultProject.href : project.href } : project;
   });
+}
+
+function migrateHero(savedHero: Partial<SiteConfig["hero"]> | undefined) {
+  const hero = { ...defaultSiteConfig.hero, ...savedHero };
+  const hasLegacyMetric = /300K|300 mil|300 mil/i.test(hero.intro);
+  const hasLegacyLongIntro = hero.intro.startsWith("Sou Gabriel, há mais de 17 anos");
+  return {
+    ...hero,
+    positioning: hero.positioning || defaultSiteConfig.hero.positioning,
+    intro: hasLegacyMetric || hasLegacyLongIntro ? defaultSiteConfig.hero.intro : hero.intro,
+  };
+}
+
+function migrateServiceDetails(savedDetails: Record<string, string> | undefined) {
+  const details = { ...defaultSiteConfig.serviceDetails, ...savedDetails };
+  return Object.fromEntries(Object.entries(details).map(([key, value]) => [key, value.replace(/300K\+|300 mil|300K|300 mil/i, "100K")]));
 }
 
 export function getSiteConfig(): SiteConfig {
@@ -216,7 +235,7 @@ export function getSiteConfig(): SiteConfig {
     const saved = window.localStorage.getItem(STORAGE_KEY);
     if (!saved) return defaultSiteConfig;
     const parsed = JSON.parse(saved) as Partial<SiteConfig>;
-    const hero = { ...defaultSiteConfig.hero, ...parsed.hero };
+    const hero = migrateHero(parsed.hero);
     const normalizedEyebrow = hero.eyebrow.replace(/\s*[·•]\s*/g, " ● ").replace(/^\s*●\s*/, "");
     return {
       ...defaultSiteConfig,
@@ -225,7 +244,7 @@ export function getSiteConfig(): SiteConfig {
       hero: { ...hero, eyebrow: normalizedEyebrow },
       projects: migrateProjects(parsed.projects),
       services: parsed.services ?? defaultSiteConfig.services,
-      serviceDetails: parsed.serviceDetails ?? defaultSiteConfig.serviceDetails,
+      serviceDetails: migrateServiceDetails(parsed.serviceDetails),
     };
   } catch {
     return defaultSiteConfig;

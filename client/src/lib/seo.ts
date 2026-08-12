@@ -1,6 +1,7 @@
 // SEO editorial — metadados por rota para pessoas e mecanismos de busca, sem alterar o layout visual.
 
 const SITE_URL = "https://gabrielpor-7t6ygmlv.manus.space";
+const DEFAULT_OG_IMAGE = `${SITE_URL}/manus-storage/gabriel-profile_69235fc9.jpg`;
 
 function upsertMeta(attribute: "name" | "property", key: string, content: string) {
   let element = document.head.querySelector<HTMLMetaElement>(`meta[${attribute}="${key}"]`);
@@ -27,11 +28,13 @@ export function setPageMetadata({
   description,
   path = "/",
   robots = "index, follow",
+  image = DEFAULT_OG_IMAGE,
 }: {
   title: string;
   description: string;
   path?: string;
   robots?: string;
+  image?: string;
 }) {
   const url = `${SITE_URL}${path}`;
   document.title = title;
@@ -41,9 +44,11 @@ export function setPageMetadata({
   upsertMeta("property", "og:url", url);
   upsertMeta("property", "og:title", title);
   upsertMeta("property", "og:description", description);
+  upsertMeta("property", "og:image", image);
   upsertMeta("name", "twitter:card", "summary_large_image");
   upsertMeta("name", "twitter:title", title);
   upsertMeta("name", "twitter:description", description);
+  upsertMeta("name", "twitter:image", image);
   upsertCanonical(url);
 }
 

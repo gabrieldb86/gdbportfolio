@@ -10,4 +10,39 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://gabrielpor-7t6ygmlv.manus.space/cases/grupo-ems-cystex</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://gabrielpor-7t6ygmlv.manus.space/cases/roadshow-dpsp</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://gabrielpor-7t6ygmlv.manus.space/cases/ragtech-sistema-treinamento</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://gabrielpor-7t6ygmlv.manus.space/cases/today-at-apple</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://gabrielpor-7t6ygmlv.manus.space/cases/trilhas-aprendizagem</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://gabrielpor-7t6ygmlv.manus.space/cases/blocs-presentation</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://gabrielpor-7t6ygmlv.manus.space/privacidade</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+  </url>
 </urlset>
