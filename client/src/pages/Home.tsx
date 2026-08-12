@@ -102,16 +102,14 @@ export default function Home() {
 
       <aside className="side-rail" aria-label="Informações rápidas">
         <div className="rail-image-block"><img src={siteConfig.railImage} alt="Ilustração em preto e branco de Gabriel" /></div>
-        <span className="rail-label">Coordenação · 2026</span>
+        <span className="rail-label">Portfólio · 2026</span>
         <span className="rail-line" />
         <div className="rail-ticks" aria-hidden="true"><span>01</span><i /><span>02</span><i /><span>03</span><i /><span>04</span><i /><span>05</span></div>
-        <span className="rail-line" />
-        <span className="rail-label rail-vertical">São Paulo, Brasil</span>
       </aside>
 
       <main id="top">
         <section className="hero-section hero-redesign">
-          <div className="hero-redesign-meta"><span>GDB / 2026</span><span>São Paulo · Brasil</span></div>
+          <div className="hero-redesign-meta"><span>Portfólio · 2026</span></div>
           <div className="hero-redesign-copy">
             <p className="eyebrow"><span className="eyebrow-mark">●</span> {siteConfig.hero.eyebrow}</p>
             <h1>Conteúdo,<br /><em>treinamento</em><br />&amp; trade<br />marketing.</h1>

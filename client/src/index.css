@@ -841,6 +841,20 @@ h1 em, h2 em { color: var(--primary); font-style: italic; }
   .home-revision { background-attachment: scroll; }
 }
 
+/* Eixo editorial único — as seções de conteúdo começam depois do mesmo índice lateral do hero. */
+.home-revision .work-redesign .projects-grid { max-width: none; margin-right: 0; margin-left: calc(100px + 4vw); }
+.home-revision .statement-copy { padding-left: calc(8vw + 100px + 4vw); }
+
+@media (min-width: 721px) and (max-width: 1024px) {
+  .home-revision .work-redesign .projects-grid { margin-left: calc(75px + 5vw); }
+  .home-revision .statement-copy { padding-left: calc(6vw + 75px + 5vw); }
+}
+
+@media (max-width: 720px) {
+  .home-revision .work-redesign .projects-grid { margin-left: 0; }
+  .home-revision .statement-copy { padding-left: 20px; }
+}
+
 @media (min-width: 721px) and (max-width: 1024px) {
   .cv-page .site-header { left: 0; padding-right: 30px; padding-left: 30px; }
   .cv-page .site-header .site-nav, .cv-page .site-header .header-availability { display: none; }

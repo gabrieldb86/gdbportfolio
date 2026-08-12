@@ -11,3 +11,5 @@ Os novos blocos de Formação, Metodologias, Ferramentas e Idiomas foram confirm
 As seis URLs externas de imagens do Behance responderam com HTTP 200 no teste de disponibilidade. O `grep` final dos links de contato confirmou `5511945747353` em Home e CV, incluindo `wa.me` e `tel:`.
 
 Na atualização de imagens, a seção Sobre passou a usar a foto de Gabriel conduzindo um treinamento. O logotipo editorial anterior foi retirado do cabeçalho e rodapé do CV e do favicon, sendo substituído pela ilustração em preto e branco já usada no trilho e no rodapé da Home. Build, screenshot full-page da Home e screenshot mobile foram validados.
+
+Na correção de alinhamento, a localização lateral foi removida, o trilho passou a exibir `Portfólio · 2026` e a segunda linha de informação foi retirada. Work, chamada final e demais blocos passaram a usar o mesmo recuo editorial do índice; a regra é anulada no mobile para preservar o empilhamento. Build e screenshots em 1280, 1100, 800 e 375 pixels foram validados.
