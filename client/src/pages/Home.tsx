@@ -131,6 +131,10 @@ export default function Home() {
           <div className="hero-index">01 <span>—</span> 05</div>
         </section>
 
+        <div className="portfolio-marquee" aria-hidden="true">
+          <div className="portfolio-marquee-track"><span>PORTFÓLIO</span><b>•</b><span>CONTEÚDO</span><b>•</b><span>DESIGN</span><b>•</b><span>PORTFÓLIO</span><b>•</b><span>CONTEÚDO</span><b>•</b><span>DESIGN</span><b>•</b><span>PORTFÓLIO</span><b>•</b></div>
+        </div>
+
         <section className="manifesto-section section-pad" aria-labelledby="manifesto-title">
           <div className="section-index"><span>01</span><span className="index-line" /></div>
           <div className="manifesto-grid">
@@ -191,6 +195,7 @@ export default function Home() {
               <p className="about-lead">Tenho 17 anos de experiência desenvolvendo pessoas, produtos e processos — e uma vontade constante de transformar ideias em comunicação que faça sentido.</p>
               <p>Minha trajetória cruza gestão, treinamento, conteúdo e design. Gosto de entrar cedo no problema, entender o contexto e construir materiais que sejam bonitos, mas também úteis, claros e possíveis de colocar em prática.</p>
               <div className="about-signature"><span>GDB</span><span>São Paulo · Brasil</span></div>
+              <div className="about-skill-list" aria-label="Áreas de atuação"><span>Conteúdo</span><span>Treinamento</span><span>Trade marketing</span><span>IA generativa</span><span>Audiovisual</span><span>Dashboards</span></div>
             </div>
           </div>
         </section>
@@ -222,6 +227,8 @@ export default function Home() {
           </div>
         </section>
       </main>
+
+      <a className="floating-contact" href="#contact" onClick={(event) => { event.preventDefault(); scrollToId("contact"); }}><span>Fale comigo</span><ArrowUpRight size={16} /></a>
 
       <footer className="site-footer">
         <a className="footer-brand" href="#top" onClick={(event) => { event.preventDefault(); scrollToId("top"); }}><span className="brand-symbol footer-symbol" aria-hidden="true"><img src={siteConfig.generatedAssets.mark} alt="" className="brand-mark-source" /><span className="symbol-bar symbol-bar-a" /><span className="symbol-bar symbol-bar-b" /><span className="symbol-bar symbol-bar-c" /></span> <span>Gabriel Danino Basilio</span></a>

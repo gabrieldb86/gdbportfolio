@@ -243,6 +243,29 @@ h1 em, h2 em { color: var(--primary); font-style: italic; }
 .home-revision .services-section { padding-top: 125px; background: #f4eee6; }
 .home-revision .about-section { background: #ddd0c4; }
 .home-revision .statement-section { min-height: 480px; }
+.home-revision .portfolio-marquee { background: #d73332; color: #1b1a19; }
+.home-revision .portfolio-marquee b { color: #f4eee6; }
+
+.portfolio-marquee { position: relative; overflow: hidden; white-space: nowrap; padding: 18px 0 15px; background: var(--foreground); color: var(--background); }
+.portfolio-marquee-track { display: inline-flex; align-items: center; gap: 21px; min-width: max-content; animation: marquee-scroll 28s linear infinite; font-family: "Manrope", sans-serif; font-size: 13px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
+.portfolio-marquee b { color: var(--primary); font-size: 20px; font-weight: 400; line-height: 0; }
+@keyframes marquee-scroll { from { transform: translateX(0); } to { transform: translateX(-32%); } }
+.about-skill-list { display: flex; flex-wrap: wrap; gap: 7px; max-width: 470px; margin-top: 28px; }
+.about-skill-list span { padding: 7px 9px 6px; border: 1px solid rgba(125, 111, 99, .35); color: #716860; font-size: 9px; letter-spacing: .1em; text-transform: uppercase; }
+.floating-contact { position: fixed; z-index: 24; right: 28px; bottom: 27px; display: inline-flex; align-items: center; gap: 12px; padding: 14px 15px 13px 17px; border: 1px solid var(--primary); background: var(--primary); color: #fff9f2; font-size: 10px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; box-shadow: 4px 4px 0 rgba(25, 24, 23, .25); transition: background 180ms ease-out, color 180ms ease-out, transform 180ms ease-out; }
+.floating-contact:hover { background: #1b1a19; color: #fff9f2; transform: translate(-3px, -3px); }
+.home-revision .floating-contact { background: #d73332; }
+.floating-contact-cv { background: #1c1b1a; }
+
+/* CV companion strip — habilidades em sequência contínua, inspirada na narrativa de About da segunda referência. */
+.cv-toolstrip-section { display: grid; grid-template-columns: 100px 1fr; gap: 4vw; padding: 35px 8vw 35px; background: #d73332; color: #fff9f2; }
+.cv-toolstrip-label { display: flex; flex-direction: column; gap: 16px; }
+.cv-toolstrip-label > span { font-size: 10px; font-weight: 700; letter-spacing: .12em; }
+.cv-toolstrip-label .section-kicker { margin: 0; color: #1c1b1a; }
+.cv-toolstrip { display: flex; flex-wrap: wrap; align-items: center; gap: 0; }
+.cv-toolstrip span { padding: 0 19px; border-right: 1px solid rgba(255, 249, 242, .45); font-family: "DM Serif Display", serif; font-size: clamp(1.8rem, 3vw, 3.5rem); line-height: 1; }
+.cv-toolstrip span:first-child { padding-left: 0; }
+.cv-toolstrip span:last-child { border-right: 0; }
 @media (max-width: 720px) {
   .home-revision .site-header, .home-revision .site-header-scrolled { background: #1b1a19; border-color: #413b37; }
   .home-revision .site-nav { background: #1b1a19; border-color: #413b37; }
@@ -420,6 +443,8 @@ h1 em, h2 em { color: var(--primary); font-style: italic; }
   .contact-intro { margin-bottom: 60px; }
   .site-footer { min-height: 165px; display: flex; flex-wrap: wrap; align-content: center; justify-content: space-between; padding: 30px 20px; }
   .footer-credit { width: 100%; order: 3; }
+  .floating-contact { right: 17px; bottom: 17px; }
+  .portfolio-marquee-track { animation-duration: 22s; }
 }
 
 /* Editor — painel de personalização local para conteúdo, fotos, dimensões, ordem e identidade. */

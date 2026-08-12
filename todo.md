@@ -13,4 +13,7 @@
 - [x] Redesenhar a home com uma primeira dobra mais visual, escura e direta.
 - [x] Antecipar a galeria de trabalhos e reduzir a aparência de landing page tradicional.
 - [x] Reforçar navegação horizontal, CTA e ritmo de catálogo visual sem copiar a referência.
-- [x] Validar a diferença visual em desktop e mobile antes de salvar novo checkpoint.
+- [x] Validar a edição visual em desktop e mobile antes de salvar novo checkpoint.
+- [x] Incorporar a segunda referência enricodeiana.design na composição e no ritmo da home.
+- [x] Reorganizar a narrativa para aproximar portfolio, pessoa, habilidades e CV.
+- [x] Validar a síntese das referências sem copiar identidade, texto ou ativos.

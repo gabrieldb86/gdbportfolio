@@ -120,6 +120,11 @@ export default function CV() {
           </div>
         </section>
 
+        <section className="cv-toolstrip-section">
+          <div className="cv-toolstrip-label"><span>03</span><p className="section-kicker">Como trabalho</p></div>
+          <div className="cv-toolstrip"><span>Curiosidade</span><span>Clareza</span><span>Ritmo</span><span>Colaboração</span><span>Repertório</span><span>Entrega</span></div>
+        </section>
+
         <section className="cv-experience-section section-pad" aria-labelledby="experience-title">
           <div className="section-index"><span>02</span><span className="index-line" /></div>
           <div className="cv-experience-content">
@@ -140,6 +145,8 @@ export default function CV() {
           <img src={profilePhoto} alt="" loading="lazy" />
         </section>
       </main>
+
+      <a className="floating-contact floating-contact-cv" href="/#contact"><span>Fale comigo</span><ArrowUpRight size={16} /></a>
 
       <footer className="site-footer">
         <a className="footer-brand" href="/" onClick={scrollTop}><span className="brand-symbol footer-symbol" aria-hidden="true"><img src={mark} alt="" className="brand-mark-source" /><span className="symbol-bar symbol-bar-a" /><span className="symbol-bar symbol-bar-b" /><span className="symbol-bar symbol-bar-c" /></span> <span>Gabriel Danino Basilio</span></a>
