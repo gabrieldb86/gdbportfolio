@@ -547,3 +547,77 @@ h1 em, h2 em { color: var(--primary); font-style: italic; }
   .editor-bottom-callout { align-items: flex-start; flex-wrap: wrap; }
   .editor-bottom-callout a { width: 100%; margin-left: 35px; }
 }
+
+/* Redesign visual — nova composição de portfólio de autor, com primeira dobra assimétrica e fotografia dominante. */
+.site-header-redesign { position: absolute; color: #f4eee6; }
+.site-header-redesign.site-header-scrolled { position: fixed; background: rgba(18, 18, 17, .92); border-color: #3d3935; }
+.site-header-redesign .brand-name, .site-header-redesign .site-nav a, .site-header-redesign .header-availability { color: #f4eee6; }
+.site-header-redesign .site-nav span { color: #cf7b73; }
+.hero-redesign { min-height: min(900px, 100vh); display: grid; grid-template-columns: 48px minmax(330px, .88fr) minmax(390px, .72fr); grid-template-rows: 1fr auto; align-items: center; gap: 6vw; padding: 155px 7vw 38px 2.2vw; background: #181817; color: #f4eee6; }
+.hero-redesign-meta { align-self: stretch; display: flex; flex-direction: column; justify-content: space-between; padding: 20px 0 2px; border-right: 1px solid #4d4742; color: #a99d91; font-size: 9px; letter-spacing: .15em; text-transform: uppercase; writing-mode: vertical-rl; transform: rotate(180deg); }
+.hero-redesign-copy { max-width: 670px; }
+.hero-redesign-copy .eyebrow { margin-bottom: 25px; color: #cf7b73; }
+.hero-redesign-copy h1 { margin: 0; font-family: "Manrope", sans-serif; font-size: clamp(4.4rem, 8vw, 8.8rem); font-weight: 800; letter-spacing: -.09em; line-height: .8; text-transform: uppercase; }
+.hero-redesign-copy h1 em { color: #cf7b73; font-family: "DM Serif Display", serif; font-weight: 400; letter-spacing: -.07em; text-transform: lowercase; }
+.hero-redesign-intro { max-width: 310px; margin: 42px 0 28px; color: #aaa097; font-size: 13px; line-height: 1.7; }
+.hero-cta-redesign { color: #f4eee6; }
+.hero-redesign-portrait { position: relative; align-self: center; width: 100%; max-width: 540px; aspect-ratio: .82; overflow: hidden; background: #57514b; transform: rotate(2deg); }
+.hero-redesign-portrait::after { position: absolute; inset: 17px; border: 1px solid rgba(244, 238, 230, .7); content: ""; pointer-events: none; }
+.hero-redesign-portrait img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center 16%; filter: saturate(.86); transition: transform 700ms cubic-bezier(.23,1,.32,1); }
+.hero-redesign-portrait:hover img { transform: scale(1.04); }
+.portrait-stamp { position: absolute; z-index: 2; right: 21px; bottom: 22px; color: #f4eee6; font-size: 9px; letter-spacing: .15em; line-height: 1.7; text-align: right; text-transform: uppercase; }
+.portrait-stamp b { color: #cf7b73; font-weight: 700; }
+.hero-redesign-bottom { grid-column: 2 / -1; display: grid; grid-template-columns: 1fr 1fr 44px; align-items: center; gap: 30px; padding-top: 18px; border-top: 1px solid #4d4742; color: #a99d91; font-size: 9px; letter-spacing: .14em; text-transform: uppercase; }
+.hero-redesign-bottom button { display: grid; width: 40px; height: 40px; place-items: center; border: 1px solid #cf7b73; border-radius: 50%; background: transparent; color: #cf7b73; transition: color 180ms ease-out, background 180ms ease-out, transform 180ms ease-out; }
+.hero-redesign-bottom button:hover { background: #d73332; color: #fff9f2; transform: rotate(-20deg); }
+.work-redesign { padding-top: 112px; background: #e9dfd5; color: #1b1a19; }
+.work-redesign-heading { display: grid; grid-template-columns: 100px minmax(290px, 1fr) minmax(180px, .55fr) auto; align-items: end; gap: 4vw; margin-bottom: 67px; }
+.work-redesign-heading .section-kicker { margin-bottom: 22px; color: #b72529; }
+.work-redesign-heading h2 { margin: 0; font-size: clamp(4.2rem, 7vw, 7.7rem); line-height: .83; }
+.work-redesign-heading h2 em { color: #b72529; }
+.work-redesign-heading > p { max-width: 270px; margin: 0 0 7px; color: #756b63; font-size: 12px; line-height: 1.65; }
+.work-redesign-heading .behance-link { margin-bottom: 10px; color: #1b1a19; white-space: nowrap; }
+.work-redesign-index { display: flex; flex-direction: column; gap: 12px; align-self: stretch; padding-top: 8px; color: #b72529; font-size: 10px; font-weight: 700; letter-spacing: .14em; }
+.work-redesign .projects-grid { gap: 86px 26px; }
+.work-redesign .project-card { position: relative; }
+.work-redesign .project-card:nth-child(2) { margin-top: 150px; }
+.work-redesign .project-card:nth-child(3) { margin-top: -5px; }
+.work-redesign .project-card:nth-child(4) { margin-top: 115px; }
+.work-redesign .project-card:nth-child(5) { margin-top: 0; }
+.work-redesign .project-card:nth-child(6) { margin-top: 160px; }
+.work-redesign .project-image-wrap { background: #cfc0b4; }
+.work-redesign .project-caption { grid-template-columns: 35px 1fr auto; }
+.work-redesign .project-caption h3 { font-family: "DM Serif Display", serif; font-size: 20px; font-weight: 400; }
+.work-redesign .project-caption p { color: #756b63; }
+.work-redesign .project-credit { color: #b72529; }
+.work-redesign .project-number { color: #b72529; }
+.work-redesign .project-arrow { border-radius: 0; }
+
+@media (max-width: 1024px) {
+  .hero-redesign { grid-template-columns: 38px minmax(300px, .95fr) minmax(300px, .72fr); gap: 4vw; padding-right: 5vw; }
+  .hero-redesign-copy h1 { font-size: clamp(4.1rem, 8.2vw, 7.5rem); }
+  .work-redesign-heading { grid-template-columns: 75px 1fr .55fr; }
+  .work-redesign-heading .behance-link { grid-column: 2 / -1; justify-self: start; }
+}
+
+@media (max-width: 720px) {
+  .site-header-redesign { position: absolute; background: #181817; }
+  .site-header-redesign.site-header-scrolled { position: fixed; background: rgba(24, 24, 23, .95); }
+  .site-header-redesign .site-nav { background: #181817; border-color: #3d3935; }
+  .hero-redesign { min-height: auto; display: grid; grid-template-columns: 1fr; grid-template-rows: auto; gap: 37px; padding: 130px 20px 32px; }
+  .hero-redesign-meta { display: none; }
+  .hero-redesign-copy { order: 1; }
+  .hero-redesign-copy h1 { font-size: clamp(4rem, 17vw, 6.8rem); line-height: .82; }
+  .hero-redesign-intro { margin-top: 34px; }
+  .hero-redesign-portrait { order: 2; width: 82%; margin-left: auto; aspect-ratio: .82; }
+  .hero-redesign-bottom { order: 3; grid-column: 1; grid-template-columns: 1fr 40px; gap: 12px; padding-top: 15px; }
+  .hero-redesign-bottom span:nth-child(2) { display: none; }
+  .work-redesign { padding-top: 75px; }
+  .work-redesign-heading { display: block; margin-bottom: 52px; }
+  .work-redesign-index { display: flex; flex-direction: row; gap: 12px; margin-bottom: 39px; }
+  .work-redesign-heading h2 { font-size: clamp(3.8rem, 16vw, 6.3rem); }
+  .work-redesign-heading > p { margin-top: 31px; }
+  .work-redesign-heading .behance-link { margin-top: 26px; }
+  .work-redesign .project-card:nth-child(n) { margin-top: 0; margin-bottom: 50px; }
+  .work-redesign .project-image-wrap, .work-redesign .project-wide .project-image-wrap, .work-redesign .project-tall .project-image-wrap { aspect-ratio: 1.05; }
+}

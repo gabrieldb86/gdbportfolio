@@ -79,7 +79,7 @@ export default function Home() {
 
   return (
     <div className="site-shell home-revision" style={{ "--primary": siteConfig.brand.accent, "--background": siteConfig.brand.background, "--foreground": siteConfig.brand.foreground } as CSSProperties}>
-      <header className={`site-header ${scrolled ? "site-header-scrolled" : ""}`}>
+      <header className={`site-header site-header-redesign ${scrolled ? "site-header-scrolled" : ""}`}>
         <a className="brand-lockup" href="#top" onClick={(event) => { event.preventDefault(); scrollToId("top"); }}>
           <span className="brand-symbol" aria-hidden="true">
             <img src={siteConfig.generatedAssets.mark} alt="" className="brand-mark-source" />
@@ -111,24 +111,19 @@ export default function Home() {
       </aside>
 
       <main id="top">
-        <section className="hero-section">
-          <div className="hero-copy">
+        <section className="hero-section hero-redesign">
+          <div className="hero-redesign-meta"><span>GDB / 2026</span><span>São Paulo · Brasil</span></div>
+          <div className="hero-redesign-copy">
             <p className="eyebrow"><span className="eyebrow-mark">●</span> {siteConfig.hero.eyebrow}</p>
-            <h1>{renderHeadline(siteConfig.hero.headline)}</h1>
-            <div className="hero-bottomline">
-              <p className="hero-intro">{siteConfig.hero.intro}</p>
-              <div className="hero-actions-revised">
-                <a className="hero-cta" href="#work" onClick={(event) => { event.preventDefault(); scrollToId("work"); }}>Ver trabalhos <ArrowUpRight size={16} /></a>
-                <button className="round-scroll" type="button" onClick={() => scrollToId("work")} aria-label="Ver trabalhos"><MoveDownRight size={22} strokeWidth={1.2} /></button>
-              </div>
-            </div>
+            <h1>Conteúdo,<br /><em>design</em> &amp;<br />materiais.</h1>
+            <p className="hero-redesign-intro">{siteConfig.hero.intro}</p>
+            <a className="hero-cta hero-cta-redesign" href="#work" onClick={(event) => { event.preventDefault(); scrollToId("work"); }}>Explorar trabalho <ArrowUpRight size={16} /></a>
           </div>
-          <div className="hero-art">
-            <div className="hero-art-surface"><img src={siteConfig.generatedAssets.hero} alt="" /></div>
-            <div className="hero-work-plate"><img src={siteConfig.profilePhoto} alt="Gabriel Danino Basilio" /></div>
-            <div className="hero-art-note"><span>GDB / portrait</span><span>São Paulo / 2026</span></div>
+          <div className="hero-redesign-portrait">
+            <img src={siteConfig.profilePhoto} alt="Gabriel Danino Basilio" />
+            <span className="portrait-stamp">01 / 05<br /><b>Selected folio</b></span>
           </div>
-          <div className="hero-index">01 <span>—</span> 05</div>
+          <div className="hero-redesign-bottom"><span>17 anos de experiência</span><span>Conteudista · Designer · Criador</span><button type="button" onClick={() => scrollToId("work")} aria-label="Descer para os projetos"><MoveDownRight size={20} /></button></div>
         </section>
 
         <div className="portfolio-marquee" aria-hidden="true">
@@ -147,14 +142,12 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="work" className="work-section section-pad" aria-labelledby="work-title">
-          <div className="section-heading">
-            <div className="section-index"><span>02</span><span className="index-line" /></div>
-            <div>
-              <p className="section-kicker">Selected work / projetos selecionados</p>
-              <h2 id="work-title">Trabalho que<br /><em>fala por si.</em></h2>
-            </div>
-            <a className="behance-link" href="https://www.behance.net/gabrieldb86" target="_blank" rel="noreferrer">Ver Behance completo <ArrowUpRight size={15} /></a>
+        <section id="work" className="work-section work-redesign section-pad" aria-labelledby="work-title">
+          <div className="work-redesign-heading">
+            <div className="work-redesign-index"><span>02</span><span>/ WORK</span></div>
+            <div><p className="section-kicker">Selected work</p><h2 id="work-title">Projetos que<br /><em>ganharam forma.</em></h2></div>
+            <p>Uma seleção de conteúdo, design, eventos e materiais criada para comunicar melhor, vender melhor e ser lembrada.</p>
+            <a className="behance-link" href="https://www.behance.net/gabrieldb86" target="_blank" rel="noreferrer">Abrir Behance <ArrowUpRight size={15} /></a>
           </div>
 
           <div className="projects-grid">
