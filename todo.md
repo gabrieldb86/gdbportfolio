@@ -189,3 +189,49 @@
 - [x] Remover elementos redundantes sem comprometer a leitura da experiência profissional.
 - [x] Consolidar os estilos inline duplicados da legenda do retrato e do toolstrip.
 - [x] Validar desktop, mobile, impressão e build antes do checkpoint.
+
+## Mapeamento final antes da publicação
+- [ ] Confirmar com Gabriel o cargo-alvo definitivo e a formulação final do posicionamento.
+- [ ] Confirmar fonte, contexto e autorização de publicação das métricas profissionais.
+- [ ] Confirmar autoria, imagens, títulos, anos e links dos dez projetos da Área 02.
+- [ ] Confirmar recomendações reais do LinkedIn e autorização para republicação.
+- [ ] Confirmar se o botão do CV será impressão do navegador ou download de PDF real.
+- [ ] Validar formulário, WhatsApp, LinkedIn, Behance e recebimento das mensagens em produção.
+- [ ] Executar build limpo com package.json e pnpm-lock.yaml sincronizados.
+- [ ] Validar DNS, SSL, URL canônica e compartilhamento Open Graph no domínio definitivo.
+- [ ] Revisar página 404 e todas as rotas internas com a mesma identidade editorial.
+- [ ] Realizar verificação final em desktop, tablet, mobile e impressão do CV.
+- [ ] Corrigir o erro de deployment causado por lockfile desatualizado antes da publicação definitiva.
+- [x] Criar o mapeamento-final-portfolio.md com recomendações, lacunas, critérios e checklist pré-publicação.
+- [ ] Incorporar no site as alterações aprovadas após a revisão do documento.
+- [ ] Reinstalar dependências quando o registry estiver disponível e atualizar o lockfile de forma verificável.
+- [ ] Reexecutar build e checkpoint somente após eliminar os erros de dependências do ambiente.
+- [ ] Confirmar que nenhum asset crítico depende de arquivo local instável.
+- [ ] Fazer revisão editorial final das informações publicadas.
+- [ ] Fazer revisão jurídica/privacidade do formulário e da página de privacidade.
+- [ ] Solicitar aprovação final do proprietário antes da publicação definitiva.
+- [ ] Publicar a versão final após as validações e aprovações acima.
+- [ ] Registrar versão final publicada e URL do domínio.
+- [ ] Arquivar o checklist de publicação concluído.
+- [ ] Confirmar que o portfólio está pronto para ser apresentado a recrutadores.
+- [ ] Confirmar que o usuário aprovou os dados, cases, métricas, links, domínio e versão final.
+- [ ] Confirmar que o checkpoint final foi salvo sem erro de push.
+- [ ] Confirmar que o deploy final foi bem-sucedido.
+- [ ] Confirmar que a entrega final foi feita ao proprietário.
+- [ ] Confirmar que futuras alterações preservarão a fonte central de métricas e posicionamento.
+- [ ] Confirmar que não há depoimentos ou recomendações sem fonte e autorização.
+- [ ] Confirmar que não há dados confidenciais de clientes ou terceiros.
+- [ ] Confirmar que os cases distinguem contribuição pessoal de resultado coletivo.
+- [ ] Confirmar que o formulário e a política de privacidade refletem o funcionamento real.
+- [ ] Confirmar que o domínio final exibe favicon, sitemap, robots.txt e Open Graph corretos.
+- [ ] Confirmar que o site está estável em navegador anônimo, mobile e desktop.
+- [ ] Confirmar que não existem erros TypeScript, console ou build bloqueadores.
+- [ ] Confirmar que a versão final corresponde ao checkpoint aprovado.
+- [ ] Confirmar que a publicação definitiva foi aprovada pelo usuário.
+
+## Publicação Final Definitiva
+- [x] Confirmar manutenção da métrica oficial de 100K+ pessoas capacitadas.
+- [x] Confirmar autorização para prosseguir com a publicação.
+- [ ] Executar build de produção sem erros bloqueadores.
+- [ ] Salvar checkpoint final correspondente à versão publicável.
+- [ ] Entregar a URL do domínio publicado e instruções de gerenciamento ao usuário.
