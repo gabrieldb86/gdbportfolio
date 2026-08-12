@@ -63,6 +63,13 @@ function ProjectCard({ project, revealDelay }: { project: ProjectConfig; revealD
 }
 
 export default function Home() {
+  // The useAuth hook provides authentication state.
+  // To implement login/logout, call logout(), or start login from an event
+  // handler: onClick={() => startLogin()} (imported from "@/const"). Never call
+  // startLogin() during render (no href={startLogin()}) — it mints a one-time
+  // nonce cookie and must run only at the moment of navigation.
+  let { user, loading, error, isAuthenticated, logout } = useAuth();
+
   const [siteConfig, setSiteConfig] = useState(() => getSiteConfig());
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -157,7 +164,7 @@ export default function Home() {
       </aside>
 
       <main id="top">
-        <section className="hero-section hero-redesign" style={{ height: "877px" }}>
+        <section className="hero-section hero-redesign">
           <div className="hero-redesign-panel" data-reveal="hero-copy">
             <div className="hero-redesign-copy">
               <p className="eyebrow"><span className="eyebrow-mark">●</span> {siteConfig.hero.eyebrow}</p>

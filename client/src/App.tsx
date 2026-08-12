@@ -10,8 +10,8 @@ import CaseStudy from "@/pages/CaseStudy";
 import Editor from "@/pages/Editor";
 import Home from "@/pages/Home";
 import Privacy from "@/pages/Privacy";
-
 function Router() {
+  // make sure to consider if you need authentication for certain routes
   return (
     <Switch>
       <Route path="/" component={Home} />
