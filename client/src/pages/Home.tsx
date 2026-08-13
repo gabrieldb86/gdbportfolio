@@ -13,6 +13,9 @@ import {
 } from "lucide-react";
 import { defaultSiteConfig, type ProjectConfig, getSiteConfig } from "@/data/siteConfig";
 import { Link } from "wouter";
+import WhatsAppPreviewModal from "@/components/WhatsAppPreviewModal";
+import PortfolioDashboardModal from "@/components/PortfolioDashboardModal";
+import { BarChart3, Share2 } from "lucide-react";
 
 function scrollToId(id: string, closeMenu?: () => void) {
   closeMenu?.();
@@ -64,7 +67,9 @@ function ProjectCard({ project, revealDelay }: { project: ProjectConfig; revealD
 }
 
 export default function Home() {
-  const [siteConfig, setSiteConfig] = useState(() => getSiteConfig());
+  const siteConfig = getSiteConfig();
+  const [isWhatsAppModalOpen, setIsWhatsAppModalOpen] = useState(false);
+  const [isDashboardModalOpen, setIsDashboardModalOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [sent, setSent] = useState(false);
@@ -83,11 +88,7 @@ export default function Home() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  useEffect(() => {
-    const syncConfig = () => setSiteConfig(getSiteConfig());
-    window.addEventListener("storage", syncConfig);
-    return () => window.removeEventListener("storage", syncConfig);
-  }, []);
+
 
   useLayoutEffect(() => {
     const root = document.documentElement;
@@ -342,6 +343,8 @@ export default function Home() {
               <p>Estou aberto a oportunidades em conteúdo, treinamento, trade marketing e performance de campo. Envie o contexto da posição ou fale comigo diretamente pelo LinkedIn, e-mail ou WhatsApp.</p>
               <div className="contact-links">
                 <a className="contact-direct" href="https://wa.me/5511945747353" data-umami-event="whatsapp-click" target="_blank" rel="noreferrer"><MessageCircle size={17} /> Falar diretamente com Gabriel <ArrowUpRight size={15} /></a>
+                <button type="button" onClick={() => setIsWhatsAppModalOpen(true)} className="contact-direct text-left" style={{ background: 'transparent', border: '1px solid rgba(255,255,255,0.15)', cursor: 'pointer', width: '100%' }}><Share2 size={17} className="text-[#d73332]" /> Ver preview e gerar mensagem para WhatsApp <ArrowUpRight size={15} /></button>
+                <button type="button" onClick={() => setIsDashboardModalOpen(true)} className="contact-direct text-left" style={{ background: 'transparent', border: '1px solid rgba(255,255,255,0.15)', cursor: 'pointer', width: '100%' }}><BarChart3 size={17} className="text-[#d73332]" /> Abrir Dashboard Diário de Acessos & Mercado <ArrowUpRight size={15} /></button>
                 <a className="contact-direct" href="https://www.linkedin.com/in/gabrieldb86" data-umami-event="linkedin-click" target="_blank" rel="noreferrer"><Linkedin size={17} /> Conectar pelo LinkedIn <ArrowUpRight size={15} /></a>
                 <a className="contact-direct" href="mailto:gabrieldb@me.com" data-umami-event="email-click"><Mail size={17} /> gabrieldb@me.com <ArrowUpRight size={15} /></a>
               </div>
@@ -374,6 +377,9 @@ export default function Home() {
         <div className="footer-socials"><a href="https://www.linkedin.com/in/gabrieldb86" target="_blank" rel="noreferrer" aria-label="LinkedIn"><Linkedin size={18} strokeWidth={1.75} /></a><a href="https://www.behance.net/gabrieldb86" target="_blank" rel="noreferrer" aria-label="Behance"><div style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '18px', height: '18px', border: '1.75px solid currentColor', borderRadius: '3px', fontSize: '10px', fontWeight: 800, lineHeight: 1 }}>Be</div></a><a href="https://wa.me/5511945747353" target="_blank" rel="noreferrer" aria-label="WhatsApp"><MessageCircle size={18} strokeWidth={1.75} /></a></div>
         <span className="footer-credit">© 2026 · Feito com intenção. · Foto de <a href="https://unsplash.com/pt-br/@scalzodesign?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noreferrer">Samuel Scalzo</a> na <a href="https://unsplash.com/pt-br/fotografias/uma-foto-em-preto-e-branco-de-um-edificio-xyuYk9oLA8I?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noreferrer">Unsplash</a></span>
       </footer>
+
+      <WhatsAppPreviewModal isOpen={isWhatsAppModalOpen} onClose={() => setIsWhatsAppModalOpen(false)} />
+      <PortfolioDashboardModal isOpen={isDashboardModalOpen} onClose={() => setIsDashboardModalOpen(false)} />
     </div>
   );
 }
