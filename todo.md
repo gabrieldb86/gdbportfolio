@@ -671,5 +671,10 @@
 - [x] Validar desktop, mobile, testes e build.
 
 ## Verificação tipográfica da seção de métricas
-- [ ] Validar a legibilidade dos textos com fontSize 16px em desktop e mobile.
-- [ ] Executar testes e build de produção.
+- [x] Validar a legibilidade dos textos com fontSize 16px em desktop e mobile.
+- [x] Executar testes e build de produção.
+
+## Redesenho da faixa de métricas (estilo contador horizontal)
+- [x] Auditar o componente de métricas em Home.tsx e seus estilos em index.css.
+- [x] Implementar a grade horizontal de 6 colunas com divisórias verticais discretas, alinhamento central e hierarquia tipográfica refinada (números grandes e rótulos em caixa alta).
+- [x] Validar desktop, mobile, testes e build.

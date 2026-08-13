@@ -2131,36 +2131,58 @@ a.proof-link, a.behance-link, a.text-link, .service-detail a {
 }
 
 
-/* Seção de prova social reformulada — Hero editorial para RH e lideranças. */
+/* Contador editorial para RH e lideranças — seis células uniformes, inspirado na referência enviada. */
 .recruiter-proof-wrap { background: #d73332; color: #fff9f2; padding-top: 56px; padding-bottom: 24px; border-top: 1px solid rgba(255, 249, 242, .22); }
 .recruiter-proof-header { max-width: 900px; padding: 0 8vw 36px; }
 .recruiter-proof-header .section-kicker { margin: 0 0 14px; color: #1c1b1a; font-size: 10px; letter-spacing: .2em; text-transform: uppercase; }
 .recruiter-proof-title { margin: 0; font-family: "DM Serif Display", serif; font-size: clamp(3.2rem, 5.2vw, 5.8rem); font-weight: 400; letter-spacing: -.055em; line-height: .9; }
 .recruiter-proof-title em { color: #1c1b1a; font-style: italic; }
 .recruiter-proof-desc { max-width: 580px; margin: 18px 0 0; color: rgba(255, 249, 242, .86); font-size: 13px; line-height: 1.6; }
-.recruiter-proof-strip { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); align-items: stretch; gap: 0; padding: 0 8vw; background: #d73332; color: #fff9f2; border-top: 1px solid rgba(255, 249, 242, .32); border-bottom: 1px solid rgba(255, 249, 242, .32); }
-.recruiter-proof-strip .proof-metric { display: flex; min-height: 140px; flex-direction: column; justify-content: center; padding: 22px 20px 20px 0; border-right: 1px solid rgba(255, 249, 242, .32); }
-.recruiter-proof-strip .proof-metric:nth-child(1) { padding-left: 0; }
-.recruiter-proof-strip .proof-metric:nth-child(n) { padding-left: 18px; }
-.recruiter-proof-strip .proof-metric strong { font-family: "DM Serif Display", serif; font-size: 38px; font-weight: 400; letter-spacing: -.06em; line-height: .9; }
-.recruiter-proof-strip .proof-metric strong span { color: #1c1b1a; font-family: "Manrope", sans-serif; font-size: 18px; }
-.recruiter-proof-strip .proof-metric > span { margin-top: 9px; color: rgba(255, 249, 242, .85); font-size: 9px; letter-spacing: .12em; text-transform: uppercase; line-height: 1.4; }
-.proof-tagline { display: block; margin-top: 6px; color: #1c1b1a; font-size: 8px; letter-spacing: .08em; text-transform: uppercase; }
-.proof-actions { display: flex; flex-direction: column; justify-content: center; gap: 12px; padding: 22px 0 20px 22px; }
-.recruiter-proof-strip .proof-link { display: inline-flex; align-items: center; justify-content: space-between; gap: 8px; padding: 0; border-right: 0; color: #1c1b1a; font-size: 10px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; white-space: nowrap; }
+.recruiter-proof-strip { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)) minmax(180px, 1.05fr); align-items: stretch; gap: 0; padding: 0 8vw; background: #d73332; color: #fff9f2; border-top: 1px solid rgba(255, 249, 242, .32); border-bottom: 1px solid rgba(255, 249, 242, .32); }
+.recruiter-proof-strip .proof-metric { display: flex; min-width: 0; min-height: 190px; flex-direction: column; align-items: flex-start; justify-content: center; padding: 27px 23px; border-right: 1px solid rgba(255, 249, 242, .32); }
+.recruiter-proof-strip .proof-metric:first-child { padding-left: 0; }
+.recruiter-proof-strip .proof-metric-icon { flex: 0 0 auto; margin-bottom: 19px; color: rgba(255, 249, 242, .48); }
+.recruiter-proof-strip .proof-metric strong { display: block; font-family: "DM Serif Display", serif; font-size: clamp(2.4rem, 3.5vw, 3.55rem); font-weight: 400; letter-spacing: -.055em; line-height: .86; }
+.recruiter-proof-strip .proof-number-suffix { color: #fff9f2; font-family: "DM Serif Display", serif; font-size: .68em; }
+.recruiter-proof-strip .proof-metric-label { display: block; margin-top: 15px; color: rgba(255, 249, 242, .9); font-size: 9px; font-weight: 700; letter-spacing: .14em; line-height: 1.45; text-transform: uppercase; }
+.proof-tagline { display: block; max-width: 190px; margin-top: 7px; color: rgba(28, 27, 26, .82); font-size: 8px; letter-spacing: .08em; line-height: 1.35; text-transform: uppercase; }
+.proof-actions { display: flex; min-width: 0; flex-direction: column; justify-content: center; gap: 16px; padding: 27px 0 27px 25px; }
+.proof-action-icon { margin-bottom: 5px; color: rgba(255, 249, 242, .48); }
+.recruiter-proof-strip .proof-link { display: inline-flex; align-items: center; justify-content: space-between; gap: 12px; width: 100%; padding: 0; color: #1c1b1a; font-size: 10px; font-weight: 700; letter-spacing: .1em; line-height: 1.4; text-transform: uppercase; }
 .recruiter-proof-strip .proof-link-alt { color: #fff9f2; }
+.recruiter-proof-strip .proof-link svg { flex: 0 0 auto; }
 
-@media (max-width: 1024px) {
+@media (max-width: 1100px) {
   .recruiter-proof-strip { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .recruiter-proof-strip .proof-metric:nth-child(3), .recruiter-proof-strip .proof-actions { border-top: 1px solid rgba(255, 249, 242, .32); }
   .recruiter-proof-strip .proof-metric:nth-child(3) { border-right: 0; }
-  .recruiter-proof-strip .proof-metric:nth-child(4), .recruiter-proof-strip .proof-metric:nth-child(5), .recruiter-proof-strip .proof-actions { border-top: 1px solid rgba(255, 249, 242, .32); padding-top: 24px; }
+  .recruiter-proof-strip .proof-metric:nth-child(4), .recruiter-proof-strip .proof-metric:nth-child(5), .recruiter-proof-strip .proof-actions { padding-top: 25px; }
+  .recruiter-proof-strip .proof-actions { grid-column: span 3; flex-direction: row; align-items: center; gap: 28px; padding-left: 0; }
+  .recruiter-proof-strip .proof-actions .proof-action-icon { display: none; }
+  .recruiter-proof-strip .proof-actions .proof-link { width: auto; min-width: 190px; }
 }
 
 @media (max-width: 720px) {
+  .recruiter-proof-wrap { padding-top: 44px; padding-bottom: 18px; }
   .recruiter-proof-header { padding: 0 20px 28px; }
-  .recruiter-proof-strip { grid-template-columns: repeat(2, 1fr); padding: 0 20px; }
-  .recruiter-proof-strip .proof-metric { min-height: 110px; padding: 18px 12px 16px 0; }
-  .proof-actions { grid-column: 1 / -1; border-top: 1px solid rgba(255, 249, 242, .32); padding: 20px 0; flex-direction: row; gap: 24px; }
+  .recruiter-proof-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); padding: 0 20px; }
+  .recruiter-proof-strip .proof-metric { min-height: 155px; padding: 23px 13px 21px 0; }
+  .recruiter-proof-strip .proof-metric:nth-child(odd) { border-right: 1px solid rgba(255, 249, 242, .32); }
+  .recruiter-proof-strip .proof-metric:nth-child(even) { border-right: 0; padding-left: 13px; }
+  .recruiter-proof-strip .proof-metric:nth-child(n + 3) { border-top: 1px solid rgba(255, 249, 242, .32); }
+  .recruiter-proof-strip .proof-metric-icon { margin-bottom: 14px; }
+  .recruiter-proof-strip .proof-metric strong { font-size: clamp(2.3rem, 12vw, 3.25rem); }
+  .recruiter-proof-strip .proof-metric-label { margin-top: 12px; font-size: 8px; letter-spacing: .11em; }
+  .proof-tagline { max-width: 145px; font-size: 7px; }
+  .recruiter-proof-strip .proof-actions { grid-column: 1 / -1; flex-direction: row; align-items: center; gap: 22px; border-top: 1px solid rgba(255, 249, 242, .32); padding: 21px 0 18px; }
+  .recruiter-proof-strip .proof-actions .proof-link { min-width: 0; flex: 1; font-size: 9px; }
+}
+
+@media (max-width: 430px) {
+  .recruiter-proof-strip { padding: 0 16px; }
+  .recruiter-proof-strip .proof-metric { min-height: 145px; }
+  .recruiter-proof-strip .proof-actions { align-items: flex-start; flex-direction: column; gap: 13px; }
+  .recruiter-proof-strip .proof-actions .proof-link { width: 100%; }
 }
 
 
