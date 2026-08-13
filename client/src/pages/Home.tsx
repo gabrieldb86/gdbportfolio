@@ -164,7 +164,7 @@ export default function Home() {
             </div>
           </div>
           <div className="hero-redesign-portrait" data-reveal="hero-portrait">
-            <img src={siteConfig.profilePhoto} alt="Gabriel Danino Basilio" onError={markBrokenImage} />
+            <img src={siteConfig.profilePhoto} alt="Gabriel Danino Basilio" loading="eager" fetchPriority="high" decoding="sync" onError={markBrokenImage} />
           </div>
         </section>
 

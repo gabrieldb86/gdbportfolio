@@ -505,15 +505,15 @@
 - [x] Validar desktop, mobile vertical e mobile horizontal, executar testes/build e salvar checkpoint.
 
 ## Equalização das divisórias de Focos de coordenação
-- [ ] Auditar a estrutura atual das linhas verticais e a altura das colunas.
-- [ ] Aplicar uma altura comum baseada no maior conteúdo das três colunas.
-- [ ] Preservar a remoção das linhas em mobile quando a seção empilha verticalmente.
-- [ ] Validar desktop, mobile, testes/build e salvar checkpoint.
+- [x] Auditar a estrutura atual das linhas verticais e a altura das colunas. (superseded pela restauração visual solicitada)
+- [x] Aplicar uma altura comum baseada no maior conteúdo das três colunas. (superseded pela restauração visual solicitada)
+- [x] Preservar a remoção das linhas em mobile quando a seção empilha verticalmente. (superseded pela restauração visual solicitada)
+- [x] Validar desktop, mobile, testes/build e salvar checkpoint. (validado no checkpoint restaurado)
 
 ## Verificação do botão Abrir trajetória
-- [ ] Remover estilos duplicados gerados pelo editor visual no botão e em seus elementos internos.
-- [ ] Manter o fundo carmim `#d73332` apenas no botão, com texto e seta em ivory.
-- [ ] Validar contraste, desktop, mobile, testes/build e salvar checkpoint.
+- [x] Remover estilos duplicados gerados pelo editor visual no botão e em seus elementos internos. (estado visual restaurado para eac276ad)
+- [x] Manter o fundo carmim `#d73332` apenas no botão, com texto e seta em ivory. (estado visual restaurado para eac276ad)
+- [x] Validar contraste, desktop, mobile, testes/build e salvar checkpoint. (validado no checkpoint restaurado)
 
 ## Redesenho da seção de números (sem caixas rígidas)
 - [x] Remover o formato de tabela em colunas rígidas da seção de prova para líderes e RH.
@@ -528,10 +528,10 @@
 - [x] Validar testes/build e salvar checkpoint.
 
 ## Restauração da versão anterior aprovada
-- [ ] Identificar o checkpoint que corresponde à composição visual aprovada pelo usuário.
-- [ ] Restaurar o projeto para esse checkpoint sem apagar histórico.
-- [ ] Validar visualmente Home, desktop e mobile e executar testes/build.
-- [ ] Salvar ou confirmar o checkpoint restaurado e entregar a versão para ajustes manuais.
+- [x] Identificar o checkpoint que corresponde à composição visual aprovada pelo usuário. (o usuário definiu eac276ad como referência)
+- [x] Restaurar o projeto para esse checkpoint sem apagar histórico. (restauração seletiva da camada visual aplicada)
+- [x] Validar visualmente Home, desktop e mobile e executar testes/build.
+- [x] Salvar ou confirmar o checkpoint restaurado e entregar a versão para ajustes manuais.
 
 ## Simplificação para ajustes manuais fáceis
 - [x] Centralizar textos, métricas e caminhos de imagens em `siteConfig.ts`.
@@ -543,4 +543,11 @@
 - [x] Extrair `Home.tsx` e `index.css` do checkpoint `eac276ad`.
 - [x] Mesclar as regras visuais restauradas com as correções de conteúdo (114K+ e privacidade) em `siteConfig.ts` e `CV.tsx`.
 - [x] Executar testes, typecheck e build de produção para garantir estabilidade.
-- [ ] Salvar checkpoint da restauração seletiva e entregar o resultado visual.
+- [x] Salvar checkpoint da restauração seletiva e entregar o resultado visual.
+
+## Otimização de desempenho e PageSpeed Mobile
+- [x] Analisar os principais fatores de impacto mobile (LCP, CLS, TBT, imagens e JS não utilizado).
+- [x] Aplicar otimizações de carregamento em `index.html`, `Home.tsx` e `index.css`.
+- [x] Garantir que o carregamento diferido e os tamanhos fixed de imagem eliminem layout shifts (CLS).
+- [x] Executar testes, typecheck e build de produção com chunking otimizado.
+- [x] Salvar checkpoint de desempenho mobile e entregar o relatório de melhorias.
