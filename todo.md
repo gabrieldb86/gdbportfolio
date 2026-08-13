@@ -608,3 +608,8 @@
 - [x] Ajustar o layout da segunda sessão para duas colunas nítidas: título/contexto à esquerda e lista vertical de 3 itens à direita.
 - [x] Garantir separadores horizontais entre os itens 01, 02 e 03, com sinal de mais (+) no canto superior direito de cada faixa.
 - [x] Validar desktop, mobile, testes e build antes do checkpoint.
+
+## Correção verificável após discrepância visual
+- [x] Ajustar a altura e o respiro vertical da segunda sessão para que a composição tenha presença semelhante ao print.
+- [x] Fixar proporções explícitas e estáveis para a coluna editorial esquerda e a lista direita, sem depender do editor visual.
+- [x] Confirmar no preview renderizado que os três itens aparecem como faixas horizontais completas, com os `+` no extremo direito.
