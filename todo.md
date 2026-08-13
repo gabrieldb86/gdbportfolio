@@ -657,3 +657,7 @@
 - [x] Desfazer apenas a modificação de grid da services-section na última rodada.
 - [x] Restaurar o estado anterior da seção ("Coordenação que vira resultado").
 - [x] Validar desktop, mobile, testes e build.
+
+## Revisão da grade vermelha
+- [x] Remover estilos inline duplicados e margens negativas em Home.tsx.
+- [x] Validar desktop, mobile, testes e build.
