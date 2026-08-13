@@ -2260,3 +2260,45 @@ a.proof-link, a.behance-link, a.text-link, .service-detail a {
     transform: rotate(2deg);
   }
 }
+
+/* Ajustes finais solicitados nos prints: ritmo tipográfico e divisórias proporcionais ao conteúdo. */
+.about-principles {
+  align-items: start;
+}
+.about-principles > div {
+  display: grid;
+  grid-template-rows: 18px minmax(40px, auto) auto;
+  align-content: start;
+  gap: 9px;
+}
+.about-principles strong {
+  font-size: 16px;
+  line-height: 1.25;
+}
+.about-principles p {
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+@media (min-width: 901px) {
+  .home-revision .coordination-focus-item {
+    align-self: start;
+    min-height: 0;
+    border-right: 0;
+  }
+  .home-revision .coordination-focus-item:not(:last-child)::after {
+    position: absolute;
+    top: 3px;
+    right: 0;
+    bottom: 0;
+    width: 1px;
+    background: rgba(255, 249, 242, .38);
+    content: "";
+  }
+}
+
+@media (max-width: 720px) {
+  .about-principles > div {
+    grid-template-rows: auto auto auto;
+  }
+}

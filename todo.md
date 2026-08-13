@@ -489,3 +489,10 @@
 - [x] Consolidar as intenções visuais em JSX válido e responsivo, sem perder legibilidade, cores e alinhamento.
 - [x] Validar Home em desktop, mobile vertical e mobile horizontal.
 - [x] Executar testes, typecheck e build e salvar checkpoint.
+
+## Ajustes solicitados pelos prints recentes
+- [x] Restaurar a altura e a proporção anteriores do Hero, sem perder a legibilidade do texto.
+- [x] Alinhar verticalmente os três princípios da seção Sobre mim para eliminar o efeito de escada.
+- [x] Padronizar tipografia, tamanho, peso, espaçamento e alinhamento dos textos das caixas editoriais.
+- [x] Reduzir as linhas verticais para acompanharem a altura real do conteúdo, sem preencher toda a caixa.
+- [x] Validar desktop, mobile vertical e mobile horizontal, executar testes/build e salvar checkpoint.

@@ -153,7 +153,7 @@ export default function Home() {
       </aside>
 
       <main id="top">
-        <section className="hero-section hero-redesign" style={{height: '850px'}}>
+        <section className="hero-section hero-redesign">
           <div className="hero-redesign-panel" data-reveal="hero-copy">
             <div className="hero-redesign-copy">
               <p className="eyebrow" style={{fontSize: '14px'}}>{siteConfig.hero.eyebrow}</p>
@@ -168,44 +168,44 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="coordination-focus-band" aria-labelledby="coordination-focus-title" style={{height: '900px'}}>
+        <section className="coordination-focus-band" aria-labelledby="coordination-focus-title">
           <div className="coordination-focus-label" data-reveal="focus-label">
-            <p className="section-kicker" style={{ fontSize: "17px" }}>Focos de coordenação</p>
+            <p className="section-kicker">Focos de coordenação</p>
             <h2 id="coordination-focus-title">Três frentes para transformar <em>método em execução.</em></h2>
-            <p className="coordination-focus-note" style={{ fontSize: "18px", marginTop: "18px" }}>Da narrativa do conteúdo à operação de campo, cada frente conecta clareza, capacitação e resultado.</p>
+            <p className="coordination-focus-note">Da narrativa do conteúdo à operação de campo, cada frente conecta clareza, capacitação e resultado.</p>
           </div>
           <div className="coordination-focus-grid">
             <article className="coordination-focus-item" data-reveal="focus-item" data-reveal-delay="80">
-              <div className="coordination-focus-item-top" style={{fontSize: '16px'}}><span style={{fontSize: '16px'}}>01</span><ArrowUpRight size={18} aria-hidden="true" style={{fontSize: '16px'}} /></div>
-              <strong style={{fontSize: '20px'}}>Conteúdo &amp; Treinamento</strong>
-              <p style={{fontSize: '16px'}}>Instructional Design com ADDIE, Kirkpatrick e Learning Experience Design (LXD).</p>
+              <div className="coordination-focus-item-top"><span>01</span><ArrowUpRight size={18} aria-hidden="true" /></div>
+              <strong>Conteúdo &amp; Treinamento</strong>
+              <p>Instructional Design com ADDIE, Kirkpatrick e Learning Experience Design (LXD).</p>
               <ul className="coordination-focus-highlights">
-                <li style={{fontSize: '14px'}}>114 mil+ pessoas capacitadas ao longo da carreira</li>
-                <li style={{fontSize: '14px'}}>8 anos como pioneiro do Today at Apple no Brasil</li>
-                <li style={{fontSize: '14px'}}>Ferramenta própria de avaliação com IA generativa</li>
-                <li style={{fontSize: '14px'}}>Trilhas de aprendizagem, e-learning e microlearning</li>
+                <li>114 mil+ pessoas capacitadas ao longo da carreira</li>
+                <li>8 anos como pioneiro do Today at Apple no Brasil</li>
+                <li>Ferramenta própria de avaliação com IA generativa</li>
+                <li>Trilhas de aprendizagem, e-learning e microlearning</li>
               </ul>
             </article>
             <article className="coordination-focus-item" data-reveal="focus-item" data-reveal-delay="140">
-              <div className="coordination-focus-item-top" style={{fontSize: '16px'}}><span style={{fontSize: '16px'}}>02</span><ArrowUpRight size={18} aria-hidden="true" style={{fontSize: '16px'}} /></div>
-              <strong style={{fontSize: '20px'}}>Trade Marketing &amp; Campo</strong>
-              <p style={{fontSize: '16px'}}>Campanhas de incentivo de ponta a ponta, do briefing à modelagem financeira.</p>
+              <div className="coordination-focus-item-top"><span>02</span><ArrowUpRight size={18} aria-hidden="true" /></div>
+              <strong>Trade Marketing &amp; Campo</strong>
+              <p>Campanhas de incentivo de ponta a ponta, do briefing à modelagem financeira.</p>
               <ul className="coordination-focus-highlights">
-                <li style={{fontSize: '14px'}}>Dashboards de KPI para 130+ promotores em campo</li>
-                <li style={{fontSize: '14px'}}>Nota média de avaliação: 8,3</li>
-                <li style={{fontSize: '14px'}}>Execução em PDV, merchandising e gestão de redes/franquias</li>
-                <li style={{fontSize: '14px'}}>Análise de risco orçamentário e PDCA</li>
+                <li>Dashboards de KPI para 130+ promotores em campo</li>
+                <li>Nota média de avaliação: 8,3</li>
+                <li>Execução em PDV, merchandising e gestão de redes/franquias</li>
+                <li>Análise de risco orçamentário e PDCA</li>
               </ul>
             </article>
             <article className="coordination-focus-item" data-reveal="focus-item" data-reveal-delay="200">
-              <div className="coordination-focus-item-top" style={{fontSize: '16px'}}><span style={{fontSize: '16px'}}>03</span><ArrowUpRight size={18} aria-hidden="true" style={{fontSize: '16px'}} /></div>
-              <strong style={{fontSize: '18px'}}>T&amp;D de Pessoas</strong>
-              <p style={{fontSize: '16px'}}>Onboarding, avaliação de desempenho e desenvolvimento de equipes de campo.</p>
+              <div className="coordination-focus-item-top"><span>03</span><ArrowUpRight size={18} aria-hidden="true" /></div>
+              <strong>T&amp;D de Pessoas</strong>
+              <p>Onboarding, avaliação de desempenho e desenvolvimento de equipes de campo.</p>
               <ul className="coordination-focus-highlights">
-                <li style={{fontSize: '14px'}}>Metodologia 9Box e ciclos de PDCA</li>
-                <li style={{fontSize: '14px'}}>Facilitação premiada (maiores indicadores de NPS na Apple)</li>
-                <li style={{fontSize: '14px'}}>Programas de capacitação e certificação</li>
-                <li style={{fontSize: '15px'}}>Gestão de stakeholders e fornecedores</li>
+                <li>Metodologia 9Box e ciclos de PDCA</li>
+                <li>Facilitação premiada (maiores indicadores de NPS na Apple)</li>
+                <li>Programas de capacitação e certificação</li>
+                <li>Gestão de stakeholders e fornecedores</li>
               </ul>
             </article>
           </div>
@@ -235,21 +235,21 @@ export default function Home() {
           </a>
         </section>
 
-        <section className="recruiter-proof-wrap" aria-label="Destaques profissionais para RH e lideranças" style={{ backgroundColor: "#ddd0c4" }}>
+        <section className="recruiter-proof-wrap" aria-label="Destaques profissionais para RH e lideranças">
           <div className="recruiter-proof-header" data-reveal="proof-header">
-            <p className="section-kicker" style={{ fontSize: "16px" }}>Para RH, headhunters e lideranças</p>
-            <h2 className="recruiter-proof-title" style={{color: '#cf7b73'}}>Números que <em style={{color: '#cf7b73'}}>comprovam</em> a experiência.</h2>
-            <p className="recruiter-proof-desc" style={{color: '#000000', fontSize: '16px', fontWeight: '500'}}>Da facilitação premiada na Apple à gestão de campo na SPOT, cada indicador abaixo representa anos de execução real — não promessa.</p>
+            <p className="section-kicker">Para RH, headhunters e lideranças</p>
+            <h2 className="recruiter-proof-title">Números que <em>comprovam</em> a experiência.</h2>
+            <p className="recruiter-proof-desc">Da facilitação premiada na Apple à gestão de campo na SPOT, cada indicador abaixo representa anos de execução real — não promessa.</p>
           </div>
           <div className="recruiter-proof-strip" data-reveal="proof-strip">
-            <div className="proof-metric" style={{ fontSize: "14px", marginLeft: "-54px" }}><strong style={{ fontSize: "14px" }}>17+</strong><span style={{ fontSize: "14px" }}>anos de experiência</span></div>
-            <div className="proof-metric" style={{ fontSize: "14px", fontWeight: 900, marginLeft: "2px" }}><strong style={{ fontSize: "14px" }}>114K<span>+</span></strong><span>Pessoas capacitadas<br />ao longo da carreira</span></div>
-            <div className="proof-metric" style={{ fontSize: "14px", fontWeight: 900, marginLeft: "2px" }}><strong style={{ fontSize: "14px" }}>130<span>+</span></strong><span>Promotores monitorados<br />(operação de campo)</span></div>
-            <div className="proof-metric" style={{fontSize: '14px'}}><strong style={{fontSize: '14px'}}>5</strong><span style={{fontSize: '14px'}}>Coordenações de campanha<br style={{fontSize: '14px'}} />(Cystex, Enavo Gotas, Culturelle, Duekal, Copa)</span></div>
-            <div className="proof-metric" style={{ fontSize: "14px", color: "#1c1b1a" }}><strong style={{ fontSize: "14px" }}>8,3</strong><span>Média de avaliação<br /><span className="proof-tagline">Conteúdo &amp; Treinamento · Trade Marketing · T&amp;D de Pessoas</span></span></div>
+            <div className="proof-metric"><strong>17+</strong><span>anos de experiência</span></div>
+            <div className="proof-metric"><strong>114K<span>+</span></strong><span>Pessoas capacitadas<br />ao longo da carreira</span></div>
+            <div className="proof-metric"><strong>130<span>+</span></strong><span>Promotores monitorados<br />(operação de campo)</span></div>
+            <div className="proof-metric"><strong>5</strong><span>Coordenações de campanha<br />(Cystex, Enavo Gotas, Culturelle, Duekal, Copa)</span></div>
+            <div className="proof-metric"><strong>8,3</strong><span>Média de avaliação<br /><span className="proof-tagline">Conteúdo &amp; Treinamento · Trade Marketing · T&amp;D de Pessoas</span></span></div>
             <div className="proof-actions">
-              <Link href="/cv" className="proof-link" style={{ fontSize: "12px", color: "#fff9f2", backgroundColor: "#1c1b1a" }}><span>Abrir trajetória</span><ArrowUpRight size={16} aria-hidden="true" /></Link>
-              <Link href="/cv" className="proof-link proof-link-alt" style={{fontSize: '12px'}}><span style={{fontSize: '12px'}}>Acessar CV</span><ArrowUpRight size={16} aria-hidden="true" style={{fontSize: '12px'}} /></Link>
+              <Link href="/cv" className="proof-link" style={{ backgroundColor: "#1c1b1a", color: "#fff9f2" }}><span>Abrir trajetória</span><ArrowUpRight size={16} aria-hidden="true" /></Link>
+              <Link href="/cv" className="proof-link proof-link-alt"><span>Acessar CV</span><ArrowUpRight size={16} aria-hidden="true" /></Link>
             </div>
           </div>
         </section>
@@ -317,9 +317,9 @@ export default function Home() {
               <p style={{fontSize: '16px'}}>Minha trajetória cruza coordenação de treinamento, gestão de indicadores de campo e produção de conteúdo — da Apple à SPOT/Grupo EMS. Busco uma próxima posição de coordenação em Conteúdo &amp; Treinamento, Trade Marketing &amp; Performance de Campo, ou Treinamento &amp; Desenvolvimento de Pessoas, aplicando metodologias como ADDIE, Kirkpatrick e Design Thinking.</p>
               <div className="about-skill-list" aria-label="Áreas de atuação"><span>Instructional Design</span><span>Trade Marketing</span><span>Gestão de Campo</span><span>ADDIE / Kirkpatrick</span><span>IA Generativa</span><span>Dashboards &amp; KPIs</span></div>
               <div className="about-principles" aria-label="Princípios de coordenação">
-                <div style={{ fontSize: "14px" }}><span style={{ fontSize: "14px" }}>01</span><strong style={{ fontSize: "16px" }}>Contexto antes da solução</strong><p style={{ fontSize: "14px" }}>Entender público, operação e indicador antes de desenhar a resposta.</p></div>
-                <div style={{ fontSize: "14px" }}><span style={{ fontSize: "14px" }}>02</span><strong style={{ fontSize: "16px" }}>Método que chega ao campo</strong><p style={{ fontSize: "14px" }}>Transformar estratégia em conteúdo, treinamento, rotina e material aplicável.</p></div>
-                <div style={{ fontSize: "14px" }}><span style={{ fontSize: "14px" }}>03</span><strong style={{ fontSize: "16px" }}>Acompanhamento até o resultado</strong><p style={{ fontSize: "14px" }}>Usar avaliação, indicadores, PDCA e feedback para ajustar a execução.</p></div>
+                <div><span>01</span><strong>Contexto antes da solução</strong><p>Entender público, operação e indicador antes de desenhar a resposta.</p></div>
+                <div><span>02</span><strong>Método que chega ao campo</strong><p>Transformar estratégia em conteúdo, treinamento, rotina e material aplicável.</p></div>
+                <div><span>03</span><strong>Acompanhamento até o resultado</strong><p>Usar avaliação, indicadores, PDCA e feedback para ajustar a execução.</p></div>
               </div>
             </div>
           </div>
@@ -327,7 +327,7 @@ export default function Home() {
 
         <section className="statement-section">
           <img src={siteConfig.heroImage} alt="Projeto visual de bonés em preto e vermelho" loading="lazy" onError={markBrokenImage} />
-          <div className="statement-copy" data-reveal="statement-copy" style={{fontSize: '14px'}}><span style={{fontSize: '14px'}}>Uma pergunta para o próximo projeto:</span><h2 style={{fontSize: '14px'}}>O que precisa<br style={{fontSize: '14px'}} /><em style={{fontSize: '14px'}}>ganhar forma?</em></h2></div>
+          <div className="statement-copy" data-reveal="statement-copy"><span>Uma pergunta para o próximo projeto:</span><h2>O que precisa<br /><em>ganhar forma?</em></h2></div>
         </section>
 
         <section id="contact" className="contact-section section-pad" aria-labelledby="contact-title">
