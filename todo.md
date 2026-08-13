@@ -633,3 +633,13 @@
 - [x] Remover os dois atributos `style` duplicados do container `coordination-focus-layout`.
 - [x] Garantir que as dimensões de largura e altura permaneçam sob controle do CSS responsivo.
 - [x] Validar TypeScript, testes, build e visualização desktop/mobile antes do checkpoint.
+
+## Adequação geométrica da segunda sessão (segundo print)
+- [x] Ajustar a grade de cada item para 3 colunas (índice, conteúdo principal e sinal de mais).
+- [x] Centralizar e expandir a largura da lista para reproduzir o respiro e o alinhamento do segundo print.
+- [x] Validar desktop, mobile, testes e build.
+
+## Adequação estrutural da segunda sessão (Hero à esquerda, lista à direita)
+- [x] Ajustar as proporções do grid da segunda sessão para alinhar perfeitamente o bloco esquerdo e a lista direita.
+- [x] Preservar integralmente o visual atual (cores, textos, micro-listas e sinais de mais).
+- [x] Validar desktop, mobile, testes e build.
