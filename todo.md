@@ -661,3 +661,7 @@
 ## Revisão da grade vermelha
 - [x] Remover estilos inline duplicados e margens negativas em Home.tsx.
 - [x] Validar desktop, mobile, testes e build.
+
+## Limpeza pós-edição da grade vermelha
+- [x] Remover atributos `style` duplicados e larguras/paddings fixos em Home.tsx.
+- [x] Validar desktop, mobile, testes e build.
