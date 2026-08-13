@@ -613,3 +613,13 @@
 - [x] Ajustar a altura e o respiro vertical da segunda sessão para que a composição tenha presença semelhante ao print.
 - [x] Fixar proporções explícitas e estáveis para a coluna editorial esquerda e a lista direita, sem depender do editor visual.
 - [x] Confirmar no preview renderizado que os três itens aparecem como faixas horizontais completas, com os `+` no extremo direito.
+
+## Revisão do bloco editorial esquerdo — segunda sessão
+- [x] Remover o `marginLeft: -280px` e as dimensões fixas inseridas no bloco editorial.
+- [x] Remover os atributos `style` duplicados do `h2` e do elemento `em`.
+- [x] Validar o alinhamento do bloco esquerdo com a lista direita em desktop e mobile, além de testes e build.
+
+## Ajuste dimensional baseado nas capturas do editor
+- [x] Aplicar no CSS desktop a largura de 451px e altura de 474px ao bloco editorial esquerdo.
+- [x] Limpar atributos `style` inline duplicados em Home.tsx.
+- [x] Validar desktop, mobile, testes e build.

@@ -1675,6 +1675,10 @@ a.proof-link, a.behance-link, a.text-link, .service-detail a {
   }
   .home-revision .coordination-focus-label {
     display: block;
+    box-sizing: border-box;
+    width: 438px;
+    height: 644px;
+    margin-left: -280px;
     padding: 0;
     border: 0;
   }
@@ -1693,7 +1697,10 @@ a.proof-link, a.behance-link, a.text-link, .service-detail a {
   }
   .home-revision .coordination-focus-label h2 {
     scroll-margin-top: 100px;
-    max-width: 360px;
+    box-sizing: border-box;
+    width: 451px;
+    height: 474px;
+    max-width: 451px;
     margin: 0;
     color: #fff9f2;
     font-family: "DM Serif Display", serif;
@@ -1793,6 +1800,10 @@ a.proof-link, a.behance-link, a.text-link, .service-detail a {
   }
   .home-revision .coordination-focus-label {
     display: block;
+    width: 100%;
+    max-width: none;
+    height: auto;
+    margin-left: 0;
     padding: 0 0 36px;
     border: 0;
   }
@@ -1800,6 +1811,8 @@ a.proof-link, a.behance-link, a.text-link, .service-detail a {
     margin-bottom: 18px;
   }
   .home-revision .coordination-focus-label h2 {
+    width: auto;
+    height: auto;
     max-width: 520px;
     font-size: clamp(3.2rem, 13vw, 5.4rem);
     line-height: .88;
