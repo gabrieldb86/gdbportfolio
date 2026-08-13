@@ -598,3 +598,8 @@
 - [x] Remover atributos `style` duplicados e propriedades repetidas em Home.tsx.
 - [x] Substituir dimensões absolutas excessivas por layout responsivo controlado via CSS.
 - [x] Preservar a hierarquia editorial e validar desktop, mobile, testes e build.
+
+## Nova revisão de largura — segunda sessão
+- [x] Remover os dois atributos `style` duplicados do container `coordination-focus-layout`.
+- [x] Remover a largura fixa do título e do elemento `em`, mantendo a composição controlada pelo CSS responsivo.
+- [x] Validar TypeScript, testes, build e visualização desktop/mobile antes do checkpoint.
