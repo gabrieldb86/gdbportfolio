@@ -175,7 +175,7 @@ export default function Home() {
               <h2 id="coordination-focus-title">Três frentes para transformar <em>método em execução.</em></h2>
               <p className="coordination-focus-note" style={{fontSize: '16px', marginTop: '18px'}}>Da narrativa do conteúdo à operação de campo, cada frente conecta clareza, capacitação e resultado.</p>
             </div>
-            <div className="coordination-focus-grid">
+            <div className="coordination-focus-grid" style={{ paddingLeft: '237px', width: '1005px' }}>
               <article className="coordination-focus-item" data-reveal="focus-item" data-reveal-delay="80">
                 <div className="coordination-focus-item-top"><span style={{fontSize: '16px'}}>01</span></div>
                 <div className="coordination-focus-item-body">

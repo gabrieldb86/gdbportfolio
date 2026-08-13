@@ -665,3 +665,7 @@
 ## Limpeza pós-edição da grade vermelha
 - [x] Remover atributos `style` duplicados e larguras/paddings fixos em Home.tsx.
 - [x] Validar desktop, mobile, testes e build.
+
+## Aplicação do layout solicitado pelo usuário
+- [ ] Aplicar `style={{ paddingLeft: '237px', width: '1005px' }}` na grade de coordenação.
+- [ ] Validar desktop, mobile, testes e build.
