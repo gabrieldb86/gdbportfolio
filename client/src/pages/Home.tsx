@@ -12,6 +12,7 @@ import {
   X,
 } from "lucide-react";
 import { defaultSiteConfig, type ProjectConfig, getSiteConfig } from "@/data/siteConfig";
+import { Link } from "wouter";
 
 function scrollToId(id: string, closeMenu?: () => void) {
   closeMenu?.();
@@ -214,13 +215,23 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="recruiter-proof-strip" aria-label="Destaques profissionais" data-reveal="proof-strip">
-          <div className="proof-intro"><p className="section-kicker">Para RH, headhunters e lideranças</p><p>Uma leitura rápida da experiência que sustenta minha candidatura.</p></div>
-          <div className="proof-metric"><strong>17+</strong><span>anos de experiência</span></div>
-          <div className="proof-metric"><strong>100K<span>+</span></strong><span>Pessoas capacitadas<br />ao longo da carreira</span></div>
-          <div className="proof-metric"><strong>130 <span>+</span></strong><span>promotores monitorados<br />(SPOT no Grupo EMS)</span></div>
-          <div className="proof-metric"><strong>8,3</strong><span>média de avaliação</span></div>
-          <a href="/cv" className="proof-link" data-umami-event="cv-open">Abrir trajetória <ArrowUpRight size={15} /></a>
+        <section className="recruiter-proof-wrap" aria-label="Destaques profissionais para RH e lideranças">
+          <div className="recruiter-proof-header" data-reveal="proof-header">
+            <p className="section-kicker">Para RH, headhunters e lideranças</p>
+            <h2 className="recruiter-proof-title">Números que <em>comprovam</em> a experiência.</h2>
+            <p className="recruiter-proof-desc">Da facilitação premiada na Apple à gestão de campo na SPOT, cada indicador abaixo representa anos de execução real — não promessa.</p>
+          </div>
+          <div className="recruiter-proof-strip" data-reveal="proof-strip">
+            <div className="proof-metric"><strong>17+</strong><span>anos de experiência</span></div>
+            <div className="proof-metric"><strong>114K<span>+</span></strong><span>Pessoas capacitadas<br />ao longo da carreira</span></div>
+            <div className="proof-metric"><strong>130<span>+</span></strong><span>Promotores monitorados<br />(operação de campo)</span></div>
+            <div className="proof-metric"><strong>5</strong><span>Coordenações de campanha<br />(Cystex, Enavo Gotas, Culturelle, Duekal, Copa)</span></div>
+            <div className="proof-metric"><strong>8,3</strong><span>Média de avaliação<br /><span className="proof-tagline">Conteúdo &amp; Treinamento · Trade Marketing · T&amp;D de Pessoas</span></span></div>
+            <div className="proof-actions">
+              <Link href="/cv" className="proof-link"><span>Abrir trajetória</span><ArrowUpRight size={16} aria-hidden="true" /></Link>
+              <Link href="/cv" className="proof-link proof-link-alt"><span>Baixar CV</span><ArrowUpRight size={16} aria-hidden="true" /></Link>
+            </div>
+          </div>
         </section>
 
         <section className="manifesto-section section-pad" aria-labelledby="manifesto-title">

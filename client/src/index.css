@@ -2061,3 +2061,36 @@ a.proof-link, a.behance-link, a.text-link, .service-detail a {
   .coordination-focus-highlights { gap: 9px; margin-top: 19px; }
   .coordination-focus-highlights li { padding-left: 14px; font-size: 12px; line-height: 1.5; }
 }
+
+
+/* Seção de prova social reformulada — Hero editorial para RH e lideranças. */
+.recruiter-proof-wrap { background: #d73332; color: #fff9f2; padding-top: 56px; padding-bottom: 24px; border-top: 1px solid rgba(255, 249, 242, .22); }
+.recruiter-proof-header { max-width: 900px; padding: 0 8vw 36px; }
+.recruiter-proof-header .section-kicker { margin: 0 0 14px; color: #1c1b1a; font-size: 10px; letter-spacing: .2em; text-transform: uppercase; }
+.recruiter-proof-title { margin: 0; font-family: "DM Serif Display", serif; font-size: clamp(3.2rem, 5.2vw, 5.8rem); font-weight: 400; letter-spacing: -.055em; line-height: .9; }
+.recruiter-proof-title em { color: #1c1b1a; font-style: italic; }
+.recruiter-proof-desc { max-width: 580px; margin: 18px 0 0; color: rgba(255, 249, 242, .86); font-size: 13px; line-height: 1.6; }
+.recruiter-proof-strip { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); align-items: stretch; gap: 0; padding: 0 8vw; background: #d73332; color: #fff9f2; border-top: 1px solid rgba(255, 249, 242, .32); border-bottom: 1px solid rgba(255, 249, 242, .32); }
+.recruiter-proof-strip .proof-metric { display: flex; min-height: 140px; flex-direction: column; justify-content: center; padding: 22px 20px 20px 0; border-right: 1px solid rgba(255, 249, 242, .32); }
+.recruiter-proof-strip .proof-metric:nth-child(1) { padding-left: 0; }
+.recruiter-proof-strip .proof-metric:nth-child(n) { padding-left: 18px; }
+.recruiter-proof-strip .proof-metric strong { font-family: "DM Serif Display", serif; font-size: 38px; font-weight: 400; letter-spacing: -.06em; line-height: .9; }
+.recruiter-proof-strip .proof-metric strong span { color: #1c1b1a; font-family: "Manrope", sans-serif; font-size: 18px; }
+.recruiter-proof-strip .proof-metric > span { margin-top: 9px; color: rgba(255, 249, 242, .85); font-size: 9px; letter-spacing: .12em; text-transform: uppercase; line-height: 1.4; }
+.proof-tagline { display: block; margin-top: 6px; color: #1c1b1a; font-size: 8px; letter-spacing: .08em; text-transform: uppercase; }
+.proof-actions { display: flex; flex-direction: column; justify-content: center; gap: 12px; padding: 22px 0 20px 22px; }
+.recruiter-proof-strip .proof-link { display: inline-flex; align-items: center; justify-content: space-between; gap: 8px; padding: 0; border-right: 0; color: #1c1b1a; font-size: 10px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; white-space: nowrap; }
+.recruiter-proof-strip .proof-link-alt { color: #fff9f2; }
+
+@media (max-width: 1024px) {
+  .recruiter-proof-strip { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .recruiter-proof-strip .proof-metric:nth-child(3) { border-right: 0; }
+  .recruiter-proof-strip .proof-metric:nth-child(4), .recruiter-proof-strip .proof-metric:nth-child(5), .recruiter-proof-strip .proof-actions { border-top: 1px solid rgba(255, 249, 242, .32); padding-top: 24px; }
+}
+
+@media (max-width: 720px) {
+  .recruiter-proof-header { padding: 0 20px 28px; }
+  .recruiter-proof-strip { grid-template-columns: repeat(2, 1fr); padding: 0 20px; }
+  .recruiter-proof-strip .proof-metric { min-height: 110px; padding: 18px 12px 16px 0; }
+  .proof-actions { grid-column: 1 / -1; border-top: 1px solid rgba(255, 249, 242, .32); padding: 20px 0; flex-direction: row; gap: 24px; }
+}

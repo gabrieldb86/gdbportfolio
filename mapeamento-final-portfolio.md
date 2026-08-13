@@ -384,3 +384,21 @@ As três colunas abaixo passam a funcionar como prova rápida de escopo, escala 
 - Gestão de stakeholders e fornecedores
 
 **Direção visual aprovada:** manter as três colunas e os ícones de seta existentes; usar título em negrito, descrição curta e uma microlista com marcadores discretos em traço, texto pequeno em marfim com opacidade reduzida e espaçamento vertical confortável. A composição deve ser validada em desktop, mobile vertical e mobile horizontal.
+
+
+## 8. Seção de Prova Social para RH e Lideranças
+
+A seção destinada a recrutadores e headhunters foi reformulada para eliminar o espaço vazio, atualizar dados e apresentar uma narrativa coesa de senioridade.
+
+### 8.1 Hero Editorial Proposto
+- **Eyebrow:** PARA RH, HEADHUNTERS E LIDERANÇAS
+- **Headline:** Números que *comprovam* a experiência.
+- **Subheadline:** Da facilitação premiada na Apple à gestão de campo na SPOT, cada indicador abaixo representa anos de execução real — não promessa.
+
+### 8.2 Métricas Consolidadas (6 colunas / blocos)
+1. **17+** anos de experiência.
+2. **114K+** pessoas capacitadas ao longo da carreira (dado unificado e atualizado).
+3. **130+** promotores monitorados em operação de campo.
+4. **5** coordenações de campanha (Cystex, Enavo Gotas, Culturelle, Duekal, Copa do Mundo).
+5. **8,3** média de avaliação, ancorada nas três verticais: *Conteúdo & Treinamento · Trade Marketing · T&D de Pessoas*.
+6. **CTAs de Ação:** "Abrir trajetória" e "Baixar CV" em botões duplos de alta conversão.
