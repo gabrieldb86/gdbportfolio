@@ -725,3 +725,8 @@
 - [x] Remover os estilos inline com `font-size: 16px` e largura fixa da seção statement-section.
 - [x] Restaurar o título grande original em escala editorial.
 - [x] Executar testes, build de produção e salvar checkpoint.
+
+## Remoção do degradê na seção final (statement-section)
+- [x] Inspecionar o CSS da classe `.statement-section` em client/src/index.css.
+- [x] Remover gradientes ou overlays e definir cores sólidas uniformes.
+- [x] Executar testes, build de produção e salvar checkpoint.

@@ -175,7 +175,7 @@ h1 em, h2 em { color: var(--primary); font-style: italic; }
 
 .statement-section { position: relative; min-height: 450px; display: flex; align-items: center; overflow: hidden; background: #d73332; color: #fff9f2; }
 .statement-section img { position: absolute; z-index: 0; top: 0; right: 0; bottom: 0; left: auto; width: 54%; height: 100%; object-fit: cover; object-position: center; opacity: 1; mix-blend-mode: normal; }
-.statement-section::after { position: absolute; z-index: 1; inset: 0; background: linear-gradient(90deg, #d73332 0%, rgba(215, 51, 50, .96) 42%, rgba(215, 51, 50, .18) 74%, rgba(215, 51, 50, 0) 100%); content: ""; }
+.statement-section::after { display: none; content: ""; }
 .statement-copy { position: relative; z-index: 2; width: 100%; padding: 80px 14vw; }
 .statement-copy span { display: block; margin-bottom: 28px; font-size: 10px; font-weight: 700; letter-spacing: .17em; text-transform: uppercase; }
 .statement-copy h2 { margin: 0; font-size: clamp(4rem, 8vw, 8.5rem); line-height: .84; }
@@ -602,7 +602,7 @@ h1 em, h2 em { color: var(--primary); font-style: italic; }
 .home-revision .service-detail { padding-bottom: 28px; }
 
 .statement-section { min-height: 510px; }
-.statement-section::after { background: linear-gradient(90deg, #d73332 0%, #d73332 27%, rgba(215, 51, 50, .98) 43%, rgba(215, 51, 50, .72) 58%, rgba(215, 51, 50, 0) 82%); }
+.statement-section::after { background: transparent; }
 .statement-copy { max-width: 700px; padding-left: 11vw; }
 
 /* Seção 03 alinhada ao sistema da seção 04 — mesma base, respiro e relação imagem/conteúdo. */
@@ -649,7 +649,7 @@ h1 em, h2 em { color: var(--primary); font-style: italic; }
   .home-revision .service-row { min-height: 100px; }
   .statement-section { min-height: 500px; }
   .statement-section img { width: 100%; opacity: .82; }
-  .statement-section::after { background: linear-gradient(180deg, #d73332 0%, rgba(215, 51, 50, .98) 30%, rgba(215, 51, 50, .56) 64%, rgba(215, 51, 50, 0) 100%); }
+  .statement-section::after { background: transparent; }
   .statement-copy { max-width: none; padding: 70px 20px; align-self: flex-start; }
 }
 
@@ -1078,7 +1078,7 @@ h1 em, h2 em { color: var(--primary); font-style: italic; }
 .services-layout > div:first-child.image-fallback::after { inset: auto 24px 24px; content: "Material de apoio · case em atualização"; }
 .about-art-wrap.image-fallback { min-height: 440px; }
 .about-art-wrap.image-fallback::after { inset: auto 28px 28px; content: "Processo · repertório · intenção"; }
-.statement-section.image-fallback { background: linear-gradient(90deg, #d73332 0%, #d73332 34%, #381a1b 100%); }
+.statement-section.image-fallback { background: #d73332; }
 .statement-section.image-fallback::before { position: absolute; inset: auto 11vw 10%; color: rgba(244, 238, 230, .86); content: "Conteúdo · treinamento · trade marketing"; font-size: 10px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
 .case-hero-art.image-fallback { display: grid; place-items: center; background: linear-gradient(135deg, #3a3632 0%, #1b1a19 58%, #b72529 58%, #cf7b73 100%); }
 .case-hero-art.image-fallback::after { inset: 50% 28px auto; content: "Imagem do case em atualização"; font-family: "DM Serif Display", serif; font-size: 26px; letter-spacing: -.03em; text-transform: none; transform: translateY(-50%); }
