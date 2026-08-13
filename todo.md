@@ -567,3 +567,10 @@
 - [ ] Ajustar políticas de cache, pré-conexão (preconnect) para fontes do Google e assets estáticos.
 - [ ] Executar testes automatizados, typecheck e build de produção com compressão e chunking refinados.
 - [ ] Salvar checkpoint de alta performance e entregar o relatório detalhado de otimização.
+
+## Rodada de Otimização GTmetrix e Desempenho
+- [x] Analisar relatório e requisições GTmetrix, separando os redirecionamentos de autenticação da plataforma do tráfego público real.
+- [x] Otimizar o chunking do Vite em `vite.config.ts` (separando `vendor-react`, `vendor-ui`, `vendor-data` e `vendor-utils`).
+- [x] Adicionar preconnect para fontes e CDNs externos em `client/index.html`.
+- [x] Executar testes automatizados (`pnpm test`) e build de produção com sucesso.
+- [x] Salvar checkpoint `1f2db0c0` e validar a estabilidade visual e funcional do portfólio.
