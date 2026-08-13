@@ -174,13 +174,16 @@ export default defineConfig({
       output: {
         manualChunks(id) {
           if (id.includes("node_modules")) {
-            if (id.includes("react") || id.includes("wouter")) {
+            if (id.includes("react") || id.includes("react-dom") || id.includes("wouter")) {
               return "vendor-react";
             }
-            if (id.includes("lucide-react") || id.includes("streamdown")) {
+            if (id.includes("lucide-react") || id.includes("streamdown") || id.includes("@radix-ui")) {
               return "vendor-ui";
             }
-            return "vendor-core";
+            if (id.includes("drizzle") || id.includes("@tanstack")) {
+              return "vendor-data";
+            }
+            return "vendor-utils";
           }
         },
       },

@@ -560,3 +560,10 @@
 - [x] Otimizar tamanho de DOM, remover scripts não utilizados e ajustar code splitting.
 - [x] Executar testes automatizados, typecheck e build de produção com minificação avançada.
 - [x] Salvar checkpoint e entregar o relatório analítico detalhado.
+
+## Otimização Avançada baseada no GTmetrix
+- [ ] Investigar o redirecionamento para autenticação do Manus capturado pelo GTmetrix e garantir acesso público direto.
+- [ ] Otimizar o tamanho do bundle de JavaScript e verificar a remoção de bibliotecas não essenciais no carregamento inicial.
+- [ ] Ajustar políticas de cache, pré-conexão (preconnect) para fontes do Google e assets estáticos.
+- [ ] Executar testes automatizados, typecheck e build de produção com compressão e chunking refinados.
+- [ ] Salvar checkpoint de alta performance e entregar o relatório detalhado de otimização.
