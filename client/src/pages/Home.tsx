@@ -149,7 +149,7 @@ export default function Home() {
           <a href="#contact" onClick={(event) => { event.preventDefault(); scrollToId("contact", () => setMenuOpen(false)); }}>Contato</a>
         </nav>
 
-        <div className="header-availability"><span className="status-dot" />Aberto a oportunidades</div>
+        <div className="header-availability"><span className="status-dot" style={{backgroundColor: '#00FF66'}} />Aberto a oportunidades</div>
       </header>
 
       <aside className="side-rail" aria-label="Informações rápidas">

@@ -453,3 +453,8 @@
 - [x] Auditar ocorrências residuais no código, metadados e páginas públicas.
 - [x] Validar desktop, mobile, testes, typecheck e build antes do checkpoint.
 - [x] Orientar consulta ao suporte Manus sobre a remoção do script runtime público.
+
+## Verificação do indicador de disponibilidade
+- [x] Confirmar que o verde neon aplicado ao bloco “Aberto a oportunidades” corresponde à intenção visual do editor.
+- [x] Validar o indicador em desktop, mobile vertical e mobile horizontal.
+- [x] Executar testes, typecheck e build e salvar novo checkpoint.
