@@ -480,5 +480,5 @@
 - [x] Atualizar meta description, Home, CV e siteConfig para 114 mil/114K.
 - [x] Remover qualquer telefone exibido como texto no CV, mantendo apenas contato sem dígitos visíveis.
 - [x] Executar testes, typecheck, build e validação visual das rotas públicas em desktop e mobile.
-- [ ] Salvar checkpoint com as correções concluídas.
+- [x] Salvar checkpoint com as correções concluídas.
 - [x] Orientar contato com o suporte Manus sobre a remoção do manus-runtime da publicação pública.
