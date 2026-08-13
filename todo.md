@@ -538,3 +538,9 @@
 - [x] Consolidar estilos dispersos e overrides do editor visual em seções limpas no CSS.
 - [x] Criar o documento `guia-edicao-manual.md` explicando exatamente onde alterar cada elemento do portfólio.
 - [x] Validar testes/build, salvar checkpoint e entregar o guia.
+
+## Restauração seletiva da camada visual (Checkpoint eac276ad)
+- [x] Extrair `Home.tsx` e `index.css` do checkpoint `eac276ad`.
+- [x] Mesclar as regras visuais restauradas com as correções de conteúdo (114K+ e privacidade) em `siteConfig.ts` e `CV.tsx`.
+- [x] Executar testes, typecheck e build de produção para garantir estabilidade.
+- [ ] Salvar checkpoint da restauração seletiva e entregar o resultado visual.
