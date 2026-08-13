@@ -526,3 +526,15 @@
 - [x] Criar separadores editoriais estáveis com espaçamento, índices e regra horizontal discreta.
 - [x] Preservar o empilhamento mobile sem linhas verticais e sem encavalamento.
 - [x] Validar testes/build e salvar checkpoint.
+
+## Restauração da versão anterior aprovada
+- [ ] Identificar o checkpoint que corresponde à composição visual aprovada pelo usuário.
+- [ ] Restaurar o projeto para esse checkpoint sem apagar histórico.
+- [ ] Validar visualmente Home, desktop e mobile e executar testes/build.
+- [ ] Salvar ou confirmar o checkpoint restaurado e entregar a versão para ajustes manuais.
+
+## Simplificação para ajustes manuais fáceis
+- [x] Centralizar textos, métricas e caminhos de imagens em `siteConfig.ts`.
+- [x] Consolidar estilos dispersos e overrides do editor visual em seções limpas no CSS.
+- [x] Criar o documento `guia-edicao-manual.md` explicando exatamente onde alterar cada elemento do portfólio.
+- [x] Validar testes/build, salvar checkpoint e entregar o guia.
