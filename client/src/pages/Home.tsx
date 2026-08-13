@@ -1,5 +1,5 @@
 // Direção visual: Arquivo Editorial — preservar assimetria, índices em vermelho, imagens protagonistas e microcopy objetiva.
-import { type CSSProperties, type FormEvent, type SyntheticEvent, useEffect, useLayoutEffect, useState } from "react";
+import { type CSSProperties, type FormEvent, type SyntheticEvent, useEffect, useLayoutEffect, useRef, useState } from "react";
 import { setPageMetadata } from "@/lib/seo";
 import {
   Activity,
@@ -18,6 +18,7 @@ import {
   X,
 } from "lucide-react";
 import { defaultSiteConfig, type ProjectConfig, getSiteConfig } from "@/data/siteConfig";
+import { easeOutCubic, formatMetricValue } from "@/lib/animatedMetric";
 import { Link } from "wouter";
 
 function scrollToId(id: string, closeMenu?: () => void) {
@@ -34,6 +35,59 @@ function markBrokenImage(event: SyntheticEvent<HTMLImageElement>) {
   const image = event.currentTarget;
   image.style.display = "none";
   image.parentElement?.classList.add("image-fallback");
+}
+
+function AnimatedMetric({ value, decimals = 0, suffix = "" }: { value: number; decimals?: number; suffix?: string }) {
+  const metricRef = useRef<HTMLElement | null>(null);
+  const [displayValue, setDisplayValue] = useState(0);
+
+  useEffect(() => {
+    const element = metricRef.current;
+    if (!element) return;
+
+    let animationFrame = 0;
+    let hasStarted = false;
+    const duration = 2000;
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    const animate = (timestamp: number, startedAt: number) => {
+      const progress = Math.min((timestamp - startedAt) / duration, 1);
+      const easedProgress = easeOutCubic(progress);
+      setDisplayValue(value * easedProgress);
+      if (progress < 1) animationFrame = window.requestAnimationFrame((nextTimestamp) => animate(nextTimestamp, startedAt));
+    };
+
+    const startAnimation = () => {
+      if (hasStarted) return;
+      hasStarted = true;
+      if (prefersReducedMotion) {
+        setDisplayValue(value);
+        return;
+      }
+      animationFrame = window.requestAnimationFrame((timestamp) => animate(timestamp, timestamp));
+    };
+
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) {
+        startAnimation();
+        observer.disconnect();
+      }
+    }, { threshold: 0.25 });
+
+    observer.observe(element);
+    return () => {
+      observer.disconnect();
+      window.cancelAnimationFrame(animationFrame);
+    };
+  }, [value]);
+
+  const formattedValue = formatMetricValue(displayValue, decimals);
+
+  return (
+    <strong ref={metricRef} aria-label={`${value.toLocaleString("pt-BR")}${suffix}`}>
+      {formattedValue}<span className="proof-number-suffix">{suffix}</span>
+    </strong>
+  );
 }
 
 function ProjectCard({ project, revealDelay }: { project: ProjectConfig; revealDelay: number }) {
@@ -229,42 +283,44 @@ export default function Home() {
         </section>
 
         <section id="recruiter-proof" className="recruiter-proof-wrap" aria-label="Destaques profissionais para RH e lideranças">
-          <div className="recruiter-proof-header" data-reveal="proof-header">
-            <p className="section-kicker" style={{fontSize: '16px'}}>Para RH, headhunters e lideranças</p>
-            <h2 className="recruiter-proof-title">Números que <em>comprovam</em> a experiência.</h2>
-            <p className="recruiter-proof-desc" style={{fontSize: '16px'}}>Da facilitação premiada na Apple à gestão de campo na SPOT, cada indicador abaixo representa anos de execução real — não promessa.</p>
-          </div>
-          <div className="recruiter-proof-strip" data-reveal="proof-strip" aria-label="Indicadores profissionais">
-            <div className="proof-metric">
-              <Briefcase className="proof-metric-icon" size={22} strokeWidth={1.3} aria-hidden="true" />
-              <strong>17<span className="proof-number-suffix">+</span></strong>
-              <span className="proof-metric-label">Anos de experiência</span>
+          <div className="recruiter-proof-layout">
+            <div className="recruiter-proof-header" data-reveal="proof-header">
+              <p className="section-kicker" style={{fontSize: '16px'}}>Para RH, headhunters e lideranças</p>
+              <h2 className="recruiter-proof-title">Números que <em>comprovam</em> a experiência.</h2>
+              <p className="recruiter-proof-desc" style={{fontSize: '16px'}}>Da facilitação premiada na Apple à gestão de campo na SPOT, cada indicador abaixo representa anos de execução real — não promessa.</p>
             </div>
-            <div className="proof-metric">
-              <Users className="proof-metric-icon" size={22} strokeWidth={1.3} aria-hidden="true" />
-              <strong>114K<span className="proof-number-suffix">+</span></strong>
-              <span className="proof-metric-label">Pessoas capacitadas<br />ao longo da carreira</span>
-            </div>
-            <div className="proof-metric">
-              <Activity className="proof-metric-icon" size={22} strokeWidth={1.3} aria-hidden="true" />
-              <strong>130<span className="proof-number-suffix">+</span></strong>
-              <span className="proof-metric-label">Promotores monitorados<br />(operação de campo)</span>
-            </div>
-            <div className="proof-metric">
-              <Layers className="proof-metric-icon" size={22} strokeWidth={1.3} aria-hidden="true" />
-              <strong>5</strong>
-              <span className="proof-metric-label">Coordenações de campanha<br />(Cystex, Enavo Gotas, Culturelle, Duekal, Copa)</span>
-            </div>
-            <div className="proof-metric">
-              <Star className="proof-metric-icon" size={22} strokeWidth={1.3} aria-hidden="true" />
-              <strong>8,3</strong>
-              <span className="proof-metric-label">Média de avaliação</span>
-              <span className="proof-tagline">Conteúdo &amp; Treinamento · Trade Marketing · T&amp;D de Pessoas</span>
-            </div>
-            <div className="proof-actions">
-              <FileText className="proof-action-icon" size={20} strokeWidth={1.3} aria-hidden="true" />
-              <Link href="/cv" className="proof-link"><span>Abrir trajetória</span><ArrowUpRight size={16} aria-hidden="true" /></Link>
-              <Link href="/cv" className="proof-link proof-link-alt"><span>Baixar CV</span><ArrowUpRight size={16} aria-hidden="true" /></Link>
+            <div className="recruiter-proof-strip" data-reveal="proof-strip" aria-label="Indicadores profissionais">
+              <div className="proof-metric">
+                <Briefcase className="proof-metric-icon" size={22} strokeWidth={1.3} aria-hidden="true" />
+                <AnimatedMetric value={17} suffix="+" />
+                <span className="proof-metric-label">Anos de experiência</span>
+              </div>
+              <div className="proof-metric">
+                <Users className="proof-metric-icon" size={22} strokeWidth={1.3} aria-hidden="true" />
+                <AnimatedMetric value={114} suffix="K+" />
+                <span className="proof-metric-label">Pessoas capacitadas<br />ao longo da carreira</span>
+              </div>
+              <div className="proof-metric">
+                <Activity className="proof-metric-icon" size={22} strokeWidth={1.3} aria-hidden="true" />
+                <AnimatedMetric value={130} suffix="+" />
+                <span className="proof-metric-label">Promotores monitorados<br />(operação de campo)</span>
+              </div>
+              <div className="proof-metric">
+                <Layers className="proof-metric-icon" size={22} strokeWidth={1.3} aria-hidden="true" />
+                <AnimatedMetric value={5} />
+                <span className="proof-metric-label">Coordenações de campanha<br />(Cystex, Enavo Gotas, Culturelle, Duekal, Copa)</span>
+              </div>
+              <div className="proof-metric">
+                <Star className="proof-metric-icon" size={22} strokeWidth={1.3} aria-hidden="true" />
+                <AnimatedMetric value={8.3} decimals={1} />
+                <span className="proof-metric-label">Média de avaliação</span>
+                <span className="proof-tagline">Conteúdo &amp; Treinamento · Trade Marketing · T&amp;D de Pessoas</span>
+              </div>
+              <div className="proof-actions">
+                <FileText className="proof-action-icon" size={20} strokeWidth={1.3} aria-hidden="true" />
+                <Link href="/cv" className="proof-link"><span>Abrir trajetória</span><ArrowUpRight size={16} aria-hidden="true" /></Link>
+                <Link href="/cv" className="proof-link proof-link-alt"><span>Baixar CV</span><ArrowUpRight size={16} aria-hidden="true" /></Link>
+              </div>
             </div>
           </div>
         </section>

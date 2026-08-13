@@ -678,3 +678,9 @@
 - [x] Auditar o componente de métricas em Home.tsx e seus estilos em index.css.
 - [x] Implementar a grade horizontal de 6 colunas com divisórias verticais discretas, alinhamento central e hierarquia tipográfica refinada (números grandes e rótulos em caixa alta).
 - [x] Validar desktop, mobile, testes e build.
+
+## Hero lateral e contador animado progressivo
+- [x] Analisar a estrutura atual de Home.tsx na seção recruiter-proof.
+- [x] Reestruturar o layout para ter o título/hero à esquerda e a faixa de contadores à direita ou abaixo em composição unificada.
+- [x] Implementar hook/efeito de contagem animada do zero ao valor final (17, 114, 130, 5, 8.3) com IntersectionObserver e suporte a `prefers-reduced-motion`.
+- [x] Validar desktop, mobile, testes e build.
