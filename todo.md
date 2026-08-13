@@ -410,3 +410,9 @@
 - [x] Consolidar propriedades `style` duplicadas sem perder os valores intencionais.
 - [x] Validar eixo editorial, responsividade e legibilidade em todos os viewports.
 - [x] Executar testes, typecheck e build antes do checkpoint.
+
+## Microlistas de realizações na seção Focos de coordenação
+- [x] Inserir os 4 itens de realizações reais em cada uma das 3 colunas (Conteúdo & Treinamento, Trade Marketing & Campo, T&D de Pessoas).
+- [x] Atualizar o documento central de reposicionamento com o conteúdo exato das microlistas.
+- [x] Validar tipografia, espaçamento vertical e responsividade em desktop, mobile vertical e mobile horizontal.
+- [x] Executar testes, typecheck e build antes do checkpoint.

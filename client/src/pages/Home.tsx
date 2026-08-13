@@ -181,17 +181,35 @@ export default function Home() {
             <article className="coordination-focus-item" data-reveal="focus-item" data-reveal-delay="80">
               <div className="coordination-focus-item-top"><span>01</span><ArrowUpRight size={18} aria-hidden="true" /></div>
               <strong>Conteúdo &amp; Treinamento</strong>
-              <p>Trilhas, conteúdo e facilitação.</p>
+              <p>Instructional Design com ADDIE, Kirkpatrick e Learning Experience Design (LXD).</p>
+              <ul className="coordination-focus-highlights">
+                <li>114 mil+ pessoas capacitadas ao longo da carreira</li>
+                <li>8 anos como pioneiro do Today at Apple no Brasil</li>
+                <li>Ferramenta própria de avaliação com IA generativa</li>
+                <li>Trilhas de aprendizagem, e-learning e microlearning</li>
+              </ul>
             </article>
             <article className="coordination-focus-item" data-reveal="focus-item" data-reveal-delay="140">
               <div className="coordination-focus-item-top"><span>02</span><ArrowUpRight size={18} aria-hidden="true" /></div>
               <strong>Trade Marketing &amp; Campo</strong>
-              <p>KPIs, campanhas e execução.</p>
+              <p>Campanhas de incentivo de ponta a ponta, do briefing à modelagem financeira.</p>
+              <ul className="coordination-focus-highlights">
+                <li>Dashboards de KPI para 130+ promotores em campo</li>
+                <li>Nota média de avaliação: 8,3</li>
+                <li>Execução em PDV, merchandising e gestão de redes/franquias</li>
+                <li>Análise de risco orçamentário e PDCA</li>
+              </ul>
             </article>
             <article className="coordination-focus-item" data-reveal="focus-item" data-reveal-delay="200">
               <div className="coordination-focus-item-top"><span>03</span><ArrowUpRight size={18} aria-hidden="true" /></div>
               <strong>T&amp;D de Pessoas</strong>
-              <p>Onboarding, avaliação e desenvolvimento.</p>
+              <p>Onboarding, avaliação de desempenho e desenvolvimento de equipes de campo.</p>
+              <ul className="coordination-focus-highlights">
+                <li>Metodologia 9Box e ciclos de PDCA</li>
+                <li>Facilitação premiada (maiores indicadores de NPS na Apple)</li>
+                <li>Programas de capacitação e certificação</li>
+                <li>Gestão de stakeholders e fornecedores</li>
+              </ul>
             </article>
           </div>
         </section>

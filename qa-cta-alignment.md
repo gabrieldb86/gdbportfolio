@@ -50,3 +50,11 @@ O alvo informado na linha 168 de Home.tsx correspondia ao `<div className="hero-
 ## Consolidação dos espaçamentos do editor visual
 
 As propriedades `style` duplicadas da seção Focos de coordenação foram removidas do JSX e consolidadas numa única camada CSS desktop, preservando os valores intencionais: Hero com 120px de topo, 81px de base e 120px à esquerda; Focos com 104px de topo, 95px de base, 128px à esquerda e 122px à direita; Destaques com 129px à direita. A validação visual confirmou que desktop, mobile vertical e mobile horizontal mantêm o eixo editorial, a legibilidade e os overrides responsivos sem encavalamento.
+
+
+## Microlistas de Focos de coordenação
+
+A seção Focos de coordenação agora apresenta as descrições completas e quatro realizações em cada uma das três colunas, com marcadores em traço, texto marfim em opacidade reduzida e espaçamento vertical consistente. A captura de página inteira em desktop confirmou que a nova densidade preenche o espaço vazio sem alterar a estrutura de três colunas, os índices 01/02/03 ou os ícones de seta.
+
+
+A validação mobile vertical e horizontal confirmou que as três colunas se empilham em blocos legíveis, com os títulos, descrições e quatro realizações preservados; os marcadores não colidem com o texto e o espaçamento vertical permanece consistente.

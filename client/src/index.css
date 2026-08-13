@@ -2050,3 +2050,14 @@ a.proof-link, a.behance-link, a.text-link, .service-detail a {
   .home-revision .coordination-focus-band { padding-top: 104px; padding-bottom: 95px; padding-left: 128px; padding-right: 122px; }
   .home-revision .recruiter-proof-strip { padding-right: 129px; }
 }
+
+
+/* Microlistas de realizações reais — Focos de coordenação. */
+.coordination-focus-highlights { display: grid; gap: 10px; margin: 22px 0 0; padding: 0; list-style: none; }
+.coordination-focus-highlights li { position: relative; padding-left: 15px; color: rgba(255, 249, 242, .72); font-size: 11px; line-height: 1.5; }
+.coordination-focus-highlights li::before { position: absolute; top: 0; left: 0; color: #cf7b73; content: "—"; font-weight: 700; }
+
+@media (max-width: 720px) {
+  .coordination-focus-highlights { gap: 9px; margin-top: 19px; }
+  .coordination-focus-highlights li { padding-left: 14px; font-size: 12px; line-height: 1.5; }
+}

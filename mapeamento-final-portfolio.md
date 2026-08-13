@@ -350,3 +350,37 @@ Se houver conflito entre uma frase mais impactante e uma informação mais preci
 ---
 
 **Documento preparado para a revisão final com Gabriel Danino Basilio.**
+
+
+## 7. Conteúdo aprovado para Focos de coordenação
+
+As três colunas abaixo passam a funcionar como prova rápida de escopo, escala e repertório. O conteúdo foi fornecido pelo proprietário do portfólio e deve permanecer centralizado para futuras revisões editoriais.
+
+### 01 — Conteúdo & Treinamento
+
+**Descrição:** Instructional Design com ADDIE, Kirkpatrick e Learning Experience Design (LXD).
+
+- 114 mil+ pessoas capacitadas ao longo da carreira
+- 8 anos como pioneiro do Today at Apple no Brasil
+- Ferramenta própria de avaliação com IA generativa
+- Trilhas de aprendizagem, e-learning e microlearning
+
+### 02 — Trade Marketing & Campo
+
+**Descrição:** Campanhas de incentivo de ponta a ponta, do briefing à modelagem financeira.
+
+- Dashboards de KPI para 130+ promotores em campo
+- Nota média de avaliação: 8,3
+- Execução em PDV, merchandising e gestão de redes/franquias
+- Análise de risco orçamentário e PDCA
+
+### 03 — T&D de Pessoas
+
+**Descrição:** Onboarding, avaliação de desempenho e desenvolvimento de equipes de campo.
+
+- Metodologia 9Box e ciclos de PDCA
+- Facilitação premiada (maiores indicadores de NPS na Apple)
+- Programas de capacitação e certificação
+- Gestão de stakeholders e fornecedores
+
+**Direção visual aprovada:** manter as três colunas e os ícones de seta existentes; usar título em negrito, descrição curta e uma microlista com marcadores discretos em traço, texto pequeno em marfim com opacidade reduzida e espaçamento vertical confortável. A composição deve ser validada em desktop, mobile vertical e mobile horizontal.
