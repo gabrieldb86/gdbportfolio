@@ -720,3 +720,8 @@
 - [x] Garantir que o título `Projetos que ganharam forma.` mantenha seu tamanho editorial original de hero.
 - [x] Aplicar `font-size: 16px` com segurança apenas no kicker e na descrição para manter a legibilidade.
 - [x] Executar testes, build e salvar checkpoint.
+
+## Restauração do hero final (O que precisa ganhar forma?)
+- [x] Remover os estilos inline com `font-size: 16px` e largura fixa da seção statement-section.
+- [x] Restaurar o título grande original em escala editorial.
+- [x] Executar testes, build de produção e salvar checkpoint.

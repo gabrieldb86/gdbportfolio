@@ -398,7 +398,7 @@ export default function Home() {
 
         <section className="statement-section">
           <img src={siteConfig.heroImage} alt="Projeto visual de bonés em preto e vermelho" loading="lazy" onError={markBrokenImage} />
-          <div className="statement-copy" data-reveal="statement-copy" style={{ fontSize: '16px', width: '690px' }}><span style={{ fontSize: '16px', width: '690px' }}>Uma pergunta para o próximo projeto:</span><h2 style={{ fontSize: '16px', width: '690px' }}>O que precisa<br style={{ fontSize: '16px', width: '690px' }} /><em style={{ fontSize: '16px', width: '690px' }}>ganhar forma?</em></h2></div>
+          <div className="statement-copy" data-reveal="statement-copy"><span>Uma pergunta para o próximo projeto:</span><h2>O que precisa<br /><em>ganhar forma?</em></h2></div>
         </section>
 
         <section id="contact" className="contact-section section-pad" aria-labelledby="contact-title">
