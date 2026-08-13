@@ -614,10 +614,10 @@ h1 em, h2 em { color: var(--primary); font-style: italic; }
 .home-revision .service-row { min-height: 116px; }
 
 /* A seção 03 compartilha exatamente a base da seção 04: imagem à esquerda, conteúdo à direita e mesmo respiro. */
-  .services-redesign .services-layout { display: grid; width: 100%; max-width: 1240px; margin: 0; grid-template-columns: minmax(360px, .82fr) minmax(460px, 1.18fr); align-items: start; gap: clamp(64px, 7vw, 110px); }
-  .services-redesign .services-layout > div:first-child { align-self: start; padding-right: 12%; }
+  .services-redesign .services-layout { display: grid; grid-template-columns: minmax(280px, .82fr) minmax(320px, .78fr); align-items: center; gap: 9vw; }
+  .services-redesign .services-layout > div:first-child { padding-right: 12%; }
   .services-redesign .services-art { width: 100%; max-width: none; aspect-ratio: 1.03; object-fit: cover; }
-  .services-redesign .services-list { align-self: start; padding-top: 0; border-top: 0; }
+  .services-redesign .services-list { padding-top: 0; border-top: 0; }
 
 /* WORK em linhas: cada projeto passa a compartilhar uma mesma régua horizontal, sem cards flutuando em alturas diferentes. */
 .work-redesign .projects-grid { display: block; max-width: 1140px; margin-inline: auto; }

@@ -652,3 +652,8 @@
 ## Correção geométrica da services-section (print correto)
 - [x] Ajustar alinhamento de topo do grid da services-section para que a lista direita comece alinhada ao topo do bloco esquerdo.
 - [x] Validar desktop, mobile, testes e build.
+
+## Reversão específica da services-section
+- [x] Desfazer apenas a modificação de grid da services-section na última rodada.
+- [x] Restaurar o estado anterior da seção ("Coordenação que vira resultado").
+- [x] Validar desktop, mobile, testes e build.
