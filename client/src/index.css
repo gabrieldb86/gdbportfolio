@@ -667,6 +667,7 @@ h1 em, h2 em { color: var(--primary); font-style: italic; }
 .hero-redesign-intro { max-width: 310px; margin: 42px 0 28px; color: #aaa097; font-size: 13px; line-height: 1.7; }
 .hero-cta-redesign { color: #f4eee6; }
 .hero-redesign-portrait { position: relative; align-self: center; width: 100%; max-width: 540px; aspect-ratio: 1.28; overflow: hidden; background: #57514b; transform: rotate(2deg); }
+.hero-redesign-portrait-large { width: 120%; max-width: 648px; justify-self: end; transform: translateX(4vw) rotate(2deg); transform-origin: right center; }
 .hero-redesign-portrait::after { position: absolute; inset: 17px; border: 1px solid rgba(244, 238, 230, .7); content: ""; pointer-events: none; }
 .hero-redesign-portrait img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center 16%; filter: saturate(.86); transition: transform 700ms cubic-bezier(.23,1,.32,1); }
 .hero-redesign-portrait:hover img { transform: scale(1.04); }
@@ -707,6 +708,7 @@ h1 em, h2 em { color: var(--primary); font-style: italic; }
 
 @media (max-width: 1024px) {
   .hero-redesign { grid-template-columns: 38px minmax(300px, .95fr) minmax(300px, .72fr); gap: 4vw; padding-right: 5vw; }
+  .hero-redesign-portrait-large { width: 100%; max-width: 540px; transform: rotate(2deg); }
   .hero-redesign-copy h1 { font-size: clamp(4.1rem, 8.2vw, 7.5rem); }
   .work-redesign-heading { grid-template-columns: 75px 1fr .55fr; }
   .work-redesign-heading .behance-link { grid-column: 2 / -1; justify-self: start; }
@@ -722,6 +724,7 @@ h1 em, h2 em { color: var(--primary); font-style: italic; }
   .hero-redesign-copy h1 { font-size: clamp(4rem, 17vw, 6.8rem); line-height: .82; }
   .hero-redesign-intro { margin-top: 34px; }
   .hero-redesign-portrait { order: 2; width: 100%; margin-left: auto; aspect-ratio: 1.28; }
+  .hero-redesign-portrait-large { width: 100%; max-width: none; justify-self: stretch; transform: rotate(2deg); }
   .hero-redesign-bottom { order: 3; grid-column: 1; grid-template-columns: 1fr 40px; gap: 12px; padding-top: 15px; }
   .hero-redesign-bottom span:nth-child(2) { display: none; }
   .work-redesign { padding-top: 75px; }

@@ -562,11 +562,11 @@
 - [x] Salvar checkpoint e entregar o relatório analítico detalhado.
 
 ## Otimização Avançada baseada no GTmetrix
-- [ ] Investigar o redirecionamento para autenticação do Manus capturado pelo GTmetrix e garantir acesso público direto.
-- [ ] Otimizar o tamanho do bundle de JavaScript e verificar a remoção de bibliotecas não essenciais no carregamento inicial.
-- [ ] Ajustar políticas de cache, pré-conexão (preconnect) para fontes do Google e assets estáticos.
-- [ ] Executar testes automatizados, typecheck e build de produção com compressão e chunking refinados.
-- [ ] Salvar checkpoint de alta performance e entregar o relatório detalhado de otimização.
+- [x] Investigar o redirecionamento para autenticação do Manus capturado pelo GTmetrix e garantir acesso público direto.
+- [x] Otimizar o tamanho do bundle de JavaScript e verificar a remoção de bibliotecas não essenciais no carregamento inicial.
+- [x] Ajustar políticas de cache, pré-conexão (preconnect) para fontes do Google e assets estáticos.
+- [x] Executar testes automatizados, typecheck e build de produção com compressão e chunking refinados.
+- [x] Salvar checkpoint de alta performance e entregar o relatório detalhado de otimização.
 
 ## Rodada de Otimização GTmetrix e Desempenho
 - [x] Analisar relatório e requisições GTmetrix, separando os redirecionamentos de autenticação da plataforma do tráfego público real.
@@ -574,3 +574,6 @@
 - [x] Adicionar preconnect para fontes e CDNs externos em `client/index.html`.
 - [x] Executar testes automatizados (`pnpm test`) e build de produção com sucesso.
 - [x] Salvar checkpoint `1f2db0c0` e validar a estabilidade visual e funcional do portfólio.
+
+## Revisão do editor visual — Hero
+- [x] Aplicar efetivamente o comentário "aumente 20% o tamanho deste item" ao retrato principal do Hero, preservando responsividade e evitando sobreposição no mobile.
