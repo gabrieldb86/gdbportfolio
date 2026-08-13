@@ -496,3 +496,10 @@
 - [x] Padronizar tipografia, tamanho, peso, espaçamento e alinhamento dos textos das caixas editoriais.
 - [x] Reduzir as linhas verticais para acompanharem a altura real do conteúdo, sem preencher toda a caixa.
 - [x] Validar desktop, mobile vertical e mobile horizontal, executar testes/build e salvar checkpoint.
+
+## Reprodução fiel dos quatro prints recentes
+- [x] Comparar o bloco dos bonés com a versão anterior e restaurar sua proporção aprovada.
+- [x] Equalizar títulos e descrições dos três princípios pela mesma grade de linhas.
+- [x] Padronizar a faixa de métricas conforme a tipografia e o espaçamento editoriais aprovados.
+- [x] Encurtar as divisórias verticais das colunas de coordenação até o fim do conteúdo.
+- [x] Validar desktop, mobile vertical e mobile horizontal, executar testes/build e salvar checkpoint.

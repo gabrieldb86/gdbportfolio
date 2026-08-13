@@ -326,7 +326,7 @@ export default function Home() {
         </section>
 
         <section className="statement-section">
-          <img src={siteConfig.heroImage} alt="Projeto visual de bonés em preto e vermelho" loading="lazy" onError={markBrokenImage} />
+          <img src={siteConfig.heroImage} alt="Projeto visual de bonés em preto e vermelho" loading="eager" onError={markBrokenImage} />
           <div className="statement-copy" data-reveal="statement-copy"><span>Uma pergunta para o próximo projeto:</span><h2>O que precisa<br /><em>ganhar forma?</em></h2></div>
         </section>
 

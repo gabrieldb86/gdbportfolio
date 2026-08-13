@@ -2302,3 +2302,51 @@ a.proof-link, a.behance-link, a.text-link, .service-detail a {
     grid-template-rows: auto auto auto;
   }
 }
+
+/* Reprodução fiel dos prints: fechamento com três áreas e princípios em linhas comuns. */
+@media (min-width: 901px) {
+  .home-revision .statement-section {
+    grid-template-columns: minmax(0, .82fr) minmax(120px, .30fr) minmax(360px, 1fr);
+    min-height: 510px;
+    background: #2f1b1b;
+  }
+  .home-revision .statement-section::after {
+    display: block;
+    grid-column: 2;
+    grid-row: 1;
+    background: #2f1b1b;
+    content: "";
+  }
+  .home-revision .statement-copy {
+    grid-column: 1;
+    z-index: 1;
+    padding: 64px 6vw 64px var(--editorial-axis);
+    background: #d73332;
+  }
+  .home-revision .statement-copy h2 {
+    max-width: 430px;
+    font-size: clamp(2.5rem, 4vw, 5.4rem);
+    line-height: .88;
+  }
+  .home-revision .statement-section img {
+    grid-column: 3;
+    z-index: 1;
+    min-height: 0;
+    padding: 18px;
+    background: #fff9f2;
+    object-fit: cover;
+  }
+  .about-principles > div {
+    grid-template-rows: 18px 52px auto;
+  }
+}
+
+@media (max-width: 900px) {
+  .home-revision .statement-section::after {
+    display: none;
+  }
+  .home-revision .statement-section img {
+    padding: 0;
+    background: transparent;
+  }
+}
