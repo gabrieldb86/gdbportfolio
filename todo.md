@@ -551,3 +551,12 @@
 - [x] Garantir que o carregamento diferido e os tamanhos fixed de imagem eliminem layout shifts (CLS).
 - [x] Executar testes, typecheck e build de produção com chunking otimizado.
 - [x] Salvar checkpoint de desempenho mobile e entregar o relatório de melhorias.
+
+## Auditoria e Correção Minuciosa PageSpeed Mobile
+- [x] Analisar todas as auditorias apontadas nos prints (Acessibilidade, Práticas recomendadas, SEO, Desempenho).
+- [x] Corrigir atributos `alt` em imagens e SVGs, contraste de cores e hierarquia de headings.
+- [x] Ajustar a viewport meta tag para permitir zoom adequado (`maximum-scale=5` ou remover `user-scalable=no`).
+- [x] Adicionar nomes acessíveis (aria-label) em modais, diálogos e botões.
+- [x] Otimizar tamanho de DOM, remover scripts não utilizados e ajustar code splitting.
+- [x] Executar testes automatizados, typecheck e build de produção com minificação avançada.
+- [x] Salvar checkpoint e entregar o relatório analítico detalhado.
