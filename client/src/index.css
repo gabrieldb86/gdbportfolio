@@ -2474,3 +2474,44 @@ a.proof-link, a.behance-link, a.text-link, .service-detail a {
     flex: 1 1 150px;
   }
 }
+
+/* Divisão temática simplificada: marcadores curtos em vez de linhas estruturais. */
+.home-revision .coordination-focus-label {
+  border-right: 0;
+}
+.home-revision .coordination-focus-item,
+.home-revision .coordination-focus-item:last-child {
+  border-right: 0;
+  border-bottom: 0;
+}
+.home-revision .coordination-focus-item::after {
+  display: none !important;
+}
+.home-revision .coordination-focus-item::before {
+  display: block;
+  width: 34px;
+  height: 2px;
+  margin-bottom: 16px;
+  background: #1c1b1a;
+  content: "";
+}
+@media (min-width: 901px) {
+  .home-revision .coordination-focus-grid {
+    gap: clamp(28px, 3.8vw, 64px);
+    padding-left: clamp(24px, 3vw, 48px);
+  }
+}
+@media (max-width: 900px) {
+  .home-revision .coordination-focus-label {
+    padding-bottom: 40px;
+    border-bottom: 0;
+  }
+  .home-revision .coordination-focus-item,
+  .home-revision .coordination-focus-item:last-child {
+    padding: 30px 0 0;
+    border-bottom: 0;
+  }
+  .home-revision .coordination-focus-item::before {
+    margin-bottom: 14px;
+  }
+}

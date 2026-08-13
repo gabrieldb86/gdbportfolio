@@ -11,3 +11,7 @@ A grade desktop de Focos de coordenação passou a ser uma grade real de três c
 ## Nova faixa de métricas sem caixas
 
 A seção de prova social agora apresenta o título e a descrição no mesmo hero carmim, enquanto as cinco métricas aparecem em uma faixa contínua sem células, bordas verticais ou aparência de tabela. Os botões de trajetória e CV foram deslocados para uma linha de ações separada. A prévia desktop preservou o Hero principal e a prévia mobile empilhou as métricas em duas colunas sem encavalamento visível.
+
+## Focos de coordenação sem linhas
+
+As linhas verticais estruturais foram removidas da seção Focos de coordenação. A separação entre os temas agora usa marcadores horizontais curtos, espaçamento entre colunas no desktop e separação por ritmo vertical no mobile. O card configurável dos bonés permaneceu preservado. As prévias desktop e mobile não mostraram encavalamento nessa seção.

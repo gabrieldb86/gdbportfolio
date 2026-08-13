@@ -520,3 +520,9 @@
 - [x] Criar uma faixa editorial fluida, com hierarquia tipográfica e ritmo editorial leve.
 - [x] Separar os botões de ação do CV das métricas para evitar poluição visual.
 - [x] Validar desktop, mobile vertical e mobile horizontal, executar testes/build e salvar checkpoint.
+
+## Divisão temática sem linhas verticais
+- [x] Remover as linhas verticais da seção Focos de coordenação no desktop.
+- [x] Criar separadores editoriais estáveis com espaçamento, índices e regra horizontal discreta.
+- [x] Preservar o empilhamento mobile sem linhas verticais e sem encavalamento.
+- [x] Validar testes/build e salvar checkpoint.
