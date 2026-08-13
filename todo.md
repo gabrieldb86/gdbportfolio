@@ -628,3 +628,8 @@
 - [x] Remover o deslocamento negativo do bloco editorial e alinhar a seção ao eixo `--editorial-axis`.
 - [x] Garantir que o grid respeite a mesma margem esquerda das demais seções.
 - [x] Validar desktop, mobile, testes e build.
+
+## Revisão dimensional final — segunda sessão
+- [x] Remover os dois atributos `style` duplicados do container `coordination-focus-layout`.
+- [x] Garantir que as dimensões de largura e altura permaneçam sob controle do CSS responsivo.
+- [x] Validar TypeScript, testes, build e visualização desktop/mobile antes do checkpoint.
