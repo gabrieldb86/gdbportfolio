@@ -238,7 +238,7 @@ function migrateProjects(savedProjects: ProjectConfig[] | undefined) {
 
 function migrateHero(savedHero: Partial<SiteConfig["hero"]> | undefined) {
   const hero = { ...defaultSiteConfig.hero, ...savedHero };
-  const hasLegacyMetric = /300K|300 mil|300 mil/i.test(hero.intro);
+  const hasLegacyMetric = /(?:100|300)\s*(?:K|mil)\+?/i.test(hero.intro);
   const hasLegacyLongIntro = hero.intro.startsWith("Sou Gabriel, há mais de 17 anos");
   return {
     ...hero,
@@ -249,7 +249,7 @@ function migrateHero(savedHero: Partial<SiteConfig["hero"]> | undefined) {
 
 function migrateServiceDetails(savedDetails: Record<string, string> | undefined) {
   const details = { ...defaultSiteConfig.serviceDetails, ...savedDetails };
-  return Object.fromEntries(Object.entries(details).map(([key, value]) => [key, value.replace(/300K\+|300 mil|300K|300 mil/i, "114K")]));
+  return Object.fromEntries(Object.entries(details).map(([key, value]) => [key, value.replace(/(?:100|300)\s*(?:K|mil)\+?/i, "114K")]));
 }
 
 export function getSiteConfig(): SiteConfig {

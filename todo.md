@@ -474,3 +474,11 @@
 - [x] Auditar o código para garantir que não restem referências ao Dashboard, agente ou dados fictícios.
 - [x] Configurar uma única tarefa diária diretamente no Manus, sem endpoint, segredo ou integração com o site.
 - [x] Executar testes, typecheck, build, salvar checkpoint e entregar o local de consulta da tarefa.
+
+## Correções urgentes de métricas, CV e publicação
+- [x] Auditar todas as ocorrências atuais de 300 mil/300K, 100K e telefone visível nos arquivos públicos.
+- [x] Atualizar meta description, Home, CV e siteConfig para 114 mil/114K.
+- [x] Remover qualquer telefone exibido como texto no CV, mantendo apenas contato sem dígitos visíveis.
+- [x] Executar testes, typecheck, build e validação visual das rotas públicas em desktop e mobile.
+- [ ] Salvar checkpoint com as correções concluídas.
+- [x] Orientar contato com o suporte Manus sobre a remoção do manus-runtime da publicação pública.
