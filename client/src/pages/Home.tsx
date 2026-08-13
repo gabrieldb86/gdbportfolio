@@ -340,8 +340,8 @@ export default function Home() {
 
         <section id="work" className="work-section work-redesign section-pad" aria-labelledby="work-title">
           <div className="work-redesign-heading" data-reveal="work-heading">
-            <div><p className="section-kicker">Trabalhos selecionados</p><h2 id="work-title">Projetos que<br /><em>ganharam forma.</em></h2></div>
-            <p>Uma seleção de campanhas, trilhas, eventos e materiais criada para comunicar melhor, capacitar equipes e melhorar a execução.</p>
+            <div><p className="section-kicker" style={{ fontSize: '16px' }}>Trabalhos selecionados</p><h2 id="work-title">Projetos que<br /><em>ganharam forma.</em></h2></div>
+            <p style={{ fontSize: '16px' }}>Uma seleção de campanhas, trilhas, eventos e materiais criada para comunicar melhor, capacitar equipes e melhorar a execução.</p>
             <a className="behance-link" href="https://www.behance.net/gabrieldb86" data-umami-event="behance-open" target="_blank" rel="noreferrer">Abrir Behance <ArrowUpRight size={15} /></a>
           </div>
 

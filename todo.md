@@ -715,3 +715,8 @@
 - [x] Remover as classes e estilos inline que achataram o título da seção work.
 - [x] Restaurar a estrutura original com título editorial grande (`Projetos que ganharam forma.`), kicker correto e layout equilibrado.
 - [x] Executar testes, build de produção e salvar checkpoint.
+
+## Verificação da tipografia em Trabalhos selecionados
+- [x] Garantir que o título `Projetos que ganharam forma.` mantenha seu tamanho editorial original de hero.
+- [x] Aplicar `font-size: 16px` com segurança apenas no kicker e na descrição para manter a legibilidade.
+- [x] Executar testes, build e salvar checkpoint.
