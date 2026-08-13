@@ -446,3 +446,10 @@
 - [x] Renderizar a moldura com dados configuráveis e fallback visual seguro.
 - [x] Preservar a composição inclinada no desktop e adaptar o módulo para mobile.
 - [x] Validar acessibilidade, testes, typecheck e build antes do checkpoint.
+
+## Correção de métricas e privacidade do CV
+- [x] Substituir todas as ocorrências públicas de 300 mil/300K por 114 mil/114K.
+- [x] Remover a linha de telefone visível do CV ou trocar por um rótulo sem dígitos.
+- [x] Auditar ocorrências residuais no código, metadados e páginas públicas.
+- [x] Validar desktop, mobile, testes, typecheck e build antes do checkpoint.
+- [x] Orientar consulta ao suporte Manus sobre a remoção do script runtime público.

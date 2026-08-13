@@ -72,7 +72,7 @@ export default function Home() {
   useEffect(() => {
     setPageMetadata({
       title: "Gabriel Danino Basilio — Coordenação de Conteúdo, Treinamento e Trade Marketing",
-      description: "Gabriel Danino Basilio: profissional com 17 anos de experiência, 100K+ pessoas capacitadas e atuação em conteúdo, treinamento, trade marketing e performance de campo.",
+      description: "Gabriel Danino Basilio: profissional com 17 anos de experiência, 114K+ pessoas capacitadas e atuação em conteúdo, treinamento, trade marketing e performance de campo.",
       path: "/",
     });
   }, []);
@@ -164,7 +164,7 @@ export default function Home() {
               <h1 className="hero-headline"><span className="hero-headline-white">CONTEÚDO,</span><br /><span className="hero-headline-training">treinamento</span><br /><span className="hero-headline-white">&amp; TRADE</span><br /><span className="hero-headline-white">MARKETING.</span></h1>
               <p className="hero-positioning">{siteConfig.hero.positioning}</p>
               <p className="hero-redesign-intro" style={{ marginTop: "16px" }}>{siteConfig.hero.intro}</p>
-              <p className="hero-proof-line">17+ anos · 100K+ pessoas capacitadas · 130+ promotores monitorados</p>
+              <p className="hero-proof-line">17+ anos · 114K+ pessoas capacitadas · 130+ promotores monitorados</p>
             </div>
           </div>
           <div className="hero-redesign-portrait" data-reveal="hero-portrait">
@@ -317,7 +317,7 @@ export default function Home() {
             <div className="about-copy" data-reveal="about-copy">
               <p className="section-kicker">Sobre mim</p>
               <h2 id="about-title">Olá, eu sou<br /><em>Gabriel.</em></h2>
-              <p className="about-lead">Tenho 17 anos de experiência em conteúdo, treinamento e trade marketing — e mais de 100K pessoas capacitadas ao longo da carreira, incluindo 8 anos como pioneiro do Today at Apple no Brasil.</p>
+              <p className="about-lead">Tenho 17 anos de experiência em conteúdo, treinamento e trade marketing — e mais de 114K pessoas capacitadas ao longo da carreira, incluindo 8 anos como pioneiro do Today at Apple no Brasil.</p>
               <p>Minha trajetória cruza coordenação de treinamento, gestão de indicadores de campo e produção de conteúdo — da Apple à SPOT/Grupo EMS. Busco uma próxima posição de coordenação em Conteúdo &amp; Treinamento, Trade Marketing &amp; Performance de Campo, ou Treinamento &amp; Desenvolvimento de Pessoas, aplicando metodologias como ADDIE, Kirkpatrick e Design Thinking.</p>
               <div className="about-skill-list" aria-label="Áreas de atuação"><span>Instructional Design</span><span>Trade Marketing</span><span>Gestão de Campo</span><span>ADDIE / Kirkpatrick</span><span>IA Generativa</span><span>Dashboards &amp; KPIs</span></div>
               <div className="about-principles" aria-label="Princípios de coordenação">
