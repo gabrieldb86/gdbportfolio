@@ -1651,9 +1651,11 @@ a.proof-link, a.behance-link, a.text-link, .service-detail a {
   }
   .home-revision .coordination-focus-layout {
     display: grid;
-    grid-template-columns: minmax(280px, .82fr) minmax(520px, 1.18fr);
+    width: min(100%, 1240px);
+    margin: 0 auto;
+    grid-template-columns: minmax(300px, .58fr) minmax(560px, 1.42fr);
     align-items: start;
-    gap: clamp(56px, 8vw, 140px);
+    gap: clamp(64px, 8vw, 124px);
   }
   .home-revision .coordination-focus-band::before {
     position: absolute;
@@ -1685,14 +1687,14 @@ a.proof-link, a.behance-link, a.text-link, .service-detail a {
   }
   .home-revision .coordination-focus-label h2 {
     scroll-margin-top: 100px;
-    max-width: 390px;
+    max-width: 360px;
     margin: 0;
     color: #fff9f2;
     font-family: "DM Serif Display", serif;
-    font-size: clamp(2.9rem, 4.2vw, 5.2rem);
+    font-size: clamp(3.4rem, 5.4vw, 5.8rem);
     font-weight: 400;
     letter-spacing: -.055em;
-    line-height: .88;
+    line-height: .86;
   }
   .home-revision .coordination-focus-label h2 em {
     color: #1c1b1a;
@@ -1715,7 +1717,7 @@ a.proof-link, a.behance-link, a.text-link, .service-detail a {
     padding: 0 0 28px;
     margin: 0 0 28px;
     border: 0;
-    border-bottom: 1px solid rgba(255, 249, 242, .22);
+    border-bottom: 1px solid rgba(255, 249, 242, .28);
   }
   .home-revision .coordination-focus-item:last-child {
     padding-bottom: 0;

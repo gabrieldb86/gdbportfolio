@@ -603,3 +603,8 @@
 - [x] Remover os dois atributos `style` duplicados do container `coordination-focus-layout`.
 - [x] Remover a largura fixa do título e do elemento `em`, mantendo a composição controlada pelo CSS responsivo.
 - [x] Validar TypeScript, testes, build e visualização desktop/mobile antes do checkpoint.
+
+## Implementação exata da segunda sessão (baseada no print do usuário)
+- [x] Ajustar o layout da segunda sessão para duas colunas nítidas: título/contexto à esquerda e lista vertical de 3 itens à direita.
+- [x] Garantir separadores horizontais entre os itens 01, 02 e 03, com sinal de mais (+) no canto superior direito de cada faixa.
+- [x] Validar desktop, mobile, testes e build antes do checkpoint.
