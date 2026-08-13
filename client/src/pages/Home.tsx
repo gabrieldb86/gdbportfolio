@@ -224,9 +224,9 @@ export default function Home() {
 
         <section className="recruiter-proof-wrap" aria-label="Destaques profissionais para RH e lideranças">
           <div className="recruiter-proof-header" data-reveal="proof-header">
-            <p className="section-kicker">Para RH, headhunters e lideranças</p>
+            <p className="section-kicker" style={{fontSize: '16px'}}>Para RH, headhunters e lideranças</p>
             <h2 className="recruiter-proof-title">Números que <em>comprovam</em> a experiência.</h2>
-            <p className="recruiter-proof-desc">Da facilitação premiada na Apple à gestão de campo na SPOT, cada indicador abaixo representa anos de execução real — não promessa.</p>
+            <p className="recruiter-proof-desc" style={{fontSize: '16px'}}>Da facilitação premiada na Apple à gestão de campo na SPOT, cada indicador abaixo representa anos de execução real — não promessa.</p>
           </div>
           <div className="recruiter-proof-strip" data-reveal="proof-strip">
             <div className="proof-metric"><strong>17+</strong><span>anos de experiência</span></div>

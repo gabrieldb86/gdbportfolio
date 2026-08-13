@@ -667,5 +667,9 @@
 - [x] Validar desktop, mobile, testes e build.
 
 ## Aplicação do layout solicitado pelo usuário
-- [ ] Aplicar `style={{ paddingLeft: '237px', width: '1005px' }}` na grade de coordenação.
-- [ ] Validar desktop, mobile, testes e build.
+- [x] Aplicar `style={{ paddingLeft: '237px', width: '1005px' }}` na grade de coordenação.
+- [x] Validar desktop, mobile, testes e build.
+
+## Verificação tipográfica da seção de métricas
+- [ ] Validar a legibilidade dos textos com fontSize 16px em desktop e mobile.
+- [ ] Executar testes e build de produção.
