@@ -63,3 +63,8 @@ A validação mobile vertical e horizontal confirmou que as três colunas se emp
 ## Ajuste tipográfico do texto de apoio de Focos
 
 A alteração aplicada pelo editor elevou o texto de apoio para 14px e o espaçamento superior para 18px. A captura desktop confirmou uma presença tipográfica maior sem competir com a headline; a captura mobile vertical confirmou leitura acessível, alinhamento no eixo editorial e ausência de encavalamento com as microlistas.
+
+
+## Atualização do favicon com o avatar fornecido
+
+O favicon anterior, que apontava para o retrato lateral do portfólio, foi substituído por um `favicon.ico` gerado a partir do avatar preto e branco fornecido pelo usuário. Também foi atualizado o `apple-touch-icon.png` para manter a mesma identidade em dispositivos móveis. As URLs locais responderam com `200 OK` e os tipos corretos (`image/x-icon` e `image/png`); a Home permaneceu íntegra em desktop e mobile vertical, e testes, typecheck e build foram aprovados.

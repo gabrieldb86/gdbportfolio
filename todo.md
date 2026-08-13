@@ -434,3 +434,9 @@
 - [x] Auditar alinhamento editorial, eixo master, tipografia e responsividade.
 - [x] Analisar SEO, metadados, performance de build e prontidão de publicação.
 - [x] Produzir relatório detalhado com o que falta, pendências técnicas e melhorias para recrutadores.
+
+## Atualização do favicon com o avatar fornecido
+- [x] Auditar o favicon atual e a referência de ícone em `client/index.html`.
+- [x] Configurar o avatar preto e branco fornecido como favicon da página.
+- [x] Validar carregamento do ícone no navegador, desktop e mobile, além de testes, typecheck e build.
+- [x] Criar checkpoint após confirmar a atualização.
