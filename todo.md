@@ -705,3 +705,8 @@
 - [x] Consolidar o `style` duplicado do container com altura 386px, margens 116px/39px, marginTop -34px, largura 1732px e padding lateral 0px.
 - [x] Consolidar o `style` duplicado do primeiro indicador com paddingTop 30px, paddingRight 30px, paddingBottom 30px e paddingLeft 39px.
 - [x] Validar desktop, mobile, TypeScript, testes e build e criar checkpoint.
+
+## Verificação da edição ampla em Home.tsx
+- [x] Localizar e remover todos os atributos `style` duplicados gerados pela última edição visual.
+- [x] Manter as melhorias de tipografia e layout desejadas pelo usuário.
+- [x] Executar testes unitários, build de produção e criar checkpoint.

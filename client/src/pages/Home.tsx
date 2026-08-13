@@ -282,7 +282,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="recruiter-proof" className="recruiter-proof-wrap" aria-label="Destaques profissionais para RH e lideranças">
+        <section id="recruiter-proof" className="recruiter-proof-wrap" aria-label="Destaques profissionais para RH e lideranças" style={{ height: '490px', paddingTop: '76px', backgroundColor: '#cf7b73' }}>
           <div className="recruiter-proof-layout" style={{ height: '386px', marginLeft: '116px', marginRight: '39px', marginTop: '-34px', paddingLeft: '0px', paddingRight: '0px', width: '1732px' }}>
             <div className="recruiter-proof-header" data-reveal="proof-header">
               <p className="section-kicker" style={{fontSize: '16px'}}>Para RH, headhunters e lideranças</p>
@@ -328,21 +328,21 @@ export default function Home() {
         <section className="manifesto-section section-pad" aria-labelledby="manifesto-title">
           <div className="manifesto-grid" data-reveal="manifesto">
             <div className="manifesto-heading">
-              <p className="section-kicker">Como eu atuo</p>
+              <p className="section-kicker" style={{fontSize: '16px'}}>Como eu atuo</p>
               <h2 id="manifesto-title">Transformo estratégia em <span>experiências</span> que movem pessoas.</h2>
             </div>
             <div className="manifesto-aside">
-              <p>Porque conteúdo e treinamento só funcionam quando encontram contexto, método e um próximo passo claro — para a equipe, para o campo e para o negócio.</p>
-              <a className="text-link" href="#about" onClick={(event) => { event.preventDefault(); scrollToId("about"); }}>Conheça meu jeito de trabalhar <ArrowUpRight size={15} /></a>
+              <p style={{fontSize: '20px'}}>Porque conteúdo e treinamento só funcionam quando encontram contexto, método e um próximo passo claro — para a equipe, para o campo e para o negócio.</p>
+              <a className="text-link" href="#about" onClick={(event) => { event.preventDefault(); scrollToId("about"); }} style={{fontSize: '14px'}}>Conheça meu jeito de trabalhar <ArrowUpRight size={15} style={{fontSize: '14px'}} /></a>
             </div>
           </div>
         </section>
 
         <section id="work" className="work-section work-redesign section-pad" aria-labelledby="work-title">
           <div className="work-redesign-heading" data-reveal="work-heading">
-            <div><p className="section-kicker">Trabalhos selecionados</p><h2 id="work-title">Projetos que<br /><em>ganharam forma.</em></h2></div>
-            <p>Uma seleção de campanhas, trilhas, eventos e materiais criada para comunicar melhor, capacitar equipes e melhorar a execução.</p>
-            <a className="behance-link" href="https://www.behance.net/gabrieldb86" data-umami-event="behance-open" target="_blank" rel="noreferrer">Abrir Behance <ArrowUpRight size={15} /></a>
+            <div style={{fontSize: '16px'}}><p className="section-kicker" style={{fontSize: '16px'}}>Trabalhos selecionados</p><h2 id="work-title" style={{fontSize: '16px'}}>Projetos que<br style={{fontSize: '16px'}} /><em style={{fontSize: '16px'}}>ganharam forma.</em></h2></div>
+            <p style={{fontSize: '18px'}}>Uma seleção de campanhas, trilhas, eventos e materiais criada para comunicar melhor, capacitar equipes e melhorar a execução.</p>
+            <a className="behance-link" href="https://www.behance.net/gabrieldb86" data-umami-event="behance-open" target="_blank" rel="noreferrer" style={{fontSize: '16px'}}>Abrir Behance <ArrowUpRight size={15} style={{fontSize: '16px'}} /></a>
           </div>
 
           <div className="projects-grid sean-obrien-grid">
@@ -353,16 +353,16 @@ export default function Home() {
         <section className="services-section services-redesign section-pad" aria-labelledby="services-title">
           <div className="services-layout" data-reveal="services-layout">
             <div>
-              <p className="section-kicker">Áreas de atuação</p>
+              <p className="section-kicker" style={{fontSize: '16px'}}>Áreas de atuação</p>
               <h2 id="services-title">Coordenação que<br />vira <em className="services-result">resultado.</em></h2>
-              <div className="services-editorial-note"><strong>Do briefing ao resultado.</strong><p>Coordenação que organiza contexto, método, conteúdo e execução para o trabalho chegar ao campo.</p></div>
+              <div className="services-editorial-note" style={{fontSize: '16px'}}><strong style={{fontSize: '16px'}}>Do briefing ao resultado.</strong><p style={{fontSize: '16px'}}>Coordenação que organiza contexto, método, conteúdo e execução para o trabalho chegar ao campo.</p></div>
             </div>
             <div className="services-list">
               {siteConfig.services.map(([number, title, description], index) => (
                 <details className="service-item" key={number} data-reveal="service-item" data-reveal-delay={index * 70}>
                   <summary className="service-row">
-                    <span className="service-number">{number}</span>
-                    <div><h3>{title}</h3><p>{description}</p></div>
+                    <span className="service-number" style={{ fontSize: '16px' }}>{number}</span>
+                    <div style={{ fontSize: '14px' }}><h3 style={{ fontSize: '14px' }}>{title}</h3><p style={{ fontSize: '14px' }}>{description}</p></div>
                     <Plus className="service-toggle" size={21} strokeWidth={1.4} aria-hidden="true" />
                   </summary>
                   <div className="service-detail" id={`service-detail-${number}`}>
@@ -375,22 +375,22 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="about" className="about-section section-pad" aria-labelledby="about-title">
+        <section id="about" className="about-section section-pad" aria-labelledby="about-title" style={{height: '1058px'}}>
           <div className="about-grid">
             <div className="about-art-wrap" data-reveal="about-art">
               <img src={siteConfig.trainingImage} alt="Gabriel conduzindo um treinamento diante de uma equipe" loading="eager" onError={markBrokenImage} />
               <span className="about-art-label">Processo / repertório / intenção</span>
             </div>
             <div className="about-copy" data-reveal="about-copy">
-              <p className="section-kicker">Sobre mim</p>
+              <p className="section-kicker" style={{fontSize: '16px'}}>Sobre mim</p>
               <h2 id="about-title">Olá, eu sou<br /><em>Gabriel.</em></h2>
-              <p className="about-lead">Tenho 17 anos de experiência em conteúdo, treinamento e trade marketing — e mais de 114K pessoas capacitadas ao longo da carreira, incluindo 8 anos como pioneiro do Today at Apple no Brasil.</p>
-              <p>Minha trajetória cruza coordenação de treinamento, gestão de indicadores de campo e produção de conteúdo — da Apple à SPOT/Grupo EMS. Busco uma próxima posição de coordenação em Conteúdo &amp; Treinamento, Trade Marketing &amp; Performance de Campo, ou Treinamento &amp; Desenvolvimento de Pessoas, aplicando metodologias como ADDIE, Kirkpatrick e Design Thinking.</p>
+              <p className="about-lead" style={{fontSize: '16px'}}>Tenho 17 anos de experiência em conteúdo, treinamento e trade marketing — e mais de 114K pessoas capacitadas ao longo da carreira, incluindo 8 anos como pioneiro do Today at Apple no Brasil.</p>
+              <p style={{fontSize: '16px'}}>Minha trajetória cruza coordenação de treinamento, gestão de indicadores de campo e produção de conteúdo — da Apple à SPOT/Grupo EMS. Busco uma próxima posição de coordenação em Conteúdo &amp; Treinamento, Trade Marketing &amp; Performance de Campo, ou Treinamento &amp; Desenvolvimento de Pessoas, aplicando metodologias como ADDIE, Kirkpatrick e Design Thinking.</p>
               <div className="about-skill-list" aria-label="Áreas de atuação"><span>Instructional Design</span><span>Trade Marketing</span><span>Gestão de Campo</span><span>ADDIE / Kirkpatrick</span><span>IA Generativa</span><span>Dashboards &amp; KPIs</span></div>
               <div className="about-principles" aria-label="Princípios de coordenação">
-                <div><span>01</span><strong>Contexto antes da solução</strong><p>Entender público, operação e indicador antes de desenhar a resposta.</p></div>
-                <div><span>02</span><strong>Método que chega ao campo</strong><p>Transformar estratégia em conteúdo, treinamento, rotina e material aplicável.</p></div>
-                <div><span>03</span><strong>Acompanhamento até o resultado</strong><p>Usar avaliação, indicadores, PDCA e feedback para ajustar a execução.</p></div>
+                <div style={{ fontSize: '14px' }}><span style={{ fontSize: '14px' }}>01</span><strong style={{ fontSize: '14px' }}>Contexto antes da solução</strong><p style={{ fontSize: '14px' }}>Entender público, operação e indicador antes de desenhar a resposta.</p></div>
+                <div style={{ fontSize: '14px' }}><span style={{ fontSize: '14px' }}>02</span><strong style={{ fontSize: '14px' }}>Método que chega ao campo</strong><p style={{ fontSize: '14px' }}>Transformar estratégia em conteúdo, treinamento, rotina e material aplicável.</p></div>
+                <div style={{ fontSize: '14px', height: '23px', width: '266px' }}><span style={{ fontSize: '14px', height: '23px', width: '266px' }}>03</span><strong style={{ fontSize: '14px', height: '23px', width: '266px' }}>Acompanhamento até o resultado</strong><p style={{ fontSize: '14px', height: '23px', width: '266px' }}>Usar avaliação, indicadores, PDCA e feedback para ajustar a execução.</p></div>
               </div>
             </div>
           </div>
@@ -398,15 +398,15 @@ export default function Home() {
 
         <section className="statement-section">
           <img src={siteConfig.heroImage} alt="Projeto visual de bonés em preto e vermelho" loading="lazy" onError={markBrokenImage} />
-          <div className="statement-copy" data-reveal="statement-copy"><span>Uma pergunta para o próximo projeto:</span><h2>O que precisa<br /><em>ganhar forma?</em></h2></div>
+          <div className="statement-copy" data-reveal="statement-copy" style={{ fontSize: '16px', width: '690px' }}><span style={{ fontSize: '16px', width: '690px' }}>Uma pergunta para o próximo projeto:</span><h2 style={{ fontSize: '16px', width: '690px' }}>O que precisa<br style={{ fontSize: '16px', width: '690px' }} /><em style={{ fontSize: '16px', width: '690px' }}>ganhar forma?</em></h2></div>
         </section>
 
         <section id="contact" className="contact-section section-pad" aria-labelledby="contact-title">
           <div className="contact-grid">
             <div className="contact-intro" data-reveal="contact-intro">
-              <p className="section-kicker">Vamos conversar</p>
-              <h2 id="contact-title">Você está formando<br />uma equipe de <em>coordenação?</em></h2>
-              <p>Estou aberto a oportunidades em conteúdo, treinamento, trade marketing e performance de campo. Envie o contexto da posição ou fale comigo diretamente pelo LinkedIn, e-mail ou WhatsApp.</p>
+              <p className="section-kicker" style={{fontSize: '16px'}}>Vamos conversar</p>
+              <h2 id="contact-title" style={{width: '713px'}}>Você está formando<br style={{width: '713px'}} />uma equipe de <em style={{width: '713px'}}>coordenação?</em></h2>
+              <p style={{fontSize: '16px'}}>Estou aberto a oportunidades em conteúdo, treinamento, trade marketing e performance de campo. Envie o contexto da posição ou fale comigo diretamente pelo LinkedIn, e-mail ou WhatsApp.</p>
               <div className="contact-links">
                 <a className="contact-direct" href="https://wa.me/5511945747353" data-umami-event="whatsapp-click" target="_blank" rel="noreferrer"><MessageCircle size={17} /> Falar diretamente com Gabriel <ArrowUpRight size={15} /></a>
                 <a className="contact-direct" href="https://www.linkedin.com/in/gabrieldb86" data-umami-event="linkedin-click" target="_blank" rel="noreferrer"><Linkedin size={17} /> Conectar pelo LinkedIn <ArrowUpRight size={15} /></a>
