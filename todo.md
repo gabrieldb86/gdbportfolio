@@ -582,3 +582,8 @@
 - [x] Corrigir duplicação de `fontSize` no atributo `style` em Home.tsx.
 - [x] Verificar a solicitação de remoção da seção "Focos de coordenação"; o comentário final foi removido pelo editor, portanto a seção foi mantida.
 - [x] Validar build, TypeScript e testes unitários.
+
+## Revisão da segunda sessão — Focos de coordenação
+- [x] Remover as barras verticais de divisão entre as três colunas.
+- [x] Reorganizar os três focos em uma composição sem divisórias, com espaçamento uniforme e mantendo os tamanhos tipográficos atuais.
+- [x] Validar a nova disposição em desktop e mobile, além de testes e build.

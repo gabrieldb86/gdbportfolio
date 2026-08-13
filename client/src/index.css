@@ -1641,13 +1641,12 @@ a.proof-link, a.behance-link, a.text-link, .service-detail a {
   /* Hero editorial da coordenação: mais presença, ritmo e leitura de abertura. */
   .home-revision .coordination-focus-band {
     position: relative;
-    grid-template-columns: minmax(280px, 1.3fr) repeat(3, minmax(0, 1fr));
-    gap: 0;
+    display: block;
     min-height: 310px;
     padding-top: clamp(72px, 7vw, 112px);
     padding-bottom: clamp(64px, 6.5vw, 96px);
-    border-top: 1px solid rgba(255, 249, 242, .22);
-    border-bottom: 1px solid rgba(255, 249, 242, .3);
+    border-top: 0;
+    border-bottom: 0;
     overflow: hidden;
     isolation: isolate;
   }
@@ -1663,10 +1662,18 @@ a.proof-link, a.behance-link, a.text-link, .service-detail a {
     transform: rotate(-11deg);
   }
   .home-revision .coordination-focus-label {
-    justify-content: flex-start;
-    align-self: stretch;
-    padding: 0 48px 0 0;
-    border-right: 1px solid rgba(255, 249, 242, .38);
+    display: grid;
+    grid-template-columns: minmax(90px, .3fr) minmax(340px, 1.2fr) minmax(220px, .55fr);
+    align-items: end;
+    gap: 4vw;
+    padding: 0;
+    border: 0;
+  }
+  .home-revision .coordination-focus-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: clamp(28px, 4vw, 68px);
+    margin-top: 56px;
   }
   .home-revision .coordination-focus-label .section-kicker {
     margin: 0 0 22px;
@@ -1701,11 +1708,11 @@ a.proof-link, a.behance-link, a.text-link, .service-detail a {
     min-height: 190px;
     justify-content: flex-start;
     gap: 15px;
-    padding: 3px 30px 0;
-    border-right: 1px solid rgba(255, 249, 242, .38);
+    padding: 0;
+    border: 0;
   }
   .home-revision .coordination-focus-item:last-child {
-    border-right: 0;
+    border: 0;
   }
   .home-revision .coordination-focus-item-top {
     display: flex;
@@ -1754,8 +1761,7 @@ a.proof-link, a.behance-link, a.text-link, .service-detail a {
   .home-revision .coordination-focus-label {
     display: block;
     padding: 0 0 36px;
-    border-right: 0;
-    border-bottom: 1px solid rgba(255, 249, 242, .38);
+    border: 0;
   }
   .home-revision .coordination-focus-label .section-kicker {
     margin-bottom: 18px;
@@ -1771,19 +1777,17 @@ a.proof-link, a.behance-link, a.text-link, .service-detail a {
     font-size: 13px;
   }
   .home-revision .coordination-focus-grid {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+    margin-top: 0;
   }
   .home-revision .coordination-focus-item,
   .home-revision .coordination-focus-item:last-child {
     min-height: auto;
     gap: 12px;
-    padding: 27px 0;
-    border-right: 0;
-    border-bottom: 1px solid rgba(255, 249, 242, .38);
-  }
-  .home-revision .coordination-focus-item:last-child {
-    border-bottom: 0;
-    padding-bottom: 0;
+    padding: 0;
+    border: 0;
   }
   .home-revision .coordination-focus-item strong {
     max-width: 280px;
