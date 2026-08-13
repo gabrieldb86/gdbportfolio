@@ -458,3 +458,11 @@
 - [x] Confirmar que o verde neon aplicado ao bloco “Aberto a oportunidades” corresponde à intenção visual do editor.
 - [x] Validar o indicador em desktop, mobile vertical e mobile horizontal.
 - [x] Executar testes, typecheck e build e salvar novo checkpoint.
+
+## Dashboard e agente privados do proprietário
+- [x] Remover da Home pública os botões, modais e referências ao Dashboard e ao monitoramento administrativo.
+- [x] Remover dados demonstrativos e não apresentar métricas fictícias como dados reais.
+- [x] Criar rota privada de monitoramento protegida pelo login do proprietário.
+- [ ] Definir fonte real para acessos, buscas e tendências antes de exibir indicadores.
+- [ ] Configurar rotina diária persistente e histórico consultável de relatórios.
+- [ ] Validar bloqueio para visitantes anônimos, desktop/mobile, testes e checkpoint.
