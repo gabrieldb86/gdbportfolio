@@ -402,3 +402,8 @@ A seção destinada a recrutadores e headhunters foi reformulada para eliminar o
 4. **5** coordenações de campanha (Cystex, Enavo Gotas, Culturelle, Duekal, Copa do Mundo).
 5. **8,3** média de avaliação, ancorada nas três verticais: *Conteúdo & Treinamento · Trade Marketing · T&D de Pessoas*.
 6. **CTAs de Ação:** "Abrir trajetória" e "Baixar CV" em botões duplos de alta conversão.
+
+
+## Módulo configurável — moldura de projeto em Focos de coordenação
+
+A moldura inclinada na base da seção Focos de coordenação agora é alimentada pela configuração `coordinationFeature` em `client/src/data/siteConfig.ts`. Para trocar o projeto exibido, edite os campos `image`, `title`, `category`, `year`, `description`, `href`, `alt` e `objectPosition`. A imagem recebe fallback visual automático caso o asset não carregue, o link abre cases internos no mesmo domínio e links externos em nova aba, e o módulo se reorganiza abaixo das colunas em telas menores.

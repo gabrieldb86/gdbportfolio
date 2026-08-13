@@ -213,6 +213,30 @@ export default function Home() {
               </ul>
             </article>
           </div>
+          <a
+            className="coordination-focus-feature"
+            href={siteConfig.coordinationFeature.href || "#work"}
+            aria-label={`Abrir projeto ${siteConfig.coordinationFeature.title}`}
+            data-umami-event="coordination-feature-open"
+            {...(!siteConfig.coordinationFeature.href.startsWith("/") ? { target: "_blank", rel: "noreferrer" } : {})}
+          >
+            <span className="coordination-focus-feature-media">
+              <img
+                src={siteConfig.coordinationFeature.image || defaultSiteConfig.generatedAssets.poster}
+                alt={siteConfig.coordinationFeature.alt}
+                style={{ objectPosition: siteConfig.coordinationFeature.objectPosition }}
+                onError={markBrokenImage}
+              />
+            </span>
+            <span className="coordination-focus-feature-copy">
+              <span className="coordination-focus-feature-meta">
+                {siteConfig.coordinationFeature.category} <span aria-hidden="true">·</span> {siteConfig.coordinationFeature.year}
+              </span>
+              <strong>{siteConfig.coordinationFeature.title}</strong>
+              <span>{siteConfig.coordinationFeature.description}</span>
+              <ArrowUpRight size={17} aria-hidden="true" />
+            </span>
+          </a>
         </section>
 
         <section className="recruiter-proof-wrap" aria-label="Destaques profissionais para RH e lideranças">

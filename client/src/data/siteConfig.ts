@@ -14,6 +14,17 @@ export type ProjectConfig = {
 
 export type ServiceConfig = [string, string, string];
 
+export type CoordinationFeatureConfig = {
+  image: string;
+  title: string;
+  category: string;
+  year: string;
+  description: string;
+  href: string;
+  alt: string;
+  objectPosition: string;
+};
+
 export type SiteConfig = {
   profilePhoto: string;
   heroImage: string;
@@ -38,6 +49,7 @@ export type SiteConfig = {
     positioning: string;
     intro: string;
   };
+  coordinationFeature: CoordinationFeatureConfig;
   projects: ProjectConfig[];
   services: ServiceConfig[];
   serviceDetails: Record<string, string>;
@@ -66,6 +78,16 @@ export const defaultSiteConfig: SiteConfig = {
     headline: "CONTEÚDO, treinamento & TRADE MARKETING.",
     positioning: "Coordenador de Conteúdo, Treinamento e Trade Marketing",
     intro: "Transformo estratégia em conteúdos, experiências de aprendizagem e operações de campo que movem pessoas e melhoram a execução.",
+  },
+  coordinationFeature: {
+    image: "/manus-storage/gabriel-bonecaps-project_cac714ba.png",
+    title: "Campanha Cystex",
+    category: "Trade & Incentivo",
+    year: "2026",
+    description: "Projeto em destaque — substitua a imagem, o título e o link em siteConfig.ts.",
+    href: "/cases/grupo-ems-cystex",
+    alt: "Projeto Campanha Cystex em destaque",
+    objectPosition: "center",
   },
   projects: [
     {
@@ -243,6 +265,7 @@ export function getSiteConfig(): SiteConfig {
       ...parsed,
       brand: { ...defaultSiteConfig.brand, ...parsed.brand },
       hero: { ...hero, eyebrow: normalizedEyebrow },
+      coordinationFeature: { ...defaultSiteConfig.coordinationFeature, ...parsed.coordinationFeature },
       projects: migrateProjects(parsed.projects),
       services: parsed.services ?? defaultSiteConfig.services,
       serviceDetails: migrateServiceDetails(parsed.serviceDetails),

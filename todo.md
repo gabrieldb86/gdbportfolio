@@ -440,3 +440,9 @@
 - [x] Configurar o avatar preto e branco fornecido como favicon da página.
 - [x] Validar carregamento do ícone no navegador, desktop e mobile, além de testes, typecheck e build.
 - [x] Criar checkpoint após confirmar a atualização.
+
+## Moldura de projeto configurável na seção Focos de coordenação
+- [x] Criar na configuração central os campos de imagem, título, ano, legenda, link e alt text.
+- [x] Renderizar a moldura com dados configuráveis e fallback visual seguro.
+- [x] Preservar a composição inclinada no desktop e adaptar o módulo para mobile.
+- [x] Validar acessibilidade, testes, typecheck e build antes do checkpoint.

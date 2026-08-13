@@ -2094,3 +2094,150 @@ a.proof-link, a.behance-link, a.text-link, .service-detail a {
   .recruiter-proof-strip .proof-metric { min-height: 110px; padding: 18px 12px 16px 0; }
   .proof-actions { grid-column: 1 / -1; border-top: 1px solid rgba(255, 249, 242, .32); padding: 20px 0; flex-direction: row; gap: 24px; }
 }
+
+
+/* Moldura de projeto configurável da seção Focos de coordenação. */
+.home-revision .coordination-focus-band::before {
+  display: none;
+}
+
+.home-revision .coordination-focus-feature {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-column: 1 / -1;
+  grid-template-columns: minmax(0, 1.45fr) minmax(150px, .72fr);
+  width: min(430px, 36vw);
+  min-height: 178px;
+  margin: 30px 5vw -74px auto;
+  overflow: hidden;
+  border: 1px solid rgba(28, 27, 26, .42);
+  background: #1b1a19;
+  color: #fff9f2;
+  text-decoration: none;
+  transform: rotate(-7deg);
+  transform-origin: center;
+  transition: transform 220ms cubic-bezier(.23, 1, .32, 1), box-shadow 220ms cubic-bezier(.23, 1, .32, 1);
+}
+
+.home-revision .coordination-focus-feature:hover,
+.home-revision .coordination-focus-feature:focus-visible {
+  transform: rotate(-4deg) translateY(-4px);
+  box-shadow: 0 14px 32px rgba(28, 27, 26, .2);
+}
+
+.home-revision .coordination-focus-feature:focus-visible {
+  outline: 2px solid #fff9f2;
+  outline-offset: 5px;
+}
+
+.home-revision .coordination-focus-feature-media {
+  display: block;
+  min-width: 0;
+  min-height: 178px;
+  overflow: hidden;
+  background: #514b46;
+}
+
+.home-revision .coordination-focus-feature-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 178px;
+  object-fit: cover;
+  filter: saturate(.8) contrast(1.03);
+}
+
+.home-revision .coordination-focus-feature-media.image-fallback {
+  background: linear-gradient(135deg, #514b46 0 48%, #d73332 48% 100%);
+}
+
+.home-revision .coordination-focus-feature-copy {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 7px;
+  min-width: 0;
+  padding: 16px 15px 14px;
+  background: #1b1a19;
+}
+
+.home-revision .coordination-focus-feature-copy > span {
+  display: block;
+}
+
+.home-revision .coordination-focus-feature-meta {
+  color: #d98b87;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .14em;
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+
+.home-revision .coordination-focus-feature-copy strong {
+  color: #fff9f2;
+  font-size: 16px;
+  letter-spacing: -.035em;
+  line-height: 1.05;
+}
+
+.home-revision .coordination-focus-feature-copy > span:not(.coordination-focus-feature-meta) {
+  color: rgba(255, 249, 242, .7);
+  font-size: 10px;
+  line-height: 1.4;
+}
+
+.home-revision .coordination-focus-feature-copy svg {
+  align-self: flex-end;
+  margin-top: 4px;
+  color: #d73332;
+  stroke-width: 1.6;
+}
+
+@media (max-width: 900px) {
+  .home-revision .coordination-focus-feature {
+    grid-column: auto;
+    grid-template-columns: 1fr;
+    width: min(100%, 360px);
+    min-height: 0;
+    margin: 34px 10px 4px auto;
+    transform: rotate(-4deg);
+  }
+
+  .home-revision .coordination-focus-feature:hover,
+  .home-revision .coordination-focus-feature:focus-visible {
+    transform: rotate(-2deg) translateY(-3px);
+  }
+
+  .home-revision .coordination-focus-feature-media,
+  .home-revision .coordination-focus-feature-media img {
+    min-height: 168px;
+    height: 168px;
+  }
+
+  .home-revision .coordination-focus-feature-copy {
+    min-height: 112px;
+    padding: 14px 15px 13px;
+  }
+}
+
+@media (max-width: 520px) {
+  .home-revision .coordination-focus-feature {
+    width: min(100%, 330px);
+    margin-right: 6px;
+  }
+
+  .home-revision .coordination-focus-feature-media,
+  .home-revision .coordination-focus-feature-media img {
+    min-height: 150px;
+    height: 150px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-revision .coordination-focus-feature {
+    transition: none;
+  }
+}
