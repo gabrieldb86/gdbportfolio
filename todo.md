@@ -710,3 +710,8 @@
 - [x] Localizar e remover todos os atributos `style` duplicados gerados pela última edição visual.
 - [x] Manter as melhorias de tipografia e layout desejadas pelo usuário.
 - [x] Executar testes unitários, build de produção e criar checkpoint.
+
+## Restauração do hero em Trabalhos selecionados
+- [x] Remover as classes e estilos inline que achataram o título da seção work.
+- [x] Restaurar a estrutura original com título editorial grande (`Projetos que ganharam forma.`), kicker correto e layout equilibrado.
+- [x] Executar testes, build de produção e salvar checkpoint.
