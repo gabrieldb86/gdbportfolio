@@ -577,3 +577,8 @@
 
 ## Revisão do editor visual — Hero
 - [x] Aplicar efetivamente o comentário "aumente 20% o tamanho deste item" ao retrato principal do Hero, preservando responsividade e evitando sobreposição no mobile.
+
+## Auditoria dos edits visuais recentes (Focos de coordenação)
+- [x] Corrigir duplicação de `fontSize` no atributo `style` em Home.tsx.
+- [x] Verificar a solicitação de remoção da seção "Focos de coordenação"; o comentário final foi removido pelo editor, portanto a seção foi mantida.
+- [x] Validar build, TypeScript e testes unitários.
