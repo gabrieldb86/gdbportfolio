@@ -175,7 +175,7 @@ export default function Home() {
           <div className="coordination-focus-label" data-reveal="focus-label">
             <p className="section-kicker">Focos de coordenação</p>
             <h2 id="coordination-focus-title">Três frentes para transformar <em>método em execução.</em></h2>
-            <p className="coordination-focus-note">Da narrativa do conteúdo à operação de campo, cada frente conecta clareza, capacitação e resultado.</p>
+            <p className="coordination-focus-note" style={{fontSize: '14px', marginTop: '18px'}}>Da narrativa do conteúdo à operação de campo, cada frente conecta clareza, capacitação e resultado.</p>
           </div>
           <div className="coordination-focus-grid">
             <article className="coordination-focus-item" data-reveal="focus-item" data-reveal-delay="80">

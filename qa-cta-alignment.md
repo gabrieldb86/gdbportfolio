@@ -58,3 +58,8 @@ A seção Focos de coordenação agora apresenta as descrições completas e qua
 
 
 A validação mobile vertical e horizontal confirmou que as três colunas se empilham em blocos legíveis, com os títulos, descrições e quatro realizações preservados; os marcadores não colidem com o texto e o espaçamento vertical permanece consistente.
+
+
+## Ajuste tipográfico do texto de apoio de Focos
+
+A alteração aplicada pelo editor elevou o texto de apoio para 14px e o espaçamento superior para 18px. A captura desktop confirmou uma presença tipográfica maior sem competir com a headline; a captura mobile vertical confirmou leitura acessível, alinhamento no eixo editorial e ausência de encavalamento com as microlistas.

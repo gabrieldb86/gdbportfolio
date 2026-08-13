@@ -416,3 +416,9 @@
 - [x] Atualizar o documento central de reposicionamento com o conteúdo exato das microlistas.
 - [x] Validar tipografia, espaçamento vertical e responsividade em desktop, mobile vertical e mobile horizontal.
 - [x] Executar testes, typecheck e build antes do checkpoint.
+
+## Ajuste tipográfico do texto de apoio de Focos
+- [x] Validar o aumento do texto para 14px e o espaçamento superior de 18px.
+- [x] Confirmar responsividade, alinhamento editorial e legibilidade nos três viewports.
+- [x] Executar testes, typecheck e build antes do checkpoint.
+- [x] Criar checkpoint após a revisão.
