@@ -593,3 +593,8 @@
 - [x] Adicionar sinais de ação discretos ao lado de cada foco, sem reintroduzir barras verticais.
 - [x] Preservar os textos, tamanhos tipográficos e a leitura responsiva dos três itens.
 - [x] Validar desktop, mobile, testes e build antes do checkpoint.
+
+## Revisão dimensional da segunda sessão
+- [x] Remover atributos `style` duplicados e propriedades repetidas em Home.tsx.
+- [x] Substituir dimensões absolutas excessivas por layout responsivo controlado via CSS.
+- [x] Preservar a hierarquia editorial e validar desktop, mobile, testes e build.
