@@ -2653,3 +2653,9 @@ a.proof-link, a.behance-link, a.text-link, .service-detail a {
     flex-direction: column;
   }
 }
+
+/* A foto dos bonés possui uma borda branca original; o recorte preserva a imagem e deixa o vermelho preencher a junção com o hero. */
+.home-revision .statement-section img {
+  transform: scale(1.06);
+  transform-origin: right center;
+}

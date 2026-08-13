@@ -735,3 +735,8 @@
 - [x] Inspecionar o CSS do grid e flexbox da classe `.statement-section` em client/src/index.css.
 - [x] Ajustar o posicionamento da imagem e do bloco de texto para que fiquem contíguos, sem vão intermediário.
 - [x] Executar testes, build de produção e salvar checkpoint.
+
+## Remoção de faixa branca na seção final (statement-section)
+- [x] Inspecionar o preenchimento de background na coluna da imagem da `.statement-section`.
+- [x] Definir `#d73332` no background de toda a grid da seção para eliminar qualquer fresta ou faixa branca.
+- [x] Executar testes, build de produção e salvar checkpoint.
