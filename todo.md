@@ -503,3 +503,9 @@
 - [x] Padronizar a faixa de métricas conforme a tipografia e o espaçamento editoriais aprovados.
 - [x] Encurtar as divisórias verticais das colunas de coordenação até o fim do conteúdo.
 - [x] Validar desktop, mobile vertical e mobile horizontal, executar testes/build e salvar checkpoint.
+
+## Equalização das divisórias de Focos de coordenação
+- [ ] Auditar a estrutura atual das linhas verticais e a altura das colunas.
+- [ ] Aplicar uma altura comum baseada no maior conteúdo das três colunas.
+- [ ] Preservar a remoção das linhas em mobile quando a seção empilha verticalmente.
+- [ ] Validar desktop, mobile, testes/build e salvar checkpoint.

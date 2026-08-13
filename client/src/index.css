@@ -2350,3 +2350,25 @@ a.proof-link, a.behance-link, a.text-link, .service-detail a {
     background: transparent;
   }
 }
+
+/* Divisórias de Focos: uma única altura comum, determinada pelo maior conteúdo. */
+@media (min-width: 901px) {
+  .home-revision .coordination-focus-grid {
+    display: grid;
+    grid-column: 2 / -1;
+    grid-row: 1;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: stretch;
+  }
+  .home-revision .coordination-focus-item {
+    align-self: stretch;
+    min-height: 0;
+  }
+  .home-revision .coordination-focus-label {
+    align-self: stretch;
+  }
+  .home-revision .coordination-focus-item:not(:last-child)::after {
+    top: 3px;
+    bottom: 0;
+  }
+}
