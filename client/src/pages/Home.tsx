@@ -169,45 +169,56 @@ export default function Home() {
         </section>
 
         <section className="coordination-focus-band" aria-labelledby="coordination-focus-title">
-          <div className="coordination-focus-label" data-reveal="focus-label">
-            <p className="section-kicker" style={{fontSize: '16px'}}>Focos de coordenação</p>
-            <h2 id="coordination-focus-title">Três frentes para transformar <em>método em execução.</em></h2>
-            <p className="coordination-focus-note" style={{fontSize: '16px', marginTop: '18px'}}>Da narrativa do conteúdo à operação de campo, cada frente conecta clareza, capacitação e resultado.</p>
-          </div>
-          <div className="coordination-focus-grid">
-            <article className="coordination-focus-item" data-reveal="focus-item" data-reveal-delay="80">
-              <div className="coordination-focus-item-top" style={{fontSize: '16px'}}><span style={{fontSize: '16px'}}>01</span><ArrowUpRight size={18} aria-hidden="true" style={{fontSize: '16px'}} /></div>
-              <strong style={{fontSize: '18px'}}>Conteúdo &amp; Treinamento</strong>
-              <p style={{fontSize: '16px'}}>Instructional Design com ADDIE, Kirkpatrick e Learning Experience Design (LXD).</p>
-              <ul className="coordination-focus-highlights">
-                <li style={{fontSize: '14px'}}>114 mil+ pessoas capacitadas ao longo da carreira</li>
-                <li style={{fontSize: '14px'}}>8 anos como pioneiro do Today at Apple no Brasil</li>
-                <li style={{fontSize: '14px'}}>Ferramenta própria de avaliação com IA generativa</li>
-                <li style={{fontSize: '14px'}}>Trilhas de aprendizagem, e-learning e microlearning</li>
-              </ul>
-            </article>
-            <article className="coordination-focus-item" data-reveal="focus-item" data-reveal-delay="140">
-              <div className="coordination-focus-item-top" style={{fontSize: '16px'}}><span style={{fontSize: '16px'}}>02</span><ArrowUpRight size={18} aria-hidden="true" style={{fontSize: '16px'}} /></div>
-              <strong style={{fontSize: '18px'}}>Trade Marketing &amp; Campo</strong>
-              <p style={{fontSize: '16px'}}>Campanhas de incentivo de ponta a ponta, do briefing à modelagem financeira.</p>
-              <ul className="coordination-focus-highlights">
-                <li style={{fontSize: '14px'}}>Dashboards de KPI para 130+ promotores em campo</li>
-                <li style={{fontSize: '14px'}}>Nota média de avaliação: 8,3</li>
-                <li style={{fontSize: '14px'}}>Execução em PDV, merchandising e gestão de redes/franquias</li>
-                <li style={{fontSize: '14px'}}>Análise de risco orçamentário e PDCA</li>
-              </ul>
-            </article>
-            <article className="coordination-focus-item" data-reveal="focus-item" data-reveal-delay="200">
-              <div className="coordination-focus-item-top" style={{fontSize: '16px'}}><span style={{fontSize: '16px'}}>03</span><ArrowUpRight size={18} aria-hidden="true" style={{fontSize: '16px'}} /></div>
-              <strong style={{fontSize: '18px'}}>T&amp;D de Pessoas</strong>
-              <p style={{fontSize: '16px'}}>Onboarding, avaliação de desempenho e desenvolvimento de equipes de campo.</p>
-              <ul className="coordination-focus-highlights">
-                <li style={{fontSize: '14px'}}>Metodologia 9Box e ciclos de PDCA</li>
-                <li style={{fontSize: '15px'}}>Facilitação premiada (maiores indicadores de NPS na Apple)</li>
-                <li style={{fontSize: '14px'}}>Programas de capacitação e certificação</li>
-                <li style={{fontSize: '14px'}}>Gestão de stakeholders e fornecedores</li>
-              </ul>
-            </article>
+          <div className="coordination-focus-layout">
+            <div className="coordination-focus-label" data-reveal="focus-label">
+              <p className="section-kicker" style={{fontSize: '16px'}}>Focos de coordenação</p>
+              <h2 id="coordination-focus-title">Três frentes para transformar <em>método em execução.</em></h2>
+              <p className="coordination-focus-note" style={{fontSize: '16px', marginTop: '18px'}}>Da narrativa do conteúdo à operação de campo, cada frente conecta clareza, capacitação e resultado.</p>
+            </div>
+            <div className="coordination-focus-grid">
+              <article className="coordination-focus-item" data-reveal="focus-item" data-reveal-delay="80">
+                <div className="coordination-focus-item-top"><span style={{fontSize: '16px'}}>01</span></div>
+                <div className="coordination-focus-item-body">
+                  <strong style={{fontSize: '18px'}}>Conteúdo &amp; Treinamento</strong>
+                  <p style={{fontSize: '16px'}}>Instructional Design com ADDIE, Kirkpatrick e Learning Experience Design (LXD).</p>
+                  <ul className="coordination-focus-highlights">
+                    <li style={{fontSize: '14px'}}>114 mil+ pessoas capacitadas ao longo da carreira</li>
+                    <li style={{fontSize: '14px'}}>8 anos como pioneiro do Today at Apple no Brasil</li>
+                    <li style={{fontSize: '14px'}}>Ferramenta própria de avaliação com IA generativa</li>
+                    <li style={{fontSize: '14px'}}>Trilhas de aprendizagem, e-learning e microlearning</li>
+                  </ul>
+                </div>
+                <Plus className="coordination-focus-plus" size={22} strokeWidth={1.4} aria-hidden="true" />
+              </article>
+              <article className="coordination-focus-item" data-reveal="focus-item" data-reveal-delay="140">
+                <div className="coordination-focus-item-top"><span style={{fontSize: '16px'}}>02</span></div>
+                <div className="coordination-focus-item-body">
+                  <strong style={{fontSize: '18px'}}>Trade Marketing &amp; Campo</strong>
+                  <p style={{fontSize: '16px'}}>Campanhas de incentivo de ponta a ponta, do briefing à modelagem financeira.</p>
+                  <ul className="coordination-focus-highlights">
+                    <li style={{fontSize: '14px'}}>Dashboards de KPI para 130+ promotores em campo</li>
+                    <li style={{fontSize: '14px'}}>Nota média de avaliação: 8,3</li>
+                    <li style={{fontSize: '14px'}}>Execução em PDV, merchandising e gestão de redes/franquias</li>
+                    <li style={{fontSize: '14px'}}>Análise de risco orçamentário e PDCA</li>
+                  </ul>
+                </div>
+                <Plus className="coordination-focus-plus" size={22} strokeWidth={1.4} aria-hidden="true" />
+              </article>
+              <article className="coordination-focus-item" data-reveal="focus-item" data-reveal-delay="200">
+                <div className="coordination-focus-item-top"><span style={{fontSize: '16px'}}>03</span></div>
+                <div className="coordination-focus-item-body">
+                  <strong style={{fontSize: '18px'}}>T&amp;D de Pessoas</strong>
+                  <p style={{fontSize: '16px'}}>Onboarding, avaliação de desempenho e desenvolvimento de equipes de campo.</p>
+                  <ul className="coordination-focus-highlights">
+                    <li style={{fontSize: '14px'}}>Metodologia 9Box e ciclos de PDCA</li>
+                    <li style={{fontSize: '15px'}}>Facilitação premiada (maiores indicadores de NPS na Apple)</li>
+                    <li style={{fontSize: '14px'}}>Programas de capacitação e certificação</li>
+                    <li style={{fontSize: '14px'}}>Gestão de stakeholders e fornecedores</li>
+                  </ul>
+                </div>
+                <Plus className="coordination-focus-plus" size={22} strokeWidth={1.4} aria-hidden="true" />
+              </article>
+            </div>
           </div>
         </section>
 

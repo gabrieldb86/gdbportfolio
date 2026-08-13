@@ -1641,7 +1641,6 @@ a.proof-link, a.behance-link, a.text-link, .service-detail a {
   /* Hero editorial da coordenação: mais presença, ritmo e leitura de abertura. */
   .home-revision .coordination-focus-band {
     position: relative;
-    display: block;
     min-height: 310px;
     padding-top: clamp(72px, 7vw, 112px);
     padding-bottom: clamp(64px, 6.5vw, 96px);
@@ -1649,6 +1648,12 @@ a.proof-link, a.behance-link, a.text-link, .service-detail a {
     border-bottom: 0;
     overflow: hidden;
     isolation: isolate;
+  }
+  .home-revision .coordination-focus-layout {
+    display: grid;
+    grid-template-columns: minmax(280px, .82fr) minmax(520px, 1.18fr);
+    align-items: start;
+    gap: clamp(56px, 8vw, 140px);
   }
   .home-revision .coordination-focus-band::before {
     position: absolute;
@@ -1662,18 +1667,15 @@ a.proof-link, a.behance-link, a.text-link, .service-detail a {
     transform: rotate(-11deg);
   }
   .home-revision .coordination-focus-label {
-    display: grid;
-    grid-template-columns: minmax(90px, .3fr) minmax(340px, 1.2fr) minmax(220px, .55fr);
-    align-items: end;
-    gap: 4vw;
+    display: block;
     padding: 0;
     border: 0;
   }
   .home-revision .coordination-focus-grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: clamp(28px, 4vw, 68px);
-    margin-top: 56px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-top: 0;
   }
   .home-revision .coordination-focus-label .section-kicker {
     margin: 0 0 22px;
@@ -1704,45 +1706,65 @@ a.proof-link, a.behance-link, a.text-link, .service-detail a {
     line-height: 1.6;
   }
   .home-revision .coordination-focus-item {
-    position: relative;
-    min-height: 190px;
-    justify-content: flex-start;
-    gap: 15px;
-    padding: 0;
+    display: grid;
+    grid-template-columns: 46px minmax(0, 1fr) 30px;
+    grid-template-areas: "index body action";
+    align-items: start;
+    min-height: auto;
+    gap: 20px;
+    padding: 0 0 28px;
+    margin: 0 0 28px;
     border: 0;
+    border-bottom: 1px solid rgba(255, 249, 242, .22);
   }
   .home-revision .coordination-focus-item:last-child {
-    border: 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border-bottom: 0;
   }
   .home-revision .coordination-focus-item-top {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
+    grid-area: index;
+    display: block;
+    width: auto;
+    padding-top: 3px;
     color: #1c1b1a;
   }
   .home-revision .coordination-focus-item-top span {
     color: #1c1b1a;
-    font-size: 11px;
+    font-size: 16px;
     font-weight: 700;
     letter-spacing: .16em;
   }
-  .home-revision .coordination-focus-item-top svg {
-    opacity: .72;
-    stroke-width: 1.5;
+  .home-revision .coordination-focus-item-body {
+    grid-area: body;
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    gap: 12px;
   }
   .home-revision .coordination-focus-item strong {
-    max-width: 230px;
+    max-width: 480px;
     color: #fff9f2;
-    font-size: 17px;
-    line-height: 1.1;
+    font-size: 18px;
+    line-height: 1.15;
     letter-spacing: -.035em;
   }
   .home-revision .coordination-focus-item p {
-    max-width: 220px;
+    max-width: 560px;
+    margin: 0;
     color: rgba(255, 249, 242, .78);
-    font-size: 12px;
+    font-size: 16px;
     line-height: 1.55;
+  }
+  .home-revision .coordination-focus-item .coordination-focus-highlights {
+    margin-top: 6px;
+  }
+  .home-revision .coordination-focus-plus {
+    grid-area: action;
+    justify-self: end;
+    margin-top: 1px;
+    color: #1c1b1a;
+    stroke-width: 1.4;
   }
 }
 
@@ -1757,6 +1779,9 @@ a.proof-link, a.behance-link, a.text-link, .service-detail a {
     bottom: -42px;
     width: 240px;
     height: 145px;
+  }
+  .home-revision .coordination-focus-layout {
+    display: block;
   }
   .home-revision .coordination-focus-label {
     display: block;
@@ -1779,23 +1804,37 @@ a.proof-link, a.behance-link, a.text-link, .service-detail a {
   .home-revision .coordination-focus-grid {
     display: flex;
     flex-direction: column;
-    gap: 36px;
-    margin-top: 0;
+    gap: 0;
+    margin-top: 36px;
   }
   .home-revision .coordination-focus-item,
   .home-revision .coordination-focus-item:last-child {
+    grid-template-columns: 36px minmax(0, 1fr) 28px;
+    gap: 14px;
     min-height: auto;
-    gap: 12px;
-    padding: 0;
+    padding: 0 0 24px;
+    margin: 0 0 24px;
     border: 0;
+    border-bottom: 1px solid rgba(255, 249, 242, .22);
+  }
+  .home-revision .coordination-focus-item:last-child {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border-bottom: 0;
   }
   .home-revision .coordination-focus-item strong {
     max-width: 280px;
-    font-size: 17px;
+    font-size: 18px;
   }
   .home-revision .coordination-focus-item p {
     max-width: 290px;
-    font-size: 12px;
+    font-size: 16px;
+  }
+  .home-revision .coordination-focus-item-body {
+    gap: 10px;
+  }
+  .home-revision .coordination-focus-plus {
+    margin-top: 0;
   }
 }
 

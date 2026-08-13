@@ -587,3 +587,9 @@
 - [x] Remover as barras verticais de divisão entre as três colunas.
 - [x] Reorganizar os três focos em uma composição sem divisórias, com espaçamento uniforme e mantendo os tamanhos tipográficos atuais.
 - [x] Validar a nova disposição em desktop e mobile, além de testes e build.
+
+## Reconstrução da segunda sessão — referência editorial
+- [x] Reorganizar a seção em duas áreas: título/contexto à esquerda e lista vertical numerada à direita.
+- [x] Adicionar sinais de ação discretos ao lado de cada foco, sem reintroduzir barras verticais.
+- [x] Preservar os textos, tamanhos tipográficos e a leitura responsiva dos três itens.
+- [x] Validar desktop, mobile, testes e build antes do checkpoint.
