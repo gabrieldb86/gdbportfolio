@@ -730,3 +730,8 @@
 - [x] Inspecionar o CSS da classe `.statement-section` em client/src/index.css.
 - [x] Remover gradientes ou overlays e definir cores sólidas uniformes.
 - [x] Executar testes, build de produção e salvar checkpoint.
+
+## Remoção de espaço vazio na seção final (statement-section)
+- [x] Inspecionar o CSS do grid e flexbox da classe `.statement-section` em client/src/index.css.
+- [x] Ajustar o posicionamento da imagem e do bloco de texto para que fiquem contíguos, sem vão intermediário.
+- [x] Executar testes, build de produção e salvar checkpoint.
