@@ -1657,8 +1657,8 @@ a.proof-link, a.behance-link, a.text-link, .service-detail a {
     max-width: 1240px;
     min-height: 100%;
     min-width: 0;
-    margin: 0 auto;
-    grid-template-columns: minmax(0, .62fr) minmax(0, 1.38fr);
+    margin: 0;
+    grid-template-columns: 451px minmax(0, 1fr);
     align-items: start;
     gap: clamp(48px, 7vw, 102px);
   }
@@ -1678,7 +1678,8 @@ a.proof-link, a.behance-link, a.text-link, .service-detail a {
     box-sizing: border-box;
     width: 438px;
     height: 644px;
-    margin-left: -280px;
+    margin-left: 0;
+    justify-self: start;
     padding: 0;
     border: 0;
   }

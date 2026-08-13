@@ -623,3 +623,8 @@
 - [x] Aplicar no CSS desktop a largura de 451px e altura de 474px ao bloco editorial esquerdo.
 - [x] Limpar atributos `style` inline duplicados em Home.tsx.
 - [x] Validar desktop, mobile, testes e build.
+
+## Alinhamento unificado ao eixo esquerdo — segunda sessão
+- [x] Remover o deslocamento negativo do bloco editorial e alinhar a seção ao eixo `--editorial-axis`.
+- [x] Garantir que o grid respeite a mesma margem esquerda das demais seções.
+- [x] Validar desktop, mobile, testes e build.
