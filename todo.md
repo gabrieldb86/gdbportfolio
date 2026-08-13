@@ -694,3 +694,9 @@
 - [x] Aplicar no container `recruiter-proof-layout` exatamente os estilos fornecidos: `{height: '674px', marginLeft: '115px', marginRight: '591px', paddingLeft: '0px', paddingRight: '0px', width: '1772px'}`.
 - [x] Validar desktop, mobile, TypeScript, testes e build.
 - [x] Salvar checkpoint e reportar.
+
+## Remoção de molduras e reorganização horizontal do contador
+- [x] Remover as bordas internas e divisórias tipo grade que dão aspecto encaixotado na seção recruiter-proof.
+- [x] Reorganizar os seis itens (5 métricas + ações) em uma faixa horizontal contínua e fluida ao lado do hero.
+- [x] Preservar o contador animado progressivo (AnimatedMetric) e garantir adaptação responsiva em mobile.
+- [x] Executar testes, build e salvar checkpoint.

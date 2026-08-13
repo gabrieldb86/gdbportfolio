@@ -2500,3 +2500,154 @@ a.proof-link, a.behance-link, a.text-link, .service-detail a {
     padding-right: 0 !important;
   }
 }
+
+
+/* Contador horizontal contínuo — sem caixas individuais nem cascata visual. */
+.recruiter-proof-layout {
+  width: min(100%, 1440px) !important;
+  height: auto !important;
+  margin: 0 auto !important;
+  padding: 0 8vw !important;
+  grid-template-columns: minmax(260px, .78fr) minmax(0, 1.22fr);
+  gap: clamp(32px, 5vw, 82px);
+}
+
+.recruiter-proof-layout .recruiter-proof-strip {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  gap: 0;
+  width: 100%;
+  border: 0 !important;
+  background: transparent;
+}
+
+.recruiter-proof-layout .proof-metric,
+.recruiter-proof-layout .proof-metric:nth-child(even),
+.recruiter-proof-layout .proof-metric:nth-child(n + 3),
+.recruiter-proof-layout .proof-actions {
+  flex: 1 1 0;
+  min-width: 0;
+  min-height: 216px;
+  align-items: center;
+  justify-content: center;
+  padding: 26px 16px;
+  border: 0 !important;
+  text-align: center;
+}
+
+.recruiter-proof-layout .proof-metric-icon {
+  margin-bottom: 16px;
+  color: rgba(255, 249, 242, .58);
+}
+
+.recruiter-proof-layout .proof-metric-label {
+  max-width: 125px;
+  margin-top: 14px;
+  font-size: 8px;
+  letter-spacing: .12em;
+}
+
+.recruiter-proof-layout .proof-tagline {
+  max-width: 130px;
+  font-size: 7px;
+  line-height: 1.35;
+}
+
+.recruiter-proof-layout .proof-actions {
+  flex-direction: column;
+  gap: 14px;
+}
+
+.recruiter-proof-layout .proof-action-icon {
+  margin-bottom: 5px;
+}
+
+.recruiter-proof-layout .proof-link,
+.recruiter-proof-layout .proof-link-alt {
+  width: 100%;
+  min-height: 31px;
+  border: 0;
+  color: #1c1b1a;
+  font-size: 8px;
+  text-align: left;
+}
+
+.recruiter-proof-layout .proof-link-alt {
+  color: #fff9f2;
+}
+
+@media (max-width: 1100px) {
+  .recruiter-proof-layout {
+    width: auto !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 8vw !important;
+    grid-template-columns: 1fr;
+    gap: 34px;
+  }
+
+  .recruiter-proof-layout .recruiter-proof-strip {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .recruiter-proof-layout .proof-metric,
+  .recruiter-proof-layout .proof-metric:nth-child(even),
+  .recruiter-proof-layout .proof-metric:nth-child(n + 3),
+  .recruiter-proof-layout .proof-actions {
+    min-height: 170px;
+    padding: 23px 14px;
+  }
+}
+
+@media (max-width: 720px) {
+  .recruiter-proof-layout {
+    padding: 0 20px !important;
+    gap: 28px;
+  }
+
+  .recruiter-proof-layout .recruiter-proof-strip {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .recruiter-proof-layout .proof-metric,
+  .recruiter-proof-layout .proof-metric:nth-child(even),
+  .recruiter-proof-layout .proof-metric:nth-child(n + 3),
+  .recruiter-proof-layout .proof-actions {
+    min-height: 150px;
+    padding: 21px 11px;
+  }
+
+  .recruiter-proof-layout .proof-actions {
+    grid-column: 1 / -1;
+    flex-direction: row;
+    gap: 18px;
+  }
+
+  .recruiter-proof-layout .proof-action-icon {
+    display: none;
+  }
+}
+
+@media (max-width: 430px) {
+  .recruiter-proof-layout {
+    padding: 0 16px !important;
+  }
+
+  .recruiter-proof-layout .recruiter-proof-strip {
+    grid-template-columns: 1fr;
+  }
+
+  .recruiter-proof-layout .proof-metric,
+  .recruiter-proof-layout .proof-metric:nth-child(even),
+  .recruiter-proof-layout .proof-metric:nth-child(n + 3),
+  .recruiter-proof-layout .proof-actions {
+    min-height: 132px;
+  }
+
+  .recruiter-proof-layout .proof-actions {
+    grid-column: auto;
+    flex-direction: column;
+  }
+}
