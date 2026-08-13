@@ -483,3 +483,9 @@
 - [x] Salvar checkpoint com as correções concluídas.
 - [x] Gerar arquivo DOCX minucioso de checklist para encerramento e publicação.
 - [x] Orientar contato com o suporte Manus sobre a remoção do manus-runtime da publicação pública.
+
+## Revisão das alterações visuais recentes na Home
+- [x] Auditar propriedades `style` duplicadas ou conflitantes geradas pelo editor visual.
+- [x] Consolidar as intenções visuais em JSX válido e responsivo, sem perder legibilidade, cores e alinhamento.
+- [x] Validar Home em desktop, mobile vertical e mobile horizontal.
+- [x] Executar testes, typecheck e build e salvar checkpoint.

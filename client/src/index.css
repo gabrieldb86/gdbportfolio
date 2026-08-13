@@ -2241,3 +2241,22 @@ a.proof-link, a.behance-link, a.text-link, .service-detail a {
     transition: none;
   }
 }
+
+/* Correção da altura aplicada pelo editor visual: no mobile o hero deve crescer com o conteúdo. */
+@media (max-width: 720px) {
+  .home-revision .hero-redesign {
+    height: auto !important;
+    min-height: 0 !important;
+    padding-bottom: 42px !important;
+  }
+  .home-revision .hero-redesign-panel {
+    min-height: auto !important;
+  }
+  .home-revision .hero-redesign-portrait {
+    position: relative;
+    inset: auto;
+    width: calc(100% - 48px);
+    margin: 0 24px 30px;
+    transform: rotate(2deg);
+  }
+}

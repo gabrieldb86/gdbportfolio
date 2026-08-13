@@ -138,29 +138,29 @@ export default function Home() {
         </button>
 
         <nav className={`site-nav ${menuOpen ? "site-nav-open" : ""}`} aria-label="Navegação principal">
-          <a href="#work" onClick={(event) => { event.preventDefault(); scrollToId("work", () => setMenuOpen(false)); }}>Trabalho</a>
-          <a href="#about" onClick={(event) => { event.preventDefault(); scrollToId("about", () => setMenuOpen(false)); }}>Sobre</a>
-          <a href="/cv">CV</a>
-          <a href="#contact" onClick={(event) => { event.preventDefault(); scrollToId("contact", () => setMenuOpen(false)); }}>Contato</a>
+          <a href="#work" onClick={(event) => { event.preventDefault(); scrollToId("work", () => setMenuOpen(false)); }} style={{fontSize: '14px'}}>Trabalho</a>
+          <a href="#about" onClick={(event) => { event.preventDefault(); scrollToId("about", () => setMenuOpen(false)); }} style={{fontSize: '14px'}}>Sobre</a>
+          <a href="/cv" style={{fontSize: '14px'}}>CV</a>
+          <a href="#contact" onClick={(event) => { event.preventDefault(); scrollToId("contact", () => setMenuOpen(false)); }} style={{fontSize: '14px'}}>Contato</a>
         </nav>
 
-        <div className="header-availability"><span className="status-dot" style={{backgroundColor: '#00FF66'}} />Aberto a oportunidades</div>
+        <div className="header-availability" style={{ fontSize: "14px", fontWeight: 600 }}><span className="status-dot" style={{ backgroundColor: "#00FF66" }} />Aberto a oportunidades</div>
       </header>
 
       <aside className="side-rail" aria-label="Informações rápidas">
         <div className="rail-image-block"><img src={siteConfig.railImage} alt="Ilustração em preto e branco de Gabriel" onError={markBrokenImage} /></div>
-        <span className="rail-label">Portfólio · 2026</span>
+        <span className="rail-label" style={{fontSize: '12px'}}>Portfólio · 2026</span>
       </aside>
 
       <main id="top">
-        <section className="hero-section hero-redesign">
+        <section className="hero-section hero-redesign" style={{height: '850px'}}>
           <div className="hero-redesign-panel" data-reveal="hero-copy">
             <div className="hero-redesign-copy">
-              <p className="eyebrow">{siteConfig.hero.eyebrow}</p>
+              <p className="eyebrow" style={{fontSize: '14px'}}>{siteConfig.hero.eyebrow}</p>
               <h1 className="hero-headline"><span className="hero-headline-white">CONTEÚDO,</span><br /><span className="hero-headline-training">treinamento</span><br /><span className="hero-headline-white">&amp; TRADE</span><br /><span className="hero-headline-white">MARKETING.</span></h1>
               <p className="hero-positioning">{siteConfig.hero.positioning}</p>
-              <p className="hero-redesign-intro" style={{ marginTop: "16px" }}>{siteConfig.hero.intro}</p>
-              <p className="hero-proof-line">17+ anos · 114K+ pessoas capacitadas · 130+ promotores monitorados</p>
+              <p className="hero-redesign-intro" style={{ marginTop: "16px", fontSize: '16px' }}>{siteConfig.hero.intro}</p>
+              <p className="hero-proof-line" style={{fontSize: '14px'}}>17+ anos · 114K+ pessoas capacitadas · 130+ promotores monitorados</p>
             </div>
           </div>
           <div className="hero-redesign-portrait" data-reveal="hero-portrait">
@@ -168,44 +168,44 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="coordination-focus-band" aria-labelledby="coordination-focus-title">
+        <section className="coordination-focus-band" aria-labelledby="coordination-focus-title" style={{height: '900px'}}>
           <div className="coordination-focus-label" data-reveal="focus-label">
-            <p className="section-kicker">Focos de coordenação</p>
+            <p className="section-kicker" style={{ fontSize: "17px" }}>Focos de coordenação</p>
             <h2 id="coordination-focus-title">Três frentes para transformar <em>método em execução.</em></h2>
-            <p className="coordination-focus-note" style={{fontSize: '14px', marginTop: '18px'}}>Da narrativa do conteúdo à operação de campo, cada frente conecta clareza, capacitação e resultado.</p>
+            <p className="coordination-focus-note" style={{ fontSize: "18px", marginTop: "18px" }}>Da narrativa do conteúdo à operação de campo, cada frente conecta clareza, capacitação e resultado.</p>
           </div>
           <div className="coordination-focus-grid">
             <article className="coordination-focus-item" data-reveal="focus-item" data-reveal-delay="80">
-              <div className="coordination-focus-item-top"><span>01</span><ArrowUpRight size={18} aria-hidden="true" /></div>
-              <strong>Conteúdo &amp; Treinamento</strong>
-              <p>Instructional Design com ADDIE, Kirkpatrick e Learning Experience Design (LXD).</p>
+              <div className="coordination-focus-item-top" style={{fontSize: '16px'}}><span style={{fontSize: '16px'}}>01</span><ArrowUpRight size={18} aria-hidden="true" style={{fontSize: '16px'}} /></div>
+              <strong style={{fontSize: '20px'}}>Conteúdo &amp; Treinamento</strong>
+              <p style={{fontSize: '16px'}}>Instructional Design com ADDIE, Kirkpatrick e Learning Experience Design (LXD).</p>
               <ul className="coordination-focus-highlights">
-                <li>114 mil+ pessoas capacitadas ao longo da carreira</li>
-                <li>8 anos como pioneiro do Today at Apple no Brasil</li>
-                <li>Ferramenta própria de avaliação com IA generativa</li>
-                <li>Trilhas de aprendizagem, e-learning e microlearning</li>
+                <li style={{fontSize: '14px'}}>114 mil+ pessoas capacitadas ao longo da carreira</li>
+                <li style={{fontSize: '14px'}}>8 anos como pioneiro do Today at Apple no Brasil</li>
+                <li style={{fontSize: '14px'}}>Ferramenta própria de avaliação com IA generativa</li>
+                <li style={{fontSize: '14px'}}>Trilhas de aprendizagem, e-learning e microlearning</li>
               </ul>
             </article>
             <article className="coordination-focus-item" data-reveal="focus-item" data-reveal-delay="140">
-              <div className="coordination-focus-item-top"><span>02</span><ArrowUpRight size={18} aria-hidden="true" /></div>
-              <strong>Trade Marketing &amp; Campo</strong>
-              <p>Campanhas de incentivo de ponta a ponta, do briefing à modelagem financeira.</p>
+              <div className="coordination-focus-item-top" style={{fontSize: '16px'}}><span style={{fontSize: '16px'}}>02</span><ArrowUpRight size={18} aria-hidden="true" style={{fontSize: '16px'}} /></div>
+              <strong style={{fontSize: '20px'}}>Trade Marketing &amp; Campo</strong>
+              <p style={{fontSize: '16px'}}>Campanhas de incentivo de ponta a ponta, do briefing à modelagem financeira.</p>
               <ul className="coordination-focus-highlights">
-                <li>Dashboards de KPI para 130+ promotores em campo</li>
-                <li>Nota média de avaliação: 8,3</li>
-                <li>Execução em PDV, merchandising e gestão de redes/franquias</li>
-                <li>Análise de risco orçamentário e PDCA</li>
+                <li style={{fontSize: '14px'}}>Dashboards de KPI para 130+ promotores em campo</li>
+                <li style={{fontSize: '14px'}}>Nota média de avaliação: 8,3</li>
+                <li style={{fontSize: '14px'}}>Execução em PDV, merchandising e gestão de redes/franquias</li>
+                <li style={{fontSize: '14px'}}>Análise de risco orçamentário e PDCA</li>
               </ul>
             </article>
             <article className="coordination-focus-item" data-reveal="focus-item" data-reveal-delay="200">
-              <div className="coordination-focus-item-top"><span>03</span><ArrowUpRight size={18} aria-hidden="true" /></div>
-              <strong>T&amp;D de Pessoas</strong>
-              <p>Onboarding, avaliação de desempenho e desenvolvimento de equipes de campo.</p>
+              <div className="coordination-focus-item-top" style={{fontSize: '16px'}}><span style={{fontSize: '16px'}}>03</span><ArrowUpRight size={18} aria-hidden="true" style={{fontSize: '16px'}} /></div>
+              <strong style={{fontSize: '18px'}}>T&amp;D de Pessoas</strong>
+              <p style={{fontSize: '16px'}}>Onboarding, avaliação de desempenho e desenvolvimento de equipes de campo.</p>
               <ul className="coordination-focus-highlights">
-                <li>Metodologia 9Box e ciclos de PDCA</li>
-                <li>Facilitação premiada (maiores indicadores de NPS na Apple)</li>
-                <li>Programas de capacitação e certificação</li>
-                <li>Gestão de stakeholders e fornecedores</li>
+                <li style={{fontSize: '14px'}}>Metodologia 9Box e ciclos de PDCA</li>
+                <li style={{fontSize: '14px'}}>Facilitação premiada (maiores indicadores de NPS na Apple)</li>
+                <li style={{fontSize: '14px'}}>Programas de capacitação e certificação</li>
+                <li style={{fontSize: '15px'}}>Gestão de stakeholders e fornecedores</li>
               </ul>
             </article>
           </div>
@@ -235,43 +235,43 @@ export default function Home() {
           </a>
         </section>
 
-        <section className="recruiter-proof-wrap" aria-label="Destaques profissionais para RH e lideranças">
+        <section className="recruiter-proof-wrap" aria-label="Destaques profissionais para RH e lideranças" style={{ backgroundColor: "#ddd0c4" }}>
           <div className="recruiter-proof-header" data-reveal="proof-header">
-            <p className="section-kicker">Para RH, headhunters e lideranças</p>
-            <h2 className="recruiter-proof-title">Números que <em>comprovam</em> a experiência.</h2>
-            <p className="recruiter-proof-desc">Da facilitação premiada na Apple à gestão de campo na SPOT, cada indicador abaixo representa anos de execução real — não promessa.</p>
+            <p className="section-kicker" style={{ fontSize: "16px" }}>Para RH, headhunters e lideranças</p>
+            <h2 className="recruiter-proof-title" style={{color: '#cf7b73'}}>Números que <em style={{color: '#cf7b73'}}>comprovam</em> a experiência.</h2>
+            <p className="recruiter-proof-desc" style={{color: '#000000', fontSize: '16px', fontWeight: '500'}}>Da facilitação premiada na Apple à gestão de campo na SPOT, cada indicador abaixo representa anos de execução real — não promessa.</p>
           </div>
           <div className="recruiter-proof-strip" data-reveal="proof-strip">
-            <div className="proof-metric"><strong>17+</strong><span>anos de experiência</span></div>
-            <div className="proof-metric"><strong>114K<span>+</span></strong><span>Pessoas capacitadas<br />ao longo da carreira</span></div>
-            <div className="proof-metric"><strong>130<span>+</span></strong><span>Promotores monitorados<br />(operação de campo)</span></div>
-            <div className="proof-metric"><strong>5</strong><span>Coordenações de campanha<br />(Cystex, Enavo Gotas, Culturelle, Duekal, Copa)</span></div>
-            <div className="proof-metric"><strong>8,3</strong><span>Média de avaliação<br /><span className="proof-tagline">Conteúdo &amp; Treinamento · Trade Marketing · T&amp;D de Pessoas</span></span></div>
+            <div className="proof-metric" style={{ fontSize: "14px", marginLeft: "-54px" }}><strong style={{ fontSize: "14px" }}>17+</strong><span style={{ fontSize: "14px" }}>anos de experiência</span></div>
+            <div className="proof-metric" style={{ fontSize: "14px", fontWeight: 900, marginLeft: "2px" }}><strong style={{ fontSize: "14px" }}>114K<span>+</span></strong><span>Pessoas capacitadas<br />ao longo da carreira</span></div>
+            <div className="proof-metric" style={{ fontSize: "14px", fontWeight: 900, marginLeft: "2px" }}><strong style={{ fontSize: "14px" }}>130<span>+</span></strong><span>Promotores monitorados<br />(operação de campo)</span></div>
+            <div className="proof-metric" style={{fontSize: '14px'}}><strong style={{fontSize: '14px'}}>5</strong><span style={{fontSize: '14px'}}>Coordenações de campanha<br style={{fontSize: '14px'}} />(Cystex, Enavo Gotas, Culturelle, Duekal, Copa)</span></div>
+            <div className="proof-metric" style={{ fontSize: "14px", color: "#1c1b1a" }}><strong style={{ fontSize: "14px" }}>8,3</strong><span>Média de avaliação<br /><span className="proof-tagline">Conteúdo &amp; Treinamento · Trade Marketing · T&amp;D de Pessoas</span></span></div>
             <div className="proof-actions">
-              <Link href="/cv" className="proof-link"><span>Abrir trajetória</span><ArrowUpRight size={16} aria-hidden="true" /></Link>
-              <Link href="/cv" className="proof-link proof-link-alt"><span>Baixar CV</span><ArrowUpRight size={16} aria-hidden="true" /></Link>
+              <Link href="/cv" className="proof-link" style={{ fontSize: "12px", color: "#fff9f2", backgroundColor: "#1c1b1a" }}><span>Abrir trajetória</span><ArrowUpRight size={16} aria-hidden="true" /></Link>
+              <Link href="/cv" className="proof-link proof-link-alt" style={{fontSize: '12px'}}><span style={{fontSize: '12px'}}>Acessar CV</span><ArrowUpRight size={16} aria-hidden="true" style={{fontSize: '12px'}} /></Link>
             </div>
           </div>
         </section>
 
-        <section className="manifesto-section section-pad" aria-labelledby="manifesto-title">
+        <section className="manifesto-section section-pad" aria-labelledby="manifesto-title" style={{ marginTop: "-25px", backgroundColor: "#ddd0c4" }}>
           <div className="manifesto-grid" data-reveal="manifesto">
             <div className="manifesto-heading">
-              <p className="section-kicker">Como eu atuo</p>
-              <h2 id="manifesto-title">Transformo estratégia em <span>experiências</span> que movem pessoas.</h2>
+              <p className="section-kicker" style={{ color: "#d73332", fontSize: "16px" }}>Como eu atuo</p>
+              <h2 id="manifesto-title" style={{ color: "#000000" }}>Transformo estratégia em <span style={{ color: "#d73332" }}>experiências</span> que movem pessoas.</h2>
             </div>
             <div className="manifesto-aside">
-              <p>Porque conteúdo e treinamento só funcionam quando encontram contexto, método e um próximo passo claro — para a equipe, para o campo e para o negócio.</p>
-              <a className="text-link" href="#about" onClick={(event) => { event.preventDefault(); scrollToId("about"); }}>Conheça meu jeito de trabalhar <ArrowUpRight size={15} /></a>
+              <p style={{ fontSize: "16px", color: "#000000" }}>Porque conteúdo e treinamento só funcionam quando encontram contexto, método e um próximo passo claro — para a equipe, para o campo e para o negócio.</p>
+              <a className="text-link" href="#about" onClick={(event) => { event.preventDefault(); scrollToId("about"); }} style={{ fontSize: "14px", color: "#d73332" }}>Conheça meu jeito de trabalhar <ArrowUpRight size={15} /></a>
             </div>
           </div>
         </section>
 
         <section id="work" className="work-section work-redesign section-pad" aria-labelledby="work-title">
           <div className="work-redesign-heading" data-reveal="work-heading">
-            <div><p className="section-kicker">Trabalhos selecionados</p><h2 id="work-title">Projetos que<br /><em>ganharam forma.</em></h2></div>
-            <p>Uma seleção de campanhas, trilhas, eventos e materiais criada para comunicar melhor, capacitar equipes e melhorar a execução.</p>
-            <a className="behance-link" href="https://www.behance.net/gabrieldb86" data-umami-event="behance-open" target="_blank" rel="noreferrer">Abrir Behance <ArrowUpRight size={15} /></a>
+            <div style={{fontSize: '14px'}}><p className="section-kicker" style={{fontSize: '14px'}}>Trabalhos selecionados</p><h2 id="work-title" style={{fontSize: '14px'}}>Projetos que<br style={{fontSize: '14px'}} /><em style={{fontSize: '14px'}}>ganharam forma.</em></h2></div>
+            <p style={{ fontSize: "16px", color: "#ffffff", fontWeight: 600 }}>Uma seleção de campanhas, trilhas, eventos e materiais criada para comunicar melhor, capacitar equipes e melhorar a execução.</p>
+            <a className="behance-link" href="https://www.behance.net/gabrieldb86" data-umami-event="behance-open" target="_blank" rel="noreferrer" style={{fontSize: '14px'}}>Abrir Behance <ArrowUpRight size={15} style={{fontSize: '14px'}} /></a>
           </div>
 
           <div className="projects-grid sean-obrien-grid">
@@ -282,16 +282,16 @@ export default function Home() {
         <section className="services-section services-redesign section-pad" aria-labelledby="services-title">
           <div className="services-layout" data-reveal="services-layout">
             <div>
-              <p className="section-kicker">Áreas de atuação</p>
+              <p className="section-kicker" style={{fontSize: '14px'}}>Áreas de atuação</p>
               <h2 id="services-title">Coordenação que<br />vira <em className="services-result">resultado.</em></h2>
-              <div className="services-editorial-note"><strong>Do briefing ao resultado.</strong><p>Coordenação que organiza contexto, método, conteúdo e execução para o trabalho chegar ao campo.</p></div>
+              <div className="services-editorial-note" style={{fontSize: '16px'}}><strong style={{fontSize: '16px'}}>Do briefing ao resultado.</strong><p style={{fontSize: '16px'}}>Coordenação que organiza contexto, método, conteúdo e execução para o trabalho chegar ao campo.</p></div>
             </div>
             <div className="services-list">
               {siteConfig.services.map(([number, title, description], index) => (
                 <details className="service-item" key={number} data-reveal="service-item" data-reveal-delay={index * 70}>
                   <summary className="service-row">
                     <span className="service-number">{number}</span>
-                    <div><h3>{title}</h3><p>{description}</p></div>
+                    <div style={{ fontSize: "14px" }}><h3 style={{ fontSize: "14px" }}>{title}</h3><p style={{ fontSize: "14px" }}>{description}</p></div>
                     <Plus className="service-toggle" size={21} strokeWidth={1.4} aria-hidden="true" />
                   </summary>
                   <div className="service-detail" id={`service-detail-${number}`}>
@@ -308,18 +308,18 @@ export default function Home() {
           <div className="about-grid">
             <div className="about-art-wrap" data-reveal="about-art">
               <img src={siteConfig.trainingImage} alt="Gabriel conduzindo um treinamento diante de uma equipe" loading="eager" onError={markBrokenImage} />
-              <span className="about-art-label">Processo / repertório / intenção</span>
+              <span className="about-art-label" style={{ fontSize: "14px", fontWeight: 700 }}>Processo / repertório / intenção</span>
             </div>
             <div className="about-copy" data-reveal="about-copy">
-              <p className="section-kicker">Sobre mim</p>
+              <p className="section-kicker" style={{fontSize: '16px'}}>Sobre mim</p>
               <h2 id="about-title">Olá, eu sou<br /><em>Gabriel.</em></h2>
-              <p className="about-lead">Tenho 17 anos de experiência em conteúdo, treinamento e trade marketing — e mais de 114K pessoas capacitadas ao longo da carreira, incluindo 8 anos como pioneiro do Today at Apple no Brasil.</p>
-              <p>Minha trajetória cruza coordenação de treinamento, gestão de indicadores de campo e produção de conteúdo — da Apple à SPOT/Grupo EMS. Busco uma próxima posição de coordenação em Conteúdo &amp; Treinamento, Trade Marketing &amp; Performance de Campo, ou Treinamento &amp; Desenvolvimento de Pessoas, aplicando metodologias como ADDIE, Kirkpatrick e Design Thinking.</p>
+              <p className="about-lead" style={{fontSize: '16px'}}>Tenho 17 anos de experiência em conteúdo, treinamento e trade marketing — e mais de 114K pessoas capacitadas ao longo da carreira, incluindo 8 anos como pioneiro do Today at Apple no Brasil.</p>
+              <p style={{fontSize: '16px'}}>Minha trajetória cruza coordenação de treinamento, gestão de indicadores de campo e produção de conteúdo — da Apple à SPOT/Grupo EMS. Busco uma próxima posição de coordenação em Conteúdo &amp; Treinamento, Trade Marketing &amp; Performance de Campo, ou Treinamento &amp; Desenvolvimento de Pessoas, aplicando metodologias como ADDIE, Kirkpatrick e Design Thinking.</p>
               <div className="about-skill-list" aria-label="Áreas de atuação"><span>Instructional Design</span><span>Trade Marketing</span><span>Gestão de Campo</span><span>ADDIE / Kirkpatrick</span><span>IA Generativa</span><span>Dashboards &amp; KPIs</span></div>
               <div className="about-principles" aria-label="Princípios de coordenação">
-                <div><span>01</span><strong>Contexto antes da solução</strong><p>Entender público, operação e indicador antes de desenhar a resposta.</p></div>
-                <div><span>02</span><strong>Método que chega ao campo</strong><p>Transformar estratégia em conteúdo, treinamento, rotina e material aplicável.</p></div>
-                <div><span>03</span><strong>Acompanhamento até o resultado</strong><p>Usar avaliação, indicadores, PDCA e feedback para ajustar a execução.</p></div>
+                <div style={{ fontSize: "14px" }}><span style={{ fontSize: "14px" }}>01</span><strong style={{ fontSize: "16px" }}>Contexto antes da solução</strong><p style={{ fontSize: "14px" }}>Entender público, operação e indicador antes de desenhar a resposta.</p></div>
+                <div style={{ fontSize: "14px" }}><span style={{ fontSize: "14px" }}>02</span><strong style={{ fontSize: "16px" }}>Método que chega ao campo</strong><p style={{ fontSize: "14px" }}>Transformar estratégia em conteúdo, treinamento, rotina e material aplicável.</p></div>
+                <div style={{ fontSize: "14px" }}><span style={{ fontSize: "14px" }}>03</span><strong style={{ fontSize: "16px" }}>Acompanhamento até o resultado</strong><p style={{ fontSize: "14px" }}>Usar avaliação, indicadores, PDCA e feedback para ajustar a execução.</p></div>
               </div>
             </div>
           </div>
@@ -327,7 +327,7 @@ export default function Home() {
 
         <section className="statement-section">
           <img src={siteConfig.heroImage} alt="Projeto visual de bonés em preto e vermelho" loading="lazy" onError={markBrokenImage} />
-          <div className="statement-copy" data-reveal="statement-copy"><span>Uma pergunta para o próximo projeto:</span><h2>O que precisa<br /><em>ganhar forma?</em></h2></div>
+          <div className="statement-copy" data-reveal="statement-copy" style={{fontSize: '14px'}}><span style={{fontSize: '14px'}}>Uma pergunta para o próximo projeto:</span><h2 style={{fontSize: '14px'}}>O que precisa<br style={{fontSize: '14px'}} /><em style={{fontSize: '14px'}}>ganhar forma?</em></h2></div>
         </section>
 
         <section id="contact" className="contact-section section-pad" aria-labelledby="contact-title">
@@ -335,7 +335,7 @@ export default function Home() {
             <div className="contact-intro" data-reveal="contact-intro">
               <p className="section-kicker">Vamos conversar</p>
               <h2 id="contact-title">Você está formando<br />uma equipe de <em>coordenação?</em></h2>
-              <p>Estou aberto a oportunidades em conteúdo, treinamento, trade marketing e performance de campo. Envie o contexto da posição ou fale comigo diretamente pelo LinkedIn, e-mail ou WhatsApp.</p>
+              <p style={{fontSize: '16px'}}>Estou aberto a oportunidades em conteúdo, treinamento, trade marketing e performance de campo. Envie o contexto da posição ou fale comigo diretamente pelo LinkedIn, e-mail ou WhatsApp.</p>
               <div className="contact-links">
                 <a className="contact-direct" href="https://wa.me/5511945747353" data-umami-event="whatsapp-click" target="_blank" rel="noreferrer"><MessageCircle size={17} /> Falar diretamente com Gabriel <ArrowUpRight size={15} /></a>
                 <a className="contact-direct" href="https://www.linkedin.com/in/gabrieldb86" data-umami-event="linkedin-click" target="_blank" rel="noreferrer"><Linkedin size={17} /> Conectar pelo LinkedIn <ArrowUpRight size={15} /></a>
@@ -357,7 +357,7 @@ export default function Home() {
               <textarea id="message" name="message" rows={3} placeholder="Qual é o contexto da vaga ou do desafio?" required />
               <button className="submit-button" type="submit">Enviar mensagem <ArrowUpRight size={17} /></button>
               {sent && <p className="form-success" role="status">Mensagem preparada. O WhatsApp foi aberto em uma nova aba.</p>}
-              <p className="contact-privacy-note">Ao enviar, os dados são usados apenas para responder ao seu contato. <a href="/privacidade">Leia o aviso de privacidade.</a></p>
+              <p className="contact-privacy-note" style={{fontSize: '14px'}}>Ao enviar, os dados são usados apenas para responder ao seu contato. <a href="/privacidade" style={{fontSize: '14px'}}>Leia o aviso de privacidade.</a></p>
             </form>
           </div>
         </section>
