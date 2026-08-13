@@ -428,3 +428,9 @@
 - [x] Aplicar as alterações pertinentes diretamente no portfólio.
 - [x] Incorporar o conteúdo organizado ao documento central de reposicionamento.
 - [x] Validar testes, typecheck, build e responsividade nos três viewports antes do checkpoint.
+
+## Auditoria e diagnóstico final de otimização
+- [x] Inventariar todas as páginas, rotas, conteúdo e funcionalidades implementadas.
+- [x] Auditar alinhamento editorial, eixo master, tipografia e responsividade.
+- [x] Analisar SEO, metadados, performance de build e prontidão de publicação.
+- [x] Produzir relatório detalhado com o que falta, pendências técnicas e melhorias para recrutadores.
