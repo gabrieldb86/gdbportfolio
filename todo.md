@@ -643,3 +643,12 @@
 - [x] Ajustar as proporções do grid da segunda sessão para alinhar perfeitamente o bloco esquerdo e a lista direita.
 - [x] Preservar integralmente o visual atual (cores, textos, micro-listas e sinais de mais).
 - [x] Validar desktop, mobile, testes e build.
+
+## Correção estrutural definitiva (baseada na última referência)
+- [x] Enquadrar o bloco esquerdo e a lista direita na mesma caixa estrutural alinhada à margem esquerda.
+- [x] Garantir alinhamento de topo perfeito entre o título e a lista de focos.
+- [x] Validar desktop, mobile, testes e build.
+
+## Correção geométrica da services-section (print correto)
+- [x] Ajustar alinhamento de topo do grid da services-section para que a lista direita comece alinhada ao topo do bloco esquerdo.
+- [x] Validar desktop, mobile, testes e build.
