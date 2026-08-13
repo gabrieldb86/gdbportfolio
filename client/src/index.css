@@ -2504,10 +2504,10 @@ a.proof-link, a.behance-link, a.text-link, .service-detail a {
 
 /* Contador horizontal contínuo — sem caixas individuais nem cascata visual. */
 .recruiter-proof-layout {
-  width: min(100%, 1440px) !important;
-  height: auto !important;
-  margin: 0 auto !important;
-  padding: 0 8vw !important;
+  width: min(100%, 1440px);
+  height: auto;
+  margin: 0 auto;
+  padding: 0 8vw;
   grid-template-columns: minmax(260px, .78fr) minmax(0, 1.22fr);
   gap: clamp(32px, 5vw, 82px);
 }

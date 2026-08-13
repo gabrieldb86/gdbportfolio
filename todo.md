@@ -700,3 +700,8 @@
 - [x] Reorganizar os seis itens (5 métricas + ações) em uma faixa horizontal contínua e fluida ao lado do hero.
 - [x] Preservar o contador animado progressivo (AnimatedMetric) e garantir adaptação responsiva em mobile.
 - [x] Executar testes, build e salvar checkpoint.
+
+## Verificação da última edição visual do contador
+- [x] Consolidar o `style` duplicado do container com altura 386px, margens 116px/39px, marginTop -34px, largura 1732px e padding lateral 0px.
+- [x] Consolidar o `style` duplicado do primeiro indicador com paddingTop 30px, paddingRight 30px, paddingBottom 30px e paddingLeft 39px.
+- [x] Validar desktop, mobile, TypeScript, testes e build e criar checkpoint.
