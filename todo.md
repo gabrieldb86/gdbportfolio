@@ -481,4 +481,5 @@
 - [x] Remover qualquer telefone exibido como texto no CV, mantendo apenas contato sem dígitos visíveis.
 - [x] Executar testes, typecheck, build e validação visual das rotas públicas em desktop e mobile.
 - [x] Salvar checkpoint com as correções concluídas.
+- [x] Gerar arquivo DOCX minucioso de checklist para encerramento e publicação.
 - [x] Orientar contato com o suporte Manus sobre a remoção do manus-runtime da publicação pública.
