@@ -509,3 +509,14 @@
 - [ ] Aplicar uma altura comum baseada no maior conteúdo das três colunas.
 - [ ] Preservar a remoção das linhas em mobile quando a seção empilha verticalmente.
 - [ ] Validar desktop, mobile, testes/build e salvar checkpoint.
+
+## Verificação do botão Abrir trajetória
+- [ ] Remover estilos duplicados gerados pelo editor visual no botão e em seus elementos internos.
+- [ ] Manter o fundo carmim `#d73332` apenas no botão, com texto e seta em ivory.
+- [ ] Validar contraste, desktop, mobile, testes/build e salvar checkpoint.
+
+## Redesenho da seção de números (sem caixas rígidas)
+- [x] Remover o formato de tabela em colunas rígidas da seção de prova para líderes e RH.
+- [x] Criar uma faixa editorial fluida, com hierarquia tipográfica e ritmo editorial leve.
+- [x] Separar os botões de ação do CV das métricas para evitar poluição visual.
+- [x] Validar desktop, mobile vertical e mobile horizontal, executar testes/build e salvar checkpoint.

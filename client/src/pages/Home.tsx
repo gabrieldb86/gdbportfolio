@@ -248,7 +248,7 @@ export default function Home() {
             <div className="proof-metric"><strong>5</strong><span>Coordenações de campanha<br />(Cystex, Enavo Gotas, Culturelle, Duekal, Copa)</span></div>
             <div className="proof-metric"><strong>8,3</strong><span>Média de avaliação<br /><span className="proof-tagline">Conteúdo &amp; Treinamento · Trade Marketing · T&amp;D de Pessoas</span></span></div>
             <div className="proof-actions">
-              <Link href="/cv" className="proof-link" style={{ backgroundColor: "#1c1b1a", color: "#fff9f2" }}><span>Abrir trajetória</span><ArrowUpRight size={16} aria-hidden="true" /></Link>
+              <Link href="/cv" className="proof-link" style={{ backgroundColor: "#d73332", color: "#fff9f2" }}><span>Abrir trajetória</span><ArrowUpRight size={16} aria-hidden="true" /></Link>
               <Link href="/cv" className="proof-link proof-link-alt"><span>Acessar CV</span><ArrowUpRight size={16} aria-hidden="true" /></Link>
             </div>
           </div>

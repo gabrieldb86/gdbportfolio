@@ -2372,3 +2372,105 @@ a.proof-link, a.behance-link, a.text-link, .service-detail a {
     bottom: 0;
   }
 }
+
+/* Nova apresentação editorial das métricas: sem caixas rígidas, com ritmo tipográfico contínuo. */
+.recruiter-proof-strip {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: clamp(22px, 3.4vw, 56px);
+  padding: 28px 8vw 0;
+  border-top: 1px solid rgba(255, 249, 242, .34);
+  border-bottom: 0;
+}
+.recruiter-proof-strip .proof-metric,
+.recruiter-proof-strip .proof-metric:nth-child(n) {
+  position: relative;
+  display: flex;
+  min-height: 0;
+  justify-content: flex-start;
+  padding: 0;
+  border: 0;
+}
+.recruiter-proof-strip .proof-metric::before {
+  display: block;
+  margin-bottom: 18px;
+  color: rgba(255, 249, 242, .72);
+  content: "•";
+  font-size: 16px;
+  line-height: 1;
+}
+.recruiter-proof-strip .proof-metric strong {
+  font-size: clamp(2.8rem, 4.2vw, 4.6rem);
+  line-height: .86;
+}
+.recruiter-proof-strip .proof-metric > span {
+  max-width: 170px;
+  margin-top: 12px;
+  font-size: 10px;
+  letter-spacing: .11em;
+  line-height: 1.45;
+}
+.recruiter-proof-strip .proof-metric strong span {
+  font-size: 16px;
+}
+.recruiter-proof-strip .proof-tagline {
+  max-width: 185px;
+  margin-top: 7px;
+  font-size: 8px;
+  line-height: 1.35;
+}
+.recruiter-proof-strip .proof-actions {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 30px;
+  margin-top: 10px;
+  padding: 24px 0 28px;
+  border-top: 1px solid rgba(255, 249, 242, .3);
+}
+.recruiter-proof-strip .proof-link {
+  min-width: 190px;
+  padding: 13px 16px;
+  border: 1px solid rgba(28, 27, 26, .5);
+  color: #1c1b1a;
+  font-size: 10px;
+}
+.recruiter-proof-strip .proof-link-alt {
+  border-color: rgba(255, 249, 242, .55);
+  color: #fff9f2;
+}
+@media (max-width: 1024px) {
+  .recruiter-proof-strip {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 30px;
+  }
+  .recruiter-proof-strip .proof-actions {
+    grid-column: 1 / -1;
+    border-top: 1px solid rgba(255, 249, 242, .3);
+  }
+}
+@media (max-width: 720px) {
+  .recruiter-proof-header {
+    padding-right: var(--editorial-axis);
+    padding-left: var(--editorial-axis);
+  }
+  .recruiter-proof-strip {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px 22px;
+    padding: 24px var(--editorial-axis) 0;
+  }
+  .recruiter-proof-strip .proof-metric > span {
+    max-width: 145px;
+    font-size: 9px;
+  }
+  .recruiter-proof-strip .proof-actions {
+    flex-wrap: wrap;
+    gap: 12px;
+    padding-bottom: 24px;
+  }
+  .recruiter-proof-strip .proof-link {
+    min-width: 0;
+    flex: 1 1 150px;
+  }
+}

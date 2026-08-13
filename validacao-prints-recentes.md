@@ -7,3 +7,7 @@ Ainda falta concluir a validação automatizada e responsiva da rodada antes de 
 ## Equalização das divisórias
 
 A grade desktop de Focos de coordenação passou a ser uma grade real de três colunas, com `align-items: stretch`; as divisórias dos cards e a divisória após o título esquerdo compartilham a altura da linha determinada pelo maior conteúdo. No mobile, a regra continua removendo as divisórias verticais e mantém somente os separadores horizontais entre itens empilhados. A prévia desktop e a prévia mobile foram capturadas sem encavalamento visível.
+
+## Nova faixa de métricas sem caixas
+
+A seção de prova social agora apresenta o título e a descrição no mesmo hero carmim, enquanto as cinco métricas aparecem em uma faixa contínua sem células, bordas verticais ou aparência de tabela. Os botões de trajetória e CV foram deslocados para uma linha de ações separada. A prévia desktop preservou o Hero principal e a prévia mobile empilhou as métricas em duas colunas sem encavalamento visível.
