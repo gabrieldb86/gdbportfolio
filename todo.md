@@ -740,3 +740,8 @@
 - [x] Inspecionar o preenchimento de background na coluna da imagem da `.statement-section`.
 - [x] Definir `#d73332` no background de toda a grid da seção para eliminar qualquer fresta ou faixa branca.
 - [x] Executar testes, build de produção e salvar checkpoint.
+
+## Consolidação da última edição visual na seção final
+- [x] Unificar os atributos `style` duplicados no elemento `<section>` e na tag `<img>`.
+- [x] Aplicar restrições para que larguras fixas de desktop não causem overflow no mobile.
+- [x] Executar testes, build de produção e salvar checkpoint.

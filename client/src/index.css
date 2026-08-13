@@ -2659,3 +2659,29 @@ a.proof-link, a.behance-link, a.text-link, .service-detail a {
   transform: scale(1.06);
   transform-origin: right center;
 }
+
+/* A edição dimensional da imagem permanece no desktop, mas nunca ultrapassa a viewport em telas menores. */
+@media (min-width: 901px) {
+  .home-revision .statement-section {
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+  .home-revision .statement-section img {
+    max-width: 100%;
+  }
+}
+@media (max-width: 900px) {
+  .home-revision .statement-section {
+    margin-right: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+  .home-revision .statement-section img {
+    width: 100% !important;
+    height: auto !important;
+    min-height: 290px;
+    margin-top: 0 !important;
+    max-width: 100%;
+    transform: none;
+  }
+}
