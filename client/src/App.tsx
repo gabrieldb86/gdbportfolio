@@ -10,7 +10,6 @@ import CaseStudy from "@/pages/CaseStudy";
 import Editor from "@/pages/Editor";
 import Home from "@/pages/Home";
 import Privacy from "@/pages/Privacy";
-import PrivateMonitor from "@/pages/PrivateMonitor";
 function Router() {
   // make sure to consider if you need authentication for certain routes
   return (
@@ -19,7 +18,6 @@ function Router() {
       <Route path="/cv" component={CV} />
       <Route path="/cases/:slug" component={CaseStudy} />
       <Route path="/privacidade" component={Privacy} />
-      <Route path="/monitoramento" component={PrivateMonitor} />
       <Route path="/editor" component={Editor} />
       <Route path="/404" component={NotFound} />
       <Route component={NotFound} />

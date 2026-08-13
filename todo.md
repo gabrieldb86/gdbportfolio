@@ -463,6 +463,14 @@
 - [x] Remover da Home pública os botões, modais e referências ao Dashboard e ao monitoramento administrativo.
 - [x] Remover dados demonstrativos e não apresentar métricas fictícias como dados reais.
 - [x] Criar rota privada de monitoramento protegida pelo login do proprietário.
-- [ ] Definir fonte real para acessos, buscas e tendências antes de exibir indicadores.
-- [ ] Configurar rotina diária persistente e histórico consultável de relatórios.
-- [ ] Validar bloqueio para visitantes anônimos, desktop/mobile, testes e checkpoint.
+- [x] Definir fonte real para acessos, buscas e tendências antes de exibir indicadores. (cancelado: o usuário decidiu não integrar dados ao site.)
+- [x] Configurar rotina diária persistente e histórico consultável de relatórios. (cancelado: o usuário optou por uma tarefa diária privada diretamente no Manus.)
+- [x] Validar bloqueio para visitantes anônimos, desktop/mobile, testes e checkpoint. (cancelado junto com a remoção da rota privada.)
+
+## Reversão do monitoramento integrado ao portfólio
+- [x] Remover a rota privada `/monitoramento` e a página de monitoramento do projeto.
+- [x] Remover estilos e componentes de Dashboard/WhatsApp adicionados para a ferramenta administrativa.
+- [x] Confirmar que a Home pública não contém botões, links ou referências ao monitoramento.
+- [x] Auditar o código para garantir que não restem referências ao Dashboard, agente ou dados fictícios.
+- [x] Configurar uma única tarefa diária diretamente no Manus, sem endpoint, segredo ou integração com o site.
+- [x] Executar testes, typecheck, build, salvar checkpoint e entregar o local de consulta da tarefa.
