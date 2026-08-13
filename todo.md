@@ -684,3 +684,8 @@
 - [x] Reestruturar o layout para ter o título/hero à esquerda e a faixa de contadores à direita ou abaixo em composição unificada.
 - [x] Implementar hook/efeito de contagem animada do zero ao valor final (17, 114, 130, 5, 8.3) com IntersectionObserver e suporte a `prefers-reduced-motion`.
 - [x] Validar desktop, mobile, testes e build.
+
+## Verificação do edit visual do contador
+- [x] Remover o atributo `style` duplicado inserido no container recruiter-proof-layout.
+- [x] Remover dimensões e margens fixas que podem causar overflow, preservando a composição pelo CSS responsivo.
+- [x] Validar desktop, mobile, TypeScript, testes e build e criar checkpoint.
