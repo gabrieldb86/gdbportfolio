@@ -283,7 +283,7 @@ export default function Home() {
         </section>
 
         <section id="recruiter-proof" className="recruiter-proof-wrap" aria-label="Destaques profissionais para RH e lideranças">
-          <div className="recruiter-proof-layout">
+          <div className="recruiter-proof-layout" style={{ height: '674px', marginLeft: '115px', marginRight: '591px', paddingLeft: '0px', paddingRight: '0px', width: '1772px' }}>
             <div className="recruiter-proof-header" data-reveal="proof-header">
               <p className="section-kicker" style={{fontSize: '16px'}}>Para RH, headhunters e lideranças</p>
               <h2 className="recruiter-proof-title">Números que <em>comprovam</em> a experiência.</h2>

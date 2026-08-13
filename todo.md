@@ -689,3 +689,8 @@
 - [x] Remover o atributo `style` duplicado inserido no container recruiter-proof-layout.
 - [x] Remover dimensões e margens fixas que podem causar overflow, preservando a composição pelo CSS responsivo.
 - [x] Validar desktop, mobile, TypeScript, testes e build e criar checkpoint.
+
+## Aplicação rigorosa da última edição visual
+- [x] Aplicar no container `recruiter-proof-layout` exatamente os estilos fornecidos: `{height: '674px', marginLeft: '115px', marginRight: '591px', paddingLeft: '0px', paddingRight: '0px', width: '1772px'}`.
+- [x] Validar desktop, mobile, TypeScript, testes e build.
+- [x] Salvar checkpoint e reportar.

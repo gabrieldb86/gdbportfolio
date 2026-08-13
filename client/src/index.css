@@ -2487,3 +2487,16 @@ a.proof-link, a.behance-link, a.text-link, .service-detail a {
     padding: 22px 17px;
   }
 }
+
+
+/* O editor visual solicitou dimensões absolutas no desktop; em telas menores o container volta a ser fluido. */
+@media (max-width: 1100px) {
+  .recruiter-proof-layout {
+    width: auto !important;
+    height: auto !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
