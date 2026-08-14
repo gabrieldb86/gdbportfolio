@@ -706,6 +706,18 @@
 - [x] Consolidar o `style` duplicado do primeiro indicador com paddingTop 30px, paddingRight 30px, paddingBottom 30px e paddingLeft 39px.
 - [x] Validar desktop, mobile, TypeScript, testes e build e criar checkpoint.
 
+## Integração de analytics e aquisição
+- [ ] Verificar conectores e configurações de analytics disponíveis
+- [ ] Adicionar instrumentação GA4 condicionada ao consentimento de analytics
+- [ ] Rastrear cliques de contato e navegação relevante como eventos de conversão
+- [ ] Documentar a ativação da propriedade Google Search Console e a leitura de consultas orgânicas
+- [ ] Validar build, consentimento e carregamento sem identificador de medição
+
+## Correção pontual da transição mobile
+- [x] Fazer o item 03 da seção Sobre mim terminar integralmente antes do hero vermelho
+- [x] Preservar a composição restaurada sem alterar tipografia, cores ou cabeçalho
+- [x] Validar 375px, desktop, testes e build
+
 ## Verificação da edição ampla em Home.tsx
 - [x] Localizar e remover todos os atributos `style` duplicados gerados pela última edição visual.
 - [x] Manter as melhorias de tipografia e layout desejadas pelo usuário.

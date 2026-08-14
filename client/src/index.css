@@ -3457,3 +3457,10 @@ a.proof-link, a.behance-link, a.text-link, .service-detail a {
     content: none !important;
   }
 }
+
+/* Correção pontual: a sombra ascendente encobria o fim do item 03. */
+@media (max-width: 900px) {
+  .home-revision .statement-section {
+    box-shadow: none !important;
+  }
+}

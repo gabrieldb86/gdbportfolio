@@ -1,7 +1,7 @@
 from pathlib import Path
 from PIL import Image
 
-source = Path('/home/ubuntu/screenshots/webdev-preview-root-1786679352981264027-4091.png')
+source = Path('/home/ubuntu/screenshots/webdev-preview-root-1786712692401079876-2676.png')
 image = Image.open(source).convert('RGB')
 rows = []
 for y in range(image.height):
@@ -24,7 +24,7 @@ for run in runs:
     if len(run) >= 4:
         print('run', run[0][0], run[-1][0], 'height', len(run), 'start', run[0][1:], 'end', run[-1][1:])
 
-# Export a readable crop around the likely lower-page transition.
-for index, (top, bottom) in enumerate(((5650, 6650), (5900, 6400))):
-    crop = image.crop((0, max(0, top), image.width, min(image.height, bottom))).resize((748, min(image.height, bottom) - max(0, top)), Image.Resampling.NEAREST)
+# Export a readable crop around the final Sobre mim / hero transition.
+for index, (top, bottom) in enumerate(((5200, 6400), (5600, 6200))):
+    crop = image.crop((0, max(0, top), image.width, min(image.height, bottom))).resize((748, (min(image.height, bottom) - max(0, top)) * 4), Image.Resampling.NEAREST)
     crop.save(f'/home/ubuntu/gabriel-portfolio/black-band-crop-{index}.png')
