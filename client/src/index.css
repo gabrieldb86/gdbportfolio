@@ -2843,3 +2843,41 @@ a.proof-link, a.behance-link, a.text-link, .service-detail a {
     margin-bottom: 24px !important;
   }
 }
+
+
+/* ==========================================================================
+   CORREÇÃO DOS 4 PRINTS (Respiro hero, mais centralizado e imagem expansiva)
+   ========================================================================== */
+@media (max-width: 768px) {
+  .hero-redesign {
+    padding-top: 64px !important;
+  }
+
+  .coordination-focus-item {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    position: relative !important;
+    padding-right: 48px !important;
+  }
+
+  .coordination-focus-plus {
+    position: absolute !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    right: 16px !important;
+  }
+
+  .statement-section {
+    padding: 24px 0 !important;
+  }
+
+  .statement-section img {
+    width: 100% !important;
+    height: auto !important;
+    max-height: none !important;
+    object-fit: cover !important;
+    border-radius: 0 !important;
+    margin: 0 !important;
+  }
+}

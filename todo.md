@@ -784,3 +784,9 @@
 - [x] Ajustar object-fit da foto de bonés para contain/enquadrada sem cortes
 - [x] Remover altura fixa de 1058px na seção Sobre para evitar invasão do bloco vermelho
 - [x] Validar build, testes e nova captura mobile de 375px
+
+## Ajustes Finais Mobile (Prints 1, 2, 3 e 4)
+- [x] Adicionar padding superior no hero para afastar o texto do topo em mobile
+- [x] Centralizar verticalmente o ícone (+) nas caixas de foco no mobile
+- [x] Expandir a largura e altura da imagem de bonés para preencher o campo sem sobras ou cortes
+- [x] Validar com captura mobile de 375x812, testes e build
