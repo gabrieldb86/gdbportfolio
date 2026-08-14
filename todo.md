@@ -747,9 +747,9 @@
 - [x] Executar testes, build de produção e salvar checkpoint.
 
 ## Verificação da edição dimensional na seção final
-- [ ] Garantir que `height: 675px` e `width: 2317px` funcionem perfeitamente no desktop.
-- [ ] Aplicar restrição mobile para que `width` fixo não cause rolagem lateral indesejada.
-- [ ] Executar testes unitários, build de produção e salvar checkpoint.
+- [x] Garantir que `height: 675px` e `width: 2317px` funcionem perfeitamente no desktop.
+- [x] Aplicar restrição mobile para que `width` fixo não cause rolagem lateral indesejada.
+- [x] Executar testes, build de produção e salvar checkpoint.
 
 ## Remoção da borda branca do asset da imagem (statement-section)
 - [x] Ajustar o posicionamento e o corte da imagem dos bonés para eliminar a margem branca original.
