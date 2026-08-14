@@ -754,3 +754,14 @@
 ## Remoção da borda branca do asset da imagem (statement-section)
 - [x] Ajustar o posicionamento e o corte da imagem dos bonés para eliminar a margem branca original.
 - [x] Executar testes, build de produção e salvar checkpoint.
+
+## Alteração de Domínio para gabrieldb.manus.space
+- [ ] Verificar a API ou CLI de domínios para associar `gabrieldb.manus.space`.
+- [ ] Validar a acessibilidade do novo endereço.
+- [ ] Executar checkpoint final e reportar ao usuário.
+
+## Correções Técnicas (prompt-manus-correcoes.md)
+- [x] Bloco 0 & 1: Sincronização de métricas e eliminação de CLS em imagens
+- [x] Bloco 2 & 3: SEO, favicon, compressão gzip e cache headers no Express
+- [x] Bloco 4 & 5: Limpeza de dependências e proteção da rota /editor
+- [x] Validação final (pnpm build, testes e checkpoint)

@@ -105,7 +105,7 @@ function ProjectCard({ project, revealDelay }: { project: ProjectConfig; revealD
       aria-label={isLocalCase ? `Abrir estudo de caso ${project.title}` : `Abrir projeto ${project.title} no Behance`}
     >
       <div className="project-image-wrap" style={{ aspectRatio: project.aspectRatio }}>
-        {genericImageFailed ? <div className="project-image-fallback" role="img" aria-label={`Capa genérica: ${project.title}`} style={{ backgroundImage: `linear-gradient(135deg, rgba(38, 35, 33, .62), rgba(183, 37, 41, .52)), url("${genericImage}")`, backgroundPosition: "center", backgroundSize: "cover" }}><span>{project.number} · projeto</span><strong>{project.title}</strong><small>Imagem genérica editável no editor</small></div> : <img src={imageSource} alt={project.title} className="project-image" style={{ objectPosition: project.objectPosition }} loading={project.number === "01" ? "eager" : "lazy"} decoding="async" onError={() => { if (imageFailed) setGenericImageFailed(true); else setImageFailed(true); }} />}
+        {genericImageFailed ? <div className="project-image-fallback" role="img" aria-label={`Capa genérica: ${project.title}`} style={{ backgroundImage: `linear-gradient(135deg, rgba(38, 35, 33, .62), rgba(183, 37, 41, .52)), url("${genericImage}")`, backgroundPosition: "center", backgroundSize: "cover" }}><span>{project.number} · projeto</span><strong>{project.title}</strong><small>Imagem genérica editável no editor</small></div> : <img src={imageSource} alt={project.title} className="project-image" width="800" height="600" style={{ objectPosition: project.objectPosition }} loading={project.number === "01" ? "eager" : "lazy"} decoding="async" onError={() => { if (imageFailed) setGenericImageFailed(true); else setImageFailed(true); }} />}
         <span className="project-arrow" aria-hidden="true">
           <ArrowUpRight size={19} strokeWidth={1.5} />
         </span>
@@ -208,7 +208,7 @@ export default function Home() {
       </header>
 
       <aside className="side-rail" aria-label="Informações rápidas">
-        <div className="rail-image-block"><img src={siteConfig.railImage} alt="Ilustração em preto e branco de Gabriel" onError={markBrokenImage} /></div>
+        <div className="rail-image-block"><img src={siteConfig.railImage} alt="Ilustração em preto e branco de Gabriel" width="120" height="400" loading="lazy" decoding="async" onError={markBrokenImage} /></div>
         <span className="rail-label">Portfólio · 2026</span>
       </aside>
 
@@ -224,7 +224,7 @@ export default function Home() {
             </div>
           </div>
           <div className="hero-redesign-portrait hero-redesign-portrait-large" data-reveal="hero-portrait">
-            <img src={siteConfig.profilePhoto} alt="Gabriel Danino Basilio" loading="eager" fetchPriority="high" decoding="sync" onError={markBrokenImage} />
+            <img src={siteConfig.profilePhoto} alt="Gabriel Danino Basilio" width="800" height="1000" loading="eager" fetchPriority="high" decoding="async" onError={markBrokenImage} style={{ aspectRatio: '0.80' }} />
           </div>
         </section>
 
@@ -378,7 +378,7 @@ export default function Home() {
         <section id="about" className="about-section section-pad" aria-labelledby="about-title" style={{height: '1058px'}}>
           <div className="about-grid">
             <div className="about-art-wrap" data-reveal="about-art">
-              <img src={siteConfig.trainingImage} alt="Gabriel conduzindo um treinamento diante de uma equipe" loading="eager" onError={markBrokenImage} />
+              <img src={siteConfig.trainingImage} alt="Gabriel conduzindo um treinamento diante de uma equipe" loading="eager" decoding="async" width="1200" height="900" style={{ aspectRatio: '1.33' }} onError={markBrokenImage} />
               <span className="about-art-label">Processo / repertório / intenção</span>
             </div>
             <div className="about-copy" data-reveal="about-copy">
@@ -397,7 +397,7 @@ export default function Home() {
         </section>
 
         <section className="statement-section" style={{ marginRight: '-90px', paddingBottom: '21px', paddingTop: '21px', height: '675px', width: '2317px' }}>
-          <img src={siteConfig.heroImage} alt="Projeto visual de bonés em preto e vermelho" loading="eager" decoding="async" onError={markBrokenImage} style={{ height: '643px', marginTop: '-5px', width: '1315px' }} />
+          <img src={siteConfig.heroImage} alt="Projeto visual de bonés em preto e vermelho" width="1315" height="643" loading="lazy" decoding="async" onError={markBrokenImage} style={{ height: '643px', marginTop: '-5px', width: '1315px' }} />
           <div className="statement-copy" data-reveal="statement-copy"><span>Uma pergunta para o próximo projeto:</span><h2>O que precisa<br /><em>ganhar forma?</em></h2></div>
         </section>
 
