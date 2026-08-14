@@ -827,3 +827,11 @@
 - [x] Aumentar o título de Trabalhos selecionados para a escala da referência
 - [x] Preservar alinhamento, descrição, CTA e responsividade
 - [x] Validar mobile, desktop, testes e build
+
+## Reaplicação dos ajustes que não apareceram na prévia
+- [x] Diagnosticar por que a faixa preta continua visível na divisória
+- [x] Reaplicar remoção efetiva da faixa preta entre Áreas de atuação e o hero final
+- [x] Diagnosticar por que o título de Trabalhos selecionados não aumentou visualmente
+- [x] Reaplicar aumento efetivo do título com especificidade suficiente
+- [x] Confirmar alterações em mobile e desktop, testes e build
+- [x] Aumentar especificamente o título do hero de contato (“Você está formando uma equipe de coordenação?”) para igualar a escala de “Projetos que ganharam forma.”

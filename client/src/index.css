@@ -3282,3 +3282,41 @@ a.proof-link, a.behance-link, a.text-link, .service-detail a {
     letter-spacing: -.055em !important;
   }
 }
+
+
+/* REAPLICAÇÃO DEFINITIVA — correções que precisam aparecer na prévia real. */
+@media (max-width: 900px) {
+  .home-revision .services-section {
+    margin-bottom: 0 !important;
+    border-bottom: 0 !important;
+    box-shadow: none !important;
+  }
+  .home-revision .statement-section {
+    position: relative !important;
+    z-index: 2 !important;
+    margin-top: -56px !important;
+    padding-top: 56px !important;
+    border-top: 0 !important;
+    background: #d73332 !important;
+  }
+  .home-revision .statement-section::before,
+  .home-revision .statement-section::after {
+    display: none !important;
+    background: transparent !important;
+  }
+  #contact.contact-section .contact-intro h2,
+  .home-revision .contact-section .contact-intro h2 {
+    max-width: 100% !important;
+    font-size: clamp(5rem, 20vw, 7.5rem) !important;
+    line-height: .8 !important;
+    letter-spacing: -.055em !important;
+  }
+}
+@media (min-width: 901px) {
+  #contact.contact-section .contact-intro h2,
+  .home-revision .contact-section .contact-intro h2 {
+    font-size: clamp(5rem, 8.2vw, 8.8rem) !important;
+    line-height: .8 !important;
+    letter-spacing: -.055em !important;
+  }
+}
