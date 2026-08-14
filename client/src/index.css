@@ -2772,3 +2772,44 @@ a.proof-link, a.behance-link, a.text-link, .service-detail a {
     width: 100% !important;
   }
 }
+
+
+/* ==========================================================================
+   CORREÇÃO CIRÚRGICA MOBILE (Proteção contra cortes e sobreposições)
+   ========================================================================== */
+@media (max-width: 768px) {
+  #recruiter-proof {
+    height: auto !important;
+    padding-top: 40px !important;
+    padding-bottom: 40px !important;
+  }
+
+  .statement-section {
+    width: 100% !important;
+    height: auto !important;
+    margin-right: 0 !important;
+    padding: 32px 16px !important;
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .statement-section img {
+    width: 100% !important;
+    height: auto !important;
+    max-height: 280px !important;
+    object-fit: cover !important;
+    margin-top: 16px !important;
+  }
+
+  #contact h2 {
+    width: 100% !important;
+    font-size: clamp(2.2rem, 8vw, 3.2rem) !important;
+    line-height: 1.05 !important;
+  }
+
+  .floating-contact {
+    bottom: 20px !important;
+    right: 20px !important;
+    z-index: 50 !important;
+  }
+}

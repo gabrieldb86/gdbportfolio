@@ -405,7 +405,7 @@ export default function Home() {
           <div className="contact-grid">
             <div className="contact-intro" data-reveal="contact-intro">
               <p className="section-kicker" style={{fontSize: '16px'}}>Vamos conversar</p>
-              <h2 id="contact-title" style={{width: '713px'}}>Você está formando<br style={{width: '713px'}} />uma equipe de <em style={{width: '713px'}}>coordenação?</em></h2>
+              <h2 id="contact-title">Você está formando<br />uma equipe de <em>coordenação?</em></h2>
               <p style={{fontSize: '16px'}}>Estou aberto a oportunidades em conteúdo, treinamento, trade marketing e performance de campo. Envie o contexto da posição ou fale comigo diretamente pelo LinkedIn, e-mail ou WhatsApp.</p>
               <div className="contact-links">
                 <a className="contact-direct" href="https://wa.me/5511945747353" data-umami-event="whatsapp-click" target="_blank" rel="noreferrer"><MessageCircle size={17} /> Falar diretamente com Gabriel <ArrowUpRight size={15} /></a>

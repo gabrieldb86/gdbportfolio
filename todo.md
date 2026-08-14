@@ -772,3 +772,9 @@
 - [x] Corrigir a página de CV em mobile (tabelas, espaçamentos e botões de ação)
 - [x] Validar viewport (375x812), testes unitários e build de produção
 - [x] Criar checkpoint e reportar o resultado mobile honestamente ao usuário
+
+## Correção Cirúrgica de Conflitos Mobile (Prints)
+- [x] Eliminar largura fixa de 713px no título de Contato em Home.tsx
+- [x] Corrigir altura e espaçamento do contador em recruiter-proof para evitar invasão do Manifesto
+- [x] Ajustar posicionamento do botão flutuante e da seção final em 375px
+- [x] Validar com nova captura mobile de 375x812, testes e build
