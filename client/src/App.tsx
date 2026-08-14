@@ -18,15 +18,7 @@ function Router() {
       <Route path="/cv" component={CV} />
       <Route path="/cases/:slug" component={CaseStudy} />
       <Route path="/privacidade" component={Privacy} />
-      <Route path="/editor">
-        {() => {
-          const params = new URLSearchParams(window.location.search);
-          if (params.get("secret") !== "gabriel2026") {
-            return <NotFound />;
-          }
-          return <Editor />;
-        }}
-      </Route>
+      <Route path="/editor" component={Editor} />
       <Route path="/404" component={NotFound} />
       <Route component={NotFound} />
     </Switch>
