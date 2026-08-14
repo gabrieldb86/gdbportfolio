@@ -375,7 +375,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="about" className="about-section section-pad" aria-labelledby="about-title" style={{height: '1058px'}}>
+        <section id="about" className="about-section section-pad" aria-labelledby="about-title">
           <div className="about-grid">
             <div className="about-art-wrap" data-reveal="about-art">
               <img src={siteConfig.trainingImage} alt="Gabriel conduzindo um treinamento diante de uma equipe" loading="eager" decoding="async" width="1200" height="900" style={{ aspectRatio: '1.33' }} onError={markBrokenImage} />

@@ -778,3 +778,9 @@
 - [x] Corrigir altura e espaçamento do contador em recruiter-proof para evitar invasão do Manifesto
 - [x] Ajustar posicionamento do botão flutuante e da seção final em 375px
 - [x] Validar com nova captura mobile de 375x812, testes e build
+
+## Correções Cirúrgicas Adicionais (Prints 1, 2 e 3)
+- [x] Posicionar o ícone de mais (+) ao lado do texto nos focos em mobile
+- [x] Ajustar object-fit da foto de bonés para contain/enquadrada sem cortes
+- [x] Remover altura fixa de 1058px na seção Sobre para evitar invasão do bloco vermelho
+- [x] Validar build, testes e nova captura mobile de 375px

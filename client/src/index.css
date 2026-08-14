@@ -2813,3 +2813,33 @@ a.proof-link, a.behance-link, a.text-link, .service-detail a {
     z-index: 50 !important;
   }
 }
+
+
+/* ==========================================================================
+   CORREÇÃO DOS 3 PRINTS MOBILE (Ícone de mais, enquadramento e altura Sobre)
+   ========================================================================== */
+@media (max-width: 768px) {
+  .coordination-focus-item {
+    position: relative !important;
+    padding-right: 48px !important;
+  }
+
+  .coordination-focus-plus {
+    position: absolute !important;
+    top: 20px !important;
+    right: 20px !important;
+  }
+
+  .statement-section img {
+    object-fit: contain !important;
+    max-height: 320px !important;
+    background-color: rgba(0, 0, 0, 0.15) !important;
+    border-radius: 4px !important;
+  }
+
+  #about {
+    height: auto !important;
+    min-height: auto !important;
+    margin-bottom: 24px !important;
+  }
+}
