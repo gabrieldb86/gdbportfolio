@@ -3190,3 +3190,39 @@ a.proof-link, a.behance-link, a.text-link, .service-detail a {
     line-height: .9 !important;
   }
 }
+
+
+/* Texto contextual flutuante: preserva posição e leitura, sem caixa visual. */
+.home-revision .statement-context-box {
+  max-width: 390px !important;
+  margin: 42px 0 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  color: rgba(255, 249, 242, .82) !important;
+}
+@media (max-width: 900px) {
+  .home-revision .statement-context-box {
+    max-width: none !important;
+    margin: 34px 0 0 !important;
+    padding: 0 !important;
+  }
+}
+
+
+/* Escala final do hero de contato: mesma presença editorial das demais seções. */
+.home-revision .contact-intro h2 {
+  max-width: 100% !important;
+  font-size: clamp(4.4rem, 7.4vw, 8rem) !important;
+  line-height: .84 !important;
+  letter-spacing: -.045em !important;
+}
+@media (max-width: 900px) {
+  .home-revision .contact-intro h2 {
+    max-width: 100% !important;
+    font-size: clamp(4rem, 17.5vw, 6.2rem) !important;
+    line-height: .86 !important;
+    letter-spacing: -.045em !important;
+  }
+}

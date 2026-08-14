@@ -806,3 +806,13 @@
 - [x] Padronizar a escala e o eixo do hero final com as demais seções
 - [x] Revalidar o enquadramento da imagem final dentro da caixa
 - [x] Validar mobile 375px, desktop, testes e build
+
+## Ajuste do hero final — texto flutuante
+- [x] Remover borda, fundo e aparência de caixa da frase contextual
+- [x] Manter o texto flutuante na mesma posição e preservar a legibilidade responsiva
+- [x] Validar mobile, desktop, testes e build
+
+## Ajuste de escala — título da seção de contato
+- [x] Aumentar o título “Você está formando uma equipe de coordenação?” para o padrão editorial das demais sessões
+- [x] Preservar quebra de linhas, alinhamento à esquerda e evitar overflow em 375px
+- [x] Validar desktop, mobile, testes e build
