@@ -718,6 +718,11 @@
 - [x] Preservar a composição restaurada sem alterar tipografia, cores ou cabeçalho
 - [x] Validar 375px, desktop, testes e build
 
+## Correção real do item 03
+- [x] Remover as alturas inline de 23px que colapsam o bloco do item 03
+- [x] Confirmar que a seção Sobre mim reserva toda a altura do texto antes do hero vermelho
+- [x] Validar em 375px, desktop, testes e build
+
 ## Verificação da edição ampla em Home.tsx
 - [x] Localizar e remover todos os atributos `style` duplicados gerados pela última edição visual.
 - [x] Manter as melhorias de tipografia e layout desejadas pelo usuário.

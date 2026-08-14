@@ -415,7 +415,7 @@ export default function Home() {
               <div className="about-principles" aria-label="Princípios de coordenação">
                 <div style={{ fontSize: '14px' }}><span style={{ fontSize: '14px' }}>01</span><strong style={{ fontSize: '14px' }}>Contexto antes da solução</strong><p style={{ fontSize: '14px' }}>Entender público, operação e indicador antes de desenhar a resposta.</p></div>
                 <div style={{ fontSize: '14px' }}><span style={{ fontSize: '14px' }}>02</span><strong style={{ fontSize: '14px' }}>Método que chega ao campo</strong><p style={{ fontSize: '14px' }}>Transformar estratégia em conteúdo, treinamento, rotina e material aplicável.</p></div>
-                <div style={{ fontSize: '14px', height: '23px', width: '266px' }}><span style={{ fontSize: '14px', height: '23px', width: '266px' }}>03</span><strong style={{ fontSize: '14px', height: '23px', width: '266px' }}>Acompanhamento até o resultado</strong><p style={{ fontSize: '14px', height: '23px', width: '266px' }}>Usar avaliação, indicadores, PDCA e feedback para ajustar a execução.</p></div>
+                <div style={{ fontSize: '14px' }}><span style={{ fontSize: '14px' }}>03</span><strong style={{ fontSize: '14px' }}>Acompanhamento até o resultado</strong><p style={{ fontSize: '14px' }}>Usar avaliação, indicadores, PDCA e feedback para ajustar a execução.</p></div>
               </div>
             </div>
           </div>

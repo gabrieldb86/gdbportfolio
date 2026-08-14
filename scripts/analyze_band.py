@@ -1,7 +1,7 @@
 from pathlib import Path
 from PIL import Image
 
-source = Path('/home/ubuntu/screenshots/webdev-preview-root-1786712692401079876-2676.png')
+source = Path('/home/ubuntu/screenshots/webdev-preview-root-1786713810998994096-6000.png')
 image = Image.open(source).convert('RGB')
 rows = []
 for y in range(image.height):
