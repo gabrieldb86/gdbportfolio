@@ -2707,3 +2707,68 @@ a.proof-link, a.behance-link, a.text-link, .service-detail a {
   clip-path: inset(0 0 0 7%);
   background: #d73332;
 }
+
+
+/* ==========================================================================
+   CORREÇÃO MOBILE SISTÊMICA (Anulação de larguras fixas e desalinhamentos)
+   ========================================================================== */
+@media (max-width: 768px) {
+  .coordination-focus-grid {
+    padding-left: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 16px !important;
+  }
+
+  .recruiter-proof-layout,
+  .statement-section,
+  .coordination-focus-layout,
+  .work-redesign-heading,
+  .services-layout,
+  .about-grid,
+  .contact-grid,
+  .manifesto-grid {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    height: auto !important;
+    transform: none !important;
+  }
+
+  .recruiter-proof-strip {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 16px !important;
+    width: 100% !important;
+  }
+
+  .proof-metric {
+    padding: 16px !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  }
+
+  .statement-section img {
+    width: 100% !important;
+    height: auto !important;
+    max-height: 380px !important;
+    object-fit: cover !important;
+    margin: 0 !important;
+  }
+
+  .hero-redesign {
+    height: auto !important;
+    min-height: auto !important;
+    padding: 40px 16px !important;
+  }
+
+  .site-shell {
+    overflow-x: hidden !important;
+    width: 100% !important;
+  }
+}

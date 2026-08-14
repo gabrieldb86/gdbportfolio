@@ -765,3 +765,10 @@
 - [x] Bloco 2 & 3: SEO, favicon, compressão gzip e cache headers no Express
 - [x] Bloco 4 & 5: Limpeza de dependências e proteção da rota /editor
 - [x] Validação final (pnpm build, testes e checkpoint)
+
+## Auditoria e Correção Mobile Completa
+- [x] Auditar e eliminar larguras fixas (> 1200px) e margens negativas que causam overflow em telas estreitas (375px)
+- [x] Corrigir o Hero, contador, serviços, trabalhos, sobre, contato e seção final em mobile
+- [x] Corrigir a página de CV em mobile (tabelas, espaçamentos e botões de ação)
+- [x] Validar viewport (375x812), testes unitários e build de produção
+- [x] Criar checkpoint e reportar o resultado mobile honestamente ao usuário
