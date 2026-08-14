@@ -841,3 +841,9 @@
 - [x] Fazer o hero de contato caber na largura e altura disponíveis sem quebrar a página
 - [x] Evitar que o CTA flutuante cubra o texto do hero no mobile
 - [x] Validar mobile, desktop, testes e build
+
+## Correção da sobreposição mobile — princípios e hero final
+- [x] Remover a margem negativa que faz o hero vermelho invadir a seção de princípios
+- [x] Restaurar o fluxo vertical normal e mostrar integralmente o texto do item 03
+- [x] Impedir que o CTA flutuante cubra a descrição do hero final
+- [x] Validar mobile 375px, desktop, testes e build

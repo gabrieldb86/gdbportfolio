@@ -128,6 +128,7 @@ export default function Home() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [sent, setSent] = useState(false);
+  const [floatingContactHidden, setFloatingContactHidden] = useState(false);
 
   useEffect(() => {
     setPageMetadata({
@@ -143,7 +144,20 @@ export default function Home() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    const targets = [
+      document.querySelector<HTMLElement>(".statement-section"),
+      document.getElementById("contact"),
+    ].filter((target): target is HTMLElement => Boolean(target));
 
+    if (!targets.length || !("IntersectionObserver" in window)) return;
+    const observer = new IntersectionObserver(
+      (entries) => setFloatingContactHidden(entries.some((entry) => entry.isIntersecting)),
+      { threshold: 0.08 },
+    );
+    targets.forEach((target) => observer.observe(target));
+    return () => observer.disconnect();
+  }, []);
 
   useLayoutEffect(() => {
     const root = document.documentElement;
@@ -437,7 +451,7 @@ export default function Home() {
         </section>
       </main>
 
-      <a className="floating-contact" href="#contact" onClick={(event) => { event.preventDefault(); scrollToId("contact"); }}><span>Fale comigo</span><ArrowUpRight size={16} /></a>
+      <a className={`floating-contact ${floatingContactHidden ? "floating-contact-hidden" : ""}`} href="#contact" onClick={(event) => { event.preventDefault(); scrollToId("contact"); }}><span>Fale comigo</span><ArrowUpRight size={16} /></a>
 
       <footer className="site-footer">
         <a className="footer-brand" href="#top" onClick={(event) => { event.preventDefault(); scrollToId("top"); }}><span className="footer-avatar"><img src={siteConfig.railImage} alt="" onError={markBrokenImage} /></span><span style={{fontSize: '24px'}}>Gabriel Danino Basilio</span></a>

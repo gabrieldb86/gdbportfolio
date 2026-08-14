@@ -3380,3 +3380,24 @@ a.proof-link, a.behance-link, a.text-link, .service-detail a {
     max-width: calc(100vw - 32px) !important;
   }
 }
+
+
+/* CORREÇÃO DEFINITIVA DA SOBREPOSIÇÃO: o hero final volta ao fluxo normal. */
+@media (max-width: 900px) {
+  .home-revision .statement-section {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+    transform: none !important;
+  }
+  .home-revision .statement-copy {
+    padding-top: 78px !important;
+  }
+}
+.home-revision .floating-contact {
+  transition: opacity 180ms ease-out, transform 180ms ease-out, background 180ms ease-out, color 180ms ease-out !important;
+}
+.home-revision .floating-contact.floating-contact-hidden {
+  opacity: 0 !important;
+  pointer-events: none !important;
+  transform: translateY(14px) !important;
+}
