@@ -3250,3 +3250,35 @@ a.proof-link, a.behance-link, a.text-link, .service-detail a {
     letter-spacing: .14em !important;
   }
 }
+
+
+/* ========================================================================== 
+   AJUSTES DOS NOVOS PRINTS — divisória contínua e hero de trabalhos
+   ========================================================================== */
+/* A transição entre serviços e o hero final fica contínua, sem faixa escura intermediária. */
+.home-revision .statement-section {
+  border-top: 0 !important;
+  background: #d73332 !important;
+}
+.home-revision .statement-section::before {
+  display: none !important;
+}
+@media (max-width: 900px) {
+  .home-revision .statement-section {
+    margin-top: -46px !important;
+  }
+}
+
+/* Título de Trabalhos selecionados com presença equivalente aos demais heróis. */
+.home-revision .work-redesign-heading h2 {
+  font-size: clamp(4.8rem, 7.8vw, 8.8rem) !important;
+  line-height: .8 !important;
+  letter-spacing: -.055em !important;
+}
+@media (max-width: 720px) {
+  .home-revision .work-redesign-heading h2 {
+    font-size: clamp(4.4rem, 18vw, 7.2rem) !important;
+    line-height: .82 !important;
+    letter-spacing: -.055em !important;
+  }
+}

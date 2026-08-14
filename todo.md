@@ -821,3 +821,9 @@
 - [x] Aumentar a foto da seção Sobre mim no mobile ao maior tamanho útil
 - [x] Preservar o texto lateral “PROCESSO / REPERTÓRIO / INTENÇÃO” sem sobreposição
 - [x] Validar mobile, desktop, testes e build
+
+## Ajustes dos novos prints — divisória e Trabalhos selecionados
+- [x] Remover a faixa preta entre Áreas de atuação e o hero final, sem deixar fresta
+- [x] Aumentar o título de Trabalhos selecionados para a escala da referência
+- [x] Preservar alinhamento, descrição, CTA e responsividade
+- [x] Validar mobile, desktop, testes e build
