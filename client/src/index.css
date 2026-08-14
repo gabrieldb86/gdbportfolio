@@ -3320,3 +3320,63 @@ a.proof-link, a.behance-link, a.text-link, .service-detail a {
     letter-spacing: -.055em !important;
   }
 }
+
+
+/* CORREÇÃO MOBILE DOS NOVOS PRINTS — altura integral e hero sem overflow. */
+@media (max-width: 900px) {
+  .home-revision .about-section,
+  .home-revision .about-grid,
+  .home-revision .about-copy,
+  .home-revision .about-principles {
+    box-sizing: border-box !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    overflow: visible !important;
+  }
+  .home-revision .about-section {
+    padding-bottom: 86px !important;
+  }
+  .home-revision .about-principles {
+    margin-bottom: 0 !important;
+    padding-bottom: 12px !important;
+  }
+
+  .home-revision .contact-section,
+  .home-revision .contact-grid,
+  .home-revision .contact-intro {
+    box-sizing: border-box !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    overflow-x: clip !important;
+  }
+  .home-revision .contact-section {
+    height: auto !important;
+    min-height: 0 !important;
+    padding-top: 88px !important;
+    padding-bottom: 190px !important;
+  }
+  .home-revision .contact-intro h2,
+  #contact.contact-section .contact-intro h2 {
+    box-sizing: border-box !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    font-size: clamp(3.35rem, 15.5vw, 6rem) !important;
+    line-height: .86 !important;
+    letter-spacing: -.055em !important;
+    overflow-wrap: normal !important;
+    word-break: normal !important;
+  }
+  .home-revision .contact-intro p,
+  .home-revision .contact-links {
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+  .home-revision .floating-contact {
+    right: 16px !important;
+    bottom: max(16px, env(safe-area-inset-bottom)) !important;
+    max-width: calc(100vw - 32px) !important;
+  }
+}

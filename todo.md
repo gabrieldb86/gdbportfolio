@@ -835,3 +835,9 @@
 - [x] Reaplicar aumento efetivo do título com especificidade suficiente
 - [x] Confirmar alterações em mobile e desktop, testes e build
 - [x] Aumentar especificamente o título do hero de contato (“Você está formando uma equipe de coordenação?”) para igualar a escala de “Projetos que ganharam forma.”
+
+## Correção mobile — princípios e hero de contato
+- [x] Liberar a altura da seção de princípios para não cortar o conteúdo 02 e 03
+- [x] Fazer o hero de contato caber na largura e altura disponíveis sem quebrar a página
+- [x] Evitar que o CTA flutuante cubra o texto do hero no mobile
+- [x] Validar mobile, desktop, testes e build
