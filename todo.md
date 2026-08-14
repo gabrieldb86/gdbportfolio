@@ -798,3 +798,11 @@
 - [x] Restaurar a escala editorial do hero da seção final
 - [x] Manter Gabriel Danino Basilio em uma única linha no rodapé, com ajuste responsivo
 - [x] Validar desktop, mobile 375px, testes e build
+
+## Correção dos novos prints — heróis, contexto e + seletivo
+- [x] Restaurar o sinal "+" somente nos três focos de coordenação
+- [x] Reativar a abertura contextual de cada foco sem remover o texto ao expandir
+- [x] Recompor a caixa de informações abaixo do hero que desapareceu
+- [x] Padronizar a escala e o eixo do hero final com as demais seções
+- [x] Revalidar o enquadramento da imagem final dentro da caixa
+- [x] Validar mobile 375px, desktop, testes e build

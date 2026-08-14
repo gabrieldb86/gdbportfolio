@@ -3028,3 +3028,165 @@ a.proof-link, a.behance-link, a.text-link, .service-detail a {
     font-size: clamp(17px, 4.8vw, 22px) !important;
   }
 }
+
+
+/* ========================================================================== 
+   CORREÇÃO DOS NOVOS PRINTS — + seletivo, heróis e caixa contextual
+   ========================================================================== */
+/* O + volta apenas para Áreas de atuação; os focos de coordenação continuam sem ícone. */
+.home-revision .service-row {
+  grid-template-columns: minmax(34px, 52px) minmax(0, 1fr) 28px !important;
+}
+.home-revision .service-toggle {
+  display: block !important;
+  align-self: start !important;
+  justify-self: end !important;
+  margin-top: 1px !important;
+  color: var(--primary) !important;
+  transition: transform 220ms cubic-bezier(.23, 1, .32, 1) !important;
+}
+.home-revision .service-item[open] > .service-row .service-toggle {
+  transform: rotate(45deg) !important;
+}
+.home-revision .service-detail {
+  display: flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  padding-top: 18px !important;
+}
+
+/* Hero final no mesmo sistema de composição: copy forte à esquerda e media enquadrada à direita. */
+.home-revision .statement-section {
+  display: grid !important;
+  grid-template-columns: minmax(0, .82fr) minmax(0, 1.18fr) !important;
+  align-items: stretch !important;
+  gap: 0 !important;
+  min-height: clamp(560px, 44vw, 675px) !important;
+  padding: 0 !important;
+  background: #d73332 !important;
+}
+.home-revision .statement-copy {
+  grid-column: 1 !important;
+  grid-row: 1 !important;
+  align-self: stretch !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  box-sizing: border-box !important;
+  width: 100% !important;
+  min-height: 100% !important;
+  padding: clamp(72px, 7vw, 112px) 8vw clamp(72px, 7vw, 112px) var(--editorial-axis) !important;
+  background: #d73332 !important;
+}
+.home-revision .statement-copy > span {
+  display: block !important;
+  margin-bottom: 24px !important;
+  color: #fff9f2 !important;
+}
+.home-revision .statement-context-box {
+  max-width: 390px !important;
+  margin: 42px 0 0 !important;
+  padding: 18px 20px !important;
+  border: 1px solid rgba(28, 27, 26, .24) !important;
+  background: rgba(28, 27, 26, .08) !important;
+  color: rgba(255, 249, 242, .82) !important;
+  font-size: 14px !important;
+  line-height: 1.65 !important;
+}
+.home-revision .statement-media-frame {
+  grid-column: 2 !important;
+  grid-row: 1 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-sizing: border-box !important;
+  min-width: 0 !important;
+  min-height: 100% !important;
+  overflow: hidden !important;
+  background: #f4eee6 !important;
+}
+.home-revision .statement-media-frame .statement-image {
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  height: 100% !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  clip-path: none !important;
+  transform: none !important;
+  background: #f4eee6 !important;
+}
+
+/* Contato: mesma abertura tipográfica e mesmo eixo vertical dos demais heróis. */
+.home-revision .contact-section {
+  min-height: 720px !important;
+  padding-top: clamp(96px, 10vw, 135px) !important;
+  padding-bottom: clamp(96px, 11vw, 150px) !important;
+}
+.home-revision .contact-grid {
+  align-items: start !important;
+}
+.home-revision .contact-intro {
+  min-height: 0 !important;
+  justify-content: flex-start !important;
+}
+.home-revision .contact-intro h2 {
+  font-size: clamp(4rem, 7.1vw, 7.8rem) !important;
+  line-height: .86 !important;
+}
+
+@media (max-width: 900px) {
+  .home-revision .service-row {
+    grid-template-columns: 34px minmax(0, 1fr) 28px !important;
+  }
+  .home-revision .service-detail {
+    display: block !important;
+    margin-left: 50px !important;
+    padding-top: 18px !important;
+  }
+  .home-revision .statement-section {
+    display: flex !important;
+    flex-direction: column !important;
+    min-height: 0 !important;
+    height: auto !important;
+  }
+  .home-revision .statement-copy {
+    order: 1 !important;
+    min-height: 0 !important;
+    padding: 78px var(--editorial-axis) 62px !important;
+  }
+  .home-revision .statement-copy h2 {
+    font-size: clamp(3.8rem, 15vw, 6rem) !important;
+    line-height: .9 !important;
+  }
+  .home-revision .statement-context-box {
+    max-width: none !important;
+    margin-top: 34px !important;
+    padding: 16px 18px !important;
+    font-size: 15px !important;
+  }
+  .home-revision .statement-media-frame {
+    order: 2 !important;
+    width: 100% !important;
+    min-height: 0 !important;
+    padding: 0 16px 24px !important;
+    background: #d73332 !important;
+  }
+  .home-revision .statement-media-frame .statement-image {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: auto !important;
+    background: #f4eee6 !important;
+  }
+  .home-revision .contact-section {
+    min-height: 0 !important;
+    padding-top: 88px !important;
+    padding-bottom: 100px !important;
+  }
+  .home-revision .contact-intro h2 {
+    font-size: clamp(3.5rem, 16vw, 5.8rem) !important;
+    line-height: .9 !important;
+  }
+}

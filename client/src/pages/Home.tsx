@@ -12,6 +12,7 @@ import {
   Menu,
   MessageCircle,
   MoveDownRight,
+  Plus,
   Star,
   Users,
   X,
@@ -359,6 +360,7 @@ export default function Home() {
                   <summary className="service-row">
                     <span className="service-number" style={{ fontSize: '16px' }}>{number}</span>
                     <div style={{ fontSize: '14px' }}><h3 style={{ fontSize: '14px' }}>{title}</h3><p style={{ fontSize: '14px' }}>{description}</p></div>
+                    <Plus className="service-toggle" size={21} strokeWidth={1.4} aria-hidden="true" />
                   </summary>
                   <div className="service-detail" id={`service-detail-${number}`}>
                     <p>{siteConfig.serviceDetails[number]}</p>
@@ -392,8 +394,14 @@ export default function Home() {
         </section>
 
         <section className="statement-section" aria-labelledby="statement-title">
-          <img className="statement-image" src={siteConfig.heroImage} alt="Projeto visual de bonés em preto e vermelho" width="1315" height="643" loading="lazy" decoding="async" onError={markBrokenImage} />
-          <div className="statement-copy" data-reveal="statement-copy"><span>Uma pergunta para o próximo projeto:</span><h2 id="statement-title">O que precisa<br /><em>ganhar forma?</em></h2></div>
+          <div className="statement-copy" data-reveal="statement-copy">
+            <span>Uma pergunta para o próximo projeto:</span>
+            <h2 id="statement-title">O que precisa<br /><em>ganhar forma?</em></h2>
+            <p className="statement-context-box">Conteúdo e treinamento só funcionam quando encontram contexto, método e um próximo passo claro — para a equipe, para o campo e para o negócio.</p>
+          </div>
+          <div className="statement-media-frame">
+            <img className="statement-image" src={siteConfig.heroImage} alt="Projeto visual de bonés em preto e vermelho" width="1315" height="643" loading="lazy" decoding="async" onError={markBrokenImage} />
+          </div>
         </section>
 
         <section id="contact" className="contact-section section-pad" aria-labelledby="contact-title">
