@@ -853,3 +853,8 @@
 - [x] Remover a faixa preta sem usar margem negativa que corte o item 03
 - [x] Ocultar o CTA flutuante enquanto qualquer seção de leitura estiver visível no mobile
 - [x] Validar mobile, desktop, testes e build
+
+## Investigação definitiva da faixa preta
+- [x] Identificar o elemento ou estilo que cria a faixa escura entre princípios e hero vermelho
+- [x] Remover a faixa sem margem negativa, corte ou sobreposição do item 03
+- [x] Validar 375px, desktop, testes e build

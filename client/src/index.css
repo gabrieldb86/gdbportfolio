@@ -3438,3 +3438,22 @@ a.proof-link, a.behance-link, a.text-link, .service-detail a {
 .home-revision .floating-contact.floating-contact-hidden {
   visibility: hidden !important;
 }
+
+
+/* TRANSIÇÃO FINAL — cobre somente a área escura residual, sem alterar o fluxo. */
+@media (max-width: 900px) {
+  .home-revision .statement-section {
+    position: relative !important;
+    z-index: 1 !important;
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+    border-top: 0 !important;
+    box-shadow: 0 -52px 0 0 #d73332 !important;
+    background: #d73332 !important;
+  }
+  .home-revision .statement-section::before,
+  .home-revision .statement-section::after {
+    display: none !important;
+    content: none !important;
+  }
+}
