@@ -2881,3 +2881,150 @@ a.proof-link, a.behance-link, a.text-link, .service-detail a {
     margin: 0 !important;
   }
 }
+
+
+/* ========================================================================== 
+   AJUSTES FINAIS DOS PRINTS — padrão editorial sem sinais auxiliares
+   ========================================================================== */
+/* Os sinais de mais foram removidos do JSX; esta regra protege qualquer estado antigo. */
+.home-revision .coordination-focus-plus,
+.home-revision .service-toggle {
+  display: none !important;
+}
+
+/* Todos os números, títulos, descrições e microlistas compartilham o mesmo eixo. */
+.home-revision .coordination-focus-item,
+.home-revision .coordination-focus-item-top,
+.home-revision .coordination-focus-item-body,
+.home-revision .coordination-focus-item-body strong,
+.home-revision .coordination-focus-item-body p,
+.home-revision .coordination-focus-highlights,
+.home-revision .coordination-focus-highlights li {
+  text-align: left !important;
+}
+.home-revision .coordination-focus-item {
+  display: block !important;
+  padding-right: 0 !important;
+}
+.home-revision .coordination-focus-item-top,
+.home-revision .coordination-focus-item-top span {
+  display: block !important;
+  margin-left: 0 !important;
+  text-align: left !important;
+}
+.home-revision .coordination-focus-item-body {
+  margin-left: 0 !important;
+}
+
+/* Focos de coordenação: sem coluna fantasma reservada para o sinal removido. */
+.home-revision .service-row {
+  display: grid !important;
+  grid-template-columns: minmax(34px, 52px) minmax(0, 1fr) !important;
+  align-items: start !important;
+  gap: 18px !important;
+  text-align: left !important;
+}
+.home-revision .service-number,
+.home-revision .service-row > div,
+.home-revision .service-row h3,
+.home-revision .service-row p {
+  margin-left: 0 !important;
+  text-align: left !important;
+}
+.home-revision .service-detail {
+  margin-left: 70px !important;
+  text-align: left !important;
+}
+
+/* Hero final: a foto inteira permanece dentro do campo, sem escala, clip-path ou fuga lateral. */
+.home-revision .statement-section {
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+  min-height: clamp(560px, 44vw, 675px) !important;
+  height: auto !important;
+  margin-right: 0 !important;
+  background: #d73332 !important;
+}
+.home-revision .statement-section .statement-image {
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  height: 100% !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  clip-path: none !important;
+  transform: none !important;
+  border-radius: 0 !important;
+  background: #d73332 !important;
+}
+.home-revision .statement-copy h2 {
+  font-size: clamp(4rem, 7vw, 8rem) !important;
+  line-height: .92 !important;
+}
+
+/* Rodapé: avatar + nome sem quebra, com escala que continua cabendo em 375px. */
+.home-revision .footer-brand {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  align-items: center !important;
+  gap: 16px !important;
+  min-width: 0 !important;
+  white-space: nowrap !important;
+}
+.home-revision .footer-brand .footer-avatar {
+  flex: 0 0 42px !important;
+}
+.home-revision .footer-brand > span:last-child {
+  min-width: 0 !important;
+  white-space: nowrap !important;
+  font-size: clamp(17px, 4.8vw, 24px) !important;
+  letter-spacing: -.02em !important;
+}
+
+@media (max-width: 900px) {
+  .home-revision .coordination-focus-item {
+    padding-right: 0 !important;
+  }
+  .home-revision .coordination-focus-item-top {
+    margin-bottom: 18px !important;
+  }
+  .home-revision .service-row {
+    grid-template-columns: 34px minmax(0, 1fr) !important;
+    gap: 16px !important;
+  }
+  .home-revision .service-detail {
+    margin-left: 50px !important;
+  }
+  .home-revision .statement-section {
+    display: flex !important;
+    flex-direction: column !important;
+    min-height: 0 !important;
+    height: auto !important;
+    padding: 0 !important;
+  }
+  .home-revision .statement-copy {
+    order: 1 !important;
+    width: 100% !important;
+    min-height: 430px !important;
+    box-sizing: border-box !important;
+    padding: 72px var(--editorial-axis) 64px !important;
+  }
+  .home-revision .statement-copy h2 {
+    max-width: 100% !important;
+    font-size: clamp(3.25rem, 12vw, 5.8rem) !important;
+    line-height: .94 !important;
+  }
+  .home-revision .statement-section .statement-image {
+    order: 2 !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    aspect-ratio: auto !important;
+    object-fit: contain !important;
+  }
+  .home-revision .footer-brand > span:last-child {
+    font-size: clamp(17px, 4.8vw, 22px) !important;
+  }
+}

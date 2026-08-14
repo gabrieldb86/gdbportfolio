@@ -12,7 +12,6 @@ import {
   Menu,
   MessageCircle,
   MoveDownRight,
-  Plus,
   Star,
   Users,
   X,
@@ -248,7 +247,6 @@ export default function Home() {
                     <li style={{fontSize: '14px'}}>Trilhas de aprendizagem, e-learning e microlearning</li>
                   </ul>
                 </div>
-                <Plus className="coordination-focus-plus" size={22} strokeWidth={1.4} aria-hidden="true" />
               </article>
               <article className="coordination-focus-item" data-reveal="focus-item" data-reveal-delay="140">
                 <div className="coordination-focus-item-top"><span style={{fontSize: '16px'}}>02</span></div>
@@ -262,7 +260,6 @@ export default function Home() {
                     <li style={{fontSize: '14px'}}>Análise de risco orçamentário e PDCA</li>
                   </ul>
                 </div>
-                <Plus className="coordination-focus-plus" size={22} strokeWidth={1.4} aria-hidden="true" />
               </article>
               <article className="coordination-focus-item" data-reveal="focus-item" data-reveal-delay="200">
                 <div className="coordination-focus-item-top"><span style={{fontSize: '16px'}}>03</span></div>
@@ -276,7 +273,6 @@ export default function Home() {
                     <li style={{fontSize: '14px'}}>Gestão de stakeholders e fornecedores</li>
                   </ul>
                 </div>
-                <Plus className="coordination-focus-plus" size={22} strokeWidth={1.4} aria-hidden="true" />
               </article>
             </div>
           </div>
@@ -363,7 +359,6 @@ export default function Home() {
                   <summary className="service-row">
                     <span className="service-number" style={{ fontSize: '16px' }}>{number}</span>
                     <div style={{ fontSize: '14px' }}><h3 style={{ fontSize: '14px' }}>{title}</h3><p style={{ fontSize: '14px' }}>{description}</p></div>
-                    <Plus className="service-toggle" size={21} strokeWidth={1.4} aria-hidden="true" />
                   </summary>
                   <div className="service-detail" id={`service-detail-${number}`}>
                     <p>{siteConfig.serviceDetails[number]}</p>
@@ -396,9 +391,9 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="statement-section" style={{ marginRight: '-90px', paddingBottom: '21px', paddingTop: '21px', height: '675px', width: '2317px' }}>
-          <img src={siteConfig.heroImage} alt="Projeto visual de bonés em preto e vermelho" width="1315" height="643" loading="lazy" decoding="async" onError={markBrokenImage} style={{ height: '643px', marginTop: '-5px', width: '1315px' }} />
-          <div className="statement-copy" data-reveal="statement-copy"><span>Uma pergunta para o próximo projeto:</span><h2>O que precisa<br /><em>ganhar forma?</em></h2></div>
+        <section className="statement-section" aria-labelledby="statement-title">
+          <img className="statement-image" src={siteConfig.heroImage} alt="Projeto visual de bonés em preto e vermelho" width="1315" height="643" loading="lazy" decoding="async" onError={markBrokenImage} />
+          <div className="statement-copy" data-reveal="statement-copy"><span>Uma pergunta para o próximo projeto:</span><h2 id="statement-title">O que precisa<br /><em>ganhar forma?</em></h2></div>
         </section>
 
         <section id="contact" className="contact-section section-pad" aria-labelledby="contact-title">
