@@ -1,6 +1,7 @@
 // Direção visual: Arquivo Editorial — preservar assimetria, índices em vermelho, imagens protagonistas e microcopy objetiva.
 import { type CSSProperties, type FormEvent, type SyntheticEvent, useEffect, useLayoutEffect, useRef, useState } from "react";
 import { setPageMetadata } from "@/lib/seo";
+import { trackPortfolioEvent } from "@/lib/analytics";
 import {
   Activity,
   ArrowUpRight,
@@ -103,6 +104,7 @@ function ProjectCard({ project, revealDelay }: { project: ProjectConfig; revealD
       data-umami-event={isLocalCase ? "case-open" : "behance-open"}
       {...(!isLocalCase ? { target: "_blank", rel: "noreferrer" } : {})}
       aria-label={isLocalCase ? `Abrir estudo de caso ${project.title}` : `Abrir projeto ${project.title} no Behance`}
+      onClick={() => trackPortfolioEvent(isLocalCase ? "project_case_open" : "portfolio_behance", { project: project.number })}
     >
       <div className="project-image-wrap" style={{ aspectRatio: project.aspectRatio }}>
         {genericImageFailed ? <div className="project-image-fallback" role="img" aria-label={`Capa genérica: ${project.title}`} style={{ backgroundImage: `linear-gradient(135deg, rgba(38, 35, 33, .62), rgba(183, 37, 41, .52)), url("${genericImage}")`, backgroundPosition: "center", backgroundSize: "cover" }}><span>{project.number} · projeto</span><strong>{project.title}</strong><small>Imagem genérica editável no editor</small></div> : <img src={imageSource} alt={project.title} className="project-image" width="800" height="600" style={{ objectPosition: project.objectPosition }} loading={project.number === "01" ? "eager" : "lazy"} decoding="async" onError={() => { if (imageFailed) setGenericImageFailed(true); else setImageFailed(true); }} />}
@@ -210,6 +212,7 @@ export default function Home() {
     const role = data.get("role") || "não informado";
     const message = `Olá, Gabriel! Meu nome é ${data.get("name")}. Empresa ou consultoria: ${company}. Cargo ou oportunidade: ${role}. Gostaria de conversar sobre ${data.get("message")}. Meu e-mail é ${data.get("email")}.`;
     setSent(true);
+    trackPortfolioEvent("contact_form_whatsapp");
     window.open(`https://wa.me/5511945747353?text=${encodeURIComponent(message)}`, "_blank", "noopener,noreferrer");
     event.currentTarget.reset();
   };
@@ -367,7 +370,7 @@ export default function Home() {
           <div className="work-redesign-heading" data-reveal="work-heading">
             <div><p className="section-kicker" style={{ fontSize: '16px' }}>Trabalhos selecionados</p><h2 id="work-title">Projetos que<br /><em>ganharam forma.</em></h2></div>
             <p style={{ fontSize: '16px' }}>Uma seleção de campanhas, trilhas, eventos e materiais criada para comunicar melhor, capacitar equipes e melhorar a execução.</p>
-            <a className="behance-link" href="https://www.behance.net/gabrieldb86" data-umami-event="behance-open" target="_blank" rel="noreferrer">Abrir Behance <ArrowUpRight size={15} /></a>
+            <a className="behance-link" href="https://www.behance.net/gabrieldb86" data-umami-event="behance-open" target="_blank" rel="noreferrer" onClick={() => trackPortfolioEvent("portfolio_behance")}>Abrir Behance <ArrowUpRight size={15} /></a>
           </div>
 
           <div className="projects-grid sean-obrien-grid">
@@ -439,9 +442,9 @@ export default function Home() {
               <h2 id="contact-title">Você está formando<br />uma equipe de <em>coordenação?</em></h2>
               <p style={{fontSize: '16px'}}>Estou aberto a oportunidades em conteúdo, treinamento, trade marketing e performance de campo. Envie o contexto da posição ou fale comigo diretamente pelo LinkedIn, e-mail ou WhatsApp.</p>
               <div className="contact-links">
-                <a className="contact-direct" href="https://wa.me/5511945747353" data-umami-event="whatsapp-click" target="_blank" rel="noreferrer"><MessageCircle size={17} /> Falar diretamente com Gabriel <ArrowUpRight size={15} /></a>
-                <a className="contact-direct" href="https://www.linkedin.com/in/gabrieldb86" data-umami-event="linkedin-click" target="_blank" rel="noreferrer"><Linkedin size={17} /> Conectar pelo LinkedIn <ArrowUpRight size={15} /></a>
-                <a className="contact-direct" href="mailto:gabrieldb@me.com" data-umami-event="email-click"><Mail size={17} /> gabrieldb@me.com <ArrowUpRight size={15} /></a>
+                <a className="contact-direct" href="https://wa.me/5511945747353" data-umami-event="whatsapp-click" target="_blank" rel="noreferrer" onClick={() => trackPortfolioEvent("contact_whatsapp")}><MessageCircle size={17} /> Falar diretamente com Gabriel <ArrowUpRight size={15} /></a>
+                <a className="contact-direct" href="https://www.linkedin.com/in/gabrieldb86" data-umami-event="linkedin-click" target="_blank" rel="noreferrer" onClick={() => trackPortfolioEvent("contact_linkedin")}><Linkedin size={17} /> Conectar pelo LinkedIn <ArrowUpRight size={15} /></a>
+                <a className="contact-direct" href="mailto:gabrieldb@me.com" data-umami-event="email-click" onClick={() => trackPortfolioEvent("contact_email")}><Mail size={17} /> gabrieldb@me.com <ArrowUpRight size={15} /></a>
               </div>
             </div>
             <form className="contact-form" data-reveal="contact-form" onSubmit={handleSubmit}>
@@ -465,7 +468,7 @@ export default function Home() {
         </section>
       </main>
 
-      <a className={`floating-contact ${floatingContactHidden ? "floating-contact-hidden" : ""}`} href="#contact" onClick={(event) => { event.preventDefault(); scrollToId("contact"); }}><span>Fale comigo</span><ArrowUpRight size={16} /></a>
+      <a className={`floating-contact ${floatingContactHidden ? "floating-contact-hidden" : ""}`} href="#contact" onClick={(event) => { event.preventDefault(); trackPortfolioEvent("cta_fale_comigo"); scrollToId("contact"); }}><span>Fale comigo</span><ArrowUpRight size={16} /></a>
 
       <footer className="site-footer">
         <a className="footer-brand" href="#top" onClick={(event) => { event.preventDefault(); scrollToId("top"); }}><span className="footer-avatar"><img src={siteConfig.railImage} alt="" onError={markBrokenImage} /></span><span style={{fontSize: '24px'}}>Gabriel Danino Basilio</span></a>

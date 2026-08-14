@@ -28,6 +28,8 @@ export default function Privacy() {
           <p>Os dados são usados apenas para responder à mensagem e avaliar o contexto da oportunidade. O formulário não cria uma conta, não publica informações e não vende dados a terceiros.</p>
           <h2>WhatsApp e canais externos</h2>
           <p>Ao escolher o WhatsApp, LinkedIn ou e-mail, você será direcionado ao serviço correspondente. Esses serviços possuem suas próprias políticas de privacidade e podem tratar os dados conforme seus termos.</p>
+          <h2>Métricas de navegação</h2>
+          <p>O portfólio pode registrar métricas agregadas de navegação e interações de contato para avaliar acessos e oportunidades. Quando o Google Analytics 4 estiver configurado, a coleta adicional só será ativada após a sua escolha explícita de aceitar analytics. Você pode recusar essa medição sem perder acesso ao conteúdo do site.</p>
           <h2>Solicitações</h2>
           <p>Para perguntar sobre o uso dos dados ou solicitar correção, entre em contato por <a href="mailto:gabrieldb@me.com">gabrieldb@me.com</a>.</p>
         </div>
@@ -35,4 +37,3 @@ export default function Privacy() {
     </div>
   );
 }
-

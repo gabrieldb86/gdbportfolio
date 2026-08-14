@@ -3460,7 +3460,25 @@ a.proof-link, a.behance-link, a.text-link, .service-detail a {
 
 /* Correção pontual: a sombra ascendente encobria o fim do item 03. */
 @media (max-width: 900px) {
-  .home-revision .statement-section {
+.home-revision .statement-section {
     box-shadow: none !important;
   }
 }
+
+.analytics-consent {
+  position: fixed;
+  z-index: 60;
+  right: 18px;
+  bottom: 18px;
+  width: min(360px, calc(100vw - 36px));
+  padding: 18px;
+  border: 1px solid rgba(244, 238, 230, .22);
+  background: #1b1a19;
+  color: #f4eee6;
+  box-shadow: 8px 8px 0 rgba(215, 51, 50, .52);
+}
+.analytics-consent p { margin: 0 0 14px; font-size: 12px; line-height: 1.55; }
+.analytics-consent div { display: flex; gap: 12px; justify-content: flex-end; }
+.analytics-consent button { padding: 9px 11px; border: 1px solid #cf7b73; background: transparent; color: #f4eee6; font: inherit; font-size: 10px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+.analytics-consent button:last-child { background: #d73332; }
+@media (max-width: 720px) { .analytics-consent { right: 12px; bottom: 12px; width: calc(100vw - 24px); } }

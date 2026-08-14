@@ -707,11 +707,12 @@
 - [x] Validar desktop, mobile, TypeScript, testes e build e criar checkpoint.
 
 ## Integração de analytics e aquisição
-- [ ] Verificar conectores e configurações de analytics disponíveis
-- [ ] Adicionar instrumentação GA4 condicionada ao consentimento de analytics
-- [ ] Rastrear cliques de contato e navegação relevante como eventos de conversão
-- [ ] Documentar a ativação da propriedade Google Search Console e a leitura de consultas orgânicas
-- [ ] Validar build, consentimento e carregamento sem identificador de medição
+- [x] Verificar conectores e configurações de analytics disponíveis
+- [x] Adicionar instrumentação GA4 condicionada ao consentimento de analytics
+- [x] Rastrear cliques de contato e navegação relevante como eventos de conversão
+- [x] Documentar a ativação da propriedade Google Search Console e a leitura de consultas orgânicas
+- [x] Validar build, consentimento e carregamento sem identificador de medição
+- [ ] Informar o ID de medição GA4 e validar a coleta real após o consentimento
 
 ## Correção pontual da transição mobile
 - [x] Fazer o item 03 da seção Sobre mim terminar integralmente antes do hero vermelho

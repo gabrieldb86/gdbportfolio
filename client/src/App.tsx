@@ -4,6 +4,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/NotFound";
 import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
+import AnalyticsConsent from "./components/AnalyticsConsent";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import CV from "@/pages/CV";
 import CaseStudy from "@/pages/CaseStudy";
@@ -40,6 +41,7 @@ function App() {
         <TooltipProvider>
           <Toaster />
           <Router />
+          <AnalyticsConsent />
         </TooltipProvider>
       </ThemeProvider>
     </ErrorBoundary>
