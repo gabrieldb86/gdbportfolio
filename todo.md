@@ -847,3 +847,9 @@
 - [x] Restaurar o fluxo vertical normal e mostrar integralmente o texto do item 03
 - [x] Impedir que o CTA flutuante cubra a descrição do hero final
 - [x] Validar mobile 375px, desktop, testes e build
+
+## Correção dos novos prints — foco, faixa e CTA
+- [x] Aumentar e padronizar o título “Focos de coordenação” com destaque editorial
+- [x] Remover a faixa preta sem usar margem negativa que corte o item 03
+- [x] Ocultar o CTA flutuante enquanto qualquer seção de leitura estiver visível no mobile
+- [x] Validar mobile, desktop, testes e build

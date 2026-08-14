@@ -146,13 +146,27 @@ export default function Home() {
 
   useEffect(() => {
     const targets = [
-      document.querySelector<HTMLElement>(".statement-section"),
-      document.getElementById("contact"),
-    ].filter((target): target is HTMLElement => Boolean(target));
+      ".coordination-focus-band",
+      ".recruiter-proof-strip",
+      ".work-section",
+      ".services-section",
+      ".about-section",
+      ".statement-section",
+      "#contact",
+    ]
+      .map((selector) => document.querySelector<HTMLElement>(selector))
+      .filter((target): target is HTMLElement => Boolean(target));
 
     if (!targets.length || !("IntersectionObserver" in window)) return;
+    const visibleTargets = new Set<Element>();
     const observer = new IntersectionObserver(
-      (entries) => setFloatingContactHidden(entries.some((entry) => entry.isIntersecting)),
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) visibleTargets.add(entry.target);
+          else visibleTargets.delete(entry.target);
+        });
+        setFloatingContactHidden(visibleTargets.size > 0);
+      },
       { threshold: 0.08 },
     );
     targets.forEach((target) => observer.observe(target));
