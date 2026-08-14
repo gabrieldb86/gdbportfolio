@@ -150,7 +150,7 @@ export default function CV() {
     <div className="site-shell cv-page" style={{ "--primary": siteConfig.brand.accent, "--background": siteConfig.brand.background, "--foreground": siteConfig.brand.foreground } as CSSProperties}>
       <header className="site-header site-header-scrolled">
         <a className="brand-lockup" href="/" aria-label="Voltar para o portfólio">
-          <img src={siteConfig.railImage} alt="" className="header-avatar" onError={markBrokenImage} />
+          <img src={siteConfig.railImage} alt="" className="header-avatar" width="32" height="32" loading="lazy" decoding="async" onError={markBrokenImage} />
           <span className="brand-name">Gabriel Danino Basilio</span>
         </a>
         <nav className="site-nav cv-nav" aria-label="Navegação principal">
@@ -182,7 +182,7 @@ export default function CV() {
               </div>
             </div>
             <div className="cv-portrait-wrap">
-              <div className="cv-portrait"><img src={profilePhoto} alt="Gabriel Danino Basilio" onError={markBrokenImage} /></div>
+              <div className="cv-portrait"><img src={profilePhoto} alt="Gabriel Danino Basilio" width="800" height="1000" loading="eager" decoding="async" onError={markBrokenImage} /></div>
               <div className="cv-portrait-caption" style={{ marginBottom: "-24px" }}><span>Gabriel Danino Basilio</span><span>Coordenador · Conteúdo, Treinamento &amp; Trade</span></div>
             </div>
           </div>

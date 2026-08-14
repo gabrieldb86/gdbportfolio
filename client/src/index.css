@@ -175,7 +175,7 @@ h1 em, h2 em { color: var(--primary); font-style: italic; }
 
 .statement-section { position: relative; min-height: 450px; display: flex; align-items: center; overflow: hidden; background: #d73332; color: #fff9f2; }
 .statement-section img { position: absolute; z-index: 0; top: 0; right: 0; bottom: 0; left: auto; width: 54%; height: 100%; object-fit: cover; object-position: center; opacity: 1; mix-blend-mode: normal; }
-.statement-section::after { position: absolute; z-index: 1; inset: 0; background: linear-gradient(90deg, #d73332 0%, rgba(215, 51, 50, .96) 42%, rgba(215, 51, 50, .18) 74%, rgba(215, 51, 50, 0) 100%); content: ""; }
+.statement-section::after { display: none; content: ""; }
 .statement-copy { position: relative; z-index: 2; width: 100%; padding: 80px 14vw; }
 .statement-copy span { display: block; margin-bottom: 28px; font-size: 10px; font-weight: 700; letter-spacing: .17em; text-transform: uppercase; }
 .statement-copy h2 { margin: 0; font-size: clamp(4rem, 8vw, 8.5rem); line-height: .84; }
@@ -602,7 +602,7 @@ h1 em, h2 em { color: var(--primary); font-style: italic; }
 .home-revision .service-detail { padding-bottom: 28px; }
 
 .statement-section { min-height: 510px; }
-.statement-section::after { background: linear-gradient(90deg, #d73332 0%, #d73332 27%, rgba(215, 51, 50, .98) 43%, rgba(215, 51, 50, .72) 58%, rgba(215, 51, 50, 0) 82%); }
+.statement-section::after { background: transparent; }
 .statement-copy { max-width: 700px; padding-left: 11vw; }
 
 /* Seção 03 alinhada ao sistema da seção 04 — mesma base, respiro e relação imagem/conteúdo. */
@@ -649,7 +649,7 @@ h1 em, h2 em { color: var(--primary); font-style: italic; }
   .home-revision .service-row { min-height: 100px; }
   .statement-section { min-height: 500px; }
   .statement-section img { width: 100%; opacity: .82; }
-  .statement-section::after { background: linear-gradient(180deg, #d73332 0%, rgba(215, 51, 50, .98) 30%, rgba(215, 51, 50, .56) 64%, rgba(215, 51, 50, 0) 100%); }
+  .statement-section::after { background: transparent; }
   .statement-copy { max-width: none; padding: 70px 20px; align-self: flex-start; }
 }
 
@@ -1078,7 +1078,7 @@ h1 em, h2 em { color: var(--primary); font-style: italic; }
 .services-layout > div:first-child.image-fallback::after { inset: auto 24px 24px; content: "Material de apoio · case em atualização"; }
 .about-art-wrap.image-fallback { min-height: 440px; }
 .about-art-wrap.image-fallback::after { inset: auto 28px 28px; content: "Processo · repertório · intenção"; }
-.statement-section.image-fallback { background: linear-gradient(90deg, #d73332 0%, #d73332 34%, #381a1b 100%); }
+.statement-section.image-fallback { background: #d73332; }
 .statement-section.image-fallback::before { position: absolute; inset: auto 11vw 10%; color: rgba(244, 238, 230, .86); content: "Conteúdo · treinamento · trade marketing"; font-size: 10px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
 .case-hero-art.image-fallback { display: grid; place-items: center; background: linear-gradient(135deg, #3a3632 0%, #1b1a19 58%, #b72529 58%, #cf7b73 100%); }
 .case-hero-art.image-fallback::after { inset: 50% 28px auto; content: "Imagem do case em atualização"; font-family: "DM Serif Display", serif; font-size: 26px; letter-spacing: -.03em; text-transform: none; transform: translateY(-50%); }
@@ -1943,11 +1943,13 @@ a.proof-link, a.behance-link, a.text-link, .service-detail a {
 @media (min-width: 901px) {
   .home-revision .statement-section {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(360px, .92fr);
+    grid-template-columns: minmax(0, .82fr) minmax(0, 1.18fr);
     align-items: stretch;
+    gap: 0;
     min-height: 500px;
     background: #d73332;
   }
+  .home-revision .statement-section::before { display: none; }
   .home-revision .statement-section img {
     position: relative;
     grid-column: 2;
@@ -2504,10 +2506,10 @@ a.proof-link, a.behance-link, a.text-link, .service-detail a {
 
 /* Contador horizontal contínuo — sem caixas individuais nem cascata visual. */
 .recruiter-proof-layout {
-  width: min(100%, 1440px) !important;
-  height: auto !important;
-  margin: 0 auto !important;
-  padding: 0 8vw !important;
+  width: min(100%, 1440px);
+  height: auto;
+  margin: 0 auto;
+  padding: 0 8vw;
   grid-template-columns: minmax(260px, .78fr) minmax(0, 1.22fr);
   gap: clamp(32px, 5vw, 82px);
 }
@@ -2652,33 +2654,676 @@ a.proof-link, a.behance-link, a.text-link, .service-detail a {
   }
 }
 
+/* A foto dos bonés possui uma borda branca original; o recorte preserva a imagem e deixa o vermelho preencher a junção com o hero. */
+.home-revision .statement-section img {
+  transform: scale(1.06);
+  transform-origin: right center;
+}
 
-/* CORREÇÃO ESTRUTURAL MOBILE — o cabeçalho não pode cobrir os princípios. */
-@media (max-width: 720px) {
-  html {
-    scroll-padding-top: 70px !important;
+/* A edição dimensional da imagem permanece no desktop, mas nunca ultrapassa a viewport em telas menores. */
+@media (min-width: 901px) {
+  .home-revision .statement-section {
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+  .home-revision .statement-section img {
+    max-width: 100%;
+  }
+}
+@media (max-width: 900px) {
+  .home-revision .statement-section {
+    margin-right: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+  .home-revision .statement-section img {
+    width: 100% !important;
+    height: auto !important;
+    min-height: 290px;
+    margin-top: 0 !important;
+    max-width: 100%;
+    transform: none;
+  }
+}
+
+/* Proteção da edição dimensional da statement-section: desktop preserva a intenção, mobile ocupa apenas a viewport. */
+@media (min-width: 901px) {
+  .home-revision .statement-section {
+    max-width: 100%;
+  }
+}
+@media (max-width: 900px) {
+  .home-revision .statement-section {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}
+
+/* Recorte da margem branca original do asset: a transparência da borda revela o vermelho uniforme da seção. */
+.home-revision .statement-section img {
+  clip-path: inset(0 0 0 7%);
+  background: #d73332;
+}
+
+
+/* ==========================================================================
+   CORREÇÃO MOBILE SISTÊMICA (Anulação de larguras fixas e desalinhamentos)
+   ========================================================================== */
+@media (max-width: 768px) {
+  .coordination-focus-grid {
+    padding-left: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 16px !important;
   }
 
-  .home-revision .site-header,
-  .home-revision .site-header-redesign,
-  .home-revision .site-header-redesign.site-header-scrolled {
-    position: sticky !important;
-    top: 0 !important;
-    right: auto !important;
-    left: auto !important;
+  .recruiter-proof-layout,
+  .statement-section,
+  .coordination-focus-layout,
+  .work-redesign-heading,
+  .services-layout,
+  .about-grid,
+  .contact-grid,
+  .manifesto-grid {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    height: auto !important;
+    transform: none !important;
+  }
+
+  .recruiter-proof-strip {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 16px !important;
+    width: 100% !important;
+  }
+
+  .proof-metric {
+    padding: 16px !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  }
+
+  .statement-section img {
+    width: 100% !important;
+    height: auto !important;
+    max-height: 380px !important;
+    object-fit: cover !important;
+    margin: 0 !important;
+  }
+
+  .hero-redesign {
+    height: auto !important;
+    min-height: auto !important;
+    padding: 40px 16px !important;
+  }
+
+  .site-shell {
+    overflow-x: hidden !important;
+    width: 100% !important;
+  }
+}
+
+
+/* ==========================================================================
+   CORREÇÃO CIRÚRGICA MOBILE (Proteção contra cortes e sobreposições)
+   ========================================================================== */
+@media (max-width: 768px) {
+  #recruiter-proof {
+    height: auto !important;
+    padding-top: 40px !important;
+    padding-bottom: 40px !important;
+  }
+
+  .statement-section {
+    width: 100% !important;
+    height: auto !important;
+    margin-right: 0 !important;
+    padding: 32px 16px !important;
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .statement-section img {
+    width: 100% !important;
+    height: auto !important;
+    max-height: 280px !important;
+    object-fit: cover !important;
+    margin-top: 16px !important;
+  }
+
+  #contact h2 {
+    width: 100% !important;
+    font-size: clamp(2.2rem, 8vw, 3.2rem) !important;
+    line-height: 1.05 !important;
+  }
+
+  .floating-contact {
+    bottom: 20px !important;
+    right: 20px !important;
     z-index: 50 !important;
-    height: 70px !important;
+  }
+}
+
+
+/* ==========================================================================
+   CORREÇÃO DOS 3 PRINTS MOBILE (Ícone de mais, enquadramento e altura Sobre)
+   ========================================================================== */
+@media (max-width: 768px) {
+  .coordination-focus-item {
+    position: relative !important;
+    padding-right: 48px !important;
   }
 
-  .home-revision .site-header-redesign.site-header-scrolled {
-    height: 62px !important;
+  .coordination-focus-plus {
+    position: absolute !important;
+    top: 20px !important;
+    right: 20px !important;
   }
 
-  .home-revision .hero-redesign {
-    padding-top: 44px !important;
+  .statement-section img {
+    object-fit: contain !important;
+    max-height: 320px !important;
+    background-color: rgba(0, 0, 0, 0.15) !important;
+    border-radius: 4px !important;
   }
 
-  .home-revision #about,
+  #about {
+    height: auto !important;
+    min-height: auto !important;
+    margin-bottom: 24px !important;
+  }
+}
+
+
+/* ==========================================================================
+   CORREÇÃO DOS 4 PRINTS (Respiro hero, mais centralizado e imagem expansiva)
+   ========================================================================== */
+@media (max-width: 768px) {
+  .hero-redesign {
+    padding-top: 64px !important;
+  }
+
+  .coordination-focus-item {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    position: relative !important;
+    padding-right: 48px !important;
+  }
+
+  .coordination-focus-plus {
+    position: absolute !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    right: 16px !important;
+  }
+
+  .statement-section {
+    padding: 24px 0 !important;
+  }
+
+  .statement-section img {
+    width: 100% !important;
+    height: auto !important;
+    max-height: none !important;
+    object-fit: cover !important;
+    border-radius: 0 !important;
+    margin: 0 !important;
+  }
+}
+
+
+/* ========================================================================== 
+   AJUSTES FINAIS DOS PRINTS — padrão editorial sem sinais auxiliares
+   ========================================================================== */
+/* Os sinais de mais foram removidos do JSX; esta regra protege qualquer estado antigo. */
+.home-revision .coordination-focus-plus,
+.home-revision .service-toggle {
+  display: none !important;
+}
+
+/* Todos os números, títulos, descrições e microlistas compartilham o mesmo eixo. */
+.home-revision .coordination-focus-item,
+.home-revision .coordination-focus-item-top,
+.home-revision .coordination-focus-item-body,
+.home-revision .coordination-focus-item-body strong,
+.home-revision .coordination-focus-item-body p,
+.home-revision .coordination-focus-highlights,
+.home-revision .coordination-focus-highlights li {
+  text-align: left !important;
+}
+.home-revision .coordination-focus-item {
+  display: block !important;
+  padding-right: 0 !important;
+}
+.home-revision .coordination-focus-item-top,
+.home-revision .coordination-focus-item-top span {
+  display: block !important;
+  margin-left: 0 !important;
+  text-align: left !important;
+}
+.home-revision .coordination-focus-item-body {
+  margin-left: 0 !important;
+}
+
+/* Focos de coordenação: sem coluna fantasma reservada para o sinal removido. */
+.home-revision .service-row {
+  display: grid !important;
+  grid-template-columns: minmax(34px, 52px) minmax(0, 1fr) !important;
+  align-items: start !important;
+  gap: 18px !important;
+  text-align: left !important;
+}
+.home-revision .service-number,
+.home-revision .service-row > div,
+.home-revision .service-row h3,
+.home-revision .service-row p {
+  margin-left: 0 !important;
+  text-align: left !important;
+}
+.home-revision .service-detail {
+  margin-left: 70px !important;
+  text-align: left !important;
+}
+
+/* Hero final: a foto inteira permanece dentro do campo, sem escala, clip-path ou fuga lateral. */
+.home-revision .statement-section {
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+  min-height: clamp(560px, 44vw, 675px) !important;
+  height: auto !important;
+  margin-right: 0 !important;
+  background: #d73332 !important;
+}
+.home-revision .statement-section .statement-image {
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  height: 100% !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  clip-path: none !important;
+  transform: none !important;
+  border-radius: 0 !important;
+  background: #d73332 !important;
+}
+.home-revision .statement-copy h2 {
+  font-size: clamp(4rem, 7vw, 8rem) !important;
+  line-height: .92 !important;
+}
+
+/* Rodapé: avatar + nome sem quebra, com escala que continua cabendo em 375px. */
+.home-revision .footer-brand {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  align-items: center !important;
+  gap: 16px !important;
+  min-width: 0 !important;
+  white-space: nowrap !important;
+}
+.home-revision .footer-brand .footer-avatar {
+  flex: 0 0 42px !important;
+}
+.home-revision .footer-brand > span:last-child {
+  min-width: 0 !important;
+  white-space: nowrap !important;
+  font-size: clamp(17px, 4.8vw, 24px) !important;
+  letter-spacing: -.02em !important;
+}
+
+@media (max-width: 900px) {
+  .home-revision .coordination-focus-item {
+    padding-right: 0 !important;
+  }
+  .home-revision .coordination-focus-item-top {
+    margin-bottom: 18px !important;
+  }
+  .home-revision .service-row {
+    grid-template-columns: 34px minmax(0, 1fr) !important;
+    gap: 16px !important;
+  }
+  .home-revision .service-detail {
+    margin-left: 50px !important;
+  }
+  .home-revision .statement-section {
+    display: flex !important;
+    flex-direction: column !important;
+    min-height: 0 !important;
+    height: auto !important;
+    padding: 0 !important;
+  }
+  .home-revision .statement-copy {
+    order: 1 !important;
+    width: 100% !important;
+    min-height: 430px !important;
+    box-sizing: border-box !important;
+    padding: 72px var(--editorial-axis) 64px !important;
+  }
+  .home-revision .statement-copy h2 {
+    max-width: 100% !important;
+    font-size: clamp(3.25rem, 12vw, 5.8rem) !important;
+    line-height: .94 !important;
+  }
+  .home-revision .statement-section .statement-image {
+    order: 2 !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    aspect-ratio: auto !important;
+    object-fit: contain !important;
+  }
+  .home-revision .footer-brand > span:last-child {
+    font-size: clamp(17px, 4.8vw, 22px) !important;
+  }
+}
+
+
+/* ========================================================================== 
+   CORREÇÃO DOS NOVOS PRINTS — + seletivo, heróis e caixa contextual
+   ========================================================================== */
+/* O + volta apenas para Áreas de atuação; os focos de coordenação continuam sem ícone. */
+.home-revision .service-row {
+  grid-template-columns: minmax(34px, 52px) minmax(0, 1fr) 28px !important;
+}
+.home-revision .service-toggle {
+  display: block !important;
+  align-self: start !important;
+  justify-self: end !important;
+  margin-top: 1px !important;
+  color: var(--primary) !important;
+  transition: transform 220ms cubic-bezier(.23, 1, .32, 1) !important;
+}
+.home-revision .service-item[open] > .service-row .service-toggle {
+  transform: rotate(45deg) !important;
+}
+.home-revision .service-detail {
+  display: flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  padding-top: 18px !important;
+}
+
+/* Hero final no mesmo sistema de composição: copy forte à esquerda e media enquadrada à direita. */
+.home-revision .statement-section {
+  display: grid !important;
+  grid-template-columns: minmax(0, .82fr) minmax(0, 1.18fr) !important;
+  align-items: stretch !important;
+  gap: 0 !important;
+  min-height: clamp(560px, 44vw, 675px) !important;
+  padding: 0 !important;
+  background: #d73332 !important;
+}
+.home-revision .statement-copy {
+  grid-column: 1 !important;
+  grid-row: 1 !important;
+  align-self: stretch !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  box-sizing: border-box !important;
+  width: 100% !important;
+  min-height: 100% !important;
+  padding: clamp(72px, 7vw, 112px) 8vw clamp(72px, 7vw, 112px) var(--editorial-axis) !important;
+  background: #d73332 !important;
+}
+.home-revision .statement-copy > span {
+  display: block !important;
+  margin-bottom: 24px !important;
+  color: #fff9f2 !important;
+}
+.home-revision .statement-context-box {
+  max-width: 390px !important;
+  margin: 42px 0 0 !important;
+  padding: 18px 20px !important;
+  border: 1px solid rgba(28, 27, 26, .24) !important;
+  background: rgba(28, 27, 26, .08) !important;
+  color: rgba(255, 249, 242, .82) !important;
+  font-size: 14px !important;
+  line-height: 1.65 !important;
+}
+.home-revision .statement-media-frame {
+  grid-column: 2 !important;
+  grid-row: 1 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-sizing: border-box !important;
+  min-width: 0 !important;
+  min-height: 100% !important;
+  overflow: hidden !important;
+  background: #f4eee6 !important;
+}
+.home-revision .statement-media-frame .statement-image {
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  height: 100% !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  clip-path: none !important;
+  transform: none !important;
+  background: #f4eee6 !important;
+}
+
+/* Contato: mesma abertura tipográfica e mesmo eixo vertical dos demais heróis. */
+.home-revision .contact-section {
+  min-height: 720px !important;
+  padding-top: clamp(96px, 10vw, 135px) !important;
+  padding-bottom: clamp(96px, 11vw, 150px) !important;
+}
+.home-revision .contact-grid {
+  align-items: start !important;
+}
+.home-revision .contact-intro {
+  min-height: 0 !important;
+  justify-content: flex-start !important;
+}
+.home-revision .contact-intro h2 {
+  font-size: clamp(4rem, 7.1vw, 7.8rem) !important;
+  line-height: .86 !important;
+}
+
+@media (max-width: 900px) {
+  .home-revision .service-row {
+    grid-template-columns: 34px minmax(0, 1fr) 28px !important;
+  }
+  .home-revision .service-detail {
+    display: block !important;
+    margin-left: 50px !important;
+    padding-top: 18px !important;
+  }
+  .home-revision .statement-section {
+    display: flex !important;
+    flex-direction: column !important;
+    min-height: 0 !important;
+    height: auto !important;
+  }
+  .home-revision .statement-copy {
+    order: 1 !important;
+    min-height: 0 !important;
+    padding: 78px var(--editorial-axis) 62px !important;
+  }
+  .home-revision .statement-copy h2 {
+    font-size: clamp(3.8rem, 15vw, 6rem) !important;
+    line-height: .9 !important;
+  }
+  .home-revision .statement-context-box {
+    max-width: none !important;
+    margin-top: 34px !important;
+    padding: 16px 18px !important;
+    font-size: 15px !important;
+  }
+  .home-revision .statement-media-frame {
+    order: 2 !important;
+    width: 100% !important;
+    min-height: 0 !important;
+    padding: 0 16px 24px !important;
+    background: #d73332 !important;
+  }
+  .home-revision .statement-media-frame .statement-image {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: auto !important;
+    background: #f4eee6 !important;
+  }
+  .home-revision .contact-section {
+    min-height: 0 !important;
+    padding-top: 88px !important;
+    padding-bottom: 100px !important;
+  }
+  .home-revision .contact-intro h2 {
+    font-size: clamp(3.5rem, 16vw, 5.8rem) !important;
+    line-height: .9 !important;
+  }
+}
+
+
+/* Texto contextual flutuante: preserva posição e leitura, sem caixa visual. */
+.home-revision .statement-context-box {
+  max-width: 390px !important;
+  margin: 42px 0 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  color: rgba(255, 249, 242, .82) !important;
+}
+@media (max-width: 900px) {
+  .home-revision .statement-context-box {
+    max-width: none !important;
+    margin: 34px 0 0 !important;
+    padding: 0 !important;
+  }
+}
+
+
+/* Escala final do hero de contato: mesma presença editorial das demais seções. */
+.home-revision .contact-intro h2 {
+  max-width: 100% !important;
+  font-size: clamp(4.4rem, 7.4vw, 8rem) !important;
+  line-height: .84 !important;
+  letter-spacing: -.045em !important;
+}
+@media (max-width: 900px) {
+  .home-revision .contact-intro h2 {
+    max-width: 100% !important;
+    font-size: clamp(4rem, 17.5vw, 6.2rem) !important;
+    line-height: .86 !important;
+    letter-spacing: -.045em !important;
+  }
+}
+
+
+/* Foto Sobre mim: ampliar no mobile sem perder a legenda vertical lateral. */
+@media (max-width: 900px) {
+  .home-revision .about-art-wrap {
+    box-sizing: border-box !important;
+    width: 100% !important;
+    margin: 0 0 52px !important;
+    padding-right: 46px !important;
+  }
+  .home-revision .about-art-wrap img {
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 1.33 !important;
+    object-fit: cover !important;
+  }
+  .home-revision .about-art-label {
+    right: 4px !important;
+    bottom: 18px !important;
+    font-size: 9px !important;
+    letter-spacing: .14em !important;
+  }
+}
+
+
+/* ========================================================================== 
+   AJUSTES DOS NOVOS PRINTS — divisória contínua e hero de trabalhos
+   ========================================================================== */
+/* A transição entre serviços e o hero final fica contínua, sem faixa escura intermediária. */
+.home-revision .statement-section {
+  border-top: 0 !important;
+  background: #d73332 !important;
+}
+.home-revision .statement-section::before {
+  display: none !important;
+}
+@media (max-width: 900px) {
+  .home-revision .statement-section {
+    margin-top: -46px !important;
+  }
+}
+
+/* Título de Trabalhos selecionados com presença equivalente aos demais heróis. */
+.home-revision .work-redesign-heading h2 {
+  font-size: clamp(4.8rem, 7.8vw, 8.8rem) !important;
+  line-height: .8 !important;
+  letter-spacing: -.055em !important;
+}
+@media (max-width: 720px) {
+  .home-revision .work-redesign-heading h2 {
+    font-size: clamp(4.4rem, 18vw, 7.2rem) !important;
+    line-height: .82 !important;
+    letter-spacing: -.055em !important;
+  }
+}
+
+
+/* REAPLICAÇÃO DEFINITIVA — correções que precisam aparecer na prévia real. */
+@media (max-width: 900px) {
+  .home-revision .services-section {
+    margin-bottom: 0 !important;
+    border-bottom: 0 !important;
+    box-shadow: none !important;
+  }
+  .home-revision .statement-section {
+    position: relative !important;
+    z-index: 2 !important;
+    margin-top: -56px !important;
+    padding-top: 56px !important;
+    border-top: 0 !important;
+    background: #d73332 !important;
+  }
+  .home-revision .statement-section::before,
+  .home-revision .statement-section::after {
+    display: none !important;
+    background: transparent !important;
+  }
+  #contact.contact-section .contact-intro h2,
+  .home-revision .contact-section .contact-intro h2 {
+    max-width: 100% !important;
+    font-size: clamp(5rem, 20vw, 7.5rem) !important;
+    line-height: .8 !important;
+    letter-spacing: -.055em !important;
+  }
+}
+@media (min-width: 901px) {
+  #contact.contact-section .contact-intro h2,
+  .home-revision .contact-section .contact-intro h2 {
+    font-size: clamp(5rem, 8.2vw, 8.8rem) !important;
+    line-height: .8 !important;
+    letter-spacing: -.055em !important;
+  }
+}
+
+
+/* CORREÇÃO MOBILE DOS NOVOS PRINTS — altura integral e hero sem overflow. */
+@media (max-width: 900px) {
   .home-revision .about-section,
   .home-revision .about-grid,
   .home-revision .about-copy,
@@ -2689,41 +3334,126 @@ a.proof-link, a.behance-link, a.text-link, .service-detail a {
     max-height: none !important;
     overflow: visible !important;
   }
-
   .home-revision .about-section {
-    padding-top: 72px !important;
-    padding-bottom: 96px !important;
-    background-color: #ddd0c4 !important;
+    padding-bottom: 86px !important;
   }
-
   .home-revision .about-principles {
-    padding-bottom: 0 !important;
     margin-bottom: 0 !important;
+    padding-bottom: 12px !important;
   }
 
-  .home-revision .statement-section {
-    display: flex !important;
-    flex-direction: column !important;
+  .home-revision .contact-section,
+  .home-revision .contact-grid,
+  .home-revision .contact-intro {
+    box-sizing: border-box !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    overflow-x: clip !important;
+  }
+  .home-revision .contact-section {
     height: auto !important;
     min-height: 0 !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    overflow: visible !important;
-    border: 0 !important;
+    padding-top: 88px !important;
+    padding-bottom: 190px !important;
+  }
+  .home-revision .contact-intro h2,
+  #contact.contact-section .contact-intro h2 {
+    box-sizing: border-box !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    font-size: clamp(3.35rem, 15.5vw, 6rem) !important;
+    line-height: .86 !important;
+    letter-spacing: -.055em !important;
+    overflow-wrap: normal !important;
+    word-break: normal !important;
+  }
+  .home-revision .contact-intro p,
+  .home-revision .contact-links {
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+  .home-revision .floating-contact {
+    right: 16px !important;
+    bottom: max(16px, env(safe-area-inset-bottom)) !important;
+    max-width: calc(100vw - 32px) !important;
+  }
+}
+
+
+/* CORREÇÃO DEFINITIVA DA SOBREPOSIÇÃO: o hero final volta ao fluxo normal. */
+@media (max-width: 900px) {
+  .home-revision .statement-section {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+    transform: none !important;
+  }
+  .home-revision .statement-copy {
+    padding-top: 78px !important;
+  }
+}
+.home-revision .floating-contact {
+  transition: opacity 180ms ease-out, transform 180ms ease-out, background 180ms ease-out, color 180ms ease-out !important;
+}
+.home-revision .floating-contact.floating-contact-hidden {
+  opacity: 0 !important;
+  pointer-events: none !important;
+  transform: translateY(14px) !important;
+}
+
+
+/* CORREÇÃO DOS NOVOS PRINTS — foco destacado, transição contínua e CTA fora do texto. */
+.home-revision .coordination-focus-label h2 {
+  max-width: 700px !important;
+  font-family: "DM Serif Display", serif !important;
+  font-size: clamp(4.6rem, 7.6vw, 8.4rem) !important;
+  font-weight: 400 !important;
+  line-height: .82 !important;
+  letter-spacing: -.055em !important;
+}
+@media (max-width: 900px) {
+  .home-revision .coordination-focus-label h2 {
+    max-width: 100% !important;
+    font-size: clamp(4rem, 17vw, 6.8rem) !important;
+    line-height: .84 !important;
+    letter-spacing: -.055em !important;
+  }
+  .home-revision .statement-section {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+    border-top: 0 !important;
     box-shadow: none !important;
+  }
+  .home-revision .statement-section::before,
+  .home-revision .statement-section::after {
+    display: none !important;
+  }
+  .home-revision .about-section,
+  .home-revision .coordination-focus-band {
+    margin-bottom: 0 !important;
+    border-bottom: 0 !important;
+  }
+}
+.home-revision .floating-contact.floating-contact-hidden {
+  visibility: hidden !important;
+}
+
+
+/* TRANSIÇÃO FINAL — cobre somente a área escura residual, sem alterar o fluxo. */
+@media (max-width: 900px) {
+  .home-revision .statement-section {
+    position: relative !important;
+    z-index: 1 !important;
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+    border-top: 0 !important;
+    box-shadow: 0 -52px 0 0 #d73332 !important;
     background: #d73332 !important;
   }
-
   .home-revision .statement-section::before,
   .home-revision .statement-section::after {
     display: none !important;
     content: none !important;
-  }
-
-  .home-revision .statement-copy {
-    order: 1 !important;
-    min-height: 0 !important;
-    padding: 72px var(--editorial-axis) 64px !important;
-    background: #d73332 !important;
   }
 }
