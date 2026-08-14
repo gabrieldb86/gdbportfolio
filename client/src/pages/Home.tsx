@@ -396,7 +396,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="statement-section" style={{ marginRight: '-90px', paddingBottom: '21px', paddingTop: '21px' }}>
+        <section className="statement-section" style={{ marginRight: '-90px', paddingBottom: '21px', paddingTop: '21px', height: '675px', width: '2317px' }}>
           <img src={siteConfig.heroImage} alt="Projeto visual de bonés em preto e vermelho" loading="eager" decoding="async" onError={markBrokenImage} style={{ height: '643px', marginTop: '-5px', width: '1315px' }} />
           <div className="statement-copy" data-reveal="statement-copy"><span>Uma pergunta para o próximo projeto:</span><h2>O que precisa<br /><em>ganhar forma?</em></h2></div>
         </section>

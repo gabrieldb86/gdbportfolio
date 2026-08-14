@@ -2685,3 +2685,25 @@ a.proof-link, a.behance-link, a.text-link, .service-detail a {
     transform: none;
   }
 }
+
+/* Proteção da edição dimensional da statement-section: desktop preserva a intenção, mobile ocupa apenas a viewport. */
+@media (min-width: 901px) {
+  .home-revision .statement-section {
+    max-width: 100%;
+  }
+}
+@media (max-width: 900px) {
+  .home-revision .statement-section {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}
+
+/* Recorte da margem branca original do asset: a transparência da borda revela o vermelho uniforme da seção. */
+.home-revision .statement-section img {
+  clip-path: inset(0 0 0 7%);
+  background: #d73332;
+}
