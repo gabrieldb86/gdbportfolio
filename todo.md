@@ -816,3 +816,8 @@
 - [x] Aumentar o título “Você está formando uma equipe de coordenação?” para o padrão editorial das demais sessões
 - [x] Preservar quebra de linhas, alinhamento à esquerda e evitar overflow em 375px
 - [x] Validar desktop, mobile, testes e build
+
+## Ajuste mobile — foto da seção Sobre mim
+- [x] Aumentar a foto da seção Sobre mim no mobile ao maior tamanho útil
+- [x] Preservar o texto lateral “PROCESSO / REPERTÓRIO / INTENÇÃO” sem sobreposição
+- [x] Validar mobile, desktop, testes e build

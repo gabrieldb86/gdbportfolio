@@ -3226,3 +3226,27 @@ a.proof-link, a.behance-link, a.text-link, .service-detail a {
     letter-spacing: -.045em !important;
   }
 }
+
+
+/* Foto Sobre mim: ampliar no mobile sem perder a legenda vertical lateral. */
+@media (max-width: 900px) {
+  .home-revision .about-art-wrap {
+    box-sizing: border-box !important;
+    width: 100% !important;
+    margin: 0 0 52px !important;
+    padding-right: 46px !important;
+  }
+  .home-revision .about-art-wrap img {
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 1.33 !important;
+    object-fit: cover !important;
+  }
+  .home-revision .about-art-label {
+    right: 4px !important;
+    bottom: 18px !important;
+    font-size: 9px !important;
+    letter-spacing: .14em !important;
+  }
+}
