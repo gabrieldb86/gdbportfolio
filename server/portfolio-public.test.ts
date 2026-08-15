@@ -1,4 +1,4 @@
-import { readFileSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { describe, expect, it } from "vitest";
 
@@ -46,5 +46,27 @@ describe("public portfolio metrics and privacy", () => {
 
     expect(homeSource).toContain('<Link href="/cv" className="proof-link proof-link-alt"><span>Ver CV</span>');
     expect(homeSource).not.toContain("Baixar CV");
+  });
+
+  it("uses direct professional language instead of generic portfolio slogans", () => {
+    const homeSource = readProjectFile("client/src/pages/Home.tsx");
+    const cvSource = readProjectFile("client/src/pages/CV.tsx");
+
+    expect(homeSource).not.toContain("Feito com intenção");
+    expect(homeSource).not.toContain("Números que comprovam");
+    expect(homeSource).not.toContain("O que precisa");
+    expect(cvSource).not.toContain("o próximo resultado");
+  });
+
+  it("does not retain unused AI or platform demonstration components", () => {
+    const files = [
+      "client/src/components/AIChatBox.tsx",
+      "client/src/components/ManusDialog.tsx",
+      "client/src/pages/ComponentShowcase.tsx",
+    ];
+
+    for (const file of files) {
+      expect(existsSync(resolve(projectRoot, file)), file).toBe(false);
+    }
   });
 });

@@ -241,7 +241,7 @@ export default function CV() {
         </section>
 
         <section className="cv-closing-section">
-          <div className="cv-closing-copy"><span>Uma próxima página</span><h2>Vamos construir<br /><em>o próximo resultado.</em></h2><a className="contact-direct" href="https://wa.me/5511945747353" target="_blank" rel="noreferrer"><MessageCircle size={16} /> Falar com Gabriel <ArrowUpRight size={15} /></a></div>
+          <div className="cv-closing-copy"><span>Aberto a conversas profissionais</span><h2>Vamos falar sobre<br /><em>a próxima etapa.</em></h2><a className="contact-direct" href="https://wa.me/5511945747353" target="_blank" rel="noreferrer"><MessageCircle size={16} /> Falar com Gabriel <ArrowUpRight size={15} /></a></div>
           <img src={profilePhoto} alt="" loading="lazy" onError={markBrokenImage} />
         </section>
       </main>

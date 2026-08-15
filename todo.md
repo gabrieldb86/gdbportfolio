@@ -758,6 +758,13 @@
 - [x] Revisar semântica e texto acessível de CV e cases para recrutadores e ATS sem inventar informações
 - [x] Validar HTML inicial, rotas, metadados, mobile, testes e build
 
+## Revisão de autenticidade editorial e evolução tecnológica
+- [x] Inventariar textos, padrões visuais, interações e marcas de interface que possam transmitir aparência automatizada
+- [x] Remover ou reescrever elementos genéricos, mantendo apenas linguagem e evidências profissionais confirmadas
+- [x] Refinar componentes e microinterações que destoem da direção editorial sóbria e autoral
+- [x] Produzir recomendações tecnológicas priorizadas por impacto, custo e compatibilidade
+- [x] Validar desktop, mobile, acessibilidade, testes e build antes do checkpoint
+
 ## Correção pontual da transição mobile
 - [x] Fazer o item 03 da seção Sobre mim terminar integralmente antes do hero vermelho
 - [x] Preservar a composição restaurada sem alterar tipografia, cores ou cabeçalho

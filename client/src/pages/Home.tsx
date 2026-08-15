@@ -37,7 +37,7 @@ function markBrokenImage(event: SyntheticEvent<HTMLImageElement>) {
   image.parentElement?.classList.add("image-fallback");
 }
 
-function AnimatedMetric({ value, decimals = 0, suffix = "" }: { value: number; decimals?: number; suffix?: string }) {
+function StaticMetric({ value, decimals = 0, suffix = "" }: { value: number; decimals?: number; suffix?: string }) {
   const formattedValue = formatMetricValue(value, decimals);
 
   return (
@@ -64,7 +64,7 @@ function ProjectCard({ project, revealDelay }: { project: ProjectConfig; revealD
       onClick={() => trackPortfolioEvent(isLocalCase ? "project_case_open" : "portfolio_behance", { project: project.number })}
     >
       <div className="project-image-wrap" style={{ aspectRatio: project.aspectRatio }}>
-        {genericImageFailed ? <div className="project-image-fallback" role="img" aria-label={`Capa genérica: ${project.title}`} style={{ backgroundImage: `linear-gradient(135deg, rgba(38, 35, 33, .62), rgba(183, 37, 41, .52)), url("${genericImage}")`, backgroundPosition: "center", backgroundSize: "cover" }}><span>{project.number} · projeto</span><strong>{project.title}</strong><small>Imagem genérica editável no editor</small></div> : <img src={imageSource} alt={project.title} className="project-image" width="800" height="600" style={{ objectPosition: project.objectPosition }} loading={project.number === "01" ? "eager" : "lazy"} decoding="async" onError={() => { if (imageFailed) setGenericImageFailed(true); else setImageFailed(true); }} />}
+        {genericImageFailed ? <div className="project-image-fallback" role="img" aria-label={`Prévia indisponível: ${project.title}`} style={{ backgroundImage: `linear-gradient(135deg, rgba(38, 35, 33, .62), rgba(183, 37, 41, .52)), url("${genericImage}")`, backgroundPosition: "center", backgroundSize: "cover" }}><span>{project.number} · projeto</span><strong>{project.title}</strong><small>Prévia indisponível</small></div> : <img src={imageSource} alt={project.title} className="project-image" width="800" height="600" style={{ objectPosition: project.objectPosition }} loading={project.number === "01" ? "eager" : "lazy"} decoding="async" onError={() => { if (imageFailed) setGenericImageFailed(true); else setImageFailed(true); }} />}
         <span className="project-arrow" aria-hidden="true">
           <ArrowUpRight size={19} strokeWidth={1.5} />
         </span>
@@ -212,8 +212,8 @@ export default function Home() {
           <div className="coordination-focus-layout">
             <div className="coordination-focus-label" data-reveal="focus-label">
               <p className="section-kicker" style={{fontSize: '16px'}}>Focos de coordenação</p>
-              <h2 id="coordination-focus-title">Três frentes para transformar <em>método em execução.</em></h2>
-              <p className="coordination-focus-note" style={{fontSize: '16px', marginTop: '18px'}}>Da narrativa do conteúdo à operação de campo, cada frente conecta clareza, capacitação e resultado.</p>
+              <h2 id="coordination-focus-title">Três frentes para levar <em>método à prática.</em></h2>
+              <p className="coordination-focus-note" style={{fontSize: '16px', marginTop: '18px'}}>Conteúdo, treinamento e campo organizados para apoiar decisões, capacitar equipes e acompanhar a execução.</p>
             </div>
             <div className="coordination-focus-grid" style={{ paddingLeft: '237px', width: '1005px' }}>
               <article className="coordination-focus-item" data-reveal="focus-item" data-reveal-delay="80">
@@ -263,23 +263,23 @@ export default function Home() {
           <div className="recruiter-proof-layout">
             <div className="recruiter-proof-header" data-reveal="proof-header">
               <p className="section-kicker" style={{fontSize: '16px'}}>Para RH, headhunters e lideranças</p>
-              <h2 className="recruiter-proof-title">Números que <em>comprovam</em> a experiência.</h2>
-              <p className="recruiter-proof-desc" style={{fontSize: '16px'}}>Da facilitação premiada na Apple à gestão de campo na SPOT, cada indicador abaixo representa anos de execução real — não promessa.</p>
+              <h2 className="recruiter-proof-title">Experiência em <em>números.</em></h2>
+              <p className="recruiter-proof-desc" style={{fontSize: '16px'}}>Dados da trajetória entre facilitação na Apple, treinamento, conteúdo e gestão de campo na SPOT.</p>
             </div>
             <div className="recruiter-proof-strip" data-reveal="proof-strip" aria-label="Indicadores profissionais">
               <div className="proof-metric" style={{ paddingBottom: '30px', paddingLeft: '39px', paddingRight: '30px', paddingTop: '30px' }}>
                 <Briefcase className="proof-metric-icon" size={22} strokeWidth={1.3} aria-hidden="true" />
-                <AnimatedMetric value={17} suffix="+" />
+                <StaticMetric value={17} suffix="+" />
                 <span className="proof-metric-label">Anos de experiência</span>
               </div>
               <div className="proof-metric">
                 <Users className="proof-metric-icon" size={22} strokeWidth={1.3} aria-hidden="true" />
-                <AnimatedMetric value={114} suffix="K+" />
+                <StaticMetric value={114} suffix="K+" />
                 <span className="proof-metric-label">Pessoas capacitadas<br />ao longo da carreira</span>
               </div>
               <div className="proof-metric">
                 <Activity className="proof-metric-icon" size={22} strokeWidth={1.3} aria-hidden="true" />
-                <AnimatedMetric value={130} suffix="+" />
+                <StaticMetric value={130} suffix="+" />
                 <span className="proof-metric-label">Promotores monitorados<br />(operação de campo)</span>
               </div>
               <div className="proof-metric proof-metric-narrative">
@@ -289,7 +289,7 @@ export default function Home() {
               </div>
               <div className="proof-metric">
                 <Star className="proof-metric-icon" size={22} strokeWidth={1.3} aria-hidden="true" />
-                <AnimatedMetric value={8.3} decimals={1} />
+                <StaticMetric value={8.3} decimals={1} />
                 <span className="proof-metric-label">Média de avaliação</span>
                 <span className="proof-tagline">Conteúdo &amp; Treinamento · Trade Marketing · T&amp;D de Pessoas</span>
               </div>
@@ -306,7 +306,7 @@ export default function Home() {
           <div className="manifesto-grid" data-reveal="manifesto">
             <div className="manifesto-heading">
               <p className="section-kicker" style={{fontSize: '16px'}}>Como eu atuo</p>
-              <h2 id="manifesto-title">Transformo estratégia em <span>experiências</span> que movem pessoas.</h2>
+              <h2 id="manifesto-title">Estratégia só funciona <span>quando chega ao campo.</span></h2>
             </div>
             <div className="manifesto-aside">
               <p style={{fontSize: '20px'}}>Porque conteúdo e treinamento só funcionam quando encontram contexto, método e um próximo passo claro — para a equipe, para o campo e para o negócio.</p>
@@ -331,8 +331,8 @@ export default function Home() {
           <div className="services-layout" data-reveal="services-layout">
             <div>
               <p className="section-kicker" style={{fontSize: '16px'}}>Áreas de atuação</p>
-              <h2 id="services-title">Coordenação que<br />vira <em className="services-result">resultado.</em></h2>
-              <div className="services-editorial-note" style={{fontSize: '16px'}}><strong style={{fontSize: '16px'}}>Do briefing ao resultado.</strong><p style={{fontSize: '16px'}}>Coordenação que organiza contexto, método, conteúdo e execução para o trabalho chegar ao campo.</p></div>
+              <h2 id="services-title">Coordenação para<br /><em className="services-result">o trabalho acontecer.</em></h2>
+              <div className="services-editorial-note" style={{fontSize: '16px'}}><strong style={{fontSize: '16px'}}>Do briefing à rotina de campo.</strong><p style={{fontSize: '16px'}}>Coordenação que organiza contexto, método, conteúdo e execução para apoiar a operação.</p></div>
             </div>
             <div className="services-list">
               {siteConfig.services.map(([number, title, description], index) => (
@@ -375,9 +375,9 @@ export default function Home() {
 
         <section className="statement-section" aria-labelledby="statement-title">
           <div className="statement-copy" data-reveal="statement-copy">
-            <span>Uma pergunta para o próximo projeto:</span>
-            <h2 id="statement-title">O que precisa<br /><em>ganhar forma?</em></h2>
-            <p className="statement-context-box">Conteúdo e treinamento só funcionam quando encontram contexto, método e um próximo passo claro — para a equipe, para o campo e para o negócio.</p>
+            <span>Se houver uma vaga ou projeto em que eu possa contribuir:</span>
+            <h2 id="statement-title">vamos colocar<br /><em>o trabalho em prática.</em></h2>
+            <p className="statement-context-box">Conteúdo e treinamento precisam de contexto, método e acompanhamento para apoiar equipes, campo e negócio.</p>
           </div>
           <div className="statement-media-frame">
             <img className="statement-image" src={siteConfig.heroImage} alt="Projeto visual de bonés em preto e vermelho" width="1315" height="643" loading="lazy" decoding="async" onError={markBrokenImage} />
@@ -422,7 +422,7 @@ export default function Home() {
       <footer className="site-footer">
         <a className="footer-brand" href="#top" onClick={(event) => { event.preventDefault(); scrollToId("top"); }}><span className="footer-avatar"><img src={siteConfig.railImage} alt="" onError={markBrokenImage} /></span><span style={{fontSize: '24px'}}>Gabriel Danino Basilio</span></a>
         <div className="footer-socials"><a href="https://www.linkedin.com/in/gabrieldb86" target="_blank" rel="noreferrer" aria-label="LinkedIn"><Linkedin size={18} strokeWidth={1.75} /></a><a href="https://www.behance.net/gabrieldb86" target="_blank" rel="noreferrer" aria-label="Behance"><div style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '18px', height: '18px', border: '1.75px solid currentColor', borderRadius: '3px', fontSize: '10px', fontWeight: 800, lineHeight: 1 }}>Be</div></a><a href="https://wa.me/5511945747353" target="_blank" rel="noreferrer" aria-label="WhatsApp"><MessageCircle size={18} strokeWidth={1.75} /></a></div>
-        <span className="footer-credit">© 2026 · Feito com intenção. · Foto de <a href="https://unsplash.com/pt-br/@scalzodesign?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noreferrer">Samuel Scalzo</a> na <a href="https://unsplash.com/pt-br/fotografias/uma-foto-em-preto-e-branco-de-um-edificio-xyuYk9oLA8I?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noreferrer">Unsplash</a></span>
+        <span className="footer-credit">© 2026 · Foto de <a href="https://unsplash.com/pt-br/@scalzodesign?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noreferrer">Samuel Scalzo</a> na <a href="https://unsplash.com/pt-br/fotografias/uma-foto-em-preto-e-branco-de-um-edificio-xyuYk9oLA8I?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noreferrer">Unsplash</a></span>
       </footer>
 
     </div>
