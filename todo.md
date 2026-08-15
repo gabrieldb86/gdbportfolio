@@ -775,6 +775,12 @@
 - [x] Compactar o bloco de abertura mantendo título, texto e lista integralmente legíveis
 - [x] Validar no mesmo enquadramento de 375px, testes e build
 
+## Eixo editorial global
+- [x] Mapear os deslocamentos do cabeçalho, avatar, nome, seções, heroes e rodapés nas rotas públicas
+- [x] Definir uma referência única de alinhamento à esquerda com preservação das composições de hero
+- [x] Aplicar o eixo à Home, CV, cases, privacidade e rodapés, incluindo desktop e mobile
+- [x] Validar alinhamento, responsividade, testes e build
+
 ## Correção pontual da transição mobile
 - [x] Fazer o item 03 da seção Sobre mim terminar integralmente antes do hero vermelho
 - [x] Preservar a composição restaurada sem alterar tipografia, cores ou cabeçalho

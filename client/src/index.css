@@ -3542,3 +3542,87 @@ a.proof-link, a.behance-link, a.text-link, .service-detail a {
     text-align: left;
   }
 }
+
+/* Eixo editorial global: a referência visual é a abertura da seção de contato.
+   O conteúdo dentro de main considera o trilho de 54px; cabeçalhos e rodapés,
+   por estarem fora dele, usam o mesmo ponto final diretamente. */
+@media (min-width: 901px) {
+  .home-revision,
+  .cv-page,
+  .case-page,
+  .privacy-page {
+    --editorial-axis: 74px;
+    --editorial-page-axis: calc(54px + var(--editorial-axis));
+  }
+
+  .home-revision .site-header,
+  .cv-page .site-header,
+  .case-page .site-header,
+  .privacy-page .site-header {
+    padding-left: var(--editorial-page-axis) !important;
+    padding-right: 8vw !important;
+  }
+
+  .home-revision .site-footer,
+  .cv-page .site-footer {
+    padding-left: var(--editorial-page-axis) !important;
+    padding-right: 8vw !important;
+  }
+}
+
+@media (max-width: 900px) {
+  .home-revision,
+  .cv-page,
+  .case-page,
+  .privacy-page {
+    --editorial-axis: 24px;
+  }
+
+  .home-revision .site-header,
+  .cv-page .site-header,
+  .case-page .site-header,
+  .privacy-page .site-header,
+  .home-revision .site-footer,
+  .cv-page .site-footer {
+    padding-left: var(--editorial-axis) !important;
+    padding-right: var(--editorial-axis) !important;
+  }
+
+  .home-revision .hero-redesign {
+    padding-left: var(--editorial-axis) !important;
+    padding-right: var(--editorial-axis) !important;
+  }
+
+  .privacy-page .privacy-main {
+    margin-left: var(--editorial-axis) !important;
+    margin-right: var(--editorial-axis) !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+
+@media (min-width: 901px) {
+  .home-revision .site-header-redesign,
+  .home-revision .site-header-redesign.site-header-scrolled {
+    left: 0 !important;
+  }
+
+  .home-revision .side-rail .rail-image-block {
+    display: none;
+  }
+
+  .privacy-page .privacy-main {
+    margin-left: var(--editorial-page-axis) !important;
+    margin-right: 8vw !important;
+  }
+
+  .home-revision .hero-redesign,
+  .home-revision .coordination-focus-band {
+    padding-left: var(--editorial-axis) !important;
+  }
+
+  .home-revision .recruiter-proof-layout,
+  .home-revision .recruiter-proof-header {
+    padding-left: var(--editorial-axis) !important;
+  }
+}

@@ -69,4 +69,14 @@ describe("public portfolio metrics and privacy", () => {
       expect(existsSync(resolve(projectRoot, file)), file).toBe(false);
     }
   });
+
+  it("keeps public pages on a shared editorial axis", () => {
+    const css = readProjectFile("client/src/index.css");
+    const homeSource = readProjectFile("client/src/pages/Home.tsx");
+
+    expect(css).toContain("--editorial-axis: 74px");
+    expect(css).toContain("--editorial-page-axis: calc(54px + var(--editorial-axis))");
+    expect(css).toContain(".privacy-page .privacy-main");
+    expect(homeSource).toContain('className="header-avatar"');
+  });
 });
