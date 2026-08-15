@@ -3551,8 +3551,8 @@ a.proof-link, a.behance-link, a.text-link, .service-detail a {
   .cv-page,
   .case-page,
   .privacy-page {
-    --editorial-axis: 74px;
-    --editorial-page-axis: calc(54px + var(--editorial-axis));
+    --editorial-page-axis: clamp(128px, 14.5vw, 260px);
+    --editorial-axis: calc(var(--editorial-page-axis) - 54px);
   }
 
   .home-revision .site-header,
@@ -3560,13 +3560,13 @@ a.proof-link, a.behance-link, a.text-link, .service-detail a {
   .case-page .site-header,
   .privacy-page .site-header {
     padding-left: var(--editorial-page-axis) !important;
-    padding-right: 8vw !important;
+    padding-right: var(--editorial-page-axis) !important;
   }
 
   .home-revision .site-footer,
   .cv-page .site-footer {
     padding-left: var(--editorial-page-axis) !important;
-    padding-right: 8vw !important;
+    padding-right: var(--editorial-page-axis) !important;
   }
 }
 
@@ -3613,16 +3613,40 @@ a.proof-link, a.behance-link, a.text-link, .service-detail a {
 
   .privacy-page .privacy-main {
     margin-left: var(--editorial-page-axis) !important;
-    margin-right: 8vw !important;
+    margin-right: var(--editorial-page-axis) !important;
   }
 
   .home-revision .hero-redesign,
-  .home-revision .coordination-focus-band {
+  .home-revision .coordination-focus-band,
+  .home-revision .work-section,
+  .home-revision .services-section,
+  .home-revision .about-section,
+  .home-revision .contact-section,
+  .home-revision .statement-copy,
+  .cv-page .section-pad,
+  .case-page .section-pad,
+  .case-page .case-hero,
+  .case-page .case-content,
+  .case-page .case-closing,
+  .cv-page .cv-closing-copy {
     padding-left: var(--editorial-axis) !important;
+    padding-right: var(--editorial-page-axis) !important;
   }
 
   .home-revision .recruiter-proof-layout,
   .home-revision .recruiter-proof-header {
     padding-left: var(--editorial-axis) !important;
+    padding-right: var(--editorial-page-axis) !important;
+  }
+
+  @media (max-width: 1100px) {
+    .home-revision .header-availability {
+      display: none;
+    }
+
+    .home-revision .site-nav {
+      gap: 22px;
+      margin-left: 28px;
+    }
   }
 }
