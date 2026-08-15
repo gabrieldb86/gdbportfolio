@@ -972,3 +972,9 @@
 - [x] Validar desktop amplo, desktop intermediário, mobile, testes e build antes do checkpoint
 
 > Observação: esta tarefa substitui a tentativa anterior de alinhamento por uma referência explícita de enquadramento, com o bloco vermelho como régua visual.
+
+## Correção estrita do enquadramento desktop (Print 1)
+- [x] Medir a coordenada inicial e final do retângulo vermelho do print 1 em relação ao container desktop
+- [x] Aplicar exatamente a mesma margem esquerda e largura máxima aos blocos direitos das seções de Focos, Métricas, Manifesto, Serviços, Sobre e Contato
+- [x] Manter o mobile em 375px rigorosamente intacto
+- [x] Validar visualmente em 1440px e 1280px para confirmar que o enquadramento está idêntico ao print 1

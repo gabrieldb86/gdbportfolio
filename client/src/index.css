@@ -3825,3 +3825,45 @@ a.proof-link, a.behance-link, a.text-link, .service-detail a {
     object-fit: contain !important;
   }
 }
+
+
+/* Enquadramento exato baseado no retângulo vermelho do Print 1 (somente desktop). */
+@media (min-width: 901px) {
+  .home-revision {
+    --print1-left-offset: clamp(520px, 44vw, 760px);
+  }
+
+  .home-revision .coordination-focus-layout,
+  .home-revision .recruiter-proof-layout,
+  .home-revision .manifesto-grid,
+  .home-revision .services-layout,
+  .home-revision .about-grid,
+  .home-revision .contact-grid,
+  .home-revision .statement-section {
+    grid-template-columns: var(--print1-left-offset) minmax(0, 1fr) !important;
+    gap: clamp(32px, 4vw, 64px) !important;
+    padding-left: var(--editorial-axis) !important;
+    padding-right: var(--editorial-axis) !important;
+    max-width: 1720px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .home-revision .statement-section {
+    display: grid !important;
+    background: #d73332 !important;
+  }
+
+  .home-revision .statement-copy {
+    grid-column: 1 !important;
+    padding: 72px 0 72px var(--editorial-axis) !important;
+  }
+
+  .home-revision .statement-media-frame,
+  .home-revision .statement-section img {
+    grid-column: 2 !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+  }
+}
