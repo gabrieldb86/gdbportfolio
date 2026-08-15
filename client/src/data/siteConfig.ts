@@ -140,8 +140,8 @@ export const defaultSiteConfig: SiteConfig = {
     },
     {
       number: "05",
-      title: "Blocs Presentation",
-      type: "Apresentação",
+      title: "Case em atualização",
+      type: "Blocs Presentation · revisão editorial",
       year: "2024",
       image: "/manus-storage/blocs-presentation_ad07fc26.png",
       href: "/cases/blocs-presentation",

@@ -747,6 +747,17 @@
 - [x] Confirmar que o CTA abre diretamente a rota pública `/cv`
 - [x] Validar navegação, testes e build
 
+## Auditoria pública autorizada — indexabilidade e coerência
+- [x] Mapear rotas públicas, metadados, HTML inicial, headings e conteúdo essencial
+- [x] Implementar metadados e conteúdo inicial específicos por rota pública
+- [x] Corrigir os contadores para não iniciar em zero e manter fallback acessível com valores confirmados
+- [x] Substituir o contador não confirmado de coordenações por texto factual sem número
+- [x] Manter “Ver CV” como ação de navegação para a rota `/cv`
+- [x] Ajustar o card Blocs Presentation para “Case em atualização” sem atribuir material de terceiros
+- [x] Alinhar o aviso de privacidade à ausência de analytics ativo sem criar novas integrações
+- [x] Revisar semântica e texto acessível de CV e cases para recrutadores e ATS sem inventar informações
+- [x] Validar HTML inicial, rotas, metadados, mobile, testes e build
+
 ## Correção pontual da transição mobile
 - [x] Fazer o item 03 da seção Sobre mim terminar integralmente antes do hero vermelho
 - [x] Preservar a composição restaurada sem alterar tipografia, cores ou cabeçalho

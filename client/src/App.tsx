@@ -1,6 +1,7 @@
 // Direção visual: Arquivo Editorial — fundo marfim, grafite, vermelho-carmim, ritmo assimétrico e tipografia editorial.
-import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import { Head } from "@/components/Head";
+import { ClientToaster } from "@/components/ClientToaster";
 import NotFound from "@/pages/NotFound";
 import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
@@ -21,7 +22,7 @@ function Router() {
       <Route path="/privacidade" component={Privacy} />
       <Route path="/editor">
         {() => {
-          const params = new URLSearchParams(window.location.search);
+          const params = new URLSearchParams(typeof window === "undefined" ? "" : window.location.search);
           if (params.get("secret") !== "gabriel2026") {
             return <NotFound />;
           }
@@ -39,7 +40,8 @@ function App() {
     <ErrorBoundary>
       <ThemeProvider defaultTheme="light">
         <TooltipProvider>
-          <Toaster />
+          <ClientToaster />
+          <Head />
           <Router />
           <AnalyticsConsent />
         </TooltipProvider>

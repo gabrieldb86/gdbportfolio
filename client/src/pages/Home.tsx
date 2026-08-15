@@ -1,6 +1,5 @@
 // Direção visual: Arquivo Editorial — preservar assimetria, índices em vermelho, imagens protagonistas e microcopy objetiva.
 import { type CSSProperties, type FormEvent, type SyntheticEvent, useEffect, useLayoutEffect, useRef, useState } from "react";
-import { setPageMetadata } from "@/lib/seo";
 import { trackPortfolioEvent } from "@/lib/analytics";
 import {
   Activity,
@@ -19,7 +18,7 @@ import {
   X,
 } from "lucide-react";
 import { defaultSiteConfig, type ProjectConfig, getSiteConfig } from "@/data/siteConfig";
-import { easeOutCubic, formatMetricValue } from "@/lib/animatedMetric";
+import { formatMetricValue } from "@/lib/animatedMetric";
 import { Link } from "wouter";
 
 function scrollToId(id: string, closeMenu?: () => void) {
@@ -39,53 +38,10 @@ function markBrokenImage(event: SyntheticEvent<HTMLImageElement>) {
 }
 
 function AnimatedMetric({ value, decimals = 0, suffix = "" }: { value: number; decimals?: number; suffix?: string }) {
-  const metricRef = useRef<HTMLElement | null>(null);
-  const [displayValue, setDisplayValue] = useState(0);
-
-  useEffect(() => {
-    const element = metricRef.current;
-    if (!element) return;
-
-    let animationFrame = 0;
-    let hasStarted = false;
-    const duration = 2000;
-    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-    const animate = (timestamp: number, startedAt: number) => {
-      const progress = Math.min((timestamp - startedAt) / duration, 1);
-      const easedProgress = easeOutCubic(progress);
-      setDisplayValue(value * easedProgress);
-      if (progress < 1) animationFrame = window.requestAnimationFrame((nextTimestamp) => animate(nextTimestamp, startedAt));
-    };
-
-    const startAnimation = () => {
-      if (hasStarted) return;
-      hasStarted = true;
-      if (prefersReducedMotion) {
-        setDisplayValue(value);
-        return;
-      }
-      animationFrame = window.requestAnimationFrame((timestamp) => animate(timestamp, timestamp));
-    };
-
-    const observer = new IntersectionObserver(([entry]) => {
-      if (entry.isIntersecting) {
-        startAnimation();
-        observer.disconnect();
-      }
-    }, { threshold: 0.25 });
-
-    observer.observe(element);
-    return () => {
-      observer.disconnect();
-      window.cancelAnimationFrame(animationFrame);
-    };
-  }, [value]);
-
-  const formattedValue = formatMetricValue(displayValue, decimals);
+  const formattedValue = formatMetricValue(value, decimals);
 
   return (
-    <strong ref={metricRef} aria-label={`${value.toLocaleString("pt-BR")}${suffix}`}>
+    <strong aria-label={`${value.toLocaleString("pt-BR")}${suffix}`}>
       {formattedValue}<span className="proof-number-suffix">{suffix}</span>
     </strong>
   );
@@ -93,6 +49,7 @@ function AnimatedMetric({ value, decimals = 0, suffix = "" }: { value: number; d
 
 function ProjectCard({ project, revealDelay }: { project: ProjectConfig; revealDelay: number }) {
   const isLocalCase = project.href.startsWith("/");
+  const isCaseInUpdate = project.href === "/cases/blocs-presentation";
   const [imageFailed, setImageFailed] = useState(false);
   const [genericImageFailed, setGenericImageFailed] = useState(false);
   const genericImage = defaultSiteConfig.projects.find((candidate) => candidate.number === "06")?.image || defaultSiteConfig.profilePhoto;
@@ -117,7 +74,7 @@ function ProjectCard({ project, revealDelay }: { project: ProjectConfig; revealD
         <div>
           <h3>{project.title}</h3>
           <p>{project.type}</p>
-          <span className="project-credit">{isLocalCase ? "Estudo de caso / Gabriel DB" : "Behance / Gabriel DB"}</span>
+          <span className="project-credit">{isCaseInUpdate ? "Atualização editorial" : isLocalCase ? "Estudo de caso / Gabriel DB" : "Behance / Gabriel DB"}</span>
         </div>
         <span className="project-year">{project.year}</span>
       </div>
@@ -131,14 +88,6 @@ export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [sent, setSent] = useState(false);
   const [floatingContactHidden, setFloatingContactHidden] = useState(false);
-
-  useEffect(() => {
-    setPageMetadata({
-      title: "Gabriel Danino Basilio — Coordenação de Conteúdo, Treinamento e Trade Marketing",
-      description: "Gabriel Danino Basilio: profissional com 17 anos de experiência, 114K+ pessoas capacitadas e atuação em conteúdo, treinamento, trade marketing e performance de campo.",
-      path: "/",
-    });
-  }, []);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 28);
@@ -333,10 +282,10 @@ export default function Home() {
                 <AnimatedMetric value={130} suffix="+" />
                 <span className="proof-metric-label">Promotores monitorados<br />(operação de campo)</span>
               </div>
-              <div className="proof-metric">
+              <div className="proof-metric proof-metric-narrative">
                 <Layers className="proof-metric-icon" size={22} strokeWidth={1.3} aria-hidden="true" />
-                <AnimatedMetric value={5} />
-                <span className="proof-metric-label">Coordenações de campanha<br />(Cystex, Enavo Gotas, Culturelle, Duekal, Copa)</span>
+                <span className="proof-metric-label">Campanhas de incentivo</span>
+                <span className="proof-tagline">Cystex, Enavo Gotas, Culturelle, Duekal e Copa</span>
               </div>
               <div className="proof-metric">
                 <Star className="proof-metric-icon" size={22} strokeWidth={1.3} aria-hidden="true" />

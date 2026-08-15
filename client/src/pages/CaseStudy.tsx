@@ -1,9 +1,9 @@
 /* Direção visual: editorial corporativa em marfim/grafite/carmim; este case transforma uma capa em prova de coordenação, com texto curto, evidência verificável e CTAs claros. */
 import { ArrowLeft, ArrowUpRight } from "lucide-react";
 import { Link, useRoute } from "wouter";
-import { setPageMetadata } from "@/lib/seo";
 import { getSiteConfig } from "@/data/siteConfig";
-import { type CSSProperties, type SyntheticEvent, useEffect } from "react";
+import { type CSSProperties, type SyntheticEvent } from "react";
+import NotFound from "@/pages/NotFound";
 
 type CaseRecord = {
   slug: string;
@@ -124,16 +124,9 @@ function markBrokenImage(event: SyntheticEvent<HTMLImageElement>) {
 export default function CaseStudy() {
   const [, params] = useRoute("/cases/:slug");
   const siteConfig = getSiteConfig();
-  const record = cases.find((item) => item.slug === params?.slug) ?? cases[0];
+  const record = cases.find((item) => item.slug === params?.slug);
 
-  useEffect(() => {
-    setPageMetadata({
-      title: `${record.title} — Gabriel Danino Basilio`,
-      description: `${record.title}: estudo de caso de conteúdo, treinamento e trade marketing por Gabriel Danino Basilio.`,
-      path: `/cases/${record.slug}`,
-      image: record.image ? `${window.location.origin}${record.image}` : undefined,
-    });
-  }, [record]);
+  if (!record) return <NotFound />;
 
   return (
     <div className="site-shell case-page" style={{ "--primary": siteConfig.brand.accent, "--background": siteConfig.brand.background, "--foreground": siteConfig.brand.foreground } as CSSProperties}>

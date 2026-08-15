@@ -1,18 +1,8 @@
 /* Direção visual: aviso claro, sóbrio e editorial; a privacidade deve parecer parte do produto, não um texto jurídico escondido. */
 import { ArrowLeft } from "lucide-react";
 import { Link } from "wouter";
-import { useEffect } from "react";
-import { setPageMetadata } from "@/lib/seo";
 
 export default function Privacy() {
-  useEffect(() => {
-    setPageMetadata({
-      title: "Privacidade — Gabriel Danino Basilio",
-      description: "Aviso de privacidade do portfólio profissional de Gabriel Danino Basilio.",
-      path: "/privacidade",
-    });
-  }, []);
-
   return (
     <div className="site-shell privacy-page">
       <header className="site-header site-header-scrolled case-header">
@@ -29,7 +19,7 @@ export default function Privacy() {
           <h2>WhatsApp e canais externos</h2>
           <p>Ao escolher o WhatsApp, LinkedIn ou e-mail, você será direcionado ao serviço correspondente. Esses serviços possuem suas próprias políticas de privacidade e podem tratar os dados conforme seus termos.</p>
           <h2>Métricas de navegação</h2>
-          <p>O portfólio pode registrar métricas agregadas de navegação e interações de contato para avaliar acessos e oportunidades. Quando o Google Analytics 4 estiver configurado, a coleta adicional só será ativada após a sua escolha explícita de aceitar analytics. Você pode recusar essa medição sem perder acesso ao conteúdo do site.</p>
+          <p>No momento, não há ferramenta de analytics ativa configurada neste portfólio. Por isso, o site não mede acessos, origem de tráfego, consultas orgânicas, cliques, conversões ou palavras pesquisadas. Caso uma ferramenta de medição seja ativada no futuro, este aviso será atualizado antes do início da coleta.</p>
           <h2>Solicitações</h2>
           <p>Para perguntar sobre o uso dos dados ou solicitar correção, entre em contato por <a href="mailto:gabrieldb@me.com">gabrieldb@me.com</a>.</p>
         </div>

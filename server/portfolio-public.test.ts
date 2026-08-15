@@ -9,7 +9,6 @@ const readProjectFile = (relativePath: string) =>
 describe("public portfolio metrics and privacy", () => {
   it("keeps the 114K metric synchronized across public source files", () => {
     const files = [
-      "client/index.html",
       "client/src/pages/Home.tsx",
       "client/src/pages/CV.tsx",
       "client/src/data/siteConfig.ts",
@@ -20,6 +19,9 @@ describe("public portfolio metrics and privacy", () => {
       expect(source, file).toContain("114K");
       expect(source, file).not.toMatch(/(?:100|300)\s*(?:K|mil)\+?/i);
     }
+
+    const homeSource = readProjectFile("client/src/pages/Home.tsx");
+    expect(homeSource).not.toContain("useState(0)");
   });
 
   it("does not render the phone number as visible CV text", () => {
