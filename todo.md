@@ -714,6 +714,11 @@
 - [x] Validar build, consentimento e carregamento sem identificador de medição
 - [ ] Informar o ID de medição GA4 e validar a coleta real após o consentimento
 
+## Ajuste mobile — lista Como trabalho
+- [x] Colocar cada item da lista Como trabalho em sua própria linha no mobile
+- [x] Alinhar todos os itens pelo mesmo eixo à esquerda e remover divisórias desalinhadas
+- [x] Preservar a composição desktop e validar mobile, testes e build
+
 ## Correção pontual da transição mobile
 - [x] Fazer o item 03 da seção Sobre mim terminar integralmente antes do hero vermelho
 - [x] Preservar a composição restaurada sem alterar tipografia, cores ou cabeçalho
