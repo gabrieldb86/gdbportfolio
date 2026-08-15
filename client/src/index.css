@@ -3741,3 +3741,14 @@ a.proof-link, a.behance-link, a.text-link, .service-detail a {
     padding-left: 0 !important;
   }
 }
+
+
+/* Contenção de largura para telas amplas (entre 1505px e 3840px), mantendo a edição manual exata em 1504px ou menos. */
+@media (min-width: 1505px) {
+  .home-revision,
+  body {
+    max-width: 1720px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

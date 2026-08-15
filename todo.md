@@ -970,3 +970,15 @@
 - [x] Remover estilos inline duplicados gerados pela edição visual em Home.tsx
 - [x] Garantir que o mobile permaneça inteiramente intocado
 - [x] Executar testes, TypeScript e build com sucesso
+
+## Edição manual do hero preservada
+- [x] Registrar e consolidar a edição manual do hero em Home.tsx (altura 861px, padding direito 359px, eyebrow 660px, linha de prova 704px)
+- [x] Remover duplicidades de atributos style sem alterar os valores definidos pelo usuário
+- [x] Garantir que o mobile permaneça inteiramente intocado
+- [x] Executar testes, TypeScript e build com sucesso
+
+## Ajuste responsivo para telas amplas (1504px a 3840px)
+- [x] Criar regra `@media (min-width: 1505px)` para conter o layout em max-width e manter o alinhamento da edição manual em monitores grandes e ultrawide
+- [x] Garantir que em 1504px ou menos o site mantenha 100% da edição manual exata
+- [x] Manter o mobile em 375px rigorosamente intocado
+- [x] Validar visualmente em 3840px, 1920px, 1504px e 375px
