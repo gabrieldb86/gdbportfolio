@@ -3734,5 +3734,10 @@ a.proof-link, a.behance-link, a.text-link, .service-detail a {
 
   .home-revision .hero-redesign-copy {
     max-width: 440px !important;
+    justify-self: start !important;
+  }
+
+  .home-revision .hero-redesign-panel {
+    padding-left: 0 !important;
   }
 }

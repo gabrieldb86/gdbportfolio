@@ -797,6 +797,11 @@
 - [x] Limitar a coluna textual desktop do hero para que descrições longas não avancem sobre a imagem em larguras intermediárias
 - [x] Confirmar novamente os enquadramentos desktop e mobile antes do checkpoint complementar
 
+## Refinamento do eixo do hero desktop
+- [x] Manter o início da coluna textual do hero alinhado ao eixo editorial após limitar sua largura
+- [x] Revalidar desktop e mobile e salvar a revisão final das margens
+- [x] Remover o recuo interno residual do painel do hero somente no desktop
+
 ## Correção pontual da transição mobile
 - [x] Fazer o item 03 da seção Sobre mim terminar integralmente antes do hero vermelho
 - [x] Preservar a composição restaurada sem alterar tipografia, cores ou cabeçalho
