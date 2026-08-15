@@ -966,9 +966,9 @@
 - [x] Validar 375px, desktop, testes e build
 
 ## Enquadramento dos blocos direitos — desktop, referência do print 1
-- [ ] Usar o bloco direito destacado em vermelho no print 1 como referência horizontal exata
-- [ ] Aplicar a mesma posição inicial e largura útil aos blocos direitos destacados em amarelo nos demais prints
-- [ ] Não inserir as marcações coloridas no site e não alterar qualquer regra mobile
-- [ ] Validar desktop amplo, desktop intermediário, mobile, testes e build antes do checkpoint
+- [x] Usar o bloco direito destacado em vermelho no print 1 como referência horizontal exata
+- [x] Aplicar a mesma posição inicial e largura útil aos blocos direitos destacados em amarelo nos demais prints
+- [x] Não inserir as marcações coloridas no site e não alterar qualquer regra mobile
+- [x] Validar desktop amplo, desktop intermediário, mobile, testes e build antes do checkpoint
 
 > Observação: esta tarefa substitui a tentativa anterior de alinhamento por uma referência explícita de enquadramento, com o bloco vermelho como régua visual.

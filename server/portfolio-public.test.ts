@@ -102,4 +102,18 @@ describe("public portfolio metrics and privacy", () => {
     expect(css).toContain("@media (min-width: 901px)");
     expect(css).toContain("--editorial-axis: 24px");
   });
+
+  it("shares the Focos right-frame geometry across desktop sections without touching mobile", () => {
+    const css = readProjectFile("client/src/index.css");
+
+    expect(css).toContain("--reference-right-column: 451px");
+    expect(css).toContain("--reference-right-gap: clamp(48px, 7vw, 102px)");
+    expect(css).toContain(".home-revision .manifesto-grid");
+    expect(css).toContain(".home-revision .services-layout");
+    expect(css).toContain(".home-revision .about-grid");
+    expect(css).toContain(".home-revision .contact-grid");
+    expect(css).toContain(".home-revision .statement-section");
+    expect(css).toContain("grid-template-columns: var(--reference-right-column) minmax(0, 1fr) !important");
+    expect(css).toContain("@media (min-width: 901px)");
+  });
 });

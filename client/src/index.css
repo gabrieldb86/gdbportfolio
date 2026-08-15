@@ -3741,3 +3741,87 @@ a.proof-link, a.behance-link, a.text-link, .service-detail a {
     padding-left: 0 !important;
   }
 }
+
+
+/* Enquadramento comum dos prints: todos os campos direitos usam a mesma régua de Focos no desktop. */
+@media (min-width: 901px) {
+  .home-revision {
+    --reference-right-column: 451px;
+    --reference-right-gap: clamp(48px, 7vw, 102px);
+  }
+
+  .home-revision .coordination-focus-layout,
+  .home-revision .recruiter-proof-layout,
+  .home-revision .manifesto-grid,
+  .home-revision .services-layout,
+  .home-revision .about-grid,
+  .home-revision .contact-grid {
+    grid-template-columns: var(--reference-right-column) minmax(0, 1fr) !important;
+    gap: var(--reference-right-gap) !important;
+  }
+
+  .home-revision .coordination-focus-layout {
+    max-width: none !important;
+  }
+
+  .home-revision .recruiter-proof-layout {
+    width: auto !important;
+    max-width: none !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: var(--reference-content-gutter) !important;
+    padding-right: var(--reference-page-gutter) !important;
+  }
+
+  .home-revision .manifesto-grid,
+  .home-revision .services-layout,
+  .home-revision .about-grid,
+  .home-revision .contact-grid {
+    width: 100% !important;
+    max-width: none !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .home-revision .manifesto-aside {
+    width: 100% !important;
+    max-width: none !important;
+  }
+
+  .home-revision .statement-section {
+    grid-template-columns: var(--reference-right-column) minmax(0, 1fr) !important;
+    gap: var(--reference-right-gap) !important;
+    padding-left: var(--reference-content-gutter) !important;
+    padding-right: var(--reference-page-gutter) !important;
+  }
+
+  .home-revision .statement-section img {
+    grid-column: 2 !important;
+    width: 100% !important;
+  }
+
+  .home-revision .statement-copy {
+    grid-column: 1 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+
+
+@media (min-width: 901px) {
+  .home-revision .statement-section .statement-media-frame {
+    grid-column: 2 !important;
+    grid-row: 1 !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    min-height: 100% !important;
+  }
+
+  .home-revision .statement-section .statement-media-frame .statement-image {
+    position: static !important;
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 100% !important;
+    object-fit: contain !important;
+  }
+}
