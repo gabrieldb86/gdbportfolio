@@ -3741,26 +3741,3 @@ a.proof-link, a.behance-link, a.text-link, .service-detail a {
     padding-left: 0 !important;
   }
 }
-
-/* Régua única para a coluna direita: replica o início da lista de Focos nas demais composições desktop. */
-@media (min-width: 901px) {
-  .home-revision {
-    --right-column-reference-width: clamp(280px, 31vw, 451px);
-    --right-column-reference-gap: clamp(48px, 7vw, 102px);
-  }
-
-  .home-revision .coordination-focus-layout,
-  .home-revision .recruiter-proof-layout,
-  .home-revision .manifesto-grid,
-  .home-revision .services-layout,
-  .home-revision .about-grid,
-  .home-revision .contact-grid {
-    grid-template-columns: var(--right-column-reference-width) minmax(0, 1fr) !important;
-    gap: var(--right-column-reference-gap) !important;
-  }
-
-  .home-revision .work-redesign-heading {
-    grid-template-columns: var(--right-column-reference-width) minmax(0, 1fr) auto !important;
-    column-gap: var(--right-column-reference-gap) !important;
-  }
-}

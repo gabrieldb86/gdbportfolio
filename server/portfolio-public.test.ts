@@ -102,15 +102,4 @@ describe("public portfolio metrics and privacy", () => {
     expect(css).toContain("@media (min-width: 901px)");
     expect(css).toContain("--editorial-axis: 24px");
   });
-
-  it("uses the Focos right-column ruler across desktop content pairs without changing mobile rules", () => {
-    const css = readProjectFile("client/src/index.css");
-
-    expect(css).toContain("--right-column-reference-width: clamp(280px, 31vw, 451px)");
-    expect(css).toContain("--right-column-reference-gap: clamp(48px, 7vw, 102px)");
-    expect(css).toContain(".home-revision .recruiter-proof-layout");
-    expect(css).toContain(".home-revision .contact-grid");
-    expect(css).toContain("@media (min-width: 901px)");
-    expect(css).not.toContain("@media (max-width: 900px) {\n  .home-revision {\n    --right-column-reference-width");
-  });
 });
