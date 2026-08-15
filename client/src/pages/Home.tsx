@@ -213,9 +213,9 @@ export default function Home() {
             <div className="coordination-focus-label" data-reveal="focus-label">
               <p className="section-kicker" style={{fontSize: '16px'}}>Focos de coordenação</p>
               <h2 id="coordination-focus-title">Três frentes para levar <em>método à prática.</em></h2>
-              <p className="coordination-focus-note" style={{fontSize: '16px', marginTop: '18px'}}>Conteúdo, treinamento e campo organizados para apoiar decisões, capacitar equipes e acompanhar a execução.</p>
+              <p className="coordination-focus-note" style={{fontSize: '16px'}}>Conteúdo, treinamento e campo organizados para apoiar decisões, capacitar equipes e acompanhar a execução.</p>
             </div>
-            <div className="coordination-focus-grid" style={{ paddingLeft: '237px', width: '1005px' }}>
+            <div className="coordination-focus-grid">
               <article className="coordination-focus-item" data-reveal="focus-item" data-reveal-delay="80">
                 <div className="coordination-focus-item-top"><span style={{fontSize: '16px'}}>01</span></div>
                 <div className="coordination-focus-item-body">

@@ -770,6 +770,11 @@
 - [x] Preservar escala do título, alinhamento e conteúdo em desktop e mobile
 - [x] Validar captura em 375px, testes e build
 
+## Correção real do espaço em Focos mobile
+- [x] Identificar e remover a regra residual que mantém o vazio visível após a headline
+- [x] Compactar o bloco de abertura mantendo título, texto e lista integralmente legíveis
+- [x] Validar no mesmo enquadramento de 375px, testes e build
+
 ## Correção pontual da transição mobile
 - [x] Fazer o item 03 da seção Sobre mim terminar integralmente antes do hero vermelho
 - [x] Preservar a composição restaurada sem alterar tipografia, cores ou cabeçalho

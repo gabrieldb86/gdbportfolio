@@ -3441,12 +3441,27 @@ a.proof-link, a.behance-link, a.text-link, .service-detail a {
 }
 
 /* Focos de Coordenação: o texto de apoio acompanha a altura real do título no mobile. */
+@media (min-width: 901px) {
+  .home-revision .coordination-focus-grid {
+    width: 1005px;
+    padding-left: 237px;
+  }
+}
 @media (max-width: 900px) {
+  .home-revision .coordination-focus-label {
+    padding-bottom: 10px !important;
+  }
   .home-revision .coordination-focus-label h2 {
     height: auto !important;
+    margin-bottom: 0 !important;
   }
   .home-revision .coordination-focus-note {
-    margin-top: 22px !important;
+    margin-top: 16px !important;
+  }
+  .home-revision .coordination-focus-grid {
+    width: auto !important;
+    margin-top: 18px !important;
+    padding-left: 0 !important;
   }
 }
 
