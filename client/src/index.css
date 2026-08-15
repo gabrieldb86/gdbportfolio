@@ -338,6 +338,7 @@ h1 em, h2 em { color: var(--primary); font-style: italic; }
 .cv-language-list div { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; border-bottom: 1px solid rgba(93, 85, 79, .22); padding-bottom: 9px; }
 .cv-language-list b { color: #292522; font-size: 13px; }
 .cv-language-list span { color: #7e4b45; font-size: 10px; letter-spacing: .08em; text-transform: uppercase; }
+.cv-languages-block { border-bottom: 0; }
 .cv-experience-section { display: grid; grid-template-columns: 100px 1fr; gap: 4vw; background: #1c1b1a; color: #f4eee6; }
 .cv-experience-section .section-kicker { color: #cb8178; }
 .cv-experience-content { display: grid; grid-template-columns: minmax(220px, .72fr) 1.25fr; gap: 9vw; }

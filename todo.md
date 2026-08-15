@@ -722,12 +722,20 @@
 ## Roteiro anexado — dados e CV
 - [x] Confirmar quais blocos do roteiro anexado estão autorizados sem alterar o visual: somente métricas; demais ajustes permanecem inalterados
 - [x] Corrigir métricas e manter a data SPOT Out 2025 — Ago 2026 conforme confirmação do usuário
-- [ ] Tratar sobreposição do CTA e reduzir bullets apenas com autorização explícita de ajuste móvel e texto
+- [x] Manter CTA e extensão dos bullets inalterados, pois o usuário não autorizou ajustes visuais ou de texto nesta rodada
 
 ## Atualização autorizada — métricas
 - [x] Substituir 300 mil e 300K por 114 mil e 114K+ em conteúdo, metadados e dados estruturados
 - [x] Manter a experiência SPOT como Out 2025 — Ago 2026, conforme confirmação do usuário
 - [x] Confirmar zero ocorrências de 300 mil/300K em conteúdo publicado e validar testes e build
+
+## Correções pontuais do CV
+- [x] Substituir “&” por “e” nos textos destacados das áreas de atuação e da apresentação do CV
+- [x] Descrever EMSINA como plataforma criada com IA e separar Microsiga e Datasul como ERPs TOTVS
+- [x] Remover apenas a faixa excedente após a seção Idiomas
+- [x] Retirar o travessão final de todas as datas de experiência
+- [x] Corrigir o ícone Behance do rodapé para coincidir com o ícone da página inicial
+- [x] Validar em mobile, desktop, testes e build sem alterar elementos não solicitados
 
 ## Correção pontual da transição mobile
 - [x] Fazer o item 03 da seção Sobre mim terminar integralmente antes do hero vermelho

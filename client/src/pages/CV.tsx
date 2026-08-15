@@ -99,8 +99,8 @@ const capabilities = [
   "Coordenação de Trade Marketing e Performance de Campo",
   "Coordenação de Conteúdo e Treinamento",
   "Coordenação de T&D de Pessoas",
-  "Instructional Design & E-learning",
-  "Campanhas de Incentivo & Modelagem Financeira",
+  "Instructional Design e E-learning",
+  "Campanhas de Incentivo e Modelagem Financeira",
   "Dashboards, KPIs e Análise de Dados",
 ];
 
@@ -113,7 +113,8 @@ const education = {
 const methodologies = ["ADDIE", "Kirkpatrick", "Design Thinking", "Learning Experience Design (LXD)", "Microlearning", "Blended Learning", "Gamificação Instrucional", "70/20/10", "6D", "9Box", "Andragogia"];
 
 const tools = {
-  LMS: ["Moodle", "EMSINA", "Microsiga", "Datasul"],
+  LMS: ["Moodle", "EMSINA — plataforma criada com IA para controle de treinamento e capacitação"],
+  "ERP TOTVS": ["Microsiga", "Datasul"],
   Produtividade: ["Excel Avançado (VBA)", "Google Sheets", "PowerPoint", "Trello", "Asana", "ClickUp", "Notion", "Jira"],
   "Audiovisual e IA": ["Adobe (Photoshop, Premiere, After Effects)", "Final Cut Pro", "ChatGPT / Claude", "Midjourney / DALL-E"],
   "Campo e Trade Marketing": ["S3", "Involves (SFA)", "Dashboards"],
@@ -175,7 +176,7 @@ export default function CV() {
             <div className="cv-hero-copy">
               <p className="section-kicker">Experiência profissional</p>
               <h1>Conteúdo que<br /><em>move pessoas.</em></h1>
-              <p className="cv-lead">Profissional com 17 anos de experiência em conteúdo, treinamento e trade marketing, com mais de 114K+ pessoas capacitadas ao longo da carreira. Busco uma posição de coordenação em Conteúdo &amp; Treinamento, Trade Marketing &amp; Performance de Campo, ou Treinamento &amp; Desenvolvimento de Pessoas.</p>
+              <p className="cv-lead">Profissional com 17 anos de experiência em conteúdo, treinamento e trade marketing, com mais de 114K+ pessoas capacitadas ao longo da carreira. Busco uma posição de coordenação em Conteúdo e Treinamento, Trade Marketing e Performance de Campo, ou Treinamento e Desenvolvimento de Pessoas.</p>
               <div className="cv-actions" id="cv-actions">
                 <a className="submit-button cv-contact-button" href="/#contact">Conversar sobre uma oportunidade <ArrowUpRight size={16} /></a>
                 <button className="print-button" type="button" onClick={() => window.print()}><Printer size={15} /> Imprimir CV</button>
@@ -238,7 +239,7 @@ export default function CV() {
             <div className="experience-list">
               {experience.map((item) => (
                 <article className="experience-item" key={item.company}>
-                  <div className="experience-meta"><span>{item.period}</span><i /></div>
+                  <div className="experience-meta"><span>{item.period}</span></div>
                   <div className="experience-body"><h3>{item.role}</h3><p className="experience-company">{item.company}</p><p className="experience-area">{item.area}</p><ul>{item.points.map((point) => <li key={point}>{point}</li>)}</ul></div>
                 </article>
               ))}
@@ -256,7 +257,7 @@ export default function CV() {
 
       <footer className="site-footer">
         <a className="footer-brand" href="/" onClick={scrollTop}><span className="footer-avatar"><img src={siteConfig.railImage} alt="" onError={markBrokenImage} /></span><span>Gabriel Danino Basilio</span></a>
-        <div className="footer-socials"><a href="https://www.linkedin.com/in/gabrieldb86" target="_blank" rel="noreferrer" aria-label="LinkedIn"><Linkedin size={17} /></a><a href="https://www.behance.net/gabrieldb86" target="_blank" rel="noreferrer" aria-label="Behance"><ArrowUpRight size={17} /></a><a href="https://wa.me/5511945747353" target="_blank" rel="noreferrer" aria-label="WhatsApp"><MessageCircle size={17} /></a></div>
+        <div className="footer-socials"><a href="https://www.linkedin.com/in/gabrieldb86" target="_blank" rel="noreferrer" aria-label="LinkedIn"><Linkedin size={18} strokeWidth={1.75} /></a><a href="https://www.behance.net/gabrieldb86" target="_blank" rel="noreferrer" aria-label="Behance"><div style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", width: "18px", height: "18px", border: "1.75px solid currentColor", borderRadius: "3px", fontSize: "10px", fontWeight: 800, lineHeight: 1 }}>Be</div></a><a href="https://wa.me/5511945747353" target="_blank" rel="noreferrer" aria-label="WhatsApp"><MessageCircle size={18} strokeWidth={1.75} /></a></div>
         <span className="footer-credit">CV · Gabriel Danino Basilio</span>
       </footer>
     </div>
