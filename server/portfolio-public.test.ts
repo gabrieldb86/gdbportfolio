@@ -95,6 +95,8 @@ describe("public portfolio metrics and privacy", () => {
 
     expect(css).toContain("--reference-page-gutter: clamp(168px, 14.5vw, 260px)");
     expect(css).toContain("--reference-content-gutter: calc(var(--reference-page-gutter) - 54px)");
+    expect(css).toContain(".home-revision .hero-redesign-copy");
+    expect(css).toContain("max-width: 440px !important");
     expect(css).toContain("@media (min-width: 901px)");
     expect(css).toContain("--editorial-axis: 24px");
   });

@@ -793,6 +793,10 @@
 - [x] Reduzir apenas escala desktop de elementos que ultrapassem a área útil
 - [x] Confirmar o mobile intacto, validar testes e build
 
+## Ajuste de segurança do hero com margens desktop
+- [x] Limitar a coluna textual desktop do hero para que descrições longas não avancem sobre a imagem em larguras intermediárias
+- [x] Confirmar novamente os enquadramentos desktop e mobile antes do checkpoint complementar
+
 ## Correção pontual da transição mobile
 - [x] Fazer o item 03 da seção Sobre mim terminar integralmente antes do hero vermelho
 - [x] Preservar a composição restaurada sem alterar tipografia, cores ou cabeçalho

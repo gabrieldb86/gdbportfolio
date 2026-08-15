@@ -3731,4 +3731,8 @@ a.proof-link, a.behance-link, a.text-link, .service-detail a {
   .home-revision .hero-redesign-copy h1 {
     font-size: clamp(4rem, 5.8vw, 6.8rem) !important;
   }
+
+  .home-revision .hero-redesign-copy {
+    max-width: 440px !important;
+  }
 }
