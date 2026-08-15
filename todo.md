@@ -964,3 +964,9 @@
 - [x] Identificar o elemento ou estilo que cria a faixa escura entre princípios e hero vermelho
 - [x] Remover a faixa sem margem negativa, corte ou sobreposição do item 03
 - [x] Validar 375px, desktop, testes e build
+
+## Reversão e normalização da edição visual
+- [x] Restaurar o projeto para o checkpoint e3a02f5e
+- [x] Remover estilos inline duplicados gerados pela edição visual em Home.tsx
+- [x] Garantir que o mobile permaneça inteiramente intocado
+- [x] Executar testes, TypeScript e build com sucesso
