@@ -719,6 +719,16 @@
 - [x] Alinhar todos os itens pelo mesmo eixo à esquerda e remover divisórias desalinhadas
 - [x] Preservar a composição desktop e validar mobile, testes e build
 
+## Roteiro anexado — dados e CV
+- [x] Confirmar quais blocos do roteiro anexado estão autorizados sem alterar o visual: somente métricas; demais ajustes permanecem inalterados
+- [x] Corrigir métricas e manter a data SPOT Out 2025 — Ago 2026 conforme confirmação do usuário
+- [ ] Tratar sobreposição do CTA e reduzir bullets apenas com autorização explícita de ajuste móvel e texto
+
+## Atualização autorizada — métricas
+- [x] Substituir 300 mil e 300K por 114 mil e 114K+ em conteúdo, metadados e dados estruturados
+- [x] Manter a experiência SPOT como Out 2025 — Ago 2026, conforme confirmação do usuário
+- [x] Confirmar zero ocorrências de 300 mil/300K em conteúdo publicado e validar testes e build
+
 ## Correção pontual da transição mobile
 - [x] Fazer o item 03 da seção Sobre mim terminar integralmente antes do hero vermelho
 - [x] Preservar a composição restaurada sem alterar tipografia, cores ou cabeçalho

@@ -273,7 +273,7 @@ export default function Home() {
                   <strong style={{fontSize: '18px'}}>Conteúdo &amp; Treinamento</strong>
                   <p style={{fontSize: '16px'}}>Instructional Design com ADDIE, Kirkpatrick e Learning Experience Design (LXD).</p>
                   <ul className="coordination-focus-highlights">
-                    <li style={{fontSize: '14px'}}>114 mil+ pessoas capacitadas ao longo da carreira</li>
+                    <li style={{fontSize: '14px'}}>114K+ pessoas capacitadas ao longo da carreira</li>
                     <li style={{fontSize: '14px'}}>8 anos como pioneiro do Today at Apple no Brasil</li>
                     <li style={{fontSize: '14px'}}>Ferramenta própria de avaliação com IA generativa</li>
                     <li style={{fontSize: '14px'}}>Trilhas de aprendizagem, e-learning e microlearning</li>
@@ -412,7 +412,7 @@ export default function Home() {
             <div className="about-copy" data-reveal="about-copy">
               <p className="section-kicker" style={{fontSize: '16px'}}>Sobre mim</p>
               <h2 id="about-title">Olá, eu sou<br /><em>Gabriel.</em></h2>
-              <p className="about-lead" style={{fontSize: '16px'}}>Tenho 17 anos de experiência em conteúdo, treinamento e trade marketing — e mais de 114K pessoas capacitadas ao longo da carreira, incluindo 8 anos como pioneiro do Today at Apple no Brasil.</p>
+              <p className="about-lead" style={{fontSize: '16px'}}>Tenho 17 anos de experiência em conteúdo, treinamento e trade marketing — e mais de 114K+ pessoas capacitadas ao longo da carreira, incluindo 8 anos como pioneiro do Today at Apple no Brasil.</p>
               <p style={{fontSize: '16px'}}>Minha trajetória cruza coordenação de treinamento, gestão de indicadores de campo e produção de conteúdo — da Apple à SPOT/Grupo EMS. Busco uma próxima posição de coordenação em Conteúdo &amp; Treinamento, Trade Marketing &amp; Performance de Campo, ou Treinamento &amp; Desenvolvimento de Pessoas, aplicando metodologias como ADDIE, Kirkpatrick e Design Thinking.</p>
               <div className="about-skill-list" aria-label="Áreas de atuação"><span>Instructional Design</span><span>Trade Marketing</span><span>Gestão de Campo</span><span>ADDIE / Kirkpatrick</span><span>IA Generativa</span><span>Dashboards &amp; KPIs</span></div>
               <div className="about-principles" aria-label="Princípios de coordenação">

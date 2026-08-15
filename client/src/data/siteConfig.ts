@@ -217,7 +217,7 @@ export const defaultSiteConfig: SiteConfig = {
     ["03", "Treinamento & Desenvolvimento de Pessoas", "Onboarding, avaliação de desempenho, coordenação de equipes de campo e programas de capacitação."],
   ],
   serviceDetails: {
-    "01": "Desenho experiências de aprendizagem com ADDIE, Kirkpatrick e Learning Experience Design (LXD) — da estratégia à trilha, do e-learning à facilitação presencial. Já apliquei essa abordagem para mais de 114K pessoas ao longo da carreira, incluindo 8 anos como pioneiro do Today at Apple no Brasil.",
+    "01": "Desenho experiências de aprendizagem com ADDIE, Kirkpatrick e Learning Experience Design (LXD) — da estratégia à trilha, do e-learning à facilitação presencial. Já apliquei essa abordagem para mais de 114K+ pessoas ao longo da carreira, incluindo 8 anos como pioneiro do Today at Apple no Brasil.",
     "02": "Construo campanhas de incentivo de ponta a ponta — briefing, modelagem financeira e análise de risco — e dashboards interativos para monitorar KPIs de força de campo. Na SPOT/EMS, isso significou acompanhar mais de 130 promotores em tempo real.",
     "03": "Coordeno equipes de campo com onboarding estruturado, ciclos de PDCA, avaliação de desempenho e metodologia 9Box. Já treinei e integrei equipes em redes como Apple Premium Resellers, Ragtech e ITM Channel Marketing, com taxas de retenção de até 90%.",
   },
@@ -249,7 +249,7 @@ function migrateHero(savedHero: Partial<SiteConfig["hero"]> | undefined) {
 
 function migrateServiceDetails(savedDetails: Record<string, string> | undefined) {
   const details = { ...defaultSiteConfig.serviceDetails, ...savedDetails };
-  return Object.fromEntries(Object.entries(details).map(([key, value]) => [key, value.replace(/(?:100|300)\s*(?:K|mil)\+?/i, "114K")]));
+  return Object.fromEntries(Object.entries(details).map(([key, value]) => [key, value.replace(/(?:100|300)\s*(?:K|mil)\+?/i, "114K+")]));
 }
 
 export function getSiteConfig(): SiteConfig {

@@ -175,7 +175,7 @@ export default function CV() {
             <div className="cv-hero-copy">
               <p className="section-kicker">Experiência profissional</p>
               <h1>Conteúdo que<br /><em>move pessoas.</em></h1>
-              <p className="cv-lead">Profissional com 17 anos de experiência em conteúdo, treinamento e trade marketing, com mais de 114K pessoas capacitadas ao longo da carreira. Busco uma posição de coordenação em Conteúdo &amp; Treinamento, Trade Marketing &amp; Performance de Campo, ou Treinamento &amp; Desenvolvimento de Pessoas.</p>
+              <p className="cv-lead">Profissional com 17 anos de experiência em conteúdo, treinamento e trade marketing, com mais de 114K+ pessoas capacitadas ao longo da carreira. Busco uma posição de coordenação em Conteúdo &amp; Treinamento, Trade Marketing &amp; Performance de Campo, ou Treinamento &amp; Desenvolvimento de Pessoas.</p>
               <div className="cv-actions" id="cv-actions">
                 <a className="submit-button cv-contact-button" href="/#contact">Conversar sobre uma oportunidade <ArrowUpRight size={16} /></a>
                 <button className="print-button" type="button" onClick={() => window.print()}><Printer size={15} /> Imprimir CV</button>
