@@ -742,6 +742,11 @@
 - [x] Fazer o CTA “Conversar sobre uma oportunidade” do CV abrir contato direto por WhatsApp
 - [x] Validar o ajuste no mobile, o destino do CTA, testes e build
 
+## CTA do currículo na Home
+- [x] Trocar o rótulo “Baixar CV” por “Ver CV” na página inicial
+- [x] Confirmar que o CTA abre diretamente a rota pública `/cv`
+- [x] Validar navegação, testes e build
+
 ## Correção pontual da transição mobile
 - [x] Fazer o item 03 da seção Sobre mim terminar integralmente antes do hero vermelho
 - [x] Preservar a composição restaurada sem alterar tipografia, cores ou cabeçalho

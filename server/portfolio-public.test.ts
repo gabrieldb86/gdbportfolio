@@ -38,4 +38,11 @@ describe("public portfolio metrics and privacy", () => {
     expect(cvSource).toContain('trackPortfolioEvent("contact_whatsapp")');
     expect(cvSource).not.toContain('href="/#contact">Conversar sobre uma oportunidade');
   });
+
+  it("labels the Home CV action as navigation instead of a download", () => {
+    const homeSource = readProjectFile("client/src/pages/Home.tsx");
+
+    expect(homeSource).toContain('<Link href="/cv" className="proof-link proof-link-alt"><span>Ver CV</span>');
+    expect(homeSource).not.toContain("Baixar CV");
+  });
 });

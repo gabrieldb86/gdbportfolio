@@ -347,7 +347,7 @@ export default function Home() {
               <div className="proof-actions">
                 <FileText className="proof-action-icon" size={20} strokeWidth={1.3} aria-hidden="true" />
                 <Link href="/cv" className="proof-link"><span>Abrir trajetória</span><ArrowUpRight size={16} aria-hidden="true" /></Link>
-                <Link href="/cv" className="proof-link proof-link-alt"><span>Baixar CV</span><ArrowUpRight size={16} aria-hidden="true" /></Link>
+                <Link href="/cv" className="proof-link proof-link-alt"><span>Ver CV</span><ArrowUpRight size={16} aria-hidden="true" /></Link>
               </div>
             </div>
           </div>
