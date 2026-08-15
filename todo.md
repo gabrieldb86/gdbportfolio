@@ -782,10 +782,10 @@
 - [x] Validar alinhamento, responsividade, testes e build
 
 ## Margens laterais por referência externa
-- [ ] Analisar visualmente a proporção das margens laterais da referência fornecida
-- [ ] Aplicar margens esquerda e direita proporcionais em todas as rotas públicas
-- [ ] Ajustar escalas, larguras e quebras que excedam a área útil
-- [ ] Validar desktop, mobile, testes e build
+- [x] Analisar visualmente a proporção das margens laterais da referência fornecida
+- [x] Aplicar margens esquerda e direita proporcionais em todas as rotas públicas
+- [x] Ajustar escalas, larguras e quebras que excedam a área útil
+- [x] Validar desktop, mobile, testes e build
 
 ## Correção pontual da transição mobile
 - [x] Fazer o item 03 da seção Sobre mim terminar integralmente antes do hero vermelho

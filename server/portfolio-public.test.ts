@@ -74,9 +74,12 @@ describe("public portfolio metrics and privacy", () => {
     const css = readProjectFile("client/src/index.css");
     const homeSource = readProjectFile("client/src/pages/Home.tsx");
 
-    expect(css).toContain("--editorial-axis: 74px");
-    expect(css).toContain("--editorial-page-axis: calc(54px + var(--editorial-axis))");
+    expect(css).toContain("--editorial-page-axis: clamp(128px, 14.5vw, 260px)");
+    expect(css).toContain("--editorial-axis: calc(var(--editorial-page-axis) - 54px)");
+    expect(css).toContain("--editorial-axis: 24px");
     expect(css).toContain(".privacy-page .privacy-main");
+    expect(css).toContain(".home-revision .hero-redesign-copy h1");
+    expect(css).toContain(".cv-page .section-pad");
     expect(homeSource).toContain('className="header-avatar"');
   });
 });
