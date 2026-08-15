@@ -3697,3 +3697,38 @@ a.proof-link, a.behance-link, a.text-link, .service-detail a {
     text-align: left !important;
   }
 }
+
+/* Margens editoriais de referência: aplicadas somente ao conteúdo desktop, nunca ao trilho ou ao mobile. */
+@media (min-width: 901px) {
+  .home-revision {
+    --reference-page-gutter: clamp(168px, 14.5vw, 260px);
+    --reference-content-gutter: calc(var(--reference-page-gutter) - 54px);
+  }
+
+  .home-revision .site-header,
+  .home-revision .site-footer {
+    padding-left: var(--reference-page-gutter) !important;
+    padding-right: var(--reference-page-gutter) !important;
+  }
+
+  .home-revision .hero-redesign,
+  .home-revision .coordination-focus-band,
+  .home-revision .manifesto-section,
+  .home-revision .work-section,
+  .home-revision .services-section,
+  .home-revision .about-section,
+  .home-revision .contact-section,
+  .home-revision .statement-copy {
+    padding-left: var(--reference-content-gutter) !important;
+    padding-right: var(--reference-page-gutter) !important;
+  }
+
+  .home-revision .recruiter-proof-layout {
+    padding-left: var(--reference-content-gutter) !important;
+    padding-right: var(--reference-page-gutter) !important;
+  }
+
+  .home-revision .hero-redesign-copy h1 {
+    font-size: clamp(4rem, 5.8vw, 6.8rem) !important;
+  }
+}

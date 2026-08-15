@@ -787,6 +787,12 @@
 - [x] Separar o texto de apoio e a headline da seção vermelha sem encavalamento
 - [x] Validar as três correções em desktop e mobile, testes e build
 
+## Margens desktop — reexecução controlada
+- [x] Aplicar margens laterais de referência somente em contêineres desktop internos
+- [x] Preservar integralmente a barra lateral, o avatar e o cabeçalho já corrigidos
+- [x] Reduzir apenas escala desktop de elementos que ultrapassem a área útil
+- [x] Confirmar o mobile intacto, validar testes e build
+
 ## Correção pontual da transição mobile
 - [x] Fazer o item 03 da seção Sobre mim terminar integralmente antes do hero vermelho
 - [x] Preservar a composição restaurada sem alterar tipografia, cores ou cabeçalho

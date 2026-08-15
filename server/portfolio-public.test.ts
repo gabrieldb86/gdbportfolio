@@ -89,4 +89,13 @@ describe("public portfolio metrics and privacy", () => {
     expect(css).toContain("height: auto !important");
     expect(css).toContain(".home-revision .coordination-focus-label h2");
   });
+
+  it("applies the reference gutter only on desktop while retaining the mobile axis", () => {
+    const css = readProjectFile("client/src/index.css");
+
+    expect(css).toContain("--reference-page-gutter: clamp(168px, 14.5vw, 260px)");
+    expect(css).toContain("--reference-content-gutter: calc(var(--reference-page-gutter) - 54px)");
+    expect(css).toContain("@media (min-width: 901px)");
+    expect(css).toContain("--editorial-axis: 24px");
+  });
 });
