@@ -802,6 +802,12 @@
 - [x] Revalidar desktop e mobile e salvar a revisão final das margens
 - [x] Remover o recuo interno residual do painel do hero somente no desktop
 
+## Régua única para conteúdos à direita — desktop
+- [x] Identificar a posição de início da coluna direita no bloco de Focos de Coordenação usado como referência
+- [x] Alinhar a essa mesma régua os conteúdos direitos de métricas, manifesto, serviços e contato apenas acima de 900px
+- [x] Preservar barra lateral, escala de leitura e todas as regras mobile sem modificação
+- [x] Validar visualmente todas as seções, testes e build antes do checkpoint
+
 ## Correção pontual da transição mobile
 - [x] Fazer o item 03 da seção Sobre mim terminar integralmente antes do hero vermelho
 - [x] Preservar a composição restaurada sem alterar tipografia, cores ou cabeçalho
