@@ -765,6 +765,11 @@
 - [x] Produzir recomendações tecnológicas priorizadas por impacto, custo e compatibilidade
 - [x] Validar desktop, mobile, acessibilidade, testes e build antes do checkpoint
 
+## Espaçamento mobile — Focos de Coordenação
+- [x] Reduzir o intervalo vertical entre o título e o texto de apoio da abertura dos Focos
+- [x] Preservar escala do título, alinhamento e conteúdo em desktop e mobile
+- [x] Validar captura em 375px, testes e build
+
 ## Correção pontual da transição mobile
 - [x] Fazer o item 03 da seção Sobre mim terminar integralmente antes do hero vermelho
 - [x] Preservar a composição restaurada sem alterar tipografia, cores ou cabeçalho

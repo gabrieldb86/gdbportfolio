@@ -3440,10 +3440,13 @@ a.proof-link, a.behance-link, a.text-link, .service-detail a {
   visibility: hidden !important;
 }
 
-/* Focos de Coordenação: reduz em 30% o respiro entre o título e o texto de apoio no mobile. */
+/* Focos de Coordenação: o texto de apoio acompanha a altura real do título no mobile. */
 @media (max-width: 900px) {
   .home-revision .coordination-focus-label h2 {
-    height: 332px !important;
+    height: auto !important;
+  }
+  .home-revision .coordination-focus-note {
+    margin-top: 22px !important;
   }
 }
 
