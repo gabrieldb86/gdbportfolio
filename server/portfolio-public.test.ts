@@ -29,4 +29,13 @@ describe("public portfolio metrics and privacy", () => {
     expect(cvSource).not.toMatch(/href=["']tel:/i);
     expect(cvSource).toContain("wa.me/5511945747353");
   });
+
+  it("keeps the CV opportunity CTA connected to WhatsApp with a prepared message", () => {
+    const cvSource = readProjectFile("client/src/pages/CV.tsx");
+
+    expect(cvSource).toContain("Conversar sobre uma oportunidade");
+    expect(cvSource).toContain("https://wa.me/5511945747353?text=");
+    expect(cvSource).toContain('trackPortfolioEvent("contact_whatsapp")');
+    expect(cvSource).not.toContain('href="/#contact">Conversar sobre uma oportunidade');
+  });
 });

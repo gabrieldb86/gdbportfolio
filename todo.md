@@ -737,6 +737,11 @@
 - [x] Corrigir o ícone Behance do rodapé para coincidir com o ícone da página inicial
 - [x] Validar em mobile, desktop, testes e build sem alterar elementos não solicitados
 
+## Ajustes de espaçamento e contato
+- [x] Reduzir em 30% o espaço vertical entre o título e o texto de Focos de Coordenação no mobile
+- [x] Fazer o CTA “Conversar sobre uma oportunidade” do CV abrir contato direto por WhatsApp
+- [x] Validar o ajuste no mobile, o destino do CTA, testes e build
+
 ## Correção pontual da transição mobile
 - [x] Fazer o item 03 da seção Sobre mim terminar integralmente antes do hero vermelho
 - [x] Preservar a composição restaurada sem alterar tipografia, cores ou cabeçalho

@@ -3440,6 +3440,13 @@ a.proof-link, a.behance-link, a.text-link, .service-detail a {
   visibility: hidden !important;
 }
 
+/* Focos de Coordenação: reduz em 30% o respiro entre o título e o texto de apoio no mobile. */
+@media (max-width: 900px) {
+  .home-revision .coordination-focus-label h2 {
+    height: 332px !important;
+  }
+}
+
 
 /* TRANSIÇÃO FINAL — cobre somente a área escura residual, sem alterar o fluxo. */
 @media (max-width: 900px) {

@@ -3,6 +3,7 @@ import { type CSSProperties, type SyntheticEvent, useEffect } from "react";
 import { setPageMetadata } from "@/lib/seo";
 import { ArrowLeft, ArrowUpRight, Linkedin, Mail, MapPin, MessageCircle, Printer } from "lucide-react";
 import { getSiteConfig } from "@/data/siteConfig";
+import { trackPortfolioEvent } from "@/lib/analytics";
 
 const experience = [
   {
@@ -178,7 +179,7 @@ export default function CV() {
               <h1>Conteúdo que<br /><em>move pessoas.</em></h1>
               <p className="cv-lead">Profissional com 17 anos de experiência em conteúdo, treinamento e trade marketing, com mais de 114K+ pessoas capacitadas ao longo da carreira. Busco uma posição de coordenação em Conteúdo e Treinamento, Trade Marketing e Performance de Campo, ou Treinamento e Desenvolvimento de Pessoas.</p>
               <div className="cv-actions" id="cv-actions">
-                <a className="submit-button cv-contact-button" href="/#contact">Conversar sobre uma oportunidade <ArrowUpRight size={16} /></a>
+                <a className="submit-button cv-contact-button" href="https://wa.me/5511945747353?text=Ol%C3%A1%2C%20Gabriel.%20Gostaria%20de%20conversar%20sobre%20uma%20oportunidade." target="_blank" rel="noreferrer" data-umami-event="whatsapp-click" onClick={() => trackPortfolioEvent("contact_whatsapp")}>Conversar sobre uma oportunidade <ArrowUpRight size={16} /></a>
                 <button className="print-button" type="button" onClick={() => window.print()}><Printer size={15} /> Imprimir CV</button>
               </div>
             </div>
