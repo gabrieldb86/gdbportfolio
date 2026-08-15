@@ -3626,3 +3626,74 @@ a.proof-link, a.behance-link, a.text-link, .service-detail a {
     padding-left: var(--editorial-axis) !important;
   }
 }
+
+/* Correção efetiva dos três prints: o trilho mantém o avatar e os heróis vermelhos voltam ao fluxo editorial. */
+@media (min-width: 901px) {
+  .home-revision .side-rail .rail-image-block {
+    display: grid !important;
+  }
+
+  .home-revision .coordination-focus-band {
+    min-height: 0 !important;
+    padding-top: clamp(72px, 7vw, 112px) !important;
+    padding-bottom: clamp(72px, 7vw, 112px) !important;
+  }
+
+  .home-revision .coordination-focus-layout {
+    max-width: none !important;
+    grid-template-columns: minmax(320px, .88fr) minmax(420px, 1.12fr) !important;
+    align-items: start !important;
+  }
+
+  .home-revision .coordination-focus-label,
+  .home-revision .coordination-focus-label h2 {
+    width: auto !important;
+    height: auto !important;
+    max-width: 640px !important;
+  }
+
+  .home-revision .coordination-focus-label h2 {
+    font-size: clamp(4.4rem, 6.2vw, 7.2rem) !important;
+    line-height: .84 !important;
+  }
+
+  .home-revision .coordination-focus-note {
+    position: static !important;
+    max-width: 360px !important;
+    margin: 34px 0 0 !important;
+  }
+
+  .home-revision .coordination-focus-grid {
+    width: auto !important;
+    margin-top: 0 !important;
+    padding-left: 0 !important;
+  }
+
+  .home-revision .recruiter-proof-wrap {
+    height: auto !important;
+    padding-top: clamp(80px, 7vw, 112px) !important;
+    padding-bottom: clamp(80px, 7vw, 112px) !important;
+  }
+
+  .home-revision .recruiter-proof-layout {
+    width: auto !important;
+    max-width: none !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 8vw 0 var(--editorial-axis) !important;
+    grid-template-columns: minmax(280px, .78fr) minmax(0, 1.22fr) !important;
+    align-items: start !important;
+  }
+
+  .home-revision .recruiter-proof-header {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    text-align: left !important;
+  }
+
+  .home-revision .recruiter-proof-header .section-kicker,
+  .home-revision .recruiter-proof-title,
+  .home-revision .recruiter-proof-desc {
+    text-align: left !important;
+  }
+}

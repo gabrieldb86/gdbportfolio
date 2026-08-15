@@ -79,4 +79,14 @@ describe("public portfolio metrics and privacy", () => {
     expect(css).toContain(".privacy-page .privacy-main");
     expect(homeSource).toContain('className="header-avatar"');
   });
+
+  it("keeps the rail avatar visible and red sections in document flow on desktop", () => {
+    const css = readProjectFile("client/src/index.css");
+
+    expect(css).toContain(".home-revision .side-rail .rail-image-block");
+    expect(css).toContain("display: grid !important");
+    expect(css).toContain(".home-revision .recruiter-proof-wrap");
+    expect(css).toContain("height: auto !important");
+    expect(css).toContain(".home-revision .coordination-focus-label h2");
+  });
 });

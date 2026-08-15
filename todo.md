@@ -781,6 +781,12 @@
 - [x] Aplicar o eixo à Home, CV, cases, privacidade e rodapés, incluindo desktop e mobile
 - [x] Validar alinhamento, responsividade, testes e build
 
+## Correção efetiva dos três prints
+- [x] Restaurar o avatar dentro da barra lateral, mantendo a marca do cabeçalho sem duplicidade visual indevida
+- [x] Remover os overrides que deslocaram a Home e recuperar o eixo visual aprovado
+- [x] Separar o texto de apoio e a headline da seção vermelha sem encavalamento
+- [x] Validar as três correções em desktop e mobile, testes e build
+
 ## Correção pontual da transição mobile
 - [x] Fazer o item 03 da seção Sobre mim terminar integralmente antes do hero vermelho
 - [x] Preservar a composição restaurada sem alterar tipografia, cores ou cabeçalho
