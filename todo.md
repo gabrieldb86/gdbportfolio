@@ -964,3 +964,9 @@
 - [x] Identificar o elemento ou estilo que cria a faixa escura entre princípios e hero vermelho
 - [x] Remover a faixa sem margem negativa, corte ou sobreposição do item 03
 - [x] Validar 375px, desktop, testes e build
+
+## Otimização de peso e memória do carregamento
+- [x] Medir bundle, HTML inicial, imagens, fontes e scripts carregados
+- [x] Remover ou adiar recursos não críticos sem alterar visual ou mobile
+- [x] Otimizar carregamento de imagens e divisões de código seguras
+- [x] Validar peso final, desktop, mobile, testes e build

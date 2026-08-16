@@ -102,4 +102,15 @@ describe("public portfolio metrics and privacy", () => {
     expect(css).toContain("@media (min-width: 901px)");
     expect(css).toContain("--editorial-axis: 24px");
   });
+
+  it("defers protected editing and below-the-fold portfolio imagery from the public initial load", () => {
+    const appSource = readProjectFile("client/src/App.tsx");
+    const homeSource = readProjectFile("client/src/pages/Home.tsx");
+
+    expect(appSource).toContain('lazy(() => import("@/pages/Editor"))');
+    expect(appSource).toContain("<Suspense fallback={null}><Editor /></Suspense>");
+    expect(homeSource).toContain('className="project-image"');
+    expect(homeSource).toContain('loading="lazy" fetchPriority="low"');
+    expect(homeSource).toContain('siteConfig.trainingImage');
+  });
 });

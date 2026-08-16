@@ -64,7 +64,7 @@ function ProjectCard({ project, revealDelay }: { project: ProjectConfig; revealD
       onClick={() => trackPortfolioEvent(isLocalCase ? "project_case_open" : "portfolio_behance", { project: project.number })}
     >
       <div className="project-image-wrap" style={{ aspectRatio: project.aspectRatio }}>
-        {genericImageFailed ? <div className="project-image-fallback" role="img" aria-label={`Prévia indisponível: ${project.title}`} style={{ backgroundImage: `linear-gradient(135deg, rgba(38, 35, 33, .62), rgba(183, 37, 41, .52)), url("${genericImage}")`, backgroundPosition: "center", backgroundSize: "cover" }}><span>{project.number} · projeto</span><strong>{project.title}</strong><small>Prévia indisponível</small></div> : <img src={imageSource} alt={project.title} className="project-image" width="800" height="600" style={{ objectPosition: project.objectPosition }} loading={project.number === "01" ? "eager" : "lazy"} decoding="async" onError={() => { if (imageFailed) setGenericImageFailed(true); else setImageFailed(true); }} />}
+        {genericImageFailed ? <div className="project-image-fallback" role="img" aria-label={`Prévia indisponível: ${project.title}`} style={{ backgroundImage: `linear-gradient(135deg, rgba(38, 35, 33, .62), rgba(183, 37, 41, .52)), url("${genericImage}")`, backgroundPosition: "center", backgroundSize: "cover" }}><span>{project.number} · projeto</span><strong>{project.title}</strong><small>Prévia indisponível</small></div> : <img src={imageSource} alt={project.title} className="project-image" width="800" height="600" style={{ objectPosition: project.objectPosition }} loading="lazy" fetchPriority="low" decoding="async" onError={() => { if (imageFailed) setGenericImageFailed(true); else setImageFailed(true); }} />}
         <span className="project-arrow" aria-hidden="true">
           <ArrowUpRight size={19} strokeWidth={1.5} />
         </span>
@@ -356,7 +356,7 @@ export default function Home() {
         <section id="about" className="about-section section-pad" aria-labelledby="about-title">
           <div className="about-grid">
             <div className="about-art-wrap" data-reveal="about-art">
-              <img src={siteConfig.trainingImage} alt="Gabriel conduzindo um treinamento diante de uma equipe" loading="eager" decoding="async" width="1200" height="900" style={{ aspectRatio: '1.33' }} onError={markBrokenImage} />
+              <img src={siteConfig.trainingImage} alt="Gabriel conduzindo um treinamento diante de uma equipe" loading="lazy" fetchPriority="low" decoding="async" width="1200" height="900" style={{ aspectRatio: '1.33' }} onError={markBrokenImage} />
               <span className="about-art-label">Processo / repertório / intenção</span>
             </div>
             <div className="about-copy" data-reveal="about-copy">
