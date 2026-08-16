@@ -194,14 +194,14 @@ export default function Home() {
       </aside>
 
       <main id="top">
-        <section className="hero-section hero-redesign" style={{height: '861px'}}>
-          <div className="hero-redesign-panel" data-reveal="hero-copy" style={{paddingRight: '359px'}}>
+        <section className="hero-section hero-redesign" style={{height: '830px'}}>
+          <div className="hero-redesign-panel" data-reveal="hero-copy">
             <div className="hero-redesign-copy">
-              <p className="eyebrow" style={{fontSize: '14px', height: '44px', width: '660px'}}>{siteConfig.hero.eyebrow}</p>
+              <p className="eyebrow" style={{fontSize: '14px'}}>{siteConfig.hero.eyebrow}</p>
               <h1 className="hero-headline"><span className="hero-headline-white">CONTEÚDO,</span><br /><span className="hero-headline-training">treinamento</span><br /><span className="hero-headline-white">&amp; TRADE</span><br /><span className="hero-headline-white">MARKETING.</span></h1>
               <p className="hero-positioning">{siteConfig.hero.positioning}</p>
               <p className="hero-redesign-intro" style={{ marginTop: "16px", fontSize: '16px' }}>{siteConfig.hero.intro}</p>
-              <p className="hero-proof-line" style={{fontSize: '14px', width: '704px'}}>17+ anos · 114K+ pessoas capacitadas · 130+ promotores monitorados</p>
+              <p className="hero-proof-line" style={{fontSize: '14px'}}>17+ anos · 114K+ pessoas capacitadas · 130+ promotores monitorados</p>
             </div>
           </div>
           <div className="hero-redesign-portrait hero-redesign-portrait-large" data-reveal="hero-portrait">
