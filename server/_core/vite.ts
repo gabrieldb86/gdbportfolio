@@ -9,6 +9,7 @@ import { DEFAULT_OG_IMAGE, PORTFOLIO_ORIGIN, PORTFOLIO_SITE_NAME, type Portfolio
 
 const CANONICAL_ORIGIN = (process.env.CANONICAL_ORIGIN || PORTFOLIO_ORIGIN).replace(/\/+$/, "");
 const SITE_NAME = process.env.SITE_NAME || PORTFOLIO_SITE_NAME;
+const PUBLIC_HTML_CACHE_CONTROL = "public, max-age=0, s-maxage=300, stale-while-revalidate=86400";
 
 function escapeHtml(value: string): string {
   return value
@@ -87,7 +88,7 @@ export async function setupVite(app: Express, server: Server) {
       template = template.replace("</head>", `<link rel="stylesheet" href="/src/index.css?direct" data-ssr-dev-css></head>`);
       const { render } = await vite.ssrLoadModule("/src/entry-server.tsx");
       const { html, dehydratedState, head } = await render(req.originalUrl);
-      res.status(head.notFound ? 404 : 200).set("Cache-Control", "no-cache").type("html").end(composeHtml(template, html, head, dehydratedState));
+      res.status(head.notFound ? 404 : 200).set("Cache-Control", PUBLIC_HTML_CACHE_CONTROL).type("html").end(composeHtml(template, html, head, dehydratedState));
     } catch (error) {
       vite.ssrFixStacktrace(error as Error);
       console.error("[SSR] dev render failed:", error);
@@ -118,11 +119,11 @@ export function serveStatic(app: Express) {
       const serverEntryPath = path.resolve(import.meta.dirname, "server-ssr", "entry-server.js");
       const { render } = await import(serverEntryPath);
       const { html, dehydratedState, head } = await render(req.originalUrl);
-      res.status(head.notFound ? 404 : 200).set("Cache-Control", "no-cache").type("html").end(composeHtml(template, html, head, dehydratedState));
+      res.status(head.notFound ? 404 : 200).set("Cache-Control", PUBLIC_HTML_CACHE_CONTROL).type("html").end(composeHtml(template, html, head, dehydratedState));
     } catch (error) {
       console.error("[SSR] render failed, serving shell:", error);
       const template = await fs.promises.readFile(templatePath, "utf-8");
-      res.status(200).set("Cache-Control", "no-cache").type("html").end(composeHtml(template, "", fallbackHead(), { mutations: [], queries: [] }));
+      res.status(200).set("Cache-Control", PUBLIC_HTML_CACHE_CONTROL).type("html").end(composeHtml(template, "", fallbackHead(), { mutations: [], queries: [] }));
     }
   });
 }

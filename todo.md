@@ -970,3 +970,9 @@
 - [x] Remover ou adiar recursos não críticos sem alterar visual ou mobile
 - [x] Otimizar carregamento de imagens e divisões de código seguras
 - [x] Validar peso final, desktop, mobile, testes e build
+
+## Correções orientadas pelos relatórios GTmetrix
+- [x] Extrair alertas e métricas dos relatórios anexados
+- [x] Relacionar cada alerta aos recursos carregados pelo portfólio
+- [x] Aplicar apenas otimizações que não alterem desktop, mobile ou edição manual
+- [x] Validar carregamento, testes e build antes do checkpoint

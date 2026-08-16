@@ -113,4 +113,17 @@ describe("public portfolio metrics and privacy", () => {
     expect(homeSource).toContain('loading="lazy" fetchPriority="low"');
     expect(homeSource).toContain('siteConfig.trainingImage');
   });
+
+  it("uses the GTmetrix LCP image preload and cacheable public delivery headers", () => {
+    const htmlSource = readProjectFile("client/index.html");
+    const viteSource = readProjectFile("server/_core/vite.ts");
+    const storageSource = readProjectFile("server/_core/storageProxy.ts");
+
+    expect(htmlSource).toContain('samuel-scalzo-xyuYk9oLA8I-unsplash_f54f1e14.jpg');
+    expect(htmlSource).toContain('fetchpriority="high"');
+    expect(htmlSource).not.toContain("use.typekit.net");
+    expect(viteSource).toContain('PUBLIC_HTML_CACHE_CONTROL = "public, max-age=0, s-maxage=300, stale-while-revalidate=86400"');
+    expect(storageSource).toContain('public, max-age=300, s-maxage=300, stale-while-revalidate=86400');
+    expect(storageSource).not.toContain('res.set("Cache-Control", "no-store")');
+  });
 });

@@ -38,7 +38,7 @@ export function registerStorageProxy(app: Express) {
         return;
       }
 
-      res.set("Cache-Control", "no-store");
+      res.set("Cache-Control", "public, max-age=300, s-maxage=300, stale-while-revalidate=86400");
       res.redirect(307, url);
     } catch (err) {
       console.error("[StorageProxy] failed:", err);
