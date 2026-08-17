@@ -991,3 +991,9 @@
 - [x] Preservar a largura de 838px no título da seção em desktop
 - [x] Confirmar que a edição não altera o mobile em 375px
 - [x] Validar e salvar o checkpoint da edição preservada
+
+## Consolidação da nova edição manual em Áreas de atuação
+- [x] Preservar 994px no título da seção em desktop
+- [x] Preservar 20px de margem esquerda nas linhas de serviço
+- [x] Remover somente repetições técnicas de atributos sem alterar valores visuais
+- [x] Validar desktop, mobile, testes e build antes do checkpoint

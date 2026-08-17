@@ -332,13 +332,13 @@ export default function Home() {
           <div className="services-layout" data-reveal="services-layout">
             <div>
               <p className="section-kicker" style={{fontSize: '16px'}}>Áreas de atuação</p>
-              <h2 id="services-title" style={{width: '838px'}}>Coordenação para<br style={{width: '838px'}} /><em className="services-result" style={{width: '838px'}}>o trabalho acontecer.</em></h2>
+              <h2 id="services-title" style={{width: '994px'}}>Coordenação para<br style={{width: '994px'}} /><em className="services-result" style={{width: '994px'}}>o trabalho acontecer.</em></h2>
               <div className="services-editorial-note" style={{fontSize: '16px'}}><strong style={{fontSize: '16px'}}>Do briefing à rotina de campo.</strong><p style={{fontSize: '16px'}}>Coordenação que organiza contexto, método, conteúdo e execução para apoiar a operação.</p></div>
             </div>
             <div className="services-list">
               {siteConfig.services.map(([number, title, description], index) => (
                 <details className="service-item" key={number} data-reveal="service-item" data-reveal-delay={index * 70}>
-                  <summary className="service-row">
+                  <summary className="service-row" style={{marginLeft: '20px'}}>
                     <span className="service-number" style={{ fontSize: '16px' }}>{number}</span>
                     <div style={{ fontSize: '14px' }}><h3 style={{ fontSize: '14px' }}>{title}</h3><p style={{ fontSize: '14px' }}>{description}</p></div>
                     <Plus className="service-toggle" size={21} strokeWidth={1.4} aria-hidden="true" />
