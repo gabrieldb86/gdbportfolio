@@ -1856,6 +1856,17 @@ a.proof-link, a.behance-link, a.text-link, .service-detail a {
   .home-revision .coordination-focus-item-body {
     gap: 10px;
   }
+  .home-revision .coordination-focus-label[style],
+  .home-revision .coordination-focus-note[style] {
+    width: auto !important;
+    max-width: 100% !important;
+  }
+  .home-revision .coordination-focus-item[style],
+  .home-revision .coordination-focus-item-top[style],
+  .home-revision .coordination-focus-item-top span[style],
+  .home-revision .coordination-focus-item-body[style] {
+    margin-left: 0 !important;
+  }
   .home-revision .coordination-focus-plus {
     margin-top: 0;
   }

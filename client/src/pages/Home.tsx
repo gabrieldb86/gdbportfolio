@@ -211,13 +211,13 @@ export default function Home() {
 
         <section className="coordination-focus-band" aria-labelledby="coordination-focus-title">
           <div className="coordination-focus-layout">
-            <div className="coordination-focus-label" data-reveal="focus-label">
+            <div className="coordination-focus-label" data-reveal="focus-label" style={{width: '933px'}}>
               <p className="section-kicker" style={{fontSize: '16px'}}>Focos de coordenação</p>
               <h2 id="coordination-focus-title">Três frentes para levar <em>método à prática.</em></h2>
-              <p className="coordination-focus-note" style={{fontSize: '16px'}}>Conteúdo, treinamento e campo organizados para apoiar decisões, capacitar equipes e acompanhar a execução.</p>
+              <p className="coordination-focus-note" style={{fontSize: '16px', width: '879px'}}>Conteúdo, treinamento e campo organizados para apoiar decisões, capacitar equipes e acompanhar a execução.</p>
             </div>
             <div className="coordination-focus-grid">
-              <article className="coordination-focus-item" data-reveal="focus-item" data-reveal-delay="80">
+              <article className="coordination-focus-item" data-reveal="focus-item" data-reveal-delay="80" style={{marginLeft: '190px'}}>
                 <div className="coordination-focus-item-top"><span style={{fontSize: '16px'}}>01</span></div>
                 <div className="coordination-focus-item-body">
                   <strong style={{fontSize: '18px'}}>Conteúdo &amp; Treinamento</strong>
@@ -230,7 +230,7 @@ export default function Home() {
                   </ul>
                 </div>
               </article>
-              <article className="coordination-focus-item" data-reveal="focus-item" data-reveal-delay="140">
+              <article className="coordination-focus-item" data-reveal="focus-item" data-reveal-delay="140" style={{marginLeft: '190px'}}>
                 <div className="coordination-focus-item-top"><span style={{fontSize: '16px'}}>02</span></div>
                 <div className="coordination-focus-item-body">
                   <strong style={{fontSize: '18px'}}>Trade Marketing &amp; Campo</strong>
@@ -244,8 +244,8 @@ export default function Home() {
                 </div>
               </article>
               <article className="coordination-focus-item" data-reveal="focus-item" data-reveal-delay="200">
-                <div className="coordination-focus-item-top"><span style={{fontSize: '16px'}}>03</span></div>
-                <div className="coordination-focus-item-body">
+                <div className="coordination-focus-item-top" style={{marginLeft: '190px'}}><span style={{fontSize: '16px', marginLeft: '190px'}}>03</span></div>
+                <div className="coordination-focus-item-body" style={{marginLeft: '190px'}}>
                   <strong style={{fontSize: '18px'}}>T&amp;D de Pessoas</strong>
                   <p style={{fontSize: '16px'}}>Onboarding, avaliação de desempenho e desenvolvimento de equipes de campo.</p>
                   <ul className="coordination-focus-highlights">

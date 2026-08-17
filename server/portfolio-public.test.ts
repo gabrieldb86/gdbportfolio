@@ -170,4 +170,17 @@ describe("public portfolio metrics and privacy", () => {
     expect(css).toContain("width: auto !important");
     expect(css).toContain("height: auto !important");
   });
+
+  it("preserves manual coordination-focus dimensions on desktop and resets them only on mobile", () => {
+    const css = readProjectFile("client/src/index.css");
+    const homeSource = readProjectFile("client/src/pages/Home.tsx");
+
+    expect(homeSource).toContain("coordination-focus-label\" data-reveal=\"focus-label\" style={{width: '933px'}}");
+    expect(homeSource).toContain("coordination-focus-note\" style={{fontSize: '16px', width: '879px'}}");
+    expect(homeSource).toContain("data-reveal-delay=\"80\" style={{marginLeft: '190px'}}");
+    expect(homeSource).toContain("data-reveal-delay=\"140\" style={{marginLeft: '190px'}}");
+    expect(css).toContain(".home-revision .coordination-focus-label[style]");
+    expect(css).toContain(".home-revision .coordination-focus-item[style]");
+    expect(css).toContain("margin-left: 0 !important");
+  });
 });

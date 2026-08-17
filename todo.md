@@ -1029,3 +1029,9 @@
 - [x] Manter no título de contato as medidas manuais: 700px de largura e 585px de altura
 - [x] Remover estilos redundantes das tags internas sem alterar a composição visual
 - [x] Confirmar o comportamento em mobile e desktop e validar a suíte técnica
+
+## Preservação da edição manual em Focos de coordenação
+- [x] Manter as larguras manuais de 933px no bloco de título e 879px no texto de apoio
+- [x] Preservar os deslocamentos manuais de 190px nos itens 01, 02 e 03
+- [x] Neutralizar somente no mobile as medidas que possam causar corte ou deslocamento
+- [x] Validar desktop, mobile, testes, TypeScript e build antes do checkpoint
