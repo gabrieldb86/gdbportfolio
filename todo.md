@@ -1040,3 +1040,8 @@
 - [x] Unificar os atributos marginLeft repetidos no índice e conteúdo do item 03
 - [x] Preservar o valor manual final de 190px no desktop e o reset exclusivo no mobile
 - [x] Validar mobile, testes, TypeScript e build antes do checkpoint
+
+## Reconsolidação de estilos repetidos no foco 03
+- [x] Remover as chaves marginLeft duplicadas reintroduzidas no índice e conteúdo do item 03
+- [x] Manter o valor manual final de 190px e o reset mobile existente
+- [x] Validar TypeScript, testes e build antes do checkpoint
