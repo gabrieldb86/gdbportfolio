@@ -3834,3 +3834,52 @@ a.proof-link, a.behance-link, a.text-link, .service-detail a {
     grid-template-columns: minmax(0, .92fr) minmax(0, 1.08fr) !important;
   }
 }
+
+/* Correção solicitada para mobile: medidas editadas no desktop não podem cortar estas duas seções. */
+@media (max-width: 900px) {
+  .home-revision .services-layout,
+  .home-revision .services-layout > div {
+    min-width: 0 !important;
+    max-width: 100% !important;
+  }
+
+  .home-revision #services-title[style] {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .home-revision .statement-section {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    overflow: hidden !important;
+  }
+
+  .home-revision .statement-copy[style] {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    padding: 78px var(--editorial-axis) 62px !important;
+  }
+
+  .home-revision .statement-copy > span[style],
+  .home-revision .statement-copy h2[style],
+  .home-revision .statement-context-box[style] {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .home-revision .statement-copy h2[style] {
+    height: auto !important;
+  }
+
+  .home-revision .statement-media-frame {
+    order: 2 !important;
+    width: 100% !important;
+    min-height: 0 !important;
+    padding: 0 16px 24px !important;
+  }
+}

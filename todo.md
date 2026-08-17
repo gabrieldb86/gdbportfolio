@@ -1018,3 +1018,9 @@
 - [x] Aplicar escalas fluidas somente entre 901px e telas desktop amplas
 - [x] Preservar o mobile em 375px sem alterar regras ou composição
 - [x] Validar em desktop amplo, desktop intermediário, mobile, testes e build
+
+## Restauração da responsividade mobile em duas seções
+- [x] Corrigir o corte horizontal de Áreas de atuação em telas mobile
+- [x] Corrigir texto, imagem e fluxo da faixa vermelha com bonés em telas mobile
+- [x] Preservar integralmente o desktop e as demais seções mobile
+- [x] Validar em 375px, 430px, desktop, testes e build

@@ -149,4 +149,14 @@ describe("public portfolio metrics and privacy", () => {
     expect(css).toContain("grid-template-columns: repeat(3, minmax(0, 1fr)) !important");
     expect(css).toContain("@media (max-width: 900px)");
   });
+
+  it("resets only the mobile impact of manual service and statement dimensions", () => {
+    const css = readProjectFile("client/src/index.css");
+
+    expect(css).toContain(".home-revision #services-title[style]");
+    expect(css).toContain(".home-revision .statement-copy[style]");
+    expect(css).toContain("padding: 78px var(--editorial-axis) 62px !important");
+    expect(css).toContain(".home-revision .statement-copy h2[style]");
+    expect(css).toContain("height: auto !important");
+  });
 });
