@@ -1012,3 +1012,9 @@
 - [x] Preservar 451px na chamada, 539px × 491px no título e 500px no contexto
 - [x] Corrigir apenas a capitalização textual indicada no título
 - [x] Validar desktop, mobile, testes e build antes do checkpoint
+
+## Responsividade desktop das seções editadas
+- [x] Mapear medidas fixas em métricas, Áreas de atuação e faixa vermelha
+- [x] Aplicar escalas fluidas somente entre 901px e telas desktop amplas
+- [x] Preservar o mobile em 375px sem alterar regras ou composição
+- [x] Validar em desktop amplo, desktop intermediário, mobile, testes e build

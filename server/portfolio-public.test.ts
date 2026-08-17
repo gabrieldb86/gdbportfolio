@@ -138,4 +138,15 @@ describe("public portfolio metrics and privacy", () => {
     expect(css).toContain("margin-left: 0 !important");
     expect(css).toContain(".home-revision .hero-redesign-panel .hero-proof-line[style]");
   });
+
+  it("makes manually sized desktop sections fluid without touching the mobile breakpoint", () => {
+    const css = readProjectFile("client/src/index.css");
+
+    expect(css).toContain("@media (min-width: 901px) and (max-width: 1680px)");
+    expect(css).toContain("width: min(994px, 100%) !important");
+    expect(css).toContain("width: min(909px, 100%) !important");
+    expect(css).toContain("@media (min-width: 901px) and (max-width: 1300px)");
+    expect(css).toContain("grid-template-columns: repeat(3, minmax(0, 1fr)) !important");
+    expect(css).toContain("@media (max-width: 900px)");
+  });
 });
