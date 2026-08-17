@@ -976,3 +976,13 @@
 - [x] Relacionar cada alerta aos recursos carregados pelo portfólio
 - [x] Aplicar apenas otimizações que não alterem desktop, mobile ou edição manual
 - [x] Validar carregamento, testes e build antes do checkpoint
+
+## Verificação da edição manual do hero — valores preservados
+- [x] Conferir a presença única dos valores manuais do painel e dos textos auxiliares
+- [x] Validar desktop e mobile sem alterar a composição editada
+- [x] Executar testes e build e salvar o checkpoint da edição preservada
+
+## Isolamento da edição manual do hero por breakpoint
+- [x] Manter no desktop os valores manuais do painel, eyebrow e linha de métricas
+- [x] Restaurar o mobile em 375px com os valores anteriores à edição visual
+- [x] Validar desktop e mobile e salvar checkpoint somente após ambas as versões estarem íntegras

@@ -126,4 +126,16 @@ describe("public portfolio metrics and privacy", () => {
     expect(storageSource).toContain('public, max-age=300, s-maxage=300, stale-while-revalidate=86400');
     expect(storageSource).not.toContain('res.set("Cache-Control", "no-store")');
   });
+
+  it("keeps manual hero measurements on desktop while resetting only their mobile impact", () => {
+    const css = readProjectFile("client/src/index.css");
+    const homeSource = readProjectFile("client/src/pages/Home.tsx");
+
+    expect(homeSource).toContain("marginLeft: '-315px'");
+    expect(homeSource).toContain("marginRight: '377px'");
+    expect(css).toContain(".home-revision .hero-redesign-panel[style]");
+    expect(css).toContain("@media (max-width: 900px)");
+    expect(css).toContain("margin-left: 0 !important");
+    expect(css).toContain(".home-revision .hero-redesign-panel .hero-proof-line[style]");
+  });
 });

@@ -3741,3 +3741,18 @@ a.proof-link, a.behance-link, a.text-link, .service-detail a {
     padding-left: 0 !important;
   }
 }
+
+/* Medidas aplicadas pela edição visual do hero: preservadas no desktop e neutralizadas apenas no mobile. */
+@media (max-width: 900px) {
+  .home-revision .hero-redesign-panel[style] {
+    width: auto !important;
+    height: auto !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .home-revision .hero-redesign-panel .eyebrow[style],
+  .home-revision .hero-redesign-panel .hero-proof-line[style] {
+    width: auto !important;
+  }
+}
