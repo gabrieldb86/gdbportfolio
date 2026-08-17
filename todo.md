@@ -1002,3 +1002,8 @@
 - [x] Preservar o recuo de 20px no bloco de texto em desktop
 - [x] Confirmar que o recuo não altera o mobile em 375px
 - [x] Validar e salvar checkpoint da edição preservada
+
+## Consolidação da edição manual da faixa vermelha
+- [x] Preservar o estado final: altura 0px, largura 909px, padding 0px 0px 150px 215px
+- [x] Unificar os atributos style conflitantes sem alterar os valores finais
+- [x] Validar desktop, mobile, testes e build antes do checkpoint

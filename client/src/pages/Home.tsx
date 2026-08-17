@@ -375,7 +375,7 @@ export default function Home() {
         </section>
 
         <section className="statement-section" aria-labelledby="statement-title">
-          <div className="statement-copy" data-reveal="statement-copy">
+          <div className="statement-copy" data-reveal="statement-copy" style={{height: '0px', paddingBottom: '150px', paddingLeft: '215px', paddingRight: '0px', paddingTop: '0px', width: '909px'}}>
             <span>Se houver uma vaga ou projeto em que eu possa contribuir:</span>
             <h2 id="statement-title">vamos colocar<br /><em>o trabalho em prática.</em></h2>
             <p className="statement-context-box">Conteúdo e treinamento precisam de contexto, método e acompanhamento para apoiar equipes, campo e negócio.</p>
