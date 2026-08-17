@@ -986,3 +986,8 @@
 - [x] Manter no desktop os valores manuais do painel, eyebrow e linha de métricas
 - [x] Restaurar o mobile em 375px com os valores anteriores à edição visual
 - [x] Validar desktop e mobile e salvar checkpoint somente após ambas as versões estarem íntegras
+
+## Verificação da largura manual em Áreas de atuação
+- [x] Preservar a largura de 838px no título da seção em desktop
+- [x] Confirmar que a edição não altera o mobile em 375px
+- [x] Validar e salvar o checkpoint da edição preservada

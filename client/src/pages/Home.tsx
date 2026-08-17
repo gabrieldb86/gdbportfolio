@@ -332,7 +332,7 @@ export default function Home() {
           <div className="services-layout" data-reveal="services-layout">
             <div>
               <p className="section-kicker" style={{fontSize: '16px'}}>Áreas de atuação</p>
-              <h2 id="services-title">Coordenação para<br /><em className="services-result">o trabalho acontecer.</em></h2>
+              <h2 id="services-title" style={{width: '838px'}}>Coordenação para<br style={{width: '838px'}} /><em className="services-result" style={{width: '838px'}}>o trabalho acontecer.</em></h2>
               <div className="services-editorial-note" style={{fontSize: '16px'}}><strong style={{fontSize: '16px'}}>Do briefing à rotina de campo.</strong><p style={{fontSize: '16px'}}>Coordenação que organiza contexto, método, conteúdo e execução para apoiar a operação.</p></div>
             </div>
             <div className="services-list">
