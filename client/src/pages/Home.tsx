@@ -242,11 +242,11 @@ export default function Home() {
                     <li style={{fontSize: '14px'}}>Análise de risco orçamentário e PDCA</li>
                   </ul>
                 </div>
-              </article>
-              <article className="coordination-focus-item" data-reveal="focus-item" data-reveal-delay="200">
-                <div className="coordination-focus-item-top" style={{marginLeft: '190px'}}><span style={{fontSize: '16px', marginLeft: '190px'}}>03</span></div>
-                <div className="coordination-focus-item-body" style={{marginLeft: '190px'}}>
-                  <strong style={{fontSize: '18px'}}>T&amp;D de Pessoas</strong>
+	              </article>
+	              <article className="coordination-focus-item" data-reveal="focus-item" data-reveal-delay="200">
+	                <div className="coordination-focus-item-top" style={{marginLeft: '190px'}}><span style={{fontSize: '16px', marginLeft: '190px'}}>03</span></div>
+	                <div className="coordination-focus-item-body" style={{marginLeft: '190px'}}>
+	                  <strong style={{fontSize: '18px'}}>T&amp;D de Pessoas</strong>
                   <p style={{fontSize: '16px'}}>Onboarding, avaliação de desempenho e desenvolvimento de equipes de campo.</p>
                   <ul className="coordination-focus-highlights">
                     <li style={{fontSize: '14px'}}>Metodologia 9Box e ciclos de PDCA</li>

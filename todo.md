@@ -1035,3 +1035,8 @@
 - [x] Preservar os deslocamentos manuais de 190px nos itens 01, 02 e 03
 - [x] Neutralizar somente no mobile as medidas que possam causar corte ou deslocamento
 - [x] Validar desktop, mobile, testes, TypeScript e build antes do checkpoint
+
+## Consolidação de estilos repetidos no foco 03
+- [x] Unificar os atributos marginLeft repetidos no índice e conteúdo do item 03
+- [x] Preservar o valor manual final de 190px no desktop e o reset exclusivo no mobile
+- [x] Validar mobile, testes, TypeScript e build antes do checkpoint
