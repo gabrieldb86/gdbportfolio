@@ -1783,6 +1783,10 @@ a.proof-link, a.behance-link, a.text-link, .service-detail a {
     color: #1c1b1a;
     stroke-width: 1.4;
   }
+  .home-revision .coordination-focus-item[data-reveal-delay="200"] .coordination-focus-item-top span[style],
+  .home-revision .coordination-focus-item[data-reveal-delay="200"] .coordination-focus-item-body[style] {
+    margin-left: 190px !important;
+  }
 }
 
 @media (max-width: 900px) {

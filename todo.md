@@ -1045,3 +1045,8 @@
 - [x] Remover as chaves marginLeft duplicadas reintroduzidas no índice e conteúdo do item 03
 - [x] Manter o valor manual final de 190px e o reset mobile existente
 - [x] Validar TypeScript, testes e build antes do checkpoint
+
+## Confirmação do deslocamento manual no foco 03
+- [x] Garantir 190px nos dois elementos selecionados do item 03 no desktop
+- [x] Preservar o reset responsivo exclusivo do mobile
+- [x] Validar visualmente, executar a suíte técnica e salvar checkpoint

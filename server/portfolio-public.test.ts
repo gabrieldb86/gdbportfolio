@@ -181,6 +181,8 @@ describe("public portfolio metrics and privacy", () => {
     expect(homeSource).toContain("data-reveal-delay=\"140\" style={{marginLeft: '190px'}}");
     expect(css).toContain(".home-revision .coordination-focus-label[style]");
     expect(css).toContain(".home-revision .coordination-focus-item[style]");
+    expect(css).toContain(".coordination-focus-item[data-reveal-delay=\"200\"] .coordination-focus-item-top span[style]");
+    expect(css).toContain("margin-left: 190px !important");
     expect(css).toContain("margin-left: 0 !important");
   });
 });
