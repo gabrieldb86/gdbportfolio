@@ -376,9 +376,9 @@ export default function Home() {
 
         <section className="statement-section" aria-labelledby="statement-title">
           <div className="statement-copy" data-reveal="statement-copy" style={{height: '0px', paddingBottom: '150px', paddingLeft: '215px', paddingRight: '0px', paddingTop: '0px', width: '909px'}}>
-            <span>Se houver uma vaga ou projeto em que eu possa contribuir:</span>
-            <h2 id="statement-title">vamos colocar<br /><em>o trabalho em prática.</em></h2>
-            <p className="statement-context-box">Conteúdo e treinamento precisam de contexto, método e acompanhamento para apoiar equipes, campo e negócio.</p>
+            <span style={{width: '451px'}}>Se houver uma vaga ou projeto em que eu possa contribuir:</span>
+            <h2 id="statement-title" style={{height: '491px', width: '539px'}}>Vamos colocar<br style={{height: '491px', width: '539px'}} /><em style={{height: '491px', width: '539px'}}>o trabalho em prática.</em></h2>
+            <p className="statement-context-box" style={{width: '500px'}}>Conteúdo e treinamento precisam de contexto, método e acompanhamento para apoiar equipes, campo e negócio.</p>
           </div>
           <div className="statement-media-frame">
             <img className="statement-image" src={siteConfig.heroImage} alt="Projeto visual de bonés em preto e vermelho" width="1315" height="643" loading="lazy" decoding="async" onError={markBrokenImage} />

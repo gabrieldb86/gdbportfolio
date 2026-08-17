@@ -1007,3 +1007,8 @@
 - [x] Preservar o estado final: altura 0px, largura 909px, padding 0px 0px 150px 215px
 - [x] Unificar os atributos style conflitantes sem alterar os valores finais
 - [x] Validar desktop, mobile, testes e build antes do checkpoint
+
+## Atualização manual de conteúdo e medidas na faixa vermelha
+- [x] Preservar 451px na chamada, 539px × 491px no título e 500px no contexto
+- [x] Corrigir apenas a capitalização textual indicada no título
+- [x] Validar desktop, mobile, testes e build antes do checkpoint
