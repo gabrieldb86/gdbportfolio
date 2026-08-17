@@ -1024,3 +1024,8 @@
 - [x] Corrigir texto, imagem e fluxo da faixa vermelha com bonés em telas mobile
 - [x] Preservar integralmente o desktop e as demais seções mobile
 - [x] Validar em 375px, 430px, desktop, testes e build
+
+## Preservação da edição manual no contato
+- [x] Manter no título de contato as medidas manuais: 700px de largura e 585px de altura
+- [x] Remover estilos redundantes das tags internas sem alterar a composição visual
+- [x] Confirmar o comportamento em mobile e desktop e validar a suíte técnica

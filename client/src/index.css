@@ -3370,6 +3370,10 @@ a.proof-link, a.behance-link, a.text-link, .service-detail a {
     overflow-wrap: normal !important;
     word-break: normal !important;
   }
+  #contact.contact-section .contact-intro h2#contact-title[style] {
+    width: auto !important;
+    height: auto !important;
+  }
   .home-revision .contact-intro p,
   .home-revision .contact-links {
     max-width: 100% !important;

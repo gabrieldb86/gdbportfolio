@@ -159,4 +159,15 @@ describe("public portfolio metrics and privacy", () => {
     expect(css).toContain(".home-revision .statement-copy h2[style]");
     expect(css).toContain("height: auto !important");
   });
+
+  it("preserves the manual contact-title dimensions on desktop and resets them only on mobile", () => {
+    const css = readProjectFile("client/src/index.css");
+    const homeSource = readProjectFile("client/src/pages/Home.tsx");
+
+    expect(homeSource).toContain("id=\"contact-title\" style={{height: '585px', width: '700px'}}");
+    expect(homeSource).toContain("Você está formando<br />uma equipe de <em>coordenação?</em>");
+    expect(css).toContain("#contact.contact-section .contact-intro h2#contact-title[style]");
+    expect(css).toContain("width: auto !important");
+    expect(css).toContain("height: auto !important");
+  });
 });
