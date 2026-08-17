@@ -997,3 +997,8 @@
 - [x] Preservar 20px de margem esquerda nas linhas de serviço
 - [x] Remover somente repetições técnicas de atributos sem alterar valores visuais
 - [x] Validar desktop, mobile, testes e build antes do checkpoint
+
+## Verificação do recuo manual em Sobre mim
+- [x] Preservar o recuo de 20px no bloco de texto em desktop
+- [x] Confirmar que o recuo não altera o mobile em 375px
+- [x] Validar e salvar checkpoint da edição preservada

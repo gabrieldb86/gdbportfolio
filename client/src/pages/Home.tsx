@@ -359,7 +359,7 @@ export default function Home() {
               <img src={siteConfig.trainingImage} alt="Gabriel conduzindo um treinamento diante de uma equipe" loading="lazy" fetchPriority="low" decoding="async" width="1200" height="900" style={{ aspectRatio: '1.33' }} onError={markBrokenImage} />
               <span className="about-art-label">Processo / repertório / intenção</span>
             </div>
-            <div className="about-copy" data-reveal="about-copy">
+            <div className="about-copy" data-reveal="about-copy" style={{marginLeft: '20px'}}>
               <p className="section-kicker" style={{fontSize: '16px'}}>Sobre mim</p>
               <h2 id="about-title">Olá, eu sou<br /><em>Gabriel.</em></h2>
               <p className="about-lead" style={{fontSize: '16px'}}>Tenho 17 anos de experiência em conteúdo, treinamento e trade marketing — e mais de 114K+ pessoas capacitadas ao longo da carreira, incluindo 8 anos como pioneiro do Today at Apple no Brasil.</p>
