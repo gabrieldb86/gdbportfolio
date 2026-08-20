@@ -1154,3 +1154,9 @@
 - [x] Manter o texto FALAR COM GABRIEL em branco e o link direto ao WhatsApp
 - [x] Reservar espaço no fluxo para impedir que a faixa cubra o conteúdo final
 - [x] Validar desktop inalterado, rolagem mobile, testes, TypeScript e build antes do checkpoint
+
+## Preservação da margem manual atualizada do CTA
+- [x] Manter o CTA do hero com tamanho de 23px e margem superior final de 25px
+- [x] Preservar a seta com margem superior de -3px, dimensões de 24px e margem esquerda de 1px
+- [x] Consolidar somente atributos style repetidos, sem transferir a margem do CTA para a seta
+- [x] Validar desktop, mobile, testes, TypeScript e build antes do checkpoint
