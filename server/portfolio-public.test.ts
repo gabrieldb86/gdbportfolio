@@ -173,6 +173,15 @@ describe("public portfolio metrics and privacy", () => {
     expect(css).toContain("height: auto !important");
   });
 
+  it("preserves the manual manifesto aside offset on desktop and resets it only on mobile", () => {
+    const css = readProjectFile("client/src/index.css");
+    const homeSource = readProjectFile("client/src/pages/Home.tsx");
+
+    expect(homeSource).toContain("manifesto-aside\" style={{marginLeft: '-145px'}}");
+    expect(css).toContain(".home-revision .manifesto-aside[style]");
+    expect(css).toContain("margin-left: 0 !important");
+  });
+
   it("preserves manual coordination-focus dimensions on desktop and resets them only on mobile", () => {
     const css = readProjectFile("client/src/index.css");
     const homeSource = readProjectFile("client/src/pages/Home.tsx");

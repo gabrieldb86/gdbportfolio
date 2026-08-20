@@ -1944,6 +1944,9 @@ a.proof-link, a.behance-link, a.text-link, .service-detail a {
     max-width: 360px;
     padding-top: 48px;
   }
+  .home-revision .manifesto-aside[style] {
+    margin-left: 0 !important;
+  }
   .home-revision .manifesto-aside p {
     max-width: 360px;
     margin-bottom: 28px;

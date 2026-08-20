@@ -309,7 +309,7 @@ export default function Home() {
               <p className="section-kicker" style={{fontSize: '16px'}}>Como eu atuo</p>
               <h2 id="manifesto-title">Estratégia só funciona <span>quando chega ao campo.</span></h2>
             </div>
-            <div className="manifesto-aside">
+            <div className="manifesto-aside" style={{marginLeft: '-145px'}}>
               <p style={{fontSize: '20px'}}>Porque conteúdo e treinamento só funcionam quando encontram contexto, método e um próximo passo claro — para a equipe, para o campo e para o negócio.</p>
               <a className="text-link" href="#about" onClick={(event) => { event.preventDefault(); scrollToId("about"); }} style={{fontSize: '14px'}}>Conheça meu jeito de trabalhar <ArrowUpRight size={15} style={{fontSize: '14px'}} /></a>
             </div>

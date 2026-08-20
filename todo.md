@@ -1055,3 +1055,8 @@
 - [x] Manter a margem esquerda manual de 138px no formulário de contato em desktop
 - [x] Neutralizar a margem somente no mobile para preservar o fluxo responsivo
 - [x] Validar desktop, mobile, testes, TypeScript e build antes do checkpoint
+
+## Preservação da edição manual em Como eu atuo
+- [x] Manter a margem esquerda manual de -145px no texto lateral em desktop
+- [x] Neutralizar a margem somente no mobile para preservar o fluxo responsivo
+- [x] Validar desktop, mobile, testes, TypeScript e build antes do checkpoint
