@@ -254,4 +254,13 @@ describe("public portfolio metrics and privacy", () => {
     expect(manifest).toContain("/icon-192.png?v=portrait-20260820");
     expect(manifest).toContain("/icon-512.png?v=portrait-20260820");
   });
+
+  it("places the WhatsApp CTA in the first fold of the hero", () => {
+    const homeSource = readProjectFile("client/src/pages/Home.tsx");
+
+    expect(homeSource).toContain('href="https://wa.me/5511945747353"');
+    expect(homeSource).toContain("data-umami-event=\"hero-whatsapp-click\"");
+    expect(homeSource).toContain('trackPortfolioEvent("cta_fale_comigo")');
+    expect(homeSource).toContain("FALAR COM GABRIEL");
+  });
 });

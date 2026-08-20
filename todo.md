@@ -1106,3 +1106,8 @@
 - [x] Diagnosticar por que os arquivos de ícone não aparecem no site e no mobile publicados
 - [x] Corrigir caminhos, publicação ou metadados para disponibilizar os ícones publicamente
 - [x] Validar os caminhos públicos canônicos, a prévia e a suíte técnica antes do checkpoint
+
+## CTA de WhatsApp na primeira dobra
+- [x] Adicionar o CTA FALAR COM GABRIEL no hero, com link de WhatsApp
+- [x] Preservar a hierarquia visual e o comportamento responsivo do hero
+- [x] Validar desktop, mobile, eventos, testes, TypeScript e build antes do checkpoint
