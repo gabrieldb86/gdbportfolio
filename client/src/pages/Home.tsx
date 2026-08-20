@@ -392,7 +392,7 @@ export default function Home() {
 	          <div className="contact-grid">
 	            <div className="contact-intro" data-reveal="contact-intro">
 	              <p className="section-kicker" style={{fontSize: '16px'}}>Vamos conversar</p>
-	              <h2 id="contact-title" style={{height: '585px', width: '700px'}}>Você está formando<br />uma equipe de <em>coordenação?</em></h2>
+	              <h2 id="contact-title" style={{height: '690px', width: '451px', marginBottom: '111px', marginRight: '-1px'}}>Você está formando<br style={{height: '690px', marginBottom: '111px', marginRight: '-1px', width: '451px'}} />uma equipe de <em style={{height: '690px', marginBottom: '111px', marginRight: '-1px', width: '451px'}}>coordenação?</em></h2>
 	              <p style={{fontSize: '16px'}}>Estou aberto a oportunidades em conteúdo, treinamento, trade marketing e performance de campo. Envie o contexto da posição ou fale comigo diretamente pelo LinkedIn, e-mail ou WhatsApp.</p>
               <div className="contact-links">
                 <a className="contact-direct" href="https://wa.me/5511945747353" data-umami-event="whatsapp-click" target="_blank" rel="noreferrer" onClick={() => trackPortfolioEvent("contact_whatsapp")}><MessageCircle size={17} /> Falar diretamente com Gabriel <ArrowUpRight size={15} /></a>
@@ -400,7 +400,7 @@ export default function Home() {
                 <a className="contact-direct" href="mailto:gabrieldb@me.com" data-umami-event="email-click" onClick={() => trackPortfolioEvent("contact_email")}><Mail size={17} /> gabrieldb@me.com <ArrowUpRight size={15} /></a>
               </div>
             </div>
-            <form className="contact-form" data-reveal="contact-form" onSubmit={handleSubmit} style={{marginLeft: '138px'}}>
+	            <form className="contact-form" data-reveal="contact-form" onSubmit={handleSubmit} style={{marginLeft: '565px', width: '750px'}}>
               <label htmlFor="name">Seu nome</label>
               <input id="name" name="name" type="text" placeholder="Como posso te chamar?" required />
               <label className="form-honeypot" htmlFor="website">Website</label>

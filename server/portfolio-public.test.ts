@@ -160,14 +160,15 @@ describe("public portfolio metrics and privacy", () => {
     expect(css).toContain("height: auto !important");
   });
 
-  it("preserves the manual contact-title dimensions on desktop and resets them only on mobile", () => {
-    const css = readProjectFile("client/src/index.css");
+  it("preserves the final manual contact dimensions on desktop and resets them only on mobile", () => {
     const homeSource = readProjectFile("client/src/pages/Home.tsx");
+    const css = readProjectFile("client/src/index.css");
 
-    expect(homeSource).toContain("id=\"contact-title\" style={{height: '585px', width: '700px'}}");
+    expect(homeSource).toContain("id=\"contact-title\" style={{height: '690px', width: '451px', marginBottom: '111px', marginRight: '-1px'}}");
     expect(homeSource).toContain("id=\"contact\" className=\"contact-section section-pad\" aria-labelledby=\"contact-title\" style={{height: '1440px', width: '355px'}}");
-    expect(homeSource).toContain("Você está formando<br />uma equipe de <em>coordenação?</em>");
-    expect(homeSource).toContain("contact-form\" data-reveal=\"contact-form\" onSubmit={handleSubmit} style={{marginLeft: '138px'}}");
+    expect(homeSource).toContain("Você está formando<br style={{height: '690px', marginBottom: '111px', marginRight: '-1px', width: '451px'}} />uma equipe de");
+    expect(homeSource).toContain("<em style={{height: '690px', marginBottom: '111px', marginRight: '-1px', width: '451px'}}>coordenação?</em>");
+    expect(homeSource).toContain("contact-form\" data-reveal=\"contact-form\" onSubmit={handleSubmit} style={{marginLeft: '565px', width: '750px'}}");
     expect(css).toContain("#contact.contact-section .contact-intro h2#contact-title[style]");
     expect(css).toContain(".home-revision .contact-form[style]");
     expect(css).toContain("width: auto !important");

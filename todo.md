@@ -1116,3 +1116,10 @@
 - [x] Remover somente os estilos inline manuais que desalinharam o CV
 - [x] Preservar integralmente a Home, o CTA e as demais páginas
 - [x] Validar CV em desktop e mobile, testes, TypeScript e build antes do checkpoint
+
+## Preservação da nova edição manual de contato
+- [x] Manter no título as medidas finais: 451px de largura, 690px de altura, margem inferior de 111px e margem direita de -1px
+- [x] Manter no formulário a margem esquerda de 565px e largura de 750px
+- [x] Consolidar somente atributos style repetidos no título, nas tags internas e no formulário
+- [x] Neutralizar somente no mobile medidas que causem corte ou quebra de fluxo
+- [x] Validar desktop, mobile, testes, TypeScript e build antes do checkpoint
