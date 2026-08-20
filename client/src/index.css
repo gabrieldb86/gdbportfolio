@@ -3549,12 +3549,22 @@ a.proof-link, a.behance-link, a.text-link, .service-detail a {
     padding: 0 !important;
   }
 
+  .cv-toolstrip-label .section-kicker[style] {
+    width: auto !important;
+    font-size: 10px !important;
+  }
+
   .cv-toolstrip {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 0;
     width: 100%;
+  }
+
+  .cv-toolstrip[style],
+  .cv-toolstrip span[style] {
+    margin-left: 0 !important;
   }
 
   .cv-toolstrip span,

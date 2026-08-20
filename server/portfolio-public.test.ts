@@ -196,6 +196,18 @@ describe("public portfolio metrics and privacy", () => {
     expect(homeSource).toContain("about-art-label\" style={{marginBottom: '-21px', marginRight: '75px'}}");
   });
 
+  it("preserves the manual CV toolstrip measurements and resets them only on mobile", () => {
+    const css = readProjectFile("client/src/index.css");
+    const cvSource = readProjectFile("client/src/pages/CV.tsx");
+
+    expect(cvSource).toContain("fontSize: '40px', width: '382px'");
+    expect(cvSource).toContain("cv-toolstrip\" style={{marginLeft: '173px'}}");
+    expect(cvSource).toContain("<span style={{marginLeft: '173px'}}>Curiosidade</span>");
+    expect(css).toContain(".cv-toolstrip-label .section-kicker[style]");
+    expect(css).toContain(".cv-toolstrip[style]");
+    expect(css).toContain("margin-left: 0 !important");
+  });
+
   it("preserves manual coordination-focus dimensions on desktop and resets them only on mobile", () => {
     const css = readProjectFile("client/src/index.css");
     const homeSource = readProjectFile("client/src/pages/Home.tsx");

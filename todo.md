@@ -1071,3 +1071,10 @@
 - [x] Manter as margens manuais de -21px abaixo e 75px à direita no desktop
 - [x] Manter as margens manuais no mobile, pois a verificação não identificou comprometimento do enquadramento
 - [x] Validar desktop, mobile, testes, TypeScript e build antes do checkpoint
+
+## Preservação da edição manual na faixa Como trabalho do CV
+- [x] Manter a tipografia manual de 40px e largura de 382px no rótulo da faixa
+- [x] Manter o deslocamento manual de 173px na faixa e nos seus seis itens
+- [x] Consolidar somente os atributos style repetidos no rótulo Como trabalho
+- [x] Neutralizar somente no mobile valores que causem corte ou quebra de fluxo
+- [x] Validar CV em desktop, mobile, testes, TypeScript e build antes do checkpoint

@@ -221,9 +221,9 @@ export default function CV() {
           </div>
         </section>
 
-        <section className="cv-toolstrip-section">
-          <div className="cv-toolstrip-label" style={{ marginBottom: "1px", marginLeft: "-2px", marginRight: "17px", marginTop: "-14px", paddingTop: "1px" }}><p className="section-kicker">Como trabalho</p></div>
-          <div className="cv-toolstrip"><span>Curiosidade</span><span>Clareza</span><span>Ritmo</span><span>Colaboração</span><span>Repertório</span><span>Entrega</span></div>
+	        <section className="cv-toolstrip-section">
+	          <div className="cv-toolstrip-label" style={{ marginBottom: "1px", marginLeft: "-2px", marginRight: "17px", marginTop: "-14px", paddingTop: "1px", fontSize: '40px', width: '382px' }}><p className="section-kicker" style={{fontSize: '40px', width: '382px'}}>Como trabalho</p></div>
+          <div className="cv-toolstrip" style={{marginLeft: '173px'}}><span style={{marginLeft: '173px'}}>Curiosidade</span><span style={{marginLeft: '173px'}}>Clareza</span><span style={{marginLeft: '173px'}}>Ritmo</span><span style={{marginLeft: '173px'}}>Colaboração</span><span style={{marginLeft: '173px'}}>Repertório</span><span style={{marginLeft: '173px'}}>Entrega</span></div>
         </section>
 
         <section className="cv-experience-section section-pad" aria-labelledby="experience-title">
