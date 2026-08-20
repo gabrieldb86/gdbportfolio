@@ -182,6 +182,14 @@ describe("public portfolio metrics and privacy", () => {
     expect(css).toContain("margin-left: 0 !important");
   });
 
+  it("preserves the manual 25px typography in the services editorial note", () => {
+    const homeSource = readProjectFile("client/src/pages/Home.tsx");
+
+    expect(homeSource).toContain("services-editorial-note\" style={{fontSize: '25px'}}");
+    expect(homeSource).toContain("<strong style={{fontSize: '25px'}}>Do briefing à rotina de campo.</strong>");
+    expect(homeSource).toContain("<p style={{fontSize: '25px'}}>Coordenação que organiza contexto");
+  });
+
   it("preserves manual coordination-focus dimensions on desktop and resets them only on mobile", () => {
     const css = readProjectFile("client/src/index.css");
     const homeSource = readProjectFile("client/src/pages/Home.tsx");

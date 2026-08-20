@@ -330,11 +330,11 @@ export default function Home() {
 
         <section className="services-section services-redesign section-pad" aria-labelledby="services-title">
           <div className="services-layout" data-reveal="services-layout">
-            <div>
-              <p className="section-kicker" style={{fontSize: '16px'}}>Áreas de atuação</p>
-              <h2 id="services-title" style={{width: '994px'}}>Coordenação para<br style={{width: '994px'}} /><em className="services-result" style={{width: '994px'}}>o trabalho acontecer.</em></h2>
-              <div className="services-editorial-note" style={{fontSize: '16px'}}><strong style={{fontSize: '16px'}}>Do briefing à rotina de campo.</strong><p style={{fontSize: '16px'}}>Coordenação que organiza contexto, método, conteúdo e execução para apoiar a operação.</p></div>
-            </div>
+	            <div>
+	              <p className="section-kicker" style={{fontSize: '16px'}}>Áreas de atuação</p>
+	              <h2 id="services-title" style={{width: '994px'}}>Coordenação para<br style={{width: '994px'}} /><em className="services-result" style={{width: '994px'}}>o trabalho acontecer.</em></h2>
+	              <div className="services-editorial-note" style={{fontSize: '25px'}}><strong style={{fontSize: '25px'}}>Do briefing à rotina de campo.</strong><p style={{fontSize: '25px'}}>Coordenação que organiza contexto, método, conteúdo e execução para apoiar a operação.</p></div>
+	            </div>
             <div className="services-list">
               {siteConfig.services.map(([number, title, description], index) => (
                 <details className="service-item" key={number} data-reveal="service-item" data-reveal-delay={index * 70}>

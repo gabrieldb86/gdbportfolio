@@ -1060,3 +1060,9 @@
 - [x] Manter a margem esquerda manual de -145px no texto lateral em desktop
 - [x] Neutralizar a margem somente no mobile para preservar o fluxo responsivo
 - [x] Validar desktop, mobile, testes, TypeScript e build antes do checkpoint
+
+## Preservação da edição manual em Áreas de atuação
+- [x] Manter o tamanho manual de 25px na nota editorial e em seus textos internos no desktop
+- [x] Consolidar as propriedades fontSize duplicadas sem alterar o valor final
+- [x] Manter a tipografia manual no mobile, pois a verificação não identificou corte ou quebra de fluxo
+- [x] Validar desktop, mobile, testes, TypeScript e build antes do checkpoint
