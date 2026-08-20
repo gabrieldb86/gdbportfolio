@@ -241,4 +241,17 @@ describe("public portfolio metrics and privacy", () => {
     expect(css).toContain("margin-left: 190px !important");
     expect(css).toContain("margin-left: 0 !important");
   });
+
+  it("publishes the custom favicon across browser and device metadata", () => {
+    const document = readProjectFile("client/index.html");
+    const manifest = readProjectFile("client/public/site.webmanifest");
+
+    expect(document).toContain("/manus-storage/favicon_768615a7.ico");
+    expect(document).toContain("/manus-storage/favicon-16_1f5a4fc3.png");
+    expect(document).toContain("/manus-storage/favicon-32_51ce1595.png");
+    expect(document).toContain("/manus-storage/apple-touch-icon_352cf635.png");
+    expect(document).toContain('rel="manifest" href="/site.webmanifest"');
+    expect(manifest).toContain("/manus-storage/icon-192_98d0ecb7.png");
+    expect(manifest).toContain("/manus-storage/icon-512_268e9b86.png");
+  });
 });

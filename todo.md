@@ -1096,3 +1096,8 @@
 - [x] Manter a largura manual de 355px e a altura manual de 1440px no desktop
 - [x] Neutralizar somente no mobile medidas que causem corte ou quebra de fluxo
 - [x] Validar desktop, mobile, testes, TypeScript e build antes do checkpoint
+
+## Favicon personalizado do portfólio
+- [x] Criar versões de favicon a partir da ilustração fornecida
+- [x] Integrar os ícones para navegador e dispositivos no HTML público
+- [x] Validar carregamento, testes, TypeScript e build antes do checkpoint
