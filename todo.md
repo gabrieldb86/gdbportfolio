@@ -1178,3 +1178,9 @@
 - [x] Manter a seta inalterada: margem superior de -3px, dimensões de 24px e margem esquerda de 1px
 - [x] Consolidar somente atributos style repetidos, sem transferir a margem do CTA para a seta
 - [x] Validar desktop, mobile, testes, TypeScript e build antes do checkpoint
+
+## Correção da editabilidade independente do CTA
+- [x] Separar o CTA e a seta em linhas JSX distintas para criar referências visuais estáveis
+- [x] Garantir que a edição do CTA não replique estilos na seta e vice-versa
+- [x] Preservar as medidas visuais atuais do CTA, da seta e da faixa fixa mobile
+- [x] Validar as referências de edição, desktop, mobile, testes, TypeScript e build antes do checkpoint

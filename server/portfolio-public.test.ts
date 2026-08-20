@@ -262,12 +262,20 @@ describe("public portfolio metrics and privacy", () => {
 
   it("places the WhatsApp CTA in the first fold of the hero", () => {
     const homeSource = readProjectFile("client/src/pages/Home.tsx");
+    const sourceLines = homeSource.split("\n");
+    const ctaTargetLine = sourceLines.findIndex((line) => line.includes('data-editor-target="hero-cta"'));
+    const iconTargetLine = sourceLines.findIndex((line) => line.includes('data-editor-target="hero-cta-icon"'));
 
     expect(homeSource).toContain('href="https://wa.me/5511945747353"');
     expect(homeSource).toContain("data-umami-event=\"hero-whatsapp-click\"");
     expect(homeSource).toContain('trackPortfolioEvent("cta_fale_comigo")');
-    expect(homeSource).toContain("style={{fontSize: '23px', marginTop: '33px'}}>FALAR COM GABRIEL");
-    expect(homeSource).toContain("<ArrowUpRight size={15} style={{fontSize: '23px', marginTop: '-3px', height: '24px', marginLeft: '1px', width: '24px'}} />");
+    expect(homeSource).toContain('data-editor-target="hero-cta"');
+    expect(homeSource).toContain('data-editor-target="hero-cta-icon"');
+    expect(homeSource).toContain("style={{fontSize: '23px', marginTop: '33px'}}");
+    expect(homeSource).toContain('className="hero-cta-icon"');
+    expect(homeSource).toContain("style={{fontSize: '23px', marginTop: '-3px', height: '24px', marginLeft: '1px', width: '24px'}}");
+    expect(ctaTargetLine).toBeGreaterThan(-1);
+    expect(iconTargetLine).toBeGreaterThan(ctaTargetLine);
     expect(homeSource).toContain("FALAR COM GABRIEL");
   });
 

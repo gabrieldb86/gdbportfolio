@@ -203,7 +203,24 @@ export default function Home() {
 	              <p className="hero-redesign-intro" style={{ marginTop: "16px", fontSize: '16px' }}>{siteConfig.hero.intro}</p>
 	              <p className="hero-proof-line" style={{fontSize: '14px', width: '691px'}}>17+ anos · 114K+ pessoas capacitadas · 130+ promotores monitorados</p>
 	              <div className="hero-actions">
-	                <a className="hero-cta" href="https://wa.me/5511945747353" target="_blank" rel="noreferrer" data-umami-event="hero-whatsapp-click" onClick={() => trackPortfolioEvent("cta_fale_comigo")} style={{fontSize: '23px', marginTop: '33px'}}>FALAR COM GABRIEL <ArrowUpRight size={15} style={{fontSize: '23px', marginTop: '-3px', height: '24px', marginLeft: '1px', width: '24px'}} /></a>
+	                <a
+	                  className="hero-cta"
+	                  href="https://wa.me/5511945747353"
+	                  target="_blank"
+	                  rel="noreferrer"
+	                  data-editor-target="hero-cta"
+	                  data-umami-event="hero-whatsapp-click"
+	                  onClick={() => trackPortfolioEvent("cta_fale_comigo")}
+	                  style={{fontSize: '23px', marginTop: '33px'}}
+	                >
+	                  <span className="hero-cta-label">FALAR COM GABRIEL</span>
+	                  <ArrowUpRight
+	                    className="hero-cta-icon"
+	                    data-editor-target="hero-cta-icon"
+	                    size={15}
+	                    style={{fontSize: '23px', marginTop: '-3px', height: '24px', marginLeft: '1px', width: '24px'}}
+	                  />
+	                </a>
 	              </div>
 	            </div>
           </div>
