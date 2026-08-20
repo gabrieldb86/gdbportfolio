@@ -1230,3 +1230,8 @@
 - [x] Manter seção de contato com altura de 1368px, título em 51px e texto de apoio com margem superior de -100px
 - [x] Consolidar somente propriedades e atributos JSX repetidos, sem alterar valores manuais
 - [x] Validar desktop, mobile, testes, TypeScript e build antes do checkpoint
+
+## Preservação da nova edição manual da marca
+- [x] Manter o nome na marca do cabeçalho com tamanho final de 18px
+- [x] Consolidar somente a propriedade fontSize repetida
+- [x] Validar desktop, mobile, testes, TypeScript e build antes do checkpoint
