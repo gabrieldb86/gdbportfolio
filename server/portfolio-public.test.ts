@@ -270,4 +270,20 @@ describe("public portfolio metrics and privacy", () => {
     expect(homeSource).toContain("<ArrowUpRight size={15} style={{fontSize: '23px', marginTop: '-3px', height: '24px', marginLeft: '1px', width: '24px'}} />");
     expect(homeSource).toContain("FALAR COM GABRIEL");
   });
+
+  it("keeps the hero WhatsApp CTA fixed and visible on mobile without changing desktop behavior", () => {
+    const homeSource = readProjectFile("client/src/pages/Home.tsx");
+    const css = readProjectFile("client/src/index.css");
+
+    expect(css).toContain("/* CTA fixo no mobile");
+    expect(homeSource).toContain('className="mobile-sticky-cta"');
+    expect(homeSource).toContain('className="mobile-sticky-cta" href="https://wa.me/5511945747353"');
+    expect(css).toContain(".home-revision .mobile-sticky-cta {");
+    expect(css).toContain("position: fixed;");
+    expect(css).toContain("bottom: 0;");
+    expect(css).toContain("background: #d73332;");
+    expect(css).toContain("color: #fff9f2 !important;");
+    expect(css).toContain(".home-revision .site-footer");
+    expect(css).toContain("padding-bottom: calc(96px + env(safe-area-inset-bottom)) !important;");
+  });
 });

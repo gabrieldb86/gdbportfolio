@@ -1148,3 +1148,9 @@
 - [x] Manter a seta com tamanho de 23px, margem superior final de -3px, largura e altura de 24px e margem esquerda de 1px
 - [x] Consolidar somente atributos style repetidos no CTA e na seta
 - [x] Validar desktop, mobile, testes, TypeScript e build antes do checkpoint
+
+## CTA fixo de contato no mobile
+- [x] Criar uma faixa vermelha fixa no rodapé somente abaixo de 901px
+- [x] Manter o texto FALAR COM GABRIEL em branco e o link direto ao WhatsApp
+- [x] Reservar espaço no fluxo para impedir que a faixa cubra o conteúdo final
+- [x] Validar desktop inalterado, rolagem mobile, testes, TypeScript e build antes do checkpoint

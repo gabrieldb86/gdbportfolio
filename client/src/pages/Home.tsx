@@ -419,9 +419,11 @@ export default function Home() {
             </form>
           </div>
         </section>
-      </main>
+	      </main>
 
-      <a className={`floating-contact ${floatingContactHidden ? "floating-contact-hidden" : ""}`} href="#contact" onClick={(event) => { event.preventDefault(); trackPortfolioEvent("cta_fale_comigo"); scrollToId("contact"); }}><span>Fale comigo</span><ArrowUpRight size={16} /></a>
+	      <a className="mobile-sticky-cta" href="https://wa.me/5511945747353" target="_blank" rel="noreferrer" data-umami-event="hero-whatsapp-click" onClick={() => trackPortfolioEvent("cta_fale_comigo")}>FALAR COM GABRIEL <ArrowUpRight size={18} /></a>
+
+	      <a className={`floating-contact ${floatingContactHidden ? "floating-contact-hidden" : ""}`} href="#contact" onClick={(event) => { event.preventDefault(); trackPortfolioEvent("cta_fale_comigo"); scrollToId("contact"); }}><span>Fale comigo</span><ArrowUpRight size={16} /></a>
 
       <footer className="site-footer">
         <a className="footer-brand" href="#top" onClick={(event) => { event.preventDefault(); scrollToId("top"); }}><span className="footer-avatar"><img src={siteConfig.railImage} alt="" onError={markBrokenImage} /></span><span style={{fontSize: '24px'}}>Gabriel Danino Basilio</span></a>

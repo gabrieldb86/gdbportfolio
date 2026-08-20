@@ -3933,3 +3933,45 @@ a.proof-link, a.behance-link, a.text-link, .service-detail a {
     max-width: none !important;
   }
 }
+
+.mobile-sticky-cta { display: none; }
+
+/* CTA fixo no mobile: mantém o contato com Gabriel disponível durante toda a leitura. */
+@media (max-width: 900px) {
+  .home-revision .hero-actions {
+    display: none !important;
+  }
+
+  .home-revision .mobile-sticky-cta {
+    position: fixed;
+    z-index: 120;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    width: 100% !important;
+    min-height: 64px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 0 !important;
+    padding: 17px max(24px, env(safe-area-inset-right)) calc(17px + env(safe-area-inset-bottom)) max(24px, env(safe-area-inset-left));
+    border: 0;
+    background: #d73332;
+    box-shadow: 0 -10px 24px rgba(28, 27, 26, .22);
+    color: #fff9f2 !important;
+    font-size: 13px !important;
+    letter-spacing: .13em;
+    line-height: 1.2;
+    text-align: center;
+  }
+
+  .home-revision .mobile-sticky-cta:hover {
+    gap: 10px;
+    color: #fff9f2;
+  }
+
+  .home-revision .site-footer {
+    padding-bottom: calc(96px + env(safe-area-inset-bottom)) !important;
+  }
+}
