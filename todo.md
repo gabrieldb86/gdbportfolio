@@ -1066,3 +1066,8 @@
 - [x] Consolidar as propriedades fontSize duplicadas sem alterar o valor final
 - [x] Manter a tipografia manual no mobile, pois a verificação não identificou corte ou quebra de fluxo
 - [x] Validar desktop, mobile, testes, TypeScript e build antes do checkpoint
+
+## Preservação da edição manual na legenda de Sobre mim
+- [x] Manter as margens manuais de -21px abaixo e 75px à direita no desktop
+- [x] Manter as margens manuais no mobile, pois a verificação não identificou comprometimento do enquadramento
+- [x] Validar desktop, mobile, testes, TypeScript e build antes do checkpoint

@@ -190,6 +190,12 @@ describe("public portfolio metrics and privacy", () => {
     expect(homeSource).toContain("<p style={{fontSize: '25px'}}>Coordenação que organiza contexto");
   });
 
+  it("preserves the manual positioning of the about image label", () => {
+    const homeSource = readProjectFile("client/src/pages/Home.tsx");
+
+    expect(homeSource).toContain("about-art-label\" style={{marginBottom: '-21px', marginRight: '75px'}}");
+  });
+
   it("preserves manual coordination-focus dimensions on desktop and resets them only on mobile", () => {
     const css = readProjectFile("client/src/index.css");
     const homeSource = readProjectFile("client/src/pages/Home.tsx");

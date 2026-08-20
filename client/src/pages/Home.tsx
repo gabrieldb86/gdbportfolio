@@ -357,7 +357,7 @@ export default function Home() {
           <div className="about-grid">
             <div className="about-art-wrap" data-reveal="about-art">
               <img src={siteConfig.trainingImage} alt="Gabriel conduzindo um treinamento diante de uma equipe" loading="lazy" fetchPriority="low" decoding="async" width="1200" height="900" style={{ aspectRatio: '1.33' }} onError={markBrokenImage} />
-              <span className="about-art-label">Processo / repertório / intenção</span>
+              <span className="about-art-label" style={{marginBottom: '-21px', marginRight: '75px'}}>Processo / repertório / intenção</span>
             </div>
             <div className="about-copy" data-reveal="about-copy" style={{marginLeft: '20px'}}>
               <p className="section-kicker" style={{fontSize: '16px'}}>Sobre mim</p>
