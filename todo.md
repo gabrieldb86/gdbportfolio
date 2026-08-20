@@ -1135,3 +1135,10 @@
 - [x] Consolidar somente atributos style repetidos no título e nas tags internas
 - [x] Fazer a nova largura manual valer no desktop e preservar o reset exclusivo no mobile
 - [x] Validar desktop, mobile, testes, TypeScript e build antes do checkpoint
+
+## Preservação da nova escala do CTA e formulário
+- [x] Manter o CTA da primeira dobra com tamanho de 23px e margem superior de 40px
+- [x] Manter o formulário de contato com margem esquerda de 914px e largura de 750px
+- [x] Consolidar somente atributos style repetidos no CTA, ícone e formulário
+- [x] Manter os valores manuais no mobile, pois a verificação não identificou corte ou quebra de fluxo
+- [x] Validar desktop, mobile, testes, TypeScript e build antes do checkpoint

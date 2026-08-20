@@ -169,7 +169,7 @@ describe("public portfolio metrics and privacy", () => {
     expect(homeSource).toContain("Você está formando<br style={{height: '479px', marginBottom: '111px', marginRight: '-1px', width: '756px'}} />uma equipe de");
     expect(homeSource).toContain("<em style={{height: '479px', marginBottom: '111px', marginRight: '-1px', width: '756px'}}>coordenação?</em>");
     expect(homeSource).toContain("style={{fontSize: '16px', marginBottom: '18px', marginTop: '-111px'}}");
-    expect(homeSource).toContain("contact-form\" data-reveal=\"contact-form\" onSubmit={handleSubmit} style={{marginLeft: '565px', width: '750px'}}");
+    expect(homeSource).toContain("contact-form\" data-reveal=\"contact-form\" onSubmit={handleSubmit} style={{marginLeft: '914px', width: '750px'}}");
     expect(css).toContain("#contact.contact-section .contact-intro h2#contact-title[style]");
     expect(css).toContain("min-width: 756px");
     expect(css).toContain("width: 756px !important");
@@ -266,6 +266,7 @@ describe("public portfolio metrics and privacy", () => {
     expect(homeSource).toContain('href="https://wa.me/5511945747353"');
     expect(homeSource).toContain("data-umami-event=\"hero-whatsapp-click\"");
     expect(homeSource).toContain('trackPortfolioEvent("cta_fale_comigo")');
+    expect(homeSource).toContain("style={{fontSize: '23px', marginTop: '40px'}}");
     expect(homeSource).toContain("FALAR COM GABRIEL");
   });
 });
