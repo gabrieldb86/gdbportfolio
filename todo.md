@@ -1172,3 +1172,9 @@
 - [x] Manter a seta inalterada: margem superior de -3px, dimensões de 24px e margem esquerda de 1px
 - [x] Consolidar somente atributos style repetidos, sem transferir a margem do CTA para a seta
 - [x] Validar desktop, mobile, testes, TypeScript e build antes do checkpoint
+
+## Preservação exclusiva da margem manual de 33px
+- [x] Manter o CTA do hero com tamanho de 23px e margem superior final de 33px
+- [x] Manter a seta inalterada: margem superior de -3px, dimensões de 24px e margem esquerda de 1px
+- [x] Consolidar somente atributos style repetidos, sem transferir a margem do CTA para a seta
+- [x] Validar desktop, mobile, testes, TypeScript e build antes do checkpoint
