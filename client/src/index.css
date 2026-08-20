@@ -957,7 +957,7 @@ h1 em, h2 em { color: var(--primary); font-style: italic; }
 }
 
 /* Ajustes para atender aos 10 pontos solicitados */
-.brand-name { white-space: nowrap; line-height: 1.1; font-size: 21px !important; letter-spacing: -.02em; }
+.brand-name { white-space: nowrap; line-height: 1.1; font-size: 21px; letter-spacing: -.02em; }
 .hero-redesign { align-items: center; padding-top: 155px; }
 .hero-redesign-copy { align-self: center; }
 .hero-redesign-copy h1 { font-size: clamp(4.4rem, 8vw, 8.8rem); line-height: .8; }

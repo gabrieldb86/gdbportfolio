@@ -298,6 +298,15 @@ describe("public portfolio metrics and privacy", () => {
     expect(homeSource).toContain("fontSize: '55px'}}>coordenação?</em>");
   });
 
+  it("allows the manual brand type size to override the header default", () => {
+    const css = readProjectFile("client/src/index.css");
+    const homeSource = readProjectFile("client/src/pages/Home.tsx");
+
+    expect(css).toContain(".brand-name { white-space: nowrap; line-height: 1.1; font-size: 21px; letter-spacing: -.02em; }");
+    expect(css).not.toContain(".brand-name { white-space: nowrap; line-height: 1.1; font-size: 21px !important;");
+    expect(homeSource).toContain("brand-name\" style={{ fontSize: '19px', textAlign: \"left\" }}");
+  });
+
   it("keeps the hero WhatsApp CTA fixed and visible on mobile without changing desktop behavior", () => {
     const homeSource = readProjectFile("client/src/pages/Home.tsx");
     const css = readProjectFile("client/src/index.css");
