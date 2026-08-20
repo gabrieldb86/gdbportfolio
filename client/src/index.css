@@ -4234,3 +4234,86 @@ a.proof-link, a.behance-link, a.text-link, .service-detail a {
   outline-offset: 3px;
   transform: translate(-50%, 0);
 }
+
+/* Limite de reflow acessível: em janelas muito estreitas, o conteúdo passa a uma escala compacta e legível. */
+@media (max-width: 360px) {
+  .home-revision .site-header-redesign {
+    min-width: 0;
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  .home-revision .site-header-redesign .brand-lockup {
+    min-width: 0;
+    max-width: calc(100% - 42px);
+    gap: 9px;
+  }
+
+  .home-revision .site-header-redesign .header-avatar {
+    width: 28px;
+    height: 28px;
+    flex-basis: 28px;
+  }
+
+  .home-revision .site-header-redesign .brand-name {
+    min-width: 0;
+    overflow: hidden;
+    font-size: clamp(.76rem, 4.1vw, .95rem);
+    letter-spacing: -.035em;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .home-revision .hero-redesign {
+    gap: 28px;
+    padding: 92px 16px 30px;
+  }
+
+  .home-revision .hero-redesign-copy h1 {
+    font-size: clamp(2.7rem, 15.5vw, 3.45rem);
+    letter-spacing: -.078em;
+  }
+
+  .home-revision .hero-redesign-panel .eyebrow[style],
+  .home-revision .hero-redesign-panel .hero-proof-line[style],
+  .home-revision .hero-redesign-intro {
+    width: auto !important;
+    max-width: 100% !important;
+    overflow-wrap: anywhere;
+  }
+
+  .home-revision .hero-positioning,
+  .home-revision .hero-redesign-intro {
+    font-size: 15px;
+    line-height: 1.55;
+  }
+
+  .home-revision .hero-proof-line {
+    font-size: 9px !important;
+    line-height: 1.45;
+  }
+
+  .home-revision .hero-redesign-portrait {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .home-revision .mobile-sticky-cta {
+    min-height: 64px;
+    gap: 11px;
+    padding-right: 14px;
+    padding-left: 14px;
+    font-size: 10px;
+    letter-spacing: .1em;
+  }
+
+  .home-revision .contact-direct,
+  .home-revision .footer-brand {
+    overflow-wrap: anywhere;
+  }
+
+  .home-revision .contact-form input,
+  .home-revision .contact-form textarea {
+    font-size: 16px;
+  }
+}

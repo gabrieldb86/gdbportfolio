@@ -312,4 +312,15 @@ describe("public portfolio metrics and privacy", () => {
     expect(homeSource).toContain('<main id="main-content" tabIndex={-1}>');
     expect(css).toContain(".skip-link:focus-visible");
   });
+
+  it("uses a compact accessible reflow before extreme viewport widths cut off content", () => {
+    const css = readProjectFile("client/src/index.css");
+
+    expect(css).toContain("/* Limite de reflow acessível");
+    expect(css).toContain("@media (max-width: 360px)");
+    expect(css).toContain("text-overflow: ellipsis;");
+    expect(css).toContain("overflow-wrap: anywhere;");
+    expect(css).toContain(".home-revision .mobile-sticky-cta");
+    expect(css).toContain("font-size: 16px;");
+  });
 });

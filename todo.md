@@ -1197,3 +1197,9 @@
 - [x] Manter o formulário de contato com margem esquerda de 565px e largura de 750px
 - [x] Consolidar apenas propriedades style repetidas, sem alterar os valores manuais
 - [x] Validar desktop, mobile, testes, TypeScript e build antes do checkpoint
+
+## Reflow acessível para janelas muito estreitas
+- [x] Analisar o exemplo enviado e reproduzir o comportamento problemático em largura extrema
+- [x] Definir um breakpoint de reflow que troque a composição desktop antes de textos e imagens perderem utilidade
+- [x] Garantir leitura, navegação, imagens e CTA acessíveis sem rolagem horizontal
+- [x] Validar largura extrema, tablet, notebook, desktop e mobile antes do checkpoint
