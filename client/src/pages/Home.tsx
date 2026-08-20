@@ -397,7 +397,7 @@ export default function Home() {
                 <a className="contact-direct" href="mailto:gabrieldb@me.com" data-umami-event="email-click" onClick={() => trackPortfolioEvent("contact_email")}><Mail size={17} /> gabrieldb@me.com <ArrowUpRight size={15} /></a>
               </div>
             </div>
-            <form className="contact-form" data-reveal="contact-form" onSubmit={handleSubmit}>
+            <form className="contact-form" data-reveal="contact-form" onSubmit={handleSubmit} style={{marginLeft: '138px'}}>
               <label htmlFor="name">Seu nome</label>
               <input id="name" name="name" type="text" placeholder="Como posso te chamar?" required />
               <label className="form-honeypot" htmlFor="website">Website</label>

@@ -1050,3 +1050,8 @@
 - [x] Garantir 190px nos dois elementos selecionados do item 03 no desktop
 - [x] Preservar o reset responsivo exclusivo do mobile
 - [x] Validar visualmente, executar a suíte técnica e salvar checkpoint
+
+## Preservação da edição manual do formulário de contato
+- [x] Manter a margem esquerda manual de 138px no formulário de contato em desktop
+- [x] Neutralizar a margem somente no mobile para preservar o fluxo responsivo
+- [x] Validar desktop, mobile, testes, TypeScript e build antes do checkpoint

@@ -3389,6 +3389,11 @@ a.proof-link, a.behance-link, a.text-link, .service-detail a {
     width: auto !important;
     height: auto !important;
   }
+  .home-revision .contact-form[style] {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+  }
   .home-revision .contact-intro p,
   .home-revision .contact-links {
     max-width: 100% !important;
