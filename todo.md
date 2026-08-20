@@ -1245,3 +1245,8 @@
 - [x] Identificar a regra CSS que está prevalecendo sobre a edição manual da marca
 - [x] Garantir que a marca renderize visualmente em 19px no cabeçalho
 - [x] Validar desktop, mobile, testes, TypeScript e build antes do checkpoint
+
+## Preservação da marca atualizada em 17px
+- [x] Manter o nome na marca do cabeçalho com tamanho final de 17px
+- [x] Consolidar somente a propriedade fontSize repetida
+- [x] Validar desktop, mobile, testes, TypeScript e build antes do checkpoint

@@ -290,7 +290,7 @@ describe("public portfolio metrics and privacy", () => {
   it("preserves the final manual values across the edited public sections", () => {
     const homeSource = readProjectFile("client/src/pages/Home.tsx");
 
-    expect(homeSource).toContain("brand-name\" style={{ fontSize: '19px', textAlign: \"left\" }}");
+    expect(homeSource).toContain("brand-name\" style={{ fontSize: '17px', textAlign: \"left\" }}");
     expect(homeSource).toContain("id=\"coordination-focus-title\" style={{height: '140px', width: '272px'}}");
     expect(homeSource).toContain("style={{fontSize: '14px', height: '21px', width: '276px'}}");
     expect(homeSource).toContain("id=\"work\" className=\"work-section work-redesign section-pad\" aria-labelledby=\"work-title\" style={{height: '5139px', width: '358px'}}");
@@ -304,7 +304,7 @@ describe("public portfolio metrics and privacy", () => {
 
     expect(css).toContain(".brand-name { white-space: nowrap; line-height: 1.1; font-size: 21px; letter-spacing: -.02em; }");
     expect(css).not.toContain(".brand-name { white-space: nowrap; line-height: 1.1; font-size: 21px !important;");
-    expect(homeSource).toContain("brand-name\" style={{ fontSize: '19px', textAlign: \"left\" }}");
+    expect(homeSource).toContain("brand-name\" style={{ fontSize: '17px', textAlign: \"left\" }}");
   });
 
   it("keeps the hero WhatsApp CTA fixed and visible on mobile without changing desktop behavior", () => {

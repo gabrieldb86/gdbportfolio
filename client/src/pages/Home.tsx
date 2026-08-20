@@ -172,7 +172,7 @@ export default function Home() {
       <header className={`site-header site-header-redesign ${scrolled ? "site-header-scrolled" : ""}`}>
         <a className="brand-lockup" href="#top" onClick={(event) => { event.preventDefault(); scrollToId("top"); }}>
           <img className="header-avatar" src={siteConfig.railImage} alt="" width="34" height="34" decoding="async" onError={markBrokenImage} />
-          <span className="brand-name" style={{ fontSize: '19px', textAlign: "left" }}>Gabriel Danino Basilio</span>
+          <span className="brand-name" style={{ fontSize: '17px', textAlign: "left" }}>Gabriel Danino Basilio</span>
         </a>
 
         <button className="menu-trigger" type="button" aria-label={menuOpen ? "Fechar menu" : "Abrir menu"} onClick={() => setMenuOpen((open) => !open)}>
