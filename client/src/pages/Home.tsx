@@ -172,7 +172,7 @@ export default function Home() {
       <header className={`site-header site-header-redesign ${scrolled ? "site-header-scrolled" : ""}`}>
         <a className="brand-lockup" href="#top" onClick={(event) => { event.preventDefault(); scrollToId("top"); }}>
           <img className="header-avatar" src={siteConfig.railImage} alt="" width="34" height="34" decoding="async" onError={markBrokenImage} />
-          <span className="brand-name" style={{ fontSize: "24px", textAlign: "left" }}>Gabriel Danino Basilio</span>
+          <span className="brand-name" style={{ fontSize: '18px', textAlign: "left" }}>Gabriel Danino Basilio</span>
         </a>
 
         <button className="menu-trigger" type="button" aria-label={menuOpen ? "Fechar menu" : "Abrir menu"} onClick={() => setMenuOpen((open) => !open)}>
@@ -234,7 +234,7 @@ export default function Home() {
           <div className="coordination-focus-layout">
             <div className="coordination-focus-label" data-reveal="focus-label" style={{width: '933px'}}>
               <p className="section-kicker" style={{fontSize: '16px'}}>Focos de coordenação</p>
-              <h2 id="coordination-focus-title">Três frentes para levar <em>método à prática.</em></h2>
+              <h2 id="coordination-focus-title" style={{height: '140px', width: '272px'}}>Três frentes para levar <em style={{height: '140px', width: '272px'}}>método à prática.</em></h2>
               <p className="coordination-focus-note" style={{fontSize: '16px', width: '879px'}}>Conteúdo, treinamento e campo organizados para apoiar decisões, capacitar equipes e acompanhar a execução.</p>
             </div>
             <div className="coordination-focus-grid">
@@ -332,12 +332,12 @@ export default function Home() {
             </div>
             <div className="manifesto-aside" style={{marginLeft: '-145px'}}>
               <p style={{fontSize: '20px'}}>Porque conteúdo e treinamento só funcionam quando encontram contexto, método e um próximo passo claro — para a equipe, para o campo e para o negócio.</p>
-              <a className="text-link" href="#about" onClick={(event) => { event.preventDefault(); scrollToId("about"); }} style={{fontSize: '14px'}}>Conheça meu jeito de trabalhar <ArrowUpRight size={15} style={{fontSize: '14px'}} /></a>
+              <a className="text-link" href="#about" onClick={(event) => { event.preventDefault(); scrollToId("about"); }} style={{fontSize: '14px', height: '21px', width: '276px'}}>Conheça meu jeito de trabalhar <ArrowUpRight size={15} style={{fontSize: '14px', height: '21px', width: '276px'}} /></a>
             </div>
           </div>
         </section>
 
-        <section id="work" className="work-section work-redesign section-pad" aria-labelledby="work-title">
+        <section id="work" className="work-section work-redesign section-pad" aria-labelledby="work-title" style={{height: '5139px', width: '358px'}}>
           <div className="work-redesign-heading" data-reveal="work-heading">
             <div><p className="section-kicker" style={{ fontSize: '16px' }}>Trabalhos selecionados</p><h2 id="work-title">Projetos que<br /><em>ganharam forma.</em></h2></div>
             <p style={{ fontSize: '16px' }}>Uma seleção de campanhas, trilhas, eventos e materiais criada para comunicar melhor, capacitar equipes e melhorar a execução.</p>
@@ -378,7 +378,7 @@ export default function Home() {
           <div className="about-grid">
             <div className="about-art-wrap" data-reveal="about-art">
               <img src={siteConfig.trainingImage} alt="Gabriel conduzindo um treinamento diante de uma equipe" loading="lazy" fetchPriority="low" decoding="async" width="1200" height="900" style={{ aspectRatio: '1.33' }} onError={markBrokenImage} />
-              <span className="about-art-label" style={{marginBottom: '-21px', marginRight: '75px'}}>Processo / repertório / intenção</span>
+              <span className="about-art-label" style={{marginBottom: '-17px', marginRight: '9px'}}>Processo / repertório / intenção</span>
             </div>
             <div className="about-copy" data-reveal="about-copy" style={{marginLeft: '20px'}}>
               <p className="section-kicker" style={{fontSize: '16px'}}>Sobre mim</p>
@@ -406,12 +406,12 @@ export default function Home() {
           </div>
         </section>
 
-	        <section id="contact" className="contact-section section-pad" aria-labelledby="contact-title" style={{height: '1440px', width: '355px'}}>
+	        <section id="contact" className="contact-section section-pad" aria-labelledby="contact-title" style={{height: '1368px', width: '355px'}}>
 	          <div className="contact-grid">
 	            <div className="contact-intro" data-reveal="contact-intro">
 	              <p className="section-kicker" style={{fontSize: '16px'}}>Vamos conversar</p>
-	              <h2 id="contact-title" style={{height: '479px', width: '756px', marginBottom: '111px', marginRight: '-1px'}}>Você está formando<br style={{height: '479px', marginBottom: '111px', marginRight: '-1px', width: '756px'}} />uma equipe de <em style={{height: '479px', marginBottom: '111px', marginRight: '-1px', width: '756px'}}>coordenação?</em></h2>
-	              <p style={{fontSize: '16px', marginBottom: '18px', marginTop: '-111px'}}>Estou aberto a oportunidades em conteúdo, treinamento, trade marketing e performance de campo. Envie o contexto da posição ou fale comigo diretamente pelo LinkedIn, e-mail ou WhatsApp.</p>
+	              <h2 id="contact-title" style={{height: '479px', width: '756px', marginBottom: '111px', marginRight: '-1px', fontSize: '51px'}}>Você está formando<br style={{height: '479px', marginBottom: '111px', marginRight: '-1px', width: '756px'}} />uma equipe de <em style={{height: '479px', marginBottom: '111px', marginRight: '-1px', width: '756px', fontSize: '55px'}}>coordenação?</em></h2>
+	              <p style={{fontSize: '16px', marginBottom: '18px', marginTop: '-100px'}}>Estou aberto a oportunidades em conteúdo, treinamento, trade marketing e performance de campo. Envie o contexto da posição ou fale comigo diretamente pelo LinkedIn, e-mail ou WhatsApp.</p>
               <div className="contact-links">
                 <a className="contact-direct" href="https://wa.me/5511945747353" data-umami-event="whatsapp-click" target="_blank" rel="noreferrer" onClick={() => trackPortfolioEvent("contact_whatsapp")}><MessageCircle size={17} /> Falar diretamente com Gabriel <ArrowUpRight size={15} /></a>
                 <a className="contact-direct" href="https://www.linkedin.com/in/gabrieldb86" data-umami-event="linkedin-click" target="_blank" rel="noreferrer" onClick={() => trackPortfolioEvent("contact_linkedin")}><Linkedin size={17} /> Conectar pelo LinkedIn <ArrowUpRight size={15} /></a>

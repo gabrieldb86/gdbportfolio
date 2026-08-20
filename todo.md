@@ -1221,3 +1221,12 @@
 - [x] Manter a imagem do retrato com largura final de 648px
 - [x] Consolidar somente a propriedade width repetida, sem alterar os valores finais
 - [x] Validar desktop, mobile, testes, TypeScript e build antes do checkpoint
+
+## Preservação das novas edições distribuídas na página inicial
+- [x] Manter marca em 18px e título de focos com largura de 272px e altura final de 140px
+- [x] Manter link editorial com largura de 276px e altura final de 21px
+- [x] Manter seção de trabalhos com largura de 358px e altura de 5139px
+- [x] Manter legenda da imagem com margem direita de 9px e margem inferior de -17px
+- [x] Manter seção de contato com altura de 1368px, título em 51px e texto de apoio com margem superior de -100px
+- [x] Consolidar somente propriedades e atributos JSX repetidos, sem alterar valores manuais
+- [x] Validar desktop, mobile, testes, TypeScript e build antes do checkpoint

@@ -164,11 +164,11 @@ describe("public portfolio metrics and privacy", () => {
     const homeSource = readProjectFile("client/src/pages/Home.tsx");
     const css = readProjectFile("client/src/index.css");
 
-    expect(homeSource).toContain("id=\"contact-title\" style={{height: '479px', width: '756px', marginBottom: '111px', marginRight: '-1px'}}");
-    expect(homeSource).toContain("id=\"contact\" className=\"contact-section section-pad\" aria-labelledby=\"contact-title\" style={{height: '1440px', width: '355px'}}");
+    expect(homeSource).toContain("id=\"contact-title\" style={{height: '479px', width: '756px', marginBottom: '111px', marginRight: '-1px', fontSize: '51px'}}");
+    expect(homeSource).toContain("id=\"contact\" className=\"contact-section section-pad\" aria-labelledby=\"contact-title\" style={{height: '1368px', width: '355px'}}");
     expect(homeSource).toContain("Você está formando<br style={{height: '479px', marginBottom: '111px', marginRight: '-1px', width: '756px'}} />uma equipe de");
-    expect(homeSource).toContain("<em style={{height: '479px', marginBottom: '111px', marginRight: '-1px', width: '756px'}}>coordenação?</em>");
-    expect(homeSource).toContain("style={{fontSize: '16px', marginBottom: '18px', marginTop: '-111px'}}");
+    expect(homeSource).toContain("<em style={{height: '479px', marginBottom: '111px', marginRight: '-1px', width: '756px', fontSize: '55px'}}>coordenação?</em>");
+    expect(homeSource).toContain("style={{fontSize: '16px', marginBottom: '18px', marginTop: '-100px'}}");
     expect(homeSource).toContain("contact-form\" data-reveal=\"contact-form\" onSubmit={handleSubmit} style={{marginLeft: '565px', width: '750px'}}");
     expect(homeSource).toContain('className="hero-actions" style={{marginTop: \'24px\'}}');
     expect(css).toContain("#contact.contact-section .contact-intro h2#contact-title[style]");
@@ -199,7 +199,7 @@ describe("public portfolio metrics and privacy", () => {
   it("preserves the manual positioning of the about image label", () => {
     const homeSource = readProjectFile("client/src/pages/Home.tsx");
 
-    expect(homeSource).toContain("about-art-label\" style={{marginBottom: '-21px', marginRight: '75px'}}");
+    expect(homeSource).toContain("about-art-label\" style={{marginBottom: '-17px', marginRight: '9px'}}");
   });
 
   it("preserves the manual CV toolstrip measurements and resets them only on mobile", () => {
@@ -285,6 +285,17 @@ describe("public portfolio metrics and privacy", () => {
 
     expect(homeSource).toContain('hero-redesign-portrait hero-redesign-portrait-large" data-reveal="hero-portrait" style={{marginRight: \'110px\'}}');
     expect(homeSource).toContain("style={{ aspectRatio: '0.80', width: '648px' }}");
+  });
+
+  it("preserves the final manual values across the edited public sections", () => {
+    const homeSource = readProjectFile("client/src/pages/Home.tsx");
+
+    expect(homeSource).toContain("brand-name\" style={{ fontSize: '18px', textAlign: \"left\" }}");
+    expect(homeSource).toContain("id=\"coordination-focus-title\" style={{height: '140px', width: '272px'}}");
+    expect(homeSource).toContain("style={{fontSize: '14px', height: '21px', width: '276px'}}");
+    expect(homeSource).toContain("id=\"work\" className=\"work-section work-redesign section-pad\" aria-labelledby=\"work-title\" style={{height: '5139px', width: '358px'}}");
+    expect(homeSource).toContain("about-art-label\" style={{marginBottom: '-17px', marginRight: '9px'}}");
+    expect(homeSource).toContain("fontSize: '55px'}}>coordenação?</em>");
   });
 
   it("keeps the hero WhatsApp CTA fixed and visible on mobile without changing desktop behavior", () => {
