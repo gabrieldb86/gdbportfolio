@@ -1142,3 +1142,9 @@
 - [x] Consolidar somente atributos style repetidos no CTA, ícone e formulário
 - [x] Manter os valores manuais no mobile, pois a verificação não identificou corte ou quebra de fluxo
 - [x] Validar desktop, mobile, testes, TypeScript e build antes do checkpoint
+
+## Preservação da nova posição do CTA e da seta
+- [x] Manter o CTA com tamanho de 23px e margem superior final de 28px
+- [x] Manter a seta com tamanho de 23px, margem superior final de -3px, largura e altura de 24px e margem esquerda de 1px
+- [x] Consolidar somente atributos style repetidos no CTA e na seta
+- [x] Validar desktop, mobile, testes, TypeScript e build antes do checkpoint

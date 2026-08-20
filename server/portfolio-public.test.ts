@@ -266,7 +266,8 @@ describe("public portfolio metrics and privacy", () => {
     expect(homeSource).toContain('href="https://wa.me/5511945747353"');
     expect(homeSource).toContain("data-umami-event=\"hero-whatsapp-click\"");
     expect(homeSource).toContain('trackPortfolioEvent("cta_fale_comigo")');
-    expect(homeSource).toContain("style={{fontSize: '23px', marginTop: '40px'}}");
+    expect(homeSource).toContain("style={{fontSize: '23px', marginTop: '28px'}}>FALAR COM GABRIEL");
+    expect(homeSource).toContain("<ArrowUpRight size={15} style={{fontSize: '23px', marginTop: '-3px', height: '24px', marginLeft: '1px', width: '24px'}} />");
     expect(homeSource).toContain("FALAR COM GABRIEL");
   });
 });
