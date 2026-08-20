@@ -1250,3 +1250,8 @@
 - [x] Manter o nome na marca do cabeçalho com tamanho final de 17px
 - [x] Consolidar somente a propriedade fontSize repetida
 - [x] Validar desktop, mobile, testes, TypeScript e build antes do checkpoint
+
+## Preservação da altura final do título de Focos
+- [x] Manter o título e a ênfase de Focos com altura final de 140px e largura de 272px
+- [x] Consolidar somente as propriedades height repetidas
+- [x] Validar desktop, mobile, testes, TypeScript e build antes do checkpoint
