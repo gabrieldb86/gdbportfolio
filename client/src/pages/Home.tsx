@@ -203,7 +203,7 @@ export default function Home() {
 	              <p className="hero-positioning">{siteConfig.hero.positioning}</p>
 	              <p className="hero-redesign-intro" style={{ marginTop: "16px", fontSize: '16px' }}>{siteConfig.hero.intro}</p>
 	              <p className="hero-proof-line" style={{fontSize: '14px', width: '691px'}}>17+ anos · 114K+ pessoas capacitadas · 130+ promotores monitorados</p>
-	              <div className="hero-actions">
+	              <div className="hero-actions" style={{marginTop: '24px'}}>
 	                <a
 	                  className="hero-cta"
 	                  href="https://wa.me/5511945747353"
@@ -418,7 +418,7 @@ export default function Home() {
                 <a className="contact-direct" href="mailto:gabrieldb@me.com" data-umami-event="email-click" onClick={() => trackPortfolioEvent("contact_email")}><Mail size={17} /> gabrieldb@me.com <ArrowUpRight size={15} /></a>
               </div>
             </div>
-	            <form className="contact-form" data-reveal="contact-form" onSubmit={handleSubmit} style={{marginLeft: '914px', width: '750px'}}>
+	            <form className="contact-form" data-reveal="contact-form" onSubmit={handleSubmit} style={{marginLeft: '565px', width: '750px'}}>
               <label htmlFor="name">Seu nome</label>
               <input id="name" name="name" type="text" placeholder="Como posso te chamar?" required />
               <label className="form-honeypot" htmlFor="website">Website</label>

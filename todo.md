@@ -1191,3 +1191,9 @@
 - [x] Proteger a leitura em alturas reduzidas e impedir conteúdo encavalado ou inacessível
 - [x] Reforçar foco visível, navegação por teclado, tamanhos legíveis e redução de movimento
 - [x] Validar as rotas públicas em 1920px, 1440px, 1280px, 1024px, 768px e mobile, além de testes, TypeScript e build
+
+## Preservação das novas edições do hero e contato
+- [x] Manter o contêiner de ações do hero com margem superior de 24px
+- [x] Manter o formulário de contato com margem esquerda de 565px e largura de 750px
+- [x] Consolidar apenas propriedades style repetidas, sem alterar os valores manuais
+- [x] Validar desktop, mobile, testes, TypeScript e build antes do checkpoint
