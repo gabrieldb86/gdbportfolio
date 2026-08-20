@@ -246,12 +246,12 @@ describe("public portfolio metrics and privacy", () => {
     const document = readProjectFile("client/index.html");
     const manifest = readProjectFile("client/public/site.webmanifest");
 
-    expect(document).toContain("/manus-storage/favicon_768615a7.ico");
-    expect(document).toContain("/manus-storage/favicon-16_1f5a4fc3.png");
-    expect(document).toContain("/manus-storage/favicon-32_51ce1595.png");
-    expect(document).toContain("/manus-storage/apple-touch-icon_352cf635.png");
-    expect(document).toContain('rel="manifest" href="/site.webmanifest"');
-    expect(manifest).toContain("/manus-storage/icon-192_98d0ecb7.png");
-    expect(manifest).toContain("/manus-storage/icon-512_268e9b86.png");
+    expect(document).toContain("/favicon.ico?v=portrait-20260820");
+    expect(document).toContain("/favicon-16.png?v=portrait-20260820");
+    expect(document).toContain("/favicon-32.png?v=portrait-20260820");
+    expect(document).toContain("/apple-touch-icon.png?v=portrait-20260820");
+    expect(document).toContain('rel="manifest" href="/site.webmanifest?v=portrait-20260820"');
+    expect(manifest).toContain("/icon-192.png?v=portrait-20260820");
+    expect(manifest).toContain("/icon-512.png?v=portrait-20260820");
   });
 });

@@ -1101,3 +1101,8 @@
 - [x] Criar versões de favicon a partir da ilustração fornecida
 - [x] Integrar os ícones para navegador e dispositivos no HTML público
 - [x] Validar carregamento, testes, TypeScript e build antes do checkpoint
+
+## Correção de entrega do favicon publicado
+- [x] Diagnosticar por que os arquivos de ícone não aparecem no site e no mobile publicados
+- [x] Corrigir caminhos, publicação ou metadados para disponibilizar os ícones publicamente
+- [x] Validar os caminhos públicos canônicos, a prévia e a suíte técnica antes do checkpoint
