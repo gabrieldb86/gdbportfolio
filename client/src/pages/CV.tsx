@@ -190,7 +190,7 @@ export default function CV() {
         </section>
 
         <section className="cv-content-section section-pad">
-          <div className="cv-content-grid">
+          <div className="cv-content-grid" style={{marginTop: '-45px'}}>
             <div className="cv-sidebar">
               <p className="section-kicker">Perfil</p>
               <p className="cv-sidebar-copy">Conteúdo, treinamento e trade marketing com olhar de quem entende que comunicação só funciona quando encontra contexto, ritmo e intenção.</p>
@@ -209,8 +209,8 @@ export default function CV() {
           </div>
         </section>
 
-        <section className="cv-detail-section section-pad" aria-labelledby="qualification-title">
-          <div className="cv-detail-content">
+        <section className="cv-detail-section section-pad" aria-labelledby="qualification-title" style={{marginTop: '-45px'}}>
+          <div className="cv-detail-content" style={{marginTop: '-30px'}}>
             <div className="cv-section-heading"><p className="section-kicker">Base de atuação</p><h2 id="qualification-title">Método, repertório<br /><strong>e ferramentas.</strong></h2></div>
             <div className="cv-qualification-grid">
               <article className="cv-qualification-block cv-education-block"><p className="section-kicker">Formação</p><h3>{education.degree}</h3><p>{education.institution}</p><span>{education.period}</span></article>
@@ -221,12 +221,12 @@ export default function CV() {
           </div>
         </section>
 
-	        <section className="cv-toolstrip-section">
+	        <section className="cv-toolstrip-section" style={{marginTop: '-60px', height: '413px'}}>
 	          <div className="cv-toolstrip-label" style={{ marginBottom: "1px", marginLeft: "-2px", marginRight: "17px", marginTop: "-14px", paddingTop: "1px", fontSize: '40px', width: '382px' }}><p className="section-kicker" style={{fontSize: '40px', width: '382px'}}>Como trabalho</p></div>
           <div className="cv-toolstrip" style={{marginLeft: '173px'}}><span style={{marginLeft: '173px'}}>Curiosidade</span><span style={{marginLeft: '173px'}}>Clareza</span><span style={{marginLeft: '173px'}}>Ritmo</span><span style={{marginLeft: '173px'}}>Colaboração</span><span style={{marginLeft: '173px'}}>Repertório</span><span style={{marginLeft: '173px'}}>Entrega</span></div>
         </section>
 
-        <section className="cv-experience-section section-pad" aria-labelledby="experience-title">
+	        <section className="cv-experience-section section-pad" aria-labelledby="experience-title" style={{height: '5944px', width: '355px', marginTop: '0px'}}>
           <div className="cv-experience-content">
             <div className="cv-section-heading"><p className="section-kicker">Trajetória</p><h2 id="experience-title">Experiência que<br /><strong>vira repertório.</strong></h2></div>
             <div className="experience-list">

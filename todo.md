@@ -1083,3 +1083,11 @@
 - [x] Unificar as propriedades marginLeft repetidas na legenda e em seus dois textos
 - [x] Preservar a margem manual final de -5px e a margem inferior existente de -24px
 - [x] Validar CV em desktop, mobile, testes, TypeScript e build antes do checkpoint
+
+## Preservação da edição manual de seções do CV
+- [x] Manter os recuos finais de -45px no conteúdo e na seção de detalhes, e -30px no conteúdo de detalhes
+- [x] Manter a faixa Como trabalho com margem superior de -60px e altura de 413px
+- [x] Manter a seção de experiência com largura de 355px, altura de 5944px e margem superior final de 0px
+- [x] Consolidar somente atributos style duplicados sem alterar os valores finais
+- [x] Manter as medidas no mobile, pois a verificação não identificou corte ou quebra de fluxo
+- [x] Validar CV em desktop, mobile, testes, TypeScript e build antes do checkpoint
