@@ -1235,3 +1235,8 @@
 - [x] Manter o nome na marca do cabeçalho com tamanho final de 18px
 - [x] Consolidar somente a propriedade fontSize repetida
 - [x] Validar desktop, mobile, testes, TypeScript e build antes do checkpoint
+
+## Preservação da marca atualizada em 19px
+- [x] Manter o nome na marca do cabeçalho com tamanho final de 19px
+- [x] Consolidar somente a propriedade fontSize repetida
+- [x] Validar desktop, mobile, testes, TypeScript e build antes do checkpoint

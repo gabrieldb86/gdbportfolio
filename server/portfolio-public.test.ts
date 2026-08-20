@@ -290,7 +290,7 @@ describe("public portfolio metrics and privacy", () => {
   it("preserves the final manual values across the edited public sections", () => {
     const homeSource = readProjectFile("client/src/pages/Home.tsx");
 
-    expect(homeSource).toContain("brand-name\" style={{ fontSize: '18px', textAlign: \"left\" }}");
+    expect(homeSource).toContain("brand-name\" style={{ fontSize: '19px', textAlign: \"left\" }}");
     expect(homeSource).toContain("id=\"coordination-focus-title\" style={{height: '140px', width: '272px'}}");
     expect(homeSource).toContain("style={{fontSize: '14px', height: '21px', width: '276px'}}");
     expect(homeSource).toContain("id=\"work\" className=\"work-section work-redesign section-pad\" aria-labelledby=\"work-title\" style={{height: '5139px', width: '358px'}}");
