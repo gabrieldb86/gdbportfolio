@@ -1111,3 +1111,8 @@
 - [x] Adicionar o CTA FALAR COM GABRIEL no hero, com link de WhatsApp
 - [x] Preservar a hierarquia visual e o comportamento responsivo do hero
 - [x] Validar desktop, mobile, eventos, testes, TypeScript e build antes do checkpoint
+
+## Restauração da composição do CV
+- [x] Remover somente os estilos inline manuais que desalinharam o CV
+- [x] Preservar integralmente a Home, o CTA e as demais páginas
+- [x] Validar CV em desktop e mobile, testes, TypeScript e build antes do checkpoint

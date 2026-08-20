@@ -217,14 +217,15 @@ describe("public portfolio metrics and privacy", () => {
     expect(cvSource).toContain("<span style={{marginLeft: '-5px'}}>Coordenador · Conteúdo, Treinamento &amp; Trade</span>");
   });
 
-  it("preserves final manual measurements across the edited CV sections", () => {
+  it("restores the functional layout flow across the edited CV sections", () => {
     const cvSource = readProjectFile("client/src/pages/CV.tsx");
 
-    expect(cvSource).toContain("cv-content-grid\" style={{marginTop: '-45px'}}");
-    expect(cvSource).toContain("cv-detail-section section-pad\" aria-labelledby=\"qualification-title\" style={{marginTop: '-45px'}}");
-    expect(cvSource).toContain("cv-detail-content\" style={{marginTop: '-30px'}}");
-    expect(cvSource).toContain("cv-toolstrip-section\" style={{marginTop: '-60px', height: '413px'}}");
-    expect(cvSource).toContain("style={{height: '5944px', width: '355px', marginTop: '0px'}}");
+    expect(cvSource).toContain('<div className="cv-content-grid">');
+    expect(cvSource).toContain('<section className="cv-detail-section section-pad" aria-labelledby="qualification-title">');
+    expect(cvSource).toContain('<div className="cv-detail-content">');
+    expect(cvSource).toContain('<section className="cv-toolstrip-section">');
+    expect(cvSource).toContain('<section className="cv-experience-section section-pad" aria-labelledby="experience-title">');
+    expect(cvSource).not.toContain("height: '5944px'");
   });
 
   it("preserves manual coordination-focus dimensions on desktop and resets them only on mobile", () => {
