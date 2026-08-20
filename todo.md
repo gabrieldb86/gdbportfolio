@@ -1091,3 +1091,8 @@
 - [x] Consolidar somente atributos style duplicados sem alterar os valores finais
 - [x] Manter as medidas no mobile, pois a verificação não identificou corte ou quebra de fluxo
 - [x] Validar CV em desktop, mobile, testes, TypeScript e build antes do checkpoint
+
+## Preservação da edição manual da seção de contato
+- [x] Manter a largura manual de 355px e a altura manual de 1440px no desktop
+- [x] Neutralizar somente no mobile medidas que causem corte ou quebra de fluxo
+- [x] Validar desktop, mobile, testes, TypeScript e build antes do checkpoint

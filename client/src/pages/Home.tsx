@@ -385,7 +385,7 @@ export default function Home() {
           </div>
         </section>
 
-	        <section id="contact" className="contact-section section-pad" aria-labelledby="contact-title">
+	        <section id="contact" className="contact-section section-pad" aria-labelledby="contact-title" style={{height: '1440px', width: '355px'}}>
 	          <div className="contact-grid">
 	            <div className="contact-intro" data-reveal="contact-intro">
 	              <p className="section-kicker" style={{fontSize: '16px'}}>Vamos conversar</p>
