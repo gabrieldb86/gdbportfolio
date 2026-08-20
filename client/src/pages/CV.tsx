@@ -175,9 +175,9 @@ export default function CV() {
                 <button className="print-button" type="button" onClick={() => window.print()}><Printer size={15} /> Imprimir CV</button>
               </div>
             </div>
-            <div className="cv-portrait-wrap">
-              <div className="cv-portrait"><img src={profilePhoto} alt="Gabriel Danino Basilio" width="800" height="1000" loading="eager" decoding="async" onError={markBrokenImage} /></div>
-              <div className="cv-portrait-caption" style={{ marginBottom: "-24px" }}><span>Gabriel Danino Basilio</span><span>Coordenador · Conteúdo, Treinamento &amp; Trade</span></div>
+	            <div className="cv-portrait-wrap">
+	              <div className="cv-portrait"><img src={profilePhoto} alt="Gabriel Danino Basilio" width="800" height="1000" loading="eager" decoding="async" onError={markBrokenImage} /></div>
+	              <div className="cv-portrait-caption" style={{ marginBottom: "-24px", marginLeft: '-5px' }}><span style={{marginLeft: '-5px'}}>Gabriel Danino Basilio</span><span style={{marginLeft: '-5px'}}>Coordenador · Conteúdo, Treinamento &amp; Trade</span></div>
             </div>
           </div>
         </section>

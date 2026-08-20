@@ -1078,3 +1078,8 @@
 - [x] Consolidar somente os atributos style repetidos no rótulo Como trabalho
 - [x] Neutralizar somente no mobile valores que causem corte ou quebra de fluxo
 - [x] Validar CV em desktop, mobile, testes, TypeScript e build antes do checkpoint
+
+## Consolidação da legenda manual do retrato no CV
+- [x] Unificar as propriedades marginLeft repetidas na legenda e em seus dois textos
+- [x] Preservar a margem manual final de -5px e a margem inferior existente de -24px
+- [x] Validar CV em desktop, mobile, testes, TypeScript e build antes do checkpoint

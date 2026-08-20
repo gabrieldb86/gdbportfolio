@@ -208,6 +208,14 @@ describe("public portfolio metrics and privacy", () => {
     expect(css).toContain("margin-left: 0 !important");
   });
 
+  it("preserves the final manual offset in the CV portrait caption", () => {
+    const cvSource = readProjectFile("client/src/pages/CV.tsx");
+
+    expect(cvSource).toContain('style={{ marginBottom: "-24px", marginLeft: \'-5px\' }}');
+    expect(cvSource).toContain("<span style={{marginLeft: '-5px'}}>Gabriel Danino Basilio</span>");
+    expect(cvSource).toContain("<span style={{marginLeft: '-5px'}}>Coordenador · Conteúdo, Treinamento &amp; Trade</span>");
+  });
+
   it("preserves manual coordination-focus dimensions on desktop and resets them only on mobile", () => {
     const css = readProjectFile("client/src/index.css");
     const homeSource = readProjectFile("client/src/pages/Home.tsx");
