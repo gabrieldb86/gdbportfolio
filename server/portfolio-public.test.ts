@@ -323,4 +323,14 @@ describe("public portfolio metrics and privacy", () => {
     expect(css).toContain(".home-revision .mobile-sticky-cta");
     expect(css).toContain("font-size: 16px;");
   });
+
+  it("switches away from compressed desktop before the intermediate viewport loses usability", () => {
+    const css = readProjectFile("client/src/index.css");
+
+    expect(css).toContain("/* Janela de transição");
+    expect(css).toContain("@media (min-width: 901px) and (max-width: 1100px)");
+    expect(css).toContain(".home-revision .side-rail");
+    expect(css).toContain(".home-revision .hero-redesign[style]");
+    expect(css).toContain("grid-template-columns: minmax(0, 1fr) !important;");
+  });
 });

@@ -1203,3 +1203,9 @@
 - [x] Definir um breakpoint de reflow que troque a composição desktop antes de textos e imagens perderem utilidade
 - [x] Garantir leitura, navegação, imagens e CTA acessíveis sem rolagem horizontal
 - [x] Validar largura extrema, tablet, notebook, desktop e mobile antes do checkpoint
+
+## Correção da transição desktop para modo compacto
+- [x] Mapear os estilos concorrentes que ainda comprimem o layout quando a janela é reduzida
+- [x] Antecipar a troca do desktop para uma composição compacta antes de perder legibilidade
+- [x] Preservar hierarquia, imagens, navegação e CTA no novo ponto de transição
+- [x] Validar em janelas estreitas, tablet, notebook, desktop e mobile antes do checkpoint

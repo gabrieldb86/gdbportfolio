@@ -4317,3 +4317,62 @@ a.proof-link, a.behance-link, a.text-link, .service-detail a {
     font-size: 16px;
   }
 }
+
+/* Janela de transição: abandona o desktop comprimido antes que a leitura perca utilidade. */
+@media (min-width: 901px) and (max-width: 1100px) {
+  .home-revision {
+    --editorial-axis: 30px;
+  }
+
+  .home-revision .side-rail {
+    display: none;
+  }
+
+  .home-revision main {
+    padding-left: 0;
+  }
+
+  .home-revision .hero-redesign[style] {
+    min-height: auto !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    row-gap: 38px !important;
+    padding: 116px 30px 42px !important;
+  }
+
+  .home-revision .hero-redesign-copy,
+  .home-revision .hero-redesign-panel .hero-redesign-copy {
+    max-width: 700px !important;
+  }
+
+  .home-revision .hero-redesign-copy h1 {
+    font-size: clamp(3.7rem, 9.2vw, 6.2rem) !important;
+  }
+
+  .home-revision .hero-redesign-portrait,
+  .home-revision .hero-redesign-portrait-large {
+    justify-self: start;
+    width: min(100%, 620px) !important;
+    max-width: 620px !important;
+  }
+
+  .home-revision .coordination-focus-band,
+  .home-revision .recruiter-proof-wrap,
+  .home-revision .work-section,
+  .home-revision .services-section,
+  .home-revision .about-section,
+  .home-revision .contact-section,
+  .home-revision .site-footer {
+    padding-right: 30px !important;
+    padding-left: 30px !important;
+  }
+
+  .home-revision .recruiter-proof-header {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+
+  .home-revision .work-redesign .projects-grid,
+  .home-revision .work-redesign .projects-grid.sean-obrien-grid {
+    margin-left: 0 !important;
+  }
+}
