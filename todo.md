@@ -712,7 +712,7 @@
 - [x] Rastrear cliques de contato e navegação relevante como eventos de conversão
 - [x] Documentar a ativação da propriedade Google Search Console e a leitura de consultas orgânicas
 - [x] Validar build, consentimento e carregamento sem identificador de medição
-- [ ] Informar o ID de medição GA4 e validar a coleta real após o consentimento
+- [x] Manter a integração GA4 preparada e inativa por solicitação do usuário; a validação de coleta dependerá de nova solicitação com ID de medição
 
 ## Ajuste mobile — lista Como trabalho
 - [x] Colocar cada item da lista Como trabalho em sua própria linha no mobile
