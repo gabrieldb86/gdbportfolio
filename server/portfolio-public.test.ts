@@ -294,4 +294,21 @@ describe("public portfolio metrics and privacy", () => {
     expect(css).toContain(".home-revision .site-footer");
     expect(css).toContain("padding-bottom: calc(96px + env(safe-area-inset-bottom)) !important;");
   });
+
+  it("keeps public desktop layouts fluid and accessible as the viewport is reduced", () => {
+    const homeSource = readProjectFile("client/src/pages/Home.tsx");
+    const css = readProjectFile("client/src/index.css");
+
+    expect(css).toContain("/* Desktop fluido e acessível");
+    expect(css).toContain("@media (min-width: 901px) and (max-width: 1280px)");
+    expect(css).toContain(".home-revision .hero-redesign[style]");
+    expect(css).toContain(".home-revision .contact-form[style]");
+    expect(css).toContain("grid-template-columns: minmax(0, 1fr) !important;");
+    expect(css).toContain("max-height: 800px");
+    expect(css).toContain("@media (prefers-reduced-motion: reduce)");
+    expect(css).toContain("@media (prefers-contrast: more)");
+    expect(homeSource).toContain('className="skip-link" href="#main-content"');
+    expect(homeSource).toContain('<main id="main-content" tabIndex={-1}>');
+    expect(css).toContain(".skip-link:focus-visible");
+  });
 });

@@ -167,7 +167,8 @@ export default function Home() {
   };
 
   return (
-    <div className="site-shell home-revision" style={{ "--primary": siteConfig.brand.accent, "--background": siteConfig.brand.background, "--foreground": siteConfig.brand.foreground, "--site-bg-image": `url(${siteConfig.backgroundImage})` } as CSSProperties}>
+    <div id="top" className="site-shell home-revision" style={{ "--primary": siteConfig.brand.accent, "--background": siteConfig.brand.background, "--foreground": siteConfig.brand.foreground, "--site-bg-image": `url(${siteConfig.backgroundImage})` } as CSSProperties}>
+      <a className="skip-link" href="#main-content">Pular para o conteúdo principal</a>
       <header className={`site-header site-header-redesign ${scrolled ? "site-header-scrolled" : ""}`}>
         <a className="brand-lockup" href="#top" onClick={(event) => { event.preventDefault(); scrollToId("top"); }}>
           <img className="header-avatar" src={siteConfig.railImage} alt="" width="34" height="34" decoding="async" onError={markBrokenImage} />
@@ -193,7 +194,7 @@ export default function Home() {
         <span className="rail-label">Portfólio · 2026</span>
       </aside>
 
-      <main id="top">
+      <main id="main-content" tabIndex={-1}>
         <section className="hero-section hero-redesign" style={{height: '830px'}}>
           <div className="hero-redesign-panel" data-reveal="hero-copy" style={{height: '583px', marginLeft: '-315px', marginRight: '377px', width: '1061px'}}>
             <div className="hero-redesign-copy">

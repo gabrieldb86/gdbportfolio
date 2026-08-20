@@ -1184,3 +1184,10 @@
 - [x] Garantir que a edição do CTA não replique estilos na seta e vice-versa
 - [x] Preservar as medidas visuais atuais do CTA, da seta e da faixa fixa mobile
 - [x] Validar as referências de edição, desktop, mobile, testes, TypeScript e build antes do checkpoint
+
+## Responsividade e acessibilidade em janelas reduzidas
+- [x] Mapear sobreposições e cortes em desktop amplo, notebook, tablet horizontal e tablet vertical
+- [x] Tornar hero, imagens, textos, grades e seções fluidos entre 901px e 1680px
+- [x] Proteger a leitura em alturas reduzidas e impedir conteúdo encavalado ou inacessível
+- [x] Reforçar foco visível, navegação por teclado, tamanhos legíveis e redução de movimento
+- [x] Validar as rotas públicas em 1920px, 1440px, 1280px, 1024px, 768px e mobile, além de testes, TypeScript e build
