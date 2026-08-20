@@ -164,14 +164,15 @@ describe("public portfolio metrics and privacy", () => {
     const homeSource = readProjectFile("client/src/pages/Home.tsx");
     const css = readProjectFile("client/src/index.css");
 
-    expect(homeSource).toContain("id=\"contact-title\" style={{height: '690px', width: '451px', marginBottom: '111px', marginRight: '-1px'}}");
+    expect(homeSource).toContain("id=\"contact-title\" style={{height: '479px', width: '756px', marginBottom: '111px', marginRight: '-1px'}}");
     expect(homeSource).toContain("id=\"contact\" className=\"contact-section section-pad\" aria-labelledby=\"contact-title\" style={{height: '1440px', width: '355px'}}");
-    expect(homeSource).toContain("Você está formando<br style={{height: '690px', marginBottom: '111px', marginRight: '-1px', width: '451px'}} />uma equipe de");
-    expect(homeSource).toContain("<em style={{height: '690px', marginBottom: '111px', marginRight: '-1px', width: '451px'}}>coordenação?</em>");
+    expect(homeSource).toContain("Você está formando<br style={{height: '479px', marginBottom: '111px', marginRight: '-1px', width: '756px'}} />uma equipe de");
+    expect(homeSource).toContain("<em style={{height: '479px', marginBottom: '111px', marginRight: '-1px', width: '756px'}}>coordenação?</em>");
+    expect(homeSource).toContain("style={{fontSize: '16px', marginBottom: '18px', marginTop: '-111px'}}");
     expect(homeSource).toContain("contact-form\" data-reveal=\"contact-form\" onSubmit={handleSubmit} style={{marginLeft: '565px', width: '750px'}}");
     expect(css).toContain("#contact.contact-section .contact-intro h2#contact-title[style]");
-    expect(css).toContain("min-width: 451px");
-    expect(css).toContain("width: 451px !important");
+    expect(css).toContain("min-width: 756px");
+    expect(css).toContain("width: 756px !important");
     expect(css).toContain(".home-revision .contact-form[style]");
     expect(css).toContain("width: auto !important");
     expect(css).toContain("height: auto !important");

@@ -1128,3 +1128,10 @@
 - [x] Fazer valer no desktop a largura manual definida para o H2 da seção final
 - [x] Preservar o reset exclusivo da largura no mobile
 - [x] Validar desktop, mobile, testes, TypeScript e build antes do checkpoint
+
+## Preservação da nova escala do título de contato
+- [x] Manter no título as medidas finais de 756px de largura e 479px de altura
+- [x] Manter o texto de apoio com margem superior de -111px e margem inferior de 18px
+- [x] Consolidar somente atributos style repetidos no título e nas tags internas
+- [x] Fazer a nova largura manual valer no desktop e preservar o reset exclusivo no mobile
+- [x] Validar desktop, mobile, testes, TypeScript e build antes do checkpoint

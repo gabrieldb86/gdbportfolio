@@ -3925,11 +3925,11 @@ a.proof-link, a.behance-link, a.text-link, .service-detail a {
 @media (min-width: 901px) {
   #contact.contact-section .contact-intro:has(h2#contact-title[style]) {
     width: max-content;
-    min-width: 451px;
+    min-width: 756px;
   }
 
   #contact.contact-section .contact-intro h2#contact-title[style] {
-    width: 451px !important;
+    width: 756px !important;
     max-width: none !important;
   }
 }
