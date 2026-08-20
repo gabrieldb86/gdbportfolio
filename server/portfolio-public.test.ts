@@ -170,6 +170,8 @@ describe("public portfolio metrics and privacy", () => {
     expect(homeSource).toContain("<em style={{height: '690px', marginBottom: '111px', marginRight: '-1px', width: '451px'}}>coordenação?</em>");
     expect(homeSource).toContain("contact-form\" data-reveal=\"contact-form\" onSubmit={handleSubmit} style={{marginLeft: '565px', width: '750px'}}");
     expect(css).toContain("#contact.contact-section .contact-intro h2#contact-title[style]");
+    expect(css).toContain("min-width: 451px");
+    expect(css).toContain("width: 451px !important");
     expect(css).toContain(".home-revision .contact-form[style]");
     expect(css).toContain("width: auto !important");
     expect(css).toContain("height: auto !important");

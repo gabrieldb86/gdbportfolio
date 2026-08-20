@@ -1123,3 +1123,8 @@
 - [x] Consolidar somente atributos style repetidos no título, nas tags internas e no formulário
 - [x] Neutralizar somente no mobile medidas que causem corte ou quebra de fluxo
 - [x] Validar desktop, mobile, testes, TypeScript e build antes do checkpoint
+
+## Correção da largura manual do H2 de contato
+- [x] Fazer valer no desktop a largura manual definida para o H2 da seção final
+- [x] Preservar o reset exclusivo da largura no mobile
+- [x] Validar desktop, mobile, testes, TypeScript e build antes do checkpoint
