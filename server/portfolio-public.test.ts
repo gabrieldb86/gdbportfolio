@@ -333,4 +333,14 @@ describe("public portfolio metrics and privacy", () => {
     expect(css).toContain(".home-revision .hero-redesign[style]");
     expect(css).toContain("grid-template-columns: minmax(0, 1fr) !important;");
   });
+
+  it("preserves an accessible desktop canvas below the minimum desktop viewport width", () => {
+    const css = readProjectFile("client/src/index.css");
+
+    expect(css).toContain("/* Canvas desktop acessível");
+    expect(css).toContain("min-width: 1100px;");
+    expect(css).toContain("overflow-x: auto;");
+    expect(css).toContain(".home-revision .side-rail");
+    expect(css).toContain("grid-template-columns: minmax(0, 1fr) minmax(320px, .72fr) !important;");
+  });
 });

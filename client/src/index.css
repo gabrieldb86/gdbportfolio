@@ -4376,3 +4376,59 @@ a.proof-link, a.behance-link, a.text-link, .service-detail a {
     margin-left: 0 !important;
   }
 }
+
+/* Canvas desktop acessível: abaixo de 1100px, o desktop mantém proporção e usa rolagem horizontal nativa. */
+@media (min-width: 901px) and (max-width: 1100px) {
+  html {
+    overflow-x: auto;
+  }
+
+  body,
+  .home-revision {
+    min-width: 1100px;
+  }
+
+  .home-revision .side-rail {
+    display: flex;
+  }
+
+  .home-revision main {
+    padding-left: 54px;
+  }
+
+  .home-revision .hero-redesign[style] {
+    min-height: 830px !important;
+    grid-template-columns: minmax(0, 1fr) minmax(320px, .72fr) !important;
+    align-items: center !important;
+    row-gap: 0 !important;
+    column-gap: 5vw !important;
+    padding: 120px 8vw 81px 120px !important;
+  }
+
+  .home-revision .hero-redesign-copy,
+  .home-revision .hero-redesign-panel .hero-redesign-copy {
+    max-width: none !important;
+  }
+
+  .home-revision .hero-redesign-copy h1 {
+    font-size: clamp(4rem, 7.2vw, 6.6rem) !important;
+  }
+
+  .home-revision .hero-redesign-portrait,
+  .home-revision .hero-redesign-portrait-large {
+    justify-self: stretch;
+    width: 100% !important;
+    max-width: 510px !important;
+  }
+
+  .home-revision .coordination-focus-band,
+  .home-revision .recruiter-proof-wrap,
+  .home-revision .work-section,
+  .home-revision .services-section,
+  .home-revision .about-section,
+  .home-revision .contact-section,
+  .home-revision .site-footer {
+    padding-right: 8vw !important;
+    padding-left: 120px !important;
+  }
+}

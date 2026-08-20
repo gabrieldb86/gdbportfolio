@@ -1209,3 +1209,9 @@
 - [x] Antecipar a troca do desktop para uma composição compacta antes de perder legibilidade
 - [x] Preservar hierarquia, imagens, navegação e CTA no novo ponto de transição
 - [x] Validar em janelas estreitas, tablet, notebook, desktop e mobile antes do checkpoint
+
+## Teste de largura mínima acessível no desktop
+- [x] Definir uma largura mínima do canvas desktop antes de qualquer compressão visual
+- [x] Permitir rolagem horizontal controlada abaixo desse limite, sem alterar a composição desktop
+- [x] Manter o mobile como composição própria e sem rolagem horizontal
+- [x] Validar desktop reduzido, desktop amplo e mobile antes do checkpoint
