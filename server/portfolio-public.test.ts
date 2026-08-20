@@ -280,6 +280,13 @@ describe("public portfolio metrics and privacy", () => {
     expect(homeSource).toContain("FALAR COM GABRIEL");
   });
 
+  it("preserves the final manual portrait spacing and width in the hero", () => {
+    const homeSource = readProjectFile("client/src/pages/Home.tsx");
+
+    expect(homeSource).toContain('hero-redesign-portrait hero-redesign-portrait-large" data-reveal="hero-portrait" style={{marginRight: \'110px\'}}');
+    expect(homeSource).toContain("style={{ aspectRatio: '0.80', width: '648px' }}");
+  });
+
   it("keeps the hero WhatsApp CTA fixed and visible on mobile without changing desktop behavior", () => {
     const homeSource = readProjectFile("client/src/pages/Home.tsx");
     const css = readProjectFile("client/src/index.css");

@@ -225,8 +225,8 @@ export default function Home() {
 	              </div>
 	            </div>
           </div>
-          <div className="hero-redesign-portrait hero-redesign-portrait-large" data-reveal="hero-portrait">
-            <img src={siteConfig.profilePhoto} alt="Gabriel Danino Basilio" width="800" height="1000" loading="eager" fetchPriority="high" decoding="async" onError={markBrokenImage} style={{ aspectRatio: '0.80' }} />
+          <div className="hero-redesign-portrait hero-redesign-portrait-large" data-reveal="hero-portrait" style={{marginRight: '110px'}}>
+            <img src={siteConfig.profilePhoto} alt="Gabriel Danino Basilio" width="800" height="1000" loading="eager" fetchPriority="high" decoding="async" onError={markBrokenImage} style={{ aspectRatio: '0.80', width: '648px' }} />
           </div>
         </section>
 

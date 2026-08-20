@@ -1215,3 +1215,9 @@
 - [x] Permitir rolagem horizontal controlada abaixo desse limite, sem alterar a composição desktop
 - [x] Manter o mobile como composição própria e sem rolagem horizontal
 - [x] Validar desktop reduzido, desktop amplo e mobile antes do checkpoint
+
+## Preservação das novas edições do retrato do hero
+- [x] Manter o contêiner do retrato com margem direita de 110px
+- [x] Manter a imagem do retrato com largura final de 648px
+- [x] Consolidar somente a propriedade width repetida, sem alterar os valores finais
+- [x] Validar desktop, mobile, testes, TypeScript e build antes do checkpoint
