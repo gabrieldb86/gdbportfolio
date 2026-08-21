@@ -1264,3 +1264,8 @@
 - [x] Manter o título e a ênfase de Focos em branco
 - [x] Manter o texto de apoio de Focos com margem superior de 25px
 - [x] Validar desktop, mobile, testes, TypeScript e build antes do checkpoint
+
+## Preservação da cor preta de Focos
+- [x] Manter o título e a ênfase de Focos em preto (#000000)
+- [x] Consolidar somente as propriedades color repetidas pelo editor visual
+- [x] Validar desktop, mobile, testes, TypeScript e build antes do checkpoint
