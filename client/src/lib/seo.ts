@@ -1,7 +1,7 @@
 // SEO editorial — metadados por rota para pessoas e mecanismos de busca, sem alterar o layout visual.
 
 const SITE_URL = "https://gabrielpor-7t6ygmlv.manus.space";
-const DEFAULT_OG_IMAGE = `${SITE_URL}/manus-storage/gabriel-profile_69235fc9.jpg`;
+const DEFAULT_OG_IMAGE = `${SITE_URL}/manus-storage/gabriel-profile_69235fc9_7b29c3e7.webp`;
 
 function upsertMeta(attribute: "name" | "property", key: string, content: string) {
   let element = document.head.querySelector<HTMLMetaElement>(`meta[${attribute}="${key}"]`);

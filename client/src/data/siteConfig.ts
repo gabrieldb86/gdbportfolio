@@ -56,13 +56,13 @@ export type SiteConfig = {
 };
 
 export const defaultSiteConfig: SiteConfig = {
-  profilePhoto: "/manus-storage/gabriel-profile_69235fc9.jpg",
-  heroImage: "/manus-storage/gabriel-bonecaps-project_cac714ba.png",
-  railImage: "/manus-storage/gabriel-sidebar-portrait_dae7ef67.jpg",
-  trainingImage: "/manus-storage/gabriel-treinamento-apresentacao_2c7fabd9.jpg",
-  backgroundImage: "/manus-storage/samuel-scalzo-xyuYk9oLA8I-unsplash_f54f1e14.jpg",
+  profilePhoto: "/manus-storage/gabriel-profile_69235fc9_7b29c3e7.webp",
+  heroImage: "/manus-storage/gabriel-bonecaps-project_cac714ba_394b8cac.webp",
+  railImage: "/manus-storage/gabriel-sidebar-portrait_dae7ef67_47bc90da.webp",
+  trainingImage: "/manus-storage/gabriel-treinamento-apresentacao_2c7fabd9_3397c803.webp",
+  backgroundImage: "/manus-storage/samuel-scalzo-xyuYk9oLA8I-unsplash_f54f1e14_d1a41791.webp",
   generatedAssets: {
-    hero: "/manus-storage/gdb-editorial-reference_251d002f.png",
+    hero: "/manus-storage/gdb-editorial-reference_251d002f_af5d8c3a.webp",
     collage: "/manus-storage/gdb-editorial-collage_983088a0.png",
     paper: "/manus-storage/gdb-red-paper-detail_86c93d83.png",
     mark: "/manus-storage/gdb-editorial-mark_6fef482b.png",
@@ -80,7 +80,7 @@ export const defaultSiteConfig: SiteConfig = {
     intro: "Transformo estratégia em conteúdos, experiências de aprendizagem e operações de campo que movem pessoas e melhoram a execução.",
   },
   coordinationFeature: {
-    image: "/manus-storage/gabriel-bonecaps-project_cac714ba.png",
+    image: "/manus-storage/gabriel-bonecaps-project_cac714ba_394b8cac.webp",
     title: "Campanha Cystex",
     category: "Trade & Incentivo",
     year: "2026",
@@ -95,7 +95,7 @@ export const defaultSiteConfig: SiteConfig = {
       title: "Podcast Varejo na Real",
       type: "Conteúdo · Identidade",
       year: "2024",
-      image: "/manus-storage/podcast-varejo-na-real_af69c605.jpg",
+      image: "/manus-storage/podcast-varejo-na-real_af69c605_cd6b89ec.webp",
       href: "https://www.behance.net/gallery/229319463/Podcast-Varejo-na-Real-EP04",
       size: "project-card",
       aspectRatio: "1.26",
@@ -107,7 +107,7 @@ export const defaultSiteConfig: SiteConfig = {
       title: "Ragtech Dicas",
       type: "Conteúdo · Social",
       year: "2024",
-      image: "/manus-storage/ragtech-dicas_c4a3d253.png",
+      image: "/manus-storage/ragtech-dicas_c4a3d253_4fcf3eea.webp",
       href: "/cases/ragtech-sistema-treinamento",
       size: "project-card",
       aspectRatio: "1.26",
@@ -119,7 +119,7 @@ export const defaultSiteConfig: SiteConfig = {
       title: "Future Print 2024",
       type: "Eventos · PDV",
       year: "2024",
-      image: "/manus-storage/future-print-2024_9d7e3d75.png",
+      image: "/manus-storage/future-print-2024_9d7e3d75_3524289f.webp",
       href: "https://www.behance.net/gallery/229318387/Future-Print-2024-Feira-Ragtech-com-Roland-e-Epson",
       size: "project-card",
       aspectRatio: "1.26",
@@ -131,7 +131,7 @@ export const defaultSiteConfig: SiteConfig = {
       title: "Eletrolar Show 2024",
       type: "Eventos · Experiência",
       year: "2024",
-      image: "/manus-storage/eletrolar-show-2024_51e67363.png",
+      image: "/manus-storage/eletrolar-show-2024_51e67363_1374594d.webp",
       href: "https://www.behance.net/gallery/229253681/Eletrolar-Show-2024-Feira-com-Redragon-e-Ragtech",
       size: "project-card",
       aspectRatio: "1.26",
@@ -143,7 +143,7 @@ export const defaultSiteConfig: SiteConfig = {
       title: "Case em atualização",
       type: "Blocs Presentation · revisão editorial",
       year: "2024",
-      image: "/manus-storage/blocs-presentation_ad07fc26.png",
+      image: "/manus-storage/blocs-presentation_ad07fc26_feebad29.webp",
       href: "/cases/blocs-presentation",
       size: "project-card",
       aspectRatio: "1.26",
@@ -155,7 +155,7 @@ export const defaultSiteConfig: SiteConfig = {
       title: "Valens BDN",
       type: "Branding",
       year: "2023",
-      image: "/manus-storage/valens-bdn_e5a00706.jpg",
+      image: "/manus-storage/valens-bdn_e5a00706_587e1e0d.webp",
       href: "https://www.behance.net/gallery/229252033/Valens-BDN",
       size: "project-card",
       aspectRatio: "1.26",
@@ -167,7 +167,7 @@ export const defaultSiteConfig: SiteConfig = {
       title: "Campanha Cystex",
       type: "Trade & Incentivo",
       year: "2026",
-      image: "/manus-storage/gabriel-bonecaps-project_cac714ba.png",
+      image: "/manus-storage/gabriel-bonecaps-project_cac714ba_394b8cac.webp",
       href: "/cases/grupo-ems-cystex",
       size: "project-card",
       aspectRatio: "1.26",
@@ -179,7 +179,7 @@ export const defaultSiteConfig: SiteConfig = {
       title: "Roadshow DPSP",
       type: "Facilitação",
       year: "2026",
-      image: "/manus-storage/valens-bdn_e5a00706.jpg",
+      image: "/manus-storage/valens-bdn_e5a00706_587e1e0d.webp",
       href: "/cases/roadshow-dpsp",
       size: "project-card",
       aspectRatio: "1.26",
@@ -191,7 +191,7 @@ export const defaultSiteConfig: SiteConfig = {
       title: "Today at Apple Brazil",
       type: "Liderança T&D",
       year: "2023",
-      image: "/manus-storage/gabriel-profile_69235fc9.jpg",
+      image: "/manus-storage/gabriel-profile_69235fc9_7b29c3e7.webp",
       href: "/cases/today-at-apple",
       size: "project-card",
       aspectRatio: "1.26",
@@ -203,7 +203,7 @@ export const defaultSiteConfig: SiteConfig = {
       title: "Trilhas de Aprendizagem",
       type: "Instructional Design",
       year: "2026",
-      image: "/manus-storage/valens-bdn_e5a00706.jpg",
+      image: "/manus-storage/valens-bdn_e5a00706_587e1e0d.webp",
       href: "/cases/trilhas-aprendizagem",
       size: "project-card",
       aspectRatio: "1.26",
@@ -225,6 +225,25 @@ export const defaultSiteConfig: SiteConfig = {
 
 const STORAGE_KEY = "gabriel-portfolio-config";
 
+const legacyWebpAssetMap: Record<string, string> = {
+  "/manus-storage/blocs-presentation_ad07fc26.png": "/manus-storage/blocs-presentation_ad07fc26_feebad29.webp",
+  "/manus-storage/eletrolar-show-2024_51e67363.png": "/manus-storage/eletrolar-show-2024_51e67363_1374594d.webp",
+  "/manus-storage/future-print-2024_9d7e3d75.png": "/manus-storage/future-print-2024_9d7e3d75_3524289f.webp",
+  "/manus-storage/gabriel-bonecaps-project_cac714ba.png": "/manus-storage/gabriel-bonecaps-project_cac714ba_394b8cac.webp",
+  "/manus-storage/gabriel-profile_69235fc9.jpg": "/manus-storage/gabriel-profile_69235fc9_7b29c3e7.webp",
+  "/manus-storage/gabriel-sidebar-portrait_dae7ef67.jpg": "/manus-storage/gabriel-sidebar-portrait_dae7ef67_47bc90da.webp",
+  "/manus-storage/gabriel-treinamento-apresentacao_2c7fabd9.jpg": "/manus-storage/gabriel-treinamento-apresentacao_2c7fabd9_3397c803.webp",
+  "/manus-storage/gdb-editorial-reference_251d002f.png": "/manus-storage/gdb-editorial-reference_251d002f_af5d8c3a.webp",
+  "/manus-storage/podcast-varejo-na-real_af69c605.jpg": "/manus-storage/podcast-varejo-na-real_af69c605_cd6b89ec.webp",
+  "/manus-storage/ragtech-dicas_c4a3d253.png": "/manus-storage/ragtech-dicas_c4a3d253_4fcf3eea.webp",
+  "/manus-storage/samuel-scalzo-xyuYk9oLA8I-unsplash_f54f1e14.jpg": "/manus-storage/samuel-scalzo-xyuYk9oLA8I-unsplash_f54f1e14_d1a41791.webp",
+  "/manus-storage/valens-bdn_e5a00706.jpg": "/manus-storage/valens-bdn_e5a00706_587e1e0d.webp",
+};
+
+function migrateAssetUrl(asset: string) {
+  return legacyWebpAssetMap[asset] ?? asset;
+}
+
 function migrateProjects(savedProjects: ProjectConfig[] | undefined) {
   if (!savedProjects) return defaultSiteConfig.projects;
   return savedProjects.map((project) => {
@@ -232,7 +251,8 @@ function migrateProjects(savedProjects: ProjectConfig[] | undefined) {
     const isLegacyBehanceAsset = project.image.startsWith("https://mir-s3-cdn-cf.behance.net/");
     const isLegacyProjectLink = project.href === "https://www.behance.net/gabrieldb86" || project.href.includes("229252353/Blocs-Presentation");
     const isKnownBrokenAsset = /podcast-varejo-na-real_af69c605|ragtech-dicas_83287b6b|future-print-2024_11b8395d|eletrolar-show-2024_5c1c2e78|blocs-presentation_4e27f6cf|gabriel-treinamento-apresentacao_2c7fabd9|gdb-editorial-collage_983088a0/.test(project.image);
-    return defaultProject ? { ...project, image: isLegacyBehanceAsset || isKnownBrokenAsset ? defaultProject.image : project.image, href: isLegacyProjectLink ? defaultProject.href : project.href } : project;
+    const image = isLegacyBehanceAsset || isKnownBrokenAsset ? defaultProject?.image ?? project.image : migrateAssetUrl(project.image);
+    return defaultProject ? { ...project, image, href: isLegacyProjectLink ? defaultProject.href : project.href } : project;
   });
 }
 
@@ -263,9 +283,23 @@ export function getSiteConfig(): SiteConfig {
     return {
       ...defaultSiteConfig,
       ...parsed,
+      profilePhoto: migrateAssetUrl(parsed.profilePhoto ?? defaultSiteConfig.profilePhoto),
+      heroImage: migrateAssetUrl(parsed.heroImage ?? defaultSiteConfig.heroImage),
+      railImage: migrateAssetUrl(parsed.railImage ?? defaultSiteConfig.railImage),
+      trainingImage: migrateAssetUrl(parsed.trainingImage ?? defaultSiteConfig.trainingImage),
+      backgroundImage: migrateAssetUrl(parsed.backgroundImage ?? defaultSiteConfig.backgroundImage),
+      generatedAssets: {
+        ...defaultSiteConfig.generatedAssets,
+        ...parsed.generatedAssets,
+        hero: migrateAssetUrl(parsed.generatedAssets?.hero ?? defaultSiteConfig.generatedAssets.hero),
+      },
       brand: { ...defaultSiteConfig.brand, ...parsed.brand },
       hero: { ...hero, eyebrow: normalizedEyebrow },
-      coordinationFeature: { ...defaultSiteConfig.coordinationFeature, ...parsed.coordinationFeature },
+      coordinationFeature: {
+        ...defaultSiteConfig.coordinationFeature,
+        ...parsed.coordinationFeature,
+        image: migrateAssetUrl(parsed.coordinationFeature?.image ?? defaultSiteConfig.coordinationFeature.image),
+      },
       projects: migrateProjects(parsed.projects),
       services: parsed.services ?? defaultSiteConfig.services,
       serviceDetails: migrateServiceDetails(parsed.serviceDetails),

@@ -1313,3 +1313,9 @@
 - [x] Redigir política de privacidade clara e compatível com o site atual
 - [x] Criar página pública em /privacidade com identidade editorial responsiva
 - [x] Validar rota, metadados, acessibilidade, desktop e mobile
+
+## Otimização de imagens em WebP
+- [x] Mapear todas as imagens efetivamente usadas pelo portfólio
+- [x] Converter os assets compatíveis para WebP com qualidade visual preservada
+- [x] Hospedar os novos assets na camada estática e atualizar referências
+- [x] Validar imagens em desktop e mobile e registrar a redução de peso

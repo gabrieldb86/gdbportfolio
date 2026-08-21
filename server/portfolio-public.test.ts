@@ -129,12 +129,25 @@ describe("public portfolio metrics and privacy", () => {
     const viteSource = readProjectFile("server/_core/vite.ts");
     const storageSource = readProjectFile("server/_core/storageProxy.ts");
 
-    expect(htmlSource).toContain('samuel-scalzo-xyuYk9oLA8I-unsplash_f54f1e14.jpg');
+    expect(htmlSource).toContain('samuel-scalzo-xyuYk9oLA8I-unsplash_f54f1e14_d1a41791.webp');
     expect(htmlSource).toContain('fetchpriority="high"');
     expect(htmlSource).not.toContain("use.typekit.net");
     expect(viteSource).toContain('PUBLIC_HTML_CACHE_CONTROL = "public, max-age=0, s-maxage=300, stale-while-revalidate=86400"');
     expect(storageSource).toContain('public, max-age=300, s-maxage=300, stale-while-revalidate=86400');
     expect(storageSource).not.toContain('res.set("Cache-Control", "no-store")');
+  });
+
+  it("uses optimized WebP assets for portfolio imagery while preserving vector assets", () => {
+    const configSource = readProjectFile("client/src/data/siteConfig.ts");
+    const casesSource = readProjectFile("client/src/pages/CaseStudy.tsx");
+    const seoSource = readProjectFile("shared/portfolioSeo.ts");
+
+    expect(configSource).toContain("gabriel-profile_69235fc9_7b29c3e7.webp");
+    expect(configSource).toContain("gdb-editorial-reference_251d002f_af5d8c3a.webp");
+    expect(configSource).toContain("legacyWebpAssetMap");
+    expect(configSource).toContain("gdb-editorial-collage_983088a0.png");
+    expect(casesSource).toContain("ragtech-dicas_c4a3d253_4fcf3eea.webp");
+    expect(seoSource).toContain("DEFAULT_OG_IMAGE = \"/manus-storage/gabriel-profile_69235fc9_7b29c3e7.webp\"");
   });
 
   it("keeps manual hero measurements on desktop while resetting only their mobile impact", () => {
