@@ -1335,3 +1335,8 @@
 - [x] Confirmar a presença do arquivo na raiz pública
 - [x] Verificar as regras para páginas públicas, editor e sitemap
 - [x] Registrar o resultado e corrigir apenas se houver lacuna
+
+## Verificação de sitemap.xml
+- [x] Confirmar a disponibilidade do sitemap publicado
+- [x] Conferir a cobertura das rotas públicas atuais
+- [x] Corrigir o arquivo somente se houver uma rota pública ausente
