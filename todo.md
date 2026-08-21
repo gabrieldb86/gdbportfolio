@@ -1346,3 +1346,8 @@
 - [x] Criar conteúdo editorial editável e CTA de retorno
 - [x] Adicionar a rota pública /obrigado e integrar o envio válido do formulário
 - [x] Validar fluxo, metadados, desktop e mobile
+
+## Auditoria das últimas alterações
+- [x] Revisar as alterações recentes e os seus resultados de validação
+- [x] Classificar itens que exigem atenção técnica, decisão do usuário ou edição futura
+- [x] Entregar uma priorização clara sem modificar a interface pública
