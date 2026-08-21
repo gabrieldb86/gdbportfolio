@@ -1285,3 +1285,6 @@
 - [x] Verificar title por rota no registro de SEO e no HTML SSR
 - [x] Confirmar que desktop e mobile recebem o mesmo título por URL
 - [x] Registrar o resultado e aplicar correções somente se houver lacunas
+
+## Sincronização contínua com GitHub
+- [x] Registrar que cada alteração concluída deve seguir para o repositório conectado
