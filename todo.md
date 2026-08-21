@@ -1307,3 +1307,9 @@
 - [x] Validar obrigatoriedade, e-mail e padrões evidentes de nome inválido
 - [x] Exibir estados de erro acessíveis e preservar o envio por WhatsApp
 - [x] Criar testes e validar em desktop e mobile
+
+## Política de Privacidade
+- [x] Mapear dados tratados pelo formulário, canais de contato e analytics
+- [x] Redigir política de privacidade clara e compatível com o site atual
+- [x] Criar página pública em /privacidade com identidade editorial responsiva
+- [x] Validar rota, metadados, acessibilidade, desktop e mobile

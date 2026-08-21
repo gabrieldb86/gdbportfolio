@@ -80,6 +80,16 @@ describe("public portfolio metrics and privacy", () => {
     expect(homeSource).toContain('className="header-avatar"');
   });
 
+  it("publishes a clear privacy policy for contact data and analytics changes", () => {
+    const privacySource = readProjectFile("client/src/pages/Privacy.tsx");
+
+    expect(privacySource).toContain("Dados que podem ser informados");
+    expect(privacySource).toContain("O conteúdo digitado não é salvo em uma base de contatos própria deste site");
+    expect(privacySource).toContain("Cookies e métricas de navegação");
+    expect(privacySource).toContain("Seus direitos");
+    expect(privacySource).toContain('href="mailto:gabrieldb@me.com"');
+  });
+
   it("keeps the rail avatar visible and red sections in document flow on desktop", () => {
     const css = readProjectFile("client/src/index.css");
 

@@ -1069,9 +1069,14 @@ h1 em, h2 em { color: var(--primary); font-style: italic; }
 .privacy-main h1 { margin: 22px 0 60px; font-family: "DM Serif Display", serif; font-size: clamp(4rem, 8vw, 8rem); font-weight: 400; letter-spacing: -.055em; line-height: .86; }
 .privacy-main h1 em { color: #b72529; }
 .privacy-copy { max-width: 720px; margin-left: 16%; }
-.privacy-copy h2 { margin: 42px 0 12px; font-family: "DM Serif Display", serif; font-size: 32px; font-weight: 400; }
+.privacy-copy section { padding-top: 36px; border-top: 1px solid rgba(117, 107, 99, .28); }
+.privacy-copy h2 { margin: 0 0 12px; font-family: "DM Serif Display", serif; font-size: 32px; font-weight: 400; }
 .privacy-copy p { color: #4e4742; font-size: 15px; line-height: 1.75; }
 .privacy-copy a { color: #b72529; text-decoration: underline; text-underline-offset: 3px; }
+.privacy-copy .privacy-lead { margin: 0; color: #1b1a19; font-family: "DM Serif Display", serif; font-size: clamp(1.5rem, 2.6vw, 2.25rem); letter-spacing: -.03em; line-height: 1.18; }
+.privacy-copy .privacy-updated { margin: 18px 0 44px; color: #756b63; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; }
+.privacy-copy ul { margin: 0 0 22px; padding-left: 20px; color: #4e4742; font-size: 15px; line-height: 1.75; }
+.privacy-copy li::marker { color: #b72529; }
 .image-fallback { position: relative; overflow: hidden; background: linear-gradient(135deg, #3a3632 0%, #1b1a19 58%, #b72529 58%, #cf7b73 100%); }
 .image-fallback::after { position: absolute; inset: auto 18px 18px; color: #f4eee6; content: "Gabriel DB · conteúdo · treinamento · trade"; font-size: 10px; font-weight: 700; letter-spacing: .11em; line-height: 1.5; text-transform: uppercase; }
 .hero-redesign-portrait.image-fallback::after { inset: 50% 20px auto; color: #f4eee6; content: "Gabriel Danino Basilio"; font-family: "DM Serif Display", serif; font-size: clamp(1.6rem, 3vw, 3rem); font-weight: 400; letter-spacing: -.03em; text-transform: none; transform: translateY(-50%); }
