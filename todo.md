@@ -1295,3 +1295,9 @@
 - [x] Documentar onde editar conteúdo, imagens, SEO, estilos e integrações
 - [x] Padronizar a documentação em diretório próprio sem alterar o visual do site
 - [x] Validar comandos de instalação, desenvolvimento, testes e publicação
+
+## Auditoria de responsividade
+- [x] Verificar Home em desktop amplo, desktop compacto, tablet e mobile
+- [x] Verificar CV e uma página de case nas larguras críticas
+- [x] Confirmar legibilidade, cortes, navegação, CTA e rolagem horizontal
+- [x] Registrar pendências sem alterar o visual sem autorização
