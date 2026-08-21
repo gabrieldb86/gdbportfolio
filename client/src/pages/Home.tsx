@@ -20,7 +20,7 @@ import {
 } from "lucide-react";
 import { defaultSiteConfig, type ProjectConfig, getSiteConfig } from "@/data/siteConfig";
 import { formatMetricValue } from "@/lib/animatedMetric";
-import { Link } from "wouter";
+import { Link, useLocation } from "wouter";
 
 function scrollToId(id: string, closeMenu?: () => void) {
   closeMenu?.();
@@ -87,7 +87,7 @@ export default function Home() {
   const siteConfig = getSiteConfig();
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const [sent, setSent] = useState(false);
+  const [, setLocation] = useLocation();
   const [formErrors, setFormErrors] = useState<ContactFormErrors>({});
   const [floatingContactHidden, setFloatingContactHidden] = useState(false);
 
@@ -167,16 +167,15 @@ export default function Home() {
     };
     const errors = validateContactForm(contact);
     setFormErrors(errors);
-    setSent(false);
     if (Object.keys(errors).length) return;
 
     const company = String(data.get("company") || "").trim() || "não informada";
     const role = String(data.get("role") || "").trim() || "não informado";
     const message = `Olá, Gabriel! Meu nome é ${contact.name}. Empresa ou consultoria: ${company}. Cargo ou oportunidade: ${role}. Gostaria de conversar sobre ${contact.message}. Meu e-mail é ${contact.email}.`;
-    setSent(true);
     trackPortfolioEvent("contact_form_whatsapp");
     window.open(`https://wa.me/5511945747353?text=${encodeURIComponent(message)}`, "_blank", "noopener,noreferrer");
     form.reset();
+    setLocation("/obrigado");
   };
 
   const handleFieldBlur = (event: FocusEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -468,7 +467,6 @@ export default function Home() {
               <textarea id="message" name="message" rows={3} placeholder="Qual é o contexto da vaga ou do desafio?" required aria-required="true" aria-invalid={formErrors.message ? "true" : undefined} aria-describedby={formErrors.message ? "message-error" : undefined} onBlur={handleFieldBlur} />
               {formErrors.message && <p className="form-field-error" id="message-error">{formErrors.message}</p>}
               <button className="submit-button" type="submit">Enviar mensagem <ArrowUpRight size={17} /></button>
-              {sent && <p className="form-success" role="status">Mensagem preparada. O WhatsApp foi aberto em uma nova aba.</p>}
               <p className="contact-privacy-note">Ao enviar, os dados são usados apenas para responder ao seu contato. <a href="/privacidade">Leia o aviso de privacidade.</a></p>
             </form>
           </div>

@@ -81,6 +81,14 @@ const privateEditorMeta: PortfolioRouteMeta = {
   noindex: true,
 };
 
+const thankYouMeta: PortfolioRouteMeta = {
+  title: "Obrigado pelo contato — Gabriel Danino Basilio",
+  description: "Confirmação de envio do formulário de contato do portfólio de Gabriel Danino Basilio.",
+  canonicalPath: "/obrigado",
+  ogImage: DEFAULT_OG_IMAGE,
+  noindex: true,
+};
+
 const notFoundMeta: PortfolioRouteMeta = {
   title: "Página não encontrada — Gabriel Danino Basilio",
   description: "A página solicitada não está disponível neste portfólio.",
@@ -96,6 +104,7 @@ function normalizePath(pathOrUrl: string): string {
 export function getPortfolioRouteMeta(pathOrUrl: string): PortfolioRouteMeta {
   const path = normalizePath(pathOrUrl);
   if (path === "/editor" || path.startsWith("/editor/")) return privateEditorMeta;
+  if (path === "/obrigado") return thankYouMeta;
   return publicRouteMeta[path] ?? notFoundMeta;
 }
 

@@ -423,4 +423,18 @@ describe("public portfolio metrics and privacy", () => {
     expect(css).toContain(".not-found-page, .recovery-page");
     expect(css).toContain(".not-found-main");
   });
+
+  it("redirects a valid contact flow to an editable thank-you page", () => {
+    const appSource = readProjectFile("client/src/App.tsx");
+    const homeSource = readProjectFile("client/src/pages/Home.tsx");
+    const thankYouSource = readProjectFile("client/src/pages/ThankYou.tsx");
+    const css = readProjectFile("client/src/index.css");
+
+    expect(appSource).toContain('path="/obrigado" component={ThankYou}');
+    expect(homeSource).toContain('setLocation("/obrigado")');
+    expect(thankYouSource).toContain("thankYouContent");
+    expect(thankYouSource).toContain('id="thank-you-home-link"');
+    expect(css).toContain(".thank-you-page");
+    expect(css).toContain(".thank-you-main");
+  });
 });

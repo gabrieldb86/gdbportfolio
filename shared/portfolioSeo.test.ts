@@ -32,5 +32,6 @@ describe("public portfolio metadata", () => {
   it("marks unknown paths and the private editor as non-indexable", () => {
     expect(getPortfolioRouteMeta("/cases/inexistente")).toMatchObject({ notFound: true, noindex: true });
     expect(getPortfolioRouteMeta("/editor")).toMatchObject({ noindex: true });
+    expect(getPortfolioRouteMeta("/obrigado")).toMatchObject({ canonicalPath: "/obrigado", noindex: true });
   });
 });

@@ -12,6 +12,7 @@ import CV from "@/pages/CV";
 import CaseStudy from "@/pages/CaseStudy";
 import Home from "@/pages/Home";
 import Privacy from "@/pages/Privacy";
+import ThankYou from "@/pages/ThankYou";
 
 const Editor = lazy(() => import("@/pages/Editor"));
 function Router() {
@@ -22,6 +23,7 @@ function Router() {
       <Route path="/cv" component={CV} />
       <Route path="/cases/:slug" component={CaseStudy} />
       <Route path="/privacidade" component={Privacy} />
+      <Route path="/obrigado" component={ThankYou} />
       <Route path="/editor">
         {() => {
           const params = new URLSearchParams(typeof window === "undefined" ? "" : window.location.search);

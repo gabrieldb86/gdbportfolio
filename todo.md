@@ -1340,3 +1340,9 @@
 - [x] Confirmar a disponibilidade do sitemap publicado
 - [x] Conferir a cobertura das rotas públicas atuais
 - [x] Corrigir o arquivo somente se houver uma rota pública ausente
+
+## Página de agradecimento
+- [x] Mapear o fluxo atual de envio do formulário e o redirecionamento existente
+- [x] Criar conteúdo editorial editável e CTA de retorno
+- [x] Adicionar a rota pública /obrigado e integrar o envio válido do formulário
+- [x] Validar fluxo, metadados, desktop e mobile
