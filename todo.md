@@ -1288,3 +1288,10 @@
 
 ## Sincronização contínua com GitHub
 - [x] Registrar que cada alteração concluída deve seguir para o repositório conectado
+
+## Portabilidade e continuidade do projeto
+- [x] Mapear a arquitetura, rotas, dados e principais pontos de edição
+- [x] Criar guia inicial para pessoas e ferramentas de IA
+- [x] Documentar onde editar conteúdo, imagens, SEO, estilos e integrações
+- [x] Padronizar a documentação em diretório próprio sem alterar o visual do site
+- [x] Validar comandos de instalação, desenvolvimento, testes e publicação
