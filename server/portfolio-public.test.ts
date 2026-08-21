@@ -169,7 +169,7 @@ describe("public portfolio metrics and privacy", () => {
     expect(homeSource).toContain("Você está formando<br style={{height: '479px', marginBottom: '111px', marginRight: '-1px', width: '756px'}} />uma equipe de");
     expect(homeSource).toContain("<em style={{height: '479px', marginBottom: '111px', marginRight: '-1px', width: '756px', fontSize: '55px'}}>coordenação?</em>");
     expect(homeSource).toContain("style={{fontSize: '16px', marginBottom: '18px', marginTop: '-100px'}}");
-    expect(homeSource).toContain("contact-form\" data-reveal=\"contact-form\" onSubmit={handleSubmit} style={{marginLeft: '565px', width: '750px'}}");
+    expect(homeSource).toContain("contact-form\" data-reveal=\"contact-form\" onSubmit={handleSubmit} noValidate aria-describedby={Object.keys(formErrors).length ? \"contact-form-errors\" : undefined} style={{marginLeft: '565px', width: '750px'}}");
     expect(homeSource).toContain('className="hero-actions" style={{marginTop: \'24px\'}}');
     expect(css).toContain("#contact.contact-section .contact-intro h2#contact-title[style]");
     expect(css).toContain("min-width: 756px");

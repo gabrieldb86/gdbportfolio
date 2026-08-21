@@ -1301,3 +1301,9 @@
 - [x] Verificar CV e uma página de case nas larguras críticas
 - [x] Confirmar legibilidade, cortes, navegação, CTA e rolagem horizontal
 - [x] Registrar pendências sem alterar o visual sem autorização
+
+## Validação de formulários
+- [x] Mapear todos os formulários e os campos obrigatórios
+- [x] Validar obrigatoriedade, e-mail e padrões evidentes de nome inválido
+- [x] Exibir estados de erro acessíveis e preservar o envio por WhatsApp
+- [x] Criar testes e validar em desktop e mobile

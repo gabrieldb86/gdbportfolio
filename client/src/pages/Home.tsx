@@ -1,6 +1,7 @@
 // Direção visual: Arquivo Editorial — preservar assimetria, índices em vermelho, imagens protagonistas e microcopy objetiva.
-import { type CSSProperties, type FormEvent, type SyntheticEvent, useEffect, useLayoutEffect, useRef, useState } from "react";
+import { type CSSProperties, type FocusEvent, type FormEvent, type SyntheticEvent, useEffect, useLayoutEffect, useRef, useState } from "react";
 import { trackPortfolioEvent } from "@/lib/analytics";
+import { validateContactForm, type ContactFormErrors } from "@/lib/contactValidation";
 import {
   Activity,
   ArrowUpRight,
@@ -87,6 +88,7 @@ export default function Home() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [sent, setSent] = useState(false);
+  const [formErrors, setFormErrors] = useState<ContactFormErrors>({});
   const [floatingContactHidden, setFloatingContactHidden] = useState(false);
 
   useEffect(() => {
@@ -155,15 +157,45 @@ export default function Home() {
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    const data = new FormData(event.currentTarget);
+    const form = event.currentTarget;
+    const data = new FormData(form);
     if (data.get("website")) return;
-    const company = data.get("company") || "não informada";
-    const role = data.get("role") || "não informado";
-    const message = `Olá, Gabriel! Meu nome é ${data.get("name")}. Empresa ou consultoria: ${company}. Cargo ou oportunidade: ${role}. Gostaria de conversar sobre ${data.get("message")}. Meu e-mail é ${data.get("email")}.`;
+    const contact = {
+      name: String(data.get("name") || "").trim(),
+      email: String(data.get("email") || "").trim(),
+      message: String(data.get("message") || "").trim(),
+    };
+    const errors = validateContactForm(contact);
+    setFormErrors(errors);
+    setSent(false);
+    if (Object.keys(errors).length) return;
+
+    const company = String(data.get("company") || "").trim() || "não informada";
+    const role = String(data.get("role") || "").trim() || "não informado";
+    const message = `Olá, Gabriel! Meu nome é ${contact.name}. Empresa ou consultoria: ${company}. Cargo ou oportunidade: ${role}. Gostaria de conversar sobre ${contact.message}. Meu e-mail é ${contact.email}.`;
     setSent(true);
     trackPortfolioEvent("contact_form_whatsapp");
     window.open(`https://wa.me/5511945747353?text=${encodeURIComponent(message)}`, "_blank", "noopener,noreferrer");
-    event.currentTarget.reset();
+    form.reset();
+  };
+
+  const handleFieldBlur = (event: FocusEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const form = event.currentTarget.form;
+    const field = event.currentTarget.name as keyof ContactFormErrors;
+    if (!form || !(field in { name: true, email: true, message: true })) return;
+
+    const data = new FormData(form);
+    const errors = validateContactForm({
+      name: String(data.get("name") || ""),
+      email: String(data.get("email") || ""),
+      message: String(data.get("message") || ""),
+    });
+    setFormErrors((current) => {
+      const next = { ...current };
+      if (errors[field]) next[field] = errors[field];
+      else delete next[field];
+      return next;
+    });
   };
 
   return (
@@ -418,9 +450,11 @@ export default function Home() {
                 <a className="contact-direct" href="mailto:gabrieldb@me.com" data-umami-event="email-click" onClick={() => trackPortfolioEvent("contact_email")}><Mail size={17} /> gabrieldb@me.com <ArrowUpRight size={15} /></a>
               </div>
             </div>
-	            <form className="contact-form" data-reveal="contact-form" onSubmit={handleSubmit} style={{marginLeft: '565px', width: '750px'}}>
+	            <form className="contact-form" data-reveal="contact-form" onSubmit={handleSubmit} noValidate aria-describedby={Object.keys(formErrors).length ? "contact-form-errors" : undefined} style={{marginLeft: '565px', width: '750px'}}>
+                {Object.keys(formErrors).length > 0 && <p id="contact-form-errors" className="form-error-summary" role="alert">Revise os campos destacados antes de enviar a mensagem.</p>}
               <label htmlFor="name">Seu nome</label>
-              <input id="name" name="name" type="text" placeholder="Como posso te chamar?" required />
+              <input id="name" name="name" type="text" placeholder="Como posso te chamar?" autoComplete="name" required aria-required="true" aria-invalid={formErrors.name ? "true" : undefined} aria-describedby={formErrors.name ? "name-error" : undefined} onBlur={handleFieldBlur} />
+              {formErrors.name && <p className="form-field-error" id="name-error">{formErrors.name}</p>}
               <label className="form-honeypot" htmlFor="website">Website</label>
               <input className="form-honeypot" id="website" name="website" type="text" tabIndex={-1} autoComplete="off" />
               <label htmlFor="company">Empresa ou consultoria</label>
@@ -428,9 +462,11 @@ export default function Home() {
               <label htmlFor="role">Cargo ou oportunidade</label>
               <input id="role" name="role" type="text" placeholder="Qual posição ou desafio?" />
               <label htmlFor="email">Seu e-mail</label>
-              <input id="email" name="email" type="email" placeholder="voce@empresa.com" required />
+              <input id="email" name="email" type="email" placeholder="voce@empresa.com" autoComplete="email" required aria-required="true" aria-invalid={formErrors.email ? "true" : undefined} aria-describedby={formErrors.email ? "email-error" : undefined} onBlur={handleFieldBlur} />
+              {formErrors.email && <p className="form-field-error" id="email-error">{formErrors.email}</p>}
               <label htmlFor="message">Conte sobre a oportunidade, a empresa ou o desafio da posição</label>
-              <textarea id="message" name="message" rows={3} placeholder="Qual é o contexto da vaga ou do desafio?" required />
+              <textarea id="message" name="message" rows={3} placeholder="Qual é o contexto da vaga ou do desafio?" required aria-required="true" aria-invalid={formErrors.message ? "true" : undefined} aria-describedby={formErrors.message ? "message-error" : undefined} onBlur={handleFieldBlur} />
+              {formErrors.message && <p className="form-field-error" id="message-error">{formErrors.message}</p>}
               <button className="submit-button" type="submit">Enviar mensagem <ArrowUpRight size={17} /></button>
               {sent && <p className="form-success" role="status">Mensagem preparada. O WhatsApp foi aberto em uma nova aba.</p>}
               <p className="contact-privacy-note">Ao enviar, os dados são usados apenas para responder ao seu contato. <a href="/privacidade">Leia o aviso de privacidade.</a></p>
