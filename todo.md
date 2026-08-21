@@ -1319,3 +1319,9 @@
 - [x] Converter os assets compatíveis para WebP com qualidade visual preservada
 - [x] Hospedar os novos assets na camada estática e atualizar referências
 - [x] Validar imagens em desktop e mobile e registrar a redução de peso
+
+## Página 404 personalizada
+- [x] Mapear o fallback atual e a rota inexistente no SSR
+- [x] Criar conteúdo editorial com título, orientação e retorno à Home
+- [x] Expor textos e ação como conteúdo editável no código
+- [x] Validar desktop, mobile, metadados e resposta de rota inexistente

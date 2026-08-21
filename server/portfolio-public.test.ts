@@ -409,4 +409,18 @@ describe("public portfolio metrics and privacy", () => {
     expect(css).toContain(".home-revision .side-rail");
     expect(css).toContain("grid-template-columns: minmax(0, 1fr) minmax(320px, .72fr) !important;");
   });
+
+  it("provides an editorial and recoverable not-found experience", () => {
+    const notFoundSource = readProjectFile("client/src/pages/NotFound.tsx");
+    const errorBoundarySource = readProjectFile("client/src/components/ErrorBoundary.tsx");
+    const css = readProjectFile("client/src/index.css");
+
+    expect(notFoundSource).toContain("notFoundContent");
+    expect(notFoundSource).toContain('id="not-found-home-link" href="/"');
+    expect(notFoundSource).toContain("Esta página saiu");
+    expect(errorBoundarySource).toContain("Recuperação de página");
+    expect(errorBoundarySource).not.toContain("error?.stack");
+    expect(css).toContain(".not-found-page, .recovery-page");
+    expect(css).toContain(".not-found-main");
+  });
 });

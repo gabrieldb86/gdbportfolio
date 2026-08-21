@@ -1077,6 +1077,32 @@ h1 em, h2 em { color: var(--primary); font-style: italic; }
 .privacy-copy .privacy-updated { margin: 18px 0 44px; color: #756b63; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; }
 .privacy-copy ul { margin: 0 0 22px; padding-left: 20px; color: #4e4742; font-size: 15px; line-height: 1.75; }
 .privacy-copy li::marker { color: #b72529; }
+.not-found-page, .recovery-page { min-height: 100svh; background: #1c1b1a; color: #fff9f2; }
+.not-found-page { --not-found-axis: clamp(54px, 10.7vw, 220px); }
+.not-found-header { display: flex; align-items: center; justify-content: space-between; min-height: 82px; padding: 0 8vw 0 var(--not-found-axis); border-bottom: 1px solid rgba(255, 249, 242, .18); }
+.not-found-header .brand-name, .not-found-back { color: #fff9f2; }
+.not-found-back { display: inline-flex; align-items: center; gap: 8px; font-size: 10px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+.not-found-back:hover { color: #cf7b73; }
+.not-found-main { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(300px, .58fr); min-height: calc(100svh - 82px); padding-left: var(--not-found-axis); }
+.not-found-copy { display: flex; flex-direction: column; justify-content: center; max-width: 760px; padding: 72px 8vw 72px 0; }
+.not-found-copy .section-kicker, .recovery-main .section-kicker { color: #cf7b73; }
+.not-found-code, .recovery-code { display: block; margin: 16px 0 0; color: #d73332; font-family: "DM Serif Display", serif; font-size: clamp(5rem, 13vw, 12rem); letter-spacing: -.08em; line-height: .74; }
+.not-found-copy h1, .recovery-main h1 { margin: 26px 0 0; font-family: "DM Serif Display", serif; font-size: clamp(3.8rem, 7vw, 7.7rem); font-weight: 400; letter-spacing: -.06em; line-height: .86; }
+.not-found-copy h1 em, .recovery-main h1 em { color: #cf7b73; }
+.not-found-description { max-width: 480px; margin: 28px 0 0; color: rgba(255, 249, 242, .72); font-size: 15px; line-height: 1.7; }
+.not-found-home-link { display: inline-flex; align-items: center; gap: 12px; width: fit-content; margin-top: 36px; padding: 0 0 13px; border-bottom: 1px solid #d73332; color: #fff9f2; font-size: 11px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; transition: color 180ms ease-out, padding 180ms ease-out; }
+.not-found-home-link:hover { padding-left: 8px; color: #cf7b73; }
+.not-found-panel { display: flex; flex-direction: column; justify-content: flex-end; min-height: 100%; padding: 72px clamp(34px, 5vw, 80px); background: #d73332; color: #fff9f2; }
+.not-found-panel > span { font-size: 10px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
+.not-found-panel strong { margin: 28px 0 0; white-space: pre-line; font-family: "DM Serif Display", serif; font-size: clamp(3rem, 5.4vw, 5.8rem); font-weight: 400; letter-spacing: -.06em; line-height: .85; }
+.not-found-panel p { max-width: 265px; margin: 28px 0 0; font-size: 13px; line-height: 1.65; }
+.recovery-page { display: grid; place-items: center; padding: 24px; }
+.recovery-main { width: min(100%, 720px); padding: clamp(34px, 7vw, 86px); border: 1px solid rgba(255, 249, 242, .2); background: #252321; }
+.recovery-main > p:last-of-type { max-width: 520px; margin: 28px 0 0; color: rgba(255, 249, 242, .72); font-size: 15px; line-height: 1.7; }
+.recovery-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 22px; margin-top: 34px; }
+.recovery-actions .not-found-home-link { margin-top: 0; }
+.recovery-actions button { display: inline-flex; align-items: center; gap: 8px; border: 0; background: transparent; color: #fff9f2; font-size: 10px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+.recovery-actions button:hover { color: #cf7b73; }
 .image-fallback { position: relative; overflow: hidden; background: linear-gradient(135deg, #3a3632 0%, #1b1a19 58%, #b72529 58%, #cf7b73 100%); }
 .image-fallback::after { position: absolute; inset: auto 18px 18px; color: #f4eee6; content: "Gabriel DB · conteúdo · treinamento · trade"; font-size: 10px; font-weight: 700; letter-spacing: .11em; line-height: 1.5; text-transform: uppercase; }
 .hero-redesign-portrait.image-fallback::after { inset: 50% 20px auto; color: #f4eee6; content: "Gabriel Danino Basilio"; font-family: "DM Serif Display", serif; font-size: clamp(1.6rem, 3vw, 3rem); font-weight: 400; letter-spacing: -.03em; text-transform: none; transform: translateY(-50%); }
@@ -4444,4 +4470,20 @@ a.proof-link, a.behance-link, a.text-link, .service-detail a {
     padding-right: 8vw !important;
     padding-left: 120px !important;
   }
+}
+
+/* Recuperação editorial responsiva: a rota inexistente mantém leitura e retorno claro no mobile. */
+@media (max-width: 900px) {
+  .not-found-page { --not-found-axis: 24px; }
+  .not-found-header { min-height: 70px; gap: 18px; padding-right: var(--not-found-axis); }
+  .not-found-header .brand-name { font-size: 15px; }
+  .not-found-back { max-width: 108px; font-size: 8px; line-height: 1.3; text-align: right; }
+  .not-found-main { grid-template-columns: 1fr; min-height: auto; padding-left: var(--not-found-axis); }
+  .not-found-copy { min-height: 500px; padding: 66px var(--not-found-axis) 58px 0; }
+  .not-found-code, .recovery-code { font-size: clamp(5rem, 28vw, 8.5rem); }
+  .not-found-copy h1, .recovery-main h1 { font-size: clamp(3.6rem, 16vw, 5rem); }
+  .not-found-panel { min-height: 290px; padding: 44px var(--not-found-axis); }
+  .not-found-panel strong { font-size: clamp(3.2rem, 17vw, 4.7rem); }
+  .recovery-page { padding: 18px; }
+  .recovery-main { padding: 42px 28px; }
 }
