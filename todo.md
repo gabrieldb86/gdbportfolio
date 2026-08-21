@@ -1330,3 +1330,8 @@
 - [x] Publicar a ilustração fornecida como asset de compartilhamento
 - [x] Aplicar a imagem como Open Graph padrão das rotas públicas
 - [x] Validar as tags OG e Twitter no HTML SSR
+
+## Auditoria de robots.txt
+- [x] Confirmar a presença do arquivo na raiz pública
+- [x] Verificar as regras para páginas públicas, editor e sitemap
+- [x] Registrar o resultado e corrigir apenas se houver lacuna
