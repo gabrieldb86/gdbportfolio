@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { getPortfolioRouteMeta } from "./portfolioSeo";
+import { DEFAULT_OG_IMAGE, getPortfolioRouteMeta } from "./portfolioSeo";
 
 describe("public portfolio metadata", () => {
   it("returns route-specific, indexable metadata for every public page", () => {
@@ -21,10 +21,12 @@ describe("public portfolio metadata", () => {
       expect(metadata.description).toBeTruthy();
       expect(metadata.noindex).not.toBe(true);
       expect(metadata.notFound).not.toBe(true);
+      expect(metadata.ogImage).toBe(DEFAULT_OG_IMAGE);
       return metadata.title;
     });
 
     expect(new Set(titles).size).toBe(routes.length);
+    expect(DEFAULT_OG_IMAGE).toBe("/manus-storage/gabriel-open-graph-preview_2ecf2c14.jpg");
   });
 
   it("marks unknown paths and the private editor as non-indexable", () => {

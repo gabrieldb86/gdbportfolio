@@ -147,7 +147,7 @@ describe("public portfolio metrics and privacy", () => {
     expect(configSource).toContain("legacyWebpAssetMap");
     expect(configSource).toContain("gdb-editorial-collage_983088a0.png");
     expect(casesSource).toContain("ragtech-dicas_c4a3d253_4fcf3eea.webp");
-    expect(seoSource).toContain("DEFAULT_OG_IMAGE = \"/manus-storage/gabriel-profile_69235fc9_7b29c3e7.webp\"");
+    expect(seoSource).toContain("DEFAULT_OG_IMAGE = \"/manus-storage/gabriel-open-graph-preview_2ecf2c14.jpg\"");
   });
 
   it("keeps manual hero measurements on desktop while resetting only their mobile impact", () => {

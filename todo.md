@@ -1325,3 +1325,8 @@
 - [x] Criar conteúdo editorial com título, orientação e retorno à Home
 - [x] Expor textos e ação como conteúdo editável no código
 - [x] Validar desktop, mobile, metadados e resposta de rota inexistente
+
+## Preview Open Graph
+- [x] Publicar a ilustração fornecida como asset de compartilhamento
+- [x] Aplicar a imagem como Open Graph padrão das rotas públicas
+- [x] Validar as tags OG e Twitter no HTML SSR

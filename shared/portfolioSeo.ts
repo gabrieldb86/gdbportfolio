@@ -1,6 +1,6 @@
 export const PORTFOLIO_ORIGIN = "https://gabrielpor-7t6ygmlv.manus.space";
 export const PORTFOLIO_SITE_NAME = "Gabriel Danino Basilio";
-export const DEFAULT_OG_IMAGE = "/manus-storage/gabriel-profile_69235fc9_7b29c3e7.webp";
+export const DEFAULT_OG_IMAGE = "/manus-storage/gabriel-open-graph-preview_2ecf2c14.jpg";
 
 export type PortfolioRouteMeta = {
   title: string;
@@ -35,7 +35,7 @@ const publicRouteMeta: Record<string, PortfolioRouteMeta> = {
     title: "Ragtech — Sistema de Treinamento",
     description: "Case de implantação de calendário, conteúdo e operação de treinamento para varejo parceiro e trade marketing.",
     canonicalPath: "/cases/ragtech-sistema-treinamento",
-    ogImage: "/manus-storage/ragtech-dicas_c4a3d253_4fcf3eea.webp",
+    ogImage: DEFAULT_OG_IMAGE,
     ogType: "article",
   },
   "/cases/blocs-presentation": {
@@ -49,14 +49,14 @@ const publicRouteMeta: Record<string, PortfolioRouteMeta> = {
     title: "Campanha Cystex — Gabriel Danino Basilio",
     description: "Case de campanha de incentivo, conteúdo, avaliação e indicadores para força de campo do Grupo EMS.",
     canonicalPath: "/cases/grupo-ems-cystex",
-    ogImage: "/manus-storage/gabriel-bonecaps-project_cac714ba_394b8cac.webp",
+    ogImage: DEFAULT_OG_IMAGE,
     ogType: "article",
   },
   "/cases/roadshow-dpsp": {
     title: "Roadshow DPSP — Gabriel Danino Basilio",
     description: "Case de facilitação e apresentação de novidades e lançamentos para o canal farmacêutico.",
     canonicalPath: "/cases/roadshow-dpsp",
-    ogImage: "/manus-storage/valens-bdn_e5a00706_587e1e0d.webp",
+    ogImage: DEFAULT_OG_IMAGE,
     ogType: "article",
   },
   "/cases/today-at-apple": {
@@ -70,7 +70,7 @@ const publicRouteMeta: Record<string, PortfolioRouteMeta> = {
     title: "Trilhas de Aprendizagem — Gabriel Danino Basilio",
     description: "Case de Instructional Design, trilhas, microlearning, avaliação, facilitação e aprendizagem blended.",
     canonicalPath: "/cases/trilhas-aprendizagem",
-    ogImage: "/manus-storage/valens-bdn_e5a00706_587e1e0d.webp",
+    ogImage: DEFAULT_OG_IMAGE,
     ogType: "article",
   },
 };
