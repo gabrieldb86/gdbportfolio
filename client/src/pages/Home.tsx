@@ -234,8 +234,8 @@ export default function Home() {
           <div className="coordination-focus-layout">
             <div className="coordination-focus-label" data-reveal="focus-label" style={{width: '933px'}}>
               <p className="section-kicker" style={{fontSize: '16px'}}>Focos de coordenação</p>
-              <h2 id="coordination-focus-title" style={{height: '140px', width: '272px'}}>Três frentes para levar <em style={{height: '140px', width: '272px'}}>método à prática.</em></h2>
-              <p className="coordination-focus-note" style={{fontSize: '16px', width: '879px'}}>Conteúdo, treinamento e campo organizados para apoiar decisões, capacitar equipes e acompanhar a execução.</p>
+              <h2 id="coordination-focus-title" style={{height: '140px', width: '272px', color: '#ffffff'}}>Três frentes para levar <em style={{height: '140px', width: '272px', color: '#ffffff'}}>método à prática.</em></h2>
+              <p className="coordination-focus-note" style={{fontSize: '16px', width: '879px', marginTop: '25px'}}>Conteúdo, treinamento e campo organizados para apoiar decisões, capacitar equipes e acompanhar a execução.</p>
             </div>
             <div className="coordination-focus-grid">
               <article className="coordination-focus-item" data-reveal="focus-item" data-reveal-delay="80" style={{marginLeft: '190px'}}>

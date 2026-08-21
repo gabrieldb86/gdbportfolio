@@ -1259,3 +1259,8 @@
 ## Preservação das dimensões de Como eu atuo
 - [x] Manter a seção Como eu atuo com altura de 733px e largura de 351px
 - [x] Validar desktop, mobile, testes, TypeScript e build antes do checkpoint
+
+## Preservação da cor e do espaçamento de Focos
+- [x] Manter o título e a ênfase de Focos em branco
+- [x] Manter o texto de apoio de Focos com margem superior de 25px
+- [x] Validar desktop, mobile, testes, TypeScript e build antes do checkpoint

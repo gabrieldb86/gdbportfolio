@@ -238,7 +238,7 @@ describe("public portfolio metrics and privacy", () => {
     const homeSource = readProjectFile("client/src/pages/Home.tsx");
 
     expect(homeSource).toContain("coordination-focus-label\" data-reveal=\"focus-label\" style={{width: '933px'}}");
-    expect(homeSource).toContain("coordination-focus-note\" style={{fontSize: '16px', width: '879px'}}");
+    expect(homeSource).toContain("coordination-focus-note\" style={{fontSize: '16px', width: '879px', marginTop: '25px'}}");
     expect(homeSource).toContain("data-reveal-delay=\"80\" style={{marginLeft: '190px'}}");
     expect(homeSource).toContain("data-reveal-delay=\"140\" style={{marginLeft: '190px'}}");
     expect(css).toContain(".home-revision .coordination-focus-label[style]");
@@ -291,7 +291,7 @@ describe("public portfolio metrics and privacy", () => {
     const homeSource = readProjectFile("client/src/pages/Home.tsx");
 
     expect(homeSource).toContain("brand-name\" style={{ fontSize: '17px', textAlign: \"left\" }}");
-    expect(homeSource).toContain("id=\"coordination-focus-title\" style={{height: '140px', width: '272px'}}");
+    expect(homeSource).toContain("id=\"coordination-focus-title\" style={{height: '140px', width: '272px', color: '#ffffff'}}");
     expect(homeSource).toContain("style={{fontSize: '14px', height: '21px', width: '276px'}}");
     expect(homeSource).toContain("id=\"work\" className=\"work-section work-redesign section-pad\" aria-labelledby=\"work-title\" style={{height: '5139px', width: '358px'}}");
     expect(homeSource).toContain("about-art-label\" style={{marginBottom: '-17px', marginRight: '9px'}}");
@@ -302,6 +302,14 @@ describe("public portfolio metrics and privacy", () => {
     const homeSource = readProjectFile("client/src/pages/Home.tsx");
 
     expect(homeSource).toContain("manifesto-section section-pad\" aria-labelledby=\"manifesto-title\" style={{height: '733px', width: '351px'}}");
+  });
+
+  it("preserves the manual white focus title and note spacing", () => {
+    const homeSource = readProjectFile("client/src/pages/Home.tsx");
+
+    expect(homeSource).toContain("id=\"coordination-focus-title\" style={{height: '140px', width: '272px', color: '#ffffff'}}");
+    expect(homeSource).toContain("<em style={{height: '140px', width: '272px', color: '#ffffff'}}>método à prática.</em>");
+    expect(homeSource).toContain("coordination-focus-note\" style={{fontSize: '16px', width: '879px', marginTop: '25px'}}");
   });
 
   it("allows the manual brand type size to override the header default", () => {
