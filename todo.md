@@ -1255,3 +1255,7 @@
 - [x] Manter o título e a ênfase de Focos com altura final de 140px e largura de 272px
 - [x] Consolidar somente as propriedades height repetidas
 - [x] Validar desktop, mobile, testes, TypeScript e build antes do checkpoint
+
+## Preservação das dimensões de Como eu atuo
+- [x] Manter a seção Como eu atuo com altura de 733px e largura de 351px
+- [x] Validar desktop, mobile, testes, TypeScript e build antes do checkpoint

@@ -324,7 +324,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="manifesto-section section-pad" aria-labelledby="manifesto-title">
+        <section className="manifesto-section section-pad" aria-labelledby="manifesto-title" style={{height: '733px', width: '351px'}}>
           <div className="manifesto-grid" data-reveal="manifesto">
             <div className="manifesto-heading">
               <p className="section-kicker" style={{fontSize: '16px'}}>Como eu atuo</p>

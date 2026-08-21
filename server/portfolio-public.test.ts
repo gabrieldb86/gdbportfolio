@@ -298,6 +298,12 @@ describe("public portfolio metrics and privacy", () => {
     expect(homeSource).toContain("fontSize: '55px'}}>coordenação?</em>");
   });
 
+  it("preserves the manual dimensions of the manifesto section", () => {
+    const homeSource = readProjectFile("client/src/pages/Home.tsx");
+
+    expect(homeSource).toContain("manifesto-section section-pad\" aria-labelledby=\"manifesto-title\" style={{height: '733px', width: '351px'}}");
+  });
+
   it("allows the manual brand type size to override the header default", () => {
     const css = readProjectFile("client/src/index.css");
     const homeSource = readProjectFile("client/src/pages/Home.tsx");
