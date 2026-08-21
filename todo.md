@@ -1269,3 +1269,13 @@
 - [x] Manter o título e a ênfase de Focos em preto (#000000)
 - [x] Consolidar somente as propriedades color repetidas pelo editor visual
 - [x] Validar desktop, mobile, testes, TypeScript e build antes do checkpoint
+
+## Preservação da cor branca de Focos
+- [x] Manter o título e a ênfase de Focos em branco (#ffffff)
+- [x] Consolidar somente as propriedades color repetidas pelo editor visual
+- [x] Validar desktop, mobile, testes, TypeScript e build antes do checkpoint
+
+## Hierarquia de cor de Focos no mobile
+- [x] Manter a frase superior do título em branco no mobile
+- [x] Manter o trecho em ênfase do título em preto no mobile
+- [x] Preservar as cores atuais do desktop e validar responsividade, testes e build

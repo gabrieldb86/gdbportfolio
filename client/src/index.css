@@ -3481,6 +3481,10 @@ a.proof-link, a.behance-link, a.text-link, .service-detail a {
   .home-revision .coordination-focus-label h2 {
     height: auto !important;
     margin-bottom: 0 !important;
+    color: #ffffff !important;
+  }
+  .home-revision .coordination-focus-label h2 em {
+    color: #000000 !important;
   }
   .home-revision .coordination-focus-note {
     margin-top: 16px !important;
