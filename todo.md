@@ -1279,3 +1279,9 @@
 - [x] Manter a frase superior do título em branco no mobile
 - [x] Manter o trecho em ênfase do título em preto no mobile
 - [x] Preservar as cores atuais do desktop e validar responsividade, testes e build
+
+## Auditoria de meta titles por rota
+- [x] Mapear todas as rotas públicas e internas do projeto
+- [x] Verificar title por rota no registro de SEO e no HTML SSR
+- [x] Confirmar que desktop e mobile recebem o mesmo título por URL
+- [x] Registrar o resultado e aplicar correções somente se houver lacunas
