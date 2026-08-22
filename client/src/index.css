@@ -4557,6 +4557,140 @@ a.proof-link, a.behance-link, a.text-link, .service-detail a {
   .home-revision .statement-media-frame { grid-row: 2 !important; min-height: 340px !important; }
 }
 
+
+/* Tablet fluido: entre o desktop e o mobile, medidas manuais não podem deixar seções em uma coluna estreita. */
+@media (min-width: 721px) and (max-width: 900px) {
+  .home-revision .manifesto-section[style],
+  .home-revision .work-section[style],
+  .home-revision .contact-section[style] {
+    width: auto !important;
+    height: auto !important;
+    min-height: 0 !important;
+  }
+
+  .home-revision .coordination-focus-band,
+  .home-revision .recruiter-proof-wrap,
+  .home-revision .manifesto-section,
+  .home-revision .work-section,
+  .home-revision .services-section,
+  .home-revision .about-section,
+  .home-revision .contact-section,
+  .home-revision .site-footer {
+    padding-right: clamp(28px, 6vw, 46px) !important;
+    padding-left: clamp(28px, 6vw, 46px) !important;
+  }
+
+  .home-revision .coordination-focus-layout,
+  .home-revision .manifesto-grid,
+  .home-revision .services-layout,
+  .home-revision .about-grid,
+  .home-revision .contact-grid {
+    display: block !important;
+  }
+
+  .home-revision .coordination-focus-label[style],
+  .home-revision .coordination-focus-label h2[style],
+  .home-revision .coordination-focus-note[style],
+  .home-revision #services-title[style] {
+    width: auto !important;
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+  .home-revision .coordination-focus-grid,
+  .home-revision .recruiter-proof-strip {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .home-revision .coordination-focus-grid { margin-top: 44px; }
+  .home-revision .manifesto-aside[style] { margin-left: 0 !important; padding-top: 42px; }
+
+  .home-revision .work-redesign-heading {
+    display: block !important;
+    margin-bottom: 44px;
+  }
+
+  .home-revision .work-redesign-index { margin-bottom: 28px !important; }
+  .home-revision .work-redesign-heading h2 { font-size: clamp(3.7rem, 10vw, 5.4rem) !important; }
+  .home-revision .work-redesign-heading > p { margin-top: 26px; }
+  .home-revision .work-redesign-heading > .behance-link { margin-top: 22px; }
+
+  .home-revision .work-redesign .projects-grid.sean-obrien-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 26px 18px !important;
+  }
+
+  .home-revision .services-art,
+  .home-revision .about-art-wrap,
+  .home-revision .contact-form[style] {
+    width: min(100%, 620px) !important;
+    max-width: 100% !important;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+  }
+
+  .home-revision .services-art,
+  .home-revision .about-art-wrap { margin-bottom: 46px !important; }
+
+  .home-revision .statement-section {
+    display: flex !important;
+    flex-direction: column !important;
+    min-height: 0 !important;
+  }
+
+  .home-revision .statement-copy,
+  .home-revision .statement-media-frame {
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  .home-revision .statement-media-frame { min-height: 360px !important; }
+
+  #contact.contact-section .contact-intro h2#contact-title[style] {
+    width: auto !important;
+    max-width: 100% !important;
+    height: auto !important;
+    margin: 0 0 32px !important;
+    font-size: clamp(3.5rem, 10.5vw, 5.6rem) !important;
+  }
+
+  #contact.contact-section .contact-intro > p[style] {
+    margin-top: 0 !important;
+    margin-bottom: 24px !important;
+  }
+
+  .home-revision .statement-copy > span[style],
+  .home-revision .statement-copy h2[style],
+  .home-revision .statement-context-box[style] {
+    width: auto !important;
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+  .home-revision .statement-copy h2[style] {
+    font-size: clamp(3.5rem, 10.5vw, 5.8rem) !important;
+  }
+
+  .home-revision .site-footer {
+    display: flex !important;
+    min-height: 0 !important;
+    flex-wrap: wrap !important;
+    align-content: center;
+    gap: 18px !important;
+    padding-top: 30px !important;
+    padding-bottom: 30px !important;
+  }
+
+  .home-revision .footer-brand { flex: 1 1 100%; }
+  .home-revision .footer-socials { order: 2; }
+  .home-revision .footer-credit {
+    width: 100%;
+    order: 3;
+    justify-self: auto;
+    overflow-wrap: anywhere;
+  }
+}
+
 /* Recuperação editorial responsiva: a rota inexistente mantém leitura e retorno claro no mobile. */
 @media (max-width: 900px) {
   .not-found-page { --not-found-axis: 24px; }

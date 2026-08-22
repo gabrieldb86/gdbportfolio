@@ -1381,3 +1381,8 @@
 - [x] Comparar a referência fornecida com o reflow atual ao reduzir a janela desktop
 - [x] Remover travas de largura, texto e imagem que impedem a redução proporcional acima do mobile
 - [x] Validar em desktop amplo, intermediário, janela mínima e mobile sem alterar cores ou a barra lateral
+
+## Verificação da responsividade publicada
+- [x] Comparar o comportamento visto pelo usuário com o site publicado e a prévia local
+- [x] Identificar a regra efetiva que mantém o layout rígido na faixa de janela informada
+- [x] Aplicar e confirmar uma correção mínima diretamente na versão publicada

@@ -433,6 +433,10 @@ describe("public portfolio metrics and privacy", () => {
     expect(css).toContain(".home-revision .side-rail");
     expect(css).toContain("grid-template-columns: minmax(0, 1.1fr) minmax(230px, .82fr) !important;");
     expect(css).toContain("grid-template-columns: repeat(2, minmax(0, 1fr)) !important;");
+    expect(css).toContain("/* Tablet fluido");
+    expect(css).toContain(".home-revision .work-section[style]");
+    expect(css).toContain("#contact.contact-section .contact-intro h2#contact-title[style]");
+    expect(css).toContain(".home-revision .footer-credit");
   });
 
   it("provides an editorial and recoverable not-found experience", () => {
