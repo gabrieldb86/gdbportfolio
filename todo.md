@@ -1537,7 +1537,7 @@
 ## Correções mobile: fundo e projetos
 - [x] Fazer o fundo da seção clara ocupar toda a largura no iPhone
 - [x] Tornar os quatro projetos cartões estáticos, iguais e sem animação no mobile
-- [ ] Validar nos viewports, sincronizar no GitHub e salvar checkpoint
+- [x] Validar nos viewports, sincronizar no GitHub e salvar checkpoint
 
 ## Correção do workflow de GitHub Pages
 - [x] Aplicar a ordem de preparação de pnpm e Node recomendada pelo GitHub
