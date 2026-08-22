@@ -4894,3 +4894,47 @@ a.proof-link, a.behance-link, a.text-link, .service-detail a {
     transform: none;
   }
 }
+
+/* Restauração mobile das métricas: mantém os offsets manuais do desktop, mas recompõe quatro cards em uma grade 2x2 legível. */
+@media (max-width: 720px) {
+  .home-revision #recruiter-proof[style] {
+    height: auto !important;
+    min-height: 0 !important;
+    padding-top: 68px !important;
+    padding-bottom: 52px !important;
+  }
+
+  .home-revision .recruiter-proof-layout .recruiter-proof-strip {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 100%;
+  }
+
+  .home-revision .recruiter-proof-layout .proof-metric[style],
+  .home-revision .recruiter-proof-layout .proof-actions[style] {
+    min-height: 158px;
+    margin: 0 !important;
+    padding: 22px 12px !important;
+  }
+
+  .home-revision .recruiter-proof-layout .proof-metric-icon[style] {
+    margin-top: 0 !important;
+  }
+
+  .home-revision .recruiter-proof-layout .proof-metric:nth-child(odd) {
+    border-right: 1px solid rgba(255, 249, 242, .32) !important;
+  }
+
+  .home-revision .recruiter-proof-layout .proof-metric:nth-child(n + 3) {
+    border-top: 1px solid rgba(255, 249, 242, .32) !important;
+  }
+
+  .home-revision .recruiter-proof-layout .proof-actions[style] {
+    grid-column: 1 / -1;
+    min-height: 0;
+    flex-direction: row;
+    align-items: center;
+    gap: 18px;
+    border-top: 1px solid rgba(255, 249, 242, .32) !important;
+  }
+}

@@ -469,6 +469,20 @@ describe("public portfolio metrics and privacy", () => {
     expect(homeSource).not.toContain("mais de 20 campanhas de incentivo implementadas");
   });
 
+  it("restores the recruiter metrics as a complete mobile grid without changing desktop offsets", () => {
+    const homeSource = readProjectFile("client/src/pages/Home.tsx");
+    const css = readProjectFile("client/src/index.css");
+
+    expect(homeSource).toContain("style={{ height: '490px', paddingTop: '76px', backgroundColor: '#cf7b73' }}");
+    expect(homeSource).toContain("style={{marginLeft: '-330px'}}");
+    expect(css).toContain("/* Restauração mobile das métricas");
+    expect(css).toContain(".home-revision #recruiter-proof[style]");
+    expect(css).toContain("grid-template-columns: repeat(2, minmax(0, 1fr));");
+    expect(css).toContain(".home-revision .recruiter-proof-layout .proof-metric[style]");
+    expect(css).toContain("margin: 0 !important;");
+    expect(css).toContain(".proof-metric:nth-child(n + 3)");
+  });
+
   it("allows the manual brand type size to override the header default", () => {
     const css = readProjectFile("client/src/index.css");
     const homeSource = readProjectFile("client/src/pages/Home.tsx");
