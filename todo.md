@@ -1559,6 +1559,11 @@
 - [x] Ajustar o efeito desktop mantendo os quatro links diretos ao Behance
 - [x] Preservar a pilha estática mobile e validar nos viewports antes do checkpoint
 
+## Edições manuais exclusivas do website
+- [x] Consolidar altura de Sobre, texto final e título de Contato apenas no desktop
+- [x] Preservar integralmente as regras e a composição mobile
+- [ ] Validar website e mobile, sincronizar no GitHub e salvar checkpoint
+
 ## Correção do workflow de GitHub Pages
 - [x] Aplicar a ordem de preparação de pnpm e Node recomendada pelo GitHub
 - [x] Validar localmente o workflow atualizado antes da próxima sincronização

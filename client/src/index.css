@@ -5103,3 +5103,15 @@ a.proof-link, a.behance-link, a.text-link, .service-detail a {
     transform: translateX(0);
   }
 }
+
+/* Edições exclusivamente do website: as medidas manuais novas não alteram o estado mobile aprovado. */
+@media (max-width: 900px) {
+  .home-revision #about.about-section[style] {
+    height: auto !important;
+    min-height: 0 !important;
+  }
+
+  #contact.contact-section .contact-intro h2#contact-title em[style] {
+    font-size: 55px !important;
+  }
+}

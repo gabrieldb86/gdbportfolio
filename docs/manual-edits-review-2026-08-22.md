@@ -33,3 +33,9 @@ As verificações em **742px** e **900px** confirmaram que a remoção do hover 
 Foram preservados os valores finais escolhidos: **50+ projetos**, rótulo **PROJETOS**, texto descritivo atualizado, margens dos links de CV, manifesto com **576px** e deslocamento de **-70px**, além das dimensões selecionadas para a seção de serviços. As capturas em **1280px** e **375px** confirmaram que a consolidação removeu apenas duplicidades técnicas e preservou o reflow mobile.
 
 As verificações em **742px** e **900px** confirmaram que os valores manuais não introduziram corte, sobreposição ou deslocamento na faixa intermediária.
+
+## Edições exclusivas do website
+
+No desktop, foram preservados os valores manuais finais de **1057px** para Sobre, **20px** para o texto contextual final e **140px** para o destaque “coordenação?”. Em **375px**, as proteções móveis mantêm a altura de Sobre fluida, o contexto com a escala anterior e o destaque de Contato em 55px, preservando o layout mobile aprovado.
+
+As verificações em **742px** e **900px** confirmaram que a separação entre ajustes de website e regras móveis não produziu cortes, sobreposições ou deslocamentos no layout intermediário.

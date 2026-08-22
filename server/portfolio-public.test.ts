@@ -206,7 +206,7 @@ describe("public portfolio metrics and privacy", () => {
     expect(homeSource).toContain("id=\"contact-title\" style={{height: '479px', width: '756px', marginBottom: '111px', marginRight: '-1px', fontSize: '51px'}}");
     expect(homeSource).toContain("id=\"contact\" className=\"contact-section section-pad\" aria-labelledby=\"contact-title\" style={{height: '1560px', width: '355px'}}");
     expect(homeSource).toContain("Você está formando<br style={{height: '479px', marginBottom: '111px', marginRight: '-1px', width: '756px'}} />uma equipe de");
-    expect(homeSource).toContain("<em style={{height: '479px', marginBottom: '111px', marginRight: '-1px', width: '756px', fontSize: '55px', color: '#b72529'}}>coordenação?</em>");
+    expect(homeSource).toContain("<em style={{height: '479px', marginBottom: '111px', marginRight: '-1px', width: '756px', fontSize: '140px', color: '#b72529'}}>coordenação?</em>");
     expect(homeSource).toContain("style={{fontSize: '18px', marginBottom: '18px', marginTop: '-100px'}}");
     expect(homeSource).toContain("contact-form\" data-reveal=\"contact-form\" onSubmit={handleSubmit} noValidate aria-describedby={Object.keys(formErrors).length ? \"contact-form-errors\" : undefined} style={{marginLeft: '130px', width: '750px'}}");
     expect(homeSource).toContain('className="hero-actions" style={{marginTop: \'24px\'}}');
@@ -475,7 +475,19 @@ describe("public portfolio metrics and privacy", () => {
     expect(homeSource).toContain("style={{fontSize: '12px', height: '21px', width: '276px', color: '#b72529', marginTop: '30px'}}");
     expect(homeSource).toContain("id=\"work\" className=\"work-section work-redesign section-pad\" aria-labelledby=\"work-title\" style={{height: '5139px', width: '358px'}}");
     expect(homeSource).toContain("about-art-label\" style={{marginBottom: '-17px', marginRight: '6px', fontSize: '14px', color: '#b72529'}}");
-    expect(homeSource).toContain("fontSize: '55px', color: '#b72529'}}>coordenação?</em>");
+    expect(homeSource).toContain("id=\"about\" className=\"about-section section-pad\" aria-labelledby=\"about-title\" style={{height: '1057px'}}");
+    expect(homeSource).toContain("statement-context-box\" style={{width: '500px', fontSize: '20px'}}");
+    expect(homeSource).toContain("fontSize: '140px', color: '#b72529'}}>coordenação?</em>");
+  });
+
+  it("keeps the latest about and contact edits exclusive to the website breakpoint", () => {
+    const css = readProjectFile("client/src/index.css");
+
+    expect(css).toContain("/* Edições exclusivamente do website");
+    expect(css).toContain(".home-revision #about.about-section[style]");
+    expect(css).toContain("height: auto !important;");
+    expect(css).toContain("#contact.contact-section .contact-intro h2#contact-title em[style]");
+    expect(css).toContain("font-size: 55px !important;");
   });
 
   it("preserves the manual white manifesto surface with black copy and red link", () => {
@@ -488,7 +500,7 @@ describe("public portfolio metrics and privacy", () => {
     expect(homeSource).toContain("fontSize: '16px', color: '#000000', fontWeight: '600'");
     expect(homeSource).toContain("width: '276px', color: '#b72529'");
     expect(homeSource).toContain("<p style={{ fontSize: '18px', color: '#f4eee6' }}>Uma seleção de campanhas");
-    expect(homeSource).toContain("statement-context-box\" style={{width: '500px', fontSize: '16px'}}");
+    expect(homeSource).toContain("statement-context-box\" style={{width: '500px', fontSize: '20px'}}");
     expect(homeSource).toContain("contact-privacy-note\" style={{fontSize: '14px'}}");
   });
 

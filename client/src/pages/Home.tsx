@@ -371,7 +371,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="about" className="about-section section-pad" aria-labelledby="about-title" style={{height: '1685px'}}>
+        <section id="about" className="about-section section-pad" aria-labelledby="about-title" style={{height: '1057px'}}>
           <div className="about-grid">
             <ImageGlowFrame className="about-art-wrap" data-reveal="about-art">
               <img src={siteConfig.trainingImage} alt="Gabriel conduzindo um treinamento diante de uma equipe" loading="lazy" fetchPriority="low" decoding="async" width="1200" height="900" style={{ aspectRatio: '1.33' }} onError={markBrokenImage} />
@@ -396,7 +396,7 @@ export default function Home() {
           <div className="statement-copy" data-reveal="statement-copy" style={{height: '0px', paddingBottom: '150px', paddingLeft: '215px', paddingRight: '0px', paddingTop: '0px', width: '909px', backgroundColor: '#b72529'}}>
             <span style={{width: '451px', fontSize: '14px', color: '#000000'}}>Se houver uma vaga ou projeto em que eu possa contribuir:</span>
             <h2 id="statement-title" style={{height: '491px', width: '539px'}}>Vamos colocar<br style={{height: '491px', width: '539px'}} /><em style={{height: '491px', width: '539px'}}>o trabalho em prática.</em></h2>
-            <p className="statement-context-box" style={{width: '500px', fontSize: '16px'}}>Conteúdo e treinamento precisam de contexto, método e acompanhamento para apoiar equipes, campo e negócio.</p>
+            <p className="statement-context-box" style={{width: '500px', fontSize: '20px'}}>Conteúdo e treinamento precisam de contexto, método e acompanhamento para apoiar equipes, campo e negócio.</p>
           </div>
           <ImageGlowFrame className="statement-media-frame">
             <img className="statement-image" src={siteConfig.heroImage} alt="Projeto visual de bonés em preto e vermelho" width="1315" height="643" loading="lazy" decoding="async" onError={markBrokenImage} />
@@ -407,7 +407,7 @@ export default function Home() {
 	          <div className="contact-grid">
 	            <div className="contact-intro" data-reveal="contact-intro">
 	              <p className="section-kicker" style={{fontSize: '16px'}}>Vamos conversar</p>
-	              <h2 id="contact-title" style={{height: '479px', width: '756px', marginBottom: '111px', marginRight: '-1px', fontSize: '51px'}}>Você está formando<br style={{height: '479px', marginBottom: '111px', marginRight: '-1px', width: '756px'}} />uma equipe de <em style={{height: '479px', marginBottom: '111px', marginRight: '-1px', width: '756px', fontSize: '55px', color: '#b72529'}}>coordenação?</em></h2>
+	              <h2 id="contact-title" style={{height: '479px', width: '756px', marginBottom: '111px', marginRight: '-1px', fontSize: '51px'}}>Você está formando<br style={{height: '479px', marginBottom: '111px', marginRight: '-1px', width: '756px'}} />uma equipe de <em style={{height: '479px', marginBottom: '111px', marginRight: '-1px', width: '756px', fontSize: '140px', color: '#b72529'}}>coordenação?</em></h2>
 	              <p style={{fontSize: '18px', marginBottom: '18px', marginTop: '-100px'}}>Estou aberto a oportunidades em conteúdo, treinamento, trade marketing e performance de campo. Envie o contexto da posição ou fale comigo diretamente pelo LinkedIn, e-mail ou WhatsApp.</p>
               <div className="contact-links">
                 <a className="contact-direct" href="https://wa.me/5511945747353" data-umami-event="whatsapp-click" target="_blank" rel="noreferrer" onClick={() => trackPortfolioEvent("contact_whatsapp")}><MessageCircle size={17} /> Falar diretamente com Gabriel <ArrowUpRight size={15} /></a>
