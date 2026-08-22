@@ -1529,6 +1529,11 @@
 - [x] Consolidar somente propriedades inline duplicadas
 - [x] Validar desktop/mobile, sincronizar no GitHub e salvar checkpoint
 
+## Compatibilidade e publicação permanente
+- [x] Validar a versão atual em 375px, 742px, 900px e desktop antes do checkpoint
+- [x] Executar testes, checagem de tipos, build SSR e build estático do GitHub Pages na publicação atual
+- [x] Sincronizar todo arquivo alterado no repositório gabrieldb86/gdbportfolio e confirmar o GitHub Pages
+
 ## Correção do workflow de GitHub Pages
 - [x] Aplicar a ordem de preparação de pnpm e Node recomendada pelo GitHub
 - [x] Validar localmente o workflow atualizado antes da próxima sincronização

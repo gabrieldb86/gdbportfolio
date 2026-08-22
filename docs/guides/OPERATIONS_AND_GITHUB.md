@@ -24,9 +24,10 @@
 pnpm test
 pnpm run check
 pnpm build
+pnpm run build:github-pages
 ```
 
-Também conferir a Home em desktop e mobile, os links de WhatsApp, a rota `/cv`, uma rota de case e o conteúdo do HTML SSR quando a alteração envolver SEO.
+Também conferir a Home em **375px, 742px, 900px e 1280px**, os links de WhatsApp, a rota `/cv`, uma rota de case e o conteúdo do HTML SSR quando a alteração envolver SEO.
 
 ## GitHub
 
@@ -35,6 +36,8 @@ O repositório principal e obrigatório para alterações futuras é [`gabrieldb
 O fluxo adotado é: concluir uma mudança coerente, validar, criar um checkpoint/commit descritivo e sincronizar com a branch `main` de `gabrieldb86/gdbportfolio`. O workflow `.github/workflows/deploy-github-pages.yml` publica a versão estática a cada envio à branch `main`. Para experimentos maiores, criar uma branch antes de alterar o visual ou a arquitetura.
 
 > **Regra de continuidade:** toda alteração aprovada deve ser sincronizada em `gabrieldb86/gdbportfolio`; não tratar outros repositórios como destino de publicação do portfólio.
+
+> **Regra de navegação pronta:** antes de cada checkpoint, executar os quatro comandos de validação, testar os quatro viewports definidos e confirmar que o workflow do GitHub Pages terminou com sucesso. Todo arquivo-fonte, teste ou documento alterado deve constar na sincronização para `main`.
 
 Exemplo de fluxo em um ambiente Git comum:
 
