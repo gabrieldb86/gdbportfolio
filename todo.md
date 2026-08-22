@@ -1569,3 +1569,9 @@
 - [x] Validar localmente o workflow atualizado antes da próxima sincronização
 - [x] Remover a versão duplicada de pnpm que bloqueou a execução do GitHub Actions
 - [x] Reexecutar o workflow remoto e confirmar a geração do artefato do Pages
+
+## Responsividade progressiva exclusiva do website
+- [x] Mapear cortes, sobreposições e mudanças de disposição entre telas amplas e notebooks compactos
+- [x] Criar faixas responsivas progressivas para o website, mantendo o layout mobile intacto
+- [x] Validar largura ampla, desktop, notebook e tablet sem alterar a composição mobile
+- [ ] Executar testes, sincronizar no GitHub Pages e salvar checkpoint
