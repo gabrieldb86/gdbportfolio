@@ -1552,7 +1552,7 @@
 ## Verificação de edições manuais recentes da Home
 - [x] Conferir valores finais das métricas, links, manifesto e serviços
 - [x] Consolidar apenas propriedades inline duplicadas ou propagadas indevidamente
-- [ ] Validar nos viewports, sincronizar no GitHub e salvar checkpoint
+- [x] Validar nos viewports, sincronizar no GitHub e salvar checkpoint
 
 ## Correção do workflow de GitHub Pages
 - [x] Aplicar a ordem de preparação de pnpm e Node recomendada pelo GitHub
