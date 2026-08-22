@@ -44,7 +44,7 @@ describe("public portfolio metrics and privacy", () => {
   it("labels the Home CV action as navigation instead of a download", () => {
     const homeSource = readProjectFile("client/src/pages/Home.tsx");
 
-    expect(homeSource).toContain('<Link href="/cv" className="proof-link proof-link-alt"><span>Ver CV</span>');
+    expect(homeSource).toContain('<Link href="/cv" className="proof-link proof-link-alt" style={{fontSize: \'14px\'}}><span style={{fontSize: \'14px\'}}>Ver CV</span>');
     expect(homeSource).not.toContain("Baixar CV");
   });
 
@@ -204,7 +204,7 @@ describe("public portfolio metrics and privacy", () => {
     expect(homeSource).toContain("id=\"contact-title\" style={{height: '479px', width: '756px', marginBottom: '111px', marginRight: '-1px', fontSize: '51px'}}");
     expect(homeSource).toContain("id=\"contact\" className=\"contact-section section-pad\" aria-labelledby=\"contact-title\" style={{height: '1368px', width: '355px'}}");
     expect(homeSource).toContain("Você está formando<br style={{height: '479px', marginBottom: '111px', marginRight: '-1px', width: '756px'}} />uma equipe de");
-    expect(homeSource).toContain("<em style={{height: '479px', marginBottom: '111px', marginRight: '-1px', width: '756px', fontSize: '140px'}}>coordenação?</em>");
+    expect(homeSource).toContain("<em style={{height: '479px', marginBottom: '111px', marginRight: '-1px', width: '756px', fontSize: '140px', color: '#b72529'}}>coordenação?</em>");
     expect(homeSource).toContain("style={{fontSize: '18px', marginBottom: '18px', marginTop: '-100px'}}");
     expect(homeSource).toContain("contact-form\" data-reveal=\"contact-form\" onSubmit={handleSubmit} noValidate aria-describedby={Object.keys(formErrors).length ? \"contact-form-errors\" : undefined} style={{marginLeft: '130px', width: '750px'}}");
     expect(homeSource).toContain('className="hero-actions" style={{marginTop: \'24px\'}}');
@@ -229,14 +229,14 @@ describe("public portfolio metrics and privacy", () => {
     const homeSource = readProjectFile("client/src/pages/Home.tsx");
 
     expect(homeSource).toContain("services-editorial-note\" style={{fontSize: '25px'}}");
-    expect(homeSource).toContain("<strong style={{fontSize: '42px'}}>Do briefing à rotina de campo.</strong>");
+    expect(homeSource).toContain("<strong style={{fontSize: '42px', color: '#1c1b1a'}}>Do briefing à rotina de campo.</strong>");
     expect(homeSource).toContain("<p style={{fontSize: '25px'}}>Coordenação que organiza contexto");
   });
 
   it("preserves the manual positioning of the about image label", () => {
     const homeSource = readProjectFile("client/src/pages/Home.tsx");
 
-    expect(homeSource).toContain("about-art-label\" style={{marginBottom: '-17px', marginRight: '61px', fontSize: '14px'}}");
+    expect(homeSource).toContain("about-art-label\" style={{marginBottom: '-17px', marginRight: '61px', fontSize: '14px', color: '#b72529'}}");
   });
 
   it("preserves the manual CV toolstrip measurements and resets them only on mobile", () => {
@@ -331,22 +331,22 @@ describe("public portfolio metrics and privacy", () => {
 
     expect(homeSource).toContain("brand-name\" style={{ fontSize: '17px', textAlign: \"left\" }}");
     expect(homeSource).toContain("id=\"coordination-focus-title\" style={{height: '140px', width: '272px', color: '#ffffff'}}");
-    expect(homeSource).toContain("style={{fontSize: '14px', height: '21px', width: '276px', color: '#ff2600'}}");
+    expect(homeSource).toContain("style={{fontSize: '14px', height: '21px', width: '276px', color: '#b72529'}}");
     expect(homeSource).toContain("id=\"work\" className=\"work-section work-redesign section-pad\" aria-labelledby=\"work-title\" style={{height: '5139px', width: '358px'}}");
-    expect(homeSource).toContain("about-art-label\" style={{marginBottom: '-17px', marginRight: '61px', fontSize: '14px'}}");
-    expect(homeSource).toContain("fontSize: '140px'}}>coordenação?</em>");
+    expect(homeSource).toContain("about-art-label\" style={{marginBottom: '-17px', marginRight: '61px', fontSize: '14px', color: '#b72529'}}");
+    expect(homeSource).toContain("fontSize: '140px', color: '#b72529'}}>coordenação?</em>");
   });
 
   it("preserves the manual white manifesto surface with black copy and red link", () => {
     const homeSource = readProjectFile("client/src/pages/Home.tsx");
 
     expect(homeSource).toContain("backgroundColor: '#ffffff'");
-    expect(homeSource).toContain("section-kicker\" style={{fontSize: '16px', color: '#ff2600'}}>Como eu atuo</p>");
-    expect(homeSource).toContain("id=\"manifesto-title\" style={{color: '#000000'}}");
-    expect(homeSource).toContain("<span style={{color: '#ff2600'}}>quando chega ao campo.</span>");
+    expect(homeSource).toContain("section-kicker\" style={{fontSize: '16px', color: '#b72529'}}>Como eu atuo</p>");
+    expect(homeSource).toContain("id=\"manifesto-title\" style={{color: '#1c1b1a'}}");
+    expect(homeSource).toContain("<span style={{color: '#b72529'}}>quando chega ao campo.</span>");
     expect(homeSource).toContain("fontSize: '20px', color: '#000000'");
-    expect(homeSource).toContain("width: '276px', color: '#ff2600'");
-    expect(homeSource).toContain("statement-context-box\" style={{width: '500px', fontSize: '18px'}}");
+    expect(homeSource).toContain("width: '276px', color: '#b72529'");
+    expect(homeSource).toContain("statement-context-box\" style={{width: '500px', fontSize: '16px'}}");
     expect(homeSource).toContain("contact-privacy-note\" style={{fontSize: '14px'}}");
   });
 
@@ -361,7 +361,7 @@ describe("public portfolio metrics and privacy", () => {
     const css = readProjectFile("client/src/index.css");
 
     expect(homeSource).toContain("id=\"coordination-focus-title\" style={{height: '140px', width: '272px', color: '#ffffff'}}");
-    expect(homeSource).toContain("<em style={{height: '140px', width: '272px', color: '#000000'}}>método à prática.</em>");
+    expect(homeSource).toContain("<em style={{height: '140px', width: '272px', color: '#1c1b1a'}}>método à prática.</em>");
     expect(homeSource).toContain("coordination-focus-note\" style={{fontSize: '20px', width: '879px', marginTop: '50px'}}");
     expect(css).toContain(".home-revision .coordination-focus-label h2 em {\n    color: #000000 !important;");
   });

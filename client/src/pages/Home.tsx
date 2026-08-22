@@ -261,11 +261,11 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="coordination-focus-band" aria-labelledby="coordination-focus-title">
+        <section className="coordination-focus-band" aria-labelledby="coordination-focus-title" style={{backgroundColor: '#b72529'}}>
           <div className="coordination-focus-layout">
             <div className="coordination-focus-label" data-reveal="focus-label" style={{width: '933px'}}>
               <p className="section-kicker" style={{fontSize: '16px'}}>Focos de coordenação</p>
-              <h2 id="coordination-focus-title" style={{height: '140px', width: '272px', color: '#ffffff'}}>Três frentes para levar <em style={{height: '140px', width: '272px', color: '#000000'}}>método à prática.</em></h2>
+              <h2 id="coordination-focus-title" style={{height: '140px', width: '272px', color: '#ffffff'}}>Três frentes para levar <em style={{height: '140px', width: '272px', color: '#1c1b1a'}}>método à prática.</em></h2>
               <p className="coordination-focus-note" style={{fontSize: '20px', width: '879px', marginTop: '50px'}}>Conteúdo, treinamento e campo organizados para apoiar decisões, capacitar equipes e acompanhar a execução.</p>
             </div>
             <div className="coordination-focus-grid">
@@ -348,8 +348,8 @@ export default function Home() {
               </div>
               <div className="proof-actions">
                 <FileText className="proof-action-icon" size={20} strokeWidth={1.3} aria-hidden="true" />
-                <Link href="/cv" className="proof-link"><span>Abrir trajetória</span><ArrowUpRight size={16} aria-hidden="true" /></Link>
-                <Link href="/cv" className="proof-link proof-link-alt"><span>Ver CV</span><ArrowUpRight size={16} aria-hidden="true" /></Link>
+                <Link href="/cv" className="proof-link" style={{fontSize: '14px'}}><span style={{fontSize: '14px'}}>Abrir trajetória</span><ArrowUpRight size={16} aria-hidden="true" style={{fontSize: '14px'}} /></Link>
+                <Link href="/cv" className="proof-link proof-link-alt" style={{fontSize: '14px'}}><span style={{fontSize: '14px'}}>Ver CV</span><ArrowUpRight size={16} aria-hidden="true" style={{fontSize: '14px'}} /></Link>
               </div>
             </div>
           </div>
@@ -358,12 +358,12 @@ export default function Home() {
         <section className="manifesto-section section-pad" aria-labelledby="manifesto-title" style={{height: '733px', width: '351px', backgroundColor: '#ffffff'}}>
           <div className="manifesto-grid" data-reveal="manifesto">
             <div className="manifesto-heading">
-              <p className="section-kicker" style={{fontSize: '16px', color: '#ff2600'}}>Como eu atuo</p>
-              <h2 id="manifesto-title" style={{color: '#000000'}}>Estratégia só funciona <span style={{color: '#ff2600'}}>quando chega ao campo.</span></h2>
+              <p className="section-kicker" style={{fontSize: '16px', color: '#b72529'}}>Como eu atuo</p>
+              <h2 id="manifesto-title" style={{color: '#1c1b1a'}}>Estratégia só funciona <span style={{color: '#b72529'}}>quando chega ao campo.</span></h2>
             </div>
             <div className="manifesto-aside" style={{marginLeft: '-145px'}}>
               <p style={{fontSize: '20px', color: '#000000'}}>Porque conteúdo e treinamento só funcionam quando encontram contexto, método e um próximo passo claro — para a equipe, para o campo e para o negócio.</p>
-              <a className="text-link" href="#about" onClick={(event) => { event.preventDefault(); scrollToId("about"); }} style={{fontSize: '14px', height: '21px', width: '276px', color: '#ff2600'}}>Conheça meu jeito de trabalhar <ArrowUpRight size={15} style={{fontSize: '14px', height: '21px', width: '276px', color: '#ff2600'}} /></a>
+              <a className="text-link" href="#about" onClick={(event) => { event.preventDefault(); scrollToId("about"); }} style={{fontSize: '14px', height: '21px', width: '276px', color: '#b72529'}}>Conheça meu jeito de trabalhar <ArrowUpRight size={15} style={{fontSize: '14px', height: '21px', width: '276px', color: '#b72529'}} /></a>
             </div>
           </div>
         </section>
@@ -384,8 +384,8 @@ export default function Home() {
           <div className="services-layout" data-reveal="services-layout">
 	            <div>
 	              <p className="section-kicker" style={{fontSize: '16px'}}>Áreas de atuação</p>
-	              <h2 id="services-title" style={{width: '994px'}}>Coordenação para<br style={{width: '994px'}} /><em className="services-result" style={{width: '994px'}}>o trabalho acontecer.</em></h2>
-	              <div className="services-editorial-note" style={{fontSize: '25px'}}><strong style={{fontSize: '42px'}}>Do briefing à rotina de campo.</strong><p style={{fontSize: '25px'}}>Coordenação que organiza contexto, método, conteúdo e execução para apoiar a operação.</p></div>
+	              <h2 id="services-title" style={{width: '994px', color: '#1c1b1a'}}>Coordenação para<br style={{width: '994px'}} /><em className="services-result" style={{width: '994px'}}>o trabalho acontecer.</em></h2>
+	              <div className="services-editorial-note" style={{fontSize: '25px'}}><strong style={{fontSize: '42px', color: '#1c1b1a'}}>Do briefing à rotina de campo.</strong><p style={{fontSize: '25px'}}>Coordenação que organiza contexto, método, conteúdo e execução para apoiar a operação.</p></div>
 	            </div>
             <div className="services-list">
               {siteConfig.services.map(([number, title, description], index) => (
@@ -409,11 +409,11 @@ export default function Home() {
           <div className="about-grid">
             <div className="about-art-wrap" data-reveal="about-art">
               <img src={siteConfig.trainingImage} alt="Gabriel conduzindo um treinamento diante de uma equipe" loading="lazy" fetchPriority="low" decoding="async" width="1200" height="900" style={{ aspectRatio: '1.33' }} onError={markBrokenImage} />
-	              <span className="about-art-label" style={{marginBottom: '-17px', marginRight: '61px', fontSize: '14px'}}>Processo / repertório / intenção</span>
+	              <span className="about-art-label" style={{marginBottom: '-17px', marginRight: '61px', fontSize: '14px', color: '#b72529'}}>Processo / repertório / intenção</span>
             </div>
             <div className="about-copy" data-reveal="about-copy" style={{marginLeft: '20px'}}>
-              <p className="section-kicker" style={{fontSize: '16px'}}>Sobre mim</p>
-              <h2 id="about-title">Olá, eu sou<br /><em>Gabriel.</em></h2>
+              <p className="section-kicker" style={{fontSize: '16px', color: '#b72529'}}>Sobre mim</p>
+	              <h2 id="about-title" style={{color: '#1c1b1a'}}>Olá, eu sou<br /><em style={{color: '#b72529'}}>Gabriel.</em></h2>
               <p className="about-lead" style={{fontSize: '16px'}}>Tenho 17 anos de experiência em conteúdo, treinamento e trade marketing — e mais de 114K+ pessoas capacitadas ao longo da carreira, incluindo 8 anos como pioneiro do Today at Apple no Brasil.</p>
               <p style={{fontSize: '16px'}}>Minha trajetória cruza coordenação de treinamento, gestão de indicadores de campo e produção de conteúdo — da Apple à SPOT/Grupo EMS. Busco uma próxima posição de coordenação em Conteúdo &amp; Treinamento, Trade Marketing &amp; Performance de Campo, ou Treinamento &amp; Desenvolvimento de Pessoas, aplicando metodologias como ADDIE, Kirkpatrick e Design Thinking.</p>
               <div className="about-skill-list" aria-label="Áreas de atuação"><span>Instructional Design</span><span>Trade Marketing</span><span>Gestão de Campo</span><span>ADDIE / Kirkpatrick</span><span>IA Generativa</span><span>Dashboards &amp; KPIs</span></div>
@@ -426,11 +426,11 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="statement-section" aria-labelledby="statement-title">
-          <div className="statement-copy" data-reveal="statement-copy" style={{height: '0px', paddingBottom: '150px', paddingLeft: '215px', paddingRight: '0px', paddingTop: '0px', width: '909px'}}>
+        <section className="statement-section" aria-labelledby="statement-title" style={{backgroundColor: '#b72529'}}>
+          <div className="statement-copy" data-reveal="statement-copy" style={{height: '0px', paddingBottom: '150px', paddingLeft: '215px', paddingRight: '0px', paddingTop: '0px', width: '909px', backgroundColor: '#b72529'}}>
             <span style={{width: '451px', fontSize: '14px', color: '#000000'}}>Se houver uma vaga ou projeto em que eu possa contribuir:</span>
             <h2 id="statement-title" style={{height: '491px', width: '539px'}}>Vamos colocar<br style={{height: '491px', width: '539px'}} /><em style={{height: '491px', width: '539px'}}>o trabalho em prática.</em></h2>
-            <p className="statement-context-box" style={{width: '500px', fontSize: '18px'}}>Conteúdo e treinamento precisam de contexto, método e acompanhamento para apoiar equipes, campo e negócio.</p>
+            <p className="statement-context-box" style={{width: '500px', fontSize: '16px'}}>Conteúdo e treinamento precisam de contexto, método e acompanhamento para apoiar equipes, campo e negócio.</p>
           </div>
           <div className="statement-media-frame">
             <img className="statement-image" src={siteConfig.heroImage} alt="Projeto visual de bonés em preto e vermelho" width="1315" height="643" loading="lazy" decoding="async" onError={markBrokenImage} />
@@ -441,7 +441,7 @@ export default function Home() {
 	          <div className="contact-grid">
 	            <div className="contact-intro" data-reveal="contact-intro">
 	              <p className="section-kicker" style={{fontSize: '16px'}}>Vamos conversar</p>
-	              <h2 id="contact-title" style={{height: '479px', width: '756px', marginBottom: '111px', marginRight: '-1px', fontSize: '51px'}}>Você está formando<br style={{height: '479px', marginBottom: '111px', marginRight: '-1px', width: '756px'}} />uma equipe de <em style={{height: '479px', marginBottom: '111px', marginRight: '-1px', width: '756px', fontSize: '140px'}}>coordenação?</em></h2>
+	              <h2 id="contact-title" style={{height: '479px', width: '756px', marginBottom: '111px', marginRight: '-1px', fontSize: '51px'}}>Você está formando<br style={{height: '479px', marginBottom: '111px', marginRight: '-1px', width: '756px'}} />uma equipe de <em style={{height: '479px', marginBottom: '111px', marginRight: '-1px', width: '756px', fontSize: '140px', color: '#b72529'}}>coordenação?</em></h2>
 	              <p style={{fontSize: '18px', marginBottom: '18px', marginTop: '-100px'}}>Estou aberto a oportunidades em conteúdo, treinamento, trade marketing e performance de campo. Envie o contexto da posição ou fale comigo diretamente pelo LinkedIn, e-mail ou WhatsApp.</p>
               <div className="contact-links">
                 <a className="contact-direct" href="https://wa.me/5511945747353" data-umami-event="whatsapp-click" target="_blank" rel="noreferrer" onClick={() => trackPortfolioEvent("contact_whatsapp")}><MessageCircle size={17} /> Falar diretamente com Gabriel <ArrowUpRight size={15} /></a>

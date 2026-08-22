@@ -1409,3 +1409,8 @@
 - [x] Preservar as cores e tamanhos finais selecionados no manifesto, chamada final e contato
 - [x] Remover somente duplicidades de propriedades e atributos geradas pelo editor visual
 - [x] Validar desktop e mobile antes de publicar o checkpoint
+
+## Verificação de novas cores e fundos
+- [x] Preservar a paleta #b72529, os fundos e os tamanhos finais apenas nos alvos selecionados
+- [x] Remover duplicidades e efeitos do editor que atingiram elementos-pai não selecionados
+- [x] Validar contraste, desktop e mobile antes de publicar o checkpoint
