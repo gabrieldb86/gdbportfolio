@@ -40,7 +40,7 @@ export function ProjectAccordionGallery({ projects }: ProjectAccordionGalleryPro
           <a
             key={project.number}
             ref={(element) => { panelRefs.current[index] = element; }}
-            className={`project-accordion-panel${isActive ? " is-active" : ""}`}
+            className={`project-accordion-panel${isActive ? " is-active" : ""}${index < activeIndex ? " is-before-active" : ""}${index > activeIndex ? " is-after-active" : ""}`}
             href={project.href}
             target="_blank"
             rel="noreferrer"

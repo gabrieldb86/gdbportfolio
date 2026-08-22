@@ -414,6 +414,21 @@ describe("public portfolio metrics and privacy", () => {
     expect(css).toContain("transition: none !important;");
   });
 
+  it("restores the requested desktop accordion treatment for the four direct Behance links", () => {
+    const gallerySource = readProjectFile("client/src/components/ProjectAccordionGallery.tsx");
+    const css = readProjectFile("client/src/index.css");
+
+    expect(gallerySource).toContain('target="_blank"');
+    expect(gallerySource).toContain('is-before-active');
+    expect(gallerySource).toContain('is-after-active');
+    expect(css).toContain("/* Acordeão de referência: no desktop");
+    expect(css).toContain("transform: rotateY(8deg) !important;");
+    expect(css).toContain("transform: rotateY(-8deg) !important;");
+    expect(css).toContain("flex-grow: 3.12 !important;");
+    expect(css).toContain("filter: grayscale(1) !important;");
+    expect(css).toContain(".project-accordion-panel.is-active .project-accordion-label");
+  });
+
   it("keeps the client router base aligned with root SSR hydration", () => {
     const clientEntry = readProjectFile("client/src/entry-client.tsx");
     const serverEntry = readProjectFile("client/src/entry-server.tsx");

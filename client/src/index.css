@@ -5039,3 +5039,67 @@ a.proof-link, a.behance-link, a.text-link, .service-detail a {
     transition: none !important;
   }
 }
+
+/* Acordeão de referência: no desktop, cada projeto inclina, escurece e expande sem perder o link direto para o Behance. */
+@media (hover: hover) {
+  .home-revision .project-accordion-gallery {
+    gap: 10px;
+    perspective: 1400px;
+    perspective-origin: 50% 50%;
+  }
+
+  .home-revision .project-accordion-panel,
+  .home-revision .project-accordion-panel:nth-child(even),
+  .home-revision .project-accordion-panel.is-active {
+    min-width: 0;
+    flex: 1 1 0 !important;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px -18px rgba(0, 0, 0, .8);
+    transform-origin: center center;
+    transition: flex-grow 600ms cubic-bezier(.23, 1, .32, 1), transform 600ms cubic-bezier(.23, 1, .32, 1), box-shadow 600ms cubic-bezier(.23, 1, .32, 1) !important;
+  }
+
+  .home-revision .project-accordion-panel.is-before-active { transform: rotateY(8deg) !important; }
+  .home-revision .project-accordion-panel.is-after-active { transform: rotateY(-8deg) !important; }
+  .home-revision .project-accordion-panel.is-active {
+    flex-grow: 3.12 !important;
+    box-shadow: 0 22px 44px -22px rgba(0, 0, 0, .92);
+    transform: rotateY(0) !important;
+  }
+
+  .home-revision .project-accordion-media img,
+  .home-revision .project-accordion-panel.is-active .project-accordion-media img {
+    filter: grayscale(1) !important;
+    transform: scale(1.18) !important;
+    transition: filter 600ms cubic-bezier(.23, 1, .32, 1), transform 600ms cubic-bezier(.23, 1, .32, 1) !important;
+  }
+
+  .home-revision .project-accordion-panel.is-before-active .project-accordion-media img { transform: scale(1.18) translateX(-4%) !important; }
+  .home-revision .project-accordion-panel.is-after-active .project-accordion-media img { transform: scale(1.18) translateX(4%) !important; }
+  .home-revision .project-accordion-panel.is-active .project-accordion-media img {
+    filter: grayscale(0) saturate(.96) !important;
+    transform: scale(1.03) !important;
+  }
+
+  .home-revision .project-accordion-overlay,
+  .home-revision .project-accordion-panel.is-active .project-accordion-overlay {
+    background: linear-gradient(180deg, rgba(6, 0, 16, .02) 45%, rgba(6, 0, 16, .78) 100%), rgba(6, 0, 16, .35);
+    transition: background 600ms cubic-bezier(.23, 1, .32, 1) !important;
+  }
+
+  .home-revision .project-accordion-panel.is-active .project-accordion-overlay {
+    background: linear-gradient(180deg, rgba(6, 0, 16, .02) 45%, rgba(6, 0, 16, .78) 100%), transparent;
+  }
+
+  .home-revision .project-accordion-label,
+  .home-revision .project-accordion-panel.is-active .project-accordion-label {
+    opacity: 0;
+    transform: translateX(-14px);
+    transition: opacity 600ms cubic-bezier(.23, 1, .32, 1), transform 600ms cubic-bezier(.23, 1, .32, 1) !important;
+  }
+
+  .home-revision .project-accordion-panel.is-active .project-accordion-label {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

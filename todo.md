@@ -1554,6 +1554,11 @@
 - [x] Consolidar apenas propriedades inline duplicadas ou propagadas indevidamente
 - [x] Validar nos viewports, sincronizar no GitHub e salvar checkpoint
 
+## Galeria de projetos com efeito de referência
+- [x] Comparar o acordeão anexado com a galeria atual de quatro projetos
+- [x] Ajustar o efeito desktop mantendo os quatro links diretos ao Behance
+- [ ] Preservar a pilha estática mobile e validar nos viewports antes do checkpoint
+
 ## Correção do workflow de GitHub Pages
 - [x] Aplicar a ordem de preparação de pnpm e Node recomendada pelo GitHub
 - [x] Validar localmente o workflow atualizado antes da próxima sincronização
