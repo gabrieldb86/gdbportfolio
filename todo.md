@@ -1361,3 +1361,8 @@
 - [x] Diagnosticar a compressão das seções Como eu atuo e Trabalhos selecionados em telas acima de 1504px
 - [x] Corrigir apenas as regras de desktop responsáveis pelo canvas vazio e sobreposição de conteúdo
 - [x] Validar em 2048px, 1504px, desktop padrão e mobile antes da publicação
+
+## Nova verificação da edição manual em Focos de coordenação
+- [x] Preservar a ênfase selecionada em preto sem alterar o título principal
+- [x] Remover somente propriedades de cor duplicadas do editor visual
+- [x] Validar o resultado e publicar um checkpoint

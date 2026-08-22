@@ -341,12 +341,12 @@ describe("public portfolio metrics and privacy", () => {
     expect(homeSource).toContain("manifesto-section section-pad\" aria-labelledby=\"manifesto-title\" style={{height: '733px', width: '351px'}}");
   });
 
-  it("preserves the manual white focus title and note spacing", () => {
+  it("preserves the manual white focus title, black emphasis and note spacing", () => {
     const homeSource = readProjectFile("client/src/pages/Home.tsx");
     const css = readProjectFile("client/src/index.css");
 
     expect(homeSource).toContain("id=\"coordination-focus-title\" style={{height: '140px', width: '272px', color: '#ffffff'}}");
-    expect(homeSource).toContain("<em style={{height: '140px', width: '272px', color: '#ffffff'}}>método à prática.</em>");
+    expect(homeSource).toContain("<em style={{height: '140px', width: '272px', color: '#000000'}}>método à prática.</em>");
     expect(homeSource).toContain("coordination-focus-note\" style={{fontSize: '16px', width: '879px', marginTop: '25px'}}");
     expect(css).toContain(".home-revision .coordination-focus-label h2 em {\n    color: #000000 !important;");
   });
