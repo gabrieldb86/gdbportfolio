@@ -306,30 +306,30 @@ export default function Home() {
                 <StaticMetric value={130} suffix="+" />
                 <span className="proof-metric-label" style={{fontSize: '12px'}}>Promotores monitorados<br style={{fontSize: '12px'}} />(operação de campo)</span>
               </div>
-              <div className="proof-metric" style={{marginRight: '-120px', marginTop: '-12px'}}>
+              <div className="proof-metric" style={{marginRight: '-120px', marginTop: '-39px'}}>
                 <Star className="proof-metric-icon" size={22} strokeWidth={1.3} aria-hidden="true" style={{marginTop: '36px'}} />
-                <StaticMetric value={8.3} decimals={1} />
-                <span className="proof-metric-label" style={{fontSize: '14px'}}>Média de avaliação</span>
-                <span className="proof-tagline" style={{fontSize: '12px', color: '#fff9f2'}}>Conteúdo &amp; Treinamento · Trade Marketing · T&amp;D de Pessoas</span>
+                <StaticMetric value={50} suffix="+" />
+                <span className="proof-metric-label" style={{fontSize: '14px'}}>PROJETOS</span>
+                <span className="proof-tagline" style={{fontSize: '12px', color: '#fff9f2'}}>IMPLEMENTAÇÃO DE PROJETOS EM DIVERSAS ÁREAS DE EXECUÇÃO</span>
               </div>
               <div className="proof-actions" style={{marginRight: '20px', marginLeft: '135px', height: '99px', width: '314px'}}>
                 <FileText className="proof-action-icon" size={20} strokeWidth={1.3} aria-hidden="true" />
-                <Link href="/cv" className="proof-link" style={{fontSize: '14px', marginTop: '-5px'}}><span style={{fontSize: '14px'}}>Abrir trajetória</span><ArrowUpRight size={16} aria-hidden="true" style={{fontSize: '14px'}} /></Link>
-                <Link href="/cv" className="proof-link proof-link-alt" style={{fontSize: '14px', marginTop: '87px', marginLeft: '-305px'}}><span style={{fontSize: '14px'}}>Ver CV</span><ArrowUpRight size={16} aria-hidden="true" style={{fontSize: '14px'}} /></Link>
+                <Link href="/cv" className="proof-link" style={{fontSize: '14px', marginTop: '60px'}}><span style={{fontSize: '14px'}}>Abrir trajetória</span><ArrowUpRight size={16} aria-hidden="true" style={{fontSize: '14px'}} /></Link>
+                <Link href="/cv" className="proof-link proof-link-alt" style={{fontSize: '14px', marginTop: '0px', marginLeft: '-94px'}}><span style={{fontSize: '14px'}}>Ver CV</span><ArrowUpRight size={16} aria-hidden="true" style={{fontSize: '14px'}} /></Link>
               </div>
             </div>
           </div>
         </section>
 
-        <section className="manifesto-section section-pad" aria-labelledby="manifesto-title" style={{height: '733px', width: '351px', backgroundColor: '#f4eee6'}}>
-          <div className="manifesto-grid" data-reveal="manifesto">
+        <section className="manifesto-section section-pad" aria-labelledby="manifesto-title" style={{height: '576px', width: '351px', backgroundColor: '#f4eee6'}}>
+          <div className="manifesto-grid" data-reveal="manifesto" style={{marginTop: '-70px'}}>
             <div className="manifesto-heading">
               <p className="section-kicker" style={{fontSize: '16px', color: '#b72529'}}>Como eu atuo</p>
               <h2 id="manifesto-title" style={{color: '#1c1b1a'}}>Estratégia só funciona <span style={{color: '#b72529'}}>quando chega ao campo.</span></h2>
             </div>
             <div className="manifesto-aside" style={{marginLeft: '-145px'}}>
               <p style={{fontSize: '16px', color: '#000000', fontWeight: '600'}}>Porque conteúdo e treinamento só funcionam quando encontram contexto, método e um próximo passo claro — para a equipe, para o campo e para o negócio.</p>
-              <a className="text-link" href="#about" onClick={(event) => { event.preventDefault(); scrollToId("about"); }} style={{fontSize: '12px', height: '21px', width: '276px', color: '#b72529'}}>Conheça meu jeito de trabalhar <ArrowUpRight size={15} style={{fontSize: '14px', height: '21px', width: '276px', color: '#b72529'}} /></a>
+              <a className="text-link" href="#about" onClick={(event) => { event.preventDefault(); scrollToId("about"); }} style={{fontSize: '12px', height: '21px', width: '276px', color: '#b72529', marginTop: '30px'}}>Conheça meu jeito de trabalhar <ArrowUpRight size={15} style={{fontSize: '14px', height: '20px', width: '28px', color: '#b72529', marginLeft: '20px'}} /></a>
             </div>
           </div>
         </section>
@@ -346,7 +346,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="services-section services-redesign section-pad" aria-labelledby="services-title">
+        <section className="services-section services-redesign section-pad" aria-labelledby="services-title" style={{height: '806px', width: '2236px'}}>
           <div className="services-layout" data-reveal="services-layout">
 	            <div>
 	              <p className="section-kicker" style={{fontSize: '16px'}}>Áreas de atuação</p>

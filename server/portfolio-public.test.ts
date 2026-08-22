@@ -44,7 +44,7 @@ describe("public portfolio metrics and privacy", () => {
   it("labels the Home CV action as navigation instead of a download", () => {
     const homeSource = readProjectFile("client/src/pages/Home.tsx");
 
-    expect(homeSource).toContain('<Link href="/cv" className="proof-link proof-link-alt" style={{fontSize: \'14px\', marginTop: \'87px\', marginLeft: \'-305px\'}}><span style={{fontSize: \'14px\'}}>Ver CV</span>');
+    expect(homeSource).toContain('<Link href="/cv" className="proof-link proof-link-alt" style={{fontSize: \'14px\', marginTop: \'0px\', marginLeft: \'-94px\'}}><span style={{fontSize: \'14px\'}}>Ver CV</span>');
     expect(homeSource).not.toContain("Baixar CV");
   });
 
@@ -370,7 +370,7 @@ describe("public portfolio metrics and privacy", () => {
     const css = readProjectFile("client/src/index.css");
     const homeSource = readProjectFile("client/src/pages/Home.tsx");
 
-    expect(homeSource).toContain("manifesto-section section-pad\" aria-labelledby=\"manifesto-title\" style={{height: '733px', width: '351px', backgroundColor: '#f4eee6'}}");
+    expect(homeSource).toContain("manifesto-section section-pad\" aria-labelledby=\"manifesto-title\" style={{height: '576px', width: '351px', backgroundColor: '#f4eee6'}}");
     expect(css).toContain("/* iPhone: a seção clara ocupa toda a largura");
     expect(css).toContain(".home-revision .manifesto-section[style]");
     expect(css).toContain("background: #f4eee6 !important;");
@@ -457,7 +457,7 @@ describe("public portfolio metrics and privacy", () => {
     expect(homeSource).toContain("hero-section hero-redesign\" style={{height: '870px'}}");
     expect(homeSource).toContain("brand-name\" style={{ fontSize: '17px', textAlign: \"left\" }}");
     expect(homeSource).toContain("id=\"coordination-focus-title\" style={{height: '140px', width: '272px', color: '#f4eee6'}}");
-    expect(homeSource).toContain("style={{fontSize: '12px', height: '21px', width: '276px', color: '#b72529'}}");
+    expect(homeSource).toContain("style={{fontSize: '12px', height: '21px', width: '276px', color: '#b72529', marginTop: '30px'}}");
     expect(homeSource).toContain("id=\"work\" className=\"work-section work-redesign section-pad\" aria-labelledby=\"work-title\" style={{height: '5139px', width: '358px'}}");
     expect(homeSource).toContain("about-art-label\" style={{marginBottom: '-17px', marginRight: '6px', fontSize: '14px', color: '#b72529'}}");
     expect(homeSource).toContain("fontSize: '55px', color: '#b72529'}}>coordenação?</em>");
@@ -480,7 +480,7 @@ describe("public portfolio metrics and privacy", () => {
   it("preserves the manual dimensions of the manifesto section", () => {
     const homeSource = readProjectFile("client/src/pages/Home.tsx");
 
-    expect(homeSource).toContain("manifesto-section section-pad\" aria-labelledby=\"manifesto-title\" style={{height: '733px', width: '351px', backgroundColor: '#f4eee6'}}");
+    expect(homeSource).toContain("manifesto-section section-pad\" aria-labelledby=\"manifesto-title\" style={{height: '576px', width: '351px', backgroundColor: '#f4eee6'}}");
   });
 
   it("preserves the manual white focus title, black emphasis and note spacing", () => {
@@ -502,11 +502,16 @@ describe("public portfolio metrics and privacy", () => {
     expect(homeSource).toContain("style={{marginTop: '-80px'}}");
     expect(homeSource).toContain("style={{marginTop: '-47px'}}");
     expect(homeSource).toContain("style={{marginTop: '-49px'}}");
-    expect(homeSource).toContain("proof-metric\" style={{marginRight: '-120px', marginTop: '-12px'}}");
-    expect(homeSource).toContain("proof-tagline\" style={{fontSize: '12px', color: '#fff9f2'}}");
+    expect(homeSource).toContain("proof-metric\" style={{marginRight: '-120px', marginTop: '-39px'}}");
+    expect(homeSource).toContain('<StaticMetric value={50} suffix="+" />');
+    expect(homeSource).toContain("<span className=\"proof-metric-label\" style={{fontSize: '14px'}}>PROJETOS</span>");
+    expect(homeSource).toContain("IMPLEMENTAÇÃO DE PROJETOS EM DIVERSAS ÁREAS DE EXECUÇÃO");
     expect(homeSource).toContain("proof-actions\" style={{marginRight: '20px', marginLeft: '135px', height: '99px', width: '314px'}}");
-    expect(homeSource).toContain("className=\"proof-link\" style={{fontSize: '14px', marginTop: '-5px'}}");
-    expect(homeSource).toContain("className=\"proof-link proof-link-alt\" style={{fontSize: '14px', marginTop: '87px', marginLeft: '-305px'}}");
+    expect(homeSource).toContain("className=\"proof-link\" style={{fontSize: '14px', marginTop: '60px'}}");
+    expect(homeSource).toContain("className=\"proof-link proof-link-alt\" style={{fontSize: '14px', marginTop: '0px', marginLeft: '-94px'}}");
+    expect(homeSource).toContain("manifesto-section section-pad\" aria-labelledby=\"manifesto-title\" style={{height: '576px', width: '351px', backgroundColor: '#f4eee6'}}");
+    expect(homeSource).toContain("data-reveal=\"manifesto\" style={{marginTop: '-70px'}}");
+    expect(homeSource).toContain("className=\"services-section services-redesign section-pad\" aria-labelledby=\"services-title\" style={{height: '806px', width: '2236px'}}");
     expect(homeSource).not.toContain("proof-metric-narrative");
     expect(homeSource).not.toContain("mais de 20 campanhas de incentivo implementadas");
   });

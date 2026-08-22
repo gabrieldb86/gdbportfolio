@@ -1549,6 +1549,11 @@
 - [x] Atualizar o bloco Projetos que ganharam forma com a nova seleção
 - [x] Validar nos viewports, sincronizar no GitHub e salvar checkpoint
 
+## Verificação de edições manuais recentes da Home
+- [x] Conferir valores finais das métricas, links, manifesto e serviços
+- [x] Consolidar apenas propriedades inline duplicadas ou propagadas indevidamente
+- [ ] Validar nos viewports, sincronizar no GitHub e salvar checkpoint
+
 ## Correção do workflow de GitHub Pages
 - [x] Aplicar a ordem de preparação de pnpm e Node recomendada pelo GitHub
 - [x] Validar localmente o workflow atualizado antes da próxima sincronização

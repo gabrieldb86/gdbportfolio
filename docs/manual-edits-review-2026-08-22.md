@@ -27,3 +27,9 @@ As verificações em **900px** e **1280px** confirmaram que o layout editorial e
 Em **1280px**, foram desativados o brilho, a ampliação, os deslocamentos e a expansão associados ao cursor nas superfícies de imagem. Em **375px**, a composição mobile permanece inalterada, incluindo os cartões estáticos e o fundo integral já aprovados.
 
 As verificações em **742px** e **900px** confirmaram que a remoção do hover não introduziu cortes, deslocamentos ou alterações no reflow intermediário.
+
+## Edições de métricas, manifesto e serviços
+
+Foram preservados os valores finais escolhidos: **50+ projetos**, rótulo **PROJETOS**, texto descritivo atualizado, margens dos links de CV, manifesto com **576px** e deslocamento de **-70px**, além das dimensões selecionadas para a seção de serviços. As capturas em **1280px** e **375px** confirmaram que a consolidação removeu apenas duplicidades técnicas e preservou o reflow mobile.
+
+As verificações em **742px** e **900px** confirmaram que os valores manuais não introduziram corte, sobreposição ou deslocamento na faixa intermediária.
