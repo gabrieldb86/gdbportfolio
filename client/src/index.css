@@ -3933,6 +3933,25 @@ a.proof-link, a.behance-link, a.text-link, .service-detail a {
   }
 }
 
+/* Desktop: medidas manuais de seção ficam registradas no JSX, mas não podem reduzir o canvas a uma coluna estreita. */
+@media (min-width: 901px) {
+  .home-revision .manifesto-section[style],
+  .home-revision .work-section[style],
+  .home-revision .contact-section[style] {
+    width: auto !important;
+    height: auto !important;
+  }
+
+  .home-revision .manifesto-grid,
+  .home-revision .work-redesign-heading,
+  .home-revision .work-redesign .projects-grid,
+  .home-revision .services-layout,
+  .home-revision .about-grid,
+  .home-revision .contact-grid {
+    min-width: 0 !important;
+  }
+}
+
 /* Correção solicitada para mobile: medidas editadas no desktop não podem cortar estas duas seções. */
 @media (max-width: 900px) {
   .home-revision .services-layout,

@@ -176,6 +176,17 @@ describe("public portfolio metrics and privacy", () => {
     expect(css).toContain("@media (max-width: 900px)");
   });
 
+  it("keeps manually sized section wrappers fluid across desktop canvases", () => {
+    const css = readProjectFile("client/src/index.css");
+
+    expect(css).toContain("@media (min-width: 901px)");
+    expect(css).toContain(".home-revision .manifesto-section[style]");
+    expect(css).toContain(".home-revision .work-section[style]");
+    expect(css).toContain(".home-revision .contact-section[style]");
+    expect(css).toContain("width: auto !important;");
+    expect(css).toContain("height: auto !important;");
+  });
+
   it("resets only the mobile impact of manual service and statement dimensions", () => {
     const css = readProjectFile("client/src/index.css");
 

@@ -1356,3 +1356,8 @@
 - [x] Substituir a política de privacidade pelo conteúdo corrigido fornecido
 - [x] Alinhar formulário e confirmação para informar que não há captação ou armazenamento de leads
 - [x] Validar rotas, textos, metadados e experiência responsiva antes da publicação
+
+## Regressão de responsividade em desktop ultralargo
+- [x] Diagnosticar a compressão das seções Como eu atuo e Trabalhos selecionados em telas acima de 1504px
+- [x] Corrigir apenas as regras de desktop responsáveis pelo canvas vazio e sobreposição de conteúdo
+- [x] Validar em 2048px, 1504px, desktop padrão e mobile antes da publicação
