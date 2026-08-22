@@ -385,7 +385,7 @@ export default function Home() {
 	            <div>
 	              <p className="section-kicker" style={{fontSize: '16px'}}>Áreas de atuação</p>
 	              <h2 id="services-title" style={{width: '994px'}}>Coordenação para<br style={{width: '994px'}} /><em className="services-result" style={{width: '994px'}}>o trabalho acontecer.</em></h2>
-	              <div className="services-editorial-note" style={{fontSize: '25px'}}><strong style={{fontSize: '25px'}}>Do briefing à rotina de campo.</strong><p style={{fontSize: '25px'}}>Coordenação que organiza contexto, método, conteúdo e execução para apoiar a operação.</p></div>
+	              <div className="services-editorial-note" style={{fontSize: '25px'}}><strong style={{fontSize: '42px'}}>Do briefing à rotina de campo.</strong><p style={{fontSize: '25px'}}>Coordenação que organiza contexto, método, conteúdo e execução para apoiar a operação.</p></div>
 	            </div>
             <div className="services-list">
               {siteConfig.services.map(([number, title, description], index) => (
@@ -409,7 +409,7 @@ export default function Home() {
           <div className="about-grid">
             <div className="about-art-wrap" data-reveal="about-art">
               <img src={siteConfig.trainingImage} alt="Gabriel conduzindo um treinamento diante de uma equipe" loading="lazy" fetchPriority="low" decoding="async" width="1200" height="900" style={{ aspectRatio: '1.33' }} onError={markBrokenImage} />
-              <span className="about-art-label" style={{marginBottom: '-17px', marginRight: '9px'}}>Processo / repertório / intenção</span>
+	              <span className="about-art-label" style={{marginBottom: '-17px', marginRight: '61px', fontSize: '14px'}}>Processo / repertório / intenção</span>
             </div>
             <div className="about-copy" data-reveal="about-copy" style={{marginLeft: '20px'}}>
               <p className="section-kicker" style={{fontSize: '16px'}}>Sobre mim</p>
@@ -428,9 +428,9 @@ export default function Home() {
 
         <section className="statement-section" aria-labelledby="statement-title">
           <div className="statement-copy" data-reveal="statement-copy" style={{height: '0px', paddingBottom: '150px', paddingLeft: '215px', paddingRight: '0px', paddingTop: '0px', width: '909px'}}>
-            <span style={{width: '451px'}}>Se houver uma vaga ou projeto em que eu possa contribuir:</span>
+            <span style={{width: '451px', fontSize: '14px'}}>Se houver uma vaga ou projeto em que eu possa contribuir:</span>
             <h2 id="statement-title" style={{height: '491px', width: '539px'}}>Vamos colocar<br style={{height: '491px', width: '539px'}} /><em style={{height: '491px', width: '539px'}}>o trabalho em prática.</em></h2>
-            <p className="statement-context-box" style={{width: '500px'}}>Conteúdo e treinamento precisam de contexto, método e acompanhamento para apoiar equipes, campo e negócio.</p>
+            <p className="statement-context-box" style={{width: '500px', fontSize: '18px'}}>Conteúdo e treinamento precisam de contexto, método e acompanhamento para apoiar equipes, campo e negócio.</p>
           </div>
           <div className="statement-media-frame">
             <img className="statement-image" src={siteConfig.heroImage} alt="Projeto visual de bonés em preto e vermelho" width="1315" height="643" loading="lazy" decoding="async" onError={markBrokenImage} />
@@ -441,7 +441,7 @@ export default function Home() {
 	          <div className="contact-grid">
 	            <div className="contact-intro" data-reveal="contact-intro">
 	              <p className="section-kicker" style={{fontSize: '16px'}}>Vamos conversar</p>
-	              <h2 id="contact-title" style={{height: '479px', width: '756px', marginBottom: '111px', marginRight: '-1px', fontSize: '51px'}}>Você está formando<br style={{height: '479px', marginBottom: '111px', marginRight: '-1px', width: '756px'}} />uma equipe de <em style={{height: '479px', marginBottom: '111px', marginRight: '-1px', width: '756px', fontSize: '55px'}}>coordenação?</em></h2>
+	              <h2 id="contact-title" style={{height: '479px', width: '756px', marginBottom: '111px', marginRight: '-1px', fontSize: '51px'}}>Você está formando<br style={{height: '479px', marginBottom: '111px', marginRight: '-1px', width: '756px'}} />uma equipe de <em style={{height: '479px', marginBottom: '111px', marginRight: '-1px', width: '756px', fontSize: '140px'}}>coordenação?</em></h2>
 	              <p style={{fontSize: '16px', marginBottom: '18px', marginTop: '-100px'}}>Estou aberto a oportunidades em conteúdo, treinamento, trade marketing e performance de campo. Envie o contexto da posição ou fale comigo diretamente pelo LinkedIn, e-mail ou WhatsApp.</p>
               <div className="contact-links">
                 <a className="contact-direct" href="https://wa.me/5511945747353" data-umami-event="whatsapp-click" target="_blank" rel="noreferrer" onClick={() => trackPortfolioEvent("contact_whatsapp")}><MessageCircle size={17} /> Falar diretamente com Gabriel <ArrowUpRight size={15} /></a>
@@ -449,7 +449,7 @@ export default function Home() {
                 <a className="contact-direct" href="mailto:gabrieldb@me.com" data-umami-event="email-click" onClick={() => trackPortfolioEvent("contact_email")}><Mail size={17} /> gabrieldb@me.com <ArrowUpRight size={15} /></a>
               </div>
             </div>
-	            <form className="contact-form" data-reveal="contact-form" onSubmit={handleSubmit} noValidate aria-describedby={Object.keys(formErrors).length ? "contact-form-errors" : undefined} style={{marginLeft: '565px', width: '750px'}}>
+	            <form className="contact-form" data-reveal="contact-form" onSubmit={handleSubmit} noValidate aria-describedby={Object.keys(formErrors).length ? "contact-form-errors" : undefined} style={{marginLeft: '130px', width: '750px'}}>
                 {Object.keys(formErrors).length > 0 && <p id="contact-form-errors" className="form-error-summary" role="alert">Revise os campos destacados antes de enviar a mensagem.</p>}
               <label htmlFor="name">Seu nome</label>
               <input id="name" name="name" type="text" placeholder="Como posso te chamar?" autoComplete="name" required aria-required="true" aria-invalid={formErrors.name ? "true" : undefined} aria-describedby={formErrors.name ? "name-error" : undefined} onBlur={handleFieldBlur} />

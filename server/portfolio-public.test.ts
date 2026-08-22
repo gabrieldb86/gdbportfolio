@@ -204,9 +204,9 @@ describe("public portfolio metrics and privacy", () => {
     expect(homeSource).toContain("id=\"contact-title\" style={{height: '479px', width: '756px', marginBottom: '111px', marginRight: '-1px', fontSize: '51px'}}");
     expect(homeSource).toContain("id=\"contact\" className=\"contact-section section-pad\" aria-labelledby=\"contact-title\" style={{height: '1368px', width: '355px'}}");
     expect(homeSource).toContain("Você está formando<br style={{height: '479px', marginBottom: '111px', marginRight: '-1px', width: '756px'}} />uma equipe de");
-    expect(homeSource).toContain("<em style={{height: '479px', marginBottom: '111px', marginRight: '-1px', width: '756px', fontSize: '55px'}}>coordenação?</em>");
+    expect(homeSource).toContain("<em style={{height: '479px', marginBottom: '111px', marginRight: '-1px', width: '756px', fontSize: '140px'}}>coordenação?</em>");
     expect(homeSource).toContain("style={{fontSize: '16px', marginBottom: '18px', marginTop: '-100px'}}");
-    expect(homeSource).toContain("contact-form\" data-reveal=\"contact-form\" onSubmit={handleSubmit} noValidate aria-describedby={Object.keys(formErrors).length ? \"contact-form-errors\" : undefined} style={{marginLeft: '565px', width: '750px'}}");
+    expect(homeSource).toContain("contact-form\" data-reveal=\"contact-form\" onSubmit={handleSubmit} noValidate aria-describedby={Object.keys(formErrors).length ? \"contact-form-errors\" : undefined} style={{marginLeft: '130px', width: '750px'}}");
     expect(homeSource).toContain('className="hero-actions" style={{marginTop: \'24px\'}}');
     expect(css).toContain("#contact.contact-section .contact-intro h2#contact-title[style]");
     expect(css).toContain("min-width: 756px");
@@ -229,14 +229,14 @@ describe("public portfolio metrics and privacy", () => {
     const homeSource = readProjectFile("client/src/pages/Home.tsx");
 
     expect(homeSource).toContain("services-editorial-note\" style={{fontSize: '25px'}}");
-    expect(homeSource).toContain("<strong style={{fontSize: '25px'}}>Do briefing à rotina de campo.</strong>");
+    expect(homeSource).toContain("<strong style={{fontSize: '42px'}}>Do briefing à rotina de campo.</strong>");
     expect(homeSource).toContain("<p style={{fontSize: '25px'}}>Coordenação que organiza contexto");
   });
 
   it("preserves the manual positioning of the about image label", () => {
     const homeSource = readProjectFile("client/src/pages/Home.tsx");
 
-    expect(homeSource).toContain("about-art-label\" style={{marginBottom: '-17px', marginRight: '9px'}}");
+    expect(homeSource).toContain("about-art-label\" style={{marginBottom: '-17px', marginRight: '61px', fontSize: '14px'}}");
   });
 
   it("preserves the manual CV toolstrip measurements and resets them only on mobile", () => {
@@ -331,8 +331,8 @@ describe("public portfolio metrics and privacy", () => {
     expect(homeSource).toContain("id=\"coordination-focus-title\" style={{height: '140px', width: '272px', color: '#ffffff'}}");
     expect(homeSource).toContain("style={{fontSize: '14px', height: '21px', width: '276px', color: '#ff2600'}}");
     expect(homeSource).toContain("id=\"work\" className=\"work-section work-redesign section-pad\" aria-labelledby=\"work-title\" style={{height: '5139px', width: '358px'}}");
-    expect(homeSource).toContain("about-art-label\" style={{marginBottom: '-17px', marginRight: '9px'}}");
-    expect(homeSource).toContain("fontSize: '55px'}}>coordenação?</em>");
+    expect(homeSource).toContain("about-art-label\" style={{marginBottom: '-17px', marginRight: '61px', fontSize: '14px'}}");
+    expect(homeSource).toContain("fontSize: '140px'}}>coordenação?</em>");
   });
 
   it("preserves the manual white manifesto surface with black copy and red link", () => {

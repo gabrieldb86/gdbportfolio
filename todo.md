@@ -1394,3 +1394,8 @@
 ## Exportação portátil do projeto
 - [x] Gerar um ZIP limpo com código, documentação e configurações necessárias
 - [x] Entregar o pacote e as instruções de continuidade pelo GitHub
+
+## Verificação de novas edições manuais
+- [x] Preservar as mudanças finais de tipografia e espaçamento apenas nos elementos selecionados
+- [x] Remover atributos e propriedades duplicados sem alterar os valores escolhidos
+- [x] Validar desktop, tablet e mobile antes de publicar o checkpoint
