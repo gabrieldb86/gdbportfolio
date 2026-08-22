@@ -4842,3 +4842,22 @@ a.proof-link, a.behance-link, a.text-link, .service-detail a {
 @media (prefers-reduced-motion: reduce) {
   .image-glow-frame::before, .image-glow-frame::after { transition: none; }
 }
+
+/* Proteção dos breakpoints recentes: a galeria deixa de comprimir e o brilho não cria área excedente no mobile/tablet. */
+@media (min-width: 721px) and (max-width: 900px) {
+  .project-accordion-gallery {
+    min-height: 420px;
+    height: min(58vw, 500px);
+    gap: 10px;
+  }
+
+  .project-accordion-panel { min-width: clamp(76px, 12vw, 108px); }
+  .project-accordion-panel.is-active { flex-grow: 2.65; }
+}
+
+@media (max-width: 720px) {
+  .project-accordion-panel { width: 100%; min-width: 0; }
+  .image-glow-frame::before { inset: -1px; }
+  .image-glow-frame::after { inset: -5px; filter: blur(5px); }
+  .image-glow-frame.about-art-wrap .about-art-label { z-index: 4; }
+}

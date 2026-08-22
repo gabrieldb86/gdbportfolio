@@ -1501,6 +1501,11 @@
 - [x] Aplicar borda luminosa editorial no hover e foco, sem sobrepor conteúdo
 - [x] Validar desktop/mobile, movimento reduzido e publicação no GitHub Pages
 
+## Revisão de responsividade mobile
+- [x] Mapear falhas de layout da galeria e dos contornos luminosos em 375px, 742px e 900px
+- [x] Ajustar somente regras responsivas dos elementos introduzidos recentemente
+- [x] Validar mobile/tablet, testes e publicação no GitHub Pages
+
 ## Correção do workflow de GitHub Pages
 - [x] Aplicar a ordem de preparação de pnpm e Node recomendada pelo GitHub
 - [x] Validar localmente o workflow atualizado antes da próxima sincronização

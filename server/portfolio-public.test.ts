@@ -332,6 +332,14 @@ describe("public portfolio metrics and privacy", () => {
     expect(css).toContain("@media (prefers-reduced-motion: reduce)");
   });
 
+  it("keeps the recent gallery and glow effect contained at mobile and tablet widths", () => {
+    const css = readProjectFile("client/src/index.css");
+
+    expect(css).toContain("@media (min-width: 721px) and (max-width: 900px)");
+    expect(css).toContain(".project-accordion-panel { width: 100%; min-width: 0; }");
+    expect(css).toContain(".image-glow-frame::after { inset: -5px; filter: blur(5px); }");
+  });
+
   it("applies the reusable editorial glow effect to every public image surface", () => {
     const homeSource = readProjectFile("client/src/pages/Home.tsx");
     const cvSource = readProjectFile("client/src/pages/CV.tsx");
