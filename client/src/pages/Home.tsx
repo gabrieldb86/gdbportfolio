@@ -328,8 +328,8 @@ export default function Home() {
               <h2 id="manifesto-title" style={{color: '#1c1b1a'}}>Estratégia só funciona <span style={{color: '#b72529'}}>quando chega ao campo.</span></h2>
             </div>
             <div className="manifesto-aside" style={{marginLeft: '-145px'}}>
-              <p style={{fontSize: '20px', color: '#000000', fontWeight: '600'}}>Porque conteúdo e treinamento só funcionam quando encontram contexto, método e um próximo passo claro — para a equipe, para o campo e para o negócio.</p>
-              <a className="text-link" href="#about" onClick={(event) => { event.preventDefault(); scrollToId("about"); }} style={{fontSize: '14px', height: '21px', width: '276px', color: '#b72529'}}>Conheça meu jeito de trabalhar <ArrowUpRight size={15} style={{fontSize: '14px', height: '21px', width: '276px', color: '#b72529'}} /></a>
+              <p style={{fontSize: '16px', color: '#000000', fontWeight: '600'}}>Porque conteúdo e treinamento só funcionam quando encontram contexto, método e um próximo passo claro — para a equipe, para o campo e para o negócio.</p>
+              <a className="text-link" href="#about" onClick={(event) => { event.preventDefault(); scrollToId("about"); }} style={{fontSize: '12px', height: '21px', width: '276px', color: '#b72529'}}>Conheça meu jeito de trabalhar <ArrowUpRight size={15} style={{fontSize: '14px', height: '21px', width: '276px', color: '#b72529'}} /></a>
             </div>
           </div>
         </section>
@@ -351,7 +351,7 @@ export default function Home() {
 	            <div>
 	              <p className="section-kicker" style={{fontSize: '16px'}}>Áreas de atuação</p>
 	              <h2 id="services-title" style={{width: '994px', color: '#1c1b1a'}}>Coordenação para<br style={{width: '994px'}} /><em className="services-result" style={{width: '994px'}}>o trabalho acontecer.</em></h2>
-	              <div className="services-editorial-note" style={{fontSize: '25px'}}><strong style={{fontSize: '42px', color: '#1c1b1a'}}>Do briefing à rotina de campo.</strong><p style={{fontSize: '25px'}}>Coordenação que organiza contexto, método, conteúdo e execução para apoiar a operação.</p></div>
+	              <div className="services-editorial-note" style={{fontSize: '25px'}}><strong style={{fontSize: '20px', color: '#1c1b1a'}}>Do briefing à rotina de campo.</strong><p style={{fontSize: '25px'}}>Coordenação que organiza contexto, método, conteúdo e execução para apoiar a operação.</p></div>
 	            </div>
             <div className="services-list">
               {siteConfig.services.map(([number, title, description], index) => (
@@ -371,11 +371,11 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="about" className="about-section section-pad" aria-labelledby="about-title">
+        <section id="about" className="about-section section-pad" aria-labelledby="about-title" style={{height: '1685px'}}>
           <div className="about-grid">
             <ImageGlowFrame className="about-art-wrap" data-reveal="about-art">
               <img src={siteConfig.trainingImage} alt="Gabriel conduzindo um treinamento diante de uma equipe" loading="lazy" fetchPriority="low" decoding="async" width="1200" height="900" style={{ aspectRatio: '1.33' }} onError={markBrokenImage} />
-	              <span className="about-art-label" style={{marginBottom: '-17px', marginRight: '61px', fontSize: '14px', color: '#b72529'}}>Processo / repertório / intenção</span>
+	              <span className="about-art-label" style={{marginBottom: '-17px', marginRight: '6px', fontSize: '14px', color: '#b72529'}}>Processo / repertório / intenção</span>
             </ImageGlowFrame>
             <div className="about-copy" data-reveal="about-copy" style={{marginLeft: '20px'}}>
               <p className="section-kicker" style={{fontSize: '16px', color: '#b72529'}}>Sobre mim</p>
@@ -403,11 +403,11 @@ export default function Home() {
           </ImageGlowFrame>
         </section>
 
-	        <section id="contact" className="contact-section section-pad" aria-labelledby="contact-title" style={{height: '1368px', width: '355px'}}>
+	        <section id="contact" className="contact-section section-pad" aria-labelledby="contact-title" style={{height: '1560px', width: '355px'}}>
 	          <div className="contact-grid">
 	            <div className="contact-intro" data-reveal="contact-intro">
 	              <p className="section-kicker" style={{fontSize: '16px'}}>Vamos conversar</p>
-	              <h2 id="contact-title" style={{height: '479px', width: '756px', marginBottom: '111px', marginRight: '-1px', fontSize: '51px'}}>Você está formando<br style={{height: '479px', marginBottom: '111px', marginRight: '-1px', width: '756px'}} />uma equipe de <em style={{height: '479px', marginBottom: '111px', marginRight: '-1px', width: '756px', fontSize: '140px', color: '#b72529'}}>coordenação?</em></h2>
+	              <h2 id="contact-title" style={{height: '479px', width: '756px', marginBottom: '111px', marginRight: '-1px', fontSize: '51px'}}>Você está formando<br style={{height: '479px', marginBottom: '111px', marginRight: '-1px', width: '756px'}} />uma equipe de <em style={{height: '479px', marginBottom: '111px', marginRight: '-1px', width: '756px', fontSize: '55px', color: '#b72529'}}>coordenação?</em></h2>
 	              <p style={{fontSize: '18px', marginBottom: '18px', marginTop: '-100px'}}>Estou aberto a oportunidades em conteúdo, treinamento, trade marketing e performance de campo. Envie o contexto da posição ou fale comigo diretamente pelo LinkedIn, e-mail ou WhatsApp.</p>
               <div className="contact-links">
                 <a className="contact-direct" href="https://wa.me/5511945747353" data-umami-event="whatsapp-click" target="_blank" rel="noreferrer" onClick={() => trackPortfolioEvent("contact_whatsapp")}><MessageCircle size={17} /> Falar diretamente com Gabriel <ArrowUpRight size={15} /></a>

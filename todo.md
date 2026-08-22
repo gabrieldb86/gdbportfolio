@@ -1513,6 +1513,12 @@
 - [x] Confirmar por build que o alerta transitório de declaração duplicada no CV não persiste
 - [x] Validar a Home em mobile, sincronizar no GitHub e publicar
 
+## Verificação de edições manuais da Home
+- [x] Conferir os valores finais escolhidos no manifesto, serviços, sobre e contato
+- [x] Consolidar apenas propriedades inline duplicadas, preservando os valores finais
+- [x] Validar as edições em desktop e mobile, com testes e build
+- [ ] Sincronizar as edições aprovadas no GitHub e salvar checkpoint
+
 ## Correção do workflow de GitHub Pages
 - [x] Aplicar a ordem de preparação de pnpm e Node recomendada pelo GitHub
 - [x] Validar localmente o workflow atualizado antes da próxima sincronização
