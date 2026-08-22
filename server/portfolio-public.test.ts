@@ -344,8 +344,9 @@ describe("public portfolio metrics and privacy", () => {
     expect(homeSource).toContain("section-kicker\" style={{fontSize: '16px', color: '#b72529'}}>Como eu atuo</p>");
     expect(homeSource).toContain("id=\"manifesto-title\" style={{color: '#1c1b1a'}}");
     expect(homeSource).toContain("<span style={{color: '#b72529'}}>quando chega ao campo.</span>");
-    expect(homeSource).toContain("fontSize: '20px', color: '#000000'");
+    expect(homeSource).toContain("fontSize: '20px', color: '#000000', fontWeight: '600'");
     expect(homeSource).toContain("width: '276px', color: '#b72529'");
+    expect(homeSource).toContain("<p style={{ fontSize: '18px', color: '#f4eee6' }}>Uma seleção de campanhas");
     expect(homeSource).toContain("statement-context-box\" style={{width: '500px', fontSize: '16px'}}");
     expect(homeSource).toContain("contact-privacy-note\" style={{fontSize: '14px'}}");
   });

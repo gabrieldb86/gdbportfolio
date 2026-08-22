@@ -1424,3 +1424,8 @@
 - [x] Preservar título de Focos em #f4eee6, fundo do manifesto em #f4eee6 e link Behance em 14px
 - [x] Manter a ênfase e elementos não selecionados sem alterações automáticas do editor
 - [x] Remover duplicidades técnicas e validar antes de publicar o checkpoint
+
+## Verificação de peso e tipografia
+- [x] Preservar o peso 600 no texto do manifesto e o texto de Trabalhos em 18px/#f4eee6
+- [x] Remover somente a propriedade de tamanho duplicada do editor visual
+- [x] Validar contraste, desktop e mobile antes de publicar o checkpoint

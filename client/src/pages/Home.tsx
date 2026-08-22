@@ -362,7 +362,7 @@ export default function Home() {
               <h2 id="manifesto-title" style={{color: '#1c1b1a'}}>Estratégia só funciona <span style={{color: '#b72529'}}>quando chega ao campo.</span></h2>
             </div>
             <div className="manifesto-aside" style={{marginLeft: '-145px'}}>
-              <p style={{fontSize: '20px', color: '#000000'}}>Porque conteúdo e treinamento só funcionam quando encontram contexto, método e um próximo passo claro — para a equipe, para o campo e para o negócio.</p>
+              <p style={{fontSize: '20px', color: '#000000', fontWeight: '600'}}>Porque conteúdo e treinamento só funcionam quando encontram contexto, método e um próximo passo claro — para a equipe, para o campo e para o negócio.</p>
               <a className="text-link" href="#about" onClick={(event) => { event.preventDefault(); scrollToId("about"); }} style={{fontSize: '14px', height: '21px', width: '276px', color: '#b72529'}}>Conheça meu jeito de trabalhar <ArrowUpRight size={15} style={{fontSize: '14px', height: '21px', width: '276px', color: '#b72529'}} /></a>
             </div>
           </div>
@@ -371,7 +371,7 @@ export default function Home() {
         <section id="work" className="work-section work-redesign section-pad" aria-labelledby="work-title" style={{height: '5139px', width: '358px'}}>
           <div className="work-redesign-heading" data-reveal="work-heading">
             <div><p className="section-kicker" style={{ fontSize: '16px' }}>Trabalhos selecionados</p><h2 id="work-title">Projetos que<br /><em>ganharam forma.</em></h2></div>
-            <p style={{ fontSize: '16px' }}>Uma seleção de campanhas, trilhas, eventos e materiais criada para comunicar melhor, capacitar equipes e melhorar a execução.</p>
+            <p style={{ fontSize: '18px', color: '#f4eee6' }}>Uma seleção de campanhas, trilhas, eventos e materiais criada para comunicar melhor, capacitar equipes e melhorar a execução.</p>
             <a className="behance-link" href="https://www.behance.net/gabrieldb86" data-umami-event="behance-open" target="_blank" rel="noreferrer" onClick={() => trackPortfolioEvent("portfolio_behance")} style={{fontSize: '14px'}}>Abrir Behance <ArrowUpRight size={15} /></a>
           </div>
 
