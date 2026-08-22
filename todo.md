@@ -1351,3 +1351,8 @@
 - [x] Revisar as alterações recentes e os seus resultados de validação
 - [x] Classificar itens que exigem atenção técnica, decisão do usuário ou edição futura
 - [x] Entregar uma priorização clara sem modificar a interface pública
+
+## Correção de privacidade e fluxo de WhatsApp
+- [x] Substituir a política de privacidade pelo conteúdo corrigido fornecido
+- [x] Alinhar formulário e confirmação para informar que não há captação ou armazenamento de leads
+- [x] Validar rotas, textos, metadados e experiência responsiva antes da publicação

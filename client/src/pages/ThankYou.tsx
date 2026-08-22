@@ -6,7 +6,7 @@ export const thankYouContent = {
   marker: "01",
   title: "Obrigado por",
   emphasis: "entrar em contato.",
-  description: "Sua mensagem foi preparada e o WhatsApp foi aberto em uma nova aba. Assim que possível, Gabriel retorna por lá ou pelo e-mail informado.",
+  description: "As informações foram preparadas e o WhatsApp foi aberto em uma nova aba. Para concluir o contato, revise a mensagem e envie-a diretamente pelo WhatsApp.",
   homeAction: "Voltar ao portfólio",
   whatsappAction: "Abrir WhatsApp",
   panelLabel: "Próximo passo",

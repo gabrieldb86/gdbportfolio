@@ -466,8 +466,8 @@ export default function Home() {
               <label htmlFor="message">Conte sobre a oportunidade, a empresa ou o desafio da posição</label>
               <textarea id="message" name="message" rows={3} placeholder="Qual é o contexto da vaga ou do desafio?" required aria-required="true" aria-invalid={formErrors.message ? "true" : undefined} aria-describedby={formErrors.message ? "message-error" : undefined} onBlur={handleFieldBlur} />
               {formErrors.message && <p className="form-field-error" id="message-error">{formErrors.message}</p>}
-              <button className="submit-button" type="submit">Enviar mensagem <ArrowUpRight size={17} /></button>
-              <p className="contact-privacy-note">Ao enviar, os dados são usados apenas para responder ao seu contato. <a href="/privacidade">Leia o aviso de privacidade.</a></p>
+              <button className="submit-button" type="submit">Preparar mensagem <ArrowUpRight size={17} /></button>
+              <p className="contact-privacy-note">Ao prosseguir, seus dados são usados somente para preparar uma mensagem no WhatsApp. Este site não capta nem armazena leads. <a href="/privacidade">Leia o aviso de privacidade.</a></p>
             </form>
           </div>
         </section>

@@ -82,12 +82,15 @@ describe("public portfolio metrics and privacy", () => {
 
   it("publishes a clear privacy policy for contact data and analytics changes", () => {
     const privacySource = readProjectFile("client/src/pages/Privacy.tsx");
+    const homeSource = readProjectFile("client/src/pages/Home.tsx");
 
     expect(privacySource).toContain("Dados que podem ser informados");
     expect(privacySource).toContain("O conteúdo digitado não é salvo em uma base de contatos própria deste site");
+    expect(privacySource).toContain("LGPD — Lei nº 13.709/2018");
     expect(privacySource).toContain("Cookies e métricas de navegação");
     expect(privacySource).toContain("Seus direitos");
     expect(privacySource).toContain('href="mailto:gabrieldb@me.com"');
+    expect(homeSource).toContain("Este site não capta nem armazena leads.");
   });
 
   it("keeps the rail avatar visible and red sections in document flow on desktop", () => {
@@ -434,6 +437,7 @@ describe("public portfolio metrics and privacy", () => {
     expect(homeSource).toContain('setLocation("/obrigado")');
     expect(thankYouSource).toContain("thankYouContent");
     expect(thankYouSource).toContain('id="thank-you-home-link"');
+    expect(thankYouSource).toContain("envie-a diretamente pelo WhatsApp");
     expect(css).toContain(".thank-you-page");
     expect(css).toContain(".thank-you-main");
   });
