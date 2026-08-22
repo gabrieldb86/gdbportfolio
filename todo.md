@@ -1419,3 +1419,8 @@
 - [x] Preservar o fundo #b72529 selecionado no bloco de chamada final
 - [x] Remover somente a propriedade backgroundColor duplicada do editor visual
 - [x] Validar e publicar o checkpoint
+
+## Verificação de novos valores visuais
+- [x] Preservar título de Focos em #f4eee6, fundo do manifesto em #f4eee6 e link Behance em 14px
+- [x] Manter a ênfase e elementos não selecionados sem alterações automáticas do editor
+- [x] Remover duplicidades técnicas e validar antes de publicar o checkpoint

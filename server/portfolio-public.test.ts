@@ -330,7 +330,7 @@ describe("public portfolio metrics and privacy", () => {
     const homeSource = readProjectFile("client/src/pages/Home.tsx");
 
     expect(homeSource).toContain("brand-name\" style={{ fontSize: '17px', textAlign: \"left\" }}");
-    expect(homeSource).toContain("id=\"coordination-focus-title\" style={{height: '140px', width: '272px', color: '#ffffff'}}");
+    expect(homeSource).toContain("id=\"coordination-focus-title\" style={{height: '140px', width: '272px', color: '#f4eee6'}}");
     expect(homeSource).toContain("style={{fontSize: '14px', height: '21px', width: '276px', color: '#b72529'}}");
     expect(homeSource).toContain("id=\"work\" className=\"work-section work-redesign section-pad\" aria-labelledby=\"work-title\" style={{height: '5139px', width: '358px'}}");
     expect(homeSource).toContain("about-art-label\" style={{marginBottom: '-17px', marginRight: '61px', fontSize: '14px', color: '#b72529'}}");
@@ -340,7 +340,7 @@ describe("public portfolio metrics and privacy", () => {
   it("preserves the manual white manifesto surface with black copy and red link", () => {
     const homeSource = readProjectFile("client/src/pages/Home.tsx");
 
-    expect(homeSource).toContain("backgroundColor: '#ffffff'");
+    expect(homeSource).toContain("backgroundColor: '#f4eee6'");
     expect(homeSource).toContain("section-kicker\" style={{fontSize: '16px', color: '#b72529'}}>Como eu atuo</p>");
     expect(homeSource).toContain("id=\"manifesto-title\" style={{color: '#1c1b1a'}}");
     expect(homeSource).toContain("<span style={{color: '#b72529'}}>quando chega ao campo.</span>");
@@ -353,16 +353,17 @@ describe("public portfolio metrics and privacy", () => {
   it("preserves the manual dimensions of the manifesto section", () => {
     const homeSource = readProjectFile("client/src/pages/Home.tsx");
 
-    expect(homeSource).toContain("manifesto-section section-pad\" aria-labelledby=\"manifesto-title\" style={{height: '733px', width: '351px', backgroundColor: '#ffffff'}}");
+    expect(homeSource).toContain("manifesto-section section-pad\" aria-labelledby=\"manifesto-title\" style={{height: '733px', width: '351px', backgroundColor: '#f4eee6'}}");
   });
 
   it("preserves the manual white focus title, black emphasis and note spacing", () => {
     const homeSource = readProjectFile("client/src/pages/Home.tsx");
     const css = readProjectFile("client/src/index.css");
 
-    expect(homeSource).toContain("id=\"coordination-focus-title\" style={{height: '140px', width: '272px', color: '#ffffff'}}");
+    expect(homeSource).toContain("id=\"coordination-focus-title\" style={{height: '140px', width: '272px', color: '#f4eee6'}}");
     expect(homeSource).toContain("<em style={{height: '140px', width: '272px', color: '#1c1b1a'}}>método à prática.</em>");
     expect(homeSource).toContain("coordination-focus-note\" style={{fontSize: '20px', width: '879px', marginTop: '50px'}}");
+    expect(homeSource).toContain("className=\"behance-link\" href=\"https://www.behance.net/gabrieldb86\" data-umami-event=\"behance-open\" target=\"_blank\" rel=\"noreferrer\" onClick={() => trackPortfolioEvent(\"portfolio_behance\")} style={{fontSize: '14px'}}");
     expect(css).toContain(".home-revision .coordination-focus-label h2 em {\n    color: #000000 !important;");
   });
 

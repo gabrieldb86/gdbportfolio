@@ -265,7 +265,7 @@ export default function Home() {
           <div className="coordination-focus-layout">
             <div className="coordination-focus-label" data-reveal="focus-label" style={{width: '933px'}}>
               <p className="section-kicker" style={{fontSize: '16px'}}>Focos de coordenação</p>
-              <h2 id="coordination-focus-title" style={{height: '140px', width: '272px', color: '#ffffff'}}>Três frentes para levar <em style={{height: '140px', width: '272px', color: '#1c1b1a'}}>método à prática.</em></h2>
+              <h2 id="coordination-focus-title" style={{height: '140px', width: '272px', color: '#f4eee6'}}>Três frentes para levar <em style={{height: '140px', width: '272px', color: '#1c1b1a'}}>método à prática.</em></h2>
               <p className="coordination-focus-note" style={{fontSize: '20px', width: '879px', marginTop: '50px'}}>Conteúdo, treinamento e campo organizados para apoiar decisões, capacitar equipes e acompanhar a execução.</p>
             </div>
             <div className="coordination-focus-grid">
@@ -355,7 +355,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="manifesto-section section-pad" aria-labelledby="manifesto-title" style={{height: '733px', width: '351px', backgroundColor: '#ffffff'}}>
+        <section className="manifesto-section section-pad" aria-labelledby="manifesto-title" style={{height: '733px', width: '351px', backgroundColor: '#f4eee6'}}>
           <div className="manifesto-grid" data-reveal="manifesto">
             <div className="manifesto-heading">
               <p className="section-kicker" style={{fontSize: '16px', color: '#b72529'}}>Como eu atuo</p>
@@ -372,7 +372,7 @@ export default function Home() {
           <div className="work-redesign-heading" data-reveal="work-heading">
             <div><p className="section-kicker" style={{ fontSize: '16px' }}>Trabalhos selecionados</p><h2 id="work-title">Projetos que<br /><em>ganharam forma.</em></h2></div>
             <p style={{ fontSize: '16px' }}>Uma seleção de campanhas, trilhas, eventos e materiais criada para comunicar melhor, capacitar equipes e melhorar a execução.</p>
-            <a className="behance-link" href="https://www.behance.net/gabrieldb86" data-umami-event="behance-open" target="_blank" rel="noreferrer" onClick={() => trackPortfolioEvent("portfolio_behance")}>Abrir Behance <ArrowUpRight size={15} /></a>
+            <a className="behance-link" href="https://www.behance.net/gabrieldb86" data-umami-event="behance-open" target="_blank" rel="noreferrer" onClick={() => trackPortfolioEvent("portfolio_behance")} style={{fontSize: '14px'}}>Abrir Behance <ArrowUpRight size={15} /></a>
           </div>
 
           <div className="projects-grid sean-obrien-grid">
