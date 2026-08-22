@@ -2,6 +2,7 @@ import { type KeyboardEvent, useRef, useState } from "react";
 import { ArrowUpRight } from "lucide-react";
 import type { ProjectConfig } from "@/data/siteConfig";
 import { trackPortfolioEvent } from "@/lib/analytics";
+import { ImageGlowFrame } from "@/components/ImageGlowFrame";
 
 type ProjectAccordionGalleryProps = {
   projects: ProjectConfig[];
@@ -51,9 +52,9 @@ export function ProjectAccordionGallery({ projects }: ProjectAccordionGalleryPro
             onKeyDown={(event) => handleKeyDown(index, event)}
             onClick={() => trackPortfolioEvent("portfolio_behance", { project: project.number })}
           >
-            <span className="project-accordion-media" aria-hidden="true">
+            <ImageGlowFrame className="project-accordion-media" aria-hidden="true">
               <img src={project.image} alt="" loading="lazy" fetchPriority="low" decoding="async" />
-            </span>
+            </ImageGlowFrame>
             <span className="project-accordion-overlay" aria-hidden="true" />
             <span className="project-accordion-label">
               <span className="project-accordion-number">{project.number}</span>

@@ -2,8 +2,9 @@
 import { type CSSProperties, type SyntheticEvent } from "react";
 import { ArrowLeft, ArrowUpRight, Linkedin, Mail, MapPin, MessageCircle, Printer } from "lucide-react";
 import { getSiteConfig } from "@/data/siteConfig";
-import { trackPortfolioEvent } from "@/lib/analytics";
 import { portfolioPath } from "@/lib/publicPath";
+import { trackPortfolioEvent } from "@/lib/analytics";
+import { ImageGlowFrame } from "@/components/ImageGlowFrame";
 
 const experience = [
   {
@@ -145,7 +146,7 @@ export default function CV() {
     <div className="site-shell cv-page" style={{ "--primary": siteConfig.brand.accent, "--background": siteConfig.brand.background, "--foreground": siteConfig.brand.foreground } as CSSProperties}>
       <header className="site-header site-header-scrolled">
         <a className="brand-lockup" href={portfolioPath("/")} aria-label="Voltar para o portfólio">
-          <img src={siteConfig.railImage} alt="" className="header-avatar" width="32" height="32" loading="lazy" decoding="async" onError={markBrokenImage} />
+          <ImageGlowFrame className="header-avatar-glow"><img src={siteConfig.railImage} alt="" className="header-avatar" width="32" height="32" loading="lazy" decoding="async" onError={markBrokenImage} /></ImageGlowFrame>
           <span className="brand-name">Gabriel Danino Basilio</span>
         </a>
         <nav className="site-nav cv-nav" aria-label="Navegação principal">
@@ -177,7 +178,7 @@ export default function CV() {
               </div>
             </div>
 	            <div className="cv-portrait-wrap">
-	              <div className="cv-portrait"><img src={profilePhoto} alt="Gabriel Danino Basilio" width="800" height="1000" loading="eager" decoding="async" onError={markBrokenImage} /></div>
+	              <ImageGlowFrame className="cv-portrait"><img src={profilePhoto} alt="Gabriel Danino Basilio" width="800" height="1000" loading="eager" decoding="async" onError={markBrokenImage} /></ImageGlowFrame>
 	              <div className="cv-portrait-caption" style={{ marginBottom: "-24px", marginLeft: '-5px' }}><span style={{marginLeft: '-5px'}}>Gabriel Danino Basilio</span><span style={{marginLeft: '-5px'}}>Coordenador · Conteúdo, Treinamento &amp; Trade</span></div>
             </div>
           </div>
@@ -243,14 +244,14 @@ export default function CV() {
 
         <section className="cv-closing-section">
           <div className="cv-closing-copy"><span>Aberto a conversas profissionais</span><h2>Vamos falar sobre<br /><em>a próxima etapa.</em></h2><a className="contact-direct" href="https://wa.me/5511945747353" target="_blank" rel="noreferrer"><MessageCircle size={16} /> Falar com Gabriel <ArrowUpRight size={15} /></a></div>
-          <img src={profilePhoto} alt="" loading="lazy" onError={markBrokenImage} />
+          <ImageGlowFrame className="cv-closing-media"><img src={profilePhoto} alt="" loading="lazy" onError={markBrokenImage} /></ImageGlowFrame>
         </section>
       </main>
 
       <a className="floating-contact floating-contact-cv" href={portfolioPath("/#contact")}><span>Fale comigo</span><ArrowUpRight size={16} /></a>
 
       <footer className="site-footer">
-        <a className="footer-brand" href={portfolioPath("/")} onClick={scrollTop}><span className="footer-avatar"><img src={siteConfig.railImage} alt="" onError={markBrokenImage} /></span><span>Gabriel Danino Basilio</span></a>
+        <a className="footer-brand" href={portfolioPath("/")} onClick={scrollTop}><ImageGlowFrame className="footer-avatar"><img src={siteConfig.railImage} alt="" onError={markBrokenImage} /></ImageGlowFrame><span>Gabriel Danino Basilio</span></a>
         <div className="footer-socials"><a href="https://www.linkedin.com/in/gabrieldb86" target="_blank" rel="noreferrer" aria-label="LinkedIn"><Linkedin size={18} strokeWidth={1.75} /></a><a href="https://www.behance.net/gabrieldb86" target="_blank" rel="noreferrer" aria-label="Behance"><div style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", width: "18px", height: "18px", border: "1.75px solid currentColor", borderRadius: "3px", fontSize: "10px", fontWeight: 800, lineHeight: 1 }}>Be</div></a><a href="https://wa.me/5511945747353" target="_blank" rel="noreferrer" aria-label="WhatsApp"><MessageCircle size={18} strokeWidth={1.75} /></a></div>
         <span className="footer-credit">CV · Gabriel Danino Basilio</span>
       </footer>

@@ -1496,6 +1496,11 @@
 - [x] Corrigir a percepção de imagens ausentes, ampliando e clareando os painéis inativos da galeria
 - [x] Validar as imagens em desktop/mobile e sincronizar a atualização
 
+## Efeito de borda luminosa nas imagens
+- [x] Mapear todos os contêineres de imagem públicos do portfólio
+- [x] Aplicar borda luminosa editorial no hover e foco, sem sobrepor conteúdo
+- [x] Validar desktop/mobile, movimento reduzido e publicação no GitHub Pages
+
 ## Correção do workflow de GitHub Pages
 - [x] Aplicar a ordem de preparação de pnpm e Node recomendada pelo GitHub
 - [x] Validar localmente o workflow atualizado antes da próxima sincronização

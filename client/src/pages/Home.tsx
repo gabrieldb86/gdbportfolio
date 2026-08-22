@@ -23,6 +23,7 @@ import { formatMetricValue } from "@/lib/animatedMetric";
 import { portfolioPath } from "@/lib/publicPath";
 import { Link, useLocation } from "wouter";
 import { ProjectAccordionGallery } from "@/components/ProjectAccordionGallery";
+import { ImageGlowFrame } from "@/components/ImageGlowFrame";
 
 function scrollToId(id: string, closeMenu?: () => void) {
   closeMenu?.();
@@ -172,7 +173,7 @@ export default function Home() {
       <a className="skip-link" href="#main-content">Pular para o conteúdo principal</a>
       <header className={`site-header site-header-redesign ${scrolled ? "site-header-scrolled" : ""}`}>
         <a className="brand-lockup" href="#top" onClick={(event) => { event.preventDefault(); scrollToId("top"); }}>
-          <img className="header-avatar" src={siteConfig.railImage} alt="" width="34" height="34" decoding="async" onError={markBrokenImage} />
+          <ImageGlowFrame className="header-avatar-glow"><img className="header-avatar" src={siteConfig.railImage} alt="" width="34" height="34" decoding="async" onError={markBrokenImage} /></ImageGlowFrame>
           <span className="brand-name" style={{ fontSize: '17px', textAlign: "left" }}>Gabriel Danino Basilio</span>
         </a>
 
@@ -191,7 +192,7 @@ export default function Home() {
       </header>
 
       <aside className="side-rail" aria-label="Informações rápidas">
-        <div className="rail-image-block"><img src={siteConfig.railImage} alt="Ilustração em preto e branco de Gabriel" width="120" height="400" loading="lazy" decoding="async" onError={markBrokenImage} /></div>
+        <ImageGlowFrame className="rail-image-block"><img src={siteConfig.railImage} alt="Ilustração em preto e branco de Gabriel" width="120" height="400" loading="lazy" decoding="async" onError={markBrokenImage} /></ImageGlowFrame>
         <span className="rail-label">Portfólio · 2026</span>
       </aside>
 
@@ -226,9 +227,9 @@ export default function Home() {
 	              </div>
 	            </div>
           </div>
-          <div className="hero-redesign-portrait hero-redesign-portrait-large" data-reveal="hero-portrait" style={{marginRight: '110px'}}>
+          <ImageGlowFrame className="hero-redesign-portrait hero-redesign-portrait-large" data-reveal="hero-portrait" style={{marginRight: '110px'}}>
             <img src={siteConfig.profilePhoto} alt="Gabriel Danino Basilio" width="800" height="1000" loading="eager" fetchPriority="high" decoding="async" onError={markBrokenImage} style={{ aspectRatio: '0.80', width: '648px' }} />
-          </div>
+          </ImageGlowFrame>
         </section>
 
         <section className="coordination-focus-band" aria-labelledby="coordination-focus-title" style={{backgroundColor: '#b72529'}}>
@@ -372,10 +373,10 @@ export default function Home() {
 
         <section id="about" className="about-section section-pad" aria-labelledby="about-title">
           <div className="about-grid">
-            <div className="about-art-wrap" data-reveal="about-art">
+            <ImageGlowFrame className="about-art-wrap" data-reveal="about-art">
               <img src={siteConfig.trainingImage} alt="Gabriel conduzindo um treinamento diante de uma equipe" loading="lazy" fetchPriority="low" decoding="async" width="1200" height="900" style={{ aspectRatio: '1.33' }} onError={markBrokenImage} />
 	              <span className="about-art-label" style={{marginBottom: '-17px', marginRight: '61px', fontSize: '14px', color: '#b72529'}}>Processo / repertório / intenção</span>
-            </div>
+            </ImageGlowFrame>
             <div className="about-copy" data-reveal="about-copy" style={{marginLeft: '20px'}}>
               <p className="section-kicker" style={{fontSize: '16px', color: '#b72529'}}>Sobre mim</p>
 	              <h2 id="about-title" style={{color: '#1c1b1a'}}>Olá, eu sou<br /><em style={{color: '#b72529'}}>Gabriel.</em></h2>
@@ -397,9 +398,9 @@ export default function Home() {
             <h2 id="statement-title" style={{height: '491px', width: '539px'}}>Vamos colocar<br style={{height: '491px', width: '539px'}} /><em style={{height: '491px', width: '539px'}}>o trabalho em prática.</em></h2>
             <p className="statement-context-box" style={{width: '500px', fontSize: '16px'}}>Conteúdo e treinamento precisam de contexto, método e acompanhamento para apoiar equipes, campo e negócio.</p>
           </div>
-          <div className="statement-media-frame">
+          <ImageGlowFrame className="statement-media-frame">
             <img className="statement-image" src={siteConfig.heroImage} alt="Projeto visual de bonés em preto e vermelho" width="1315" height="643" loading="lazy" decoding="async" onError={markBrokenImage} />
-          </div>
+          </ImageGlowFrame>
         </section>
 
 	        <section id="contact" className="contact-section section-pad" aria-labelledby="contact-title" style={{height: '1368px', width: '355px'}}>
@@ -443,7 +444,7 @@ export default function Home() {
 	      <a className={`floating-contact ${floatingContactHidden ? "floating-contact-hidden" : ""}`} href="#contact" onClick={(event) => { event.preventDefault(); trackPortfolioEvent("cta_fale_comigo"); scrollToId("contact"); }}><span>Fale comigo</span><ArrowUpRight size={16} /></a>
 
       <footer className="site-footer">
-        <a className="footer-brand" href="#top" onClick={(event) => { event.preventDefault(); scrollToId("top"); }}><span className="footer-avatar"><img src={siteConfig.railImage} alt="" onError={markBrokenImage} /></span><span style={{fontSize: '24px'}}>Gabriel Danino Basilio</span></a>
+        <a className="footer-brand" href="#top" onClick={(event) => { event.preventDefault(); scrollToId("top"); }}><ImageGlowFrame className="footer-avatar"><img src={siteConfig.railImage} alt="" onError={markBrokenImage} /></ImageGlowFrame><span style={{fontSize: '24px'}}>Gabriel Danino Basilio</span></a>
         <div className="footer-socials"><a href="https://www.linkedin.com/in/gabrieldb86" target="_blank" rel="noreferrer" aria-label="LinkedIn"><Linkedin size={18} strokeWidth={1.75} /></a><a href="https://www.behance.net/gabrieldb86" target="_blank" rel="noreferrer" aria-label="Behance"><div style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '18px', height: '18px', border: '1.75px solid currentColor', borderRadius: '3px', fontSize: '10px', fontWeight: 800, lineHeight: 1 }}>Be</div></a><a href="https://wa.me/5511945747353" target="_blank" rel="noreferrer" aria-label="WhatsApp"><MessageCircle size={18} strokeWidth={1.75} /></a></div>
         <span className="footer-credit">© 2026 · Foto de <a href="https://unsplash.com/pt-br/@scalzodesign?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noreferrer">Samuel Scalzo</a> na <a href="https://unsplash.com/pt-br/fotografias/uma-foto-em-preto-e-branco-de-um-edificio-xyuYk9oLA8I?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noreferrer">Unsplash</a></span>
       </footer>

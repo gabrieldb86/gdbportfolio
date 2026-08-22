@@ -332,6 +332,28 @@ describe("public portfolio metrics and privacy", () => {
     expect(css).toContain("@media (prefers-reduced-motion: reduce)");
   });
 
+  it("applies the reusable editorial glow effect to every public image surface", () => {
+    const homeSource = readProjectFile("client/src/pages/Home.tsx");
+    const cvSource = readProjectFile("client/src/pages/CV.tsx");
+    const caseSource = readProjectFile("client/src/pages/CaseStudy.tsx");
+    const gallerySource = readProjectFile("client/src/components/ProjectAccordionGallery.tsx");
+    const glowSource = readProjectFile("client/src/components/ImageGlowFrame.tsx");
+    const css = readProjectFile("client/src/index.css");
+
+    expect(homeSource).toContain('from "@/components/ImageGlowFrame"');
+    expect(homeSource).toContain('className="hero-redesign-portrait hero-redesign-portrait-large"');
+    expect(homeSource).toContain('className="about-art-wrap"');
+    expect(homeSource).toContain('className="statement-media-frame"');
+    expect(cvSource).toContain('className="cv-portrait"');
+    expect(cvSource).toContain('className="cv-closing-media"');
+    expect(caseSource).toContain('className="case-hero-art"');
+    expect(gallerySource).toContain('className="project-accordion-media"');
+    expect(glowSource).toContain("onPointerMove");
+    expect(glowSource).toContain("--image-glow-angle");
+    expect(css).toContain(".image-glow-frame::before");
+    expect(css).toContain("@media (prefers-reduced-motion: reduce)");
+  });
+
   it("keeps the client router base aligned with root SSR hydration", () => {
     const clientEntry = readProjectFile("client/src/entry-client.tsx");
     const serverEntry = readProjectFile("client/src/entry-server.tsx");
