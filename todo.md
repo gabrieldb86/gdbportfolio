@@ -1414,3 +1414,8 @@
 - [x] Preservar a paleta #b72529, os fundos e os tamanhos finais apenas nos alvos selecionados
 - [x] Remover duplicidades e efeitos do editor que atingiram elementos-pai não selecionados
 - [x] Validar contraste, desktop e mobile antes de publicar o checkpoint
+
+## Verificação do fundo da chamada final
+- [x] Preservar o fundo #b72529 selecionado no bloco de chamada final
+- [x] Remover somente a propriedade backgroundColor duplicada do editor visual
+- [x] Validar e publicar o checkpoint
