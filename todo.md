@@ -1386,3 +1386,7 @@
 - [x] Comparar o comportamento visto pelo usuário com o site publicado e a prévia local
 - [x] Identificar a regra efetiva que mantém o layout rígido na faixa de janela informada
 - [x] Aplicar e confirmar uma correção mínima diretamente na versão publicada
+
+## Confirmação de sincronização no GitHub
+- [x] Verificar que o checkpoint mais recente está presente no repositório remoto
+- [x] Confirmar que o diretório de trabalho não possui alterações locais pendentes
