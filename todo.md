@@ -1522,7 +1522,7 @@
 ## Restauração da grade de métricas no mobile
 - [x] Diagnosticar o corte e o deslocamento dos cards de Experiência em números
 - [x] Restaurar a grade de métricas sem alterar as demais seções
-- [ ] Validar em mobile, sincronizar no GitHub e salvar checkpoint
+- [x] Validar em mobile, sincronizar no GitHub e salvar checkpoint
 
 ## Correção do workflow de GitHub Pages
 - [x] Aplicar a ordem de preparação de pnpm e Node recomendada pelo GitHub
