@@ -1356,8 +1356,3 @@
 - [x] Substituir a política de privacidade pelo conteúdo corrigido fornecido
 - [x] Alinhar formulário e confirmação para informar que não há captação ou armazenamento de leads
 - [x] Validar rotas, textos, metadados e experiência responsiva antes da publicação
-
-## Verificação da edição manual em Focos de coordenação
-- [x] Confirmar o título branco e a ênfase preta conforme o elemento selecionado no editor visual
-- [x] Remover apenas propriedades `color` duplicadas pelo editor visual
-- [x] Validar desktop e mobile e publicar um checkpoint
