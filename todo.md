@@ -1547,7 +1547,7 @@
 ## Projetos Behance em destaque
 - [x] Mapear títulos, anos, categorias e capas dos quatro links indicados
 - [x] Atualizar o bloco Projetos que ganharam forma com a nova seleção
-- [ ] Validar nos viewports, sincronizar no GitHub e salvar checkpoint
+- [x] Validar nos viewports, sincronizar no GitHub e salvar checkpoint
 
 ## Correção do workflow de GitHub Pages
 - [x] Aplicar a ordem de preparação de pnpm e Node recomendada pelo GitHub
