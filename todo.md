@@ -1376,3 +1376,8 @@
 - [x] Aplicar vermelho apenas ao trecho selecionado “quando chega ao campo.”
 - [x] Manter o restante do título e os demais elementos inalterados
 - [x] Validar a edição pontual e publicar um checkpoint
+
+## Estabilização da responsividade desktop
+- [x] Comparar a referência fornecida com o reflow atual ao reduzir a janela desktop
+- [x] Remover travas de largura, texto e imagem que impedem a redução proporcional acima do mobile
+- [x] Validar em desktop amplo, intermediário, janela mínima e mobile sem alterar cores ou a barra lateral

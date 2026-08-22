@@ -424,14 +424,15 @@ describe("public portfolio metrics and privacy", () => {
     expect(css).toContain("grid-template-columns: minmax(0, 1fr) !important;");
   });
 
-  it("preserves an accessible desktop canvas below the minimum desktop viewport width", () => {
+  it("keeps desktop content in continuous reflow instead of forcing a wider canvas", () => {
     const css = readProjectFile("client/src/index.css");
 
-    expect(css).toContain("/* Canvas desktop acessível");
-    expect(css).toContain("min-width: 1100px;");
-    expect(css).toContain("overflow-x: auto;");
+    expect(css).toContain("/* Reflow contínuo do desktop estreito");
+    expect(css).toContain("min-width: 0 !important;");
+    expect(css).toContain("overflow-x: hidden !important;");
     expect(css).toContain(".home-revision .side-rail");
-    expect(css).toContain("grid-template-columns: minmax(0, 1fr) minmax(320px, .72fr) !important;");
+    expect(css).toContain("grid-template-columns: minmax(0, 1.1fr) minmax(230px, .82fr) !important;");
+    expect(css).toContain("grid-template-columns: repeat(2, minmax(0, 1fr)) !important;");
   });
 
   it("provides an editorial and recoverable not-found experience", () => {
