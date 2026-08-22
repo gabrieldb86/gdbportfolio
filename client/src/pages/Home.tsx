@@ -355,15 +355,15 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="manifesto-section section-pad" aria-labelledby="manifesto-title" style={{height: '733px', width: '351px'}}>
+        <section className="manifesto-section section-pad" aria-labelledby="manifesto-title" style={{height: '733px', width: '351px', backgroundColor: '#ffffff'}}>
           <div className="manifesto-grid" data-reveal="manifesto">
             <div className="manifesto-heading">
-              <p className="section-kicker" style={{fontSize: '16px'}}>Como eu atuo</p>
-              <h2 id="manifesto-title">Estratégia só funciona <span>quando chega ao campo.</span></h2>
+              <p className="section-kicker" style={{fontSize: '16px', color: '#000000'}}>Como eu atuo</p>
+              <h2 id="manifesto-title" style={{color: '#000000'}}>Estratégia só funciona <span style={{color: '#000000'}}>quando chega ao campo.</span></h2>
             </div>
             <div className="manifesto-aside" style={{marginLeft: '-145px'}}>
-              <p style={{fontSize: '20px'}}>Porque conteúdo e treinamento só funcionam quando encontram contexto, método e um próximo passo claro — para a equipe, para o campo e para o negócio.</p>
-              <a className="text-link" href="#about" onClick={(event) => { event.preventDefault(); scrollToId("about"); }} style={{fontSize: '14px', height: '21px', width: '276px'}}>Conheça meu jeito de trabalhar <ArrowUpRight size={15} style={{fontSize: '14px', height: '21px', width: '276px'}} /></a>
+              <p style={{fontSize: '20px', color: '#000000'}}>Porque conteúdo e treinamento só funcionam quando encontram contexto, método e um próximo passo claro — para a equipe, para o campo e para o negócio.</p>
+              <a className="text-link" href="#about" onClick={(event) => { event.preventDefault(); scrollToId("about"); }} style={{fontSize: '14px', height: '21px', width: '276px', color: '#ff2600'}}>Conheça meu jeito de trabalhar <ArrowUpRight size={15} style={{fontSize: '14px', height: '21px', width: '276px', color: '#ff2600'}} /></a>
             </div>
           </div>
         </section>

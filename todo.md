@@ -1366,3 +1366,8 @@
 - [x] Preservar a ênfase selecionada em preto sem alterar o título principal
 - [x] Remover somente propriedades de cor duplicadas do editor visual
 - [x] Validar o resultado e publicar um checkpoint
+
+## Verificação da edição manual em Como eu atuo
+- [x] Preservar fundo branco, textos pretos e link vermelho conforme os valores finais do editor
+- [x] Consolidar atributos e propriedades de cor duplicados sem alterar dimensões manuais
+- [x] Validar contraste e responsividade antes de publicar o checkpoint

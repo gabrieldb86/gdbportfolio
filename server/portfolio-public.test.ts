@@ -329,16 +329,26 @@ describe("public portfolio metrics and privacy", () => {
 
     expect(homeSource).toContain("brand-name\" style={{ fontSize: '17px', textAlign: \"left\" }}");
     expect(homeSource).toContain("id=\"coordination-focus-title\" style={{height: '140px', width: '272px', color: '#ffffff'}}");
-    expect(homeSource).toContain("style={{fontSize: '14px', height: '21px', width: '276px'}}");
+    expect(homeSource).toContain("style={{fontSize: '14px', height: '21px', width: '276px', color: '#ff2600'}}");
     expect(homeSource).toContain("id=\"work\" className=\"work-section work-redesign section-pad\" aria-labelledby=\"work-title\" style={{height: '5139px', width: '358px'}}");
     expect(homeSource).toContain("about-art-label\" style={{marginBottom: '-17px', marginRight: '9px'}}");
     expect(homeSource).toContain("fontSize: '55px'}}>coordenação?</em>");
   });
 
+  it("preserves the manual white manifesto surface with black copy and red link", () => {
+    const homeSource = readProjectFile("client/src/pages/Home.tsx");
+
+    expect(homeSource).toContain("backgroundColor: '#ffffff'");
+    expect(homeSource).toContain("id=\"manifesto-title\" style={{color: '#000000'}}");
+    expect(homeSource).toContain("<span style={{color: '#000000'}}>quando chega ao campo.</span>");
+    expect(homeSource).toContain("fontSize: '20px', color: '#000000'");
+    expect(homeSource).toContain("width: '276px', color: '#ff2600'");
+  });
+
   it("preserves the manual dimensions of the manifesto section", () => {
     const homeSource = readProjectFile("client/src/pages/Home.tsx");
 
-    expect(homeSource).toContain("manifesto-section section-pad\" aria-labelledby=\"manifesto-title\" style={{height: '733px', width: '351px'}}");
+    expect(homeSource).toContain("manifesto-section section-pad\" aria-labelledby=\"manifesto-title\" style={{height: '733px', width: '351px', backgroundColor: '#ffffff'}}");
   });
 
   it("preserves the manual white focus title, black emphasis and note spacing", () => {
