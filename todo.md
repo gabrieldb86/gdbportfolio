@@ -1390,3 +1390,7 @@
 ## Confirmação de sincronização no GitHub
 - [x] Verificar que o checkpoint mais recente está presente no repositório remoto
 - [x] Confirmar que o diretório de trabalho não possui alterações locais pendentes
+
+## Exportação portátil do projeto
+- [x] Gerar um ZIP limpo com código, documentação e configurações necessárias
+- [x] Entregar o pacote e as instruções de continuidade pelo GitHub
