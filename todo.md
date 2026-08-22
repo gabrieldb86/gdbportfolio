@@ -1539,6 +1539,11 @@
 - [x] Tornar os quatro projetos cartões estáticos, iguais e sem animação no mobile
 - [x] Validar nos viewports, sincronizar no GitHub e salvar checkpoint
 
+## Imagens estáticas no website
+- [x] Mapear e desativar brilho, ampliação e transições no hover das imagens desktop
+- [x] Preservar as imagens e o comportamento mobile aprovados
+- [ ] Validar nos viewports, sincronizar no GitHub e salvar checkpoint
+
 ## Correção do workflow de GitHub Pages
 - [x] Aplicar a ordem de preparação de pnpm e Node recomendada pelo GitHub
 - [x] Validar localmente o workflow atualizado antes da próxima sincronização

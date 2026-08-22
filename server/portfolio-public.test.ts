@@ -387,6 +387,19 @@ describe("public portfolio metrics and privacy", () => {
     expect(css).toContain("@media (prefers-reduced-motion: reduce)");
   });
 
+  it("keeps all image surfaces static on hover in the website while retaining mobile behavior", () => {
+    const css = readProjectFile("client/src/index.css");
+
+    expect(css).toContain("/* Website estático: fotos não reagem ao mouse");
+    expect(css).toContain("@media (hover: hover)");
+    expect(css).toContain(".image-glow-frame:hover::before");
+    expect(css).toContain(".hero-redesign-portrait:hover img");
+    expect(css).toContain(".project-card:hover .project-image");
+    expect(css).toContain(".home-revision .project-accordion-panel.is-active");
+    expect(css).toContain("flex: 1 1 0 !important;");
+    expect(css).toContain("transition: none !important;");
+  });
+
   it("keeps the client router base aligned with root SSR hydration", () => {
     const clientEntry = readProjectFile("client/src/entry-client.tsx");
     const serverEntry = readProjectFile("client/src/entry-server.tsx");

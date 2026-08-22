@@ -21,3 +21,9 @@ As verificações adicionais em **742px** e **900px** confirmaram que os ajustes
 Em **375px**, a seção clara passou a ocupar integralmente a largura disponível, eliminando a faixa escura lateral. Os quatro projetos agora usam cartões com mesma altura, tratamento visual uniforme e estado estático no mobile; a interação de expansão continua restrita às faixas maiores. A verificação em **742px** confirmou que o comportamento intermediário não sofreu regressão.
 
 As verificações em **900px** e **1280px** confirmaram que o layout editorial e a animação da galeria continuam preservados fora do breakpoint mobile.
+
+## Fotos estáticas no website
+
+Em **1280px**, foram desativados o brilho, a ampliação, os deslocamentos e a expansão associados ao cursor nas superfícies de imagem. Em **375px**, a composição mobile permanece inalterada, incluindo os cartões estáticos e o fundo integral já aprovados.
+
+As verificações em **742px** e **900px** confirmaram que a remoção do hover não introduziu cortes, deslocamentos ou alterações no reflow intermediário.

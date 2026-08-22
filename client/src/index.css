@@ -4979,3 +4979,63 @@ a.proof-link, a.behance-link, a.text-link, .service-detail a {
     transition: none !important;
   }
 }
+
+/* Website estático: fotos não reagem ao mouse; foco de teclado continua disponível pelos estilos de acessibilidade. */
+@media (hover: hover) {
+  .image-glow-frame::before,
+  .image-glow-frame::after,
+  .image-glow-frame:hover::before,
+  .image-glow-frame:hover::after {
+    opacity: 0 !important;
+    transition: none !important;
+  }
+
+  .hero-art-surface img,
+  .hero-art:hover .hero-art-surface img,
+  .hero-redesign-portrait img,
+  .hero-redesign-portrait:hover img,
+  .project-image,
+  .project-card:hover .project-image {
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .hero-art:hover .hero-work-plate {
+    transform: rotate(2.7deg);
+    transition: none;
+  }
+
+  .project-card:hover .project-arrow {
+    opacity: 0;
+    transform: translateY(8px);
+    transition: none;
+  }
+
+  .home-revision .project-accordion-panel,
+  .home-revision .project-accordion-panel:nth-child(even),
+  .home-revision .project-accordion-panel.is-active {
+    flex: 1 1 0 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .home-revision .project-accordion-media img,
+  .home-revision .project-accordion-panel.is-active .project-accordion-media img {
+    filter: grayscale(.9) saturate(.82) brightness(.88) !important;
+    transform: scale(1.16) !important;
+    transition: none !important;
+  }
+
+  .home-revision .project-accordion-overlay,
+  .home-revision .project-accordion-panel.is-active .project-accordion-overlay {
+    background: linear-gradient(180deg, rgba(27, 26, 25, .03) 26%, rgba(27, 26, 25, .64) 100%);
+    transition: none !important;
+  }
+
+  .home-revision .project-accordion-label,
+  .home-revision .project-accordion-panel.is-active .project-accordion-label {
+    opacity: .58;
+    transform: translateX(-14px);
+    transition: none !important;
+  }
+}
