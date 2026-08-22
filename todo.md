@@ -1478,8 +1478,13 @@
 - [x] Validar `https://gabrieldb86.github.io/gdbportfolio/` após a publicação
 
 ## Sincronização contínua com GitHub
-- [ ] Registrar `gabrieldb86/gdbportfolio` como destino obrigatório para alterações futuras
-- [ ] Confirmar a referência remota e o fluxo de publicação automática pelo GitHub Pages
+- [x] Registrar `gabrieldb86/gdbportfolio` como destino obrigatório para alterações futuras
+- [x] Confirmar a referência remota e o fluxo de publicação automática pelo GitHub Pages
+
+## Correção ativa de hidratação SSR
+- [x] Identificar o atributo que diverge entre o HTML SSR e o cliente na Home
+- [x] Corrigir a base do roteador sem alterar o visual ou os valores manuais
+- [x] Validar ausência do aviso e sincronizar a correção com o GitHub
 
 ## Correção do workflow de GitHub Pages
 - [x] Aplicar a ordem de preparação de pnpm e Node recomendada pelo GitHub

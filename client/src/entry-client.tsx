@@ -60,7 +60,9 @@ const dehydratedState = rawState
   ? (superjson.deserialize(rawState as Parameters<typeof superjson.deserialize>[0]) as DehydratedState)
   : undefined;
 const root = document.getElementById("root");
-const routerBase = import.meta.env.BASE_URL.replace(/\/$/, "") || "/";
+const routerBase = import.meta.env.BASE_URL === "/"
+  ? undefined
+  : import.meta.env.BASE_URL.replace(/\/$/, "");
 
 if (root) {
   hydrateRoot(

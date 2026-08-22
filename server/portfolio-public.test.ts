@@ -312,6 +312,17 @@ describe("public portfolio metrics and privacy", () => {
     expect(staticBuild).toContain("https://gabrieldb86.github.io/gdbportfolio");
   });
 
+  it("keeps the client router base aligned with root SSR hydration", () => {
+    const clientEntry = readProjectFile("client/src/entry-client.tsx");
+    const serverEntry = readProjectFile("client/src/entry-server.tsx");
+
+    expect(clientEntry).toContain('const routerBase = import.meta.env.BASE_URL === "/"');
+    expect(clientEntry).toContain("? undefined");
+    expect(clientEntry).toContain("<Router base={routerBase}>");
+    expect(clientEntry).not.toContain('replace(/\\/$/, "") || "/"');
+    expect(serverEntry).toContain("<Router ssrPath={ssrPath} ssrSearch={ssrSearch}>");
+  });
+
   it("places the WhatsApp CTA in the first fold of the hero", () => {
     const homeSource = readProjectFile("client/src/pages/Home.tsx");
     const sourceLines = homeSource.split("\n");
