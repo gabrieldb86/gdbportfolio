@@ -1480,3 +1480,5 @@
 ## Correção do workflow de GitHub Pages
 - [x] Aplicar a ordem de preparação de pnpm e Node recomendada pelo GitHub
 - [x] Validar localmente o workflow atualizado antes da próxima sincronização
+- [ ] Remover a versão duplicada de pnpm que bloqueou a execução do GitHub Actions
+- [ ] Reexecutar o workflow remoto e confirmar a geração do artefato do Pages
