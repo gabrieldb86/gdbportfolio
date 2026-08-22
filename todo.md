@@ -1527,7 +1527,7 @@
 ## Verificação de edições manuais dos links de métricas
 - [x] Conferir os valores finais do contêiner e dos dois links de CV
 - [x] Consolidar somente propriedades inline duplicadas
-- [ ] Validar desktop/mobile, sincronizar no GitHub e salvar checkpoint
+- [x] Validar desktop/mobile, sincronizar no GitHub e salvar checkpoint
 
 ## Correção do workflow de GitHub Pages
 - [x] Aplicar a ordem de preparação de pnpm e Node recomendada pelo GitHub
