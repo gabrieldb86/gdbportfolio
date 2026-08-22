@@ -1562,7 +1562,7 @@
 ## Edições manuais exclusivas do website
 - [x] Consolidar altura de Sobre, texto final e título de Contato apenas no desktop
 - [x] Preservar integralmente as regras e a composição mobile
-- [ ] Validar website e mobile, sincronizar no GitHub e salvar checkpoint
+- [x] Validar website e mobile, sincronizar no GitHub e salvar checkpoint
 
 ## Correção do workflow de GitHub Pages
 - [x] Aplicar a ordem de preparação de pnpm e Node recomendada pelo GitHub
