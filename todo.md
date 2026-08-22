@@ -1429,3 +1429,8 @@
 - [x] Preservar o peso 600 no texto do manifesto e o texto de Trabalhos em 18px/#f4eee6
 - [x] Remover somente a propriedade de tamanho duplicada do editor visual
 - [x] Validar contraste, desktop e mobile antes de publicar o checkpoint
+
+## Verificação de hero, Focos e indicadores
+- [x] Preservar as medidas finais do hero e do texto de Focos sem propriedades duplicadas
+- [x] Consolidar os valores manuais de margens, tamanhos, fonte, cores e texto dos indicadores
+- [x] Remover exclusivamente o bloco marcado para exclusão e validar desktop/mobile antes do checkpoint

@@ -226,7 +226,7 @@ export default function Home() {
       </aside>
 
       <main id="main-content" tabIndex={-1}>
-        <section className="hero-section hero-redesign" style={{height: '830px'}}>
+        <section className="hero-section hero-redesign" style={{height: '870px'}}>
           <div className="hero-redesign-panel" data-reveal="hero-copy" style={{height: '583px', marginLeft: '-315px', marginRight: '377px', width: '1061px'}}>
             <div className="hero-redesign-copy">
               <p className="eyebrow" style={{fontSize: '14px', width: '682px'}}>{siteConfig.hero.eyebrow}</p>
@@ -266,7 +266,7 @@ export default function Home() {
             <div className="coordination-focus-label" data-reveal="focus-label" style={{width: '933px'}}>
               <p className="section-kicker" style={{fontSize: '16px'}}>Focos de coordenação</p>
               <h2 id="coordination-focus-title" style={{height: '140px', width: '272px', color: '#f4eee6'}}>Três frentes para levar <em style={{height: '140px', width: '272px', color: '#1c1b1a'}}>método à prática.</em></h2>
-              <p className="coordination-focus-note" style={{fontSize: '20px', width: '879px', marginTop: '50px'}}>Conteúdo, treinamento e campo organizados para apoiar decisões, capacitar equipes e acompanhar a execução.</p>
+              <p className="coordination-focus-note" style={{fontSize: '20px', width: '879px', marginTop: '51px'}}>Conteúdo, treinamento e campo organizados para apoiar decisões, capacitar equipes e acompanhar a execução.</p>
             </div>
             <div className="coordination-focus-grid">
               <article className="coordination-focus-item" data-reveal="focus-item" data-reveal-delay="80" style={{marginLeft: '190px'}}>
@@ -320,33 +320,28 @@ export default function Home() {
               <p className="recruiter-proof-desc" style={{fontSize: '16px'}}>Dados da trajetória entre facilitação na Apple, treinamento, conteúdo e gestão de campo na SPOT.</p>
             </div>
             <div className="recruiter-proof-strip" data-reveal="proof-strip" aria-label="Indicadores profissionais">
-              <div className="proof-metric" style={{ paddingBottom: '30px', paddingLeft: '39px', paddingRight: '30px', paddingTop: '30px' }}>
-                <Briefcase className="proof-metric-icon" size={22} strokeWidth={1.3} aria-hidden="true" />
+              <div className="proof-metric" style={{ paddingBottom: '30px', paddingLeft: '39px', paddingRight: '30px', paddingTop: '30px', marginRight: '300px' }}>
+                <Briefcase className="proof-metric-icon" size={22} strokeWidth={1.3} aria-hidden="true" style={{marginTop: '-80px'}} />
                 <StaticMetric value={17} suffix="+" />
-                <span className="proof-metric-label">Anos de experiência</span>
+                <span className="proof-metric-label" style={{fontSize: '12px'}}>Anos de experiência</span>
               </div>
-              <div className="proof-metric">
-                <Users className="proof-metric-icon" size={22} strokeWidth={1.3} aria-hidden="true" />
+              <div className="proof-metric" style={{marginLeft: '-330px'}}>
+                <Users className="proof-metric-icon" size={22} strokeWidth={1.3} aria-hidden="true" style={{marginTop: '-47px'}} />
                 <StaticMetric value={114} suffix="K+" />
-                <span className="proof-metric-label">Pessoas capacitadas<br />ao longo da carreira</span>
+                <span className="proof-metric-label" style={{fontSize: '12px'}}>Pessoas capacitadas<br style={{fontSize: '12px'}} />ao longo da carreira</span>
               </div>
               <div className="proof-metric">
-                <Activity className="proof-metric-icon" size={22} strokeWidth={1.3} aria-hidden="true" />
+                <Activity className="proof-metric-icon" size={22} strokeWidth={1.3} aria-hidden="true" style={{marginTop: '-49px'}} />
                 <StaticMetric value={130} suffix="+" />
-                <span className="proof-metric-label">Promotores monitorados<br />(operação de campo)</span>
+                <span className="proof-metric-label" style={{fontSize: '12px'}}>Promotores monitorados<br style={{fontSize: '12px'}} />(operação de campo)</span>
               </div>
-              <div className="proof-metric proof-metric-narrative">
-                <Layers className="proof-metric-icon" size={22} strokeWidth={1.3} aria-hidden="true" />
-                <span className="proof-metric-label">Campanhas de incentivo</span>
-                <span className="proof-tagline">Cystex, Enavo Gotas, Culturelle, Duekal e Copa</span>
-              </div>
-              <div className="proof-metric">
-                <Star className="proof-metric-icon" size={22} strokeWidth={1.3} aria-hidden="true" />
+              <div className="proof-metric" style={{marginRight: '-120px', marginTop: '-12px'}}>
+                <Star className="proof-metric-icon" size={22} strokeWidth={1.3} aria-hidden="true" style={{marginTop: '36px'}} />
                 <StaticMetric value={8.3} decimals={1} />
-                <span className="proof-metric-label">Média de avaliação</span>
-                <span className="proof-tagline">Conteúdo &amp; Treinamento · Trade Marketing · T&amp;D de Pessoas</span>
+                <span className="proof-metric-label" style={{fontSize: '14px'}}>Média de avaliação</span>
+                <span className="proof-tagline" style={{fontSize: '12px', color: '#fff9f2'}}>Conteúdo &amp; Treinamento · Trade Marketing · T&amp;D de Pessoas</span>
               </div>
-              <div className="proof-actions">
+              <div className="proof-actions" style={{marginRight: '20px', marginLeft: '135px'}}>
                 <FileText className="proof-action-icon" size={20} strokeWidth={1.3} aria-hidden="true" />
                 <Link href="/cv" className="proof-link" style={{fontSize: '14px'}}><span style={{fontSize: '14px'}}>Abrir trajetória</span><ArrowUpRight size={16} aria-hidden="true" style={{fontSize: '14px'}} /></Link>
                 <Link href="/cv" className="proof-link proof-link-alt" style={{fontSize: '14px'}}><span style={{fontSize: '14px'}}>Ver CV</span><ArrowUpRight size={16} aria-hidden="true" style={{fontSize: '14px'}} /></Link>

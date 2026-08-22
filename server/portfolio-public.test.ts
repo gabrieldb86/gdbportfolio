@@ -275,7 +275,7 @@ describe("public portfolio metrics and privacy", () => {
     const homeSource = readProjectFile("client/src/pages/Home.tsx");
 
     expect(homeSource).toContain("coordination-focus-label\" data-reveal=\"focus-label\" style={{width: '933px'}}");
-    expect(homeSource).toContain("coordination-focus-note\" style={{fontSize: '20px', width: '879px', marginTop: '50px'}}");
+    expect(homeSource).toContain("coordination-focus-note\" style={{fontSize: '20px', width: '879px', marginTop: '51px'}}");
     expect(homeSource).toContain("data-reveal-delay=\"80\" style={{marginLeft: '190px'}}");
     expect(homeSource).toContain("data-reveal-delay=\"140\" style={{marginLeft: '190px'}}");
     expect(homeSource).toContain("coordination-focus-item-body\" style={{marginTop: '10px'}}");
@@ -329,6 +329,7 @@ describe("public portfolio metrics and privacy", () => {
   it("preserves the final manual values across the edited public sections", () => {
     const homeSource = readProjectFile("client/src/pages/Home.tsx");
 
+    expect(homeSource).toContain("hero-section hero-redesign\" style={{height: '870px'}}");
     expect(homeSource).toContain("brand-name\" style={{ fontSize: '17px', textAlign: \"left\" }}");
     expect(homeSource).toContain("id=\"coordination-focus-title\" style={{height: '140px', width: '272px', color: '#f4eee6'}}");
     expect(homeSource).toContain("style={{fontSize: '14px', height: '21px', width: '276px', color: '#b72529'}}");
@@ -363,9 +364,24 @@ describe("public portfolio metrics and privacy", () => {
 
     expect(homeSource).toContain("id=\"coordination-focus-title\" style={{height: '140px', width: '272px', color: '#f4eee6'}}");
     expect(homeSource).toContain("<em style={{height: '140px', width: '272px', color: '#1c1b1a'}}>método à prática.</em>");
-    expect(homeSource).toContain("coordination-focus-note\" style={{fontSize: '20px', width: '879px', marginTop: '50px'}}");
+    expect(homeSource).toContain("coordination-focus-note\" style={{fontSize: '20px', width: '879px', marginTop: '51px'}}");
     expect(homeSource).toContain("className=\"behance-link\" href=\"https://www.behance.net/gabrieldb86\" data-umami-event=\"behance-open\" target=\"_blank\" rel=\"noreferrer\" onClick={() => trackPortfolioEvent(\"portfolio_behance\")} style={{fontSize: '14px'}}");
     expect(css).toContain(".home-revision .coordination-focus-label h2 em {\n    color: #000000 !important;");
+  });
+
+  it("preserves the manual recruiter indicators and removes only the marked narrative metric", () => {
+    const homeSource = readProjectFile("client/src/pages/Home.tsx");
+
+    expect(homeSource).toContain("paddingTop: '30px', marginRight: '300px'");
+    expect(homeSource).toContain("style={{marginLeft: '-330px'}}");
+    expect(homeSource).toContain("style={{marginTop: '-80px'}}");
+    expect(homeSource).toContain("style={{marginTop: '-47px'}}");
+    expect(homeSource).toContain("style={{marginTop: '-49px'}}");
+    expect(homeSource).toContain("proof-metric\" style={{marginRight: '-120px', marginTop: '-12px'}}");
+    expect(homeSource).toContain("proof-tagline\" style={{fontSize: '12px', color: '#fff9f2'}}");
+    expect(homeSource).toContain("proof-actions\" style={{marginRight: '20px', marginLeft: '135px'}}");
+    expect(homeSource).not.toContain("proof-metric-narrative");
+    expect(homeSource).not.toContain("mais de 20 campanhas de incentivo implementadas");
   });
 
   it("allows the manual brand type size to override the header default", () => {
