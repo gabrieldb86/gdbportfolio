@@ -359,7 +359,7 @@ export default function Home() {
           <div className="manifesto-grid" data-reveal="manifesto">
             <div className="manifesto-heading">
               <p className="section-kicker" style={{fontSize: '16px', color: '#000000'}}>Como eu atuo</p>
-              <h2 id="manifesto-title" style={{color: '#000000'}}>Estratégia só funciona <span style={{color: '#000000'}}>quando chega ao campo.</span></h2>
+              <h2 id="manifesto-title" style={{color: '#000000'}}>Estratégia só funciona <span style={{color: '#ff2600'}}>quando chega ao campo.</span></h2>
             </div>
             <div className="manifesto-aside" style={{marginLeft: '-145px'}}>
               <p style={{fontSize: '20px', color: '#000000'}}>Porque conteúdo e treinamento só funcionam quando encontram contexto, método e um próximo passo claro — para a equipe, para o campo e para o negócio.</p>

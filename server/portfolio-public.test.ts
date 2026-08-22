@@ -340,7 +340,7 @@ describe("public portfolio metrics and privacy", () => {
 
     expect(homeSource).toContain("backgroundColor: '#ffffff'");
     expect(homeSource).toContain("id=\"manifesto-title\" style={{color: '#000000'}}");
-    expect(homeSource).toContain("<span style={{color: '#000000'}}>quando chega ao campo.</span>");
+    expect(homeSource).toContain("<span style={{color: '#ff2600'}}>quando chega ao campo.</span>");
     expect(homeSource).toContain("fontSize: '20px', color: '#000000'");
     expect(homeSource).toContain("width: '276px', color: '#ff2600'");
   });

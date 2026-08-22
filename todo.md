@@ -1371,3 +1371,8 @@
 - [x] Preservar fundo branco, textos pretos e link vermelho conforme os valores finais do editor
 - [x] Consolidar atributos e propriedades de cor duplicados sem alterar dimensões manuais
 - [x] Validar contraste e responsividade antes de publicar o checkpoint
+
+## Correção de escopo em Como eu atuo
+- [x] Aplicar vermelho apenas ao trecho selecionado “quando chega ao campo.”
+- [x] Manter o restante do título e os demais elementos inalterados
+- [x] Validar a edição pontual e publicar um checkpoint
