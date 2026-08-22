@@ -15,6 +15,7 @@
 | `pnpm test` | Executa testes unitários e de regras públicas. |
 | `pnpm run check` | Executa a checagem TypeScript. |
 | `pnpm build` | Gera os bundles de cliente, SSR e servidor. |
+| `pnpm run build:github-pages` | Gera a versão estática usada no GitHub Pages. |
 | `pnpm start` | Inicia o build de produção. |
 
 ## Checklist antes de publicar
@@ -29,9 +30,11 @@ Também conferir a Home em desktop e mobile, os links de WhatsApp, a rota `/cv`,
 
 ## GitHub
 
-O repositório de referência é [`gabrieldb86/gabriel-portfolio`](https://github.com/gabrieldb86/gabriel-portfolio), branch `main`.
+O repositório principal e obrigatório para alterações futuras é [`gabrieldb86/gdbportfolio`](https://github.com/gabrieldb86/gdbportfolio), branch `main`. O portfólio independente é publicado em [https://gabrieldb86.github.io/gdbportfolio/](https://gabrieldb86.github.io/gdbportfolio/).
 
-O fluxo adotado é: concluir uma mudança coerente, validar, criar um checkpoint/commit descritivo e sincronizar com a branch `main`. Para experimentos maiores, criar uma branch antes de alterar o visual ou a arquitetura.
+O fluxo adotado é: concluir uma mudança coerente, validar, criar um checkpoint/commit descritivo e sincronizar com a branch `main` de `gabrieldb86/gdbportfolio`. O workflow `.github/workflows/deploy-github-pages.yml` publica a versão estática a cada envio à branch `main`. Para experimentos maiores, criar uma branch antes de alterar o visual ou a arquitetura.
+
+> **Regra de continuidade:** toda alteração aprovada deve ser sincronizada em `gabrieldb86/gdbportfolio`; não tratar outros repositórios como destino de publicação do portfólio.
 
 Exemplo de fluxo em um ambiente Git comum:
 
@@ -54,4 +57,3 @@ git push -u origin ajuste-descricao-case
 | `JWT_SECRET` | Assinatura de sessão; segredo obrigatório em produção. |
 
 Não copie valores reais dessas variáveis para documentação, commits, issues ou mensagens públicas.
-

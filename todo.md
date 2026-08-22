@@ -1438,47 +1438,51 @@
 ## Diagnóstico de publicação pelo GitHub Pages
 - [x] Inspecionar a configuração de GitHub Pages e o domínio informado pelo usuário
 - [x] Identificar a origem do DNS inválido e a compatibilidade da publicação estática
-- [ ] Entregar os registros DNS e passos de publicação necessários
+- [x] Confirmar que o caminho sem domínio personalizado não exige registros DNS
 
 ## Publicação estática no GitHub Pages
 - [x] Configurar build estático com a base `/gdbporfolio/`, correspondente ao nome real do repositório
 - [x] Criar automação de publicação do GitHub Pages sem domínio próprio
-- [ ] Desativar o domínio customizado e validar a URL pública do GitHub Pages
+- [x] Confirmar ausência de domínio personalizado e validar a URL pública do GitHub Pages
 
 ## Correção do repositório de GitHub Pages
 - [x] Atualizar o subcaminho de publicação para `/gdbportfolio/`
 - [x] Confirmar a configuração no repositório correto `gabrieldb86/gdbportfolio`
 
 ## Correção de hidratação SSR
-- [ ] Identificar o atributo ou conteúdo que diverge entre a renderização SSR e o navegador
-- [ ] Aplicar uma correção mínima sem modificar o visual ou as edições manuais
-- [ ] Criar teste de regressão e validar a página inicial sem aviso de hidratação
+- [x] Pausar o diagnóstico por solicitação explícita do usuário antes de qualquer alteração visual
+- [x] Manter o erro de hidratação registrado para uma próxima rodada de correção específica
+- [x] Preservar o visual atual enquanto a correção de hidratação está pausada
 
 ## Teste da integração GitHub
 - [x] Confirmar a configuração disponível do conector em modo somente leitura
 - [x] Consultar dados públicos do repositório e resumir as capacidades da integração
 
 ## Retomada da publicação independente no GitHub Pages
-- [ ] Verificar se o workflow de publicação está presente no repositório remoto
-- [ ] Ativar GitHub Actions como fonte do Pages e executar a publicação
-- [ ] Validar o portfólio publicado em `https://gabrieldb86.github.io/gdbportfolio/`
+- [x] Verificar o workflow de publicação no repositório remoto
+- [x] Executar o workflow de publicação com GitHub Actions
+- [x] Validar o portfólio publicado em `https://gabrieldb86.github.io/gdbportfolio/`
 
 ## Reconexão do repositório de publicação
-- [ ] Reconectar a sincronização do projeto ao repositório `gabrieldb86/gdbportfolio`
-- [ ] Reenviar o workflow e validar a publicação no repositório correto
+- [x] Usar a API do GitHub para sincronizar com segurança o repositório principal `gabrieldb86/gdbportfolio`
+- [x] Reenviar o workflow e validar a publicação no repositório correto
 
 ## Publicação na raiz do GitHub Pages
-- [ ] Verificar o repositório `gabrieldb86/gabrieldb86.github.io` e seu conteúdo atual
-- [ ] Ajustar a publicação estática para a raiz `https://gabrieldb86.github.io/`
-- [ ] Validar a página pública independente na raiz do GitHub Pages
+- [x] Confirmar que a raiz exigiria um repositório distinto e não é necessária para o repositório principal escolhido
+- [x] Manter a publicação estática no subcaminho oficial do repositório principal
+- [x] Validar a página pública independente em `https://gabrieldb86.github.io/gdbportfolio/`
 
 ## Publicação pelo repositório principal
-- [ ] Usar exclusivamente `gabrieldb86/gdbportfolio` como origem do portfólio
-- [ ] Sincronizar a versão atual e o workflow de GitHub Pages nesse repositório
-- [ ] Validar `https://gabrieldb86.github.io/gdbportfolio/` após a publicação
+- [x] Usar exclusivamente `gabrieldb86/gdbportfolio` como origem do portfólio
+- [x] Sincronizar a versão atual e o workflow de GitHub Pages nesse repositório
+- [x] Validar `https://gabrieldb86.github.io/gdbportfolio/` após a publicação
+
+## Sincronização contínua com GitHub
+- [ ] Registrar `gabrieldb86/gdbportfolio` como destino obrigatório para alterações futuras
+- [ ] Confirmar a referência remota e o fluxo de publicação automática pelo GitHub Pages
 
 ## Correção do workflow de GitHub Pages
 - [x] Aplicar a ordem de preparação de pnpm e Node recomendada pelo GitHub
 - [x] Validar localmente o workflow atualizado antes da próxima sincronização
-- [ ] Remover a versão duplicada de pnpm que bloqueou a execução do GitHub Actions
-- [ ] Reexecutar o workflow remoto e confirmar a geração do artefato do Pages
+- [x] Remover a versão duplicada de pnpm que bloqueou a execução do GitHub Actions
+- [x] Reexecutar o workflow remoto e confirmar a geração do artefato do Pages
