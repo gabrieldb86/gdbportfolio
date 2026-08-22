@@ -291,13 +291,25 @@ describe("public portfolio metrics and privacy", () => {
     const document = readProjectFile("client/index.html");
     const manifest = readProjectFile("client/public/site.webmanifest");
 
-    expect(document).toContain("/favicon.ico?v=portrait-20260820");
-    expect(document).toContain("/favicon-16.png?v=portrait-20260820");
-    expect(document).toContain("/favicon-32.png?v=portrait-20260820");
-    expect(document).toContain("/apple-touch-icon.png?v=portrait-20260820");
-    expect(document).toContain('rel="manifest" href="/site.webmanifest?v=portrait-20260820"');
+    expect(document).toContain("%BASE_URL%favicon.ico?v=portrait-20260820");
+    expect(document).toContain("%BASE_URL%favicon-16.png?v=portrait-20260820");
+    expect(document).toContain("%BASE_URL%favicon-32.png?v=portrait-20260820");
+    expect(document).toContain("%BASE_URL%apple-touch-icon.png?v=portrait-20260820");
+    expect(document).toContain('rel="manifest" href="%BASE_URL%site.webmanifest?v=portrait-20260820"');
     expect(manifest).toContain("/icon-192.png?v=portrait-20260820");
     expect(manifest).toContain("/icon-512.png?v=portrait-20260820");
+  });
+
+  it("keeps the static GitHub Pages publication configured for the confirmed repository", () => {
+    const viteConfig = readProjectFile("vite.config.ts");
+    const packageJson = readProjectFile("package.json");
+    const workflow = readProjectFile(".github/workflows/deploy-github-pages.yml");
+    const staticBuild = readProjectFile("scripts/build-github-pages.mjs");
+
+    expect(viteConfig).toContain('"/gdbportfolio/"');
+    expect(packageJson).toContain('"build:github-pages": "node scripts/build-github-pages.mjs"');
+    expect(workflow).toContain("actions/deploy-pages@v4");
+    expect(staticBuild).toContain("https://gabrieldb86.github.io/gdbportfolio");
   });
 
   it("places the WhatsApp CTA in the first fold of the hero", () => {

@@ -60,6 +60,7 @@ const dehydratedState = rawState
   ? (superjson.deserialize(rawState as Parameters<typeof superjson.deserialize>[0]) as DehydratedState)
   : undefined;
 const root = document.getElementById("root");
+const routerBase = import.meta.env.BASE_URL.replace(/\/$/, "") || "/";
 
 if (root) {
   hydrateRoot(
@@ -67,7 +68,7 @@ if (root) {
     <trpc.Provider client={trpcClient} queryClient={queryClient}>
       <QueryClientProvider client={queryClient}>
         <HydrationBoundary state={dehydratedState}>
-          <Router>
+          <Router base={routerBase}>
             <App />
           </Router>
         </HydrationBoundary>

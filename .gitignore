@@ -5,6 +5,7 @@
 # Build outputs
 dist/
 build/
+github-pages/
 *.dist
 
 # Environment variables

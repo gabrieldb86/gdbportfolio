@@ -20,6 +20,7 @@ import {
 } from "lucide-react";
 import { defaultSiteConfig, type ProjectConfig, getSiteConfig } from "@/data/siteConfig";
 import { formatMetricValue } from "@/lib/animatedMetric";
+import { portfolioPath } from "@/lib/publicPath";
 import { Link, useLocation } from "wouter";
 
 function scrollToId(id: string, closeMenu?: () => void) {
@@ -53,12 +54,12 @@ function ProjectCard({ project, revealDelay }: { project: ProjectConfig; revealD
   const isCaseInUpdate = project.href === "/cases/blocs-presentation";
   const [imageFailed, setImageFailed] = useState(false);
   const [genericImageFailed, setGenericImageFailed] = useState(false);
-  const genericImage = defaultSiteConfig.projects.find((candidate) => candidate.number === "06")?.image || defaultSiteConfig.profilePhoto;
+  const genericImage = getSiteConfig().projects.find((candidate) => candidate.number === "06")?.image || getSiteConfig().profilePhoto;
   const imageSource = imageFailed ? genericImage : project.image;
   return (
     <a
       className={`project-card ${project.size}`} data-reveal="project-card" data-reveal-delay={revealDelay}
-      href={project.href}
+      href={isLocalCase ? portfolioPath(project.href) : project.href}
       data-umami-event={isLocalCase ? "case-open" : "behance-open"}
       {...(!isLocalCase ? { target: "_blank", rel: "noreferrer" } : {})}
       aria-label={isLocalCase ? `Abrir estudo de caso ${project.title}` : `Abrir projeto ${project.title} no Behance`}
@@ -213,7 +214,7 @@ export default function Home() {
         <nav className={`site-nav ${menuOpen ? "site-nav-open" : ""}`} aria-label="Navegação principal">
           <a href="#work" onClick={(event) => { event.preventDefault(); scrollToId("work", () => setMenuOpen(false)); }}>Trabalho</a>
           <a href="#about" onClick={(event) => { event.preventDefault(); scrollToId("about", () => setMenuOpen(false)); }}>Sobre</a>
-          <a href="/cv">CV</a>
+          <a href={portfolioPath("/cv")}>CV</a>
           <a href="#contact" onClick={(event) => { event.preventDefault(); scrollToId("contact", () => setMenuOpen(false)); }}>Contato</a>
         </nav>
 
@@ -462,7 +463,7 @@ export default function Home() {
               <textarea id="message" name="message" rows={3} placeholder="Qual é o contexto da vaga ou do desafio?" required aria-required="true" aria-invalid={formErrors.message ? "true" : undefined} aria-describedby={formErrors.message ? "message-error" : undefined} onBlur={handleFieldBlur} />
               {formErrors.message && <p className="form-field-error" id="message-error">{formErrors.message}</p>}
               <button className="submit-button" type="submit">Preparar mensagem <ArrowUpRight size={17} /></button>
-              <p className="contact-privacy-note" style={{fontSize: '14px'}}>Ao prosseguir, seus dados são usados somente para preparar uma mensagem no WhatsApp. Este site não capta nem armazena leads. <a href="/privacidade" style={{fontSize: '14px'}}>Leia o aviso de privacidade.</a></p>
+              <p className="contact-privacy-note" style={{fontSize: '14px'}}>Ao prosseguir, seus dados são usados somente para preparar uma mensagem no WhatsApp. Este site não capta nem armazena leads. <a href={portfolioPath("/privacidade")} style={{fontSize: '14px'}}>Leia o aviso de privacidade.</a></p>
             </form>
           </div>
         </section>

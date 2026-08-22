@@ -241,7 +241,23 @@ const legacyWebpAssetMap: Record<string, string> = {
 };
 
 function migrateAssetUrl(asset: string) {
-  return legacyWebpAssetMap[asset] ?? asset;
+  const migratedAsset = legacyWebpAssetMap[asset] ?? asset;
+  if (!migratedAsset.startsWith("/manus-storage/")) return migratedAsset;
+  return `${import.meta.env.BASE_URL}${migratedAsset.slice(1)}`;
+}
+
+function resolveBrowserAssetUrls(config: SiteConfig): SiteConfig {
+  return {
+    ...config,
+    profilePhoto: migrateAssetUrl(config.profilePhoto),
+    heroImage: migrateAssetUrl(config.heroImage),
+    railImage: migrateAssetUrl(config.railImage),
+    trainingImage: migrateAssetUrl(config.trainingImage),
+    backgroundImage: migrateAssetUrl(config.backgroundImage),
+    generatedAssets: Object.fromEntries(Object.entries(config.generatedAssets).map(([key, asset]) => [key, migrateAssetUrl(asset)])) as SiteConfig["generatedAssets"],
+    coordinationFeature: { ...config.coordinationFeature, image: migrateAssetUrl(config.coordinationFeature.image) },
+    projects: config.projects.map((project) => ({ ...project, image: migrateAssetUrl(project.image) })),
+  };
 }
 
 function migrateProjects(savedProjects: ProjectConfig[] | undefined) {
@@ -276,11 +292,11 @@ export function getSiteConfig(): SiteConfig {
   if (typeof window === "undefined") return defaultSiteConfig;
   try {
     const saved = window.localStorage.getItem(STORAGE_KEY);
-    if (!saved) return defaultSiteConfig;
+    if (!saved) return resolveBrowserAssetUrls(defaultSiteConfig);
     const parsed = JSON.parse(saved) as Partial<SiteConfig>;
     const hero = migrateHero(parsed.hero);
     const normalizedEyebrow = hero.eyebrow.replace(/\s*[·•]\s*/g, " ● ").replace(/^\s*●\s*/, "");
-    return {
+    return resolveBrowserAssetUrls({
       ...defaultSiteConfig,
       ...parsed,
       profilePhoto: migrateAssetUrl(parsed.profilePhoto ?? defaultSiteConfig.profilePhoto),
@@ -303,9 +319,9 @@ export function getSiteConfig(): SiteConfig {
       projects: migrateProjects(parsed.projects),
       services: parsed.services ?? defaultSiteConfig.services,
       serviceDetails: migrateServiceDetails(parsed.serviceDetails),
-    };
+    });
   } catch {
-    return defaultSiteConfig;
+    return resolveBrowserAssetUrls(defaultSiteConfig);
   }
 }
 

@@ -3,6 +3,7 @@ import { type CSSProperties, type SyntheticEvent } from "react";
 import { ArrowLeft, ArrowUpRight, Linkedin, Mail, MapPin, MessageCircle, Printer } from "lucide-react";
 import { getSiteConfig } from "@/data/siteConfig";
 import { trackPortfolioEvent } from "@/lib/analytics";
+import { portfolioPath } from "@/lib/publicPath";
 
 const experience = [
   {
@@ -143,15 +144,15 @@ export default function CV() {
   return (
     <div className="site-shell cv-page" style={{ "--primary": siteConfig.brand.accent, "--background": siteConfig.brand.background, "--foreground": siteConfig.brand.foreground } as CSSProperties}>
       <header className="site-header site-header-scrolled">
-        <a className="brand-lockup" href="/" aria-label="Voltar para o portfólio">
+        <a className="brand-lockup" href={portfolioPath("/")} aria-label="Voltar para o portfólio">
           <img src={siteConfig.railImage} alt="" className="header-avatar" width="32" height="32" loading="lazy" decoding="async" onError={markBrokenImage} />
           <span className="brand-name">Gabriel Danino Basilio</span>
         </a>
         <nav className="site-nav cv-nav" aria-label="Navegação principal">
-          <a href="/">Trabalho</a>
-          <a href="/#about">Sobre</a>
-          <a className="nav-active" href="/cv">CV</a>
-          <a href="/#contact">Contato</a>
+          <a href={portfolioPath("/")}>Trabalho</a>
+          <a href={portfolioPath("/#about")}>Sobre</a>
+          <a className="nav-active" href={portfolioPath("/cv")}>CV</a>
+          <a href={portfolioPath("/#contact")}>Contato</a>
         </nav>
         <div className="header-availability"><span className="status-dot" />Aberto a oportunidades</div>
       </header>
@@ -246,10 +247,10 @@ export default function CV() {
         </section>
       </main>
 
-      <a className="floating-contact floating-contact-cv" href="/#contact"><span>Fale comigo</span><ArrowUpRight size={16} /></a>
+      <a className="floating-contact floating-contact-cv" href={portfolioPath("/#contact")}><span>Fale comigo</span><ArrowUpRight size={16} /></a>
 
       <footer className="site-footer">
-        <a className="footer-brand" href="/" onClick={scrollTop}><span className="footer-avatar"><img src={siteConfig.railImage} alt="" onError={markBrokenImage} /></span><span>Gabriel Danino Basilio</span></a>
+        <a className="footer-brand" href={portfolioPath("/")} onClick={scrollTop}><span className="footer-avatar"><img src={siteConfig.railImage} alt="" onError={markBrokenImage} /></span><span>Gabriel Danino Basilio</span></a>
         <div className="footer-socials"><a href="https://www.linkedin.com/in/gabrieldb86" target="_blank" rel="noreferrer" aria-label="LinkedIn"><Linkedin size={18} strokeWidth={1.75} /></a><a href="https://www.behance.net/gabrieldb86" target="_blank" rel="noreferrer" aria-label="Behance"><div style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", width: "18px", height: "18px", border: "1.75px solid currentColor", borderRadius: "3px", fontSize: "10px", fontWeight: 800, lineHeight: 1 }}>Be</div></a><a href="https://wa.me/5511945747353" target="_blank" rel="noreferrer" aria-label="WhatsApp"><MessageCircle size={18} strokeWidth={1.75} /></a></div>
         <span className="footer-credit">CV · Gabriel Danino Basilio</span>
       </footer>
