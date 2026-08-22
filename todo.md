@@ -1491,6 +1491,11 @@
 - [x] Substituir a grade atual pela galeria animada responsiva e acessível
 - [x] Validar desktop/mobile e sincronizar a atualização no GitHub Pages
 
+## Correção de imagens ausentes
+- [x] Identificar que os quatro arquivos da galeria retornam HTTP 200 e carregam ao entrar na área visível
+- [x] Corrigir a percepção de imagens ausentes, ampliando e clareando os painéis inativos da galeria
+- [x] Validar as imagens em desktop/mobile e sincronizar a atualização
+
 ## Correção do workflow de GitHub Pages
 - [x] Aplicar a ordem de preparação de pnpm e Node recomendada pelo GitHub
 - [x] Validar localmente o workflow atualizado antes da próxima sincronização

@@ -327,6 +327,8 @@ describe("public portfolio metrics and privacy", () => {
     expect(gallerySource).toContain('event.key === "ArrowRight"');
     expect(css).toContain(".project-accordion-gallery");
     expect(css).toContain(".project-accordion-panel.is-active");
+    expect(css).toContain("min-width: clamp(94px, 11.5vw, 148px)");
+    expect(css).toContain("flex-grow: 3.4");
     expect(css).toContain("@media (prefers-reduced-motion: reduce)");
   });
 
