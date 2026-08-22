@@ -18,10 +18,11 @@ import {
   Users,
   X,
 } from "lucide-react";
-import { defaultSiteConfig, type ProjectConfig, getSiteConfig } from "@/data/siteConfig";
+import { getSiteConfig } from "@/data/siteConfig";
 import { formatMetricValue } from "@/lib/animatedMetric";
 import { portfolioPath } from "@/lib/publicPath";
 import { Link, useLocation } from "wouter";
+import { ProjectAccordionGallery } from "@/components/ProjectAccordionGallery";
 
 function scrollToId(id: string, closeMenu?: () => void) {
   closeMenu?.();
@@ -49,43 +50,11 @@ function StaticMetric({ value, decimals = 0, suffix = "" }: { value: number; dec
   );
 }
 
-function ProjectCard({ project, revealDelay }: { project: ProjectConfig; revealDelay: number }) {
-  const isLocalCase = project.href.startsWith("/");
-  const isCaseInUpdate = project.href === "/cases/blocs-presentation";
-  const [imageFailed, setImageFailed] = useState(false);
-  const [genericImageFailed, setGenericImageFailed] = useState(false);
-  const genericImage = getSiteConfig().projects.find((candidate) => candidate.number === "06")?.image || getSiteConfig().profilePhoto;
-  const imageSource = imageFailed ? genericImage : project.image;
-  return (
-    <a
-      className={`project-card ${project.size}`} data-reveal="project-card" data-reveal-delay={revealDelay}
-      href={isLocalCase ? portfolioPath(project.href) : project.href}
-      data-umami-event={isLocalCase ? "case-open" : "behance-open"}
-      {...(!isLocalCase ? { target: "_blank", rel: "noreferrer" } : {})}
-      aria-label={isLocalCase ? `Abrir estudo de caso ${project.title}` : `Abrir projeto ${project.title} no Behance`}
-      onClick={() => trackPortfolioEvent(isLocalCase ? "project_case_open" : "portfolio_behance", { project: project.number })}
-    >
-      <div className="project-image-wrap" style={{ aspectRatio: project.aspectRatio }}>
-        {genericImageFailed ? <div className="project-image-fallback" role="img" aria-label={`Prévia indisponível: ${project.title}`} style={{ backgroundImage: `linear-gradient(135deg, rgba(38, 35, 33, .62), rgba(183, 37, 41, .52)), url("${genericImage}")`, backgroundPosition: "center", backgroundSize: "cover" }}><span>{project.number} · projeto</span><strong>{project.title}</strong><small>Prévia indisponível</small></div> : <img src={imageSource} alt={project.title} className="project-image" width="800" height="600" style={{ objectPosition: project.objectPosition }} loading="lazy" fetchPriority="low" decoding="async" onError={() => { if (imageFailed) setGenericImageFailed(true); else setImageFailed(true); }} />}
-        <span className="project-arrow" aria-hidden="true">
-          <ArrowUpRight size={19} strokeWidth={1.5} />
-        </span>
-      </div>
-      <div className="project-caption">
-        <span className="project-number">{project.number}</span>
-        <div>
-          <h3>{project.title}</h3>
-          <p>{project.type}</p>
-          <span className="project-credit">{isCaseInUpdate ? "Atualização editorial" : isLocalCase ? "Estudo de caso / Gabriel DB" : "Behance / Gabriel DB"}</span>
-        </div>
-        <span className="project-year">{project.year}</span>
-      </div>
-    </a>
-  );
-}
-
 export default function Home() {
   const siteConfig = getSiteConfig();
+  const behanceProjects = siteConfig.projects
+    .filter((project) => project.visible && project.href.includes("behance.net"))
+    .slice(0, 4);
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [, setLocation] = useLocation();
@@ -371,8 +340,8 @@ export default function Home() {
             <a className="behance-link" href="https://www.behance.net/gabrieldb86" data-umami-event="behance-open" target="_blank" rel="noreferrer" onClick={() => trackPortfolioEvent("portfolio_behance")} style={{fontSize: '14px'}}>Abrir Behance <ArrowUpRight size={15} /></a>
           </div>
 
-          <div className="projects-grid sean-obrien-grid">
-            {siteConfig.projects.filter((project) => project.visible).map((project, index) => <ProjectCard key={project.number} project={project} revealDelay={index * 50} />)}
+          <div data-reveal="work-gallery">
+            <ProjectAccordionGallery projects={behanceProjects} />
           </div>
         </section>
 

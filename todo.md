@@ -1486,6 +1486,11 @@
 - [x] Corrigir a base do roteador sem alterar o visual ou os valores manuais
 - [x] Validar ausência do aviso e sincronizar a correção com o GitHub
 
+## Galeria animada de Trabalhos selecionados
+- [x] Selecionar quatro projetos existentes com links diretos para o Behance
+- [x] Substituir a grade atual pela galeria animada responsiva e acessível
+- [x] Validar desktop/mobile e sincronizar a atualização no GitHub Pages
+
 ## Correção do workflow de GitHub Pages
 - [x] Aplicar a ordem de preparação de pnpm e Node recomendada pelo GitHub
 - [x] Validar localmente o workflow atualizado antes da próxima sincronização

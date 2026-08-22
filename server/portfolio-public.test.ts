@@ -119,11 +119,13 @@ describe("public portfolio metrics and privacy", () => {
   it("defers protected editing and below-the-fold portfolio imagery from the public initial load", () => {
     const appSource = readProjectFile("client/src/App.tsx");
     const homeSource = readProjectFile("client/src/pages/Home.tsx");
+    const gallerySource = readProjectFile("client/src/components/ProjectAccordionGallery.tsx");
 
     expect(appSource).toContain('lazy(() => import("@/pages/Editor"))');
     expect(appSource).toContain("<Suspense fallback={null}><Editor /></Suspense>");
-    expect(homeSource).toContain('className="project-image"');
-    expect(homeSource).toContain('loading="lazy" fetchPriority="low"');
+    expect(homeSource).toContain("<ProjectAccordionGallery projects={behanceProjects} />");
+    expect(gallerySource).toContain('className="project-accordion-media"');
+    expect(gallerySource).toContain('loading="lazy" fetchPriority="low"');
     expect(homeSource).toContain('siteConfig.trainingImage');
   });
 
@@ -310,6 +312,22 @@ describe("public portfolio metrics and privacy", () => {
     expect(packageJson).toContain('"build:github-pages": "node scripts/build-github-pages.mjs"');
     expect(workflow).toContain("actions/deploy-pages@v4");
     expect(staticBuild).toContain("https://gabrieldb86.github.io/gdbportfolio");
+  });
+
+  it("shows only four Behance projects through the accessible animated work gallery", () => {
+    const homeSource = readProjectFile("client/src/pages/Home.tsx");
+    const gallerySource = readProjectFile("client/src/components/ProjectAccordionGallery.tsx");
+    const css = readProjectFile("client/src/index.css");
+
+    expect(homeSource).toContain('project.href.includes("behance.net")');
+    expect(homeSource).toContain(".slice(0, 4)");
+    expect(homeSource).toContain("<ProjectAccordionGallery projects={behanceProjects} />");
+    expect(gallerySource).toContain('target="_blank"');
+    expect(gallerySource).toContain('aria-label={`Abrir ${project.title} no Behance`}');
+    expect(gallerySource).toContain('event.key === "ArrowRight"');
+    expect(css).toContain(".project-accordion-gallery");
+    expect(css).toContain(".project-accordion-panel.is-active");
+    expect(css).toContain("@media (prefers-reduced-motion: reduce)");
   });
 
   it("keeps the client router base aligned with root SSR hydration", () => {
