@@ -352,6 +352,19 @@ describe("public portfolio metrics and privacy", () => {
     expect(css).toContain("height: 112px;");
   });
 
+  it("keeps the manifesto background full-width and the project cards static only on mobile", () => {
+    const css = readProjectFile("client/src/index.css");
+    const homeSource = readProjectFile("client/src/pages/Home.tsx");
+
+    expect(homeSource).toContain("manifesto-section section-pad\" aria-labelledby=\"manifesto-title\" style={{height: '733px', width: '351px', backgroundColor: '#f4eee6'}}");
+    expect(css).toContain("/* iPhone: a seção clara ocupa toda a largura");
+    expect(css).toContain(".home-revision .manifesto-section[style]");
+    expect(css).toContain("background: #f4eee6 !important;");
+    expect(css).toContain(".home-revision .project-accordion-panel.is-active");
+    expect(css).toContain("filter: none !important;");
+    expect(css).toContain("transition: none !important;");
+  });
+
   it("applies the reusable editorial glow effect to every public image surface", () => {
     const homeSource = readProjectFile("client/src/pages/Home.tsx");
     const cvSource = readProjectFile("client/src/pages/CV.tsx");

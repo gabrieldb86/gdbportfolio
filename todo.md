@@ -1534,6 +1534,11 @@
 - [x] Executar testes, checagem de tipos, build SSR e build estático do GitHub Pages na publicação atual
 - [x] Sincronizar todo arquivo alterado no repositório gabrieldb86/gdbportfolio e confirmar o GitHub Pages
 
+## Correções mobile: fundo e projetos
+- [x] Fazer o fundo da seção clara ocupar toda a largura no iPhone
+- [x] Tornar os quatro projetos cartões estáticos, iguais e sem animação no mobile
+- [ ] Validar nos viewports, sincronizar no GitHub e salvar checkpoint
+
 ## Correção do workflow de GitHub Pages
 - [x] Aplicar a ordem de preparação de pnpm e Node recomendada pelo GitHub
 - [x] Validar localmente o workflow atualizado antes da próxima sincronização
