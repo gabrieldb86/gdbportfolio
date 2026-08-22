@@ -205,7 +205,7 @@ describe("public portfolio metrics and privacy", () => {
     expect(homeSource).toContain("id=\"contact\" className=\"contact-section section-pad\" aria-labelledby=\"contact-title\" style={{height: '1368px', width: '355px'}}");
     expect(homeSource).toContain("Você está formando<br style={{height: '479px', marginBottom: '111px', marginRight: '-1px', width: '756px'}} />uma equipe de");
     expect(homeSource).toContain("<em style={{height: '479px', marginBottom: '111px', marginRight: '-1px', width: '756px', fontSize: '140px'}}>coordenação?</em>");
-    expect(homeSource).toContain("style={{fontSize: '16px', marginBottom: '18px', marginTop: '-100px'}}");
+    expect(homeSource).toContain("style={{fontSize: '18px', marginBottom: '18px', marginTop: '-100px'}}");
     expect(homeSource).toContain("contact-form\" data-reveal=\"contact-form\" onSubmit={handleSubmit} noValidate aria-describedby={Object.keys(formErrors).length ? \"contact-form-errors\" : undefined} style={{marginLeft: '130px', width: '750px'}}");
     expect(homeSource).toContain('className="hero-actions" style={{marginTop: \'24px\'}}');
     expect(css).toContain("#contact.contact-section .contact-intro h2#contact-title[style]");
@@ -341,10 +341,13 @@ describe("public portfolio metrics and privacy", () => {
     const homeSource = readProjectFile("client/src/pages/Home.tsx");
 
     expect(homeSource).toContain("backgroundColor: '#ffffff'");
+    expect(homeSource).toContain("section-kicker\" style={{fontSize: '16px', color: '#ff2600'}}>Como eu atuo</p>");
     expect(homeSource).toContain("id=\"manifesto-title\" style={{color: '#000000'}}");
     expect(homeSource).toContain("<span style={{color: '#ff2600'}}>quando chega ao campo.</span>");
     expect(homeSource).toContain("fontSize: '20px', color: '#000000'");
     expect(homeSource).toContain("width: '276px', color: '#ff2600'");
+    expect(homeSource).toContain("statement-context-box\" style={{width: '500px', fontSize: '18px'}}");
+    expect(homeSource).toContain("contact-privacy-note\" style={{fontSize: '14px'}}");
   });
 
   it("preserves the manual dimensions of the manifesto section", () => {

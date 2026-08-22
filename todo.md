@@ -1404,3 +1404,8 @@
 - [x] Preservar nota em 20px com margem superior de 50px e blocos com margem superior de 10px
 - [x] Remover apenas propriedades duplicadas geradas pelo editor visual
 - [x] Validar desktop e mobile antes de publicar o checkpoint
+
+## Verificação de novas cores e tipografia
+- [x] Preservar as cores e tamanhos finais selecionados no manifesto, chamada final e contato
+- [x] Remover somente duplicidades de propriedades e atributos geradas pelo editor visual
+- [x] Validar desktop e mobile antes de publicar o checkpoint
