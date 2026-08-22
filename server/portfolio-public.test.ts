@@ -275,9 +275,11 @@ describe("public portfolio metrics and privacy", () => {
     const homeSource = readProjectFile("client/src/pages/Home.tsx");
 
     expect(homeSource).toContain("coordination-focus-label\" data-reveal=\"focus-label\" style={{width: '933px'}}");
-    expect(homeSource).toContain("coordination-focus-note\" style={{fontSize: '16px', width: '879px', marginTop: '25px'}}");
+    expect(homeSource).toContain("coordination-focus-note\" style={{fontSize: '20px', width: '879px', marginTop: '50px'}}");
     expect(homeSource).toContain("data-reveal-delay=\"80\" style={{marginLeft: '190px'}}");
     expect(homeSource).toContain("data-reveal-delay=\"140\" style={{marginLeft: '190px'}}");
+    expect(homeSource).toContain("coordination-focus-item-body\" style={{marginTop: '10px'}}");
+    expect(homeSource).toContain("coordination-focus-item-body\" style={{marginLeft: '190px', marginTop: '10px'}}");
     expect(css).toContain(".home-revision .coordination-focus-label[style]");
     expect(css).toContain(".home-revision .coordination-focus-item[style]");
     expect(css).toContain(".coordination-focus-item[data-reveal-delay=\"200\"] .coordination-focus-item-top span[style]");
@@ -357,7 +359,7 @@ describe("public portfolio metrics and privacy", () => {
 
     expect(homeSource).toContain("id=\"coordination-focus-title\" style={{height: '140px', width: '272px', color: '#ffffff'}}");
     expect(homeSource).toContain("<em style={{height: '140px', width: '272px', color: '#000000'}}>método à prática.</em>");
-    expect(homeSource).toContain("coordination-focus-note\" style={{fontSize: '16px', width: '879px', marginTop: '25px'}}");
+    expect(homeSource).toContain("coordination-focus-note\" style={{fontSize: '20px', width: '879px', marginTop: '50px'}}");
     expect(css).toContain(".home-revision .coordination-focus-label h2 em {\n    color: #000000 !important;");
   });
 

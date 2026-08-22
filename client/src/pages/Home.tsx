@@ -266,12 +266,12 @@ export default function Home() {
             <div className="coordination-focus-label" data-reveal="focus-label" style={{width: '933px'}}>
               <p className="section-kicker" style={{fontSize: '16px'}}>Focos de coordenação</p>
               <h2 id="coordination-focus-title" style={{height: '140px', width: '272px', color: '#ffffff'}}>Três frentes para levar <em style={{height: '140px', width: '272px', color: '#000000'}}>método à prática.</em></h2>
-              <p className="coordination-focus-note" style={{fontSize: '16px', width: '879px', marginTop: '25px'}}>Conteúdo, treinamento e campo organizados para apoiar decisões, capacitar equipes e acompanhar a execução.</p>
+              <p className="coordination-focus-note" style={{fontSize: '20px', width: '879px', marginTop: '50px'}}>Conteúdo, treinamento e campo organizados para apoiar decisões, capacitar equipes e acompanhar a execução.</p>
             </div>
             <div className="coordination-focus-grid">
               <article className="coordination-focus-item" data-reveal="focus-item" data-reveal-delay="80" style={{marginLeft: '190px'}}>
                 <div className="coordination-focus-item-top"><span style={{fontSize: '16px'}}>01</span></div>
-                <div className="coordination-focus-item-body">
+                <div className="coordination-focus-item-body" style={{marginTop: '10px'}}>
                   <strong style={{fontSize: '18px'}}>Conteúdo &amp; Treinamento</strong>
                   <p style={{fontSize: '16px'}}>Instructional Design com ADDIE, Kirkpatrick e Learning Experience Design (LXD).</p>
                   <ul className="coordination-focus-highlights">
@@ -284,7 +284,7 @@ export default function Home() {
               </article>
               <article className="coordination-focus-item" data-reveal="focus-item" data-reveal-delay="140" style={{marginLeft: '190px'}}>
                 <div className="coordination-focus-item-top"><span style={{fontSize: '16px'}}>02</span></div>
-                <div className="coordination-focus-item-body">
+                <div className="coordination-focus-item-body" style={{marginTop: '10px'}}>
                   <strong style={{fontSize: '18px'}}>Trade Marketing &amp; Campo</strong>
                   <p style={{fontSize: '16px'}}>Campanhas de incentivo de ponta a ponta, do briefing à modelagem financeira.</p>
                   <ul className="coordination-focus-highlights">
@@ -297,7 +297,7 @@ export default function Home() {
 	              </article>
 	              <article className="coordination-focus-item" data-reveal="focus-item" data-reveal-delay="200">
 	                <div className="coordination-focus-item-top" style={{marginLeft: '190px'}}><span style={{fontSize: '16px', marginLeft: '190px'}}>03</span></div>
-	                <div className="coordination-focus-item-body" style={{marginLeft: '190px'}}>
+	                <div className="coordination-focus-item-body" style={{marginLeft: '190px', marginTop: '10px'}}>
 	                  <strong style={{fontSize: '18px'}}>T&amp;D de Pessoas</strong>
                   <p style={{fontSize: '16px'}}>Onboarding, avaliação de desempenho e desenvolvimento de equipes de campo.</p>
                   <ul className="coordination-focus-highlights">
