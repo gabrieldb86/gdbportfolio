@@ -4,6 +4,7 @@ import { Link, useRoute } from "wouter";
 import { getSiteConfig } from "@/data/siteConfig";
 import { type CSSProperties, type SyntheticEvent } from "react";
 import NotFound from "@/pages/NotFound";
+import { ImageGlowFrame } from "@/components/ImageGlowFrame";
 
 type CaseRecord = {
   slug: string;
@@ -143,7 +144,7 @@ export default function CaseStudy() {
             {record.status && <p className="case-status">{record.status}</p>}
             <p className="case-lead">{record.context}</p>
           </div>
-          {record.image && <div className="case-hero-art"><img src={record.image} alt={`Imagem de apoio do case ${record.title}`} onError={markBrokenImage} /></div>}
+          {record.image && <ImageGlowFrame className="case-hero-art"><img src={record.image} alt={`Imagem de apoio do case ${record.title}`} onError={markBrokenImage} /></ImageGlowFrame>}
         </section>
         <section className="case-content section-pad">
           <div className="case-facts">

@@ -340,6 +340,18 @@ describe("public portfolio metrics and privacy", () => {
     expect(css).toContain(".image-glow-frame::after { inset: -5px; filter: blur(5px); }");
   });
 
+  it("restores the approved compact mobile work gallery without changing manual desktop dimensions", () => {
+    const css = readProjectFile("client/src/index.css");
+    const homeSource = readProjectFile("client/src/pages/Home.tsx");
+
+    expect(homeSource).toContain("id=\"work\" className=\"work-section work-redesign section-pad\" aria-labelledby=\"work-title\" style={{height: '5139px', width: '358px'}}");
+    expect(css).toContain("/* Restauração mobile: preserva os valores manuais do desktop");
+    expect(css).toContain(".home-revision .work-redesign[style]");
+    expect(css).toContain("height: auto !important;");
+    expect(css).toContain(".home-revision .project-accordion-gallery");
+    expect(css).toContain("height: 112px;");
+  });
+
   it("applies the reusable editorial glow effect to every public image surface", () => {
     const homeSource = readProjectFile("client/src/pages/Home.tsx");
     const cvSource = readProjectFile("client/src/pages/CV.tsx");

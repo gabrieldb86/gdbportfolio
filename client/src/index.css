@@ -4861,3 +4861,36 @@ a.proof-link, a.behance-link, a.text-link, .service-detail a {
   .image-glow-frame::after { inset: -5px; filter: blur(5px); }
   .image-glow-frame.about-art-wrap .about-art-label { z-index: 4; }
 }
+
+/* Restauração mobile: preserva os valores manuais do desktop, mas devolve à seção Trabalhos a pilha compacta aprovada. */
+@media (max-width: 720px) {
+  .home-revision .work-redesign[style] {
+    width: auto !important;
+    height: auto !important;
+    min-height: 0 !important;
+  }
+
+  .home-revision .work-redesign > [data-reveal="work-gallery"] {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .home-revision .project-accordion-gallery {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    height: auto;
+    min-height: 0;
+    gap: 10px;
+  }
+
+  .home-revision .project-accordion-panel,
+  .home-revision .project-accordion-panel:nth-child(even),
+  .home-revision .project-accordion-panel.is-active {
+    width: 100%;
+    min-width: 0;
+    height: 112px;
+    min-height: 112px;
+    flex: 0 0 112px;
+    transform: none;
+  }
+}

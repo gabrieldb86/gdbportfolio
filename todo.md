@@ -1506,6 +1506,13 @@
 - [x] Ajustar somente regras responsivas dos elementos introduzidos recentemente
 - [x] Validar mobile/tablet, testes e publicação no GitHub Pages
 
+## Restauração mobile pela referência aprovada
+- [ ] Analisar o PDF de referência e localizar as diferenças com a Home atual
+- [ ] Restaurar o alinhamento e a disposição mobile das sessões afetadas
+- [ ] Corrigir a galeria de projetos para o comportamento mostrado na referência
+- [ ] Corrigir a declaração duplicada detectada no CV para liberar a verificação visual
+- [ ] Validar a Home em mobile, sincronizar no GitHub e publicar
+
 ## Correção do workflow de GitHub Pages
 - [x] Aplicar a ordem de preparação de pnpm e Node recomendada pelo GitHub
 - [x] Validar localmente o workflow atualizado antes da próxima sincronização
