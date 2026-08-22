@@ -92,9 +92,21 @@ export const defaultSiteConfig: SiteConfig = {
   projects: [
     {
       number: "01",
-      title: "Podcast Varejo na Real",
-      type: "Conteúdo · Identidade",
-      year: "2024",
+      title: "Ragtech Dicas 01",
+      type: "Conteúdo · Vídeo",
+      year: "2025",
+      image: "/manus-storage/ragtech-dicas_c4a3d253_4fcf3eea.webp",
+      href: "https://www.behance.net/gallery/229318749/Ragtech-Dicas-01-O-que-um-nobreak",
+      size: "project-card",
+      aspectRatio: "1.26",
+      objectPosition: "center",
+      visible: true,
+    },
+    {
+      number: "02",
+      title: "Podcast Varejo na Real — EP04",
+      type: "Conteúdo · Videocast",
+      year: "2025",
       image: "/manus-storage/podcast-varejo-na-real_af69c605_cd6b89ec.webp",
       href: "https://www.behance.net/gallery/229319463/Podcast-Varejo-na-Real-EP04",
       size: "project-card",
@@ -103,24 +115,12 @@ export const defaultSiteConfig: SiteConfig = {
       visible: true,
     },
     {
-      number: "02",
-      title: "Ragtech Dicas",
-      type: "Conteúdo · Social",
-      year: "2024",
-      image: "/manus-storage/ragtech-dicas_c4a3d253_4fcf3eea.webp",
-      href: "/cases/ragtech-sistema-treinamento",
-      size: "project-card",
-      aspectRatio: "1.26",
-      objectPosition: "center",
-      visible: true,
-    },
-    {
       number: "03",
-      title: "Future Print 2024",
-      type: "Eventos · PDV",
+      title: "Uniformes Alternativos Valens BDN",
+      type: "Branding · Esportes",
       year: "2024",
-      image: "/manus-storage/future-print-2024_9d7e3d75_3524289f.webp",
-      href: "https://www.behance.net/gallery/229318387/Future-Print-2024-Feira-Ragtech-com-Roland-e-Epson",
+      image: "/manus-storage/valens-bdn_e5a00706_587e1e0d.webp",
+      href: "https://www.behance.net/gallery/200631919/Uniformes-Alternativos-Valens-BDN",
       size: "project-card",
       aspectRatio: "1.26",
       objectPosition: "center",
@@ -128,11 +128,11 @@ export const defaultSiteConfig: SiteConfig = {
     },
     {
       number: "04",
-      title: "Eletrolar Show 2024",
-      type: "Eventos · Experiência",
-      year: "2024",
-      image: "/manus-storage/eletrolar-show-2024_51e67363_1374594d.webp",
-      href: "https://www.behance.net/gallery/229253681/Eletrolar-Show-2024-Feira-com-Redragon-e-Ragtech",
+      title: "Blocs Presentation",
+      type: "Apresentação · Template",
+      year: "2025",
+      image: "/manus-storage/blocs-presentation_ad07fc26_feebad29.webp",
+      href: "https://www.behance.net/gallery/229252859/Blocs-Presentation",
       size: "project-card",
       aspectRatio: "1.26",
       objectPosition: "center",
@@ -264,6 +264,8 @@ function migrateProjects(savedProjects: ProjectConfig[] | undefined) {
   if (!savedProjects) return defaultSiteConfig.projects;
   return savedProjects.map((project) => {
     const defaultProject = defaultSiteConfig.projects.find((candidate) => candidate.number === project.number);
+    const isForcedFeaturedProject = ["01", "02", "03", "04"].includes(project.number);
+    if (isForcedFeaturedProject && defaultProject) return defaultProject;
     const isLegacyBehanceAsset = project.image.startsWith("https://mir-s3-cdn-cf.behance.net/");
     const isLegacyProjectLink = project.href === "https://www.behance.net/gabrieldb86" || project.href.includes("229252353/Blocs-Presentation");
     const isKnownBrokenAsset = /podcast-varejo-na-real_af69c605|ragtech-dicas_83287b6b|future-print-2024_11b8395d|eletrolar-show-2024_5c1c2e78|blocs-presentation_4e27f6cf|gabriel-treinamento-apresentacao_2c7fabd9|gdb-editorial-collage_983088a0/.test(project.image);

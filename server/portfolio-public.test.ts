@@ -352,6 +352,20 @@ describe("public portfolio metrics and privacy", () => {
     expect(css).toContain("height: 112px;");
   });
 
+  it("uses the four Behance projects selected for the featured work gallery", () => {
+    const siteConfig = readProjectFile("client/src/data/siteConfig.ts");
+
+    expect(siteConfig).toContain('title: "Ragtech Dicas 01"');
+    expect(siteConfig).toContain("https://www.behance.net/gallery/229318749/Ragtech-Dicas-01-O-que-um-nobreak");
+    expect(siteConfig).toContain('title: "Podcast Varejo na Real — EP04"');
+    expect(siteConfig).toContain("https://www.behance.net/gallery/229319463/Podcast-Varejo-na-Real-EP04");
+    expect(siteConfig).toContain('title: "Uniformes Alternativos Valens BDN"');
+    expect(siteConfig).toContain("https://www.behance.net/gallery/200631919/Uniformes-Alternativos-Valens-BDN");
+    expect(siteConfig).toContain('title: "Blocs Presentation"');
+    expect(siteConfig).toContain("https://www.behance.net/gallery/229252859/Blocs-Presentation");
+    expect(siteConfig).toContain('const isForcedFeaturedProject = ["01", "02", "03", "04"].includes(project.number);');
+  });
+
   it("keeps the manifesto background full-width and the project cards static only on mobile", () => {
     const css = readProjectFile("client/src/index.css");
     const homeSource = readProjectFile("client/src/pages/Home.tsx");
