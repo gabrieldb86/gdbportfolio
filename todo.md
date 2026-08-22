@@ -1557,7 +1557,7 @@
 ## Galeria de projetos com efeito de referência
 - [x] Comparar o acordeão anexado com a galeria atual de quatro projetos
 - [x] Ajustar o efeito desktop mantendo os quatro links diretos ao Behance
-- [ ] Preservar a pilha estática mobile e validar nos viewports antes do checkpoint
+- [x] Preservar a pilha estática mobile e validar nos viewports antes do checkpoint
 
 ## Correção do workflow de GitHub Pages
 - [x] Aplicar a ordem de preparação de pnpm e Node recomendada pelo GitHub
