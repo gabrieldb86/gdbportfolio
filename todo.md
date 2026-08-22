@@ -1542,7 +1542,7 @@
 ## Imagens estáticas no website
 - [x] Mapear e desativar brilho, ampliação e transições no hover das imagens desktop
 - [x] Preservar as imagens e o comportamento mobile aprovados
-- [ ] Validar nos viewports, sincronizar no GitHub e salvar checkpoint
+- [x] Validar nos viewports, sincronizar no GitHub e salvar checkpoint
 
 ## Correção do workflow de GitHub Pages
 - [x] Aplicar a ordem de preparação de pnpm e Node recomendada pelo GitHub
