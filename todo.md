@@ -1524,6 +1524,11 @@
 - [x] Restaurar a grade de métricas sem alterar as demais seções
 - [x] Validar em mobile, sincronizar no GitHub e salvar checkpoint
 
+## Verificação de edições manuais dos links de métricas
+- [x] Conferir os valores finais do contêiner e dos dois links de CV
+- [x] Consolidar somente propriedades inline duplicadas
+- [ ] Validar desktop/mobile, sincronizar no GitHub e salvar checkpoint
+
 ## Correção do workflow de GitHub Pages
 - [x] Aplicar a ordem de preparação de pnpm e Node recomendada pelo GitHub
 - [x] Validar localmente o workflow atualizado antes da próxima sincronização

@@ -44,7 +44,7 @@ describe("public portfolio metrics and privacy", () => {
   it("labels the Home CV action as navigation instead of a download", () => {
     const homeSource = readProjectFile("client/src/pages/Home.tsx");
 
-    expect(homeSource).toContain('<Link href="/cv" className="proof-link proof-link-alt" style={{fontSize: \'14px\'}}><span style={{fontSize: \'14px\'}}>Ver CV</span>');
+    expect(homeSource).toContain('<Link href="/cv" className="proof-link proof-link-alt" style={{fontSize: \'14px\', marginTop: \'87px\', marginLeft: \'-305px\'}}><span style={{fontSize: \'14px\'}}>Ver CV</span>');
     expect(homeSource).not.toContain("Baixar CV");
   });
 
@@ -464,7 +464,9 @@ describe("public portfolio metrics and privacy", () => {
     expect(homeSource).toContain("style={{marginTop: '-49px'}}");
     expect(homeSource).toContain("proof-metric\" style={{marginRight: '-120px', marginTop: '-12px'}}");
     expect(homeSource).toContain("proof-tagline\" style={{fontSize: '12px', color: '#fff9f2'}}");
-    expect(homeSource).toContain("proof-actions\" style={{marginRight: '20px', marginLeft: '135px'}}");
+    expect(homeSource).toContain("proof-actions\" style={{marginRight: '20px', marginLeft: '135px', height: '99px', width: '314px'}}");
+    expect(homeSource).toContain("className=\"proof-link\" style={{fontSize: '14px', marginTop: '-5px'}}");
+    expect(homeSource).toContain("className=\"proof-link proof-link-alt\" style={{fontSize: '14px', marginTop: '87px', marginLeft: '-305px'}}");
     expect(homeSource).not.toContain("proof-metric-narrative");
     expect(homeSource).not.toContain("mais de 20 campanhas de incentivo implementadas");
   });

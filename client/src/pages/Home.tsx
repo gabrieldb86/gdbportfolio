@@ -312,10 +312,10 @@ export default function Home() {
                 <span className="proof-metric-label" style={{fontSize: '14px'}}>Média de avaliação</span>
                 <span className="proof-tagline" style={{fontSize: '12px', color: '#fff9f2'}}>Conteúdo &amp; Treinamento · Trade Marketing · T&amp;D de Pessoas</span>
               </div>
-              <div className="proof-actions" style={{marginRight: '20px', marginLeft: '135px'}}>
+              <div className="proof-actions" style={{marginRight: '20px', marginLeft: '135px', height: '99px', width: '314px'}}>
                 <FileText className="proof-action-icon" size={20} strokeWidth={1.3} aria-hidden="true" />
-                <Link href="/cv" className="proof-link" style={{fontSize: '14px'}}><span style={{fontSize: '14px'}}>Abrir trajetória</span><ArrowUpRight size={16} aria-hidden="true" style={{fontSize: '14px'}} /></Link>
-                <Link href="/cv" className="proof-link proof-link-alt" style={{fontSize: '14px'}}><span style={{fontSize: '14px'}}>Ver CV</span><ArrowUpRight size={16} aria-hidden="true" style={{fontSize: '14px'}} /></Link>
+                <Link href="/cv" className="proof-link" style={{fontSize: '14px', marginTop: '-5px'}}><span style={{fontSize: '14px'}}>Abrir trajetória</span><ArrowUpRight size={16} aria-hidden="true" style={{fontSize: '14px'}} /></Link>
+                <Link href="/cv" className="proof-link proof-link-alt" style={{fontSize: '14px', marginTop: '87px', marginLeft: '-305px'}}><span style={{fontSize: '14px'}}>Ver CV</span><ArrowUpRight size={16} aria-hidden="true" style={{fontSize: '14px'}} /></Link>
               </div>
             </div>
           </div>

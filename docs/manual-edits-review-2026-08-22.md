@@ -9,3 +9,9 @@
 | Contato | seção 1560px; ênfase “coordenação?” 55px | Valores finais consolidados; a tipografia-base do título e as demais medidas permanecem. |
 
 As capturas em **1280px** e **375px** confirmaram que a consolidação eliminou os atributos duplicados e não reintroduziu a regressão de alinhamento mobile.
+
+## Links da seção Experiência em números
+
+O bloco de links preserva as medidas finais selecionadas no desktop: **314px** de largura e **99px** de altura. O link **Abrir trajetória** mantém margem superior de **-5px**; o link **Ver CV** mantém margem superior de **87px** e margem esquerda de **-305px**. As capturas em 1280px e 375px confirmaram que a regra mobile existente continua neutralizando esses deslocamentos apenas onde necessário para preservar a grade de métricas.
+
+As verificações adicionais em **742px** e **900px** confirmaram que os ajustes não criaram deslocamento lateral, corte ou sobreposição na composição intermediária.
